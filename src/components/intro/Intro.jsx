@@ -32,11 +32,17 @@ const Intro = () => {
                 <div className='i-right'>
                     <div className='i-card bg'></div>
                     <div className='i-card'>
-                        <img
-                            src={Me}
-                            alt='change this Macri'
-                            className='i-img'
-                        />
+                        <a
+                            href='https://www.linkedin.com/in/santiago-gonzalez-62557221b'
+                            rel='noreferrer noopener'
+                            target='_blank'
+                        >
+                            <img
+                                src={Me}
+                                alt='change this Macri'
+                                className='i-img'
+                            />
+                        </a>
                     </div>
                 </div>
             </div>
