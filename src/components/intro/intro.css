@@ -149,4 +149,11 @@
         padding: 10% 0;
         height: 80%;
     }
+
+    .i-left-wrapper {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }
