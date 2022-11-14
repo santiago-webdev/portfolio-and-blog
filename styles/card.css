@@ -30,7 +30,7 @@
 }
 
 .card_status {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
   box-shadow: 3px 6px 9px rgba(0, 0, 0, 0.1);
   background-color: var(--bg-status);
   color: var(--fg-status);
