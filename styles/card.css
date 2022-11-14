@@ -7,15 +7,14 @@
   gap: 0.6rem;
 
   display: flex;
-  /* justify-content: center; */
-  /* align-items: center; */
   align-content: center;
   flex-direction: column;
+  box-shadow: 3px 6px 9px rgba(0, 0, 0, 0.1);
+  padding-bottom: 3rem; /* TODO(santigo-zero): Do I want to keep this padding? */
 
-  border-style: solid;
-  border-color: var(--bg-header);
-  box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.1);
-  border-width: 1px;
+  /* border-style: solid; */
+  /* border-color: var(--bg-header); */
+  /* border-width: 1px; */
 
   /* border-style: solid; */
   /* border-color: orange; */
@@ -23,8 +22,8 @@
 }
 
 .card_title {
-  color: var(--color-vanilla);
-  font-size: 1.2rem;
+  color: var(--fg);
+  font-size: 1.4rem;
   font-weight: 400;
   text-align: center;
   margin-bottom: 6px;
@@ -32,19 +31,24 @@
 
 .card_status {
   font-family: 'Inter', sans-serif;
-  box-shadow: 6px 3px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 3px 6px 9px rgba(0, 0, 0, 0.1);
   background-color: var(--bg-status);
   color: var(--fg-status);
-  border-radius: 10px;
-  padding: 3px;
-  margin-inline: 3px;
-  padding-inline: 10px;
-  padding-bottom: 5px;
+  /* border-radius: 10px; */
+
+  border-top-left-radius: 6px 6px;
+  border-top-right-radius: 6px 6px;
+  border-bottom-right-radius: 6px 6px;
+  border-bottom-left-radius: 6px 6px;
+
+  padding: 3px 10px;
+  /* margin-inline: 2px; */
+  /* padding-bottom: 5px; */
 }
 
 .card p {
   margin-inline: 8px;
-  font-size: 1.12rem;
+  font-size: 1.2rem;
   font-weight: 400;
 }
 
@@ -83,13 +87,9 @@
   margin-inline: 8px;
 }
 
-/* .status{ */
-/*   display: flex; */
-/*   justify-content: center; */
-/* } */
-
-.status{
+.status {
   display: flex;
-  /* justify-content: left; */
-  flex-wrap: nowrap;
+  /* justify-content: center; */
+  flex-wrap: wrap;
+  gap: 0.4rem;
 }

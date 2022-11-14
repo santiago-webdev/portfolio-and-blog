@@ -5,17 +5,27 @@
   --bg-light: #232132;
   --fg: #f9f8ff;
 
-  --bg-header: #2B293C;
+  --bg-header: #2b293c;
 
   --bg-status: #363448;
-  --fg-status: #7C7B8B;
+  --fg-status: #7c7b8b;
 
-  /* --dark-purple: #8e78aa; */
+  --dark-purple: #8e78aa;
   /* --light-purple: #c1abf3; */
   --color-vanilla: #f3e5ab;
-  /* --vanilla-peach: #f38fa9; */
-  /* --pale-blue: #abb9f3; */
+  --color-vanilla-red: #f38fa9;
+  --pale-blue: #abb9f3;
   --font-family: 'Satoshi', sans-serif;
+}
+
+/* Change the color of text selected with the cursor */
+::selection {
+  background-color: var(--dark-purple);
+  color: var(--fg);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -42,7 +52,7 @@ section {
 .list-projects {
   display: grid;
   margin-inline: 0.5em;
-  gap: 1.3rem;
+  gap: 1.05rem;
   /* grid-template-columns: repeat(3, 1fr) fit-content(100%); */
   grid-template-columns: repeat(3, 1fr);
 
@@ -50,17 +60,35 @@ section {
 
   /* border-style: solid; */
   /* border-color: orange; */
-  /* border-width: 1px; */
+  /* border-width: 2px; */
 }
 
 .projects-title {
   color: var(--fg);
   font-size: 1rem;
   font-weight: 400;
-  font-family: 'Iosevka', sans-serif; /* FIXME: Change this font */
 }
 
-@media (max-width: 66em) {
+.link {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-vanilla-red),
+    var(--pale-blue)
+  );
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  transition: background-size 333ms ease;
+  text-decoration: none;
+  color: var(--color-vanilla);
+  padding-bottom: 3px;
+}
+
+.link:hover {
+  background-size: 100% 3px;
+}
+
+@media (max-width: 67em) {
   .list-projects {
     grid-template-columns: repeat(1, 1fr);
     max-width: 400px;
