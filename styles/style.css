@@ -28,6 +28,12 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  /* text-rendering: geometricPrecision; */
+  /* text-rendering: optimizeSpeed; */
+  text-rendering: optimizeLegibility;
+}
+
 html,
 body,
 section {
