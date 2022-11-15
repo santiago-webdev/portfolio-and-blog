@@ -52,13 +52,14 @@ const card2 = {
 };
 
 window.onload = function () {
-  const objectList = [card, card2];
+  // const objectList = [card, card2]; // beforeend
+  const objectList = [card, card2].reverse(); // afterbegin
   const projectList = document.querySelector(".list-projects");
 
   objectList.map(function (element) {
     // I'm using a ! in here because projectList is never going to be null.
     return projectList!.insertAdjacentHTML(
-      "beforeend",
+      "afterbegin",
       `<div class="card">
         <div class="header">
           <h2 class="card_title">
