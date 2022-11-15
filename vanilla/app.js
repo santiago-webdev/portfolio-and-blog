@@ -10,6 +10,10 @@ const card = {
   image: 'project_img_zap',
 }
 
+let objectList = [
+  card
+]
+
 function main() {
   const newCard = document.createElement('div')
   newCard.classList.add('card')
