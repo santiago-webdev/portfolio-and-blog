@@ -70,7 +70,7 @@ section {
 }
 
 .projects-header h2 {
-  font-size: 66px;
+  font-size: 3rem;
   font-weight: 500;
   font-family: var(--secondary-font-family);
 }
@@ -120,5 +120,13 @@ section {
   .list-projects {
     grid-template-columns: repeat(1, 1fr);
     max-width: 400px;
+  }
+
+  .projects-header h2 {
+    font-size: 2rem;
+  }
+
+  .projects-header p {
+    font-size: 22px;
   }
 }
