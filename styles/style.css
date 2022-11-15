@@ -1,4 +1,5 @@
 @import url("https://fonts.cdnfonts.com/css/satoshi");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap");
 
 :root {
   --bg: #1b1a27;
@@ -11,11 +12,12 @@
   --fg-status: #7c7b8b;
 
   --dark-purple: #8e78aa;
-  /* --light-purple: #c1abf3; */
+  --light-purple: #c1abf3;
   --color-vanilla: #f3e5ab;
   --color-vanilla-red: #f38fa9;
   --pale-blue: #abb9f3;
   --font-family: "Satoshi", sans-serif;
+  --secondary-font-family: "Inter", sans-serif;
 }
 
 /* Change the color of text selected with the cursor */
@@ -53,6 +55,32 @@ section {
   /* border-color: blue; */
   /* border-width: 1px; */
   background-color: var(--bg);
+  gap: 3rem;
+}
+
+.projects-header {
+  text-align: center;
+  color: var(--fg);
+}
+
+.projects-title {
+  color: var(--fg);
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.projects-header h2 {
+  font-size: 66px;
+  font-weight: 500;
+  font-family: var(--secondary-font-family);
+}
+
+.projects-header p {
+  font-size: 28px;
+  font-weight: 500;
+
+  color: var(--light-purple);
+  color: var(--pale-blue);
 }
 
 .list-projects {
@@ -67,12 +95,6 @@ section {
   /* border-style: solid; */
   /* border-color: orange; */
   /* border-width: 2px; */
-}
-
-.projects-title {
-  color: var(--fg);
-  font-size: 1rem;
-  font-weight: 400;
 }
 
 .link {
