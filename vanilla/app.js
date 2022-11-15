@@ -1,11 +1,10 @@
 const card = {
-  id: 'card4',
-  title: 'This website',
-  title_link: 'https://santigo-zero.github.io',
+  title: "This website",
+  title_link: "https://santigo-zero.github.io",
   title_description: "Santiago's Portfolio, this same website",
 
   // This is an array
-  status: 'THIS IS THE STATUS',
+  status: "THIS IS THE STATUS",
   description: `
     This page was entirely made by me, CSS3, HTML5 and vanilla
     Javascript, even the theme's accent is vanilla! The inspiration for
@@ -20,16 +19,17 @@ const card = {
     >
   `,
 
-  image: 'project_img_zap',
-}
+  image: "project_img_zap",
+};
 
-const objectList = [card]
+const objectList = [card];
 
 function main() {
-  const projectList = document.querySelector('.list-projects')
+  const projectList = document.querySelector(".list-projects");
+  // TODO(santigo-zero): Read directly from ./templates/card.html
   projectList.insertAdjacentHTML(
-    'beforeend',
-    ` <div class="card">
+    "beforeend",
+    `<div class="card">
         <div class="header">
           <h2 class="card_title">
             <a
@@ -38,18 +38,17 @@ function main() {
               rel="noopener noreferrer"
               title=${objectList[0].title_description}
               href=${objectList[0].title_link}
-              >This website
+              >${objectList[0].title}
             </a>
-            ${objectList[0].title}
           </h2>
           <div class="status">
             <div class="card_status">${objectList[0].status}</div>
           </div>
         </div>
-        <div class="project_img_first"></div>
+        <div class="${objectList[0].image}"></div>
         <p class="card__description">${objectList[0].description}</p>
-      </div> `
-  )
+     </div>`
+  );
 }
 
-window.onload = main()
+window.onload = main();
