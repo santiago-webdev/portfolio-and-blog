@@ -7,11 +7,60 @@ let card: {
   image: string;
 };
 
+// <div class="card">
+//   <div class="header">
+//     <h2 class="card_title">
+//       <a
+//         class="link"
+//         target="_blank"
+//         rel="noopener noreferrer"
+//         title="Santiago's Portfolio, this same website"
+//         href="https://santigo-zero.github.io"
+//         >This website
+//       </a>
+//     </h2>
+//     <div class="status">
+//       <div class="card_status">
+//         <i class="fa-solid fa-ice-cream"></i> Vanilla
+//       </div>
+//       <div class="card_status">
+//         <i class="fa-solid fa-user"></i> Solo
+//       </div>
+//       <div class="card_status">
+//         <i class="fa-solid fa-candy-cane"></i> Eye Candy
+//       </div>
+//     </div>
+//   </div>
+//   <div class="project_img_zap"></div>
+//   <p class="card__description">
+//     This page was entirely made by me, CSS3, HTML5 and vanilla
+//     Javascript, even the theme's accent is vanilla! The inspiration for
+//     the the UI/UX from
+//     <a
+//       class="link"
+//       target="_blank"
+//       rel="noopener noreferrer"
+//       title="Lightly"
+//       href="https://github.com/Luwx/Lightly"
+//       >this project</a
+//     >
+//   </p>
+// </div>
+
 card = {
   title: "This website",
   title_link: "https://santigo-zero.github.io",
   title_description: "Santiago's Portfolio, this same website",
-  status: "THIS IS THE STATUS",
+  status: `
+    <div class="card_status">
+      <i class="fa-solid fa-ice-cream"></i> Vanilla
+    </div>
+    <div class="card_status">
+      <i class="fa-solid fa-user"></i> Solo
+    </div>
+    <div class="card_status">
+      <i class="fa-solid fa-candy-cane"></i> Eye Candy
+    </div> `,
   description: `
     This page was entirely made by me, CSS3, HTML5 and vanilla
     Javascript, even the theme's accent is vanilla! The inspiration for
@@ -23,7 +72,7 @@ card = {
       title="Lightly"
       href="https://github.com/Luwx/Lightly"
       >this project</a
-    >
+    >.
   `,
   // TODO(santigo-zero): Change this mechanism, access the image of a page with
   // meta tags
@@ -50,7 +99,7 @@ window.onload = function () {
             </a>
           </h2>
           <div class="status">
-            <div class="card_status">${objectList[0].status}</div>
+            ${objectList[0].status}
           </div>
         </div>
         <div class="${objectList[0].image}"></div>
