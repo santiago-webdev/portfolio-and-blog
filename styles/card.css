@@ -13,7 +13,7 @@
   box-shadow: 3px 6px 9px rgba(0, 0, 0, 0.1);
 
   animation: growCard 0.6s;
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 
   /* border-style: solid; */
   /* border-color: var(--bg-header); */
@@ -108,4 +108,30 @@
   /* justify-content: center; */
   flex-wrap: wrap;
   gap: 0.4rem;
+}
+
+@media only screen and (max-width: 67em) {
+  .card {
+    min-width: 0;
+    min-height: 25rem;
+
+    /*CSS transitions*/
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    /*CSS transforms*/
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    /*CSS animations*/
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+  }
 }
