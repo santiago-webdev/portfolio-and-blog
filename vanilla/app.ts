@@ -51,63 +51,33 @@ const card2 = {
   image: "project_img_first",
 };
 
-const objectList = [card, card2];
-
-function main() {
-  const projectList = document.querySelector(".list-projects");
-  // I'm not using a ! in here because I know projectList is not going to be null
-  return projectList!.insertAdjacentHTML(
-    "beforeend",
-    `<div class="card">
-        <div class="header">
-          <h2 class="card_title">
-            <a
-              class="link"
-              target="_blank"
-              rel="noopener noreferrer"
-              title=${objectList[0].title_description}
-              href=${objectList[0].title_link}
-              >${objectList[0].title}
-            </a>
-          </h2>
-          <div class="status">
-            ${objectList[0].status}
-          </div>
-        </div>
-        <div class="${objectList[0].image}"></div>
-        <p class="card__description">${objectList[0].description}</p>
-    </div>`
-  );
-}
-
-function main2() {
-  const projectList = document.querySelector(".list-projects");
-  // I'm not using a ! in here because I know projectList is not going to be null
-  return projectList!.insertAdjacentHTML(
-    "beforeend",
-    `<div class="card">
-        <div class="header">
-          <h2 class="card_title">
-            <a
-              class="link"
-              target="_blank"
-              rel="noopener noreferrer"
-              title=${objectList[1].title_description}
-              href=${objectList[1].title_link}
-              >${objectList[1].title}
-            </a>
-          </h2>
-          <div class="status">
-            ${objectList[1].status}
-          </div>
-        </div>
-        <div class="${objectList[1].image}"></div>
-        <p class="card__description">${objectList[1].description}</p>
-    </div>`
-  );
-}
-
 window.onload = function () {
-  main();
-  main2();
+  const objectList = [card, card2];
+  const projectList = document.querySelector(".list-projects");
+
+  objectList.map(function (element) {
+    // I'm using a ! in here because projectList is never going to be null.
+    return projectList!.insertAdjacentHTML(
+      "beforeend",
+      `<div class="card">
+        <div class="header">
+          <h2 class="card_title">
+            <a
+              class="link"
+              target="_blank"
+              rel="noopener noreferrer"
+              title=${element.title_description}
+              href=${element.title_link}
+              >${element.title}
+            </a>
+          </h2>
+          <div class="status">
+            ${element.status}
+          </div>
+        </div>
+        <div class="${element.image}"></div>
+        <p class="card__description">${element.description}</p>
+      </div>`
+    );
+  });
 };
