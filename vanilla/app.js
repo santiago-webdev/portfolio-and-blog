@@ -1,54 +1,18 @@
-const card = {
-  title: "This website",
-  title_link: "https://santigo-zero.github.io",
-  title_description: "Santiago's Portfolio, this same website",
-
-  // This is an array
-  status: "THIS IS THE STATUS",
-  description: `
-    This page was entirely made by me, CSS3, HTML5 and vanilla
-    Javascript, even the theme's accent is vanilla! The inspiration for
-    the the UI/UX from
-    <a
-      class="link"
-      target="_blank"
-      rel="noopener noreferrer"
-      title="Lightly"
-      href="https://github.com/Luwx/Lightly"
-      >this project</a
-    >
-  `,
-
-  image: "project_img_zap",
+var card;
+card = {
+    title: "This website",
+    title_link: "https://santigo-zero.github.io",
+    title_description: "Santiago's Portfolio, this same website",
+    status: "THIS IS THE STATUS",
+    description: "\n    This page was entirely made by me, CSS3, HTML5 and vanilla\n    Javascript, even the theme's accent is vanilla! The inspiration for\n    the the UI/UX from\n    <a\n      class=\"link\"\n      target=\"_blank\"\n      rel=\"noopener noreferrer\"\n      title=\"Lightly\"\n      href=\"https://github.com/Luwx/Lightly\"\n      >this project</a\n    >\n  ",
+    // TODO(santigo-zero): Change this mechanism, access the image of a page with
+    // meta tags
+    image: "project_img_zap"
 };
-
-const objectList = [card];
-
-function main() {
-  const projectList = document.querySelector(".list-projects");
-  // TODO(santigo-zero): Read directly from ./templates/card.html
-  projectList.insertAdjacentHTML(
-    "beforeend",
-    `<div class="card">
-        <div class="header">
-          <h2 class="card_title">
-            <a
-              class="link"
-              target="_blank"
-              rel="noopener noreferrer"
-              title=${objectList[0].title_description}
-              href=${objectList[0].title_link}
-              >${objectList[0].title}
-            </a>
-          </h2>
-          <div class="status">
-            <div class="card_status">${objectList[0].status}</div>
-          </div>
-        </div>
-        <div class="${objectList[0].image}"></div>
-        <p class="card__description">${objectList[0].description}</p>
-     </div>`
-  );
-}
-
-window.onload = main();
+var objectList = [card];
+window.onload = function () {
+    var projectList = document.querySelector(".list-projects");
+    // I'm not using a ! in here because I know projectList is not going to be null
+    return projectList.insertAdjacentHTML("beforeend", "<div class=\"card\">\n        <div class=\"header\">\n          <h2 class=\"card_title\">\n            <a\n              class=\"link\"\n              target=\"_blank\"\n              rel=\"noopener noreferrer\"\n              title=".concat(objectList[0].title_description, "\n              href=").concat(objectList[0].title_link, "\n              >").concat(objectList[0].title, "\n            </a>\n          </h2>\n          <div class=\"status\">\n            <div class=\"card_status\">").concat(objectList[0].status, "</div>\n          </div>\n        </div>\n        <div class=\"").concat(objectList[0].image, "\"></div>\n        <p class=\"card__description\">").concat(objectList[0].description, "</p>\n    </div>"));
+};
+// TODO(santigo-zero): Read directly from ./templates/card.html
