@@ -5,8 +5,6 @@ card = {
     title_description: "Santiago's Portfolio, this same website",
     status: "\n    <div class=\"card_status\">\n      <i class=\"fa-solid fa-ice-cream\"></i> Vanilla\n    </div>\n    <div class=\"card_status\">\n      <i class=\"fa-solid fa-user\"></i> Solo\n    </div>\n    <div class=\"card_status\">\n      <i class=\"fa-solid fa-candy-cane\"></i> Eye Candy\n    </div> ",
     description: "\n    This page was entirely made by me, CSS3, HTML5 and vanilla\n    Javascript, even the theme's accent is vanilla! The inspiration for\n    the the UI/UX from\n    <a\n      class=\"link\"\n      target=\"_blank\"\n      rel=\"noopener noreferrer\"\n      title=\"Lightly\"\n      href=\"https://github.com/Luwx/Lightly\"\n      >this project</a\n    >.\n  ",
-    // TODO(santigo-zero): Change this mechanism, access the image of a page with
-    // meta tags
     image: "project_img_zap"
 };
 var objectList = [card];

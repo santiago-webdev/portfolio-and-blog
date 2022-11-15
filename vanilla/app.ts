@@ -34,8 +34,6 @@ card = {
       >this project</a
     >.
   `,
-  // TODO(santigo-zero): Change this mechanism, access the image of a page with
-  // meta tags
   image: "project_img_zap",
 };
 
