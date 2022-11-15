@@ -1,16 +1,22 @@
-// const card = document.querySelector('.link')
-// card.addEventListener('mouseover', changeTitleBG)
-// card.addEventListener('click', changeTitleBG)
+const card = {
+  id: 4,
+  title: 'This website',
+  title_link: 'https://santigo-zero.github.io',
+  title_description: "Santiago's Portfolio, this same website",
 
-// function changeTitleBG() {
-//   card.style.backgroundColor = 'green'
-// }
+  status: 'THIS IS THE STATUS',
+  description: 'This page was entirely made by me, CSS3, TODO.......',
 
-const obj = {
-  name: 'This website', // property name may be an identifier
-  status: 'this is the status', // or a number
-};
-
-function load_home() {
-  document.getElementsByClassName("list-projects").innerHTML='<object type="text/html" data="../templates/card.html" ></object>';
+  image: 'project_img_zap',
 }
+
+function main() {
+  const newCard = document.createElement('div')
+  newCard.classList.add('card')
+
+  // This is where we put all the cards
+  const projectList = document.querySelector('.list-projects')
+  projectList.append(newCard)
+}
+
+window.onload = main()
