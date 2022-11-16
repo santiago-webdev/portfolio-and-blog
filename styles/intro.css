@@ -6,6 +6,10 @@ span {
 }
 
 .intro {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
   border-style: solid;
   border-color: red;
   border-width: 1px;

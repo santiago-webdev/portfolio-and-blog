@@ -3,12 +3,12 @@
   border-radius: 12px;
   min-height: 33rem;
   /* This will make the width expand based on each individial card+ the amount
-* of cards + how many in the row are present, 21rem is about 378px for each
-* individual card, without this the .list-project section will grow and match
-* the blank spaces at the sides of the entire page, but I prefer to keep this so
-* that the cards keep this 378px width on all sizes, I'll leave it as a TODO
-* because I don't know what can I do for this to be tidy and clean*/
-  max-width: 21rem;
+  * of cards + how many in the row are present, 21rem is about 378px for each
+  * individual card, without this the .list-project section will grow and match
+  * the blank spaces at the sides of the entire page, but I prefer to keep this
+  * so that the cards keep this 378px width on all sizes, I'll leave it as a
+  * TODO because I don't know what can I do for this to be tidy and clean*/
+  /* max-width: 21rem; */
   overflow: auto;
 
   gap: 0.6rem;
@@ -112,9 +112,17 @@
   gap: 0.4rem;
 }
 
+@media (max-width: 67em) {
+  .card {
+    max-width: 21rem;
+  }
+}
+
 @media only screen and (max-width: 51em) {
   .card {
-    min-width: 0;
+    /* min-width: 0; */
+
+    max-width: 21rem;
     min-height: 25rem;
 
     /*CSS transitions*/
