@@ -1,10 +1,7 @@
 .projects {
-  /* border-style: solid; */
-  /* border-color: blue; */
-  /* border-width: 1px; */
   background-color: var(--bg);
   gap: 3rem;
-  padding: 2rem 0;
+  padding: 1rem 0;
 }
 
 .projects-header {
@@ -58,11 +55,14 @@
   /* margin-inline: 0.5em; */
   gap: 1.05rem;
   grid-auto-rows: minmax(33rem, auto);
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr); */
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
 
-  /* border-style: solid; */
-  /* border-color: orange; */
-  /* border-width: 2px; */
+@media (max-width: 33em) {
+  .list-projects {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 .card {
