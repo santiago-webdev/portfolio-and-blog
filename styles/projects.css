@@ -55,14 +55,7 @@
   /* margin-inline: 0.5em; */
   gap: 1.05rem;
   grid-auto-rows: minmax(33rem, auto);
-  /* grid-template-columns: repeat(3, 1fr); */
-  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-}
-
-@media (max-width: 33em) {
-  .list-projects {
-    grid-template-columns: repeat(1, 1fr);
-  }
+  grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
 }
 
 .card {
