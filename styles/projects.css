@@ -39,7 +39,17 @@
   }
 
   .projects-header p {
-    font-size: 22px;
+    font-size: 1.375rem;
+  }
+}
+
+@media (max-width: 33em) {
+  .projects-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .projects-header p {
+    font-size: 1.1rem;
   }
 }
 
