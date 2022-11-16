@@ -2,7 +2,6 @@
   background-color: var(--bg-light);
   border-radius: 12px;
   min-height: 33rem;
-  min-width: 21rem;
   overflow: auto;
 
   gap: 0.6rem;

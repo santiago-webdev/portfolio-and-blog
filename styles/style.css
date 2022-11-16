@@ -30,24 +30,22 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  /* text-rendering: geometricPrecision; */
-  /* text-rendering: optimizeSpeed; */
-  text-rendering: optimizeLegibility;
-}
-
-html,
 body,
+footer,
 section {
   color: var(--fg);
 
   display: grid;
   place-items: center;
   align-content: center;
-  min-height: 100vh;
-  width: 100%;
+  /* width: 100%; */
 
   font-family: var(--font-family);
+  background: var(--bg);
+}
+
+section {
+  min-height: 100vh;
 }
 
 .projects {
