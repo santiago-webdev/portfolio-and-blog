@@ -87,18 +87,6 @@ section {
   color: var(--pale-blue);
 }
 
-.list-projects {
-  display: grid;
-  /* margin-inline: 0.5em; */
-  gap: 1.05rem;
-  /* grid-template-columns: repeat(3, 1fr) fit-content(100%); */
-  grid-template-columns: repeat(3, 1fr);
-
-  /* border-style: solid; */
-  /* border-color: orange; */
-  /* border-width: 2px; */
-}
-
 .link {
   background-image: linear-gradient(
     90deg,
@@ -119,21 +107,11 @@ section {
 }
 
 @media (max-width: 67em) {
-  .list-projects {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .projects-header h2 {
     font-size: 2rem;
   }
 
   .projects-header p {
     font-size: 22px;
-  }
-}
-
-@media (max-width: 51em) {
-  .list-projects {
-    grid-template-columns: repeat(1, 1fr);
   }
 }
