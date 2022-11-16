@@ -24,10 +24,6 @@
   /* border-style: solid; */
   /* border-color: var(--bg-header); */
   /* border-width: 1px; */
-
-  /* border-style: solid; */
-  /* border-color: orange; */
-  /* border-width: 1px; */
 }
 
 .card:hover {
@@ -116,7 +112,7 @@
   gap: 0.4rem;
 }
 
-@media only screen and (max-width: 67em) {
+@media only screen and (max-width: 51em) {
   .card {
     min-width: 0;
     min-height: 25rem;
