@@ -61,6 +61,9 @@
 .card {
   background-color: var(--bg-light);
   border-radius: 12px;
+  border-color: var(--bg-header);
+  border-style: solid;
+  border-width: 1px;
   /* min-height: 33rem; */
   /* This will make the width expand based on each individial card+ the amount
   * of cards + how many in the row are present, 21rem is about 378px for each
@@ -91,6 +94,7 @@
 
 .card:hover {
   transform: scale(1.03);
+  border-width: 3px;
 }
 
 .card p {
@@ -101,7 +105,7 @@
 
 @keyframes growCard {
   from {
-    transform: scale(0.9);
+    transform: scale(0.6);
   }
   to {
     transform: scale(1);
