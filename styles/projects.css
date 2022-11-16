@@ -47,7 +47,7 @@
   display: grid;
   /* margin-inline: 0.5em; */
   gap: 1.05rem;
-  /* grid-template-columns: repeat(3, 1fr) fit-content(100%); */
+  grid-auto-rows: minmax(33rem, auto);
   grid-template-columns: repeat(3, 1fr);
 
   /* border-style: solid; */
@@ -58,7 +58,7 @@
 .card {
   background-color: var(--bg-light);
   border-radius: 12px;
-  min-height: 33rem;
+  /* min-height: 33rem; */
   /* This will make the width expand based on each individial card+ the amount
   * of cards + how many in the row are present, 21rem is about 378px for each
   * individual card, without this the .list-project section will grow and match
