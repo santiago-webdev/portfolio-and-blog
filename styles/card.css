@@ -19,7 +19,7 @@
   box-shadow: 3px 6px 9px rgba(0, 0, 0, 0.1);
 
   animation: growCard 0.6s;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.1s ease-out;
 
   /* border-style: solid; */
   /* border-color: var(--bg-header); */
