@@ -46,12 +46,16 @@ section {
 
 section {
   min-height: 100vh;
+  /* This _should_ limit the blank space on the sides for all the sections,
+  * maybe I should delete it. */
+  max-width: 66em;
+  margin-inline: 6px;
 }
 
 .projects {
-  /* border-style: solid; */
-  /* border-color: blue; */
-  /* border-width: 1px; */
+  border-style: solid;
+  border-color: blue;
+  border-width: 1px;
   background-color: var(--bg);
   gap: 3rem;
   padding: 2rem 0;
@@ -77,6 +81,7 @@ section {
 .projects-header p {
   font-size: 28px;
   font-weight: 500;
+  margin: 15px;
 
   color: var(--light-purple);
   color: var(--pale-blue);
@@ -84,12 +89,13 @@ section {
 
 .list-projects {
   display: grid;
-  margin-inline: 0.5em;
+  /* margin-inline: 0.5em; */
   gap: 1.05rem;
   /* grid-template-columns: repeat(3, 1fr) fit-content(100%); */
   grid-template-columns: repeat(3, 1fr);
+  /* width: 100%; */
 
-  max-width: 66em;
+  /* max-width: 66em; */
 
   /* border-style: solid; */
   /* border-color: orange; */

@@ -1,3 +1,17 @@
 span {
   color: var(--color-vanilla-red);
+  border-style: solid;
+  border-color: orange;
+  border-width: 1px;
+}
+
+.intro {
+  border-style: solid;
+  border-color: red;
+  border-width: 1px;
+  /* width: 100%; */
+  text-align: left;
+  max-width: 66em;
+  width: 100%;
+  margin-inline: 6px;
 }
