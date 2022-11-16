@@ -1,4 +1,5 @@
 const card = {
+  id: "card1",
   title: "This website",
   title_link: "https://santigo-zero.github.io",
   title_description: "Santiago's Portfolio, this same website",
@@ -29,6 +30,7 @@ const card = {
 };
 
 const card2 = {
+  id: "card2",
   title: 'Website for Zap <i class="fa-solid fa-bolt-lightning"></i>',
   title_link: "https://zapzsh.org",
   title_description: "Website for Zap zsh plugin manager",
@@ -58,9 +60,9 @@ window.onload = function () {
 
   objectList.map(function (element) {
     // I'm using a ! in here because projectList is never going to be null.
-    return projectList!.insertAdjacentHTML(
+    projectList!.insertAdjacentHTML(
       "afterbegin",
-      `<div class="card">
+      `<div id="${element.id}" class="card">
         <div class="header">
           <h2 class="card_title">
             <a
@@ -80,5 +82,20 @@ window.onload = function () {
         <p class="card__description">${element.description}</p>
       </div>`
     );
+
+    const curr_card = document.getElementById(element.id);
+    const main_link = document.querySelector(".link") as HTMLElement | null;
+
+    function handleClick() {
+      const isTextSelected = window.getSelection()!.toString();
+      if (!isTextSelected) {
+        if (main_link != null) {
+          main_link.click();
+        }
+      }
+    }
+
+    curr_card?.addEventListener("click", handleClick);
+    // const curr_card = document.querySelector("#" + element.id)
   });
 };

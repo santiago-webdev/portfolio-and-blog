@@ -53,9 +53,9 @@ section {
 }
 
 .projects {
-  border-style: solid;
-  border-color: blue;
-  border-width: 1px;
+  /* border-style: solid; */
+  /* border-color: blue; */
+  /* border-width: 1px; */
   background-color: var(--bg);
   gap: 3rem;
   padding: 2rem 0;
