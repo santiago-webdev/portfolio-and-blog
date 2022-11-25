@@ -94,7 +94,6 @@
 
 .card:hover {
   transform: scale(1.03);
-  border-width: 3px;
 }
 
 .card p {
