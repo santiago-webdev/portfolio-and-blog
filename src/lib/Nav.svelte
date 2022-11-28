@@ -17,14 +17,8 @@
 
 <style>
 	.nav_container {
-		/* Make it stick to the top of the page on scroll */
-		top: 0;
-		/* position: sticky; */
 		position: fixed;
 		width: 100%;
-
-		/* Use this color as default value */
-		background-color: var(--cc2-header);
 
 		/* Makes it blurry and transparent */
 		background-color: rgba(27, 26, 39, 0.9);
@@ -36,8 +30,6 @@
 		/* border-width: 2px; */
 
 		font-size: 20px;
-
-		overflow: hidden; /* FIXME: This is here just because it was bothering me in mobile */
 	}
 
 	button {
@@ -47,17 +39,12 @@
 		padding: 0;
 	}
 
-	/* TODO(santigo-zero): Change this colors */
-	/* Color used when mouse is hovering the link */
 	a:hover {
 		text-decoration: none;
 		color: var(--cc-vanilla);
-		transition: all 0.3s ease 0s;
 	}
 
-	/* Color used when mouse is clicking the element */
 	a:active {
-		text-decoration: none;
 		color: var(--cc-vanilla-red);
 		transition: none;
 	}
@@ -67,10 +54,7 @@
 		text-decoration: none;
 		color: var(--cc-fg);
 		padding: 2rem 1.3rem;
-
-		/* border-color: orange; */
-		/* border-style: solid; */
-		/* border-width: 1px; */
+    /* padding: var(--padding); */
 
 		transition: all 0.3s ease 0s;
 	}
@@ -80,13 +64,8 @@
 		place-items: center;
 		justify-content: space-between;
 
-		/* border-color: red; */
-		/* border-style: solid; */
-		/* border-width: 2px; */
-
 		margin: 0 auto;
-		max-width: 50rem;
-		/* padding: 1rem 0; */
+		max-width: var(--max-width);
 	}
 
 	h3 a {
@@ -97,14 +76,6 @@
 	ul {
 		display: flex;
 		place-items: center;
-
-		/* Reset the list */
-		/* margin: 0; */
-		/* padding: 0; */
-
-		/* border-color: white; */
-		/* border-style: solid; */
-		/* border-width: 1px; */
 
 		color: var(--cc-fg);
 		list-style-type: none;
