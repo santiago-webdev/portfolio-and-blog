@@ -1,7 +1,7 @@
 <!-- <p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p> -->
 <script>
 	import Home from './Home.svelte';
-	import Footer from './Footer.svelte';
+	import Footer from '$lib/Footer.svelte';
 </script>
 
 <Home />
