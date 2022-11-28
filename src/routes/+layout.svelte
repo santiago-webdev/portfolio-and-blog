@@ -27,8 +27,13 @@
 	}
 
 	.wrapper {
-		background-color: var(--cc-bg); /* FIXME This is not a fix I really like */
+		background-color: var(--cc-bg);
+    color: var(--cc-fg);
 	}
+
+  h1 {
+    font-family: 'Basier Circle', sans-serif;
+  }
 
 	::selection {
 		color: #8ff3d9;
