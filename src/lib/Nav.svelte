@@ -1,13 +1,24 @@
+<script>
+ // List of navigation items
+  const navItems = [
+    { label: "Home", href: "#" },
+    { label: "About", href: "#" },
+    { label: "Projects", href: "#" },
+    { label: "Resume", href: "#" },
+  ];
+</script>
+
 <div class="nav_container">
 	<header>
 		<h3><a href="/">SG</a></h3>
 
 		<nav>
 			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="#">About</a></li>
-				<li><a href="#">Projects</a></li>
-				<li><a href="#">Resume</a></li>
+        {#each navItems as item}
+          <li>
+            <a href={item.href}>{item.label}</a>
+          </li>
+        {/each}
 			</ul>
 		</nav>
 
