@@ -26,8 +26,8 @@
 		--cc4-fg: #9da1b4;
 
 		--max-width: 60rem;
-    --padding: 1.3rem;
-    --padding-inline: 0.6rem;
+		--padding: 1.3rem;
+		--padding-inline: 0.6rem;
 	}
 
 	.wrapper {

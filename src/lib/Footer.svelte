@@ -31,7 +31,7 @@
 				><i class="fa-regular fa-star" /> {ghStars}</a
 			>
 		</section>
-		<section class="others">
+		<section class="that">
 			<div class="copyright">
 				<p>© GPL-3.0 Santiago Gonzalez</p>
 				<p>2022-2023. All Rights Reserved</p>
@@ -66,7 +66,7 @@
 <!-- 			><i class="fa-regular fa-star" /> {ghStars}</a -->
 <!-- 		> -->
 <!-- 	</section> -->
-<!-- 	<section class="others"> -->
+<!-- 	<section class="that"> -->
 <!-- 		<div class="copyright"> -->
 <!-- 			<p>© GPL-3.0 Santiago Gonzalez</p> -->
 <!-- 			<p>2022-2023. All Rights Reserved</p> -->
@@ -134,7 +134,6 @@
 <!-- 	} -->
 
 <!-- </style> -->
-
 <style>
 	.wrapper-nav {
 		background-color: var(--cc2-bg2);
@@ -147,9 +146,9 @@
 		display: grid;
 		place-items: center;
 		max-width: var(--max-width);
-    padding: var(--padding);
-    gap: calc(var(--padding) + 1rem);
-    padding-inline: var(--padding-inline);
+		padding: var(--padding);
+		gap: calc(var(--padding) + 1rem); /* Separator between .this and .that */
+		padding-inline: var(--padding-inline);
 	}
 
 	section {
@@ -162,7 +161,6 @@
 		min-height: 60px;
 		width: 100%;
 
-		/* padding: 2rem; */
 		gap: 2rem;
 
 		font-size: 18px;
@@ -191,14 +189,14 @@
 		color: var(--cc4-fg);
 	}
 
-	.others {
+	.that {
 		flex-wrap: wrap;
 		gap: 1rem;
 	}
 
 	@media screen and (max-width: 43.75em) {
 		.this,
-		.others {
+		.that {
 			flex-direction: column-reverse;
 			gap: 1rem;
 			text-align: center;
@@ -212,8 +210,8 @@
 			flex-direction: column;
 		}
 
-    .wrapper-nav {
-      gap: 3rem;
-    }
+		.wrapper-nav {
+			gap: 3rem;
+		}
 	}
 </style>
