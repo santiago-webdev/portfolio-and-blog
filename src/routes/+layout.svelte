@@ -24,16 +24,20 @@
 
 		--cc3-fg: #c3c3c8;
 		--cc4-fg: #9da1b4;
+
+		--max-width: 60rem;
+    --padding: 1.3rem;
+    --padding-inline: 0.6rem;
 	}
 
 	.wrapper {
 		background-color: var(--cc-bg);
-    color: var(--cc-fg);
+		color: var(--cc-fg);
 	}
 
-  h1 {
-    font-family: 'Basier Circle', sans-serif;
-  }
+	h1 {
+		font-family: 'Basier Circle', sans-serif;
+	}
 
 	::selection {
 		color: #8ff3d9;
