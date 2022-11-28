@@ -5,9 +5,9 @@
 		<nav>
 			<ul>
 				<li><a href="/">Home</a></li>
-				<li><a href="#about">About</a></li>
-				<li><a href="#projects">Projects</a></li>
-				<li><a href="#resume">Resume</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Projects</a></li>
+				<li><a href="#">Resume</a></li>
 			</ul>
 		</nav>
 
@@ -21,7 +21,7 @@
 		top: 0;
 		/* position: sticky; */
 		position: fixed;
-    width: 100%;
+		width: 100%;
 
 		/* Use this color as default value */
 		background-color: var(--cc2-header);
