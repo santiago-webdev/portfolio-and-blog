@@ -56,84 +56,6 @@
 	</div>
 </div>
 
-<!-- <div class="wrapper-nav"> -->
-<!-- 	<section class="this"> -->
-<!-- 		<p> -->
-<!-- 			Designed & Built with <i class="fa-regular fa-heart" /> by Santiago -->
-<!-- 		</p> -->
-
-<!-- 		<a href="https://github.com/santigo-zero/santigo-zero.github.io" -->
-<!-- 			><i class="fa-regular fa-star" /> {ghStars}</a -->
-<!-- 		> -->
-<!-- 	</section> -->
-<!-- 	<section class="that"> -->
-<!-- 		<div class="copyright"> -->
-<!-- 			<p>© GPL-3.0 Santiago Gonzalez</p> -->
-<!-- 			<p>2022-2023. All Rights Reserved</p> -->
-<!-- 		</div> -->
-<!-- 		<ol> -->
-<!-- 			<li> -->
-<!-- 				<a href="https://github.com/santigo-zero/" -->
-<!-- 					><i class="fa-brands fa-github" /> -->
-<!-- 					GitHub</a -->
-<!-- 				> -->
-<!-- 			</li> -->
-<!-- 			<li class="separator">•</li> -->
-<!-- 			<li> -->
-<!-- 				<a href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/" -->
-<!-- 					><i class="fa-brands fa-linkedin" /> LinkedIn</a -->
-<!-- 				> -->
-<!-- 			</li> -->
-<!-- 			<li class="separator">•</li> -->
-<!-- 			<li><a href="#"><i class="fa-regular fa-envelope" /> Email</a></li> -->
-<!-- 		</ol> -->
-<!-- 	</section> -->
-<!-- </div> -->
-
-<!-- <style> -->
-<!-- 	.wrapper-nav { -->
-<!-- 		padding: 2rem; -->
-<!-- 		background-color: var(--cc2-bg2); -->
-<!-- 		gap: 1.25rem; -->
-
-<!-- 		display: flex; -->
-<!-- 		/* place-items: center; */ -->
-<!-- 		justify-content: space-between; -->
-<!-- 		flex-direction: column; -->
-
-<!-- 		/* border-color: red; */ -->
-<!-- 		/* border-style: solid; */ -->
-<!-- 		/* border-width: 2px; */ -->
-<!-- 	} -->
-
-<!-- 	section { -->
-<!-- 		display: flex; -->
-<!-- 		/* place-items: center; */ -->
-<!-- 		justify-content: space-between; -->
-<!-- 		align-items: center; -->
-
-<!-- 		flex-direction: row; -->
-
-<!-- 		margin: 0 auto; -->
-<!-- 		max-width: 60rem; -->
-<!-- 		height: 100%; -->
-<!-- 		min-height: 60px; -->
-<!-- 		width: 100%; -->
-
-<!-- 		/* padding: 2rem; */ -->
-<!-- 		gap: 2rem; -->
-
-<!-- 		font-size: 18px; -->
-
-<!-- 		background-color: var(--cc2-bg2); -->
-<!-- 		color: var(--cc4-fg); -->
-
-<!-- 		/* border-color: blue; */ -->
-<!-- 		/* border-style: solid; */ -->
-<!-- 		/* border-width: 2px; */ -->
-<!-- 	} -->
-
-<!-- </style> -->
 <style>
 	.wrapper-nav {
 		background-color: var(--cc2-bg2);
@@ -188,6 +110,25 @@
 		text-decoration: none;
 		color: var(--cc4-fg);
 	}
+
+  a:hover {
+    color: var(--cc2-fg);
+  }
+
+  p:hover .fa-heart {
+    color: crimson;
+  }
+
+  a:hover .fa-star {
+    color: crimson;
+  }
+  a:hover .fa-star {
+    color: orange;
+  }
+
+  .fa-heart, .fa-star, a, p {
+    transition: all 0.3s ease 0s;
+  }
 
 	.that {
 		flex-wrap: wrap;
