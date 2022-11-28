@@ -1,24 +1,24 @@
 <script>
- // List of navigation items
-  const navItems = [
-    { label: "Home", href: "#" },
-    { label: "About", href: "#" },
-    { label: "Projects", href: "#" },
-    { label: "Resume", href: "#" },
-  ];
+	// List of navigation items
+	const navItems = [
+		{ label: 'Home', href: '#' },
+		{ label: 'About', href: '#' },
+		{ label: 'Projects', href: '#' },
+		{ label: 'Resume', href: '#' }
+	];
 </script>
 
-<div class="nav_container">
+<div class="wrapper-nav">
 	<header>
 		<h3><a href="/">SG</a></h3>
 
 		<nav>
 			<ul>
-        {#each navItems as item}
-          <li>
-            <a href={item.href}>{item.label}</a>
-          </li>
-        {/each}
+				{#each navItems as item}
+					<li>
+						<a href={item.href}>{item.label}</a>
+					</li>
+				{/each}
 			</ul>
 		</nav>
 
@@ -27,7 +27,7 @@
 </div>
 
 <style>
-	.nav_container {
+	.wrapper-nav {
 		position: fixed;
 		width: 100%;
 
@@ -65,7 +65,7 @@
 		text-decoration: none;
 		color: var(--cc-fg);
 		padding: 2rem 1.3rem;
-    /* padding: var(--padding); */
+		/* padding: var(--padding); */
 
 		transition: all 0.3s ease 0s;
 	}
