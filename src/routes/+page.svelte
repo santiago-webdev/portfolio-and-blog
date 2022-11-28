@@ -9,7 +9,7 @@
 <!-- <h1>Welcome to SvelteKit</h1> -->
 
 <svelte:head>
-  <title>Santiago Gonzalez - Portfolio</title>
+	<title>Santiago Gonzalez - Portfolio</title>
 	<!-- Fonts -->
 	<style>
 		@import url('https://fonts.cdnfonts.com/css/basier');
