@@ -111,24 +111,27 @@
 		color: var(--cc4-fg);
 	}
 
-  a:hover {
-    color: var(--cc2-fg);
-  }
+	a:hover {
+		color: var(--cc2-fg);
+	}
 
-  p:hover .fa-heart {
-    color: crimson;
-  }
+	p:hover .fa-heart {
+		color: crimson;
+	}
 
-  a:hover .fa-star {
-    color: crimson;
-  }
-  a:hover .fa-star {
-    color: orange;
-  }
+	a:hover .fa-star {
+		color: crimson;
+	}
+	a:hover .fa-star {
+		color: orange;
+	}
 
-  .fa-heart, .fa-star, a, p {
-    transition: all 0.3s ease 0s;
-  }
+	.fa-heart,
+	.fa-star,
+	a,
+	p {
+		transition: all 0.3s ease 0s;
+	}
 
 	.that {
 		flex-wrap: wrap;
