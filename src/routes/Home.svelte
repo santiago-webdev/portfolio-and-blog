@@ -18,7 +18,7 @@
 		/* border-color: red; */
 		/* border-style: solid; */
 
-		max-width: var(--max-width);
+		max-width: var(--content-width);
 		padding: var(--padding);
 		padding-inline: var(--padding-inline);
 	}

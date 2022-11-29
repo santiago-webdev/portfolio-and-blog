@@ -67,7 +67,7 @@
 		margin: 0 auto;
 		display: grid;
 		place-items: center;
-		max-width: var(--max-width);
+		max-width: var(--content-width);
 		padding: var(--padding);
 		gap: calc(var(--padding) + 1rem); /* Separator between .this and .that */
 		padding-inline: var(--padding-inline);

@@ -25,7 +25,7 @@
 		--cc3-fg: #c3c3c8;
 		--cc4-fg: #9da1b4;
 
-		--max-width: 60rem;
+		--content-width: 60rem;
 		--padding: 1.3rem;
 		--padding-inline: 0.6rem;
 	}

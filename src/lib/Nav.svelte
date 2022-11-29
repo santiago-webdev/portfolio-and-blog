@@ -42,7 +42,7 @@
 		align-items: center;
 		justify-content: space-between;
 
-		max-width: var(--max-width);
+		max-width: var(--content-width);
 		/* padding: var(--padding); */
 		padding-inline: var(--padding-inline);
 	}
