@@ -8,22 +8,25 @@
 		{ label: 'Contact', href: '#' }
 	];
 
-	import { onMount } from 'svelte';
-	const scrollNavBar = 60;
-	let show = false;
-	onMount(() => {
-		window.onscroll = () => {
-			if (window.scrollY > scrollNavBar) {
-				show = true;
-			} else {
-				show = false;
-			}
-		};
-	});
+  let y = 0;
+  let aux = 0;
+
+  function handleScroll(y) {
+    if (y > 0 && y >= aux) {
+      // console.log('We are moving DOWN', Math.trunc(y), Math.trunc(aux))
+      return true
+    } else {
+      // console.log('We are moving UP', Math.trunc(y), Math.trunc(aux))
+      return false
+    }
+    aux = y
+  }
 </script>
 
-<!-- If `show` is `true` then .scrolled will be added to .wrapper-nav -->
-<div class:scrolled={show} class="wrapper-nav">
+<svelte:window bind:scrollY="{y}" />
+
+<!-- If `handleScroll` is `true` then .hideNav will be added to .wrapper-nav -->
+<div class:hideNav={handleScroll(y)} class="wrapper-nav">
 	<nav>
 		<h3><a href="/">SG</a></h3>
 		<ol>
@@ -37,8 +40,8 @@
 </div>
 
 <style>
-	.scrolled {
-		transform: translate(0, calc(-100% - 1rem));
+	.hideNav {
+		transform: translate(0, calc(-100% - 3rem));
 	}
 
 	.wrapper-nav {
