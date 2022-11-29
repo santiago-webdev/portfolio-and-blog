@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	// List of navigation items
 	const navItems = [
 		{ label: 'Home', href: '#' },
@@ -8,23 +8,23 @@
 		{ label: 'Contact', href: '#' }
 	];
 
-  let y: number = 0;
-  let aux: number = 0;
+	let y: number = 0;
+	let aux: number = 0;
 
-  function handleScroll(y): boolean {
-    if (y > 0 && y >= aux) {
-      console.log('We are moving DOWN', Math.trunc(y), Math.trunc(aux))
-      aux = y
-      return true
-    } else {
-      console.log('We are moving UP', Math.trunc(y), Math.trunc(aux))
-      aux = y
-      return false
-    }
-  }
+	function handleScroll(y): boolean {
+		if (y > 0 && y >= aux) {
+			console.log('We are moving DOWN', Math.trunc(y), Math.trunc(aux));
+			aux = y;
+			return true;
+		} else {
+			console.log('We are moving UP', Math.trunc(y), Math.trunc(aux));
+			aux = y;
+			return false;
+		}
+	}
 </script>
 
-<svelte:window bind:scrollY="{y}" />
+<svelte:window bind:scrollY={y} />
 
 <!-- If `handleScroll` is `true` then .hideNav will be added to .wrapper-nav -->
 <div class:hideNav={handleScroll(y)} class="wrapper-nav">
