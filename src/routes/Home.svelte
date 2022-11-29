@@ -1,8 +1,13 @@
+<script>
+  const title = "I'm Santiago, a web developer"
+  const subtitle = "And I create clean interfaces for the web."
+</script>
+
 <div class="wrapper-home">
 	<main>
 		<p>Hello!</p>
-		<h1>I'm Santiago, a web developer</h1>
-		<h2>And I create clean interfaces for the web.</h2>
+		<h1>{title}</h1>
+		<h2>{subtitle}</h2>
 	</main>
 </div>
 
