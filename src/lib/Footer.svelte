@@ -36,7 +36,7 @@
 				<p>© GPL-3.0 Santiago Gonzalez</p>
 				<p>2022-2023. All Rights Reserved</p>
 			</div>
-			<ol>
+			<ul>
 				<li>
 					<a href="https://github.com/santigo-zero/"
 						><i class="fa-brands fa-github" />
@@ -51,7 +51,7 @@
 				</li>
 				<li class="separator">•</li>
 				<li><a href="#"><i class="fa-regular fa-envelope" /> Email</a></li>
-			</ol>
+			</ul>
 		</section>
 	</div>
 </div>
@@ -95,7 +95,7 @@
 		/* border-width: 2px; */
 	}
 
-	ol {
+	ul {
 		display: flex;
 		place-items: center;
 		flex-direction: row;
@@ -150,7 +150,7 @@
 			display: none;
 		}
 
-		ol {
+		ul {
 			flex-direction: column;
 		}
 

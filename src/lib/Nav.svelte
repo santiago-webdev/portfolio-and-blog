@@ -2,28 +2,24 @@
 	// List of navigation items
 	const navItems = [
 		{ label: 'Home', href: '#' },
+    { label: 'Projects', href: '#' },
 		{ label: 'About', href: '#' },
-		{ label: 'Projects', href: '#' },
-		{ label: 'Resume', href: '#' }
+		{ label: 'Resume', href: '#' },
+		{ label: 'Contact', href: '#' },
 	];
 </script>
 
 <div class="wrapper-nav">
-	<header>
-		<h3><a href="/">SG</a></h3>
-
-		<nav>
-			<ul>
-				{#each navItems as item}
-					<li>
-						<a href={item.href}>{item.label}</a>
-					</li>
-				{/each}
-			</ul>
-		</nav>
-
-		<a href="#" class="cta"><button>Contact</button></a>
-	</header>
+  <nav>
+    <h3><a href="/">SG</a></h3>
+    <ol>
+      {#each navItems as item}
+        <li>
+          <a href={item.href}>{item.label}</a>
+        </li>
+      {/each}
+    </ol>
+  </nav>
 </div>
 
 <style>
@@ -36,59 +32,36 @@
 		-webkit-backdrop-filter: blur(3px);
 		backdrop-filter: blur(3px);
 
-		/* border-color: blue; */
-		/* border-style: solid; */
-		/* border-width: 2px; */
-
 		font-size: 20px;
 	}
 
-	button {
-		background: none;
-		color: inherit;
-		border: none;
-		padding: 0;
-	}
+  nav {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 
-	a:hover {
-		text-decoration: none;
-		color: var(--cc-vanilla);
-	}
+    max-width: var(--max-width);
+    /* padding: var(--padding); */
+    padding-inline: var(--padding-inline);
+  }
 
-	a:active {
-		color: var(--cc-vanilla-red);
-		transition: none;
-	}
+  li {
+    display: inline-grid; /* inline doesn't let them */
+  }
 
-	/* This is the normal color */
-	a {
-		text-decoration: none;
-		color: var(--cc-fg);
-		padding: 2rem 1.3rem;
-		/* padding: var(--padding); */
+  a {
+    text-decoration: none;
+    color: var(--cc-fg);
 
-		transition: all 0.3s ease 0s;
-	}
+    /* FIXME: Padding and Margin. We manage the height of the Nav with this but it messes
+* up the blank spaces to the sides of the page*/
+    padding: var(--padding);
+  }
 
-	header {
-		display: flex;
-		place-items: center;
-		justify-content: space-between;
-
-		margin: 0 auto;
-		max-width: var(--max-width);
-	}
-
-	h3 a {
-		font-family: 'Inter', sans-serif;
-		font-weight: 900;
-	}
-
-	ul {
-		display: flex;
-		place-items: center;
-
-		color: var(--cc-fg);
-		list-style-type: none;
-	}
+  h3 a {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+  }
 </style>
