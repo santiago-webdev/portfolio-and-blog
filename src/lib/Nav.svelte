@@ -8,7 +8,7 @@
 		{ label: 'Contact', href: '#' }
 	];
 
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 	const scrollNavBar = 60;
 	let show = false;
 	onMount(() => {
@@ -22,6 +22,7 @@
 	});
 </script>
 
+<!-- If `show` is `true` then .scrolled will be added to .wrapper-nav -->
 <div class:scrolled={show} class="wrapper-nav">
 	<nav>
 		<h3><a href="/">SG</a></h3>
