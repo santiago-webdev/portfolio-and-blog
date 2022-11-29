@@ -2,24 +2,24 @@
 	// List of navigation items
 	const navItems = [
 		{ label: 'Home', href: '#' },
-    { label: 'Projects', href: '#' },
+		{ label: 'Projects', href: '#' },
 		{ label: 'About', href: '#' },
 		{ label: 'Resume', href: '#' },
-		{ label: 'Contact', href: '#' },
+		{ label: 'Contact', href: '#' }
 	];
 </script>
 
 <div class="wrapper-nav">
-  <nav>
-    <h3><a href="/">SG</a></h3>
-    <ol>
-      {#each navItems as item}
-        <li>
-          <a href={item.href}>{item.label}</a>
-        </li>
-      {/each}
-    </ol>
-  </nav>
+	<nav>
+		<h3><a href="/">SG</a></h3>
+		<ol>
+			{#each navItems as item}
+				<li>
+					<a href={item.href}>{item.label}</a>
+				</li>
+			{/each}
+		</ol>
+	</nav>
 </div>
 
 <style>
@@ -35,33 +35,33 @@
 		font-size: 20px;
 	}
 
-  nav {
-    display: flex;
-    margin: 0 auto;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
+	nav {
+		display: flex;
+		margin: 0 auto;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
 
-    max-width: var(--max-width);
-    /* padding: var(--padding); */
-    padding-inline: var(--padding-inline);
-  }
+		max-width: var(--max-width);
+		/* padding: var(--padding); */
+		padding-inline: var(--padding-inline);
+	}
 
-  li {
-    display: inline-grid; /* inline doesn't let them */
-  }
+	li {
+		display: inline-grid; /* inline doesn't let them */
+	}
 
-  a {
-    text-decoration: none;
-    color: var(--cc-fg);
+	a {
+		text-decoration: none;
+		color: var(--cc-fg);
 
-    /* FIXME: Padding and Margin. We manage the height of the Nav with this but it messes
+		/* FIXME: Padding and Margin. We manage the height of the Nav with this but it messes
 * up the blank spaces to the sides of the page*/
-    padding: var(--padding);
-  }
+		padding: var(--padding);
+	}
 
-  h3 a {
-    font-family: 'Inter', sans-serif;
-    font-weight: 800;
-  }
+	h3 a {
+		font-family: 'Inter', sans-serif;
+		font-weight: 800;
+	}
 </style>
