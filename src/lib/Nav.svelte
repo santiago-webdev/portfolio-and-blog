@@ -62,6 +62,7 @@
 	a {
 		text-decoration: none;
 		color: var(--cc-fg);
+		transition: all 0.3s ease 0s;
 
 		/* padding: 0 var(--padding); */
 	}
