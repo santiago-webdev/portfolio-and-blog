@@ -7,9 +7,22 @@
 		{ label: 'Resume', href: '#' },
 		{ label: 'Contact', href: '#' }
 	];
+
+	import { onMount, onDestroy } from 'svelte';
+	const scrollNavBar = 60;
+	let show = false;
+	onMount(() => {
+		window.onscroll = () => {
+			if (window.scrollY > scrollNavBar) {
+				show = true;
+			} else {
+				show = false;
+			}
+		};
+	});
 </script>
 
-<div class="wrapper-nav">
+<div class:scrolled={show} class="wrapper-nav">
 	<nav>
 		<h3><a href="/">SG</a></h3>
 		<ol>
@@ -23,7 +36,12 @@
 </div>
 
 <style>
+	.scrolled {
+		transform: translate(0, calc(-100% - 1rem));
+	}
+
 	.wrapper-nav {
+		transition: 0.6s ease;
 		position: fixed;
 		width: 100%;
 
