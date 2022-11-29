@@ -33,7 +33,7 @@
 		backdrop-filter: blur(3px);
 
 		font-size: 20px;
-    font-family: 'Basier Square', sans-serif;
+		font-family: 'Basier Square', sans-serif;
 	}
 
 	nav {
@@ -46,18 +46,18 @@
 		max-width: var(--content-width);
 		/* padding: var(--padding); */
 		padding-inline: var(--padding-inline);
-    height: 100px;
+		height: 100px;
 
-    /* border-color: blue; */
-    /* border-style: solid; */
+		/* border-color: blue; */
+		/* border-style: solid; */
 	}
 
-  ol {
-    gap: 2rem;
+	ol {
+		gap: 2rem;
 		display: flex;
-    list-style: none;
-    padding: 1rem 0 1rem 1rem;
-  }
+		list-style: none;
+		padding: 1rem 0 1rem 1rem;
+	}
 
 	a {
 		text-decoration: none;
@@ -66,9 +66,9 @@
 		/* padding: 0 var(--padding); */
 	}
 
-  a:hover {
-    color: var(--cc4-fg);
-  }
+	a:hover {
+		color: var(--cc4-fg);
+	}
 
 	h3 a {
 		font-family: 'Inter', sans-serif;
