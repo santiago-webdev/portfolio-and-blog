@@ -8,18 +8,19 @@
 		{ label: 'Contact', href: '#' }
 	];
 
-  let y = 0;
-  let aux = 0;
+  let y: number = 0;
+  let aux: number = 0;
 
-  function handleScroll(y) {
+  function handleScroll(y): boolean {
     if (y > 0 && y >= aux) {
-      // console.log('We are moving DOWN', Math.trunc(y), Math.trunc(aux))
+      console.log('We are moving DOWN', Math.trunc(y), Math.trunc(aux))
+      aux = y
       return true
     } else {
-      // console.log('We are moving UP', Math.trunc(y), Math.trunc(aux))
+      console.log('We are moving UP', Math.trunc(y), Math.trunc(aux))
+      aux = y
       return false
     }
-    aux = y
   }
 </script>
 
