@@ -34,13 +34,13 @@
 >
 	<nav>
 		<h3><a href="/">SG</a></h3>
-		<ol>
+		<ul>
 			{#each navItems as item}
 				<li>
 					<a href={item.href}>{item.label}</a>
 				</li>
 			{/each}
-		</ol>
+		</ul>
 	</nav>
 </div>
 
@@ -82,7 +82,7 @@
 		/* border-style: solid; */
 	}
 
-	ol {
+	ul {
 		gap: 2rem;
 		display: flex;
 		list-style: none;
