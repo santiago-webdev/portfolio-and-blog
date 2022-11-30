@@ -35,11 +35,11 @@
 	<nav>
 		<h3><a href="/">SG</a></h3>
 		<ol>
-					{#each navItems as item}
-						<li>
-							<a href={item.href}>{item.label}</a>
-						</li>
-					{/each}
+			{#each navItems as item}
+				<li>
+					<a href={item.href}>{item.label}</a>
+				</li>
+			{/each}
 		</ol>
 	</nav>
 </div>
