@@ -20,7 +20,7 @@
 	});
 </script>
 
-<div class="wrapper-nav">
+<div id="wrapper-footer" class="wrapper-footer">
 	<div class="container">
 		<section class="this">
 			<p>
@@ -57,7 +57,7 @@
 </div>
 
 <style>
-	.wrapper-nav {
+	.wrapper-footer {
 		background-color: var(--cc2-bg2);
 	}
 
@@ -154,7 +154,7 @@
 			flex-direction: column;
 		}
 
-		.wrapper-nav {
+		.wrapper-footer {
 			gap: 3rem;
 		}
 	}
