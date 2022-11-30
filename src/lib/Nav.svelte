@@ -1,6 +1,4 @@
 <script lang="ts">
-	import MediaQuery from '$lib/MediaQuery.svelte';
-
 	// List of navigation items
 	const navItems = [
 		{ label: 'Home', href: '#' },
@@ -37,17 +35,11 @@
 	<nav>
 		<h3><a href="/">SG</a></h3>
 		<ol>
-			<MediaQuery query="(max-width: 43.75em)" let:matches>
-				{#if matches}
-					<button><i class="fa-solid fa-burger" /></button>
-				{:else}
 					{#each navItems as item}
 						<li>
 							<a href={item.href}>{item.label}</a>
 						</li>
 					{/each}
-				{/if}
-			</MediaQuery>
 		</ol>
 	</nav>
 </div>
