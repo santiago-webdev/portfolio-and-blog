@@ -30,9 +30,9 @@
 
 <!-- If `handleScroll` is `true` then .hideNav will be added to .wrapper-nav -->
 <div
-  class="wrapper-nav"
+	class="wrapper-nav"
 	class:hideNav={handleScroll(y)}
-  class:wrapper-nav-lg-blur={handleScroll(y)}
+	class:wrapper-nav-lg-blur={handleScroll(y)}
 >
 	<nav>
 		<h3><a href="/">SG</a></h3>
