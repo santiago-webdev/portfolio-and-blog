@@ -13,11 +13,11 @@
 
 	function handleScroll(y): boolean {
 		if (y > 0 && y >= aux) {
-			console.log('We are moving DOWN', Math.trunc(y), Math.trunc(aux));
+			// console.log('We are moving DOWN', Math.trunc(y), Math.trunc(aux));
 			aux = y;
 			return true;
 		} else {
-			console.log('We are moving UP', Math.trunc(y), Math.trunc(aux));
+			// console.log('We are moving UP', Math.trunc(y), Math.trunc(aux));
 			aux = y;
 			return false;
 		}
