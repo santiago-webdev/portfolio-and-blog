@@ -1,8 +1,8 @@
 <script lang="ts">
 	// List of navigation items
 	const navItems = [
-		{ label: 'Home', href: '#' },
-		{ label: 'Projects', href: '#' },
+		{ label: 'Home', href: '/' },
+		{ label: 'Projects', href: '#wrapper-projects' },
 		{ label: 'About', href: '#' },
 		{ label: 'Resume', href: '#' },
 		{ label: 'Contact', href: '#' }

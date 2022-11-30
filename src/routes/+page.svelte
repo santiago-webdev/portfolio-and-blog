@@ -3,10 +3,12 @@
 	import Footer from '$lib/Footer.svelte';
 
 	import Home from './Home.svelte';
+	import Projects from './Projects.svelte';
 </script>
 
 <Nav />
 <Home />
+<Projects />
 <Footer />
 
 <svelte:head>

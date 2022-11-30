@@ -10,8 +10,12 @@
 	:root {
 		--cc-fg: #e8e8e8;
 		--cc-bg: #16171d;
+
 		--cc-vanilla: #f3e5ab;
 		--cc-vanilla-red: #f38fa9;
+		--cc-dark-purple: #8e78aa;
+		--cc-light-purple: #c1abf3;
+		--cc-pale-blue: #abb9f3;
 
 		--cc2-bg: #1b1a27;
 		--cc2-bg2: #232132;
