@@ -29,7 +29,11 @@
 <svelte:window bind:scrollY={y} />
 
 <!-- If `handleScroll` is `true` then .hideNav will be added to .wrapper-nav -->
-<div class:hideNav={handleScroll(y)} class="wrapper-nav">
+<div
+  class="wrapper-nav"
+	class:hideNav={handleScroll(y)}
+  class:wrapper-nav-lg-blur={handleScroll(y)}
+>
 	<nav>
 		<h3><a href="/">SG</a></h3>
 		<ol>
@@ -58,13 +62,16 @@
 		position: fixed;
 		width: 100%;
 
-		/* Makes it blurry and transparent */
-		background-color: rgba(27, 26, 39, 0.9);
-		-webkit-backdrop-filter: blur(3px);
-		backdrop-filter: blur(3px);
+		background-color: var(--cc2-bg);
 
 		font-size: 20px;
 		font-family: 'Basier Square', sans-serif;
+	}
+
+	.wrapper-nav-lg-blur {
+		background-color: rgba(35, 33, 50, 0.6);
+		-webkit-backdrop-filter: blur(13px);
+		backdrop-filter: blur(13px);
 	}
 
 	nav {
@@ -105,5 +112,14 @@
 	h3 a {
 		font-family: 'Inter', sans-serif;
 		font-weight: 800;
+	}
+
+	button {
+		background: none;
+		color: inherit;
+		border: none;
+		padding: 0;
+		font: inherit;
+		cursor: pointer;
 	}
 </style>
