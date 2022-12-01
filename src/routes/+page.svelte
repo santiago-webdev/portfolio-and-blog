@@ -1,15 +1,15 @@
 <script>
-	// import Nav from '$lib/Nav.svelte';
-	// import Footer from '$lib/Footer.svelte';
+	import Nav from '$lib/Nav.svelte';
+	import Footer from '$lib/Footer.svelte';
 
-	// import Home from './Home.svelte';
+	import Home from './Home.svelte';
 	import Projects from './Projects.svelte';
 </script>
 
-<!-- <Nav /> -->
-<!-- <Home /> -->
+<Nav />
+<Home />
 <Projects />
-<!-- <Footer /> -->
+<Footer />
 
 <svelte:head>
 	<title>Santiago Gonzalez - Portfolio</title>
