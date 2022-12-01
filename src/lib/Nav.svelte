@@ -8,21 +8,6 @@
 		{ label: 'Contact', href: '#' }
 	];
 
-	let y: number = 0;
-	let aux: number = 0;
-
-	function toggleNav(y): boolean {
-		if (aux < y) {
-			console.log('We are moving DOWN', Math.trunc(y), Math.trunc(aux));
-			aux = y - 1;
-			return true;
-		} else {
-			console.log('We are moving UP', Math.trunc(y), Math.trunc(aux));
-			aux = y + 1;
-			return false;
-		}
-	}
-
 	import { onMount } from 'svelte';
 
 	// Show mobile icon and display menu
@@ -47,12 +32,8 @@
 	});
 </script>
 
-<svelte:window bind:scrollY={y} />
-
 <div
-	class:hideNav={toggleNav(y)}
 	class="wrapper-nav"
-	class:wrapper-nav-lg-blur={toggleNav(y)}
 >
 	<nav>
 		<h3><a href="/">SG</a></h3>
@@ -88,13 +69,15 @@
 
 		font-size: 20px;
 		font-family: 'Basier Square', sans-serif;
+
+		box-shadow: 3px 6px 9px rgba(0, 0, 0, 0.1);
 	}
 
-	.wrapper-nav-lg-blur {
-		background-color: rgba(35, 33, 50, 0.6);
-		-webkit-backdrop-filter: blur(13px);
-		backdrop-filter: blur(13px);
-	}
+	/* .wrapper-nav-lg-blur { */
+	/* 	background-color: rgba(35, 33, 50, 0.6); */
+	/* 	-webkit-backdrop-filter: blur(13px); */
+	/* 	backdrop-filter: blur(13px); */
+	/* } */
 
 	nav {
 		display: flex;
@@ -117,7 +100,6 @@
 		gap: 2rem;
 		display: flex;
 		list-style: none;
-		padding: 1rem 0 1rem 1rem;
 		display: none;
 	}
 
@@ -131,6 +113,8 @@
 		flex-direction: column;
 		place-items: center;
 		height: 100vh;
+    padding-top: 2rem;
+    /* margin: 0 auto; */
 
 		bottom: 0;
 		left: 0;
@@ -226,7 +210,7 @@
 	}
 	/* EOL All settings for the animated button */
 
-	@media only screen and (min-width: 767px) {
+	@media only screen and (min-width: 43.75rem) {
 		nav {
 			height: 100px;
 		}
