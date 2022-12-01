@@ -7,7 +7,7 @@
 </div>
 
 <style global>
-	:root {
+	:global(*) {
 		--cc-fg: #e8e8e8;
 		--cc-bg: #16171d;
 

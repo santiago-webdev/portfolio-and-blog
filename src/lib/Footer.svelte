@@ -1,13 +1,4 @@
 <script>
-	// let ghStars;
-
-	// fetch('https://api.github.com/repos/santigo-zero/santigo-zero.github.io')
-	// 	.then((response) => response.json())
-	// 	.then((response) => {
-	// 		console.log(response);
-	// 		ghStars = response.stargazers_count;
-	// 	});
-
 	import { onMount } from 'svelte';
 	let ghStars = 0; // Use 0 in here so that it doesn't show "undefined" while it loads
 
