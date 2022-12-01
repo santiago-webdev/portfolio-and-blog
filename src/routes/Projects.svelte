@@ -13,7 +13,7 @@
 		<section>
 			<article>
 				<div class="header">
-					<h2 class="card_title">
+					<h3>
 						<a
 							target="_blank"
 							rel="noopener noreferrer"
@@ -23,7 +23,7 @@
 						>
 							Always a work in progress <i class="fa-solid fa-hammer" />
 						</a>
-					</h2>
+					</h3>
 					<div class="status">
 						<div class="card_status">
 							<i class="fa-solid fa-check" />
@@ -37,7 +37,7 @@
 			</article>
 			<article>
 				<div class="header">
-					<h2 class="card_title">
+					<h3>
 						<a
 							target="_blank"
 							rel="noopener noreferrer"
@@ -47,7 +47,7 @@
 						>
 							Always a work in progress <i class="fa-solid fa-hammer" />
 						</a>
-					</h2>
+					</h3>
 					<div class="status">
 						<div class="card_status">
 							<i class="fa-solid fa-check" />
@@ -61,7 +61,7 @@
 			</article>
 			<article>
 				<div class="header">
-					<h2 class="card_title">
+					<h3>
 						<a
 							target="_blank"
 							rel="noopener noreferrer"
@@ -71,7 +71,7 @@
 						>
 							Always a work in progress <i class="fa-solid fa-hammer" />
 						</a>
-					</h2>
+					</h3>
 					<div class="status">
 						<div class="card_status">
 							<i class="fa-solid fa-check" />
@@ -176,7 +176,7 @@
 		}
 	}
 
-	.card_title {
+	h3 {
 		color: var(--fg);
 		font-size: 1.4rem;
 		font-weight: 400;
