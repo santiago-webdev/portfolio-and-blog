@@ -103,12 +103,12 @@
 		padding: var(--padding);
 		padding-inline: var(--padding-inline);
 		max-width: 66rem;
-    width: 100%;
+		width: 100%;
 	}
 
 	h1 {
-		font-size: clamp(1rem, 14vw, 4.4rem);
-		line-height: clamp(3rem, 18vw, 5.6rem);
+		font-size: clamp(1rem, 14vw, 3.3rem);
+		line-height: clamp(3rem, 18vw, 4.5rem);
 		font-weight: 600;
 
 		padding-bottom: 1.3rem;
@@ -123,12 +123,12 @@
 
 	section {
 		display: grid;
-		/* margin-inline: 0.5em; */
 		gap: 1.05rem;
-		grid-auto-rows: minmax(33rem, auto);
+		grid-auto-rows: minmax(28rem, auto);
 		grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
 		/* max-width: 66rem; */
-    width: 100%;
+		padding-top: calc(var(--padding) * 3);
+		width: 100%;
 	}
 
 	article {
