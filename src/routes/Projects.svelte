@@ -10,8 +10,8 @@
 			<h2>{subtitle}</h2>
 		</div>
 
-		<div class="list-projects">
-			<div class="card">
+		<section>
+			<article>
 				<div class="header">
 					<h2 class="card_title">
 						<a
@@ -34,8 +34,8 @@
 				</div>
 				<div class="project_img_first" />
 				<p class="card__description">There's more projects to come, just wait.</p>
-			</div>
-			<div class="card">
+			</article>
+			<article>
 				<div class="header">
 					<h2 class="card_title">
 						<a
@@ -58,8 +58,8 @@
 				</div>
 				<div class="project_img_first" />
 				<p class="card__description">There's more projects to come, just wait.</p>
-			</div>
-			<div class="card">
+			</article>
+			<article>
 				<div class="header">
 					<h2 class="card_title">
 						<a
@@ -82,8 +82,8 @@
 				</div>
 				<div class="project_img_first" />
 				<p class="card__description">There's more projects to come, just wait.</p>
-			</div>
-		</div>
+			</article>
+		</section>
 	</main>
 </div>
 
@@ -121,7 +121,7 @@
 		font-weight: 400;
 	}
 
-	.list-projects {
+	section {
 		display: grid;
 		/* margin-inline: 0.5em; */
 		gap: 1.05rem;
@@ -131,7 +131,7 @@
     width: 100%;
 	}
 
-	.card {
+	article {
 		background-color: var(--bg-light);
 		border-radius: 12px;
 		border-color: var(--bg-header);
@@ -157,11 +157,11 @@
 		border-width: 1px;
 	}
 
-	.card:hover {
+	article:hover {
 		transform: scale(1.03);
 	}
 
-	.card p {
+	article p {
 		margin-inline: 8px;
 		font-size: 1.2rem;
 		font-weight: 400;
