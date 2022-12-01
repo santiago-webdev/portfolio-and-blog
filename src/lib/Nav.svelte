@@ -38,7 +38,7 @@
 
 <div
 	class="wrapper-nav"
-  class:wrapper-nav-lg-blur={userScrollPos > 0}
+  class:wrapper-nav-scrolled={userScrollPos > 0}
 >
 	<nav>
 		<h3><a href="/">SG</a></h3>
@@ -76,7 +76,7 @@
 		font-family: 'Basier Square', sans-serif;
 	}
 
-	.wrapper-nav-lg-blur {
+	.wrapper-nav-scrolled {
 		box-shadow: 3px 6px 9px rgba(0, 0, 0, 0.1);
 		background-color: rgba(35, 33, 50, 0.6);
 		-webkit-backdrop-filter: blur(13px);
