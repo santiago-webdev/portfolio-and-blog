@@ -49,10 +49,17 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div class:hideNav={toggleNav(y)} class="wrapper-nav" class:wrapper-nav-lg-blur={toggleNav(y)}>
+<div
+	class:hideNav={toggleNav(y)}
+	class="wrapper-nav"
+	class:wrapper-nav-lg-blur={toggleNav(y)}
+>
 	<nav>
 		<h3><a href="/">SG</a></h3>
-		<div on:click={handleMobileIconClick} class={`mobile-icon${showMobileMenu ? ' active' : ''}`}>
+		<div
+			on:click={handleMobileIconClick}
+			class={`mobile-icon${showMobileMenu ? ' active' : ''}`}
+		>
 			<div class="middle-line" />
 		</div>
 		<ul class={`navbar-list${showMobileMenu ? ' mobile' : ''}`}>

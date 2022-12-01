@@ -33,7 +33,9 @@
 					</div>
 				</div>
 				<div class="project_img_first" />
-				<p class="card__description">There's more projects to come, just wait.</p>
+				<p class="card__description">
+					There's more projects to come, just wait.
+				</p>
 			</article>
 			<article>
 				<div class="header">
@@ -57,7 +59,9 @@
 					</div>
 				</div>
 				<div class="project_img_first" />
-				<p class="card__description">There's more projects to come, just wait.</p>
+				<p class="card__description">
+					There's more projects to come, just wait.
+				</p>
 			</article>
 			<article>
 				<div class="header">
@@ -81,7 +85,9 @@
 					</div>
 				</div>
 				<div class="project_img_first" />
-				<p class="card__description">There's more projects to come, just wait.</p>
+				<p class="card__description">
+					There's more projects to come, just wait.
+				</p>
 			</article>
 		</section>
 	</main>
@@ -210,7 +216,11 @@
 
 	.project_img_first {
 		background: rgb(34, 193, 195);
-		background: linear-gradient(114deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+		background: linear-gradient(
+			114deg,
+			rgba(34, 193, 195, 1) 0%,
+			rgba(253, 187, 45, 1) 100%
+		);
 
 		max-width: 100%;
 		height: 88px;
@@ -220,7 +230,11 @@
 
 	.project_img_zap {
 		background: rgb(255, 228, 56);
-		background: linear-gradient(90deg, rgba(255, 228, 56, 1) 0%, rgba(252, 70, 87, 1) 100%);
+		background: linear-gradient(
+			90deg,
+			rgba(255, 228, 56, 1) 0%,
+			rgba(252, 70, 87, 1) 100%
+		);
 
 		max-width: 100%;
 		height: 88px;
@@ -236,7 +250,11 @@
 	}
 
 	a {
-		background-image: linear-gradient(90deg, var(--cc-vanilla-red), var(--cc-pale-blue));
+		background-image: linear-gradient(
+			90deg,
+			var(--cc-vanilla-red),
+			var(--cc-pale-blue)
+		);
 		background-size: 0% 3px;
 		background-repeat: no-repeat;
 		background-position: left bottom;
