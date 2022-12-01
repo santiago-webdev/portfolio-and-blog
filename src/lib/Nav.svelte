@@ -14,12 +14,12 @@
 	function toggleNav(y): boolean {
 		if (aux < y) {
 			console.log('We are moving DOWN', Math.trunc(y), Math.trunc(aux));
-      aux = y - 1;
-      return true
+			aux = y - 1;
+			return true;
 		} else {
 			console.log('We are moving UP', Math.trunc(y), Math.trunc(aux));
-      aux = y + 1;
-      return false
+			aux = y + 1;
+			return false;
 		}
 	}
 
@@ -49,11 +49,7 @@
 
 <svelte:window bind:scrollY={y} />
 
-<div
-  class:hideNav={toggleNav(y)}
-	class="wrapper-nav"
-	class:wrapper-nav-lg-blur={toggleNav(y)}
->
+<div class:hideNav={toggleNav(y)} class="wrapper-nav" class:wrapper-nav-lg-blur={toggleNav(y)}>
 	<nav>
 		<h3><a href="/">SG</a></h3>
 		<div on:click={handleMobileIconClick} class={`mobile-icon${showMobileMenu ? ' active' : ''}`}>

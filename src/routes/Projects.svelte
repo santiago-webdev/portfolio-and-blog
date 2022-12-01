@@ -92,7 +92,7 @@
 		display: grid;
 		place-items: center;
 		min-height: 100vh;
-		background-color: #1A1724;
+		background-color: #1a1724;
 	}
 
 	main {
@@ -235,45 +235,41 @@
 		gap: 0.4rem;
 	}
 
-  a {
-    background-image: linear-gradient(
-      90deg,
-      var(--cc-vanilla-red),
-      var(--cc-pale-blue)
-      );
-    background-size: 0% 3px;
-    background-repeat: no-repeat;
-    background-position: left bottom;
-    transition: background-size 333ms ease;
-    text-decoration: none;
-    color: var(--cc-fg);
-    padding-bottom: 3px;
-  }
+	a {
+		background-image: linear-gradient(90deg, var(--cc-vanilla-red), var(--cc-pale-blue));
+		background-size: 0% 3px;
+		background-repeat: no-repeat;
+		background-position: left bottom;
+		transition: background-size 333ms ease;
+		text-decoration: none;
+		color: var(--cc-fg);
+		padding-bottom: 3px;
+	}
 
-  a:hover {
-    background-size: 100% 3px;
-  }
+	a:hover {
+		background-size: 100% 3px;
+	}
 
-  @media only screen and (max-width: 51em) {
-    * {
-      /*CSS transitions*/
-      -o-transition-property: none !important;
-      -moz-transition-property: none !important;
-      -ms-transition-property: none !important;
-      -webkit-transition-property: none !important;
-      transition-property: none !important;
-      /*CSS transforms*/
-      -o-transform: none !important;
-      -moz-transform: none !important;
-      -ms-transform: none !important;
-      -webkit-transform: none !important;
-      transform: none !important;
-      /*CSS animations*/
-      -webkit-animation: none !important;
-      -moz-animation: none !important;
-      -o-animation: none !important;
-      -ms-animation: none !important;
-      animation: none !important;
-    }
-  }
+	@media only screen and (max-width: 51em) {
+		* {
+			/*CSS transitions*/
+			-o-transition-property: none !important;
+			-moz-transition-property: none !important;
+			-ms-transition-property: none !important;
+			-webkit-transition-property: none !important;
+			transition-property: none !important;
+			/*CSS transforms*/
+			-o-transform: none !important;
+			-moz-transform: none !important;
+			-ms-transform: none !important;
+			-webkit-transform: none !important;
+			transform: none !important;
+			/*CSS animations*/
+			-webkit-animation: none !important;
+			-moz-animation: none !important;
+			-o-animation: none !important;
+			-ms-animation: none !important;
+			animation: none !important;
+		}
+	}
 </style>
