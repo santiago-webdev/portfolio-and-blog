@@ -72,6 +72,8 @@
 		font-size: 20px;
 		font-family: 'Basier Square', sans-serif;
 		height: 100px;
+
+    z-index: 9999;
 	}
 
 	.wrapper-nav-scrolled {
@@ -90,14 +92,8 @@
 		justify-content: space-between;
 
 		max-width: var(--content-width);
-		/* padding: var(--padding); */
 		padding-inline: var(--padding-inline);
-		/* height: 100px; */
 		height: 100%;
-		/* transition: all 0.4s; */
-
-		/* border-color: blue; */
-		/* border-style: solid; */
 	}
 
 	ul {
