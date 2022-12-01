@@ -11,15 +11,15 @@
 	let y: number = 0;
 	let aux: number = 0;
 
-	function handleScroll(y): boolean {
-		if (y > 0 && y >= aux) {
-			// console.log('We are moving DOWN', Math.trunc(y), Math.trunc(aux));
-			aux = y;
-			return true;
+	function toggleNav(y): boolean {
+		if (aux < y) {
+			console.log('We are moving DOWN', Math.trunc(y), Math.trunc(aux));
+      aux = y - 1;
+      return true
 		} else {
-			// console.log('We are moving UP', Math.trunc(y), Math.trunc(aux));
-			aux = y;
-			return false;
+			console.log('We are moving UP', Math.trunc(y), Math.trunc(aux));
+      aux = y + 1;
+      return false
 		}
 	}
 
@@ -49,11 +49,10 @@
 
 <svelte:window bind:scrollY={y} />
 
-<!-- If `handleScroll` is `true` then .hideNav will be added to .wrapper-nav -->
 <div
+  class:hideNav={toggleNav(y)}
 	class="wrapper-nav"
-	class:hideNav={handleScroll(y)}
-	class:wrapper-nav-lg-blur={handleScroll(y)}
+	class:wrapper-nav-lg-blur={toggleNav(y)}
 >
 	<nav>
 		<h3><a href="/">SG</a></h3>
