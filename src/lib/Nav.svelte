@@ -1,4 +1,6 @@
 <script lang="ts">
+  var userScrollPos: number
+
 	// List of navigation items
 	const navItems = [
 		{ label: 'Home', href: '/' },
@@ -32,8 +34,11 @@
 	});
 </script>
 
+<svelte:window bind:scrollY={userScrollPos} />
+
 <div
 	class="wrapper-nav"
+  class:wrapper-nav-lg-blur={userScrollPos > 0}
 >
 	<nav>
 		<h3><a href="/">SG</a></h3>
@@ -69,15 +74,14 @@
 
 		font-size: 20px;
 		font-family: 'Basier Square', sans-serif;
-
-		box-shadow: 3px 6px 9px rgba(0, 0, 0, 0.1);
 	}
 
-	/* .wrapper-nav-lg-blur { */
-	/* 	background-color: rgba(35, 33, 50, 0.6); */
-	/* 	-webkit-backdrop-filter: blur(13px); */
-	/* 	backdrop-filter: blur(13px); */
-	/* } */
+	.wrapper-nav-lg-blur {
+		box-shadow: 3px 6px 9px rgba(0, 0, 0, 0.1);
+		background-color: rgba(35, 33, 50, 0.6);
+		-webkit-backdrop-filter: blur(13px);
+		backdrop-filter: blur(13px);
+	}
 
 	nav {
 		display: flex;
