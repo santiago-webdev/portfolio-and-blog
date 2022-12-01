@@ -3,7 +3,7 @@
 	const subtitle = 'This are some of my best frontend projects';
 </script>
 
-<div id="wrapper-projects" class="wrapper-projects">
+<div id="projects" class="wrapper-projects">
 	<main>
 		<div style="text-align: center">
 			<h1>{title}</h1>
