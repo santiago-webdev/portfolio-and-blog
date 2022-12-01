@@ -1,5 +1,5 @@
 <script lang="ts">
-  var userScrollPos: number
+	var userScrollPos: number;
 
 	// List of navigation items
 	const navItems = [
@@ -36,10 +36,7 @@
 
 <svelte:window bind:scrollY={userScrollPos} />
 
-<div
-	class="wrapper-nav"
-  class:wrapper-nav-scrolled={userScrollPos > 0}
->
+<div class="wrapper-nav" class:wrapper-nav-scrolled={userScrollPos > 0}>
 	<nav>
 		<h3><a href="/">SG</a></h3>
 		<div
@@ -64,7 +61,7 @@
 	}
 
 	.wrapper-nav {
-		transition: 0.6s ease;
+		transition: all 0.6s cubic-bezier(0.07, 0.95, 0, 1);
 		position: fixed;
 		/* position: sticky; */
 		/* top: 0; */
@@ -74,6 +71,7 @@
 
 		font-size: 20px;
 		font-family: 'Basier Square', sans-serif;
+		height: 100px;
 	}
 
 	.wrapper-nav-scrolled {
@@ -81,6 +79,7 @@
 		background-color: rgba(35, 33, 50, 0.6);
 		-webkit-backdrop-filter: blur(13px);
 		backdrop-filter: blur(13px);
+		height: 60px;
 	}
 
 	nav {
@@ -93,8 +92,9 @@
 		max-width: var(--content-width);
 		/* padding: var(--padding); */
 		padding-inline: var(--padding-inline);
-		height: 100px;
-		transition: all 0.4s;
+		/* height: 100px; */
+		height: 100%;
+		/* transition: all 0.4s; */
 
 		/* border-color: blue; */
 		/* border-style: solid; */
@@ -130,26 +130,26 @@
 		cursor: pointer;
 	}
 
-  @media only screen and (max-width: 43.75rem) {
-    * {
-      /*CSS transitions*/
-      -o-transition-property: none !important;
-      -moz-transition-property: none !important;
-      -ms-transition-property: none !important;
-      -webkit-transition-property: none !important;
-      transition-property: none !important;
-      /*CSS transforms*/
-      -o-transform: none !important;
-      -moz-transform: none !important;
-      -ms-transform: none !important;
-      -webkit-transform: none !important;
-      transform: none !important;
-      /*CSS animations*/
-      -webkit-animation: none !important;
-      -moz-animation: none !important;
-      -o-animation: none !important;
-      -ms-animation: none !important;
-      animation: none !important;
-    }
-  }
+	@media only screen and (max-width: 43.75rem) {
+		* {
+			/*CSS transitions*/
+			-o-transition-property: none !important;
+			-moz-transition-property: none !important;
+			-ms-transition-property: none !important;
+			-webkit-transition-property: none !important;
+			transition-property: none !important;
+			/*CSS transforms*/
+			-o-transform: none !important;
+			-moz-transform: none !important;
+			-ms-transform: none !important;
+			-webkit-transform: none !important;
+			transform: none !important;
+			/*CSS animations*/
+			-webkit-animation: none !important;
+			-moz-animation: none !important;
+			-o-animation: none !important;
+			-ms-animation: none !important;
+			animation: none !important;
+		}
+	}
 </style>
