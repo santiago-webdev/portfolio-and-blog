@@ -1,10 +1,14 @@
 <script lang="ts">
 	import '../reset.css';
+	import Nav from '$lib/Nav.svelte';
+	import Footer from '$lib/Footer.svelte';
 </script>
 
+<Nav />
 <div class="wrapper">
 	<slot />
 </div>
+<Footer />
 
 <style global>
 	:global(*) {
