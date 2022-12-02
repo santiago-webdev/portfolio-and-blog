@@ -58,7 +58,7 @@
 						<div class="card_status">STATUS</div>
 					</div>
 				</div>
-				<div class="project_img_first" />
+				<div class="project_img_zap" />
 				<p class="card__description">
 					There's more projects to come, just wait.
 				</p>

@@ -9,45 +9,19 @@
 		{ label: 'Resume', href: '#' },
 		{ label: 'Contact', href: '#' }
 	];
-
-	import { onMount } from 'svelte';
-
-	// Show mobile icon and display menu
-	let showMobileMenu = false;
-
-	// Mobile menu click event handler
-	const handleMobileIconClick = () => (showMobileMenu = !showMobileMenu);
-
-	// Media match query handler
-	const mediaQueryHandler = (e) => {
-		// Reset mobile state
-		if (!e.matches) {
-			showMobileMenu = false;
-		}
-	};
-
-	// Attach media query listener on mount hook
-	onMount(() => {
-		const mediaListener = window.matchMedia('(max-width: 767px)');
-
-		mediaListener.addListener(mediaQueryHandler);
-	});
 </script>
 
 <svelte:window bind:scrollY={userScrollPos} />
 
-<div class="wrapper-nav" class:wrapper-nav-scrolled={userScrollPos > 0}>
+<div class="wrapper-nav" class:scrolled={userScrollPos > 0}>
 	<nav>
 		<h3><a href="/">SG</a></h3>
-		<div
-			on:click={handleMobileIconClick}
-			class={`mobile-icon${showMobileMenu ? ' active' : ''}`}
-		>
+		<div>
 			<div class="middle-line" />
 		</div>
-		<ul class={`navbar-list${showMobileMenu ? ' mobile' : ''}`}>
+		<ul>
 			{#each navItems as item}
-				<li on:click={showMobileMenu && handleMobileIconClick}>
+				<li>
 					<a href={item.href}>{item.label}</a>
 				</li>
 			{/each}
@@ -76,7 +50,7 @@
     z-index: 9999;
 	}
 
-	.wrapper-nav-scrolled {
+	.scrolled {
 		box-shadow: 3px 6px 9px rgba(0, 0, 0, 0.1);
 		background-color: rgba(35, 33, 50, 0.6);
 		-webkit-backdrop-filter: blur(13px);
