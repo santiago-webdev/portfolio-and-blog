@@ -40,8 +40,9 @@
 						><i class="fa-brands fa-linkedin" /> LinkedIn</a
 					>
 				</li>
-				<li class="separator">•</li>
-				<li><a href="#"><i class="fa-regular fa-envelope" /> Email</a></li>
+				<!-- TODO(santigo-zero): What should go into the href? -->
+				<!-- <li class="separator">•</li> -->
+				<!-- <li><a href="#"><i class="fa-regular fa-envelope" /> Email</a></li> -->
 			</ul>
 		</section>
 	</div>

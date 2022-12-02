@@ -15,7 +15,7 @@
 
 <div class="wrapper-nav" class:scrolled={userScrollPos > 0}>
 	<nav>
-		<h3><a href="/">SG</a></h3>
+		<h3><a href="/">SZ</a></h3>
 		<div>
 			<div class="middle-line" />
 		</div>
@@ -30,10 +30,6 @@
 </div>
 
 <style>
-	.hideNav {
-		transform: translate(0, calc(-100% - 3rem));
-	}
-
 	.wrapper-nav {
 		transition: all 0.6s cubic-bezier(0.07, 0.95, 0, 1);
 		position: fixed;
@@ -47,7 +43,7 @@
 		font-family: 'Basier Square', sans-serif;
 		height: 100px;
 
-    z-index: 9999;
+		z-index: 9999;
 	}
 
 	.scrolled {
@@ -57,6 +53,10 @@
 		backdrop-filter: blur(13px);
 		height: 60px;
 	}
+
+	/* .hide-nav { */
+	/* 	transform: translate(0, calc(-100% - 3rem)); */
+	/* } */
 
 	nav {
 		display: flex;
@@ -91,14 +91,14 @@
 		font-weight: 800;
 	}
 
-	button {
-		background: none;
-		color: inherit;
-		border: none;
-		padding: 0;
-		font: inherit;
-		cursor: pointer;
-	}
+	/* button { */
+	/* 	background: none; */
+	/* 	color: inherit; */
+	/* 	border: none; */
+	/* 	padding: 0; */
+	/* 	font: inherit; */
+	/* 	cursor: pointer; */
+	/* } */
 
 	@media only screen and (max-width: 43.75rem) {
 		* {
