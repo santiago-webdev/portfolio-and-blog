@@ -1,5 +1,8 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	var userScrollPos: number;
+	var hide: boolean;
 
 	// List of navigation items
 	const navItems = [
@@ -9,11 +12,31 @@
 		{ label: 'Resume', href: '#' },
 		{ label: 'Contact', href: '#' }
 	];
+
+	function toggleNav() {
+		let currentPosition: number;
+    window.onscroll = () => {
+      if (window.scrollY > currentPosition) {
+        hide = true;
+        console.log('hide -> true', userScrollPos, window.scrollY)
+      } else {
+        hide = false;
+        console.log('hide -> false', userScrollPos, window.scrollY)
+      }
+      currentPosition = window.scrollY;
+    }
+  }
+
+  function test() {
+    interruptToggle = true
+  }
+
+  onMount(() => toggleNav());
 </script>
 
 <svelte:window bind:scrollY={userScrollPos} />
 
-<div class="wrapper-nav" class:scrolled={userScrollPos > 0}>
+<div class="wrapper-nav" class:scrolled={userScrollPos > 0} class:hide>
 	<nav>
 		<h3><a href="/">SZ</a></h3>
 		<div>
@@ -48,16 +71,16 @@
 	}
 
 	.scrolled {
-		box-shadow: 3px 6px 9px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -0.4rem 0.9rem 0.2rem rgb(0 0 0 / 30%);
 		background-color: rgba(35, 33, 50, 0.6);
 		-webkit-backdrop-filter: blur(13px);
 		backdrop-filter: blur(13px);
 		height: 60px;
 	}
 
-	/* .hide-nav { */
-	/* 	transform: translate(0, calc(-100% - 3rem)); */
-	/* } */
+	.hide {
+		transform: translate(0, -130%);
+	}
 
 	nav {
 		display: flex;
