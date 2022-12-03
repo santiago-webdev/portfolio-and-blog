@@ -69,7 +69,7 @@
 		background-color: rgba(35, 33, 50, 0.6);
 		-webkit-backdrop-filter: blur(13px);
 		backdrop-filter: blur(13px);
-		height: 50px;
+		height: 60px;
 	}
 
 	.hidden {
