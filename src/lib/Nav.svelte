@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	// import { onMount } from 'svelte';
 
 	var userScrollPos: number;
-	var hide: boolean;
+	let prevPos: number;
 
 	// List of navigation items
 	const navItems = [
@@ -13,30 +13,26 @@
 		{ label: 'Contact', href: '#' }
 	];
 
-	function toggleNav() {
-		let currentPosition: number;
-    window.onscroll = () => {
-      if (window.scrollY > currentPosition) {
-        hide = true;
-        console.log('hide -> true', userScrollPos, window.scrollY)
-      } else {
-        hide = false;
-        console.log('hide -> false', userScrollPos, window.scrollY)
-      }
-      currentPosition = window.scrollY;
-    }
-  }
-
-  function test() {
-    interruptToggle = true
-  }
-
-  onMount(() => toggleNav());
+	function handleScroll(curPos): boolean {
+		if (curPos > 0 && curPos >= prevPos) {
+			// console.log('We are moving DOWN', Math.trunc(curPos), Math.trunc(prevPos));
+			prevPos = curPos;
+			return true;
+		} else {
+			// console.log('We are moving UP', Math.trunc(curPos), Math.trunc(prevPos));
+			prevPos = curPos;
+			return false;
+		}
+	}
 </script>
 
 <svelte:window bind:scrollY={userScrollPos} />
 
-<div class="wrapper-nav" class:scrolled={userScrollPos > 0} class:hide>
+<div
+	class="wrapper-nav"
+	class:scrolled={userScrollPos > 0}
+	class:hidden={handleScroll(userScrollPos)}
+>
 	<nav>
 		<h3><a href="/">SZ</a></h3>
 		<div>
@@ -71,14 +67,14 @@
 	}
 
 	.scrolled {
-    box-shadow: 0 -0.4rem 0.9rem 0.2rem rgb(0 0 0 / 30%);
+		box-shadow: 0 -0.4rem 0.9rem 0.2rem rgb(0 0 0 / 30%);
 		background-color: rgba(35, 33, 50, 0.6);
 		-webkit-backdrop-filter: blur(13px);
 		backdrop-filter: blur(13px);
 		height: 60px;
 	}
 
-	.hide {
+	.hidden {
 		transform: translate(0, -130%);
 	}
 
