@@ -106,7 +106,7 @@
 		/* border-style: solid; */
 
 		/* max-width: 66rem; */
-		padding: calc(var(--padding) + 3rem);
+		padding: var(--padding);
 		padding-inline: var(--padding-inline);
 		max-width: 66rem;
 		width: 100%;
@@ -290,4 +290,11 @@
 			animation: none !important;
 		}
 	}
+
+	@media only screen and (max-width: 43.75rem) {
+    main {
+      padding: calc(var(--padding) + 3rem);
+      padding-inline: var(--padding-inline);
+    }
+  }
 </style>

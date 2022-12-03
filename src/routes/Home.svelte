@@ -55,4 +55,7 @@
 		font-family: 'Inter', sans-serif;
 		font-weight: 400;
 	}
+
+	/* @media only screen and (max-width: 43.75rem) { */
+ /*  } */
 </style>
