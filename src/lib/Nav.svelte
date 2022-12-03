@@ -18,11 +18,9 @@
 			// console.log('We are moving DOWN', Math.trunc(curPos), Math.trunc(prevPos));
 			prevPos = curPos;
 			return true;
-		} else {
-			// console.log('We are moving UP', Math.trunc(curPos), Math.trunc(prevPos));
-			prevPos = curPos;
-			return false;
 		}
+    prevPos = curPos;
+    return false;
 	}
 </script>
 
