@@ -1,8 +1,8 @@
 <script lang="ts">
-	// import { onMount } from 'svelte';
+	import { onMount } from 'svelte';
 
 	var userScrollPos: number;
-	let prevPos: number;
+	var prevPos: number;
 
 	// List of navigation items
 	const navItems = [
@@ -33,9 +33,6 @@
 >
 	<nav>
 		<h3><a href="/">SZ</a></h3>
-		<div>
-			<div class="middle-line" />
-		</div>
 		<ul>
 			{#each navItems as item}
 				<li>
@@ -89,7 +86,7 @@
 	}
 
 	ul {
-		gap: var(--padding);
+		/* gap: var(--padding); */
 		display: flex;
 		list-style: none;
 	}
@@ -98,6 +95,7 @@
 		text-decoration: none;
 		color: var(--cc-fg);
 		transition: all 0.3s ease 0s;
+		padding: var(--padding) var(--padding-inline);
 	}
 
 	a:hover {
@@ -117,27 +115,4 @@
 	/* 	font: inherit; */
 	/* 	cursor: pointer; */
 	/* } */
-
-	@media only screen and (max-width: 43.75rem) {
-		* {
-			/*CSS transitions*/
-			-o-transition-property: none !important;
-			-moz-transition-property: none !important;
-			-ms-transition-property: none !important;
-			-webkit-transition-property: none !important;
-			transition-property: none !important;
-			/*CSS transforms*/
-			-o-transform: none !important;
-			-moz-transform: none !important;
-			-ms-transform: none !important;
-			-webkit-transform: none !important;
-			transform: none !important;
-			/*CSS animations*/
-			-webkit-animation: none !important;
-			-moz-animation: none !important;
-			-o-animation: none !important;
-			-ms-animation: none !important;
-			animation: none !important;
-		}
-	}
 </style>
