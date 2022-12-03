@@ -291,7 +291,7 @@
 		}
 	}
 
-	@media only screen and (max-width: 43.75rem) {
+	@media only screen and (max-height: 50rem) {
     main {
       padding: calc(var(--padding) + 3rem);
       padding-inline: var(--padding-inline);
