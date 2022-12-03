@@ -4,17 +4,21 @@
 </script>
 
 <div class="wrapper-home">
-	<main>
+	<header>
 		<p>Hello!</p>
 		<h1>{title}</h1>
 		<h2>{subtitle}</h2>
-	</main>
+	</header>
 </div>
 
 <style>
 	.wrapper-home {
-    background-image: radial-gradient(70% 50% at 100% 23%, #3E4352, var(--cc2-bg));
-    /* background-image: none; */
+		background-image: radial-gradient(
+			70% 50% at 100% 23%,
+			#3e4352,
+			var(--cc2-bg)
+		);
+		/* background-image: none; */
 		transition: all 0.3s ease 0s;
 		display: grid;
 		place-items: center;
@@ -22,7 +26,7 @@
 		background-color: var(--cc2-bg);
 	}
 
-	main {
+	header {
 		/* border-color: red; */
 		/* border-style: solid; */
 
