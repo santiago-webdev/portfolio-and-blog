@@ -37,11 +37,12 @@
 		/* top: 0; */
 		width: 100%;
 
-		background-color: var(--cc2-bg);
+		/* background-color: var(--cc2-bg); */
+		background-color: transparent;
 
 		font-size: 20px;
 		font-family: 'Basier Square', sans-serif;
-		height: 100px;
+		height: 90px;
 
 		z-index: 9999;
 	}
@@ -71,7 +72,7 @@
 	}
 
 	ul {
-		gap: 2rem;
+		gap: var(--padding);
 		display: flex;
 		list-style: none;
 	}

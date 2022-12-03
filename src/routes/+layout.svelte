@@ -39,7 +39,6 @@
 	}
 
 	.wrapper {
-		background-color: var(--cc2-bg);
 		color: var(--cc-fg);
 	}
 

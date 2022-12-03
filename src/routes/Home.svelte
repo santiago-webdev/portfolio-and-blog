@@ -13,6 +13,9 @@
 
 <style>
 	.wrapper-home {
+    background-image: radial-gradient(70% 50% at 100% 23%, #3E4352, var(--cc2-bg));
+    /* background-image: none; */
+		transition: all 0.3s ease 0s;
 		display: grid;
 		place-items: center;
 		min-height: 100vh;
