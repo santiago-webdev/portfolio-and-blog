@@ -19,8 +19,8 @@
 			prevPos = curPos;
 			return true;
 		}
-    prevPos = curPos;
-    return false;
+		prevPos = curPos;
+		return false;
 	}
 </script>
 
@@ -69,7 +69,7 @@
 		background-color: rgba(35, 33, 50, 0.6);
 		-webkit-backdrop-filter: blur(13px);
 		backdrop-filter: blur(13px);
-		height: 60px;
+		height: 50px;
 	}
 
 	.hidden {
