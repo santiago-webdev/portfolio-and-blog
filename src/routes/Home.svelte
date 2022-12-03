@@ -57,5 +57,5 @@
 	}
 
 	/* @media only screen and (max-width: 43.75rem) { */
- /*  } */
+	/*  } */
 </style>
