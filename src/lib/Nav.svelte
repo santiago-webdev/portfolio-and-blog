@@ -3,6 +3,7 @@
 
 	var userScrollPos: number;
 	var prevPos: number;
+	var ulMobile: boolean;
 
 	// List of navigation items
 	const navItems = [
@@ -13,7 +14,12 @@
 		{ label: 'Contact', href: '#' }
 	];
 
+	function ulMobileDisable() {
+		ulMobile = false;
+	}
+
 	function handleScroll(curPos): boolean {
+		ulMobileDisable();
 		if (curPos > 0 && curPos >= prevPos) {
 			// console.log('We are moving DOWN', Math.trunc(curPos), Math.trunc(prevPos));
 			prevPos = curPos;
@@ -22,6 +28,23 @@
 		prevPos = curPos;
 		return false;
 	}
+
+	// Media match query handler
+	const restoreMobileStatus = (e) => {
+		// Reset mobile state
+		if (!e.matches) {
+			ulMobileDisable();
+		}
+	};
+
+	const toggleMobileClick = () => (ulMobile = !ulMobile);
+
+	// Attach media query listener on mount hook
+	onMount(() => {
+		const mediaListener = window.matchMedia('(max-width: 767px)');
+
+		mediaListener.addListener(restoreMobileStatus);
+	});
 </script>
 
 <svelte:window bind:scrollY={userScrollPos} />
@@ -33,13 +56,20 @@
 >
 	<nav>
 		<h3><a href="/">SZ</a></h3>
-		<ul>
+		<ul class:ulMobile>
 			{#each navItems as item}
 				<li>
-					<a href={item.href}>{item.label}</a>
+					<a on:click={restoreMobileStatus} href={item.href}>{item.label}</a>
 				</li>
 			{/each}
 		</ul>
+		<button aria-hidden="true" on:click={toggleMobileClick}>
+			{#if ulMobile}
+				<i class="fa-solid fa-xmark" />
+			{:else}
+				<i class="fa-solid fa-bars" />
+			{/if}
+		</button>
 	</nav>
 </div>
 
@@ -107,12 +137,51 @@
 		font-weight: 800;
 	}
 
-	/* button { */
-	/* 	background: none; */
-	/* 	color: inherit; */
-	/* 	border: none; */
-	/* 	padding: 0; */
-	/* 	font: inherit; */
-	/* 	cursor: pointer; */
-	/* } */
+	button {
+		background-color: inherit;
+		color: var(--cc2-fg);
+		border: none;
+		font: inherit;
+		cursor: pointer;
+		display: none;
+
+		/* Make it a litle bit easier to hit the button */
+		padding: var(--padding);
+		padding-inline: var(--padding-inline);
+	}
+
+	@media only screen and (max-width: 43.75rem) {
+		button {
+			display: block;
+			z-index: 9999;
+		}
+
+		ul {
+			display: none;
+		}
+
+		.ulMobile {
+			position: fixed;
+			display: flex;
+			flex-direction: column;
+			place-items: center;
+			/* justify-content: space-evenly; */
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			padding: 0;
+			margin: 0;
+			width: 100vw;
+			height: 100vh;
+			padding-top: 3rem;
+			gap: var(--padding);
+
+			/* Blur in the background */
+			box-shadow: 0 -0.4rem 0.9rem 0.2rem rgb(0 0 0 / 30%);
+			background-color: rgba(35, 33, 50, 0.6);
+			-webkit-backdrop-filter: blur(13px);
+			backdrop-filter: blur(13px);
+		}
+	}
 </style>

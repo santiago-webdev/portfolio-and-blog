@@ -15,4 +15,6 @@
 		@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap');
 	</style>
 	<!-- EOL Fonts -->
+
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 </svelte:head>
