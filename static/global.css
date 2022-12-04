@@ -2,11 +2,6 @@
 @import 'fonts/Basier-Mono/font-face.css';
 
 :root {
-	--font-default--circle: 'Basier Circle', sans-serif;
-	--font-default--square: 'Basier Square', sans-serif;
-	--font-fancy--circle: 'Basier Mono Circle', monospace;
-	--font-fancy--square: 'Basier Mono Square', monospace;
-
 	--cc-fg: #e8e8e8;
 	--cc-bg: #16171d;
 
@@ -33,15 +28,7 @@
 	--padding-inline: 0.6rem;
 }
 
-h1 {
-	font-family: 'Basier Circle', sans-serif;
-}
-
 ::selection {
 	color: #8ff3d9;
 	background-color: var(--cc-vanilla-red);
-}
-
-html {
-	font-family: 'Basier Circle', sans-serif;
 }

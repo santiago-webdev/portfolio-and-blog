@@ -1,11 +1,11 @@
 <script>
-	const title = "I'm Santiago, a web developer";
+	const title = "I'm <strong>Santiago</strong>, a web developer";
 	const subtitle = 'And I create clean interfaces for the web.';
 </script>
 
 <div class="wrapper-home">
 	<header>
-		<h1>{title}</h1>
+		<h1>{@html title}</h1>
 		<h2>{subtitle}</h2>
 	</header>
 </div>
@@ -29,18 +29,9 @@
 		padding: 6rem 0; /* Put a little bit of blank-space between Nav and Projects */
 	}
 
-	h1 {
-		font-size: clamp(1rem, 14vw, 4.4rem);
-		line-height: clamp(3rem, 18vw, 5.6rem);
-		font-weight: 600;
-
-		padding-bottom: 1.3rem;
-	}
-
-	h2 {
-		font-size: clamp(1rem, 10vw, 1.5rem);
-		font-weight: 400;
-		/* font-family: 'Inter', sans-serif; */
-		/* font-family: 'Satoshi', sans-serif; */
-	}
+  :global(strong) {
+    color: transparent;
+    -webkit-text-stroke-width: 1.3px;
+    -webkit-text-stroke-color: var(--cc2-fg);
+  }
 </style>

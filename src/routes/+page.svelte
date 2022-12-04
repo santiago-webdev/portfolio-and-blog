@@ -13,6 +13,7 @@
 
 	<link href="./reset.css" rel="stylesheet" type="text/css" />
 	<link href="./global.css" rel="stylesheet" type="text/css" />
+	<link href="./typography.css" rel="stylesheet" type="text/css" />
 
 	<!-- Fonts -->
 	<!-- <style> -->

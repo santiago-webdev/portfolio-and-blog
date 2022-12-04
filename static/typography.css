@@ -1,0 +1,14 @@
+:root {
+	--font-default--circle: 'Basier Circle', sans-serif;
+	--font-default--square: 'Basier Square', sans-serif;
+	--font-fancy--circle: 'Basier Mono Circle', monospace;
+	--font-fancy--square: 'Basier Mono Square', monospace;
+}
+
+h1 {
+	font-family: 'Basier Circle', sans-serif;
+}
+
+html {
+	font-family: 'Basier Circle', sans-serif;
+}
