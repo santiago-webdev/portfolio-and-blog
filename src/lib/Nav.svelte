@@ -146,6 +146,7 @@
 			font: inherit;
 			cursor: pointer;
 			height: 100%;
+      width: min(3rem);
 		}
 
 		ul {
