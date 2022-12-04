@@ -34,8 +34,8 @@
 
 	h1 {
 		padding-bottom: 1.3rem;
-    max-width: 11ch;
-    word-wrap: break-word;
+		max-width: 11ch;
+		word-wrap: break-word;
 	}
 
 	:global(strong) {
