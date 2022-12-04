@@ -75,13 +75,12 @@
 
 <style>
 	.wrapper-nav {
-		transition: all 0.6s cubic-bezier(0.07, 0.95, 0, 1);
 		position: fixed;
-		/* position: sticky; */
-		/* top: 0; */
 		width: 100%;
 
-		/* background-color: var(--cc2-bg); */
+		display: grid;
+		place-items: center;
+
 		background-color: transparent;
 
 		font-size: 20px;
@@ -105,13 +104,9 @@
 
 	nav {
 		display: flex;
-		margin: 0 auto;
-		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-
-		max-width: var(--max-content-width);
-		padding-inline: var(--padding-inline);
+		width: min(93%, var(--max-content-width));
 		height: 100%;
 	}
 
@@ -138,22 +133,20 @@
 	}
 
 	button {
-		background-color: inherit;
-		color: var(--cc2-fg);
-		border: none;
-		font: inherit;
-		cursor: pointer;
 		display: none;
-
-		/* Make it a litle bit easier to hit the button */
-		padding: var(--padding);
-		padding-inline: var(--padding-inline);
 	}
 
 	@media only screen and (max-width: 43.75rem) {
 		button {
 			display: block;
 			z-index: 9999;
+
+			background-color: inherit;
+			color: var(--cc2-fg);
+			border: none;
+			font: inherit;
+			cursor: pointer;
+			height: 100%;
 		}
 
 		ul {
