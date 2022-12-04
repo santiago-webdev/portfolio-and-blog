@@ -40,6 +40,7 @@
 	h2 {
 		font-size: clamp(1rem, 10vw, 1.5rem);
 		font-weight: 400;
-		font-family: 'Inter', sans-serif;
+		/* font-family: 'Inter', sans-serif; */
+		/* font-family: 'Satoshi', sans-serif; */
 	}
 </style>
