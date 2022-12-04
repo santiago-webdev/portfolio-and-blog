@@ -9,7 +9,7 @@
 	const navItems = [
 		{ label: 'Home', href: '/' },
 		{ label: 'Projects', href: '#projects' },
-		{ label: 'About', href: '#' },
+		{ label: 'About', href: '#about' },
 		{ label: 'Resume', href: '#' },
 		{ label: 'Contact', href: '#' }
 	];
@@ -146,7 +146,7 @@
 			font: inherit;
 			cursor: pointer;
 			height: 100%;
-      width: min(3rem);
+      width: 3rem;
 		}
 
 		ul {

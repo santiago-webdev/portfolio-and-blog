@@ -5,7 +5,6 @@
 
 <div class="wrapper-home">
 	<header>
-		<p>Hello!</p>
 		<h1>{title}</h1>
 		<h2>{subtitle}</h2>
 	</header>
@@ -38,19 +37,9 @@
 		padding-bottom: 1.3rem;
 	}
 
-	p {
-		margin-left: 0.8ch;
-		font-size: clamp(20px, 10vw, 26px);
-		color: var(--cc-vanilla-red);
-	}
-
 	h2 {
 		font-size: clamp(1rem, 10vw, 1.5rem);
 		font-weight: 400;
-	}
-
-	p,
-	h2 {
 		font-family: 'Inter', sans-serif;
 	}
 </style>
