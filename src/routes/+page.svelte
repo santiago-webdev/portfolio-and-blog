@@ -11,6 +11,7 @@
 <svelte:head>
 	<title>Santiago Gonzalez - Portfolio</title>
 
+  <link href="./reset.css" rel="stylesheet" type="text/css" />
   <link href="./global.css" rel="stylesheet" type="text/css" />
 
 	<!-- Fonts -->
