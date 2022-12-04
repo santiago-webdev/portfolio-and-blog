@@ -26,7 +26,7 @@
 	}
 
 	header {
-		width: min(93%, var(--max-content-width));
+		width: min(100% - var(--padding), var(--max-content-width));
 		padding: 6rem 0; /* Put a little bit of blank-space between Nav and Projects */
 	}
 

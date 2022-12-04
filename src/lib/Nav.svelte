@@ -106,12 +106,11 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		width: min(93%, var(--max-content-width));
+		width: min(100% - var(--padding), var(--max-content-width));
 		height: 100%;
 	}
 
 	ul {
-		/* gap: var(--padding); */
 		display: flex;
 		list-style: none;
 	}

@@ -11,7 +11,7 @@
 	});
 </script>
 
-<div id="wrapper-footer" class="wrapper-footer">
+<div id="footer" class="wrapper-footer">
 	<div class="container">
 		<section class="this">
 			<p>
@@ -51,23 +51,22 @@
 <style>
 	.wrapper-footer {
 		background-color: var(--cc2-bg2);
+		display: grid;
+		place-items: center;
 	}
 
 	.container {
-		/* border-color: red; */
-		/* border-style: solid; */
-		margin: 0 auto;
 		display: grid;
+		width: 100%;
 		place-items: center;
-		max-width: var(--max-content-width);
+		width: min(100% - var(--padding), var(--max-content-width));
 		padding: var(--padding);
 		gap: calc(var(--padding) + 1rem); /* Separator between .this and .that */
-		padding-inline: var(--padding-inline);
+		padding-inline: 0;
 	}
 
 	section {
 		display: flex;
-		/* place-items: center; */
 		justify-content: space-between;
 		align-items: center;
 		flex-direction: row;
@@ -81,10 +80,6 @@
 
 		background-color: var(--cc2-bg2);
 		color: var(--cc4-fg);
-
-		/* border-color: blue; */
-		/* border-style: solid; */
-		/* border-width: 2px; */
 	}
 
 	ul {
