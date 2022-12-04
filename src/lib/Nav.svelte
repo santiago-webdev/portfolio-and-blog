@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
+	import { onMount } from "svelte";
 
 	var userScrollPos: number;
 	var prevPos: number;
@@ -7,11 +7,11 @@
 
 	// List of navigation items
 	const navItems = [
-		{ label: 'Home', href: '/' },
-		{ label: 'Projects', href: '#projects' },
-		{ label: 'About', href: '#about' },
-		{ label: 'Resume', href: '#' },
-		{ label: 'Contact', href: '#' }
+		{ label: "Home", href: "/" },
+		{ label: "Projects", href: "#projects" },
+		{ label: "About", href: "#about" },
+		{ label: "Resume", href: "#" },
+		{ label: "Contact", href: "#" }
 	];
 
 	function ulMobileDisable() {
@@ -41,7 +41,7 @@
 
 	// Attach media query listener on mount hook
 	onMount(() => {
-		const mediaListener = window.matchMedia('(max-width: 767px)');
+		const mediaListener = window.matchMedia("(max-width: 767px)");
 
 		mediaListener.addListener(restoreMobileStatus);
 	});
@@ -85,7 +85,7 @@
 		background-color: transparent;
 
 		font-size: 20px;
-		font-family: 'Basier Square', sans-serif;
+		font-family: "Basier Square", sans-serif;
 		height: 90px;
 
 		z-index: 9999;
@@ -128,7 +128,7 @@
 	}
 
 	h3 a {
-		font-family: 'Inter', sans-serif;
+		font-family: "Inter", sans-serif;
 		font-weight: 800;
 	}
 

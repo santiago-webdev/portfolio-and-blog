@@ -1,6 +1,6 @@
 <script>
-	const title = 'Projects';
-	const subtitle = 'This are some of my best frontend projects';
+	const title = "Projects";
+	const subtitle = "This are some of my best frontend projects";
 </script>
 
 <div id="projects" class="wrapper-projects">
@@ -123,7 +123,7 @@
 	h2 {
 		color: var(--cc-pale-blue);
 		font-size: clamp(1rem, 10vw, 1.5rem);
-		font-family: 'Inter', sans-serif;
+		font-family: "Inter", sans-serif;
 		font-weight: 400;
 	}
 
@@ -191,7 +191,7 @@
 	}
 
 	.card_status {
-		font-family: 'Inter', sans-serif;
+		font-family: "Inter", sans-serif;
 		box-shadow: 3px 6px 9px rgba(0, 0, 0, 0.1);
 		background-color: var(--cc2-bg-status);
 		color: var(--cc2-fg-status);

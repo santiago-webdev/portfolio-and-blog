@@ -1,6 +1,9 @@
 <script>
-	const title = "I'm <strong>Santiago</strong>, a web developer";
-	const subtitle = 'And I create clean interfaces for the web.';
+	const title = `
+    I'm <strong>Santiago</strong>, a
+    web developer
+  `;
+	const subtitle = "And I create clean interfaces for the web.";
 </script>
 
 <div class="wrapper-home">
@@ -29,9 +32,15 @@
 		padding: 6rem 0; /* Put a little bit of blank-space between Nav and Projects */
 	}
 
-  :global(strong) {
-    color: transparent;
-    -webkit-text-stroke-width: 1.3px;
-    -webkit-text-stroke-color: var(--cc2-fg);
-  }
+	h1 {
+		padding-bottom: 1.3rem;
+    max-width: 11ch;
+    word-wrap: break-word;
+	}
+
+	:global(strong) {
+		color: transparent;
+		-webkit-text-stroke-width: 1.3px;
+		-webkit-text-stroke-color: var(--cc2-fg);
+	}
 </style>

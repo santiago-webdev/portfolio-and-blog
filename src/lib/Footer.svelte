@@ -1,10 +1,10 @@
 <script>
-	import { onMount } from 'svelte';
+	import { onMount } from "svelte";
 	let ghStars = 0; // Use 0 in here so that it doesn't show "undefined" while it loads
 
 	onMount(async () => {
 		const response = await fetch(
-			'https://api.github.com/repos/santigo-zero/santigo-zero.github.io'
+			"https://api.github.com/repos/santigo-zero/santigo-zero.github.io"
 		);
 		const character = await response.json();
 		ghStars = character.stargazers_count;
@@ -28,10 +28,11 @@
 				<p>2022-2023. All Rights Reserved</p>
 			</div>
 			<ul>
+				<!-- TODO(santigo-zero): Move all of this to #cta -->
 				<li>
 					<a href="https://github.com/santigo-zero/"
 						><i class="fa-brands fa-github" />
-						GitHub</a
+						GitHub @santigo-zero</a
 					>
 				</li>
 				<li class="separator">•</li>

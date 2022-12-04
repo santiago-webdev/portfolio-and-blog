@@ -1,5 +1,5 @@
-@import 'fonts/Basier/font-face.css';
-@import 'fonts/Basier-Mono/font-face.css';
+@import "fonts/Basier/font-face.css";
+@import "fonts/Basier-Mono/font-face.css";
 
 :root {
 	--cc-fg: #e8e8e8;
