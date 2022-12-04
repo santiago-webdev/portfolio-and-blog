@@ -75,6 +75,7 @@
 
 <style>
 	.wrapper-nav {
+		transition: all 0.6s cubic-bezier(0.07, 0.95, 0, 1);
 		position: fixed;
 		width: 100%;
 
