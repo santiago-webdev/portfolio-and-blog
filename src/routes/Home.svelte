@@ -30,7 +30,7 @@
 		/* border-color: red; */
 		/* border-style: solid; */
 
-		max-width: var(--content-width);
+		max-width: var(--max-content-width);
 		padding: var(--padding);
 		padding-inline: var(--padding-inline);
 	}

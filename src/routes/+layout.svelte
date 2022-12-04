@@ -33,7 +33,7 @@
 		--cc3-fg: #c3c3c8;
 		--cc4-fg: #9da1b4;
 
-		--content-width: 60rem;
+		--max-content-width: 60rem;
 		--padding: 1.3rem;
 		--padding-inline: 0.6rem;
 	}

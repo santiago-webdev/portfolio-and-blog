@@ -110,7 +110,7 @@
 		align-items: center;
 		justify-content: space-between;
 
-		max-width: var(--content-width);
+		max-width: var(--max-content-width);
 		padding-inline: var(--padding-inline);
 		height: 100%;
 	}
