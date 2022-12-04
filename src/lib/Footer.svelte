@@ -19,7 +19,7 @@
 			</p>
 
 			<a href="https://github.com/santigo-zero/santigo-zero.github.io"
-				><i class="fa-regular fa-star" /> {ghStars}</a
+				><i class="fa-regular fa-star" /> {ghStars} on GitHub</a
 			>
 		</section>
 		<section class="that">

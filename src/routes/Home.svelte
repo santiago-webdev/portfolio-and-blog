@@ -13,26 +13,21 @@
 
 <style>
 	.wrapper-home {
+		display: grid;
+		place-items: center;
+
 		background-image: radial-gradient(
 			70% 50% at 100% 23%,
 			#3e4352,
 			var(--cc2-bg)
-		);
-		/* background-image: none; */
-		transition: all 0.3s ease 0s;
-		display: grid;
-		place-items: center;
-		min-height: 100vh;
-		background-color: var(--cc2-bg);
+		); /* NOTE: You can't change `background-color` when using this */
+
+		min-height: 100vh; /* height: min(100%, 50vh); */
 	}
 
 	header {
-		/* border-color: red; */
-		/* border-style: solid; */
-
-		max-width: var(--max-content-width);
-		padding: var(--padding);
-		padding-inline: var(--padding-inline);
+		width: min(93%, var(--max-content-width));
+		padding: 6rem 0; /* Put a little bit of blank-space between Nav and Projects */
 	}
 
 	h1 {
@@ -44,7 +39,6 @@
 	}
 
 	p {
-		font-family: 'Inter', sans-serif;
 		margin-left: 0.8ch;
 		font-size: clamp(20px, 10vw, 26px);
 		color: var(--cc-vanilla-red);
@@ -52,10 +46,11 @@
 
 	h2 {
 		font-size: clamp(1rem, 10vw, 1.5rem);
-		font-family: 'Inter', sans-serif;
 		font-weight: 400;
 	}
 
-	/* @media only screen and (max-width: 43.75rem) { */
-	/*  } */
+	p,
+	h2 {
+		font-family: 'Inter', sans-serif;
+	}
 </style>
