@@ -32,3 +32,8 @@
 	color: #8ff3d9;
 	background-color: var(--cc-vanilla-red);
 }
+
+body {
+	background-color: var(--cc2-bg);
+	color: var(--cc-fg);
+}

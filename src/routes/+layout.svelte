@@ -4,13 +4,12 @@
 </script>
 
 <Nav />
-<div class="wrapper">
-	<slot />
-</div>
+<!-- <div class="wrapper"> -->
+<slot />
+<!-- </div> -->
 <Footer />
 
-<style global>
-	.wrapper {
-		color: var(--cc-fg);
-	}
-</style>
+<!-- <style global> -->
+<!-- 	.wrapper { -->
+<!-- 	} -->
+<!-- </style> -->
