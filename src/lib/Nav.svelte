@@ -118,13 +118,17 @@
 	ul {
 		display: flex;
 		list-style: none;
+		gap: var(--padding);
 	}
 
 	a {
 		text-decoration: none;
 		color: var(--cc-fg);
 		transition: all 0.3s ease 0s;
-		padding: var(--padding) var(--padding-inline);
+		/* TODO(santigo-zero): Find a way of using this so it's easier to click on it but without */
+		/*   having to see left padding in the first a element of the nav and right padding in */
+		/*   the last a element of the nav. */
+		/* padding: var(--padding) var(--padding-inline); */
 	}
 
 	a:hover {
