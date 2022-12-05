@@ -21,7 +21,7 @@
 
 	const hideWhenInactive = () =>
 		setTimeout(() => {
-			if (!hidden && userScrollPos > 0) {
+			if (!ulMobile && !hidden && userScrollPos > 0) {
 				hidden = true;
 			}
 		}, 3000);
@@ -42,6 +42,8 @@
 
 	// Media match query handler
 	const restoreMobileStatus = (e) => {
+		hideWhenInactive();
+
 		// Reset mobile state
 		if (!e.matches) {
 			ulMobileDisable();
