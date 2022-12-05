@@ -19,7 +19,7 @@
 		place-items: center;
 
 		background-image: radial-gradient(
-			70% 50% at 100% 23%,
+			70% 50% at 90% 23%,
 			#3e4352,
 			var(--cc2-bg)
 		); /* NOTE: You can't change `background-color` when using this */
@@ -28,14 +28,13 @@
 	}
 
 	header {
-		width: min(100% - var(--padding), var(--max-content-width));
+		width: min(100% - calc(var(--padding) * 3), var(--max-content-width));
 		padding: 6rem 0; /* Put a little bit of blank-space between Nav and Projects */
 	}
 
 	h1 {
 		padding-bottom: 1.3rem;
 		max-width: 11ch;
-		word-wrap: break-word;
 		text-shadow: 3px 6px 9px rgba(0, 0, 0, 0.3);
 	}
 
