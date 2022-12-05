@@ -35,7 +35,7 @@
 
 	header {
 		margin-inline: auto;
-		width: min(100% - var(--padding), var(--max-content-width));
+		width: min(100% - calc(var(--padding) * 3), var(--max-content-width));
 		display: grid;
 		grid-template-columns: fit-content(33ch) minmax(min(50vw, 30ch), 1fr);
 

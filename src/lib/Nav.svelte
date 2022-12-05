@@ -111,7 +111,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		width: min(100% - var(--padding), var(--max-content-width));
+		width: min(100% - calc(var(--padding) * 3), var(--max-content-width));
 		height: 100%;
 	}
 
