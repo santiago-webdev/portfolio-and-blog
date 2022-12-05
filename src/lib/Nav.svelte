@@ -19,12 +19,17 @@
 		ulMobile = false;
 	}
 
-	const hideWhenInactive = () =>
+	const hideWhenInactive = (timer?: number) => {
+		if (typeof timer !== "number") {
+			timer = 3000;
+		}
+
 		setTimeout(() => {
 			if (!ulMobile && !hidden && userScrollPos > 0) {
 				hidden = true;
 			}
-		}, 3000);
+		}, timer);
+	};
 
 	function handleScroll(curPos): boolean {
 		ulMobileDisable();
@@ -42,7 +47,7 @@
 
 	// Media match query handler
 	const restoreMobileStatus = (e) => {
-		hideWhenInactive();
+		hideWhenInactive(0);
 
 		// Reset mobile state
 		if (!e.matches) {
