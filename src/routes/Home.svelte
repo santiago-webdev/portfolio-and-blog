@@ -36,6 +36,7 @@
 		padding-bottom: 1.3rem;
 		max-width: 11ch;
 		word-wrap: break-word;
+		text-shadow: 3px 6px 9px rgba(0, 0, 0, 0.3);
 	}
 
 	:global(strong) {
