@@ -1,6 +1,6 @@
-<script>
-	const title = "Projects";
-	const subtitle = "This are some of my best frontend projects";
+<script lang="ts">
+	const title: string = "Projects";
+	const subtitle: string = "This are some of my best frontend projects";
 </script>
 
 <div id="projects" class="wrapper-projects">

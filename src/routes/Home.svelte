@@ -1,9 +1,9 @@
-<script>
-	const title = `
+<script lang="ts">
+	const title: string = `
     I'm <strong>Santiago</strong>, a
     web developer
   `;
-	const subtitle = "And I create clean interfaces for the web.";
+	const subtitle: string = "And I create clean interfaces for the web.";
 </script>
 
 <div class="wrapper-home">
