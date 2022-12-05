@@ -2,11 +2,13 @@
 	import Home from "./Home.svelte";
 	import Projects from "./Projects.svelte";
 	import About from "./About.svelte";
+	import Contact from "./Contact.svelte";
 </script>
 
 <Home />
 <Projects />
 <About />
+<Contact />
 
 <svelte:head>
 	<title>Santiago Gonzalez - Portfolio</title>

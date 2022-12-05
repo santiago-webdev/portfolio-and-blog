@@ -10,8 +10,8 @@
 		{ label: "Home", href: "/" },
 		{ label: "Projects", href: "#projects" },
 		{ label: "About", href: "#about" },
-		{ label: "Resume", href: "#" },
-		{ label: "Contact", href: "#" }
+		{ label: "Contact", href: "#cta" },
+		{ label: "Resume", href: "#" }
 	];
 
 	function ulMobileDisable() {
