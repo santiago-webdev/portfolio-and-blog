@@ -4,6 +4,7 @@
 	var userScrollPos: number;
 	var prevPos: number;
 	var ulMobile: boolean;
+	var hidden: boolean;
 
 	// List of navigation items
 	const navItems = [
@@ -18,6 +19,13 @@
 		ulMobile = false;
 	}
 
+	const hideWhenInactive = () =>
+		setTimeout(() => {
+			if (!hidden && userScrollPos > 0) {
+				hidden = true;
+			}
+		}, 3000);
+
 	function handleScroll(curPos): boolean {
 		ulMobileDisable();
 		if (curPos > 0 && curPos >= prevPos) {
@@ -26,6 +34,9 @@
 			return true;
 		}
 		prevPos = curPos;
+
+		hideWhenInactive();
+
 		return false;
 	}
 
@@ -45,15 +56,13 @@
 
 		mediaListener.addListener(restoreMobileStatus);
 	});
+
+	$: hidden = handleScroll(userScrollPos);
 </script>
 
 <svelte:window bind:scrollY={userScrollPos} />
 
-<div
-	class="wrapper-nav"
-	class:scrolled={userScrollPos > 0}
-	class:hidden={handleScroll(userScrollPos)}
->
+<div class="wrapper-nav" class:scrolled={userScrollPos > 0} class:hidden>
 	<nav>
 		<h3><a href="/">SZ</a></h3>
 		<ul class:ulMobile>
