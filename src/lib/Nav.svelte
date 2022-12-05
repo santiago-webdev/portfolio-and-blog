@@ -89,6 +89,8 @@
 		height: 90px;
 
 		z-index: 9999;
+
+		text-shadow: 3px 6px 9px rgba(0, 0, 0, 0.3);
 	}
 
 	.scrolled {
@@ -97,6 +99,8 @@
 		-webkit-backdrop-filter: blur(13px);
 		backdrop-filter: blur(13px);
 		height: 60px;
+
+		text-shadow: none;
 	}
 
 	.hidden {

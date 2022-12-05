@@ -7,7 +7,7 @@
 			"https://api.github.com/repos/santigo-zero/santigo-zero.github.io"
 		);
 		const character: object = await response.json();
-    ghStars = character.stargazers_count;
+		ghStars = character.stargazers_count;
 	});
 </script>
 
