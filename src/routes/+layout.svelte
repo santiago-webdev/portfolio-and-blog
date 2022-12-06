@@ -4,12 +4,13 @@
 </script>
 
 <Nav />
-<!-- <div class="wrapper"> -->
-<slot />
-<!-- </div> -->
+<div class="wrapper">
+	<slot />
+</div>
 <Footer />
 
-<!-- <style global> -->
-<!-- 	.wrapper { -->
-<!-- 	} -->
-<!-- </style> -->
+<style global>
+	.wrapper {
+		flex: 1;
+	}
+</style>
