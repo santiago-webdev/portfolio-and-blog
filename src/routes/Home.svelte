@@ -1,6 +1,6 @@
 <script lang="ts">
 	const title: string = `
-    I'm <strong>Santiago</strong>, a
+    Hello! I'm <strong>Santiago</strong>, a
     web developer
   `;
 	const subtitle: string = "And I create clean interfaces for the web.";
@@ -21,7 +21,7 @@
 		background-image: radial-gradient(
 			70% 50% at 90% 23%,
 			var(--cc-grey),
-			var(--cc2-bg)
+			var(--cc-bg)
 		); /* NOTE: You can't change `background-color` when using this */
 
 		min-height: 100vh; /* height: min(100%, 50vh); */
@@ -35,7 +35,7 @@
 	h1 {
 		/* Separate the title from the subtitle */
 		padding-bottom: 1.3rem;
-		max-width: 11ch;
+		max-width: 16ch;
 		text-shadow: 3px 6px 9px rgba(0, 0, 0, 0.3);
 	}
 

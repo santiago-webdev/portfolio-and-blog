@@ -1,10 +1,7 @@
 <script lang="ts">
-	import { onMount } from "svelte";
+	// import { onMount } from "svelte";
 
 	var userScrollPos: number;
-	var prevPos: number;
-	var ulMobile: boolean;
-	var hidden: boolean;
 
 	// List of navigation items
 	const navItems = [
@@ -14,187 +11,77 @@
 		{ label: "Contact", href: "#cta" },
 		{ label: "Resume", href: "#" }
 	];
-
-	function ulMobileDisable() {
-		ulMobile = false;
-	}
-
-	const hideWhenInactive = (timer?: number) => {
-		if (typeof timer !== "number") {
-			timer = 3000;
-		}
-
-		setTimeout(() => {
-			if (!ulMobile && !hidden && userScrollPos > 0) {
-				hidden = true;
-			}
-		}, timer);
-	};
-
-	function handleScroll(curPos): boolean {
-		ulMobileDisable();
-		if (curPos > 0 && curPos >= prevPos) {
-			// console.log('We are moving DOWN', Math.trunc(curPos), Math.trunc(prevPos));
-			prevPos = curPos;
-			return true;
-		}
-		prevPos = curPos;
-
-		hideWhenInactive();
-
-		return false;
-	}
-
-	// Media match query handler
-	const restoreMobileStatus = (e) => {
-		hideWhenInactive(0);
-
-		// Reset mobile state
-		if (!e.matches) {
-			ulMobileDisable();
-		}
-	};
-
-	const toggleMobileClick = () => (ulMobile = !ulMobile);
-
-	// Attach media query listener on mount hook
-	onMount(() => {
-		const mediaListener = window.matchMedia("(max-width: 767px)");
-
-		mediaListener.addListener(restoreMobileStatus);
-	});
-
-	$: hidden = handleScroll(userScrollPos);
 </script>
 
 <svelte:window bind:scrollY={userScrollPos} />
 
-<div class="wrapper-nav" class:scrolled={userScrollPos > 0} class:hidden>
-	<nav>
+<div class="wrapper-nav">
+	<nav class:floating_nav={userScrollPos > 0}>
 		<h3><a href="/">SZ</a></h3>
-		<ul class:ulMobile>
+		<ul>
 			{#each navItems as item}
 				<li>
-					<a on:click={restoreMobileStatus} href={item.href}>{item.label}</a>
+					<a href={item.href}>{item.label}</a>
 				</li>
 			{/each}
 		</ul>
-		<button aria-hidden="true" on:click={toggleMobileClick}>
-			{#if ulMobile}
-				<i class="fa-solid fa-xmark" />
-			{:else}
-				<i class="fa-solid fa-bars" />
-			{/if}
+		<button aria-hidden="true">
+			<i class="fa-solid fa-bars" />
 		</button>
 	</nav>
 </div>
 
 <style>
 	.wrapper-nav {
-		transition: all 0.6s cubic-bezier(0.07, 0.95, 0, 1);
-		position: fixed;
-		width: 100%;
-
 		display: grid;
 		place-items: center;
-
-		background-color: transparent;
-
-		font-size: 20px;
-		font-family: "Basier Square", sans-serif;
-		height: 90px;
-
+		width: 100%;
+		position: fixed;
 		z-index: 9999;
-
-		text-shadow: 3px 6px 9px rgba(0, 0, 0, 0.3);
-	}
-
-	.scrolled {
-		box-shadow: 0 -0.4rem 0.9rem 0.2rem rgb(0 0 0 / 30%);
-		background-color: rgba(35, 33, 50, 0.6);
-		-webkit-backdrop-filter: blur(13px);
-		backdrop-filter: blur(13px);
-		height: 60px;
-
-		text-shadow: none;
-	}
-
-	.hidden {
-		transform: translate(0, -130%);
 	}
 
 	nav {
+		transition: all 0.6s cubic-bezier(0.07, 0.95, 0, 1);
+
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		width: min(100% - calc(var(--padding) * 3), var(--max-content-width));
-		height: 100%;
+
+		height: 100px;
+		text-shadow: 3px 6px 9px rgba(0, 0, 0, 0.3);
+
+		/* The transition will use white at the start so we define the color here */
+		border-color: #2a2b37;
+	}
+
+	.floating_nav {
+		margin-top: 0.6rem;
+		height: 66px;
+		/* background-color: red; */
+
+		border-style: solid;
+		border-width: 0.2rem;
+		border-radius: 1rem;
+
+		/* Blur in the background */
+		box-shadow: 0 0 0.9rem 0.2rem rgb(0 0 0 / 23%);
+		background-color: rgba(42, 43, 56, 0.8);
+		-webkit-backdrop-filter: blur(13px);
+		backdrop-filter: blur(13px);
+
+		padding-inline: calc(var(--padding) / 2);
 	}
 
 	ul {
 		display: none;
 		list-style: none;
-		gap: var(--padding);
+		gap: 1.3rem;
 	}
 
 	a {
 		text-decoration: none;
 		color: var(--cc-fg);
-		transition: all 0.3s ease 0s;
-		/* TODO(santigo-zero): Find a way of using this so it's easier to click on it but without */
-		/*   having to see left padding in the first a element of the nav and right padding in */
-		/*   the last a element of the nav. */
-		/* padding: var(--padding) var(--padding-inline); */
-	}
-
-	a:hover {
-		color: var(--cc4-fg);
-	}
-
-	a:active {
-		transition: none;
-		text-shadow: 3px 6px 9px rgba(232, 232, 232, 0.3);
-	}
-
-	h3 a {
-		font-family: "Inter", sans-serif;
-		font-weight: 800;
-	}
-
-	button {
-		z-index: 9999;
-
-		background-color: inherit;
-		color: var(--cc2-fg);
-		border: none;
-		font: inherit;
-		cursor: pointer;
-		height: 100%;
-		width: 3rem;
-	}
-
-	.ulMobile {
-		position: fixed;
-		display: flex;
-		flex-direction: column;
-		place-items: center;
-		/* justify-content: space-evenly; */
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		padding: 0;
-		margin: 0;
-		width: 100vw;
-		height: 100vh;
-		padding-top: 3rem;
-		gap: var(--padding);
-
-		/* Blur in the background */
-		box-shadow: 0 -0.4rem 0.9rem 0.2rem rgb(0 0 0 / 30%);
-		background-color: rgba(35, 33, 50, 0.6);
-		-webkit-backdrop-filter: blur(13px);
-		backdrop-filter: blur(13px);
 	}
 
 	@media only screen and (min-width: 43.75rem) {
@@ -204,7 +91,8 @@
 		}
 
 		ul {
-			display: flex;
+			/* display: flex; */
+			display: inline-flex;
 		}
 	}
 </style>

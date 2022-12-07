@@ -41,7 +41,7 @@
 }
 
 body {
-	background-color: var(--cc2-bg);
+	background-color: var(--cc-bg);
 	color: var(--cc-fg);
 
 	/* Make the entire page a flexbox container, it makes the footer stay at the
