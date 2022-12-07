@@ -6,11 +6,31 @@
 
 	// List of navigation items
 	const navItems = [
-		{ label: "Home", href: "/" },
-		{ label: "Projects", href: "#projects" },
-		{ label: "About", href: "#about" },
-		{ label: "Contact", href: "#cta" },
-		{ label: "Resume", href: "#" }
+		{
+			alt_label: `<i class="fa-solid fa-house"></i>`,
+			label: "Home",
+			href: "/"
+		},
+		{
+			alt_label: `<i class="fa-solid fa-briefcase"></i>`,
+			label: "Projects",
+			href: "#projects"
+		},
+		{
+			alt_label: `<i class="fa-solid fa-person"></i>`,
+			label: "About",
+			href: "#about"
+		},
+		{
+			alt_label: `<i class="fa-solid fa-message"></i>`,
+			label: "Contact",
+			href: "#cta"
+		},
+		{
+			alt_label: `<i class="fa-solid fa-phone"></i>`,
+			label: "Resume",
+			href: "#"
+		}
 	];
 
 	function ulMobileDisable() {
@@ -38,11 +58,15 @@
 
 <div class="wrapper-nav">
 	<nav class:floating_nav={userScrollPos > 0}>
-		<h3><a href="/">SZ</a></h3>
+		<h3><a class:hide_logo={ulMobile} href="/">SZ</a></h3>
 		<ul class:ulMobile>
 			{#each navItems as item}
 				<li>
-					<a href={item.href}>{item.label}</a>
+					{#if ulMobile}
+						<a href={item.href}>{@html item.alt_label}</a>
+					{:else}
+						<a href={item.href}>{item.label}</a>
+					{/if}
 				</li>
 			{/each}
 		</ul>
@@ -85,9 +109,7 @@
 	.floating_nav {
 		margin-top: 1rem;
 		width: min(100% - 2rem, var(--max-content-width));
-
 		height: 66px;
-		/* background-color: red; */
 
 		border-style: solid;
 		border-width: 0.2rem;
@@ -125,7 +147,13 @@
 	}
 
 	.ulMobile {
+		width: 100%;
 		display: inline-flex;
+		justify-content: space-evenly;
+	}
+
+	.hide_logo {
+		display: none;
 	}
 
 	@media only screen and (min-width: 43.75rem) {
