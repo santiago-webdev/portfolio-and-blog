@@ -1,7 +1,8 @@
 <script lang="ts">
-	// import { onMount } from "svelte";
+	import { onMount } from "svelte";
 
 	var userScrollPos: number;
+	var ulMobile: boolean;
 
 	// List of navigation items
 	const navItems = [
@@ -11,6 +12,26 @@
 		{ label: "Contact", href: "#cta" },
 		{ label: "Resume", href: "#" }
 	];
+
+	function ulMobileDisable() {
+		ulMobile = false;
+	}
+
+	// Media match query handler
+	const restoreMobileStatus = (e) => {
+		// Reset mobile state
+		if (!e.matches) {
+			ulMobileDisable();
+		}
+	};
+
+	const toggleMobileClick = () => (ulMobile = !ulMobile);
+
+	// Attach media query listener on mount hook
+	onMount(() => {
+		const mediaListener = window.matchMedia("(max-width: 43.75rem)");
+		mediaListener.addListener(restoreMobileStatus);
+	});
 </script>
 
 <svelte:window bind:scrollY={userScrollPos} />
@@ -18,15 +39,19 @@
 <div class="wrapper-nav">
 	<nav class:floating_nav={userScrollPos > 0}>
 		<h3><a href="/">SZ</a></h3>
-		<ul>
+		<ul class:ulMobile>
 			{#each navItems as item}
 				<li>
 					<a href={item.href}>{item.label}</a>
 				</li>
 			{/each}
 		</ul>
-		<button aria-hidden="true">
-			<i class="fa-solid fa-bars" />
+		<button aria-hidden="true" on:click={toggleMobileClick}>
+			{#if ulMobile}
+				<i class="fa-solid fa-xmark" />
+			{:else}
+				<i class="fa-solid fa-bars" />
+			{/if}
 		</button>
 	</nav>
 </div>
@@ -97,6 +122,10 @@
 		cursor: pointer;
 		height: 100%;
 		width: 3rem;
+	}
+
+	.ulMobile {
+		display: inline-flex;
 	}
 
 	@media only screen and (min-width: 43.75rem) {
