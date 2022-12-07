@@ -46,6 +46,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+
+		margin-top: 0;
 		width: min(100% - calc(var(--padding) * 2), var(--max-content-width));
 
 		height: 100px;
@@ -56,7 +58,9 @@
 	}
 
 	.floating_nav {
-		margin-top: 0.6rem;
+		margin-top: 1rem;
+		width: min(100% - 2rem, var(--max-content-width));
+
 		height: 66px;
 		/* background-color: red; */
 
@@ -82,6 +86,17 @@
 	a {
 		text-decoration: none;
 		color: var(--cc-fg);
+	}
+
+	button {
+		z-index: 9999;
+		background-color: transparent;
+		color: var(--cc-fg);
+		border: none;
+		font: inherit;
+		cursor: pointer;
+		height: 100%;
+		width: 3rem;
 	}
 
 	@media only screen and (min-width: 43.75rem) {
