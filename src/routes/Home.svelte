@@ -28,7 +28,7 @@
 	}
 
 	header {
-		width: min(100% - calc(var(--padding) * 3), var(--max-content-width));
+		width: min(100% - calc(var(--padding) * 2), var(--max-content-width));
 		padding: 6rem 0;
 	}
 

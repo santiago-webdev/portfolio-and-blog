@@ -58,7 +58,7 @@
 
 	.container {
 		display: grid;
-		width: min(100% - calc(var(--padding) * 3), var(--max-content-width));
+		width: min(100% - calc(var(--padding) * 2), var(--max-content-width));
 		padding: var(--padding);
 		gap: calc(var(--padding) + 1rem); /* Separator between .this and .that */
 		padding-inline: 0;

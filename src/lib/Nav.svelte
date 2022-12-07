@@ -46,7 +46,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		width: min(100% - calc(var(--padding) * 3), var(--max-content-width));
+		width: min(100% - calc(var(--padding) * 2), var(--max-content-width));
 
 		height: 100px;
 		text-shadow: 3px 6px 9px rgba(0, 0, 0, 0.3);
