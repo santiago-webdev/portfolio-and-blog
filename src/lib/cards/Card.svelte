@@ -73,7 +73,7 @@
 		color: var(--fg);
 		font-size: 1.4rem;
 		font-weight: 400;
-		text-align: center;
+		/* text-align: center; */
 		margin-bottom: 6px;
 	}
 

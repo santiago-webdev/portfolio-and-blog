@@ -20,7 +20,7 @@
 
 		background-image: radial-gradient(
 			70% 50% at 90% 23%,
-			#3e4352,
+			var(--cc-grey),
 			var(--cc2-bg)
 		); /* NOTE: You can't change `background-color` when using this */
 
