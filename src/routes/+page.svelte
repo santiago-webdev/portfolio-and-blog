@@ -1,10 +1,13 @@
 <script>
+	import Nav from "$lib/Nav.svelte";
+
 	import Home from "./Home.svelte";
 	import Projects from "./Projects.svelte";
 	import About from "./About.svelte";
 	import Contact from "./Contact.svelte";
 </script>
 
+<Nav />
 <Home />
 <Projects />
 <About />
@@ -17,13 +20,5 @@
 	<link href="./global.css" rel="stylesheet" type="text/css" />
 	<link href="./typography.css" rel="stylesheet" type="text/css" />
 
-	<!-- Fonts -->
-	<!-- <style> -->
-	<!-- 	@import url('https://fonts.cdnfonts.com/css/basier'); -->
-	<!-- 	@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap'); -->
-	<!-- 	@import url('https://fonts.cdnfonts.com/css/satoshi'); -->
-	<!-- </style> -->
-	<!-- EOL Fonts -->
-
-	<!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 </svelte:head>

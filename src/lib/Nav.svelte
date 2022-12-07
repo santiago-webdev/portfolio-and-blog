@@ -151,6 +151,11 @@
 		color: var(--cc4-fg);
 	}
 
+  a:active {
+    transition: none;
+		text-shadow: 3px 6px 9px rgba(232, 232, 232, 0.3);
+  }
+
 	h3 a {
 		font-family: "Inter", sans-serif;
 		font-weight: 800;
