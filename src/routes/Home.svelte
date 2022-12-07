@@ -6,7 +6,7 @@
 	const subtitle: string = "And I create clean interfaces for the web.";
 </script>
 
-<div class="wrapper-home">
+<div id="home" class="wrapper-home">
 	<header>
 		<h1>{@html title}</h1>
 		<h2>{subtitle}</h2>
