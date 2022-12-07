@@ -23,6 +23,8 @@
 		place-items: center;
 		min-height: 100vh;
 		background-color: #1a1724;
+
+		padding: 6rem 0;
 	}
 
 	main {
