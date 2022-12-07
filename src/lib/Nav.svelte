@@ -133,8 +133,8 @@
 
 	ul {
 		display: none;
-    list-style: none;
-    gap: var(--padding);
+		list-style: none;
+		gap: var(--padding);
 	}
 
 	a {
@@ -147,10 +147,6 @@
 		/* padding: var(--padding) var(--padding-inline); */
 	}
 
-  a:active {
-    text-decoration: underline;
-  }
-
 	a:hover {
 		color: var(--cc4-fg);
 	}
@@ -161,43 +157,43 @@
 	}
 
 	button {
-    z-index: 9999;
+		z-index: 9999;
 
-    background-color: inherit;
-    color: var(--cc2-fg);
-    border: none;
-    font: inherit;
-    cursor: pointer;
-    height: 100%;
-    width: 3rem;
+		background-color: inherit;
+		color: var(--cc2-fg);
+		border: none;
+		font: inherit;
+		cursor: pointer;
+		height: 100%;
+		width: 3rem;
 	}
 
-  .ulMobile {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    place-items: center;
-    /* justify-content: space-evenly; */
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    padding: 0;
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-    padding-top: 3rem;
-    gap: var(--padding);
+	.ulMobile {
+		position: fixed;
+		display: flex;
+		flex-direction: column;
+		place-items: center;
+		/* justify-content: space-evenly; */
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 0;
+		margin: 0;
+		width: 100vw;
+		height: 100vh;
+		padding-top: 3rem;
+		gap: var(--padding);
 
-    /* Blur in the background */
-    box-shadow: 0 -0.4rem 0.9rem 0.2rem rgb(0 0 0 / 30%);
-    background-color: rgba(35, 33, 50, 0.6);
-    -webkit-backdrop-filter: blur(13px);
-    backdrop-filter: blur(13px);
-  }
+		/* Blur in the background */
+		box-shadow: 0 -0.4rem 0.9rem 0.2rem rgb(0 0 0 / 30%);
+		background-color: rgba(35, 33, 50, 0.6);
+		-webkit-backdrop-filter: blur(13px);
+		backdrop-filter: blur(13px);
+	}
 
 	@media only screen and (min-width: 43.75rem) {
-    /* Hide the button on big enough screens. */
+		/* Hide the button on big enough screens. */
 		button {
 			display: none;
 		}

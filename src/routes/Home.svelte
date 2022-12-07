@@ -29,15 +29,17 @@
 
 	header {
 		width: min(100% - calc(var(--padding) * 3), var(--max-content-width));
-		padding: 6rem 0; /* Put a little bit of blank-space between Nav and Projects */
+		padding: 6rem 0;
 	}
 
 	h1 {
+		/* Separate the title from the subtitle */
 		padding-bottom: 1.3rem;
 		max-width: 11ch;
 		text-shadow: 3px 6px 9px rgba(0, 0, 0, 0.3);
 	}
 
+	/* Make the <strong> text be hollow, and just use an outline for it */
 	:global(strong) {
 		color: transparent;
 		-webkit-text-stroke-width: 1.3px;
