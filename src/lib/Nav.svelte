@@ -130,18 +130,8 @@
 		gap: 1.3rem;
 	}
 
-	a {
-		text-decoration: none;
-		color: var(--cc-fg);
-	}
-
 	button {
 		z-index: 9999;
-		background-color: transparent;
-		color: var(--cc-fg);
-		border: none;
-		font: inherit;
-		cursor: pointer;
 		height: 100%;
 		width: 3rem;
 	}

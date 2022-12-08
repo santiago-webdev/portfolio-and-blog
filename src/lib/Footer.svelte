@@ -93,7 +93,6 @@
 	}
 
 	a {
-		text-decoration: none;
 		color: var(--cc4-fg);
 	}
 
