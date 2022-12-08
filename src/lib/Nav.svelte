@@ -130,6 +130,10 @@
 		gap: 1.3rem;
 	}
 
+	a {
+		font-size: clamp(1rem, 10vw, 1.2rem);
+	}
+
 	button {
 		z-index: 9999;
 		height: 100%;

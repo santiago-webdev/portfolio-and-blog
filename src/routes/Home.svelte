@@ -85,6 +85,10 @@
 		/* width: 100%; */
 	}
 
+	a {
+		color: var(--cc2-fg-status);
+	}
+
 	@media only screen and (min-width: 43.75rem) {
 		button {
 			border-radius: 1rem;
