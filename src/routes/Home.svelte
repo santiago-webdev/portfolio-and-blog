@@ -39,7 +39,11 @@
 		text-shadow: 3px 6px 9px rgba(0, 0, 0, 0.3);
 	}
 
-	/* Make the <strong> text be hollow, and just use an outline for it */
+	/* Make the <strong> text hollow, and just use an outline for it. You have to
+   * define it as global to be included in the build because <strong> is only
+   * being used in `title` as a dynamic html component, so when svelte compiles
+   * it's not going to include it and the styles will not be applied to this
+   * only component. */
 	:global(strong) {
 		color: transparent;
 		-webkit-text-stroke-width: 1.3px;
