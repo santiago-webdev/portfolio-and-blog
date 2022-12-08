@@ -10,7 +10,7 @@
 <Nav />
 <Home />
 <Projects />
-<About />
+<!-- <About /> -->
 <Contact />
 
 <svelte:head>

@@ -10,6 +10,19 @@
 	<header>
 		<h1>{@html title}</h1>
 		<h2>{subtitle}</h2>
+
+		<section>
+			<button>
+				<a href="#projects">
+					<p>Projects</p>
+				</a>
+			</button>
+			<button>
+				<a href="#cta">
+					<p>Contacts</p>
+				</a>
+			</button>
+		</section>
 	</header>
 </div>
 
@@ -30,11 +43,11 @@
 	header {
 		width: min(100% - calc(var(--padding) * 2), var(--max-content-width));
 		padding: 6rem 0;
+		display: grid;
+		gap: 1.3rem;
 	}
 
 	h1 {
-		/* Separate the title from the subtitle */
-		padding-bottom: 1.3rem;
 		max-width: 16ch;
 		text-shadow: 3px 6px 9px rgba(0, 0, 0, 0.3);
 	}
@@ -48,5 +61,33 @@
 		color: transparent;
 		-webkit-text-stroke-width: 1.3px;
 		-webkit-text-stroke-color: var(--cc2-fg);
+	}
+
+	section {
+		display: flex;
+		flex-wrap: wrap;
+		gap: calc(var(--padding) / 2);
+	}
+
+	button {
+		box-shadow: 3px 6px 9px rgba(0, 0, 0, 0.1);
+		background-color: var(--cc2-bg-status);
+		color: var(--cc2-fg-status);
+
+		padding: 0.3rem;
+		border-radius: 9px;
+
+		/* TODO(santigo-zero): Normalize fonts, including this for buttons */
+		font-size: clamp(1rem, 10vw, 1.5rem);
+		font-weight: 400;
+
+		width: min(100%, calc(var(--max-content-width) / 4.2));
+		/* width: 100%; */
+	}
+
+	@media only screen and (min-width: 43.75rem) {
+		button {
+			border-radius: 1rem;
+		}
 	}
 </style>
