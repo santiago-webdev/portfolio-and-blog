@@ -90,7 +90,7 @@
 	}
 
 	nav {
-		transition: all 0.6s cubic-bezier(0.07, 0.95, 0, 1);
+		transition: all 0.3s cubic-bezier(0.07, 0.95, 0, 1);
 
 		display: flex;
 		align-items: center;
@@ -103,7 +103,9 @@
 		text-shadow: 3px 6px 9px rgba(0, 0, 0, 0.3);
 
 		/* The transition will use white at the start so we define the color here */
-		border-color: #2a2b37;
+		border-color: var(--cc2-bg-status);
+		border-width: 0.15rem;
+		border-radius: 1rem;
 	}
 
 	.floating_nav {
@@ -112,14 +114,12 @@
 		height: 66px;
 
 		border-style: solid;
-		border-width: 0.2rem;
-		border-radius: 1rem;
 
 		/* Blur in the background */
-		box-shadow: 0 0 0.9rem 0.2rem rgb(0 0 0 / 23%);
-		background-color: rgba(42, 43, 56, 0.8);
-		-webkit-backdrop-filter: blur(13px);
-		backdrop-filter: blur(13px);
+		background-color: rgba(35 33 50 / 66%);
+		--blur: 12px;
+		-webkit-backdrop-filter: blur(var(--blur));
+		backdrop-filter: blur(var(--blur));
 
 		padding-inline: calc(var(--padding) / 2);
 	}

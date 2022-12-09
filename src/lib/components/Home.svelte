@@ -34,7 +34,7 @@
 		background-image: radial-gradient(
 			70% 50% at 90% 23%,
 			var(--cc-grey),
-			var(--cc-bg)
+			var(--cc2-bg)
 		); /* NOTE: You can't change `background-color` when using this */
 
 		min-height: 100vh; /* height: min(100%, 50vh); */
