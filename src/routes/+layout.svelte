@@ -14,11 +14,11 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<script
-		defer
-		src="https://kit.fontawesome.com/0f56b4de7c.js"
-		crossorigin="anonymous"
-	></script>
+	<!-- <script -->
+	<!-- 	defer -->
+	<!-- 	src="https://kit.fontawesome.com/0f56b4de7c.js" -->
+	<!-- 	crossorigin="anonymous" -->
+	<!-- ></script> -->
 </svelte:head>
 
 <style global>
