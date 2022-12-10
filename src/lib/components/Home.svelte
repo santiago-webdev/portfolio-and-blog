@@ -86,13 +86,5 @@
 		font-weight: 400;
 
 		width: min(100%, calc(var(--max-content-width) / 4.2));
-		/* width: 100%; */
-	}
-
-	/* If the width of the viewport is ^bigger^ than this. */
-	@media only screen and (min-width: 43.75rem) {
-		button {
-			border-radius: 1rem;
-		}
 	}
 </style>

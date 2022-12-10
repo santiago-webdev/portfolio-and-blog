@@ -1,11 +1,11 @@
-<script lang="ts">
-	import Footer from "$lib/Footer.svelte";
-</script>
+<!-- <script lang="ts"> -->
+<!-- 	import Footer from "$lib/Footer.svelte"; -->
+<!-- </script> -->
 
 <!-- <div class="wrapper"> -->
 <slot />
 <!-- </div> -->
-<Footer />
+<!-- <Footer /> -->
 
 <svelte:head>
 	<link href="./reset.css" rel="stylesheet" type="text/css" />

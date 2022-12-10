@@ -1,5 +1,4 @@
 <script lang="ts">
-	import Card from "$lib/cards/Card.svelte";
 	const title: string = "Projects";
 	const subtitle: string = "This are some of my best frontend projects";
 </script>
@@ -12,7 +11,15 @@
 		</div>
 
 		<section>
-			<Card />
+			<article>
+				<h4>Title of the Card</h4>
+			</article>
+			<article>
+				<h4>Title of the Card</h4>
+			</article>
+			<article>
+				<h4>Title of the Card</h4>
+			</article>
 		</section>
 	</main>
 </div>
@@ -21,21 +28,16 @@
 	.wrapper-projects {
 		display: grid;
 		place-items: center;
-		min-height: 100vh;
-		background-color: #1a1724;
 
+		min-height: min(100vh, 60rem);
 		padding: 6rem 0;
 	}
 
+	/* This is the most important part of my portfolio, it's where I showcase my
+   * projects. */
 	main {
-		/* border-color: red; */
-		/* border-style: solid; */
-
-		/* max-width: 66rem; */
-		padding: var(--padding);
-		padding-inline: var(--padding-inline);
-		max-width: 66rem;
-		width: 100%;
+		/* border: 2px solid blue; */
+		width: min(100% - calc(var(--padding) * 2), var(--max-content-width));
 	}
 
 	h1 {
@@ -54,12 +56,39 @@
 	}
 
 	section {
-		display: grid;
-		gap: 1.05rem;
-		grid-auto-rows: minmax(28rem, auto);
-		grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
-		/* max-width: 66rem; */
-		padding-top: calc(var(--padding) * 3);
+		display: flex;
+		flex-wrap: nowrap;
+		/* overflow-x: auto; */
+		/* overflow-y: auto; */
+		/* overflow: hidden; */
+		gap: var(--padding);
+
+		height: 468px;
+		/* border: 2px solid red; */
+		scroll-snap-type: x mandatory;
+		overflow-x: scroll;
+		overflow-y: hidden;
+	}
+
+	article {
+		display: inline-block;
+		flex: 0 0 auto;
+		scroll-snap-align: start;
+		background-image: linear-gradient(
+			180deg,
+			rgba(35, 37, 49, 0.5),
+			transparent
+		);
+		border-radius: 1rem;
+		border: 0.15rem solid var(--cc2-bg-status);
 		width: 100%;
+	}
+
+	/* If the width of the viewport is ^bigger^ than this. */
+	@media only screen and (min-width: 43.75rem) {
+		.wrapper-projects {
+			/* For debugging purposes :B */
+			background-color: red;
+		}
 	}
 </style>
