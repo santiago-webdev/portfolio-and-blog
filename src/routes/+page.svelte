@@ -8,11 +8,12 @@
 </script>
 
 <Nav />
+
 <Home />
 <Projects />
 <About />
 <Contact />
 
 <svelte:head>
-	<title>Title</title>
+	<title>Santiago Gonzalez - Portfolio</title>
 </svelte:head>
