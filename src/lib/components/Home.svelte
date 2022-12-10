@@ -37,12 +37,16 @@
 			transparent
 		); /* NOTE: You can't change `background-color` when using this */
 
-		/* min-height: 100vh; /* height: min(100%, 50vh); */
+		min-height: min(100vh, 60rem);
 	}
 
 	header {
 		width: min(100% - calc(var(--padding) * 2), var(--max-content-width));
+
+		/* This initial padding is in here so that the nav doesn't overlap with
+     * this component when viewing the site in landscape mode */
 		padding: 6rem 0;
+
 		display: grid;
 		gap: 1.3rem;
 	}
@@ -78,13 +82,14 @@
 		border-radius: 9px;
 
 		/* TODO(santigo-zero): Normalize fonts, including this for buttons */
-		font-size: clamp(1rem, 10vw, 1.5rem);
+		font-size: clamp(1rem, 8vw, 1.5rem);
 		font-weight: 400;
 
 		width: min(100%, calc(var(--max-content-width) / 4.2));
 		/* width: 100%; */
 	}
 
+	/* If the width of the viewport is ^bigger^ than this. */
 	@media only screen and (min-width: 43.75rem) {
 		button {
 			border-radius: 1rem;

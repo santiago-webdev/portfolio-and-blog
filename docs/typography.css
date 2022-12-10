@@ -14,12 +14,12 @@ p {
 }
 
 h1 {
-	font-size: clamp(1rem, 14vw, 4.6rem);
-	line-height: clamp(3rem, 18vw, 5.6rem);
+	font-size: clamp(1rem, 12vw, 4.6rem);
+	line-height: clamp(3rem, 16vw, 5.6rem);
 	font-weight: 500;
 }
 
 h2 {
-	font-size: clamp(1rem, 10vw, 1.5rem);
+	font-size: clamp(1rem, 8vw, 1.5rem);
 	font-weight: 400;
 }

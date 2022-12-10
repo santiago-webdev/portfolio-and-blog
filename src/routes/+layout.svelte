@@ -2,9 +2,9 @@
 	import Footer from "$lib/Footer.svelte";
 </script>
 
-<div class="wrapper">
-	<slot />
-</div>
+<!-- <div class="wrapper"> -->
+<slot />
+<!-- </div> -->
 <Footer />
 
 <svelte:head>
@@ -14,15 +14,15 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-	<!-- <script -->
-	<!-- 	defer -->
-	<!-- 	src="https://kit.fontawesome.com/0f56b4de7c.js" -->
-	<!-- 	crossorigin="anonymous" -->
-	<!-- ></script> -->
+	<script
+		defer
+		src="https://kit.fontawesome.com/0f56b4de7c.js"
+		crossorigin="anonymous"
+	></script>
 </svelte:head>
 
 <style global>
-	.wrapper {
-		flex: 1;
-	}
+	/* .wrapper { */
+	/* 	flex: 1; */
+	/* } */
 </style>
