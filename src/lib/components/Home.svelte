@@ -34,10 +34,10 @@
 		background-image: radial-gradient(
 			70% 50% at 90% 23%,
 			var(--cc-grey),
-			var(--cc2-bg)
+			transparent
 		); /* NOTE: You can't change `background-color` when using this */
 
-		min-height: 100vh; /* height: min(100%, 50vh); */
+		/* min-height: 100vh; /* height: min(100%, 50vh); */
 	}
 
 	header {
@@ -83,10 +83,6 @@
 
 		width: min(100%, calc(var(--max-content-width) / 4.2));
 		/* width: 100%; */
-	}
-
-	a {
-		color: var(--cc2-fg-status);
 	}
 
 	@media only screen and (min-width: 43.75rem) {
