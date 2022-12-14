@@ -11,18 +11,10 @@
 		<h1>{@html title}</h1>
 		<h2>{subtitle}</h2>
 
-		<section>
-			<button>
-				<a href="#projects">
-					<p>Projects</p>
-				</a>
-			</button>
-			<button>
-				<a href="#cta">
-					<p>Contacts</p>
-				</a>
-			</button>
-		</section>
+		<ul>
+			<a href="#projects" role="button">Projects</a>
+			<a href="#cta" role="button">Contacts</a>
+		</ul>
 	</header>
 </div>
 
@@ -56,35 +48,18 @@
 		text-shadow: 3px 6px 9px rgba(0, 0, 0, 0.3);
 	}
 
-	/* Make the <strong> text hollow, and just use an outline for it. You have to
-   * define it as global to be included in the build because <strong> is only
-   * being used in `title` as a dynamic html component, so when svelte compiles
-   * it's not going to include it and the styles will not be applied to this
-   * only component. */
-	:global(strong) {
-		color: transparent;
-		-webkit-text-stroke-width: 1.3px;
-		-webkit-text-stroke-color: var(--cc2-fg);
-	}
-
-	section {
-		display: flex;
+	ul {
+		display: inline-flex;
 		flex-wrap: wrap;
 		gap: calc(var(--padding) / 2);
 	}
 
-	button {
-		box-shadow: 3px 6px 9px rgba(0, 0, 0, 0.1);
+	a {
+		text-align: center;
 		background-color: var(--cc2-bg-status);
-		color: var(--cc2-fg-status);
-
+		width: min(100%, calc(var(--max-content-width) / 4.2));
+		box-shadow: 3px 6px 9px rgba(0 0 0 / 10%);
 		padding: 0.3rem;
 		border-radius: 9px;
-
-		/* TODO(santigo-zero): Normalize fonts, including this for buttons */
-		font-size: clamp(1rem, 8vw, 1.5rem);
-		font-weight: 400;
-
-		width: min(100%, calc(var(--max-content-width) / 4.2));
 	}
 </style>
