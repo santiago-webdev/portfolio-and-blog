@@ -49,8 +49,8 @@
 
 	// Attach media query listener on mount hook
 	onMount(() => {
-		const mediaListener = window.matchMedia("(max-width: 43.75rem)");
-		mediaListener.addListener(restoreMobileStatus);
+		const mediaListener: MediaQueryList = window.matchMedia("(max-width: 43.75rem)");
+		mediaListener.addEventListener('change', restoreMobileStatus);
 	});
 </script>
 
