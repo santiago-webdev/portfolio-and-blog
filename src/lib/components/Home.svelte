@@ -11,10 +11,10 @@
 		<h1>{@html title}</h1>
 		<h2>{subtitle}</h2>
 
-		<ul>
+		<section role="group">
 			<a href="#projects" role="button">Projects</a>
 			<a href="#cta" role="button">Contacts</a>
-		</ul>
+		</section>
 	</header>
 </div>
 
@@ -48,7 +48,7 @@
 		text-shadow: 3px 6px 9px rgba(0, 0, 0, 0.3);
 	}
 
-	ul {
+	section {
 		display: inline-flex;
 		flex-wrap: wrap;
 		gap: calc(var(--padding) / 2);
