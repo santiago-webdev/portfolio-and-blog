@@ -1,6 +1,8 @@
 .DS_Store
 node_modules
 /build
+# We are building to docs instead of build
+/docs
 /.svelte-kit
 /package
 .env
