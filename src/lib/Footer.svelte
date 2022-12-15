@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { onMount } from "svelte";
-	var ghStars: number = 0; // Use 0 in here so that it doesn't show "undefined" while it loads
+	var ghStars = 0; // Use 0 in here so that it doesn't show "undefined" while it loads
 
 	onMount(async () => {
 		const response = await fetch(

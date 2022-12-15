@@ -1,11 +1,4 @@
-<!-- <script lang="ts"> -->
-<!-- 	import Footer from "$lib/Footer.svelte"; -->
-<!-- </script> -->
-
-<!-- <div class="wrapper"> -->
 <slot />
-<!-- </div> -->
-<!-- <Footer /> -->
 
 <svelte:head>
 	<link href="./reset.css" rel="stylesheet" type="text/css" />
@@ -20,9 +13,3 @@
 		crossorigin="anonymous"
 	></script>
 </svelte:head>
-
-<style global>
-	/* .wrapper { */
-	/* 	flex: 1; */
-	/* } */
-</style>
