@@ -26,9 +26,3 @@ h2 {
 	font-size: clamp(1rem, 8vw, 1.5rem);
 	font-weight: 400;
 }
-
-button,
-a {
-	font-size: clamp(1rem, 8vw, 1.5rem);
-	font-weight: 400;
-}

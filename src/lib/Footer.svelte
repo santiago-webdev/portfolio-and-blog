@@ -77,7 +77,6 @@
 
 		font-size: 18px;
 
-		background-color: var(--cc2-bg2);
 		color: var(--cc4-fg);
 	}
 

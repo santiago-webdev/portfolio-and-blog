@@ -61,5 +61,6 @@
 		box-shadow: 3px 6px 9px rgba(0 0 0 / 10%);
 		padding: 0.3rem;
 		border-radius: 9px;
+		font-size: clamp(1rem, 8vw, 1.5rem);
 	}
 </style>

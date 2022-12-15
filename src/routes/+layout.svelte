@@ -1,4 +1,9 @@
+<script lang="ts">
+	import Footer from "$lib/Footer.svelte";
+</script>
+
 <slot />
+<Footer />
 
 <svelte:head>
 	<link href="./reset.css" rel="stylesheet" type="text/css" />
