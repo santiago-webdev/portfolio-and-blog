@@ -37,20 +37,19 @@
 		ulMobile = false;
 	}
 
-	// Media match query handler
-	const restoreMobileStatus = (e) => {
-		// Reset mobile state
-		if (!e.matches) {
-			ulMobileDisable();
-		}
-	};
-
 	const toggleMobileClick = () => (ulMobile = !ulMobile);
 
 	// Attach media query listener on mount hook
 	onMount(() => {
-		const mediaListener: MediaQueryList = window.matchMedia("(max-width: 43.75rem)");
-		mediaListener.addEventListener('change', restoreMobileStatus);
+		const mediaListener: MediaQueryList = window.matchMedia(
+			"(min-width: 43.75rem)"
+		);
+		mediaListener.addEventListener("change", (handle) => {
+			// If the screen gets bigger disable the mobile list.
+			if (handle.matches) {
+				ulMobileDisable();
+			}
+		});
 	});
 </script>
 
