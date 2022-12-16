@@ -19,13 +19,14 @@ const config = {
 	vitePlugin: {
 		experimental: {
 			inspector: {
-				// change shortcut
-				toggleKeyCombo: "meta-shift",
-				// hold and release key to toggle inspector mode
+				// Change shortcut.
+				// toggleKeyCombo: "meta-shift",
+				toggleKeyCombo: "control-alt-s",
+				// Hold and release key to toggle inspector mode.
 				holdMode: true,
-				// show or hide the inspector option
-				showToggleButton: "always",
-				// inspector position
+				// Show or hide the inspector option.
+				// showToggleButton: "always",
+				// Inspector position.
 				toggleButtonPos: "bottom-right"
 			}
 		}
