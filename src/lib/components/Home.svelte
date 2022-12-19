@@ -9,7 +9,7 @@
 <div id="home" class="wrapper-home">
 	<header>
 		<h1>{@html title}</h1>
-		<h2>{subtitle}</h2>
+		<h3>{subtitle}</h3>
 
 		<section role="group">
 			<a href="#projects" role="button">Projects</a>
