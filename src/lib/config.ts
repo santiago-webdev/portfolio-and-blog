@@ -1,4 +1,4 @@
-export const TITLE = "Portfolio and Blog - Santiago Gonzalez";
+export const TITLE = 'Portfolio and Blog - Santiago Gonzalez';
 export const TITLE_BLOG = "Santiago's Blog";
 export const TITLE_BLOG_COMPOSE = ' - Santiago Gonzalez Blog';
 export const DESCRIPTION =
