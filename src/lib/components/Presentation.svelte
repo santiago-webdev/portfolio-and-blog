@@ -10,6 +10,9 @@
 
 <style>
 	section {
+		display: grid;
+		place-content: center;
+		min-height: min(100vh - 90px, 80rem);
 		text-align: center;
 		width: min(100% - 3rem, var(--wide));
 		margin-inline: auto;
