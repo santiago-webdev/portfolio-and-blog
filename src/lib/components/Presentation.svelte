@@ -1,8 +1,8 @@
 <script lang="ts">
-	// <script context="module" lang="ts">
+	import { AUTHOR } from "$lib/config";
 </script>
 
-<h1>This is a title</h1>
+<h1>{AUTHOR}</h1>
 
 <style>
 </style>
