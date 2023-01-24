@@ -1,6 +1,6 @@
 {
 	"name": "Portfolio and Blog - Santiago Gonzalez",
-  "license": "GPL3",
+	"license": "GPL3",
 	"version": "0.0.3",
 	"private": true,
 	"scripts": {
@@ -11,9 +11,9 @@
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test:unit": "vitest",
-    "lint": "prettier --plugin-search-dir . --check . && eslint ./src",
+		"lint": "prettier --plugin-search-dir . --check . && eslint ./src",
 		"format": "prettier --plugin-search-dir . --write .",
-    "deploy": "gh-pages -d build -t true"
+		"deploy": "gh-pages -d build -t true"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
@@ -34,5 +34,6 @@
 		"vite": "^4.0.0",
 		"vitest": "^0.25.3"
 	},
-	"type": "module"
+	"type": "module",
+	"packageManager": "yarn@3.3.1"
 }

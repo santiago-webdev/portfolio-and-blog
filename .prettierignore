@@ -12,6 +12,3 @@ pnpm-lock.yaml
 package-lock.json
 yarn.lock
 .yarn
-
-.pnp.loader.mjs
-.pnp.cjs
