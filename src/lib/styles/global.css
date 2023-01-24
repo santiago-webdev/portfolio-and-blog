@@ -57,6 +57,10 @@ html {
 
 body {
 	background-color: var(--cc-bg);
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 body,

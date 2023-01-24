@@ -1,8 +1,9 @@
 <script lang="ts">
 	import '$lib/styles/reset.css';
 	import '$lib/styles/global.css';
-	import Nav from '$lib/components/Nav.svelte';
 	import { onMount } from 'svelte';
+	import Nav from '$lib/components/Nav.svelte';
+	import Footer from '$lib/Footer.svelte';
 
 	let body: HTMLElement;
 	$: pageHeight = 0;
@@ -29,6 +30,7 @@
 <div class="layout" bind:this={body}>
 	<Nav {pageHeight} />
 	<slot />
+	<Footer />
 </div>
 
 <svelte:head>
@@ -38,6 +40,7 @@
 
 <style>
 	.layout {
+		flex: 1;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
