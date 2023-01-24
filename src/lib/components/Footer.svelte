@@ -56,7 +56,7 @@
 		display: grid;
 		place-items: center;
 		gap: 2rem;
-		background-color: #FEF08A;
+		background-color: #fef08a;
 	}
 
 	section {
