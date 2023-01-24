@@ -56,13 +56,6 @@ html {
 }
 
 body {
-	/* Make the entire page a flexbox container, it makes the footer stay at the
-   * bottom of the page.
-   * */
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-
 	background-color: var(--cc-bg);
 }
 
