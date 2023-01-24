@@ -26,7 +26,7 @@
 	});
 </script>
 
-<div class="layout">
+<div class="layout" bind:this={body}>
 	<Nav {pageHeight} />
 	<slot />
 </div>
