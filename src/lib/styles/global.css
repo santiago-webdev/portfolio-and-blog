@@ -48,6 +48,8 @@
 body,
 html {
 	font-display: swap;
+	scroll-behavior: smooth;
+	/* scroll-padding: 10rem; */
 	font-family: var(--font-family--default);
 }
 
@@ -79,5 +81,5 @@ h2 {
 }
 
 br {
-  margin: 0.66rem;
+	margin: 0.66rem;
 }
