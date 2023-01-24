@@ -3,7 +3,7 @@
 	"useTabs": true,
 	"singleQuote": true,
 	"trailingComma": "none",
-	"printWidth": 60,
+	"printWidth": 80,
 	"arrowParens": "avoid",
 	"plugins": ["prettier-plugin-svelte"],
 	"pluginSearchDirs": ["."],
