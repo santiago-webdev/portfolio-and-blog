@@ -51,6 +51,7 @@
 	}
 
 	a {
+		color: var(--cc-fg);
 		margin: 1rem;
 		font-weight: bold;
 		font-size: clamp(0.6rem, 8vw, 1.2rem);

@@ -8,7 +8,10 @@
 	--cc-bg3: #d4d4d4;
 	/* --cc-fg: rgba(65, 64, 66, 1); */
 	--cc-fg: #414042;
-	--cc-fg2: #999a9c;
+	--cc-fg2: #515052;
+	--cc-fg3: #616163;
+	--cc-fg4: #717173;
+	--cc-fg5: #818183;
 	--cc-shadow: rgba(65, 64, 66, 0.3);
 	/* --cc-shadow: rgba(241, 243, 245, 0.3); */
 
@@ -73,4 +76,8 @@ h2 {
 	/* font-family: var(--font-family--alt); */
 	color: #535254;
 	font-weight: 500;
+}
+
+br {
+  margin: 0.66rem;
 }

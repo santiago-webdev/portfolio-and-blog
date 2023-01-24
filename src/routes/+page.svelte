@@ -38,7 +38,10 @@
 
 <style>
 	main {
-		padding: var(--general-padding);
+		/* padding: var(--general-padding); */
+		min-height: min(100vh, 80rem);
+		width: min(100%, var(--wide));
+		margin-inline: auto;
 		display: grid;
 		place-content: center;
 	}

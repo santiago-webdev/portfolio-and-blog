@@ -1,28 +1,45 @@
-<!-- <script lang="ts"> -->
-<!-- 	import { AUTHOR, DESCRIPTION_ALT } from '$lib/config'; -->
-<!-- </script> -->
-
+<script>
+	import { base } from "$app/paths";
+</script>
 <section>
-	<h1>Build websites && clean interfaces</h1>
+	<h1>Building websites && clean interfaces</h1>
 	<br />
-	<h3>
+	<h2>
 		Here we'll talk about web technologies and show you my projects while at it
-	</h3>
+	</h2>
+	<br />
+	<a href='${base}/blog'>Read the blog <span>⟶</span></a>
+	<a href='${base}/projects'>Check my projects <span>⟶</span></a>
 </section>
 
 <style>
 	section {
 		display: grid;
 		place-content: center;
-		min-height: min(100vh - 90px, 80rem);
-		/* text-align: center; */
-		width: min(70%, var(--wide));
-		margin-inline: auto;
 	}
 
-	h3 {
-		font-size: 1.4rem;
-		font-weight: 400;
+	h2, a {
+		font-size: 1.5rem;
+	}
+
+	h2 {
 		width: 30ch;
+		font-weight: 400;
+	}
+
+	a {
+		font-weight: 500;
+		letter-spacing: 0;
+		color: var(--cc-fg3);
+		transition: all ease-out .1s;
+	}
+
+	a:hover {
+		color: var(--cc-fg);
+		letter-spacing: 1px;
+	}
+
+	span {
+		font-family: monospace;
 	}
 </style>
