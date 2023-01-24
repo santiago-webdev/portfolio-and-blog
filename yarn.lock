@@ -307,7 +307,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:^1.0.0":
+"@sveltejs/kit@npm:^1.2.6":
   version: 1.2.6
   resolution: "@sveltejs/kit@npm:1.2.6"
   dependencies:
@@ -543,7 +543,7 @@ __metadata:
   dependencies:
     "@playwright/test": ^1.28.1
     "@sveltejs/adapter-static": ^1.0.5
-    "@sveltejs/kit": ^1.0.0
+    "@sveltejs/kit": ^1.2.6
     "@typescript-eslint/eslint-plugin": ^5.45.0
     "@typescript-eslint/parser": ^5.45.0
     eslint: ^8.28.0
