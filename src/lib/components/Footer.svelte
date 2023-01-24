@@ -1,13 +1,16 @@
 <script lang="ts">
+	import { dev } from '$app/environment';
 	import { onMount } from 'svelte';
 	var ghStars = 0; // Use 0 in here so that it doesn't show "undefined" while it loads
 
 	onMount(async () => {
-		const response = await fetch(
-			'https://api.github.com/repos/santigo-zero/santigo-zero.github.io'
-		);
-		const character = await response.json();
-		ghStars = character.stargazers_count;
+		if (!dev) {
+			const response = await fetch(
+				'https://api.github.com/repos/santigo-zero/santigo-zero.github.io'
+			);
+			const character = await response.json();
+			ghStars = character.stargazers_count;
+		}
 	});
 </script>
 
