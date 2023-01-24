@@ -3,7 +3,7 @@
 	import '$lib/styles/global.css';
 	import { onMount } from 'svelte';
 	import Nav from '$lib/components/Nav.svelte';
-	import Footer from '$lib/Footer.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 
 	let body: HTMLElement;
 	$: pageHeight = 0;

@@ -1,5 +1,5 @@
 @import 'fonts/Basier/font-face.css';
-@import 'fonts/Basier-Mono/font-face.css';
+/* @import 'fonts/Basier-Mono/font-face.css'; */
 
 :root {
 	--font-family--default: 'Basier Circle', 'PT Sans', system-ui, -apple-system,

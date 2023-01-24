@@ -1,8 +1,17 @@
 <script lang="ts">
-	import { AUTHOR } from '$lib/config';
+	import { AUTHOR, DESCRIPTION_ALT } from '$lib/config';
 </script>
 
-<h1>{AUTHOR}</h1>
+<section>
+	<h1>{AUTHOR}</h1>
+	<br />
+	<h2>{DESCRIPTION_ALT}</h2>
+</section>
 
 <style>
+	section {
+		text-align: center;
+		width: min(100% - 3rem, var(--wide));
+		margin-inline: auto;
+	}
 </style>

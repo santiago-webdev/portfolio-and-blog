@@ -47,6 +47,7 @@
 </footer>
 
 <style>
+	/* TODO(santigo-zero): Fix this component entirely */
 	footer {
 		background-color: var(--cc2-bg2);
 		display: grid;
@@ -61,7 +62,6 @@
 		align-items: center;
 
 		min-height: 60px;
-		width: 100%;
 		font-size: 18px;
 		width: min(100% - 3rem, var(--wide));
 		margin-inline: auto;
