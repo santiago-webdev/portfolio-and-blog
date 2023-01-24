@@ -11,73 +11,60 @@
 	});
 </script>
 
-<div id="footer" class="wrapper-footer">
-	<div class="container">
-		<section class="this">
-			<p>
-				Designed & Built with <i class="fa-regular fa-heart" /> by Santiago
-			</p>
+<footer>
+	<section class="upper">
+		<p>Designed & Built with &lt;3 by Santiago</p>
 
-			<a href="https://github.com/santigo-zero/santigo-zero.github.io"
-				><i class="fa-regular fa-star" /> {ghStars} on GitHub</a
-			>
-		</section>
-		<section class="that">
-			<div class="copyright">
-				<p>© GPL-3.0 Santiago Gonzalez</p>
-				<p>2022-2023. All Rights Reserved</p>
-			</div>
-			<ul>
-				<!-- TODO(santigo-zero): Move all of this to #cta -->
-				<li>
-					<a href="https://github.com/santigo-zero/"
-						><i class="fa-brands fa-github" />
-						GitHub @santigo-zero</a
-					>
-				</li>
-				<li class="separator">•</li>
-				<li>
-					<a href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/"
-						><i class="fa-brands fa-linkedin" /> LinkedIn</a
-					>
-				</li>
-				<!-- TODO(santigo-zero): What should go into the href? -->
-				<!-- <li class="separator">•</li> -->
-				<!-- <li><a href="#"><i class="fa-regular fa-envelope" /> Email</a></li> -->
-			</ul>
-		</section>
-	</div>
-</div>
+		<a href="https://github.com/santigo-zero/santigo-zero.github.io"
+			>nth({ghStars}) on GitHub</a
+		>
+	</section>
+	<section class="bottom">
+		<div class="copyright">
+			<p>© GPL-3.0 Santiago Gonzalez</p>
+			<p>2022-2023. All Rights Reserved</p>
+		</div>
+		<ul>
+			<!-- TODO(santigo-zero): Move all of this to #cta -->
+			<li>
+				<a href="https://github.com/santigo-zero/"
+					><i class="fa-brands fa-github" />
+					GitHub @santigo-zero</a
+				>
+			</li>
+			<li class="separator">•</li>
+			<li>
+				<a href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/"
+					><i class="fa-brands fa-linkedin" />
+					LinkedIn</a
+				>
+			</li>
+			<!-- TODO(santigo-zero): What should go into the href? -->
+			<!-- <li class="separator">•</li> -->
+			<!-- <li><a href="#"><i class="fa-regular fa-envelope" /> Email</a></li> -->
+		</ul>
+	</section>
+</footer>
 
 <style>
-	.wrapper-footer {
+	footer {
 		background-color: var(--cc2-bg2);
 		display: grid;
 		place-items: center;
-	}
-
-	.container {
-		display: grid;
-		width: min(100% - calc(var(--padding) * 2), var(--max-content-width));
-		padding: var(--padding);
-		gap: calc(var(--padding) + 1rem); /* Separator between .this and .that */
-		padding-inline: 0;
+		gap: 2rem;
+		background-color: #FEF08A;
 	}
 
 	section {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		flex-direction: row;
 
 		min-height: 60px;
 		width: 100%;
-
-		gap: 2rem;
-
 		font-size: 18px;
-
-		color: var(--cc4-fg);
+		width: min(100% - 3rem, var(--wide));
+		margin-inline: auto;
 	}
 
 	ul {
@@ -87,44 +74,20 @@
 		gap: 0.6rem;
 	}
 
-	li {
-		list-style-type: none;
-	}
-
-	a {
-		color: var(--cc4-fg);
-	}
-
-	a:hover {
-		color: var(--cc2-fg);
-	}
-
-	p:hover .fa-heart {
-		color: crimson;
-	}
-
-	a:hover .fa-star {
-		color: crimson;
-	}
-	a:hover .fa-star {
-		color: orange;
-	}
-
-	.fa-heart,
-	.fa-star,
-	a,
-	p {
-		transition: all 0.3s ease 0s;
-	}
-
-	.that {
+	.bottom {
 		flex-wrap: wrap;
 		gap: 1rem;
 	}
 
+	.copyright {
+		display: flex;
+		flex-direction: column;
+		gap: 0.6rem;
+	}
+
 	@media screen and (max-width: 43.75em) {
-		.this,
-		.that {
+		.upper,
+		.bottom {
 			flex-direction: column-reverse;
 			gap: 1rem;
 			text-align: center;
@@ -136,10 +99,6 @@
 
 		ul {
 			flex-direction: column;
-		}
-
-		.wrapper-footer {
-			gap: 3rem;
 		}
 	}
 </style>
