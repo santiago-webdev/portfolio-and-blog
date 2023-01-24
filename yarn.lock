@@ -417,6 +417,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/unist@npm:^2.0.0, @types/unist@npm:^2.0.2, @types/unist@npm:^2.0.3":
+  version: 2.0.6
+  resolution: "@types/unist@npm:2.0.6"
+  checksum: 25cb860ff10dde48b54622d58b23e66214211a61c84c0f15f88d38b61aa1b53d4d46e42b557924a93178c501c166aa37e28d7f6d994aba13d24685326272d5db
+  languageName: node
+  linkType: hard
+
 "@typescript-eslint/eslint-plugin@npm:^5.45.0":
   version: 5.49.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.49.0"
@@ -550,6 +557,7 @@ __metadata:
     eslint-config-prettier: ^8.5.0
     eslint-plugin-svelte3: ^4.0.0
     gh-pages: ^5.0.0
+    mdsvex: ^0.10.6
     prettier: ^2.8.0
     prettier-plugin-svelte: ^2.8.1
     svelte: ^3.54.0
@@ -2027,6 +2035,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mdsvex@npm:^0.10.6":
+  version: 0.10.6
+  resolution: "mdsvex@npm:0.10.6"
+  dependencies:
+    "@types/unist": ^2.0.3
+    prism-svelte: ^0.4.7
+    prismjs: ^1.17.1
+    vfile-message: ^2.0.4
+  peerDependencies:
+    svelte: 3.x
+  checksum: b419c439e4b8a0d07d8e8a39e9022199feb870a70c1b2dc9824771558e944b1a95371acfcc1771894201e4fe85ecdb57e6c293e6714ad99942e28b15cc6aeb7f
+  languageName: node
+  linkType: hard
+
 "merge2@npm:^1.3.0, merge2@npm:^1.4.1":
   version: 1.4.1
   resolution: "merge2@npm:1.4.1"
@@ -2514,6 +2536,20 @@ __metadata:
   bin:
     prettier: bin-prettier.js
   checksum: 92f2ceb522d454370e02082aa74ad27388672f7cee8975028b59517c069fe643bdc73e322675c8faf2ff173d7a626d1a6389f26b474000308e793aa25fff46e5
+  languageName: node
+  linkType: hard
+
+"prism-svelte@npm:^0.4.7":
+  version: 0.4.7
+  resolution: "prism-svelte@npm:0.4.7"
+  checksum: 7f3648ba67558eb510380587fecc511e903164f7c5eed856cbd16bbc00b144e1398eda84537f0e48cbc1a14cdb3835aba3a266f357848aa0e80f5b28d848d0b5
+  languageName: node
+  linkType: hard
+
+"prismjs@npm:^1.17.1":
+  version: 1.29.0
+  resolution: "prismjs@npm:1.29.0"
+  checksum: 007a8869d4456ff8049dc59404e32d5666a07d99c3b0e30a18bd3b7676dfa07d1daae9d0f407f20983865fd8da56de91d09cb08e6aa61f5bc420a27c0beeaf93
   languageName: node
   linkType: hard
 
@@ -3183,6 +3219,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"unist-util-stringify-position@npm:^2.0.0":
+  version: 2.0.3
+  resolution: "unist-util-stringify-position@npm:2.0.3"
+  dependencies:
+    "@types/unist": ^2.0.2
+  checksum: f755cadc959f9074fe999578a1a242761296705a7fe87f333a37c00044de74ab4b184b3812989a57d4cd12211f0b14ad397b327c3a594c7af84361b1c25a7f09
+  languageName: node
+  linkType: hard
+
 "universalify@npm:^0.1.0":
   version: 0.1.2
   resolution: "universalify@npm:0.1.2"
@@ -3203,6 +3248,16 @@ __metadata:
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
   checksum: 474acf1146cb2701fe3b074892217553dfcf9a031280919ba1b8d651a068c9b15d863b7303cb15bd00a862b498e6cf4ad7b4a08fb134edd5a6f7641681cb54a2
+  languageName: node
+  linkType: hard
+
+"vfile-message@npm:^2.0.4":
+  version: 2.0.4
+  resolution: "vfile-message@npm:2.0.4"
+  dependencies:
+    "@types/unist": ^2.0.0
+    unist-util-stringify-position: ^2.0.0
+  checksum: 1bade499790f46ca5aba04bdce07a1e37c2636a8872e05cf32c26becc912826710b7eb063d30c5754fdfaeedc8a7658e78df10b3bc535c844890ec8a184f5643
   languageName: node
   linkType: hard
 
