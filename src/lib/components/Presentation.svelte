@@ -9,10 +9,10 @@
 		Here we'll talk about web technologies and show you my projects while at it
 	</h2>
 	<br />
-	<!-- <a href='${base}/blog'>Read the blog <span>⟶</span></a> -->
+	<a href="{base}/blog">Read the blog <span>⟶</span></a>
 	<!-- <a href='${base}/projects'>Check my projects <span>⟶</span></a> -->
-	<a href="/">Read the blog <span>⟶</span></a>
-	<a href="/">Check my projects <span>⟶</span></a>
+	<!-- <a href="/">Read the blog <span>⟶</span></a> -->
+	<!-- <a href="/">Check my projects <span>⟶</span></a> -->
 </section>
 
 <style>

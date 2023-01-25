@@ -1,6 +1,11 @@
 <script lang="ts">
 	import '$lib/styles/reset.css';
 	import '$lib/styles/global.css';
+
+	import "@fontsource/pt-sans"
+	import "@fontsource/pt-sans/700.css"
+	import "@fontsource/pt-sans-narrow/400.css"
+
 	import { onMount } from 'svelte';
 	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
@@ -34,7 +39,6 @@
 </div>
 
 <svelte:head>
-	<link href="./typography.css" rel="stylesheet" type="text/css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 </svelte:head>
 
