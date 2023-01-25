@@ -35,27 +35,27 @@
 	}
 </script>
 
-<form on:submit|preventDefault={handleSubmit} autocomplete="off">
-	<label for="search">TODO, filter</label>
-	<div class="search-bar">
-		<input
-			{placeholder}
-			bind:value
-			type="search"
-			id="search"
-			list="search-terms"
-		/>
-		<button type="submit">Read</button>
-		<datalist id="search-terms">
-			{#each filteredPosts as post}
-				<option value={post.title} />
-			{/each}
-		</datalist>
-	</div>
-</form>
-<br />
 <!-- <section role="complementary" style:display={value.length === 0 ? "none" : ""}> -->
 <section role="complementary">
+	<form on:submit|preventDefault={handleSubmit} autocomplete="off">
+		<label for="search">TODO, filter</label>
+		<div class="search-bar">
+			<input
+				{placeholder}
+				bind:value
+				type="search"
+				id="search"
+				list="search-terms"
+			/>
+			<button type="submit">Read</button>
+			<datalist id="search-terms">
+				{#each filteredPosts as post}
+					<option value={post.title} />
+				{/each}
+			</datalist>
+		</div>
+	</form>
+	<br />
 	<ul>
 		{#each filteredPosts as post}
 			<li>

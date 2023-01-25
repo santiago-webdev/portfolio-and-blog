@@ -19,6 +19,10 @@
 	section {
 		display: grid;
 		place-content: center;
+
+		min-height: min(100vh, 80rem);
+		width: min(100%, var(--wide));
+		margin-inline: auto;
 	}
 
 	h2,
