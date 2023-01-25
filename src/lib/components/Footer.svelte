@@ -52,11 +52,9 @@
 <style>
 	/* TODO(santigo-zero): Fix this component entirely */
 	footer {
-		background-color: var(--cc2-bg2);
 		display: grid;
 		place-items: center;
 		gap: 2rem;
-		background-color: #fef08a;
 	}
 
 	section {
