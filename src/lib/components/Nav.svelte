@@ -11,7 +11,7 @@
 		// { label: 'Home', href: `${base}/` },
 		{ label: 'Blog', href: `${base}/blog` },
 		{ label: 'Projects', href: `${base}/projects` },
-		{ label: 'About', href: `${base}/about` },
+		// { label: 'About', href: `${base}/about` },
 		// { label: 'Contact', href: `${base}/contact` }
 	];
 </script>
