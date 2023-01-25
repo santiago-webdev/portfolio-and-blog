@@ -6,7 +6,7 @@
 	<h1>Building websites && clean interfaces</h1>
 	<br />
 	<h2>
-		Here we'll talk about web technologies and show you my projects while at it
+		Here we'll talk about web technologies and show you my projects while at it.
 	</h2>
 	<br />
 	<a href="{base}/blog">Read the blog <span>⟶</span></a>
@@ -25,18 +25,18 @@
 		margin-inline: auto;
 	}
 
-	h2,
-	a {
-		font-size: 1.5rem;
+	h1 {
+		max-width: 21ch;
 	}
 
 	h2 {
-		max-width: 30ch;
-		font-weight: 400;
+		font-size: 1.8rem;
+		font-family: var(--font-family--condensed);
+		max-width: 35ch;
 	}
 
 	a {
-		font-weight: 500;
+		font-size: 1.5rem;
 		letter-spacing: 0;
 		color: var(--cc-fg3);
 		transition: all ease-out 0.1s;
