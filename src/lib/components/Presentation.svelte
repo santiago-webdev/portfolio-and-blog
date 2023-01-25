@@ -21,7 +21,7 @@
 		place-content: center;
 
 		min-height: min(100vh, 80rem);
-		width: min(100%, var(--wide));
+		width: min(100% - 1rem, var(--wide));
 		margin-inline: auto;
 	}
 
