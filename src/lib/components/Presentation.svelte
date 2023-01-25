@@ -31,7 +31,7 @@
 	}
 
 	h2 {
-		width: 30ch;
+		max-width: 30ch;
 		font-weight: 400;
 	}
 
