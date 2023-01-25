@@ -70,8 +70,10 @@
 		display: grid;
 		place-content: center;
 
-		width: calc(100% - 1rem);
-		margin-inline: auto;
+		/* width: min(100% - 1rem, var(--wide) * 2); */
+		/* margin-inline: auto; */
+
+		min-height: min(100vh, 80rem);
 	}
 
 	form {
@@ -82,7 +84,7 @@
 		gap: 1rem;
 		border-radius: 0.6rem;
 
-		width: min(50rem, 100%);
+		width: min(50rem, var(--wide));
 		margin-inline: auto;
 	}
 
@@ -91,7 +93,6 @@
 	}
 
 	input {
-		/* background-color: var(--cc-bg); */
 		background-color: white;
 		border: none;
 		border-radius: 0.4rem;
