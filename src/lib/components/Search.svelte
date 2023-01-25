@@ -66,6 +66,14 @@
 </section>
 
 <style>
+	section[role='complementary'] {
+		display: grid;
+		place-content: center;
+
+		width: calc(100% - 1rem);
+		margin-inline: auto;
+	}
+
 	form {
 		display: grid;
 		border: 0.12rem solid var(--cc-bg3);
