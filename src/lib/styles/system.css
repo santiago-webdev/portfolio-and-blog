@@ -33,20 +33,7 @@
 	--fg7: #c6d0f5;
 }
 
-::selection {
-	color: var(--bg7);
-	background-color: var(--fg7);
-}
-
-body {
-	background-color: var(--bg2);
-}
-
-h1 {
-	color: var(--fg2);
-}
-
-h2,
-a {
-	color: var(--fg5);
-}
+/* ::selection { */
+/* 	color: var(--bg7); */
+/* 	background-color: var(--fg7); */
+/* } */

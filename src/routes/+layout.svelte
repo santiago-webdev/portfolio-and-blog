@@ -46,9 +46,11 @@
 
 <style>
 	.layout {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
+		min-height: 100vh;
+		min-height: 100dvh;
+
+		display: grid;
+		grid-template-rows: auto 1fr auto;
+		background-color: crimson;
 	}
 </style>

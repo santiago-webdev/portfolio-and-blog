@@ -69,7 +69,6 @@
 	form {
 		display: grid;
 		border: 0.12rem solid var(--cc-bg3);
-		background-color: var(--cc-bg2);
 		padding: 1rem;
 		gap: 1rem;
 		border-radius: 0.6rem;
@@ -83,7 +82,6 @@
 	}
 
 	input {
-		background-color: white;
 		border: none;
 		border-radius: 0.4rem;
 		padding: 0.3rem;
@@ -109,7 +107,6 @@
 
 	button {
 		border-radius: 0.4rem;
-		background-color: var(--cc-bg3);
 		padding-inline: 1.5rem;
 	}
 

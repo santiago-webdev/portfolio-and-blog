@@ -17,6 +17,5 @@
 	article {
 		display: grid;
 		place-content: center;
-		justify-content: space-around;
 	}
 </style>

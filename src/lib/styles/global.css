@@ -6,19 +6,6 @@ html {
 	font-family: var(--ff--dflt);
 }
 
-body {
-	background-color: black;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
-}
-
-body,
-a {
-	color: white;
-}
-
 h1 {
 	font-size: clamp(2.8rem, 8vw, 5.2rem);
 	line-height: calc(1.5 * clamp(1rem, 8vw, 4rem));
@@ -28,7 +15,6 @@ h1 {
 
 h2 {
 	font-size: clamp(1.6rem, 12vw, 3.2rem);
-	color: white;
 	font-weight: 500;
 }
 
