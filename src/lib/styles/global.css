@@ -1,10 +1,10 @@
 :root {
-	--ff--dflt: 'PT Sans', system-ui, -apple-system,
-		BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
-		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-	--ff--cnds: 'PT Sans Narrow', system-ui, -apple-system,
-		BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
-		'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	--ff--dflt: 'PT Sans', system-ui, -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol';
+	--ff--cnds: 'PT Sans Narrow', system-ui, -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol';
 	--wide: 58rem;
 }
 
@@ -31,7 +31,7 @@ body {
 
 body,
 a {
-	color: white
+	color: white;
 }
 
 h1 {
