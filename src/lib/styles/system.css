@@ -34,8 +34,8 @@
 }
 
 ::selection {
-	color: #8ff3d9;
-	background-color: var(--cc-vanilla-red);
+	color: var(--bg7);
+	background-color: var(--fg7);
 }
 
 body {
