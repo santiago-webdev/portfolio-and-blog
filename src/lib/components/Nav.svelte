@@ -10,9 +10,9 @@
 	const navItems = [
 		// { label: 'Home', href: `${base}/` },
 		{ label: 'Blog', href: `${base}/blog` },
-		{ label: 'Projects', href: `${base}/projects` }
-		// { label: 'About', href: `${base}/about` },
-		// { label: 'Contact', href: `${base}/contact` }
+		{ label: 'Projects', href: `${base}/projects` },
+		{ label: 'About', href: `${base}/about` },
+		{ label: 'Contact', href: `${base}/contact` }
 	];
 </script>
 
@@ -54,8 +54,8 @@
 
 	a {
 		padding: 1rem;
-		font-weight: bold;
-		font-size: clamp(0.6rem, 8vw, 1.2rem);
+		font-weight: normal;
+		font-size: clamp(0.6rem, 8vw, 1.4rem);
 	}
 
 	progress {

@@ -54,6 +54,7 @@
 			auto
 			1fr
 			auto;
-		background-color: crimson;
+
+		background-color: var(--bg);
 	}
 </style>

@@ -1,11 +1,5 @@
-.focus {
-	display: grid;
-	place-content: center;
-
-	min-height: min(100vh, 80rem);
-	width: min(100% - 1rem, var(--wide));
-	margin-inline: auto;
-}
+@import url('https://fonts.cdnfonts.com/css/basier');
+@import url('https://fonts.cdnfonts.com/css/basier-square-narrow');
 
 :root {
 	--ff--dflt: 'PT Sans', system-ui, -apple-system, BlinkMacSystemFont,
@@ -14,26 +8,79 @@
 	--ff--cnds: 'PT Sans Narrow', system-ui, -apple-system, BlinkMacSystemFont,
 		'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
 		'Segoe UI Emoji', 'Segoe UI Symbol';
+  --ff-circle: 'Basier Circle', sans-serif;
+  --ff-square: 'Basier Square', sans-serif;
+  --ff-square--cnds: 'Basier Square Narrow', sans-serif;
 	--wide: 58rem;
 
-	--bg1: #16171d;
-	--bg2: #16171f;
-	--bg3: #171820;
-	--bg4: #181822;
-	--bg5: #191923;
-	--bg6: #1a1925;
-	--bg7: #1b1a27;
+	--bg-1: #16171d;
+	--bg-2: #14151a;
+	--bg-3: #121217;
+	--bg-4: #0f1014;
+	--bg-5: #0d0e11;
+	--bg-6: #0b0c0f;
+	--bg-7: #09090c;
+	--bg-8: #070709;
+	--bg-9: #040506;
 
-	--fg1: #ffffff;
-	--fg2: #f7f6fd;
-	--fg3: #edeffb;
-	--fg4: #e3e7f9;
-	--fg5: #d9e0f7;
-	--fg6: #d0d7f6;
-	--fg7: #c6d0f5;
+	--bg-alt1: #16171d;
+	--bg-alt2: #2d2e34;
+	--bg-alt3: #45454a;
+
+	--fg-1: #fffafa;
+	--fg-2: #e6e1e1;
+	--fg-3: #ccc8c8;
+	--fg-4: #b3afaf;
+	--fg-5: #999696;
+	--fg-6: #807d7d;
+	--fg-7: #666464;
+	--fg-8: #4c4b4b;
+	--fg-9: #333232;
+
+	--fg-alt1: #9da1b4;
+	/* --fg-alt2: hsl(227.6, 13.5%, 66%); */
 }
 
-/* ::selection { */
-/* 	color: var(--bg7); */
-/* 	background-color: var(--fg7); */
+::selection {
+	color: var(--bg-1);
+	background-color: var(--fg-1);
+}
+
+.focus {
+	display: grid;
+	place-content: center;
+
+	min-height: min(100vh, 80rem);
+	min-height: min(100dvh, 80rem);
+	width: min(100% - 1rem, var(--wide));
+	margin-inline: auto;
+}
+
+body {
+	background-color: var(--bg-1);
+}
+
+h1,
+p,
+span,
+li {
+	color: var(--fg-1);
+}
+
+/* h1 { */
+/*   font-family: var(--ff-circle); */
 /* } */
+
+h2 {
+  font-family: var(--ff--cnds);
+	font-weight: 400;
+}
+
+h2,
+a {
+	color: var(--fg-2);
+}
+
+a:hover {
+	color: var(--fg-alt1);
+}

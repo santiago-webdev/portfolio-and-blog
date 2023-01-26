@@ -14,8 +14,7 @@ h1 {
 }
 
 h2 {
-	font-size: clamp(1.6rem, 12vw, 3.2rem);
-	font-weight: 500;
+	font-size: clamp(1.6rem, 12vw, 3rem);
 }
 
 br {

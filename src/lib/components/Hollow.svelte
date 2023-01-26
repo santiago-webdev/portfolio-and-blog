@@ -1,15 +1,16 @@
 <script lang="ts">
 	export let text: string;
+	export let color: string;
 </script>
 
-<span>{text}</span>
+<span style="--color: {color}">{text}</span>
 
 <style>
-	/* span { */
-	/* 	color: transparent; */
-	/* 	-webkit-text-stroke-width: 0.1rem; */
-	/* 	-webkit-text-stroke-color: var(--fg2); */
-	/* } */
+	span {
+		-webkit-text-stroke-color: var(--color);
+		-webkit-text-stroke-width: 0.1rem;
+		color: transparent;
+	}
 
 	@media (max-width: 600px) {
 		span {
