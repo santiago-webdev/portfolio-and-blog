@@ -1,9 +1,10 @@
-<script>
+<script lang="ts">
 	import { base } from '$app/paths';
+	import Hollow from '$lib/components/Hollow.svelte';
 </script>
 
 <section class="focus">
-	<h1>Building websites && clean interfaces</h1>
+	<h1>Building websites && <Hollow text="clean" /> interfaces</h1>
 	<br />
 	<h2>
 		Here we'll talk about web technologies and show you my projects while at it.

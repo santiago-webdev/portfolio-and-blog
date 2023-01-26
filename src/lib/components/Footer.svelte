@@ -55,6 +55,7 @@
 		display: grid;
 		place-items: center;
 		gap: 2rem;
+		background-color: var(--bg5);
 	}
 
 	section {
