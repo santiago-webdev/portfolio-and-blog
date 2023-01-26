@@ -98,7 +98,7 @@
 		border-radius: 0.4rem;
 		padding: 0.3rem;
 		text-indent: 0.3rem;
-		font-family: var(--font-family--condensed);
+		font-family: var(--ff--cnds);
 		width: 100%;
 	}
 
@@ -127,7 +127,7 @@
 	input,
 	button {
 		font-size: clamp(1rem, 8vw, 1.6rem);
-		font-family: var(--font-family--condensed);
+		font-family: var(--ff--cnds);
 	}
 
 	label {

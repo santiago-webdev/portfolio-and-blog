@@ -31,7 +31,7 @@
 
 	h2 {
 		font-size: 1.8rem;
-		font-family: var(--font-family--condensed);
+		font-family: var(--ff--cnds);
 		max-width: 35ch;
 	}
 
