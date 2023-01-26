@@ -4,7 +4,9 @@
 </script>
 
 <section class="focus">
-	<h1>Building websites && <Hollow text="clean" color="var(--fg-1)" /> interfaces</h1>
+	<h1>
+		Building websites && <Hollow text="clean" color="var(--fg-1)" /> interfaces
+	</h1>
 	<br />
 	<h2>
 		Here we'll talk about web technologies and show you my projects while at it.

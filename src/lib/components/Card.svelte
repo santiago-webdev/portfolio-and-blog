@@ -15,10 +15,16 @@
 
 <style>
 	article {
-		background-color: var(--cc-bg2);
+		background-color: lightblue;
 		padding: 1rem;
 		border-radius: 0.6rem;
 		height: 100%;
+	}
+
+	a,
+	p,
+	article {
+		color: black;
 	}
 
 	a:focus article {

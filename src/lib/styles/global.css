@@ -18,5 +18,5 @@ h2 {
 }
 
 br {
-	margin: 0.66rem;
+	margin-top: var(--gap); /* I could use clamp in here */
 }

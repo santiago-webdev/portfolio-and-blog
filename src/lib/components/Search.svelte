@@ -35,8 +35,7 @@
 	}
 </script>
 
-<!-- <section role="complementary" style:display={value.length === 0 ? "none" : ""}> -->
-<section role="complementary" class="focus">
+<div class="container">
 	<form on:submit|preventDefault={handleSubmit} autocomplete="off">
 		<label for="search">TODO, filter</label>
 		<div class="search-bar">
@@ -56,28 +55,38 @@
 		</div>
 	</form>
 	<br />
-	<ul>
-		{#each filteredPosts as post}
-			<li>
-				<Card {post} />
-			</li>
-		{/each}
-	</ul>
-</section>
+	<section role="complementary" style:display={value.length === 0 ? '' : ''}>
+		<ul>
+			{#each filteredPosts as post}
+				<li>
+					<Card {post} />
+				</li>
+			{/each}
+		</ul>
+	</section>
+</div>
 
 <style>
-	form {
+	.container {
 		display: grid;
+		place-content: center;
+		margin-inline: auto;
+	}
+
+	form {
+		/* display: grid; */
 		border: 0.12rem solid var(--cc-bg3);
 		padding: 1rem;
 		gap: 1rem;
 		border-radius: 0.6rem;
+		background-color: limegreen;
 
-		/* width: min(50rem, var(--wide)); */
-		margin-inline: auto;
+		/* width: min(100% - 1rem, 44rem); */
+		/* margin-inline: auto; */
 	}
 
 	label {
+		font-weight: bold;
 		text-indent: 0.8rem;
 	}
 
@@ -87,6 +96,7 @@
 		padding: 0.3rem;
 		text-indent: 0.3rem;
 		font-family: var(--ff--cnds);
+		background-color: crimson;
 		width: 100%;
 	}
 
@@ -96,7 +106,7 @@
 
 	input:focus,
 	button {
-		outline: 0.13rem solid var(--cc-bg3);
+		outline: 0.13rem solid blue;
 	}
 
 	.search-bar {
@@ -106,6 +116,7 @@
 	}
 
 	button {
+		background-color: lightgray;
 		border-radius: 0.4rem;
 		padding-inline: 1.5rem;
 	}
@@ -117,12 +128,8 @@
 		font-family: var(--ff--cnds);
 	}
 
-	label {
-		font-weight: bold;
-	}
-
 	ul {
-		gap: 0.8rem;
+		gap: var(--br);
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
 	}
@@ -138,12 +145,12 @@
 	li:first-child,
 	li:first-child:hover,
 	ul:hover li:first-child:hover {
-		outline: 0.2rem solid var(--cc-bg3);
+		outline: 0.2rem solid brown;
 	}
 
 	li:hover {
 		/* box-shadow: 0 12px 12px rgb(0 0 0 / 0.1); */
-		outline: 0.2rem solid var(--cc-bg3);
+		outline: 0.2rem solid brown;
 	}
 
 	@supports (grid-template-rows: masonry) {

@@ -1,6 +1,8 @@
 <script lang="ts">
-	export let title = 'this should work';
-	export let date = 'this should work';
+	import { TITLE_BLOG_COMPOSE } from '$lib/config';
+
+	export let title = '';
+	export let date = '';
 </script>
 
 <article>
@@ -10,7 +12,7 @@
 </article>
 
 <svelte:head>
-	<title>{title}</title>
+	<title>{title}{TITLE_BLOG_COMPOSE}</title>
 </svelte:head>
 
 <style>

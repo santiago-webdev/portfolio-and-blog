@@ -8,10 +8,13 @@
 	--ff--cnds: 'PT Sans Narrow', system-ui, -apple-system, BlinkMacSystemFont,
 		'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
 		'Segoe UI Emoji', 'Segoe UI Symbol';
-  --ff-circle: 'Basier Circle', sans-serif;
-  --ff-square: 'Basier Square', sans-serif;
-  --ff-square--cnds: 'Basier Square Narrow', sans-serif;
+	--ff-circle: 'Basier Circle', sans-serif;
+	--ff-square: 'Basier Square', sans-serif;
+	--ff-square--cnds: 'Basier Square Narrow', sans-serif;
+
 	--wide: 58rem;
+	--gap: 0.66rem;
+	--br: 0.66rem;
 
 	--bg-1: #16171d;
 	--bg-2: #14151a;
@@ -72,7 +75,7 @@ li {
 /* } */
 
 h2 {
-  font-family: var(--ff--cnds);
+	font-family: var(--ff--cnds);
 	font-weight: 400;
 }
 
