@@ -50,7 +50,10 @@
 		min-height: 100dvh;
 
 		display: grid;
-		grid-template-rows: auto 1fr auto;
+		grid-template-rows:
+			auto
+			1fr
+			auto;
 		background-color: crimson;
 	}
 </style>

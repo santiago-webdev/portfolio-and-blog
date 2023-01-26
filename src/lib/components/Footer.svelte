@@ -30,21 +30,14 @@
 		<ul>
 			<!-- TODO(santigo-zero): Move all of this to #cta -->
 			<li>
-				<a href="https://github.com/santigo-zero/"
-					><i class="fa-brands fa-github" />
-					GitHub @santigo-zero</a
-				>
+				<a href="https://github.com/santigo-zero/">GitHub @santigo-zero</a>
 			</li>
 			<li class="separator">•</li>
 			<li>
-				<a href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/"
-					><i class="fa-brands fa-linkedin" />
+				<a href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/">
 					LinkedIn</a
 				>
 			</li>
-			<!-- TODO(santigo-zero): What should go into the href? -->
-			<!-- <li class="separator">•</li> -->
-			<!-- <li><a href="#"><i class="fa-regular fa-envelope" /> Email</a></li> -->
 		</ul>
 	</section>
 </footer>
