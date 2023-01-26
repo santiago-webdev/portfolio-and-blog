@@ -29,8 +29,8 @@
 			{/each}
 		</ul>
 	</nav>
+	<progress max={pageHeightWithoutWindow} value={y} />
 </header>
-<progress max={pageHeightWithoutWindow} value={y} />
 
 <style>
 	ul {
@@ -53,7 +53,7 @@
 	}
 
 	a {
-		margin: 1rem;
+		padding: 1rem;
 		font-weight: bold;
 		font-size: clamp(0.6rem, 8vw, 1.2rem);
 	}
@@ -77,9 +77,9 @@
 	}
 
 	progress::-moz-progress-bar {
-		background: var(--cc-fg);
+		background: var(--fg1);
 	}
 	progress::-webkit-progress-value {
-		background: var(--cc-fg);
+		background: var(--fg1);
 	}
 </style>

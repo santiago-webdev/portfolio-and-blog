@@ -36,7 +36,7 @@
 </script>
 
 <!-- <section role="complementary" style:display={value.length === 0 ? "none" : ""}> -->
-<section role="complementary">
+<section role="complementary" class="focus">
 	<form on:submit|preventDefault={handleSubmit} autocomplete="off">
 		<label for="search">TODO, filter</label>
 		<div class="search-bar">
@@ -66,16 +66,6 @@
 </section>
 
 <style>
-	section[role='complementary'] {
-		display: grid;
-		place-content: center;
-
-		/* width: min(100% - 1rem, var(--wide) * 2); */
-		/* margin-inline: auto; */
-
-		min-height: min(100vh, 80rem);
-	}
-
 	form {
 		display: grid;
 		border: 0.12rem solid var(--cc-bg3);
@@ -84,7 +74,7 @@
 		gap: 1rem;
 		border-radius: 0.6rem;
 
-		width: min(50rem, var(--wide));
+		/* width: min(50rem, var(--wide)); */
 		margin-inline: auto;
 	}
 
