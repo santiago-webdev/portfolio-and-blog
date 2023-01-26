@@ -2,7 +2,7 @@
 	import { base } from '$app/paths';
 </script>
 
-<section class="primare-">
+<section class="focus">
 	<h1>Building websites && clean interfaces</h1>
 	<br />
 	<h2>
@@ -16,15 +16,6 @@
 </section>
 
 <style>
-	section {
-		display: grid;
-		place-content: center;
-
-		min-height: min(100vh, 80rem);
-		width: min(100% - 1rem, var(--wide));
-		margin-inline: auto;
-	}
-
 	h1 {
 		max-width: 21ch;
 	}
