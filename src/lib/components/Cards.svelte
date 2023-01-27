@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Post } from '$lib/utils/utils';
-	import Card from './Card.svelte';
+	import CardPost from './CardPost.svelte';
 
 	export let filteredPosts: Array<Post>;
 </script>
@@ -9,7 +9,7 @@
 	<ul class="wide">
 		{#each filteredPosts as post}
 			<li>
-				<Card {post} />
+				<CardPost {post} />
 			</li>
 		{/each}
 	</ul>
