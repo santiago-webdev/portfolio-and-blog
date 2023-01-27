@@ -2,4 +2,6 @@
 	import Search from '$lib/components/Search.svelte';
 </script>
 
-<Search />
+<main class="focus wide">
+	<Search />
+</main>

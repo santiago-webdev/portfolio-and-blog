@@ -35,37 +35,39 @@
 	}
 </script>
 
-<div class="focus">
-	<form on:submit|preventDefault={handleSubmit} autocomplete="off">
-		<label for="search">TODO, filter</label>
-		<div class="search-bar">
-			<input
-				{placeholder}
-				bind:value
-				type="search"
-				id="search"
-				list="search-terms"
-			/>
-			<button type="submit">Read</button>
-			<datalist id="search-terms">
-				{#each filteredPosts as post}
-					<option value={post.title} />
-				{/each}
-			</datalist>
-		</div>
-	</form>
-	<br />
-	<Cards {filteredPosts} />
-</div>
+<form on:submit|preventDefault={handleSubmit} autocomplete="off">
+	<label for="search">TODO, filter</label>
+	<div class="search-bar">
+		<input
+			{placeholder}
+			bind:value
+			type="search"
+			id="search"
+			list="search-terms"
+		/>
+		<button type="submit">Read</button>
+		<datalist id="search-terms">
+			{#each filteredPosts as post}
+				<option value={post.title} />
+			{/each}
+		</datalist>
+	</div>
+</form>
+<br />
+<Cards {filteredPosts} />
 
 <style>
 	form {
-		/* display: grid; */
+		display: grid;
 		border: 0.12rem solid var(--cc-bg3);
 		padding: 1rem;
 		gap: 1rem;
 		border-radius: 0.6rem;
 		background-color: limegreen;
+		/* width: max(100%, 43rem); */
+		margin-inline: auto;
+		height: max-content;
+		width: min(100%, var(--wide));
 
 		/* width: min(100% - 1rem, 44rem); */
 		/* margin-inline: auto; */

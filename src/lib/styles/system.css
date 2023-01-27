@@ -59,6 +59,10 @@
 	margin-inline: auto;
 }
 
+.wide {
+	width: min(100% - 1rem, var(--wide) * 1.5);
+}
+
 body {
 	background-color: var(--bg-1);
 }
