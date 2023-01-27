@@ -5,7 +5,6 @@
 	export let filteredPosts: Array<Post>;
 </script>
 
-<!-- <section role="complementary" style:display={value.length === 0 ? '' : ''}> -->
 <section role="complementary">
 	<ul>
 		{#each filteredPosts as post}
@@ -18,12 +17,9 @@
 
 <style>
 	ul {
-		gap: var(--br);
 		display: grid;
+		gap: var(--gap);
 		grid-template-columns: repeat(auto-fill, minmax(min(23rem, 100%), 1fr));
-		/* width: 100%; */
-		width: min(var(--wide) * 1.5, 100% - 1rem);
-		margin-inline: auto;
 	}
 
 	li {
