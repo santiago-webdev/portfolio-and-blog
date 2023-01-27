@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { goto, preloadData } from '$app/navigation';
-	import Cards from '$lib/components/Cards.svelte';
+	import ListCardPost from '$lib/components/ListCardPost.svelte';
 	import { Posts } from '$lib/stores/search';
 
 	$: filteredPosts = $Posts.filter(post => {
@@ -54,7 +54,7 @@
 	</div>
 </form>
 <br />
-<Cards {filteredPosts} />
+<ListCardPost {filteredPosts} />
 
 <style>
 	form {
