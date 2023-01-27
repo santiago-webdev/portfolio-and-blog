@@ -64,7 +64,7 @@
 		gap: 1rem;
 		border-radius: 0.6rem;
 		background-color: limegreen;
-		width: min(100%, var(--wide) /2);
+		width: min(100%, var(--wide) / 2);
 		margin-inline: auto;
 	}
 
