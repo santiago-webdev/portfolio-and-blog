@@ -64,13 +64,8 @@
 		gap: 1rem;
 		border-radius: 0.6rem;
 		background-color: limegreen;
-		/* width: max(100%, 43rem); */
+		width: min(100%, var(--wide) /2);
 		margin-inline: auto;
-		height: max-content;
-		width: min(100%, var(--wide));
-
-		/* width: min(100% - 1rem, 44rem); */
-		/* margin-inline: auto; */
 	}
 
 	label {
