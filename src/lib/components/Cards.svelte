@@ -1,0 +1,50 @@
+<script lang="ts">
+	import type { Post } from '$lib/utils/utils';
+	import Card from './Card.svelte';
+
+	export let filteredPosts: Array<Post>;
+</script>
+
+<!-- <section role="complementary" style:display={value.length === 0 ? '' : ''}> -->
+<section role="complementary">
+	<ul>
+		{#each filteredPosts as post}
+			<li>
+				<Card {post} />
+			</li>
+		{/each}
+	</ul>
+</section>
+
+<style>
+	ul {
+		gap: var(--br);
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
+	}
+
+	li {
+		border-radius: 0.6rem;
+	}
+
+	ul:hover li:first-child {
+		outline: none;
+	}
+
+	li:first-child,
+	li:first-child:hover,
+	ul:hover li:first-child:hover {
+		outline: 0.2rem solid brown;
+	}
+
+	li:hover {
+		/* box-shadow: 0 12px 12px rgb(0 0 0 / 0.1); */
+		outline: 0.2rem solid brown;
+	}
+
+	@supports (grid-template-rows: masonry) {
+		ul {
+			grid-template-rows: masonry;
+		}
+	}
+</style>

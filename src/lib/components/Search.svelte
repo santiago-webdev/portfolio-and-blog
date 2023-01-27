@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { goto, preloadData } from '$app/navigation';
-	import Card from '$lib/components/Card.svelte';
+	import Cards from '$lib/components/Cards.svelte';
 	import { Posts } from '$lib/stores/search';
 
 	$: filteredPosts = $Posts.filter(post => {
@@ -35,7 +35,7 @@
 	}
 </script>
 
-<div class="container">
+<div class="focus">
 	<form on:submit|preventDefault={handleSubmit} autocomplete="off">
 		<label for="search">TODO, filter</label>
 		<div class="search-bar">
@@ -55,24 +55,10 @@
 		</div>
 	</form>
 	<br />
-	<section role="complementary" style:display={value.length === 0 ? '' : ''}>
-		<ul>
-			{#each filteredPosts as post}
-				<li>
-					<Card {post} />
-				</li>
-			{/each}
-		</ul>
-	</section>
+	<Cards {filteredPosts} />
 </div>
 
 <style>
-	.container {
-		display: grid;
-		place-content: center;
-		margin-inline: auto;
-	}
-
 	form {
 		/* display: grid; */
 		border: 0.12rem solid var(--cc-bg3);
@@ -126,36 +112,5 @@
 	button {
 		font-size: clamp(1rem, 8vw, 1.6rem);
 		font-family: var(--ff--cnds);
-	}
-
-	ul {
-		gap: var(--br);
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(min(20rem, 100%), 1fr));
-	}
-
-	li {
-		border-radius: 0.6rem;
-	}
-
-	ul:hover li:first-child {
-		outline: none;
-	}
-
-	li:first-child,
-	li:first-child:hover,
-	ul:hover li:first-child:hover {
-		outline: 0.2rem solid brown;
-	}
-
-	li:hover {
-		/* box-shadow: 0 12px 12px rgb(0 0 0 / 0.1); */
-		outline: 0.2rem solid brown;
-	}
-
-	@supports (grid-template-rows: masonry) {
-		ul {
-			grid-template-rows: masonry;
-		}
 	}
 </style>
