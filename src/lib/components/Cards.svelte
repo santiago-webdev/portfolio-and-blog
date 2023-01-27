@@ -6,7 +6,7 @@
 </script>
 
 <section role="complementary">
-	<ul>
+	<ul class="wide">
 		{#each filteredPosts as post}
 			<li>
 				<Card {post} />
@@ -20,6 +20,7 @@
 		display: grid;
 		gap: var(--gap);
 		grid-template-columns: repeat(auto-fill, minmax(min(23rem, 100%), 1fr));
+		margin-inline: auto;
 	}
 
 	li {
