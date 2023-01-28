@@ -50,8 +50,6 @@
 
 <style>
 	article {
-		display: grid;
-		place-content: center;
 		width: min(100% - 1rem, var(--wide));
 		margin-inline: auto;
 	}
