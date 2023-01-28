@@ -22,21 +22,22 @@
 	h1 {
 		max-width: 21ch;
 		color: var(--neutral-750);
-		filter: drop-shadow(0.3ch 0.3ch 30px rgb(0 0 0 / 0.12));
+		/* filter: drop-shadow(0.3ch 0.3ch 30px rgb(0 0 0 / 0.12)); */
 	}
 
 	h2 {
 		/* font-size: 1.8rem; */
 		/* font-family: var(--ff--cnds); */
 		max-width: 35ch;
-		color: var(--neutral-700)
+		color: var(--neutral-700);
 	}
 
 	a {
 		font-size: 1.7rem;
 		letter-spacing: 0;
 		transition: all ease-out 0.1s;
-		color: var(--neutral-700)
+		font-family: var(--ff--dflt);
+		color: var(--neutral-700);
 	}
 
 	a:hover {

@@ -52,12 +52,6 @@
 </header>
 
 <style>
-	ul {
-		display: flex;
-		flex-direction: row;
-		place-items: center;
-	}
-
 	header {
 		top: 3px;
 		left: 0;
@@ -69,26 +63,47 @@
 		width: min(100% - 3rem, var(--wide));
 		margin-inline: auto;
 		/* outline: 3px red solid; */
+		font-family: var(--ff-circle);
+	}
+
+	ul {
+		display: flex;
+		flex-direction: row;
+		place-items: center;
 	}
 
 	a {
-		padding: 1rem;
-		font-weight: normal;
-		font-size: clamp(0.6rem, 8vw, 1.4rem);
+		padding: 2rem 1rem;
+		font-weight: bold;
+		font-size: clamp(0.6rem, 8vw, 1.3rem);
+		color: var(--gray-900);
+		text-decoration: none;
+		text-decoration-thickness: 0.2ch;
+		text-decoration-color: rgb(157, 161, 180);
 	}
 
-	header > a:first-child {
-		padding-left: 0;
+	a:hover {
+		color: var(--gray-500);
 	}
+
+	a:focus {
+		color: var(--stone-900);
+	}
+
+	.current {
+		text-decoration: underline;
+		text-decoration-thickness: 0.2ch;
+		text-decoration-color: rgb(157, 161, 180);
+	}
+
+	/* header > a:first-child { */
+	/* 	padding-left: 0; */
+	/* } */
 
 	/* ul li:last-child > a { */
 	/* 	padding-right: 0; */
 	/* 	margin-right: 1rem; */
 	/* } */
-
-	.current {
-		background-color: red;
-	}
 
 	progress {
 		top: 0;
@@ -109,9 +124,9 @@
 	}
 
 	progress::-moz-progress-bar {
-		background: var(--fg-1);
+		background: var(--neutral-900);
 	}
 	progress::-webkit-progress-value {
-		background: var(--fg-1);
+		background: var(--neutral-900);
 	}
 </style>

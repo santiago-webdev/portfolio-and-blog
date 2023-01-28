@@ -98,7 +98,6 @@
 	--stone-700: #44403c;
 	--stone-800: #292524;
 	--stone-900: #1c1917;
-
 }
 
 /* ::selection { */
@@ -106,7 +105,8 @@
 /* 	background-color: var(--fg-1); */
 /* } */
 
-h1,h2,a {
+h1,
+h2 {
 	font-family: var(--ff--dflt);
 }
 
