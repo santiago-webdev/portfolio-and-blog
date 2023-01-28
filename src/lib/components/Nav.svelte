@@ -8,12 +8,24 @@
 	$: pageHeightWithoutWindow = pageHeight - windowHeight;
 
 	const navItems = [
-		// { label: 'Home', href: `${base}/` },
-		{ label: 'Blog', href: `${base}/blog` }
-		// { label: 'Projects', href: `${base}/projects` },
-		// { label: 'About', href: `${base}/about` },
-		// { label: 'Contact', href: `${base}/contact` }
+		{ label: 'Home', href: `${base}/` },
+		{ label: 'Blog', href: `${base}/blog` },
+		{ label: 'Projects', href: `${base}/projects` },
+		{ label: 'About', href: `${base}/about` },
+		{ label: 'Contact', href: `${base}/contact` }
 	];
+
+	function matchBaseRoute(navItemLink: string, currentLink: string) {
+		if (navItemLink === '/') {
+			if (navItemLink === currentLink) {
+				return true;
+			} else {
+				return false;
+			}
+		}
+
+		return currentLink.match(navItemLink) !== null;
+	}
 </script>
 
 <svelte:window bind:innerHeight={windowHeight} bind:scrollY={y} />
@@ -24,7 +36,13 @@
 		<ul class="flex">
 			{#each navItems as item}
 				<li>
-					<a href={item.href}>{item.label}</a>
+					<a
+						href={item.href}
+						class:current={matchBaseRoute(
+							item.href,
+							$page.url.pathname.toString()
+						)}>{item.label}</a
+					>
 				</li>
 			{/each}
 		</ul>
@@ -56,6 +74,10 @@
 		padding: 1rem;
 		font-weight: normal;
 		font-size: clamp(0.6rem, 8vw, 1.4rem);
+	}
+
+	.current {
+		background-color: red;
 	}
 
 	progress {

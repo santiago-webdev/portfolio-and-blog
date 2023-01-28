@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { TITLE_BLOG_COMPOSE } from '$lib/config';
-	import { page } from '$app/stores'
+	import { page } from '$app/stores';
 
 	export let title = '';
 	export let date = '';
@@ -17,7 +17,6 @@
 	{/if}
 	<slot />
 </article>
-
 
 <svelte:head>
 	<title>{title}{TITLE_BLOG_COMPOSE}</title>
