@@ -9,8 +9,8 @@
 
 	const navItems = [
 		{ label: 'Home', href: `${base}/` },
-		{ label: 'Blog', href: `${base}/blog` },
 		{ label: 'Projects', href: `${base}/projects` },
+		{ label: 'Blog', href: `${base}/blog` },
 		{ label: 'About', href: `${base}/about` },
 		{ label: 'Contact', href: `${base}/contact` }
 	];
@@ -30,7 +30,8 @@
 
 <svelte:window bind:innerHeight={windowHeight} bind:scrollY={y} />
 
-<header style:position={$page.url.pathname === `/${base}` ? 'fixed' : 'sticky'}>
+<!-- <header style:position={$page.url.pathname === `/${base}` ? 'fixed' : 'sticky'}> -->
+<header>
 	<a href="{base}/">Logo</a>
 	<nav>
 		<ul class="flex">
@@ -58,12 +59,12 @@
 	}
 
 	header {
-		top: 6px;
+		top: 3px;
 		left: 0;
 		right: 0;
+		position: sticky;
 		display: flex;
 		place-items: center;
-		place-content: center;
 		justify-content: space-between;
 		width: min(100% - 3rem, var(--wide));
 		margin-inline: auto;
@@ -75,6 +76,15 @@
 		font-weight: normal;
 		font-size: clamp(0.6rem, 8vw, 1.4rem);
 	}
+
+	header > a:first-child {
+		padding-left: 0;
+	}
+
+	/* ul li:last-child > a { */
+	/* 	padding-right: 0; */
+	/* 	margin-right: 1rem; */
+	/* } */
 
 	.current {
 		background-color: red;
@@ -89,7 +99,7 @@
 		width: 100%;
 		margin-inline: auto;
 		border-radius: 0;
-		height: 6px;
+		height: 3px;
 		border: 0;
 	}
 
@@ -99,9 +109,9 @@
 	}
 
 	progress::-moz-progress-bar {
-		background: var(--fg1);
+		background: var(--fg-1);
 	}
 	progress::-webkit-progress-value {
-		background: var(--fg1);
+		background: var(--fg-1);
 	}
 </style>
