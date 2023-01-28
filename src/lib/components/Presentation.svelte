@@ -5,7 +5,7 @@
 
 <section class="focus">
 	<h1>
-		Building websites && <Hollow text="clean" color="var(--fg-1)" /> interfaces
+		Building websites && <Hollow text="clean" color="var(--neutral-750)" /> interfaces
 	</h1>
 	<br />
 	<h2>
@@ -21,18 +21,22 @@
 <style>
 	h1 {
 		max-width: 21ch;
+		color: var(--neutral-750);
+		filter: drop-shadow(0.3ch 0.3ch 30px rgb(0 0 0 / 0.12));
 	}
 
 	h2 {
 		/* font-size: 1.8rem; */
 		/* font-family: var(--ff--cnds); */
 		max-width: 35ch;
+		color: var(--neutral-700)
 	}
 
 	a {
-		font-size: 1.5rem;
+		font-size: 1.7rem;
 		letter-spacing: 0;
 		transition: all ease-out 0.1s;
+		color: var(--neutral-700)
 	}
 
 	a:hover {

@@ -8,13 +8,14 @@
 <style>
 	span {
 		-webkit-text-stroke-color: var(--color);
-		-webkit-text-stroke-width: 0.1rem;
+		-webkit-text-stroke-width: 0.18rem;
+		/* -webkit-text-stroke-width: 0.1rem; */
 		color: transparent;
 	}
 
-	@media (max-width: 600px) {
-		span {
-			-webkit-text-stroke-width: 0.07rem;
-		}
-	}
+	/* @media (max-width: 600px) { */
+	/* 	span { */
+	/* 		-webkit-text-stroke-width: 0.07rem; */
+	/* 	} */
+	/* } */
 </style>
