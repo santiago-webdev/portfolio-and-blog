@@ -9,10 +9,10 @@
 
 	const navItems = [
 		{ label: 'Home', href: `${base}/` },
-		{ label: 'Projects', href: `${base}/projects` },
-		{ label: 'Blog', href: `${base}/blog` },
-		{ label: 'About', href: `${base}/about` },
-		{ label: 'Contact', href: `${base}/contact` }
+		// { label: 'Projects', href: `${base}/projects` },
+		// { label: 'Blog', href: `${base}/blog` },
+		// { label: 'About', href: `${base}/about` },
+		// { label: 'Contact', href: `${base}/contact` }
 	];
 
 	function matchBaseRoute(navItemLink: string, currentLink: string) {
@@ -30,7 +30,6 @@
 
 <svelte:window bind:innerHeight={windowHeight} bind:scrollY={y} />
 
-<!-- <header style:position={$page.url.pathname === `/${base}` ? 'fixed' : 'sticky'}> -->
 <header>
 	<a href="{base}/">Logo</a>
 	<nav>
@@ -73,7 +72,7 @@
 	}
 
 	a {
-		padding: 2rem 1rem;
+		/* padding: 2rem 1rem; */
 		font-weight: bold;
 		font-size: clamp(0.6rem, 8vw, 1.3rem);
 		color: var(--gray-900);
