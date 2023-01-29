@@ -16,7 +16,7 @@
 	let y = 0;
 	let windowHeight = 0;
 	let windowWidth = 0;
-	$: if ($navigating || y) closeModal()
+	$: if ($navigating || y) closeModal();
 
 	const navItems = [
 		{ label: 'Home', href: `${base}/` },
