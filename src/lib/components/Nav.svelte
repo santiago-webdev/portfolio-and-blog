@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { page } from '$app/stores';
+	import NavItems from './NavItems.svelte';
 
 	export let pageHeight = 0;
 
@@ -22,18 +22,6 @@
 		{ label: 'About', href: `${base}/about` },
 		{ label: 'Contact', href: `${base}/contact` }
 	];
-
-	function matchBaseRoute(navItemLink: string, currentLink: string) {
-		if (navItemLink === '/') {
-			if (navItemLink === currentLink) {
-				return true;
-			} else {
-				return false;
-			}
-		}
-
-		return currentLink.match(navItemLink) !== null;
-	}
 </script>
 
 <svelte:window
@@ -46,19 +34,7 @@
 	<a href="{base}/">Logo</a>
 	<nav>
 		{#if windowWidth > 700}
-			<ul>
-				{#each navItems as item}
-					<li>
-						<a
-							href={item.href}
-							class:activeRoute={matchBaseRoute(
-								item.href,
-								$page.url.pathname.toString()
-							)}>{item.label}</a
-						>
-					</li>
-				{/each}
-			</ul>
+			<NavItems {navItems}/>
 		{:else}
 			<button
 				on:click={() => {
@@ -66,19 +42,7 @@
 				}}>{@html burger}</button
 			>
 			<dialog bind:this={modal}>
-				<ul>
-					{#each navItems as item}
-						<li>
-							<a
-								href={item.href}
-								class:activeRoute={matchBaseRoute(
-									item.href,
-									$page.url.pathname.toString()
-								)}>{item.label}</a
-							>
-						</li>
-					{/each}
-				</ul>
+				<NavItems {navItems}/>
 				<button
 					on:click={() => {
 						modal.close();
@@ -106,13 +70,6 @@
 		/* transition: all 0.3s cubic-bezier(0.07, 0.95, 0, 1); */
 	}
 
-	ul {
-		gap: 1rem;
-		display: flex;
-		flex-direction: row;
-		place-items: center;
-	}
-
 	a {
 		/* padding: 2rem 1rem; */
 		font-weight: bold;
@@ -131,24 +88,12 @@
 		color: var(--stone-900);
 	}
 
-	.activeRoute {
-		text-decoration: underline;
-		text-decoration-thickness: 0.2ch;
-		text-decoration-color: rgb(157, 161, 180);
-	}
-
 	dialog {
 		border: 0.18rem solid var(--neutral-600);
 		border-radius: 0.6rem;
 		box-shadow: 0 0 1em rgb(0 0 0 / 0.3);
 		width: 100%;
 		height: 100%;
-	}
-
-	dialog ul {
-		place-content: center;
-		place-items: center;
-		flex-direction: column;
 	}
 
 	progress {
