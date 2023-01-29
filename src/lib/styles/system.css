@@ -100,10 +100,10 @@
 	--stone-900: #1c1917;
 }
 
-/* ::selection { */
-/* 	color: var(--bg-1); */
-/* 	background-color: var(--fg-1); */
-/* } */
+::selection {
+	color: var(--stone-50);
+	background-color: var(--stone-900);
+}
 
 h1,
 h2 {
@@ -124,31 +124,25 @@ h2 {
 	width: min(100% - 1rem, var(--wide) * 1.5);
 }
 
-/* body { */
-/* 	background-color: var(--bg-1); */
-/* } */
-
-/* h1, */
-/* p, */
-/* span, */
-/* li { */
-/* 	color: var(--fg-1); */
-/* } */
-
-/* h1 { */
-/*   font-family: var(--ff-circle); */
-/* } */
-
 h2 {
 	font-family: var(--ff--cnds);
 	font-weight: 500;
 }
 
-/* h2, */
-/* a { */
-/* 	color: var(--fg-2); */
-/* } */
+.blur-bg {
+	background-color: rgb(39 39 42 / .3);
+	--blur: 9px;
+	-webkit-backdrop-filter: blur(var(--blur));
+	backdrop-filter: blur(var(--blur));
+}
 
-/* a:hover { */
-/* 	color: var(--fg-alt1); */
-/* } */
+dialog {
+	background-color: var(--slate-100);
+}
+
+dialog::backdrop {
+	background-color: rgb(39 39 42 / .3);
+	--blur: 9px;
+	-webkit-backdrop-filter: blur(var(--blur));
+	backdrop-filter: blur(var(--blur));
+}
