@@ -5,6 +5,7 @@
 
 <main>
 	<Search />
+	<Search />
 </main>
 
 <svelte:head>
