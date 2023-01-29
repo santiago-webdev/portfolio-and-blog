@@ -35,7 +35,7 @@
 </script>
 
 <div class="layout" bind:this={body}>
-	<Nav {pageHeight} />
+	<Nav />
 	<slot />
 	<Footer />
 </div>
