@@ -13,9 +13,9 @@
 		color: transparent;
 	}
 
-	/* @media (max-width: 600px) { */
-	/* 	span { */
-	/* 		-webkit-text-stroke-width: 0.07rem; */
-	/* 	} */
-	/* } */
+	@media (max-width: 600px) {
+		span {
+			-webkit-text-stroke-width: 0.07rem;
+		}
+	}
 </style>
