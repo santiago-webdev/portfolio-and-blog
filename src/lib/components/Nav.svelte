@@ -96,7 +96,7 @@
 	header {
 		display: flex;
 		justify-content: space-between;
-		width: min(100% - 1rem, var(--wide));
+		width: min(100% - 1rem, var(--wide) * 1.3);
 		margin-inline: auto;
 		/* height: auto; */
 		font-family: var(--ff-circle);
