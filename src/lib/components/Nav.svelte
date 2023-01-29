@@ -17,7 +17,7 @@
 	$: windowHeight = 0;
 	$: windowWidth = 0;
 	$: pageHeightWithoutWindow = pageHeight - windowHeight;
-	$: if ($navigating) closeModal()
+	$: if ($navigating || y) closeModal()
 
 	const navItems = [
 		{ label: 'Home', href: `${base}/` },
