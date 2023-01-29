@@ -16,7 +16,6 @@
 
 	$: windowHeight = 0;
 	$: windowWidth = 0;
-	$: pageHeightWithoutWindow = pageHeight - windowHeight;
 	$: if ($navigating || y) closeModal()
 
 	const navItems = [
@@ -47,7 +46,7 @@
 			</dialog>
 		{/if}
 	</nav>
-	<progress max={pageHeightWithoutWindow} value={y} />
+	<progress max={pageHeight - windowHeight} value={y} />
 </header>
 
 <style>
