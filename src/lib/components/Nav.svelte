@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
+	import { navigating } from '$app/stores';
 	import NavItems from './NavItems.svelte';
 
 	export let pageHeight = 0;
@@ -16,6 +17,7 @@
 	$: windowHeight = 0;
 	$: windowWidth = 0;
 	$: pageHeightWithoutWindow = pageHeight - windowHeight;
+	$: if ($navigating) closeModal()
 
 	const navItems = [
 		{ label: 'Home', href: `${base}/` },
