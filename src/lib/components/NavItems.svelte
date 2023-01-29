@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 
-	export let navItems = [ { label: '', href: `` } ];
+	export let navItems = [{ label: '', href: `` }];
 
 	function matchBaseRoute(navItemLink: string, currentLink: string) {
 		if (navItemLink === '/') {

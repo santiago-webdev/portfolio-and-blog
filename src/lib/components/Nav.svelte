@@ -10,8 +10,8 @@
 	let cross =
 		'<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 4.75l-6.5 6.5m0-6.5l6.5 6.5"/></svg>';
 	let modal: HTMLDialogElement;
-	const closeModal = () => modal.close()
-	const openModal = () => modal.showModal()
+	const closeModal = () => modal.close();
+	const openModal = () => modal.showModal();
 
 	$: windowHeight = 0;
 	$: windowWidth = 0;
@@ -36,11 +36,11 @@
 	<a href="{base}/">Logo</a>
 	<nav>
 		{#if windowWidth > 700}
-			<NavItems {navItems}/>
+			<NavItems {navItems} />
 		{:else}
 			<button on:click={openModal}>{@html burger}</button>
 			<dialog bind:this={modal}>
-				<NavItems {navItems}/>
+				<NavItems {navItems} />
 				<button on:click={closeModal}>{@html cross}</button>
 			</dialog>
 		{/if}
