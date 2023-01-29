@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { afterNavigate } from '$app/navigation';
 	import { base } from '$app/paths';
 	import NavItems from './NavItems.svelte';
 
@@ -16,8 +15,6 @@
 	let y = 0;
 	let windowHeight = 0;
 	let windowWidth = 0;
-
-	afterNavigate(() => closeModal());
 
 	const navItems = [
 		{ label: 'Home', href: `${base}/` },

@@ -13,9 +13,9 @@
 		color: transparent;
 	}
 
-	@media (max-width: 600px) {
+	@media (max-width: 700px) {
 		span {
-			-webkit-text-stroke-width: 0.07rem;
+			-webkit-text-stroke-width: 0.09rem;
 		}
 	}
 </style>
