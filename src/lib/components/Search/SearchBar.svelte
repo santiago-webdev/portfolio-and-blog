@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { goto, preloadData } from '$app/navigation';
-	import ListCardPost from '$lib/components/ListCardPost.svelte';
+	import ListCardPost from '$lib/components/Search/ListCardPost.svelte';
 	import { Posts } from '$lib/stores/search';
 
 	$: filteredPosts = $Posts.filter(post => {
