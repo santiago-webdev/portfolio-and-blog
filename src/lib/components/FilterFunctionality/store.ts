@@ -4,9 +4,12 @@ import { writable } from 'svelte/store';
 const getPosts = () => {
 	const tmpPost: Array<Post> = [];
 
-	const modules = import.meta.glob(['../posts/*.svelte', '../posts/*.md'], {
-		eager: true
-	});
+	const modules = import.meta.glob(
+		['../../posts/*.svelte', '../../posts/*.md'],
+		{
+			eager: true
+		}
+	);
 
 	function isMarkdown(path: string) {
 		const regex = '^.*.md$';
@@ -19,7 +22,7 @@ const getPosts = () => {
 		const postData: Post = modules[path] as Post;
 		const extension = isMarkdown(path);
 		const href = path
-			.replace('../posts', '')
+			.replace('../../posts', '')
 			.replace('.svelte', '')
 			.replace('.md', '');
 

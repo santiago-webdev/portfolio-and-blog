@@ -1,8 +1,8 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { goto, preloadData } from '$app/navigation';
-	import ListCardPost from '$lib/components/FilterFunctionality/ListCardPost.svelte';
-	import { Posts } from '$lib/stores/search';
+	import ListCardPost from './ListCardPost.svelte';
+	import { Posts } from './store';
 
 	$: filteredPosts = $Posts.filter(post => {
 		let searchTerms = `${post.description} ${post.title}`.toLowerCase();
