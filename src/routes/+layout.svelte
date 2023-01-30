@@ -9,7 +9,7 @@
 	import '@fontsource/pt-sans-narrow/700.css';
 
 	import { onMount } from 'svelte';
-	import Nav from '$lib/components/Nav.svelte';
+	import NavBar from '$lib/components/NavBar.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 
 	let body: HTMLElement;
@@ -35,7 +35,7 @@
 </script>
 
 <div class="layout" bind:this={body}>
-	<Nav />
+	<NavBar />
 	<slot />
 	<Footer />
 </div>
