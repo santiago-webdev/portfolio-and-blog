@@ -1,11 +1,10 @@
 <script lang="ts">
-	import Search from '$lib/components/Search.svelte';
+	import SearchBar from '$lib/components/SearchBar.svelte';
 	import { TITLE_BLOG } from '$lib/config';
 </script>
 
 <main>
-	<Search />
-	<Search />
+	<SearchBar />
 </main>
 
 <svelte:head>
