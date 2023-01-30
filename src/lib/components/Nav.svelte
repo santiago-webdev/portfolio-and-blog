@@ -66,6 +66,7 @@
 		</div>
 		<nav style:display={showMobile || desktop ? 'grid' : 'none'}>
 			<ul style:flex-direction={desktop ? 'row' : 'column'}>
+				<li><ThemeSwitcher /></li>
 				{#each navItems as item}
 					<li>
 						<a
@@ -79,7 +80,6 @@
 					</li>
 					<hr style:display={!desktop ? 'block' : 'none'} style="width: 80%" />
 				{/each}
-				<li><ThemeSwitcher /></li>
 			</ul>
 		</nav>
 	</header>
