@@ -98,6 +98,14 @@
 	--stone-700: #44403c;
 	--stone-800: #292524;
 	--stone-900: #1c1917;
+
+	--bg-color: white;
+	--color: #333;
+}
+
+[data-theme='dark'] {
+	--bg-color: black;
+	--color: #ddd;
 }
 
 ::selection {

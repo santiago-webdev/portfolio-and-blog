@@ -55,6 +55,7 @@
 			1fr
 			auto;
 
-		background-color: var(--slate-100);
+		/* background-color: var(--slate-100); */
+		background-color: var(--bg-color);
 	}
 </style>
