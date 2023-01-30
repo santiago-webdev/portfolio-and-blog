@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Post } from '$lib/utils/utils';
-	import CardPost from '$lib/components/FilterFunctionality/CardPost.svelte';
+	import CardPost from './CardPost.svelte';
 
 	export let filteredPosts: Array<Post>;
 </script>
