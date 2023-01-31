@@ -3,17 +3,18 @@ import { writable } from 'svelte/store';
 type ThemeMode = 'system' | 'light' | 'dark';
 
 const getFromCookie = (): ThemeMode => {
-	if (typeof document !== 'undefined') {
-		const themeCookie = document.cookie
-			.split(';')
-			.find(c => c.trim().startsWith('theme='));
-		if (themeCookie) {
-			const theme = themeCookie.split('=')[1] as ThemeMode;
-			if (theme === 'system' || theme === 'light' || theme === 'dark') {
-				return theme;
-			}
+	if (typeof document === 'undefined') return 'system';
+
+	const themeCookie = document.cookie
+		.split(';')
+		.find(c => c.trim().startsWith('theme='));
+	if (themeCookie) {
+		const theme = themeCookie.split('=')[1] as ThemeMode;
+		if (theme === 'system' || theme === 'light' || theme === 'dark') {
+			return theme;
 		}
 	}
+
 	return 'system';
 };
 

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import theme from './store';
 
-	$: console.log(theme);
+	$: console.log($theme);
 
 	const system =
 		'<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 2a8 8 0 0 1 8 8a8 8 0 0 1-8 8V4Z"/></svg>';
