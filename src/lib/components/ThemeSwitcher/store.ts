@@ -20,6 +20,7 @@ const getFromCookie = (): ThemeMode => {
 
 const setThemeCookie = (theme: ThemeMode) => {
 	if (typeof document === 'undefined') return;
+
 	document.cookie = `theme=${theme};SameSite=None;Secure;expires=${new Date(
 		Date.now() + 365 * 24 * 60 * 60 * 1000
 	).toUTCString()}`;
@@ -27,6 +28,7 @@ const setThemeCookie = (theme: ThemeMode) => {
 
 const setThemeBrowser = (theme: ThemeMode) => {
 	if (typeof document === 'undefined') return;
+
 	document.documentElement.dataset.theme = theme;
 };
 
