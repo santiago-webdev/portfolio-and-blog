@@ -108,6 +108,16 @@
 	--color: #ddd;
 }
 
+[data-theme='light'] {
+	--bg-color: blue;
+	--color: orange;
+}
+
+[data-theme='system'] {
+	--bg-color: red;
+	--color: white;
+}
+
 ::selection {
 	color: var(--stone-50);
 	background-color: var(--stone-900);

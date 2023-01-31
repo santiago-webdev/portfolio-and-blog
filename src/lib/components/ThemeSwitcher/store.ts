@@ -10,6 +10,11 @@ const getFromCookie = (): ThemeMode => {
 		.find(c => c.trim().startsWith('theme='));
 	if (themeCookie) {
 		const theme = themeCookie.split('=')[1] as ThemeMode;
+		if (
+			theme === 'system' &&
+			window.matchMedia('(prefers-color-scheme: dark)').matches
+		)
+			return 'dark';
 		if (theme === 'system' || theme === 'light' || theme === 'dark') {
 			return theme;
 		}
@@ -28,6 +33,14 @@ const setThemeCookie = (theme: ThemeMode) => {
 
 const setThemeBrowser = (theme: ThemeMode) => {
 	if (typeof document === 'undefined') return;
+
+	if (
+		theme === 'system' &&
+		window.matchMedia('(prefers-color-scheme: dark)').matches
+	) {
+		document.documentElement.dataset.theme = 'dark';
+		return;
+	}
 
 	document.documentElement.dataset.theme = theme;
 };
