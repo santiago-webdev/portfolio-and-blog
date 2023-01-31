@@ -2,7 +2,7 @@ import { writable } from 'svelte/store';
 
 type ThemeMode = 'system' | 'light' | 'dark';
 
-const getThemeFromCookie = (): ThemeMode => {
+const getFromCookie = (): ThemeMode => {
 	if (typeof document !== 'undefined') {
 		const themeCookie = document.cookie
 			.split(';')
@@ -25,9 +25,12 @@ const setThemeCookie = (theme: ThemeMode) => {
 	}
 };
 
-const theme = writable<ThemeMode>(getThemeFromCookie());
+const theme = writable<ThemeMode>(getFromCookie());
 
 theme.subscribe(theme => {
+	if (typeof document !== 'undefined') {
+		document.documentElement.dataset.theme = theme;
+	}
 	setThemeCookie(theme);
 });
 
