@@ -1,5 +1,5 @@
 <script lang="ts">
-	import theme from '$lib/stores/theme';
+	import theme from './store';
 	$: console.log($theme);
 </script>
 
