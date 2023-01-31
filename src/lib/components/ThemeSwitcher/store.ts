@@ -19,19 +19,21 @@ const getFromCookie = (): ThemeMode => {
 };
 
 const setThemeCookie = (theme: ThemeMode) => {
-	if (typeof document !== 'undefined') {
-		document.cookie = `theme=${theme};SameSite=None;Secure;expires=${new Date(
-			Date.now() + 365 * 24 * 60 * 60 * 1000
-		).toUTCString()}`;
-	}
+	if (typeof document === 'undefined') return;
+	document.cookie = `theme=${theme};SameSite=None;Secure;expires=${new Date(
+		Date.now() + 365 * 24 * 60 * 60 * 1000
+	).toUTCString()}`;
+};
+
+const setThemeBrowser = (theme: ThemeMode) => {
+	if (typeof document === 'undefined') return;
+	document.documentElement.dataset.theme = theme;
 };
 
 const theme = writable<ThemeMode>(getFromCookie());
 
 theme.subscribe(theme => {
-	if (typeof document !== 'undefined') {
-		document.documentElement.dataset.theme = theme;
-	}
+	setThemeBrowser(theme);
 	setThemeCookie(theme);
 });
 
