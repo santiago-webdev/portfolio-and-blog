@@ -5,5 +5,3 @@
 
 <button on:click={() => theme.set('dark')}>Dark</button>
 <button on:click={() => theme.set('light')}>Light</button>
-
-test
