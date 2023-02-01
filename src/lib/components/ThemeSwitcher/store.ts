@@ -1,6 +1,11 @@
+import { browser } from '$app/environment';
 import { writable } from 'svelte/store';
 
 type ThemeMode = 'system' | 'light' | 'dark';
+
+const prefersDark =
+	(browser && window.matchMedia('(prefers-color-scheme: dark)').matches) ||
+	false;
 
 const getFromCookie = (): ThemeMode => {
 	if (typeof document === 'undefined') return 'system';
@@ -10,11 +15,7 @@ const getFromCookie = (): ThemeMode => {
 		.find(c => c.trim().startsWith('theme='));
 	if (themeCookie) {
 		const theme = themeCookie.split('=')[1] as ThemeMode;
-		if (
-			theme === 'system' &&
-			window.matchMedia('(prefers-color-scheme: dark)').matches
-		)
-			return 'dark';
+		if (theme === 'system' && prefersDark) return 'dark';
 		if (theme === 'system' || theme === 'light' || theme === 'dark') {
 			return theme;
 		}
@@ -34,10 +35,7 @@ const setThemeCookie = (theme: ThemeMode) => {
 const setThemeBrowser = (theme: ThemeMode) => {
 	if (typeof document === 'undefined') return;
 
-	if (
-		theme === 'system' &&
-		window.matchMedia('(prefers-color-scheme: dark)').matches
-	) {
+	if (theme === 'system' && prefersDark) {
 		document.documentElement.dataset.theme = 'dark';
 		return;
 	}
@@ -47,7 +45,7 @@ const setThemeBrowser = (theme: ThemeMode) => {
 
 const theme = writable<ThemeMode>(getFromCookie());
 
-theme.subscribe(theme => {
+theme.subscribe(async theme => {
 	setThemeBrowser(theme);
 	setThemeCookie(theme);
 });

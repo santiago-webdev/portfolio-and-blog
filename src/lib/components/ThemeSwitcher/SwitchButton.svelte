@@ -12,16 +12,16 @@
 </script>
 
 <div class="themeswitcher-wrapper">
-	<button on:click={() => $theme='system'}>{@html system}</button>
-	<button on:click={() => $theme='dark'}>{@html dark}</button>
-	<button on:click={() => $theme='light'}>{@html light}</button>
+	<button on:click={() => ($theme = 'system')}>{@html system}</button>
+	<button on:click={() => ($theme = 'dark')}>{@html dark}</button>
+	<button on:click={() => ($theme = 'light')}>{@html light}</button>
 </div>
 <!-- <select bind:value="{$theme}"> -->
 <!--   <option value="system">{@html system}System</option> -->
 <!--   <option value="light">{@html light} Light</option> -->
 <!--   <option value="dark">{@html dark} Dark</option> -->
-<!-- </select> -->
 
+<!-- </select> -->
 <style>
 	.themeswitcher-wrapper {
 		display: flex;

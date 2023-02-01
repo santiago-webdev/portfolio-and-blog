@@ -113,8 +113,8 @@
 	--color: orange;
 }
 
-[data-theme='system'] {
-	--bg-color: red;
+[data-theme=''] {
+	--bg-color: orange;
 	--color: white;
 }
 
