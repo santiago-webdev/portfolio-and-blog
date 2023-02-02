@@ -1,7 +1,6 @@
 <script lang="ts">
 	import '$lib/styles/reset.css';
 	import '$lib/styles/global.css';
-	import '$lib/styles/system.css';
 
 	import '@fontsource/pt-sans/400.css';
 	import '@fontsource/pt-sans/700.css';
@@ -56,6 +55,6 @@
 			auto;
 
 		/* background-color: var(--slate-100); */
-		background-color: var(--bg-color);
+		background-color: var(--clr-background);
 	}
 </style>

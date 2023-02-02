@@ -35,3 +35,10 @@
 	<meta name="twitter:image" content="" />
 	<!-- TODO(santigo-zero): Add image -->
 </svelte:head>
+
+<style>
+	main {
+		background-color: var(--clr-background-alt);
+		height: max-content;
+	}
+</style>

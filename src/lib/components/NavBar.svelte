@@ -24,7 +24,7 @@
 	}
 
 	const navItems = [
-		{ label: 'Home', href: `${base}/` },
+		// { label: 'Home', href: `${base}/` },
 		{ label: 'Projects', href: `${base}/projects` },
 		{ label: 'Blog', href: `${base}/blog` },
 		{ label: 'About', href: `${base}/about` },
@@ -50,10 +50,12 @@
 	bind:scrollY={y}
 />
 
-<div class:blur-bg={y || showMobile} class="header-wrapper">
+<!-- TODO(santigo-zero): False positive with blur-bg when navigating -->
+<!-- <div class:blur-bg={y || showMobile} class="header-wrapper"> -->
+<div class="header-wrapper">
 	<header style:flex-direction={desktop ? 'row' : 'column'}>
 		<div class="main-header">
-			<a href="{base}/">Logo</a>
+			<a href="{base}/">Santiago Gonzalez</a>
 			{#if !desktop}
 				<button on:click={toggleMobile}>
 					{#if !showMobile}
@@ -93,12 +95,14 @@
 		right: 0;
 		position: sticky;
 		transition: all 0.3s ease-in-out;
+		/* TODO(santigo-zero): Make this change the color based on scroll position */
+		background-color: var(--clr-background-alt);
 	}
 
 	header {
 		display: flex;
 		justify-content: space-between;
-		width: min(100% - 1rem, var(--wide) * 1.3);
+		width: min(100% - 1rem, var(--wide) * 1.6);
 		margin-inline: auto;
 		/* height: auto; */
 		font-family: var(--ff-circle);
@@ -112,26 +116,31 @@
 
 	a {
 		font-weight: bold;
-		font-size: clamp(0.6rem, 8vw, 1.3rem);
-		color: var(--gray-900);
-		text-decoration: none;
-		text-decoration-thickness: 0.2ch;
-		text-decoration-color: rgb(157, 161, 180);
+		font-size: clamp(0.6rem, 8vw, 1.1rem);
+		/* text-decoration: none; */
+		/* text-decoration-thickness: 0.2ch; */
+		/* text-decoration-color: var(--clr-text); */
 	}
 
 	button,
 	a {
-		padding: 1rem 0.5rem;
+		color: var(--clr-text);
+		padding: 0.7rem 0.3rem;
+		margin: 0.6rem 0;
 		display: grid;
 		place-items: center;
+		border-radius: 0.6rem;
+		/* outline: 3px solid red; */
 	}
 
 	a:hover {
-		color: var(--gray-500);
+		color: var(--clr-hover);
+		/* background-color: var(--clr-hover-bg); */
+		/* text-decoration-color: var(--clr-hover); */
 	}
 
 	a:focus {
-		color: var(--stone-900);
+		color: var(--clr-clicked);
 	}
 
 	ul {
@@ -142,8 +151,9 @@
 	}
 
 	.activeRoute {
-		text-decoration: underline;
-		text-decoration-thickness: 0.2ch;
-		text-decoration-color: rgb(157, 161, 180);
+		background-color: #502e3a;
+		/* text-decoration: underline; */
+		/* text-decoration-thickness: 0.2ch; */
+		/* text-decoration-color: rgb(157, 161, 180); */
 	}
 </style>

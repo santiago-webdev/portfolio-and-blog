@@ -27,16 +27,17 @@
 	}
 </script>
 
-<div class="themeswitcher-wrapper">
-	<button on:click={switchTheme}>{@html ThemeIcon.get($theme)}</button>
-</div>
+<button
+	style:color={$theme === 'dark'
+		? 'var(--accent-orange)'
+		: 'var(--accent-peachy)'}
+	on:click={switchTheme}>{@html ThemeIcon.get($theme)}</button
+>
 
 <style>
-	.themeswitcher-wrapper {
-		display: flex;
-	}
-
 	button {
-		color: brown;
+		display: grid;
+		place-items: center;
+		/* color: var(--accent-orange); */
 	}
 </style>

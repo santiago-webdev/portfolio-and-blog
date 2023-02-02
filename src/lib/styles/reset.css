@@ -35,11 +35,13 @@ ol {
 /* Set core root defaults */
 html:focus-within {
 	scroll-behavior: smooth;
+	font-display: swap;
 }
 
 /* Set core body defaults */
 body {
 	min-height: 100vh;
+	min-height: 100dvh;
 	text-rendering: optimizeLegibility;
 	line-height: 1.5;
 }
