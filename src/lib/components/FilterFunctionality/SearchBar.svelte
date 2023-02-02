@@ -3,6 +3,7 @@
 	import { goto, preloadData } from '$app/navigation';
 	import ListCardPost from './ListCardPost.svelte';
 	import { Posts } from './store';
+	import { onMount } from 'svelte';
 
 	$: filteredPosts = $Posts.filter(post => {
 		let searchTerms = `${post.description} ${post.title}`.toLowerCase();
@@ -18,6 +19,7 @@
 	let placeholder = placeholderDefault;
 
 	let value = '';
+	let input: HTMLElement
 	$: lc_value = value.toLowerCase();
 
 	function handleSubmit() {
@@ -33,6 +35,10 @@
 
 		goto(`${base}/blog${filteredPosts[0].href}`);
 	}
+
+  onMount(() => {
+    input.focus();
+  });
 </script>
 
 <form on:submit|preventDefault={handleSubmit} autocomplete="off">
@@ -40,6 +46,7 @@
 	<div class="search-bar">
 		<input
 			{placeholder}
+			bind:this={input}
 			bind:value
 			type="search"
 			id="search"
