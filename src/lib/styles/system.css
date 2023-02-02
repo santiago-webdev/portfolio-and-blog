@@ -113,11 +113,6 @@
 	--color: black;
 }
 
-/* [data-theme=''] { */
-/* 	--bg-color: orange; */
-/* 	--color: white; */
-/* } */
-
 ::selection {
 	color: var(--stone-50);
 	background-color: var(--stone-900);
