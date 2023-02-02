@@ -148,14 +148,3 @@ h2 {
 	-webkit-backdrop-filter: blur(var(--blur));
 	backdrop-filter: blur(var(--blur));
 }
-
-dialog {
-	background-color: var(--slate-100);
-}
-
-dialog::backdrop {
-	background-color: rgb(39 39 42 / 0.3);
-	--blur: 9px;
-	-webkit-backdrop-filter: blur(var(--blur));
-	backdrop-filter: blur(var(--blur));
-}
