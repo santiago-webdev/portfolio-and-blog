@@ -113,10 +113,10 @@
 	--color: black;
 }
 
-[data-theme=''] {
-	--bg-color: orange;
-	--color: white;
-}
+/* [data-theme=''] { */
+/* 	--bg-color: orange; */
+/* 	--color: white; */
+/* } */
 
 ::selection {
 	color: var(--stone-50);

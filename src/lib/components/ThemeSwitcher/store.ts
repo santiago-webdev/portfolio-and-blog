@@ -7,14 +7,12 @@ const prefersDark =
 	(browser && window.matchMedia('(prefers-color-scheme: dark)').matches) ||
 	false;
 
-const getFromCookie = (): ThemeMode => {
-	if (typeof document === 'undefined') return 'system';
+const getFromLocalStorage = (): ThemeMode => {
+	if (typeof window === 'undefined') return 'system';
 
-	const themeCookie = document.cookie
-		.split(';')
-		.find(c => c.trim().startsWith('theme='));
-	if (themeCookie) {
-		const theme = themeCookie.split('=')[1] as ThemeMode;
+	const themeLocalStorage = window.localStorage.getItem('theme');
+	if (themeLocalStorage) {
+		const theme = themeLocalStorage as ThemeMode;
 		if (theme === 'system' && prefersDark) return 'dark';
 		if (theme === 'system' || theme === 'light' || theme === 'dark') {
 			return theme;
@@ -24,12 +22,10 @@ const getFromCookie = (): ThemeMode => {
 	return 'system';
 };
 
-const setThemeCookie = (theme: ThemeMode) => {
-	if (typeof document === 'undefined') return;
+const setThemeLocalStorage = (theme: ThemeMode) => {
+	if (typeof window === 'undefined') return;
 
-	document.cookie = `theme=${theme};SameSite=None;Secure;expires=${new Date(
-		Date.now() + 365 * 24 * 60 * 60 * 1000
-	).toUTCString()}`;
+	window.localStorage.setItem('theme', theme);
 };
 
 const setThemeBrowser = (theme: ThemeMode) => {
@@ -43,11 +39,11 @@ const setThemeBrowser = (theme: ThemeMode) => {
 	document.documentElement.dataset.theme = theme;
 };
 
-const theme = writable<ThemeMode>(getFromCookie());
+const theme = writable<ThemeMode>(getFromLocalStorage());
 
 theme.subscribe(async theme => {
 	setThemeBrowser(theme);
-	setThemeCookie(theme);
+	setThemeLocalStorage(theme);
 });
 
 export default theme;
