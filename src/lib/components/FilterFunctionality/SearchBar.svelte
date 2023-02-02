@@ -19,7 +19,7 @@
 	let placeholder = placeholderDefault;
 
 	let value = '';
-	let input: HTMLElement
+	let input: HTMLElement;
 	$: lc_value = value.toLowerCase();
 
 	function handleSubmit() {
@@ -36,9 +36,9 @@
 		goto(`${base}/blog${filteredPosts[0].href}`);
 	}
 
-  onMount(() => {
-    input.focus();
-  });
+	onMount(() => {
+		input.focus();
+	});
 </script>
 
 <form on:submit|preventDefault={handleSubmit} autocomplete="off">
