@@ -30,12 +30,7 @@
 <div class="themeswitcher-wrapper">
 	<button on:click={switchTheme}>{@html ThemeIcon.get($theme)}</button>
 </div>
-<!-- <select bind:value="{$theme}"> -->
-<!--   <option value="system">{@html system}System</option> -->
-<!--   <option value="light">{@html light} Light</option> -->
-<!--   <option value="dark">{@html dark} Dark</option> -->
 
-<!-- </select> -->
 <style>
 	.themeswitcher-wrapper {
 		display: flex;
