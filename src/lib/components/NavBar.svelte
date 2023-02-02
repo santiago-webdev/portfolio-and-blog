@@ -50,7 +50,7 @@
 	bind:scrollY={y}
 />
 
-<div class:blur-bg={y} class="header-wrapper">
+<div class:blur-bg={y || showMobile} class="header-wrapper">
 	<header style:flex-direction={desktop ? 'row' : 'column'}>
 		<div class="main-header">
 			<a href="{base}/">Logo</a>
