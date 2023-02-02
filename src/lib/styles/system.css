@@ -100,17 +100,17 @@
 	--stone-900: #1c1917;
 
 	--bg-color: white;
-	--color: #333;
+	--color: gray;
 }
 
 [data-theme='dark'] {
 	--bg-color: black;
-	--color: #ddd;
+	--color: white;
 }
 
 [data-theme='light'] {
-	--bg-color: blue;
-	--color: orange;
+	--bg-color: white;
+	--color: black;
 }
 
 [data-theme=''] {

@@ -28,6 +28,6 @@
 	}
 
 	button {
-		color: orange;
+		color: brown;
 	}
 </style>
