@@ -1,10 +1,6 @@
-<script lang="ts">
-	import Hollow from '$lib/components/Hollow.svelte';
-</script>
-
 <section class="focus">
 	<h1>
-		Building websites && <Hollow text="clean" color="var(--clr-title)" /> interfaces
+		Building websites && clean interfaces
 	</h1>
 	<br />
 	<h2>
@@ -24,5 +20,6 @@
 	section {
 		display: grid;
 		place-items: left;
+		padding: 6rem 0;
 	}
 </style>
