@@ -27,7 +27,7 @@
 	/* --bg-9: #040506; */
 
 	--base-dark-background-000: #16171d;
-	--base-dark-background-100: #1D1E26;
+	--base-dark-background-100: #1d1e26;
 
 	--accent-violet: #49364c;
 	--accent-purple: #915268;
@@ -152,12 +152,12 @@ h1 {
 	width: min(100% - 1rem, var(--wide) * 1.5);
 }
 
-/* .blur-bg { */
-/* 	background-color: rgb(39 39 42 / 0.3); */
-/* 	--blur: 9px; */
-/* 	-webkit-backdrop-filter: blur(var(--blur)); */
-/* 	backdrop-filter: blur(var(--blur)); */
-/* } */
+.blurbg {
+	background-color: rgb(39 39 42 / 0.3);
+	--blur: 9px;
+	-webkit-backdrop-filter: blur(var(--blur));
+	backdrop-filter: blur(var(--blur));
+}
 
 h1 {
 	color: var(--clr-title);
@@ -173,7 +173,7 @@ h2 {
 
 	color: var(--clr-subtitle);
 	line-height: calc(1.5 * clamp(1rem, 8vw, 1.8rem));
-  letter-spacing: -1px;
+	letter-spacing: -1px;
 	font-weight: 300;
 }
 

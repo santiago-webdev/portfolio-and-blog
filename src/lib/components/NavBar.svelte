@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { page } from '$app/stores';
+	import { navigating, page } from '$app/stores';
 	import SwitchButton from './ThemeSwitcher/SwitchButton.svelte';
 
 	let burger =
@@ -21,6 +21,10 @@
 		} else {
 			desktop = false;
 		}
+	}
+
+	$: if ($navigating || desktop || y) {
+		showMobile = false;
 	}
 
 	const navItems = [
@@ -52,8 +56,11 @@
 
 <!-- TODO(santigo-zero): False positive with blur-bg when navigating -->
 <!-- <div class:blur-bg={y || showMobile} class="header-wrapper"> -->
-<div class="header-wrapper">
-	<header style:flex-direction={desktop ? 'row' : 'column'}>
+<header class:headerScroll={y} class:headerActive={y || showMobile}>
+	<div
+		style:flex-direction={desktop ? 'row' : 'column'}
+		class="header-container"
+	>
 		<div class="main-header">
 			<a href="{base}/">Santiago Gonzalez</a>
 			{#if !desktop}
@@ -84,22 +91,28 @@
 				{/each}
 			</ul>
 		</nav>
-	</header>
-</div>
+	</div>
+</header>
 
 <style>
-	.header-wrapper {
-		width: 100%;
+	header {
 		top: 0;
-		left: 0;
-		right: 0;
 		position: sticky;
-		transition: all 0.3s ease-in-out;
-		/* TODO(santigo-zero): Make this change the color based on scroll position */
 		background-color: var(--clr-background-alt);
+		padding: 2.3rem 0;
+		transition: background-color 666ms ease-in-out 0s,
+			padding 333ms ease-in-out 0s;
 	}
 
-	header {
+	.headerScroll {
+		padding: 0.6rem 0;
+	}
+
+	.headerActive {
+		background-color: var(--clr-background);
+	}
+
+	.header-container {
 		display: flex;
 		justify-content: space-between;
 		width: min(100% - 1rem, var(--wide) * 1.6);
@@ -126,7 +139,6 @@
 	a {
 		color: var(--clr-text);
 		padding: 0.7rem 0.3rem;
-		margin: 0.6rem 0;
 		display: grid;
 		place-items: center;
 		border-radius: 0.6rem;
