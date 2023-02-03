@@ -32,6 +32,14 @@ ol {
 	list-style: none;
 }
 
+html {
+	/* For some reason webkit based browsers cause the page to shrink when
+	 * scrollbars are present, so I'll need this to keep my navbar from slightly
+   * changing the width size
+   * */
+	overflow-y: scroll;
+}
+
 /* Set core root defaults */
 html:focus-within {
 	scroll-behavior: smooth;
