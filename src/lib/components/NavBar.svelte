@@ -28,7 +28,7 @@
 	}
 
 	const navItems = [
-		// { label: 'Home', href: `${base}/` },
+		{ label: 'Home', href: `${base}/` },
 		{ label: 'Projects', href: `${base}/projects` },
 		{ label: 'Blog', href: `${base}/blog` },
 		{ label: 'About', href: `${base}/about` },
@@ -62,7 +62,9 @@
 		class="header-container"
 	>
 		<div class="main-header">
-			<a href="{base}/">Santiago Gonzalez</a>
+			<a style:visibility={showMobile ? 'hidden' : 'visible'} href="{base}/"
+				>Santiago Gonzalez</a
+			>
 			{#if !desktop}
 				<button on:click={toggleMobile}>
 					{#if !showMobile}
@@ -77,7 +79,9 @@
 			<ul style:flex-direction={desktop ? 'row' : 'column'}>
 				<li><SwitchButton /></li>
 				{#each navItems as item}
-					<li>
+					<li
+						style:display={item.label === 'Home' && desktop ? 'none' : 'block'}
+					>
 						<a
 							href={item.href}
 							class:activeRoute={matchBaseRoute(
@@ -156,11 +160,15 @@
 	}
 
 	ul {
-		gap: 0 1rem;
+		gap: 1rem;
 		display: flex;
 		flex-direction: row;
 		place-items: center;
 	}
+
+	/* ul > li:first-child { */
+	/* 	background-color: red; */
+	/* } */
 
 	.activeRoute {
 		background-color: #502e3a;
