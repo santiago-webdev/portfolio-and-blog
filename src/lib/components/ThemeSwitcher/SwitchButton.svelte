@@ -31,13 +31,15 @@
 	style:color={$theme === 'dark'
 		? 'var(--accent-orange)'
 		: 'var(--accent-peachy)'}
-	on:click={switchTheme}>{@html ThemeIcon.get($theme)}</button
+	on:click={switchTheme}>{@html ThemeIcon.get($theme)} {$theme}</button
 >
 
 <style>
 	button {
 		display: grid;
 		place-items: center;
+		gap: 0.3em;
+		grid-template-columns: repeat(2, 1fr);
 		/* color: var(--accent-orange); */
 	}
 </style>
