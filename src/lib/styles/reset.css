@@ -37,7 +37,9 @@ html {
 	 * scrollbars are present, so I'll need this to keep my navbar from slightly
    * changing the width size
    * */
-	overflow-y: scroll;
+	/* overflow-y: scroll; */
+	scrollbar-gutter: stable;
+	/* TODO(santigo-zero): Style this ^^ */
 }
 
 /* Set core root defaults */
