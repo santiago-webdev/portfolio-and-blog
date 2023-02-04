@@ -56,6 +56,7 @@
 
 <!-- TODO(santigo-zero): False positive with blur-bg when navigating -->
 <!-- <div class:blur-bg={y || showMobile} class="header-wrapper"> -->
+<progress value=0 max=100></progress>
 <header
 	class:headerFixed={$page.url.pathname.toString() === `/${base}`}
 	class:headerScroll={y}
@@ -103,13 +104,18 @@
 </header>
 
 <style>
+	/* TODO(santigo-zero): Try making the fonts slightly smaller when scrolling */
 	header {
-		top: 0;
+		top: 6px;
 		position: sticky;
 		background-color: var(--clr-background-alt);
-		padding: 2.3rem 0;
+		padding: clamp(0.6rem, 5vw, 2.3rem) 0;
 		transition: background-color 666ms ease-in-out 0s,
 			padding 333ms ease-in-out 0s;
+
+		display: grid;
+		place-items: center stretch;
+		/* TODO(santigo-zero): Fix this */
 	}
 
 	.headerFixed {
@@ -139,14 +145,6 @@
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
-	}
-
-	a {
-		font-weight: bold;
-		font-size: clamp(0.6rem, 8vw, 1.1rem);
-		/* text-decoration: none; */
-		/* text-decoration-thickness: 0.2ch; */
-		/* text-decoration-color: var(--clr-text); */
 	}
 
 	button,
@@ -185,5 +183,15 @@
 		/* text-decoration: underline; */
 		/* text-decoration-thickness: 0.2ch; */
 		/* text-decoration-color: rgb(157, 161, 180); */
+	}
+
+	progress {
+		width: 100%;
+		height: 6px; /* This should be the same value for header { top: } */
+		top: 0;
+		left: 0;
+		right: 0;
+		border: 0;
+		position: fixed;
 	}
 </style>
