@@ -116,7 +116,9 @@
 							style="width: 80%"
 						/>
 					{:else}
-						<li style:display={desktop ? 'block' : 'none'}>{@html item.separator}</li>
+						<li style:display={desktop ? 'block' : 'none'}>
+							{@html item.separator}
+						</li>
 					{/if}
 				{/each}
 			</ul>

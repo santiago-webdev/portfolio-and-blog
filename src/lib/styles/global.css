@@ -112,10 +112,12 @@
 
 /* Hide scrollbar */
 /* TODO(santigo-zero): Avoid hiding the scrollbar. Style it properly */
-html::-webkit-scrollbar { display: none; }
+html::-webkit-scrollbar {
+	display: none;
+}
 html {
-	-ms-overflow-style: none;  /* IE and Edge */
-	scrollbar-width: none;     /* Firefox */
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none; /* Firefox */
 }
 
 [data-theme='dark'] {
