@@ -2,7 +2,7 @@
 	<h1>Building websites && clean interfaces</h1>
 	<br />
 	<h2>
-		Here we'll talk about web technologies and show you my projects while at it.
+		Here we'll discuss about web technologies and show you my projects while at it.
 	</h2>
 </section>
 

@@ -167,14 +167,14 @@ h1 {
 }
 
 h2 {
-	font-weight: 200;
-	font-family: var(--ff-circle);
-	font-size: clamp(1.6rem, 8vw, 2.3rem);
+	/* font-weight: 200; */
+	/* font-family: var(--ff-circle); */
+	font-weight: 400;
+	font-family: var(--ff-square--cnds);
+	font-size: clamp(1.6rem, 8vw, 2.6rem);
 
 	color: var(--clr-subtitle);
 	line-height: calc(1.5 * clamp(1rem, 8vw, 1.8rem));
-	letter-spacing: -1px;
-	font-weight: 300;
 }
 
 br {
