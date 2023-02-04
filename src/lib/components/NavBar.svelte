@@ -30,13 +30,20 @@
 		showMobile = false;
 	}
 
+	type NavItems = Array<{
+		label?: string;
+		href?: string;
+		separator?: string;
+	}>;
+
 	const navItems = [
 		{ label: 'Home', href: `${base}/` },
 		{ label: 'Projects', href: `${base}/projects` },
 		{ label: 'Blog', href: `${base}/blog` },
+		{ separator: '|' },
 		{ label: 'About', href: `${base}/about` },
 		{ label: 'Contact', href: `${base}/contact` }
-	];
+	] satisfies NavItems;
 
 	function matchBaseRoute(navItemLink: string, currentLink: string) {
 		if (navItemLink === '/') {
@@ -85,21 +92,32 @@
 		</div>
 		<nav style:display={showMobile || desktop ? 'grid' : 'none'}>
 			<ul style:flex-direction={desktop ? 'row' : 'column'}>
-				<li><SwitchButton /></li>
+				<li>
+					<SwitchButton />
+				</li>
 				{#each navItems as item}
-					<li
-						style:display={item.label === 'Home' && desktop ? 'none' : 'block'}
-					>
-						<a
-							href={item.href}
-							class:activeRoute={matchBaseRoute(
-								item.href,
-								$page.url.pathname.toString()
-							)}
-							on:click={toggleMobile}>{item.label}</a
+					{#if item.href}
+						<li
+							style:display={item.label === 'Home' && desktop
+								? 'none'
+								: 'block'}
 						>
-					</li>
-					<hr style:display={!desktop ? 'block' : 'none'} style="width: 80%" />
+							<a
+								href={item.href}
+								class:activeRoute={matchBaseRoute(
+									item.href,
+									$page.url.pathname.toString()
+								)}
+								on:click={toggleMobile}>{item.label}</a
+							>
+						</li>
+						<hr
+							style:display={!desktop ? 'block' : 'none'}
+							style="width: 80%"
+						/>
+					{:else}
+						<li style:display={desktop ? 'block' : 'none'}>{@html item.separator}</li>
+					{/if}
 				{/each}
 			</ul>
 		</nav>
@@ -151,8 +169,14 @@
 	}
 
 	button,
-	a {
+	a,
+	li {
 		color: var(--clr-text);
+		font-weight: bold;
+	}
+
+	button,
+	a {
 		padding: 0.7rem 0.3rem;
 		display: grid;
 		place-items: center;
@@ -190,7 +214,8 @@
 
 	progress {
 		width: 100%;
-		height: 6px; /* This should be the same value for header { top: } */
+		height: 6px;
+		/* This should be the same value for header { top: } */
 		top: 0;
 		border: 0;
 		position: fixed;
