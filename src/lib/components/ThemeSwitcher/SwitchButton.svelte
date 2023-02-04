@@ -31,7 +31,9 @@
 	style:color={$theme === 'dark'
 		? 'var(--accent-orange)'
 		: 'var(--accent-peachy)'}
-	on:click={switchTheme}>{@html ThemeIcon.get($theme)} {$theme.replace(/\b\w/, (c) => c.toUpperCase())}</button
+	on:click={switchTheme}
+	>{@html ThemeIcon.get($theme)}
+	{$theme.replace(/\b\w/, c => c.toUpperCase())}</button
 >
 
 <style>

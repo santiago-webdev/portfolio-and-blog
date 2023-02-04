@@ -56,7 +56,7 @@
 
 <!-- TODO(santigo-zero): False positive with blur-bg when navigating -->
 <!-- <div class:blur-bg={y || showMobile} class="header-wrapper"> -->
-<progress value=0 max=100></progress>
+<progress value="32" max="100" />
 <header
 	class:headerFixed={$page.url.pathname.toString() === `/${base}`}
 	class:headerScroll={y}
@@ -193,5 +193,18 @@
 		right: 0;
 		border: 0;
 		position: fixed;
+	}
+
+	/* TODO(santigo-zero): Make background-color match the navbar color even when scrolling */
+	progress::-webkit-progress-bar,
+	progress {
+		background: transparent;
+	}
+
+	progress::-moz-progress-bar {
+		background: var(--accent-peachy);
+	}
+	progress::-webkit-progress-value {
+		background: var(--accent-peachy);
 	}
 </style>

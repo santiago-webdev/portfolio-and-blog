@@ -181,7 +181,8 @@ br {
 	margin-top: var(--gap); /* I could use clamp in here */
 }
 
-a, button {
+a,
+button {
 	font-weight: bold;
 	font-size: clamp(0.6rem, 8vw, 1.1rem);
 	/* text-decoration: none; */
