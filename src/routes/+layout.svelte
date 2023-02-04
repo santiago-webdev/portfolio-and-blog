@@ -9,7 +9,7 @@
 
 	// import { onMount } from 'svelte';
 	import NavBar from '$lib/components/NavBar.svelte';
-	// import Footer from '$lib/components/Footer.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 
 	// let body: HTMLElement;
 	// $: pageHeight = 0;
@@ -37,7 +37,7 @@
 <div class="layout">
 	<NavBar />
 	<slot />
-	<!-- <Footer /> -->
+	<Footer />
 </div>
 
 <svelte:head>
