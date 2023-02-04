@@ -23,8 +23,8 @@
 		}
 	}
 
-  export let pageHeight = 0
-  $: pageHeightWithoutWindow = pageHeight - windowHeight
+	export let pageHeight = 0;
+	$: pageHeightWithoutWindow = pageHeight - windowHeight;
 
 	$: if ($navigating || desktop || y) {
 		showMobile = false;
@@ -192,6 +192,7 @@
 		width: 100%;
 		height: 6px; /* This should be the same value for header { top: } */
 		top: 0;
+		border: 0;
 		position: fixed;
 	}
 
@@ -204,6 +205,7 @@
 	progress::-moz-progress-bar {
 		background: var(--accent-peachy);
 	}
+
 	progress::-webkit-progress-value {
 		background: var(--accent-peachy);
 	}
