@@ -56,7 +56,11 @@
 
 <!-- TODO(santigo-zero): False positive with blur-bg when navigating -->
 <!-- <div class:blur-bg={y || showMobile} class="header-wrapper"> -->
-<header class:headerScroll={y} class:headerActive={y || showMobile}>
+<header
+	class:headerFixed={$page.url.pathname.toString() === `/${base}`}
+	class:headerScroll={y}
+	class:headerActive={y || showMobile}
+>
 	<div
 		style:flex-direction={desktop ? 'row' : 'column'}
 		class="header-container"
@@ -106,6 +110,12 @@
 		padding: 2.3rem 0;
 		transition: background-color 666ms ease-in-out 0s,
 			padding 333ms ease-in-out 0s;
+	}
+
+	.headerFixed {
+		left: 0;
+		right: 0;
+		position: fixed;
 	}
 
 	.headerScroll {
