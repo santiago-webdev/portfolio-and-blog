@@ -3,9 +3,7 @@
 	import { DESCRIPTION, TITLE, URL } from '$lib/config';
 </script>
 
-<main>
-	<Presentation />
-</main>
+<main><Presentation /></main>
 
 <svelte:head>
 	<title>{TITLE}</title>
@@ -39,7 +37,11 @@
 <style>
 	main {
 		background-color: var(--clr-background-alt);
-		height: max-content;
+		height: min(100vh, 60rem);
+		height: min(100dvh, 60rem);
 		padding-bottom: 6rem;
+
+		display: grid;
+		place-content: center;
 	}
 </style>
