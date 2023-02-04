@@ -40,5 +40,6 @@
 	main {
 		background-color: var(--clr-background-alt);
 		height: max-content;
+		padding-bottom: 6rem;
 	}
 </style>

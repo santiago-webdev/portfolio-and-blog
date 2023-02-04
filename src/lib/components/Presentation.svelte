@@ -18,6 +18,5 @@
 	section {
 		display: grid;
 		place-items: left;
-		padding: 6rem 0;
 	}
 </style>
