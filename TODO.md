@@ -12,3 +12,13 @@ devices.
 ## Style the scrollbar in webkit based browsers
 
 And don't forget to update the reset.css options related to this
+
+## Add return types to all functions
+
+It's just much clearer to read
+
+## Redo theme switcher
+
+At the moment if you set it to system the next reload of the site will change
+the button to either 'light' or 'dark', it should just stay as 'system', maybe
+just change the icon.
