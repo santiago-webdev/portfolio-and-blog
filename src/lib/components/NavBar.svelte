@@ -23,6 +23,9 @@
 		}
 	}
 
+  export let pageHeight = 0
+  $: pageHeightWithoutWindow = pageHeight - windowHeight
+
 	$: if ($navigating || desktop || y) {
 		showMobile = false;
 	}
@@ -56,12 +59,12 @@
 
 <!-- TODO(santigo-zero): False positive with blur-bg when navigating -->
 <!-- <div class:blur-bg={y || showMobile} class="header-wrapper"> -->
-<progress value="32" max="100" />
 <header
 	class:headerFixed={$page.url.pathname.toString() === `/${base}`}
 	class:headerScroll={y}
 	class:headerActive={y || showMobile}
 >
+	<progress max={pageHeightWithoutWindow} value={y} />
 	<div
 		style:flex-direction={desktop ? 'row' : 'column'}
 		class="header-container"
@@ -189,16 +192,13 @@
 		width: 100%;
 		height: 6px; /* This should be the same value for header { top: } */
 		top: 0;
-		left: 0;
-		right: 0;
-		border: 0;
 		position: fixed;
 	}
 
 	/* TODO(santigo-zero): Make background-color match the navbar color even when scrolling */
 	progress::-webkit-progress-bar,
 	progress {
-		background: transparent;
+		background: inherit;
 	}
 
 	progress::-moz-progress-bar {

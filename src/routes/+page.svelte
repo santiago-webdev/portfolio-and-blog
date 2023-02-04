@@ -3,7 +3,9 @@
 	import { DESCRIPTION, TITLE, URL } from '$lib/config';
 </script>
 
-<main><Presentation /></main>
+<main>
+	<Presentation />
+</main>
 
 <svelte:head>
 	<title>{TITLE}</title>
