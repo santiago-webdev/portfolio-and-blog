@@ -62,7 +62,7 @@
 <header
 	class:headerFixed={$page.url.pathname.toString() === `/${base}`}
 	class:headerScroll={y}
-	class:headerActive={y || showMobile}
+	class:headerActive={y > 150 || showMobile}
 >
 	<progress max={pageHeightWithoutWindow} value={y} />
 	<div
