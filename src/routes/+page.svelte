@@ -37,8 +37,8 @@
 <style>
 	main {
 		background-color: var(--clr-background-alt);
-		height: min(100vh, 60rem);
-		height: min(100dvh, 60rem);
+		height: min(100vh, 80rem);
+		height: min(100dvh, 80rem);
 		padding-bottom: 6rem;
 
 		display: grid;
