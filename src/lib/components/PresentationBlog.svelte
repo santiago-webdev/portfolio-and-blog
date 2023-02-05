@@ -1,7 +1,4 @@
 <script lang="ts">
-	// import { preloadData } from '$app/navigation';
-	// TODO(santigo-zero): Do I need to manually preload data if we are focusing the button
-	// already?
 	import { base } from '$app/paths';
 	import { onMount } from 'svelte';
 
@@ -11,8 +8,6 @@
 		let loadBlog: IntersectionObserver = new IntersectionObserver(entries => {
 			entries.some(entry => {
 				if (entry.isIntersecting) {
-					console.log('test')
-					// preloadData(`${base}/blog`);
 					blogButton.focus();
 					loadBlog.disconnect();
 				}
@@ -25,10 +20,10 @@
 
 <section class="focus" id="read-my-blog">
 	<div class="wrapper-cards">
-		<div class="hero-blog">Cards go here</div>
-		<div class="hero-blog">Cards go here</div>
-		<div class="hero-blog">Cards go here</div>
-		<div class="hero-blog">Cards go here</div>
+		<div style="background-color: blue" class="hero-blog">Cards go here</div>
+		<div style="background-color: red" class="hero-blog">Cards go here</div>
+		<div style="background-color: green" class="hero-blog">Cards go here</div>
+		<div style="background-color: yellow" class="hero-blog">Cards go here</div>
 	</div>
 	<div bind:this={blog} class="wrapper">
 		<h2>Read my blog</h2>
@@ -65,5 +60,15 @@
 		white-space: nowrap;
 
 		scroll-snap-type: x mandatory;
+	}
+
+	/* This removes the scrollbar */
+	.wrapper-cards {
+		overflow-x: scroll;
+		scrollbar-width: none;
+	}
+
+	.wrapper-cards::-webkit-scrollbar {
+		display: none;
 	}
 </style>
