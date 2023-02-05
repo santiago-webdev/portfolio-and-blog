@@ -86,11 +86,14 @@
 	button {
 		display: grid;
 		place-items: center;
-		background-color: blue;
+		background-color: var(--clr-background-alt);
+		color: var(--accent-orange);
 		border-radius: 999px;
-		height: 3rem;
-		width: 3rem;
+		border: 0.3rem solid var(--clr-background);
+		/* height: 3rem; */
+		aspect-ratio: 1;
 		margin: auto;
+		text-align: center;
 		/* outline: 3px red solid; */
 	}
 
@@ -126,7 +129,7 @@
 	}
 
 	.blog-selection {
-		background-color: red;
+		background-color: var(--clr-background-alt);
 		text-align: center;
 		width: 100%;
 		aspect-ratio: 1.618;
@@ -140,6 +143,8 @@
 		overflow-x: scroll;
 		white-space: nowrap;
 		scroll-snap-type: x mandatory;
+		border-radius: 0.8rem;
+		color: var(--clr-title);
 	}
 
 	.wrapper {
