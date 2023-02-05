@@ -2,6 +2,11 @@
 	import { base } from '$app/paths';
 	import { onMount } from 'svelte';
 
+	let leftButton =
+		'<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M15.125 21.1L6.7 12.7q-.15-.15-.212-.325q-.063-.175-.063-.375t.063-.375q.062-.175.212-.325l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L9.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"/></svg>';
+	let rightButton =
+		'<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M7.15 21.1q-.375-.375-.375-.888q0-.512.375-.887L14.475 12l-7.35-7.35q-.35-.35-.35-.875t.375-.9q.375-.375.888-.375q.512 0 .887.375l8.4 8.425q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325L8.9 21.125q-.35.35-.862.35q-.513 0-.888-.375Z"/></svg>';
+
 	const blogCards = [
 		{ title: 'Title 1', description: 'Description 1' },
 		{ title: 'Title 2', description: 'Description 2' },
@@ -32,13 +37,13 @@
 		if (direction === 'next') {
 			wrapperCards.scrollBy({
 				top: 0,
-				left: windowWidth / 2,
+				left: windowWidth / 2.3,
 				behavior: 'smooth'
 			});
 		} else if (direction === 'previous') {
 			wrapperCards.scrollBy({
 				top: 0,
-				left: (windowWidth / 2) * -1,
+				left: (windowWidth / 2.3) * -1,
 				behavior: 'smooth'
 			});
 		}
@@ -48,65 +53,98 @@
 <svelte:window bind:outerWidth={windowWidth} />
 
 <section class="focus wide" id="blog">
-	<div class="wrapper-cards" bind:this={wrapperCards}>
-		{#each blogCards as blog, i}
-			<article class="blog-selection" id={`./#recommendation-${i}`}>
-				{blog.title}
-				{blog.description}
-			</article>
-		{/each}
+	<div class="container">
+		<button class="left_button" on:click={() => gotoCard('previous')}
+			>{@html leftButton}</button
+		>
+		<div class="wrapper-cards" bind:this={wrapperCards}>
+			{#each blogCards as blog, i}
+				<article class="blog-selection" id={`./#recommendation-${i}`}>
+					{blog.title}
+					{blog.description}
+				</article>
+			{/each}
+		</div>
+		<button class="right_button" on:click={() => gotoCard('next')}
+			>{@html rightButton}</button
+		>
 	</div>
 	<div bind:this={blog} class="wrapper">
 		<h2>Read my blog</h2>
 		<p>I don't just focus in one topic, so here's a some articles</p>
 		<a bind:this={blogButton} href="{base}/blog">Go read the blog</a>
-		<button on:click={() => gotoCard('previous')}>Previous</button>
-		<button on:click={() => gotoCard('next')}>Next</button>
 	</div>
 </section>
 
 <style>
+	.container {
+		display: flex;
+		overflow-x: auto;
+		white-space: nowrap;
+	}
+
+	button {
+		display: grid;
+		place-items: center;
+		background-color: blue;
+		border-radius: 999px;
+		height: 3rem;
+		width: 3rem;
+		margin: auto;
+		/* outline: 3px red solid; */
+	}
+
+	.left_button {
+		position: relative;
+		/* top: 150%; */
+		left: 1.3rem;
+		/* transform: translateY(-50%); */
+	}
+
+	.right_button {
+		position: relative;
+		/* top: 0; */
+		right: 1.3rem;
+		/* transform: translateY(-50%); */
+	}
+
 	section {
 		min-height: min(100vh, 80rem);
 		min-height: min(100dvh, 80rem);
 		display: grid;
 		place-content: center;
-		grid-template-columns: repeat(auto-fill, minmax(min(30rem, 100%), 1fr));
 		padding: 6rem 0;
 		text-align: center;
+		grid-template-columns: minmax(min(30rem, 100%), 1fr) fit-content(100%);
+		grid-auto-flow: row dense;
+	}
+
+	@media only screen and (max-width: 750px) {
+		section {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	.blog-selection {
 		background-color: red;
-
+		text-align: center;
 		width: 100%;
-		/* height: 0; */
-		/* padding-bottom: 61.8%; */
 		aspect-ratio: 1.618;
-
 		display: inline-grid;
-
 		scroll-snap-align: center;
 		scroll-snap-type: x mandatory;
-
-		text-align: center;
 	}
 
 	.wrapper-cards {
 		width: 100%;
 		overflow-x: scroll;
 		white-space: nowrap;
-
 		scroll-snap-type: x mandatory;
 	}
 
-	/* This removes the scrollbar */
-	/* .wrapper-cards { */
-	/* 	overflow-x: scroll; */
-	/* 	scrollbar-width: none; */
-	/* } */
-
-	/* .wrapper-cards::-webkit-scrollbar { */
-	/* 	display: none; */
-	/* } */
+	.wrapper {
+		padding: 3rem 0;
+		display: grid;
+		place-content: start center;
+	}
 </style>
