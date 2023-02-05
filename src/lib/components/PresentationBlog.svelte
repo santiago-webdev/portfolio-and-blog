@@ -154,8 +154,8 @@
 
 	/* Hide scrollbar for IE, Edge and Firefox */
 	.wrapper-cards {
-		-ms-overflow-style: none;  /* IE and Edge */
-		scrollbar-width: none;  /* Firefox */
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
 	}
 
 	.wrapper {
