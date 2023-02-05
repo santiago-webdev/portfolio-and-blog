@@ -7,12 +7,12 @@
 	import { DESCRIPTION, TITLE, URL } from '$lib/config';
 	import { onMount } from 'svelte';
 
-	let loadBlog: IntersectionObserver
-	let blog: HTMLElement
-	let blogButton: HTMLElement
+	let loadBlog: IntersectionObserver;
+	let blog: HTMLElement;
+	let blogButton: HTMLElement;
 	onMount(async () => {
-		loadBlog = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
+		loadBlog = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
 				if (entry.isIntersecting) {
 					// preloadData(`${base}/blog`);
 					blogButton.focus();
@@ -34,7 +34,7 @@
 	<div class="wrapper">
 		<h2>Read my blog</h2>
 		<p>I don't just focus in one topic, so here's a some articles</p>
-		<a bind:this={blogButton} href='{base}/blog'>Go read the blog</a>
+		<a bind:this={blogButton} href="{base}/blog">Go read the blog</a>
 	</div>
 </section>
 
