@@ -40,11 +40,12 @@ html {
 	/* overflow-y: scroll; */
 	scrollbar-gutter: stable;
 	/* TODO(santigo-zero): Style this ^^ */
+
+	scroll-behavior: smooth;
 }
 
 /* Set core root defaults */
 html:focus-within {
-	scroll-behavior: smooth;
 	font-display: swap;
 }
 
