@@ -38,7 +38,7 @@
 		} else if (direction === 'previous') {
 			wrapperCards.scrollBy({
 				top: 0,
-				left: -Math.abs(windowWidth / 2),
+				left: (windowWidth / 2) * -1,
 				behavior: 'smooth'
 			});
 		}
