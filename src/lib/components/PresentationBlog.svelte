@@ -97,18 +97,18 @@
 		/* outline: 3px red solid; */
 	}
 
+	button:hover {
+		border-color: var(--accent-orange);
+	}
+
 	.left_button {
 		position: relative;
-		/* top: 150%; */
 		left: 1.3rem;
-		/* transform: translateY(-50%); */
 	}
 
 	.right_button {
 		position: relative;
-		/* top: 0; */
 		right: 1.3rem;
-		/* transform: translateY(-50%); */
 	}
 
 	section {
@@ -145,6 +145,17 @@
 		scroll-snap-type: x mandatory;
 		border-radius: 0.8rem;
 		color: var(--clr-title);
+	}
+
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.wrapper-cards::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.wrapper-cards {
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */
 	}
 
 	.wrapper {
