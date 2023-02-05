@@ -27,6 +27,7 @@
 	/* --bg-9: #040506; */
 
 	--base-dark-background-000: #16171d;
+	--base-dark-background-000-rgb: rgb(22 23 29 / 90%);
 	--base-dark-background-100: #1d1e26;
 
 	--accent-violet: #49364c;
@@ -130,6 +131,7 @@ html {
 	--clr-clicked: var(--clr-stone-700);
 
 	--clr-background: var(--base-dark-background-000);
+	--clr-background-blur: var(--base-dark-background-000-rgb);
 	--clr-background-alt: var(--base-dark-background-100);
 }
 
