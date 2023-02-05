@@ -13,7 +13,6 @@
 		let loadBlog: IntersectionObserver = new IntersectionObserver(entries => {
 			entries.some(entry => {
 				if (entry.isIntersecting) {
-					console.log('test')
 					// preloadData(`${base}/blog`);
 					blogButton.focus();
 					loadBlog.disconnect();
