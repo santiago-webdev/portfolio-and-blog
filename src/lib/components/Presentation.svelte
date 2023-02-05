@@ -8,16 +8,19 @@
 </section>
 
 <style>
+	section {
+		min-height: min(100vh, 80rem);
+		min-height: min(100dvh, 80rem);
+		padding: 6rem 0;
+		display: grid;
+		place-items: left;
+	}
+
 	h1 {
 		max-width: 21ch;
 	}
 
 	h2 {
 		max-width: 23ch;
-	}
-
-	section {
-		display: grid;
-		place-items: left;
 	}
 </style>
