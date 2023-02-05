@@ -30,6 +30,9 @@
 		showMobile = false;
 	}
 
+	// Why does the logo flickers each time we click in "About"?
+	// $: console.log('showMobile ->', showMobile)
+
 	type NavItems = Array<{
 		label?: string;
 		href?: string;
@@ -41,21 +44,9 @@
 		{ label: 'Projects', href: `${base}/projects` },
 		{ label: 'Blog', href: `${base}/blog` },
 		{ separator: '|' },
-		{ label: 'About', href: `${base}/about` },
+		{ label: 'About', href: `${base}/#read-my-blog` },
 		{ label: 'Contact', href: `${base}/contact` }
 	] satisfies NavItems;
-
-	function matchBaseRoute(navItemLink: string, currentLink: string) {
-		if (navItemLink === '/') {
-			if (navItemLink === currentLink) {
-				return true;
-			} else {
-				return false;
-			}
-		}
-
-		return currentLink.match(navItemLink) !== null;
-	}
 </script>
 
 <svelte:window
@@ -104,10 +95,6 @@
 						>
 							<a
 								href={item.href}
-								class:activeRoute={matchBaseRoute(
-									item.href,
-									$page.url.pathname.toString()
-								)}
 								on:click={toggleMobile}>{item.label}</a
 							>
 						</li>
@@ -206,13 +193,6 @@
 	/* ul > li:first-child { */
 	/* 	background-color: red; */
 	/* } */
-
-	.activeRoute {
-		background-color: #502e3a;
-		/* text-decoration: underline; */
-		/* text-decoration-thickness: 0.2ch; */
-		/* text-decoration-color: rgb(157, 161, 180); */
-	}
 
 	progress {
 		width: 100%;
