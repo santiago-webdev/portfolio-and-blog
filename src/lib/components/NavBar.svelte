@@ -113,7 +113,7 @@
 <style>
 	/* TODO(santigo-zero): Try making the fonts slightly smaller when scrolling */
 	header {
-		top: 6px;
+		top: 3px;
 		position: sticky;
 		background-color: var(--clr-background-alt);
 		padding: clamp(0.6rem, 5vw, 2.3rem) 0;
@@ -193,7 +193,7 @@
 
 	progress {
 		width: 100%;
-		height: 6px;
+		height: 3px;
 		/* This should be the same value for header { top: } */
 		top: 0;
 		border: 0;
