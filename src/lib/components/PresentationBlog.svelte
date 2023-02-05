@@ -54,8 +54,10 @@
 
 <section class="focus wide" id="blog">
 	<div class="container">
-		<button class="left_button" on:click={() => gotoCard('previous')}
-			>{@html leftButton}</button
+		<button
+			aria-label="Go to previous card in carousel"
+			class="left_button"
+			on:click={() => gotoCard('previous')}>{@html leftButton}</button
 		>
 		<div class="wrapper-cards" bind:this={wrapperCards}>
 			{#each blogCards as blog, i}
@@ -65,8 +67,10 @@
 				</article>
 			{/each}
 		</div>
-		<button class="right_button" on:click={() => gotoCard('next')}
-			>{@html rightButton}</button
+		<button
+			aria-label="Go to next card in carousel"
+			class="right_button"
+			on:click={() => gotoCard('next')}>{@html rightButton}</button
 		>
 	</div>
 	<div bind:this={blog} class="wrapper">
