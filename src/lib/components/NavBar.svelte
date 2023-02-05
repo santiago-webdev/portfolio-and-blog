@@ -93,10 +93,7 @@
 								? 'none'
 								: 'block'}
 						>
-							<a
-								href={item.href}
-								on:click={toggleMobile}>{item.label}</a
-							>
+							<a href={item.href} on:click={toggleMobile}>{item.label}</a>
 						</li>
 						<hr
 							style:display={!desktop ? 'block' : 'none'}
