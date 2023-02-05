@@ -23,8 +23,13 @@
 	});
 </script>
 
-<section id="read-my-blog">
-	<div class="hero-blog">Cards go here</div>
+<section class="focus" id="read-my-blog">
+	<div class="wrapper-cards">
+		<div class="hero-blog">Cards go here</div>
+		<div class="hero-blog">Cards go here</div>
+		<div class="hero-blog">Cards go here</div>
+		<div class="hero-blog">Cards go here</div>
+	</div>
 	<div bind:this={blog} class="wrapper">
 		<h2>Read my blog</h2>
 		<p>I don't just focus in one topic, so here's a some articles</p>
@@ -34,10 +39,31 @@
 
 <style>
 	section {
-		display: grid;
-		place-content: center;
+		/* display: grid; */
+		/* place-content: center; */
 		grid-template-columns: repeat(2, 1fr);
 		padding: 6rem 0;
 		text-align: right;
+	}
+
+	.hero-blog {
+		background-color: red;
+
+		width: 100%;
+		height: 0;
+		padding-bottom: 61.8%;
+
+		display: inline-block;
+
+		scroll-snap-align: center;
+		scroll-snap-type: x mandatory;
+	}
+
+	.wrapper-cards {
+		width: 100%;
+		overflow-x: scroll;
+		white-space: nowrap;
+
+		scroll-snap-type: x mandatory;
 	}
 </style>

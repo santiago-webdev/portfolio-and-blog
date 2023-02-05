@@ -24,5 +24,6 @@ the button to either 'light' or 'dark', it should just stay as 'system', maybe
 just change the icon.
 
 ## Make navbar blurred
+
 `backdrop-filter` causes some problems with `position`, so for now I'm not
 going to implement anything with it.
