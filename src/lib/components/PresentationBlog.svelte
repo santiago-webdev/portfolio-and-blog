@@ -47,7 +47,7 @@
 
 <svelte:window bind:outerWidth={windowWidth} />
 
-<section class="focus wide" id="read-my-blog">
+<section class="focus wide" id="blog">
 	<div class="wrapper-cards" bind:this={wrapperCards}>
 		{#each blogCards as blog, i}
 			<article class="blog-selection" id={`./#recommendation-${i}`}>

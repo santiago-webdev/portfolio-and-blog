@@ -44,7 +44,7 @@
 		{ label: 'Projects', href: `${base}/projects` },
 		{ label: 'Blog', href: `${base}/blog` },
 		{ separator: '|' },
-		{ label: 'About', href: `${base}/#read-my-blog` },
+		{ label: 'About', href: `${base}/#blog` },
 		{ label: 'Contact', href: `${base}/contact` }
 	] satisfies NavItems;
 </script>
