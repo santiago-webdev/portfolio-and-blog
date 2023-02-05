@@ -17,18 +17,12 @@
 		const resizeObserver = new ResizeObserver(entries => {
 			const entry = entries.at(0);
 
-			// Get the block size, which is basically like doing body.scrollHeight
-			// but with the difference that this will update if the height of the
-			// current page changes.
-			// pageHeight = Math.floor(entry!.contentBoxSize[0].blockSize)
 			if (entry !== undefined) {
 				pageHeight = Math.floor(entry.contentBoxSize[0].blockSize);
 			}
 		});
 
 		resizeObserver.observe(body);
-
-		// This callback cleans up the observer
 		return () => resizeObserver.unobserve(body);
 	});
 </script>
