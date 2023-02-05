@@ -1,4 +1,5 @@
 <script lang="ts">
+	import snapToggle from '$lib/components/LockSnap/store';
 	import Presentation from '$lib/components/Presentation.svelte';
 	import PresentationBlog from '$lib/components/PresentationBlog.svelte';
 	import { DESCRIPTION, TITLE, URL } from '$lib/config';
@@ -7,40 +8,48 @@
 	let currentIndex = 0;
 	let main: HTMLElement;
 	let section1: HTMLElement;
+	let observer: IntersectionObserver
 
 	let sections: Array<HTMLElement>
 
 	onMount(() => {
-		const observer = new IntersectionObserver(entries => {
-			entries.forEach(entry => {
-				if (entry.isIntersecting && entry.target.parentNode) {
-					currentIndex = Array.from(entry.target.parentNode.children).indexOf(
-						entry.target
-					);
+		sections = [ main, section1 ]
+
+		observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.isIntersecting) {
+					const currentSection = entry.target;
+					currentSection.scrollIntoView({ behavior: 'smooth', block: 'end' });
 				}
 			});
 		});
 
-		// sections = document.querySelectorAll('main, #section1');
-		sections = [
-			main,
-			section1
-		]
-
-		sections.forEach((section: any) => {
-			observer.observe(section);
-		});
+		// sections.forEach((section: any) => {
+		// 	observer.observe(section);
+		// });
 
 		window.addEventListener('wheel', event => {
-			if (event.deltaY > 0) {
-				currentIndex = Math.min(currentIndex + 1, sections.length - 1);
-			} else {
-				currentIndex = Math.max(currentIndex - 1, 0);
-			}
+			snapToggle.subscribe(value => {
+				if (value) {
+					if (event.deltaY > 0) {
+						currentIndex = Math.min(currentIndex + 1, sections.length - 1);
+					} else {
+						currentIndex = Math.max(currentIndex - 1, 0);
+					}
 
-			document.body.scrollTop = sections[currentIndex].offsetTop;
-			document.documentElement.scrollTop = sections[currentIndex].offsetTop;
+					document.body.scrollTop = sections[currentIndex].offsetTop;
+					document.documentElement.scrollTop = sections[currentIndex].offsetTop;
+				}
+			})
 		});
+
+		snapToggle.subscribe(value => {
+			if (value) {
+				sections.forEach(section => observer.observe(section));
+			} else {
+				sections.forEach(section => observer.unobserve(section));
+			}
+		})
 	});
 </script>
 
