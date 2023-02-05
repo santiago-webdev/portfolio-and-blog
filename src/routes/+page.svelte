@@ -6,6 +6,13 @@
 <main>
 	<Presentation />
 </main>
+<section class="focus" id="read-my-blog">
+	<div class="hero-blog">Cards go here</div>
+	<div class="wrapper">
+		<h2>Read my blog</h2>
+		<p>I don't just focus in one topic, so here's a some articles</p>
+	</div>
+</section>
 
 <svelte:head>
 	<title>{TITLE}</title>
@@ -46,4 +53,16 @@
 		display: grid;
 		place-content: center;
 	}
+
+	section {
+		display: grid;
+		place-content: center;
+		grid-template-columns: repeat(2, 1fr);
+		padding: 6rem 0;
+		text-align: right;
+	}
+
+	/* h2 { */
+	/* 	max-width: 23ch; */
+	/* } */
 </style>
