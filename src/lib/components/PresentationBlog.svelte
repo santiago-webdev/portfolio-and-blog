@@ -61,21 +61,22 @@
 
 <style>
 	section {
-		/* display: grid; */
-		/* place-content: center; */
-		grid-template-columns: repeat(2, 1fr);
+		display: grid;
+		place-content: center;
+		grid-template-columns: repeat(auto-fill, minmax(min(30rem, 100%), 1fr));
 		padding: 6rem 0;
-		text-align: right;
+		text-align: center;
 	}
 
 	.blog-selection {
 		background-color: red;
 
 		width: 100%;
-		height: 0;
-		padding-bottom: 61.8%;
+		/* height: 0; */
+		/* padding-bottom: 61.8%; */
+		aspect-ratio: 1.618;
 
-		display: inline-block;
+		display: inline-grid;
 
 		scroll-snap-align: center;
 		scroll-snap-type: x mandatory;
