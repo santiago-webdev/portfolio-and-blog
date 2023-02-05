@@ -164,6 +164,14 @@ h1 {
 	width: min(100% - 1rem, var(--wide) * 1.5);
 }
 
+@media screen and (min-width: 1376px) {
+  .wide {
+		border: none
+  }
+	/* TODO(santigo-zero): Remove this in production */
+	/* I need this to visualize the query in dev tools */
+}
+
 .blurbg {
 	background-color: rgb(39 39 42 / 0.3);
 	--blur: 9px;
