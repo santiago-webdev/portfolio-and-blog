@@ -1,5 +1,5 @@
 import { writable } from 'svelte/store';
 
-const snapToggle = writable<boolean>(true);
+const snapToggle = writable<boolean>(false);
 
-export default snapToggle;
+export { snapToggle };

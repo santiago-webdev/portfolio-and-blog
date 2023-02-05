@@ -1,5 +1,5 @@
 <script lang="ts">
-	import snapToggle from '$lib/components/LockSnap/store';
+	import { snapToggle } from '$lib/components/LockSnap/store';
 	import Presentation from '$lib/components/Presentation.svelte';
 	import PresentationBlog from '$lib/components/PresentationBlog.svelte';
 	import { DESCRIPTION, TITLE, URL } from '$lib/config';
@@ -8,15 +8,15 @@
 	let currentIndex = 0;
 	let main: HTMLElement;
 	let section1: HTMLElement;
-	let observer: IntersectionObserver
+	let observer: IntersectionObserver;
 
-	let sections: Array<HTMLElement>
+	let sections: Array<HTMLElement>;
 
 	onMount(() => {
-		sections = [ main, section1 ]
+		sections = [main, section1];
 
-		observer = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
+		observer = new IntersectionObserver(entries => {
+			entries.forEach(entry => {
 				if (entry.isIntersecting) {
 					const currentSection = entry.target;
 					currentSection.scrollIntoView({ behavior: 'smooth', block: 'end' });
@@ -40,7 +40,7 @@
 					document.body.scrollTop = sections[currentIndex].offsetTop;
 					document.documentElement.scrollTop = sections[currentIndex].offsetTop;
 				}
-			})
+			});
 		});
 
 		snapToggle.subscribe(value => {
@@ -49,7 +49,7 @@
 			} else {
 				sections.forEach(section => observer.unobserve(section));
 			}
-		})
+		});
 	});
 </script>
 
