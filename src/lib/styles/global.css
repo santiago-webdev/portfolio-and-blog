@@ -165,9 +165,9 @@ h1 {
 }
 
 @media screen and (min-width: 1376px) {
-  .wide {
-		border: none
-  }
+	.wide {
+		border: none;
+	}
 	/* TODO(santigo-zero): Remove this in production */
 	/* I need this to visualize the query in dev tools */
 }

@@ -30,9 +30,17 @@
 	let windowWidth: number;
 	function gotoCard(direction: string) {
 		if (direction === 'next') {
-			wrapperCards.scrollBy({ top: 0, left: windowWidth / 2, behavior: 'smooth', })
+			wrapperCards.scrollBy({
+				top: 0,
+				left: windowWidth / 2,
+				behavior: 'smooth'
+			});
 		} else if (direction === 'previous') {
-			wrapperCards.scrollBy({ top: 0, left: -Math.abs(windowWidth / 2), behavior: 'smooth', })
+			wrapperCards.scrollBy({
+				top: 0,
+				left: -Math.abs(windowWidth / 2),
+				behavior: 'smooth'
+			});
 		}
 	}
 </script>
@@ -61,6 +69,8 @@
 
 <style>
 	section {
+		min-height: min(100vh, 80rem);
+		min-height: min(100dvh, 80rem);
 		display: grid;
 		place-content: center;
 		grid-template-columns: repeat(auto-fill, minmax(min(30rem, 100%), 1fr));

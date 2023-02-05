@@ -27,3 +27,8 @@ just change the icon.
 
 `backdrop-filter` causes some problems with `position`, so for now I'm not
 going to implement anything with it.
+
+## Snap and lock into each section of the landing page
+
+With the intersection observer API implement and css snapping features it should
+be doable.
