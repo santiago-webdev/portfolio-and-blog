@@ -7,13 +7,13 @@
 	import { DESCRIPTION, TITLE, URL } from '$lib/config';
 	import { onMount } from 'svelte';
 
-	let loadBlog: IntersectionObserver;
 	let blog: HTMLElement;
 	let blogButton: HTMLElement;
 	onMount(async () => {
-		loadBlog = new IntersectionObserver(entries => {
-			entries.forEach(entry => {
+		let loadBlog: IntersectionObserver = new IntersectionObserver(entries => {
+			entries.some(entry => {
 				if (entry.isIntersecting) {
+					console.log('test')
 					// preloadData(`${base}/blog`);
 					blogButton.focus();
 					loadBlog.disconnect();
