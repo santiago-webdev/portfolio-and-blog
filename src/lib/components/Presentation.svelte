@@ -5,6 +5,10 @@
 		Here we'll discuss about web technologies and show you my projects while at
 		it.
 	</h2>
+	<br />
+	<h2>
+		🚧 Under construction 🚧
+	</h2>
 </section>
 
 <style>
