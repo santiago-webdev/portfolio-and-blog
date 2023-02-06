@@ -1,16 +1,16 @@
-@import url('https://fonts.cdnfonts.com/css/basier');
-@import url('https://fonts.cdnfonts.com/css/basier-square-narrow');
+/* @import url('https://fonts.cdnfonts.com/css/basier'); */
+/* @import url('https://fonts.cdnfonts.com/css/basier-square-narrow'); */
 
 :root {
-	--ff--dflt: 'PT Sans', system-ui, -apple-system, BlinkMacSystemFont,
-		'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-		'Segoe UI Emoji', 'Segoe UI Symbol';
-	--ff--cnds: 'PT Sans Narrow', system-ui, -apple-system, BlinkMacSystemFont,
-		'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-		'Segoe UI Emoji', 'Segoe UI Symbol';
-	--ff-circle: 'Basier Circle', sans-serif;
-	--ff-square: 'Basier Square', sans-serif;
-	--ff-square--cnds: 'Basier Square Narrow', sans-serif;
+	/* --ff--dflt: 'PT Sans', system-ui, -apple-system, BlinkMacSystemFont, */
+	/* 	'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', */
+	/* 	'Segoe UI Emoji', 'Segoe UI Symbol'; */
+	/* --ff--cnds: 'PT Sans Narrow', system-ui, -apple-system, BlinkMacSystemFont, */
+	/* 	'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', */
+	/* 	'Segoe UI Emoji', 'Segoe UI Symbol'; */
+	/* --ff-circle: 'Basier Circle', sans-serif; */
+	/* --ff-square: 'Basier Square', sans-serif; */
+	/* --ff-square--cnds: 'Basier Square Narrow', sans-serif; */
 
 	--wide: 58rem;
 	--gap: 0.66rem;
@@ -192,7 +192,7 @@ h2 {
 	/* font-weight: 200; */
 	/* font-family: var(--ff-circle); */
 	font-weight: 400;
-	font-family: var(--ff-square--cnds);
+	font-family: var(--ff--dflt);
 	font-size: clamp(1.6rem, 8vw, 2.6rem);
 
 	color: var(--clr-subtitle);
@@ -205,7 +205,7 @@ br {
 
 a,
 button {
-	font-weight: bold;
+	/* font-weight: 400; */
 	font-size: clamp(0.6rem, 8vw, 1.1rem);
 	/* text-decoration: none; */
 	/* text-decoration-thickness: 0.2ch; */

@@ -1,12 +1,6 @@
 <script lang="ts">
 	import '$lib/styles/reset.css';
 	import '$lib/styles/global.css';
-
-	import '@fontsource/pt-sans/400.css';
-	import '@fontsource/pt-sans/700.css';
-	import '@fontsource/pt-sans-narrow/400.css';
-	import '@fontsource/pt-sans-narrow/700.css';
-
 	import { onMount } from 'svelte';
 	import NavBar from '$lib/components/NavBar.svelte';
 	import Footer from '$lib/components/Footer.svelte';

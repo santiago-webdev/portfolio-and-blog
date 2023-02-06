@@ -16,8 +16,6 @@
 		"deploy": "gh-pages -d build -t true"
 	},
 	"devDependencies": {
-		"@fontsource/pt-sans": "^4.5.11",
-		"@fontsource/pt-sans-narrow": "^4.5.11",
 		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-auto": "^1.0.2",
 		"@sveltejs/adapter-static": "^1.0.5",

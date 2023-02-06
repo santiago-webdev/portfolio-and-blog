@@ -1,0 +1,12 @@
+@import 'fonts/Basier/font-face.css';
+@import 'fonts/Basier-Mono/font-face.css';
+
+:root {
+	--ff--dflt: 'Basier Circle', sans-serif;
+	--ff-square: 'Basier Square', sans-serif;
+	/* --font-fancy--circle: 'Basier Mono Circle', monospace; */
+	/* --font-fancy--square: 'Basier Mono Square', monospace; */
+	/* --ff-circle: 'Basier Circle', sans-serif; */
+	/* --ff-square: 'Basier Square', sans-serif; */
+	/* --ff-square--cnds: 'Basier Square Narrow', sans-serif; */
+}

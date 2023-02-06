@@ -74,9 +74,9 @@
 
 <style>
 	h1 {
-		font-family: var(--ff-circle);
+		/* font-family: var(--ff-circle); */
 		font-weight: bold;
-		color: var(--clr-pale-50)
+		color: var(--clr-pale-50);
 	}
 
 	.wrapper {
@@ -98,7 +98,7 @@
 		text-align: left;
 		display: grid;
 		border: 0.12rem solid var(--clr-border-background);
-		background-color: #191A21;
+		background-color: #191a21;
 		padding: 1rem;
 		gap: 1rem;
 		border-radius: 0.6rem;

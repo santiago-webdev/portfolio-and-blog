@@ -150,7 +150,7 @@
 		width: min(100% - 1rem, var(--wide) * 1.6);
 		margin-inline: auto;
 		/* height: auto; */
-		font-family: var(--ff-circle);
+		font-family: var(--ff--dflt);
 	}
 
 	.main-header {
@@ -163,7 +163,7 @@
 	a,
 	li {
 		color: var(--clr-text);
-		font-weight: bold;
+		font-weight: 500;
 	}
 
 	button,
