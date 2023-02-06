@@ -6,9 +6,7 @@
 		it.
 	</h2>
 	<br />
-	<h2>
-		🚧 Under construction 🚧
-	</h2>
+	<h2>🚧 Under construction 🚧</h2>
 </section>
 
 <style>

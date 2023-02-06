@@ -57,7 +57,9 @@
 					id="search"
 					list="search-terms"
 				/>
-				<button aria-label="Navigate to selected blog article" type="submit" > {@html search_icon} </button>
+				<button aria-label="Navigate to selected blog article" type="submit">
+					{@html search_icon}
+				</button>
 			</div>
 		</form>
 	</div>

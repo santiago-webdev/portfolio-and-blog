@@ -202,7 +202,8 @@ br {
 	margin-top: var(--gap); /* I could use clamp in here */
 }
 
-form, label {
+form,
+label {
 	font-weight: 400;
 }
 
