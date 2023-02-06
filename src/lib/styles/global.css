@@ -123,7 +123,7 @@ html {
 }
 
 [data-theme='dark'] {
-	--clr-title: var(--clr-slate-100);
+	--clr-title: var(--clr-slate-50);
 	--clr-subtitle: var(--clr-slate-200);
 	--clr-text: var(--clr-slate-250);
 
@@ -148,7 +148,7 @@ html {
 	background-color: var(--clr-title);
 }
 
-h1 {
+html {
 	font-family: var(--ff--dflt);
 }
 
@@ -192,7 +192,6 @@ h2 {
 	/* font-weight: 200; */
 	/* font-family: var(--ff-circle); */
 	font-weight: 400;
-	font-family: var(--ff--dflt);
 	font-size: clamp(1.6rem, 8vw, 2.6rem);
 
 	color: var(--clr-subtitle);
@@ -203,11 +202,15 @@ br {
 	margin-top: var(--gap); /* I could use clamp in here */
 }
 
+form, label {
+	font-weight: 400;
+}
+
 a,
 button {
 	font-weight: 400;
 	font-size: clamp(0.6rem, 8vw, 1.15rem);
-	font-family: var(--ff--dflt);
+	color: var(--clr-title);
 	/* text-decoration: none; */
 	/* text-decoration-thickness: 0.2ch; */
 	/* text-decoration-color: var(--clr-text); */

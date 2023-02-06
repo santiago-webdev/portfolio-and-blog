@@ -74,9 +74,7 @@
 
 <style>
 	h1 {
-		/* font-family: var(--ff-circle); */
 		font-weight: bold;
-		color: var(--clr-pale-50);
 	}
 
 	.wrapper {
@@ -105,12 +103,11 @@
 		/* width: min(100%, var(--wide) / 1.6); */
 		width: 100%;
 		margin-inline: auto;
-		color: var(--clr-text);
+		color: var(--clr-subtitle);
 		/* outline: 3px red solid; */
 	}
 
 	label {
-		font-weight: bold;
 		text-indent: 0.8rem;
 	}
 
@@ -119,7 +116,6 @@
 		border-radius: 0.4rem;
 		padding: 0.3rem;
 		text-indent: 0.3rem;
-		font-family: var(--ff--cnds);
 		background-color: crimson;
 		width: 100%;
 	}
@@ -149,6 +145,5 @@
 	input,
 	button {
 		font-size: clamp(1rem, 8vw, 1.6rem);
-		font-family: var(--ff--cnds);
 	}
 </style>
