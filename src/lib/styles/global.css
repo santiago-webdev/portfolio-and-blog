@@ -62,6 +62,7 @@
 	--clr-slate-500: #64748b;
 	--clr-slate-600: #475569;
 	--clr-slate-700: #334155;
+	--clr-slate-750: #293548;
 	--clr-slate-800: #1e293b;
 	--clr-slate-900: #0f172a;
 
@@ -131,6 +132,7 @@ html {
 	--clr-clicked: var(--clr-stone-700);
 
 	--clr-background: var(--base-dark-background-000);
+	--clr-border-background: var(--clr-slate-750);
 	--clr-background-blur: var(--base-dark-background-000-rgb);
 	--clr-background-alt: var(--base-dark-background-100);
 }

@@ -41,38 +41,53 @@
 	});
 </script>
 
-<form on:submit|preventDefault={handleSubmit} autocomplete="off">
-	<label for="search">TODO, filter</label>
-	<div class="search-bar">
-		<input
-			{placeholder}
-			bind:this={input}
-			bind:value
-			type="search"
-			id="search"
-			list="search-terms"
-		/>
-		<button type="submit">Read</button>
-		<datalist id="search-terms">
-			{#each filteredPosts as post}
-				<option value={post.title} />
-			{/each}
-		</datalist>
-	</div>
-</form>
-<br />
+<div class="wrapper">
+	<form on:submit|preventDefault={handleSubmit} autocomplete="off">
+		<label for="search">TODO, filter</label>
+		<div class="search-bar">
+			<input
+				{placeholder}
+				bind:this={input}
+				bind:value
+				type="search"
+				id="search"
+				list="search-terms"
+			/>
+			<button type="submit">Read</button>
+			<datalist id="search-terms">
+				{#each filteredPosts as post}
+					<option value={post.title} />
+				{/each}
+			</datalist>
+		</div>
+	</form>
+	<br />
+</div>
+<br/>
 <ListCardPost {filteredPosts} />
 
 <style>
+	.wrapper {
+		width: 100%;
+		background-color: var(--clr-background-alt);
+		padding: 2rem 0;
+	}
+
 	form {
 		display: grid;
-		border: 0.12rem solid var(--cc-bg3);
+		border: 0.12rem solid var(--clr-border-background);
+		/* margin: 1rem; */
 		padding: 1rem;
+
+
+
 		gap: 1rem;
 		border-radius: 0.6rem;
-		background-color: limegreen;
-		width: min(100%, var(--wide) / 2);
+		background-color: var(--clr-background);
+		color: var(--clr-text);
+		width: min(100%, var(--wide) / 1.6);
 		margin-inline: auto;
+		/* outline: 3px red solid; */
 	}
 
 	label {
