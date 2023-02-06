@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { snapToggle } from './store';
-	$: console.log($snapToggle);
+	// $: console.log($snapToggle);
 
 	const LockStateIcon = new Map<boolean, string>([
 		[

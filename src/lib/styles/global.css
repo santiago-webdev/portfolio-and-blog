@@ -132,7 +132,7 @@ html {
 	--clr-clicked: var(--clr-stone-700);
 
 	--clr-background: var(--base-dark-background-000);
-	--clr-border-background: var(--clr-slate-750);
+	--clr-border-background: var(--clr-slate-800);
 	--clr-background-blur: var(--base-dark-background-000-rgb);
 	--clr-background-alt: var(--base-dark-background-100);
 }
