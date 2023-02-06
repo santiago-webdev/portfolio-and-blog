@@ -56,6 +56,8 @@
 <main bind:this={main}>
 	<Presentation />
 </main>
+<!-- TODO(santigo-zero): Avoid using this br -->
+<!-- Use the options for the IntersectionObserver API to not snap immediately -->
 <br />
 <section bind:this={section1}>
 	<PresentationBlog />
