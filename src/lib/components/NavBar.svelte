@@ -41,6 +41,7 @@
 	}>;
 
 	const navItems = [
+		{ separator: '|' },
 		{ label: 'Home', href: `${base}/` },
 		{ label: 'Projects', href: `${base}/projects` },
 		{ label: 'Blog', href: `${base}/blog` },
