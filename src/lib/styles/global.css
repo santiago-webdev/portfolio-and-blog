@@ -205,8 +205,9 @@ br {
 
 a,
 button {
-	/* font-weight: 400; */
-	font-size: clamp(0.6rem, 8vw, 1.1rem);
+	font-weight: 400;
+	font-size: clamp(0.6rem, 8vw, 1.15rem);
+	font-family: var(--ff--dflt);
 	/* text-decoration: none; */
 	/* text-decoration-thickness: 0.2ch; */
 	/* text-decoration-color: var(--clr-text); */
