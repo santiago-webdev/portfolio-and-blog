@@ -61,9 +61,10 @@
 		>
 		<div class="wrapper-cards" bind:this={wrapperCards}>
 			{#each blogCards as blog, i}
-				<article class="blog-selection" id={`./#recommendation-${i}`}>
+				<article class="blog-selection">
 					{blog.title}
 					{blog.description}
+					index {i}
 				</article>
 			{/each}
 		</div>
