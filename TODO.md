@@ -32,3 +32,6 @@ going to implement anything with it.
 
 With the intersection observer API implement and css snapping features it should
 be doable.
+
+In regards to this I should make it into a store so that I can toggle this in
+each page. For now it has only been enabled in +page.svelte.
