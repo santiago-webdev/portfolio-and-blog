@@ -19,7 +19,7 @@
 			entries.forEach(entry => {
 				if (entry.isIntersecting) {
 					const currentSection = entry.target;
-					currentSection.scrollIntoView({ behavior: 'smooth', block: 'end' });
+					currentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
 				}
 			});
 		});
@@ -56,6 +56,7 @@
 <main bind:this={main}>
 	<Presentation />
 </main>
+<br />
 <section bind:this={section1}>
 	<PresentationBlog />
 </section>
