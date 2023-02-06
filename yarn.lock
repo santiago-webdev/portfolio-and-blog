@@ -309,23 +309,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-static@npm:^1.0.5":
-  version: 1.0.5
-  resolution: "@sveltejs/adapter-static@npm:1.0.5"
+"@sveltejs/adapter-static@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@sveltejs/adapter-static@npm:2.0.0"
   peerDependencies:
-    "@sveltejs/kit": ^1.0.0
-  checksum: 7131edda6712bc0f459986981dd3e6681b6b5d07c705388815a83ac1c1f1babda504f23454ce04cdc2dee3205c0c6b8fe38385fb4fa4f3bc2661b579c111dc2a
+    "@sveltejs/kit": ^1.5.0
+  checksum: 44cb5f2f2b3af579755915d674735e544d7528e2296aae0550b5e78395ff887b23e90b4babded1f8423e7aa9694664ca089d405606ad6351627335b1dc62b0a4
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:^1.2.6":
-  version: 1.2.6
-  resolution: "@sveltejs/kit@npm:1.2.6"
+"@sveltejs/kit@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "@sveltejs/kit@npm:1.5.0"
   dependencies:
     "@sveltejs/vite-plugin-svelte": ^2.0.0
     "@types/cookie": ^0.5.1
     cookie: ^0.5.0
-    devalue: ^4.2.2
+    devalue: ^4.2.3
     esm-env: ^1.0.0
     kleur: ^4.1.5
     magic-string: ^0.27.0
@@ -334,13 +334,13 @@ __metadata:
     set-cookie-parser: ^2.5.1
     sirv: ^2.0.2
     tiny-glob: ^0.2.9
-    undici: 5.16.0
+    undici: 5.18.0
   peerDependencies:
     svelte: ^3.54.0
     vite: ^4.0.0
   bin:
     svelte-kit: svelte-kit.js
-  checksum: 87e1916a18b99c6bbbec281543b25c1e2479fdbfd718508b5620ebe8f227dce0abd69672763ad5273d63830cfa0e9900e11b143b7b9fc1be86c0433f2ac04498
+  checksum: 0f9c1ebd73a0c637c7eb7577cc2fc25225c804d6a97d9b0df218bee8a36b215d97f30b8712fa772db43a9a36bb3400c2bdf4817836147d3506d01a2a521714df
   languageName: node
   linkType: hard
 
@@ -561,8 +561,8 @@ __metadata:
   dependencies:
     "@playwright/test": ^1.28.1
     "@sveltejs/adapter-auto": ^1.0.2
-    "@sveltejs/adapter-static": ^1.0.5
-    "@sveltejs/kit": ^1.2.6
+    "@sveltejs/adapter-static": ^2.0.0
+    "@sveltejs/kit": ^1.5.0
     "@typescript-eslint/eslint-plugin": ^5.45.0
     "@typescript-eslint/parser": ^5.45.0
     eslint: ^8.28.0
@@ -1025,10 +1025,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"devalue@npm:^4.2.2":
-  version: 4.2.2
-  resolution: "devalue@npm:4.2.2"
-  checksum: 68446dc824150f6712d8a655174eefe67d0e116dd1a7262f66440a2d0735fe4e1a11c5b8e434cf0245c7411a9239b02ff909a13360f18f7d6ca56b01a9c144d7
+"devalue@npm:^4.2.3":
+  version: 4.2.3
+  resolution: "devalue@npm:4.2.3"
+  checksum: 4062f098c1abddd85f0ddd711a2d6e33aa9c50c87504afe94bd602aca23d29d000cae9873a1c55ae502b42be50046d947897048266896ca692271ab601cbe97a
   languageName: node
   linkType: hard
 
@@ -3211,12 +3211,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"undici@npm:5.16.0":
-  version: 5.16.0
-  resolution: "undici@npm:5.16.0"
+"undici@npm:5.18.0":
+  version: 5.18.0
+  resolution: "undici@npm:5.18.0"
   dependencies:
     busboy: ^1.6.0
-  checksum: bc22e797cbf469351713c88af33e65e21952a75f431b78b0e75fb2411426ab38b888ec0761d4b81eadf8f6e8872ed23fb75641cc7319c6a7f08bd083899fa1cc
+  checksum: 74e0f357c376c745fcca612481a5742866ae36086ad387e626255f4c4a15fc5357d9d0fa4355271b6a633d50f5556c3e85720844680c44861c66e23afca7245f
   languageName: node
   linkType: hard
 
