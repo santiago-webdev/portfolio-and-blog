@@ -35,3 +35,7 @@ be doable.
 
 In regards to this I should make it into a store so that I can toggle this in
 each page. For now it has only been enabled in +page.svelte.
+
+## Fix bug snap lock
+
+Snap lock is enabled by default(It's being run without checking the store first)
