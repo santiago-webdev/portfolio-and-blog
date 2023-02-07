@@ -17,6 +17,7 @@
 
 <style>
 	ul {
+		padding: 2rem 0;
 		display: grid;
 		gap: var(--gap);
 		grid-template-columns: repeat(auto-fill, minmax(min(23rem, 100%), 1fr));

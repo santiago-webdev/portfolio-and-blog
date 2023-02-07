@@ -231,6 +231,11 @@ button {
 	font-size: clamp(0.8rem, 8vw, 1.3rem);
 }
 
+strong {
+	font-weight: 500;
+	color: var(--clr-title);
+}
+
 @media screen and (min-width: 700px) {
 	p,
 	label,

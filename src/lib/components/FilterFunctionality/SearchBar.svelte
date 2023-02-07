@@ -73,7 +73,6 @@
 		</datalist>
 	</form>
 </div>
-<br />
 <ListCardPost {filteredPosts} />
 
 <style>
