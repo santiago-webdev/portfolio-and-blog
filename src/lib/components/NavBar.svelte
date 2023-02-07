@@ -219,7 +219,6 @@
 		background: var(--accent-peachy);
 	}
 
-
 	a,
 	button {
 		font-weight: 400;

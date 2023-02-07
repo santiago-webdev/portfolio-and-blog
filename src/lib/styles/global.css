@@ -218,20 +218,26 @@ input,
 button {
 	color: inherit;
 	background-color: inherit;
+}
+
+p {
+	color: var(--clr-title);
+}
+
+p,
+label,
+input,
+button {
 	font-size: clamp(0.8rem, 8vw, 1.3rem);
 }
 
 @media screen and (min-width: 700px) {
+	p,
 	label,
 	input,
 	button {
-		font-size: clamp(1rem, 8vw, 1.9rem);
+		font-size: clamp(1rem, 8vw, 1.6rem);
 	}
-}
-
-p {
-	font-size: clamp(0.8rem, 8vw, 1.3rem);
-	color: var(--clr-title);
 }
 
 /* a, */
