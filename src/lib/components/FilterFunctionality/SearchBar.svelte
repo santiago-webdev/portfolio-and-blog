@@ -41,7 +41,7 @@
 	onMount(() => {
 		// TODO(santigo-zero): Add timeout before focusing
 		// TODO(santigo-zero): Add hidden label for screen readers for this input
-		input.focus();
+		window.onfocus = () => input.focus();
 	});
 </script>
 
