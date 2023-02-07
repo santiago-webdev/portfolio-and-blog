@@ -29,8 +29,8 @@
 	--base-dark-background-000: #16171d;
 	--base-dark-background-000-rgb: rgb(22 23 29 / 90%);
 	--base-dark-background-100: #1d1e26;
-	--base-dark-background-150: #181A20;
-	--base-dark-background-200: #2B2A33;
+	--base-dark-background-150: #181a20;
+	--base-dark-background-200: #2b2a33;
 
 	--accent-violet: #49364c;
 	--accent-purple: #915268;
@@ -45,7 +45,7 @@
 	--clr-pale-200: #e6e1e1;
 	--clr-pale-300: #ccc8c8;
 	--clr-pale-400: #b3afaf;
-	--clr-pale-450: #94959A;
+	--clr-pale-450: #94959a;
 	--clr-pale-500: #999696;
 	--clr-pale-600: #807d7d;
 	--clr-pale-700: #666464;
@@ -212,7 +212,6 @@ h2 {
 br {
 	margin-top: var(--gap); /* I could use clamp in here */
 }
-
 
 label,
 input,
