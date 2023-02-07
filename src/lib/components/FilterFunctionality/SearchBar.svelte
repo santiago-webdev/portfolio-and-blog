@@ -39,115 +39,94 @@
 	}
 
 	onMount(() => {
+		// TODO(santigo-zero): Add timeout before focusing
+		// TODO(santigo-zero): Add hidden label for screen readers for this input
 		input.focus();
 	});
 </script>
 
-<div class="wrapper">
-	<div class="container">
-		<h1>Blog</h1>
-		<form on:submit|preventDefault={handleSubmit} autocomplete="off">
-			<label for="search">Search for a blog post</label>
-			<div class="search-bar">
-				<input
-					{placeholder}
-					bind:this={input}
-					bind:value
-					type="search"
-					id="search"
-					list="search-terms"
-				/>
-				<button aria-label="Navigate to selected blog article" type="submit">
-					{@html search_icon}
-				</button>
-			</div>
-		</form>
-	</div>
-	<datalist id="search-terms">
-		{#each filteredPosts as post}
-			<option value={post.title} />
-		{/each}
-	</datalist>
-	<br />
+<div class="container">
+	<h1>Blog</h1>
+	<form on:submit|preventDefault={handleSubmit} autocomplete="off">
+		<button aria-label="Go to selected blog" type="submit"
+			>{@html search_icon}</button
+		>
+		<input
+			{placeholder}
+			bind:this={input}
+			bind:value
+			type="search"
+			id="search"
+			list="search-terms"
+		/>
+		<datalist id="search-terms">
+			{#each filteredPosts as post}
+				<option value={post.title} />
+			{/each}
+		</datalist>
+	</form>
 </div>
 <br />
 <ListCardPost {filteredPosts} />
 
 <style>
-	h1 {
-		font-weight: bold;
-	}
-
-	.wrapper {
+	.container {
 		width: 100%;
 		background-color: var(--clr-background-alt);
 		padding: 2rem 0;
-	}
-
-	.container {
-		width: min(100%, var(--wide));
 		margin-inline: auto;
 		display: grid;
 		gap: 3rem;
-		/* place-items: left; */
 		text-align: center;
 	}
 
 	form {
-		text-align: left;
 		display: grid;
-		border: 0.12rem solid var(--clr-border-background);
-		background-color: #191a21;
-		padding: 1rem;
-		gap: 1rem;
-		border-radius: 0.6rem;
-		/* width: min(100%, var(--wide) / 1.6); */
-		width: 100%;
+		grid-template-columns: auto 1fr;
+		overflow: hidden;
+		background-color: transparent;
+		border: var(--border-highlight-secondary);
+		color: var(--clr-text-muted);
+		border-radius: 1.1rem;
+		width: min(100% - 1rem, var(--wide));
 		margin-inline: auto;
-		color: var(--clr-subtitle);
 	}
 
-	label {
-		text-indent: 0.8rem;
+	form:focus-within {
+		border-color: transparent;
+		filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+			drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+		background-color: var(--clr-background-highlight-secondary);
+		color: var(--clr-text);
 	}
 
-	.search-bar {
-		background-color: red;
+	input:-moz-placeholder,
+	input::-moz-placeholder {
+		opacity: 1;
+	}
+
+	input,
+	button {
+		font-size: clamp(1rem, 8vw, 1.9rem);
+		color: inherit;
+		background-color: inherit;
 	}
 
 	input {
 		border: none;
-		border-radius: 0.4rem;
-		padding: 0.3rem;
-		text-indent: 0.3rem;
-		width: 100%;
+		outline: none;
+		padding: 0.6rem 1.3rem 0.6rem 0;
+		/* padding-top: 0.6rem; */
+		/* padding-bottom: 0.6rem; */
 	}
 
 	input:focus::placeholder {
 		color: transparent;
 	}
 
-	/* input:focus, */
-	/* button { */
-	/* 	outline: 0.13rem solid blue; */
-	/* } */
-
-	.search-bar {
-		display: flex;
-		flex-direction: row;
-		gap: 0.6rem;
-	}
-
 	button {
 		display: grid;
 		place-items: center;
-		border-radius: 0.4rem;
-		padding-inline: 1.5rem;
-	}
-
-	label,
-	input,
-	button {
-		font-size: clamp(1rem, 8vw, 1.6rem);
+		padding-inline: 1.3rem 0.8rem;
 	}
 </style>

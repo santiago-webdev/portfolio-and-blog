@@ -29,6 +29,8 @@
 	--base-dark-background-000: #16171d;
 	--base-dark-background-000-rgb: rgb(22 23 29 / 90%);
 	--base-dark-background-100: #1d1e26;
+	--base-dark-background-150: #181A20;
+	--base-dark-background-200: #2B2A33;
 
 	--accent-violet: #49364c;
 	--accent-purple: #915268;
@@ -43,6 +45,7 @@
 	--clr-pale-200: #e6e1e1;
 	--clr-pale-300: #ccc8c8;
 	--clr-pale-400: #b3afaf;
+	--clr-pale-450: #94959A;
 	--clr-pale-500: #999696;
 	--clr-pale-600: #807d7d;
 	--clr-pale-700: #666464;
@@ -117,6 +120,7 @@
 html::-webkit-scrollbar {
 	display: none;
 }
+
 html {
 	-ms-overflow-style: none; /* IE and Edge */
 	scrollbar-width: none; /* Firefox */
@@ -135,6 +139,13 @@ html {
 	--clr-border-background: var(--clr-slate-800);
 	--clr-background-blur: var(--base-dark-background-000-rgb);
 	--clr-background-alt: var(--base-dark-background-100);
+
+	--clr-background-highlight-secondary: var(--base-dark-background-200);
+
+	--border-highlight-secondary: 0.11rem solid var(--clr-pale-800);
+	--hover-highlight-secondary: 0.11rem solid var(--clr-hover);
+
+	--clr-text-muted: var(--clr-pale-450);
 }
 
 /* [data-theme='light'] { */
@@ -202,9 +213,11 @@ br {
 	margin-top: var(--gap); /* I could use clamp in here */
 }
 
-form,
-label {
-	font-weight: 400;
+
+label,
+input,
+button {
+	font-size: clamp(1rem, 8vw, 1.6rem);
 }
 
 a,
