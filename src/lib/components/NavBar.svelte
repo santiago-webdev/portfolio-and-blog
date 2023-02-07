@@ -218,4 +218,12 @@
 	progress::-webkit-progress-value {
 		background: var(--accent-peachy);
 	}
+
+
+	a,
+	button {
+		font-weight: 400;
+		font-size: clamp(0.6rem, 8vw, 1.15rem);
+		color: var(--clr-title);
+	}
 </style>

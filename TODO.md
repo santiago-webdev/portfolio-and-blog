@@ -39,3 +39,8 @@ each page. For now it has only been enabled in +page.svelte.
 ## Fix bug snap lock
 
 Snap lock is enabled by default(It's being run without checking the store first)
+
+## Fix font sizing with buttons and anchors
+
+I have to create some kind of style rules for navbars so that they don't get
+affect or affect other components.

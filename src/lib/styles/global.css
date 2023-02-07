@@ -195,7 +195,7 @@ html {
 h1 {
 	color: var(--clr-title);
 	font-size: clamp(3rem, 8vw, 4.6rem);
-	font-weight: 700;
+	font-weight: 600;
 	line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem));
 }
 
@@ -216,15 +216,27 @@ br {
 label,
 input,
 button {
-	font-size: clamp(1rem, 8vw, 1.6rem);
+	color: inherit;
+	background-color: inherit;
+	font-size: clamp(0.8rem, 8vw, 1.3rem);
 }
 
-a,
-button {
-	font-weight: 400;
-	font-size: clamp(0.6rem, 8vw, 1.15rem);
-	color: var(--clr-title);
-	/* text-decoration: none; */
-	/* text-decoration-thickness: 0.2ch; */
-	/* text-decoration-color: var(--clr-text); */
+@media screen and (min-width: 700px) {
+	label,
+	input,
+	button {
+		font-size: clamp(1rem, 8vw, 1.9rem);
+	}
 }
+
+p {
+	font-size: clamp(0.8rem, 8vw, 1.3rem);
+	color: var(--clr-title);
+}
+
+/* a, */
+/* button { */
+/* 	font-weight: 400; */
+/* 	font-size: clamp(0.6rem, 8vw, 1.15rem); */
+/* 	color: var(--clr-title); */
+/* } */

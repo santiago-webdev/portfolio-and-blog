@@ -47,6 +47,13 @@
 
 <div class="container">
 	<h1>Blog</h1>
+	<p>
+		In this blog you are going to find articles about <strong>Linux</strong>,
+		<strong>web technologies</strong>
+		and
+		<strong>frontend development</strong>.
+	</p>
+	<br />
 	<form on:submit|preventDefault={handleSubmit} autocomplete="off">
 		<button aria-label="Go to selected blog" type="submit"
 			>{@html search_icon}</button
@@ -70,13 +77,18 @@
 <ListCardPost {filteredPosts} />
 
 <style>
+	p {
+		width: min(33ch, 100%);
+		margin-inline: auto;
+	}
+
 	.container {
 		width: 100%;
 		background-color: var(--clr-background-alt);
 		padding: 2rem 0;
 		margin-inline: auto;
 		display: grid;
-		gap: 3rem;
+		gap: 1rem;
 		text-align: center;
 	}
 
@@ -107,7 +119,6 @@
 
 	input,
 	button {
-		font-size: clamp(1rem, 8vw, 1.9rem);
 		color: inherit;
 		background-color: inherit;
 	}
