@@ -24,7 +24,7 @@
 
 	a,
 	p {
-		color: inherit
+		color: inherit;
 	}
 
 	a:focus article {

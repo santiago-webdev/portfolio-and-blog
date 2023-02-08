@@ -66,7 +66,10 @@
 	class:headerActive={y > 150 || showMobile}
 >
 	<progress max={pageHeightWithoutWindow} value={y} />
-	<div style:flex-direction={desktop ? 'row' : 'column'} class="nav-container wider">
+	<div
+		style:flex-direction={desktop ? 'row' : 'column'}
+		class="nav-container wider"
+	>
 		<div class="main-nav">
 			<a style:visibility={showMobile ? 'hidden' : 'visible'} href="{base}/"
 				>Santiago Gonzalez</a
