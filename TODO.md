@@ -44,3 +44,7 @@ Snap lock is enabled by default(It's being run without checking the store first)
 
 I have to create some kind of style rules for navbars so that they don't get
 affect or affect other components.
+
+## Buttons in blog presentation
+
+The buttons show up above the `NavBar` when scrolling
