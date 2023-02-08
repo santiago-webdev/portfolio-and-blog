@@ -15,19 +15,20 @@
 
 <style>
 	article {
-		background-color: lightblue;
+		background-color: var(--clr-background-alt);
 		padding: 1rem;
 		border-radius: 0.6rem;
 		height: 100%;
+		color: var(--clr-text);
 	}
 
 	a,
-	p,
-	article {
-		color: black;
+	p {
+		color: inherit
 	}
 
 	a:focus article {
-		background-color: var(--cc-bg3);
+		color: var(--clr-background-alt);
+		background-color: var(--accent-orange);
 	}
 </style>
