@@ -130,6 +130,7 @@ html {
 	--clr-title: var(--clr-slate-50);
 	--clr-subtitle: var(--clr-slate-200);
 	--clr-text: var(--clr-slate-250);
+	--clr-text-muted: var(--clr-pale-450);
 
 	--clr-hover: var(--clr-slate-400);
 	--clr-hover-bg: var(--clr-slate-400);
@@ -144,8 +145,6 @@ html {
 
 	--border-highlight-secondary: 0.11rem solid var(--clr-pale-800);
 	--hover-highlight-secondary: 0.11rem solid var(--clr-hover);
-
-	--clr-text-muted: var(--clr-pale-450);
 }
 
 /* [data-theme='light'] { */

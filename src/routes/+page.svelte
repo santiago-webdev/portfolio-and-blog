@@ -57,9 +57,13 @@
 <!-- Use the options for the IntersectionObserver API to not snap immediately -->
 <br />
 <!-- <section bind:this={section1}> -->
-<section>
+<section id="blog">
 	<PresentationBlog />
 </section>
+
+<section id="projects" />
+
+<section id="contact" />
 
 <svelte:head>
 	<title>{TITLE}</title>
