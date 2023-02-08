@@ -6,7 +6,7 @@
 </script>
 
 <section role="complementary">
-	<ul class="wide">
+	<ul class="wider">
 		{#each filteredPosts as post}
 			<li>
 				<CardPost {post} />

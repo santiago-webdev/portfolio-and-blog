@@ -174,11 +174,15 @@ html {
 }
 
 .wide {
+	width: min(100% - 1rem, var(--wide));
+}
+
+.wider {
 	width: min(100% - 1rem, var(--wide) * 1.5);
 }
 
 @media screen and (min-width: 1376px) {
-	.wide {
+	.wider {
 		border: none;
 	}
 	/* TODO(santigo-zero): Remove this in production */

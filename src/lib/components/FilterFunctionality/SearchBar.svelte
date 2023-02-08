@@ -79,7 +79,7 @@
 		</p>
 		<br />
 	</div>
-	<form on:submit|preventDefault={handleSubmit} autocomplete="off">
+	<form class="wide" on:submit|preventDefault={handleSubmit} autocomplete="off">
 		<button aria-label="Go to selected blog" type="submit"
 			>{@html search_icon}</button
 		>
@@ -133,7 +133,6 @@
 		border: var(--border-highlight-secondary);
 		color: var(--clr-text-muted);
 		border-radius: 1.1rem;
-		width: min(100% - 1rem, var(--wide));
 		margin-inline: auto;
 	}
 

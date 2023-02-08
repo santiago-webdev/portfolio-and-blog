@@ -52,7 +52,7 @@
 
 <svelte:window bind:outerWidth={windowWidth} />
 
-<section class="focus wide" id="blog">
+<section class="focus wider" id="blog">
 	<div class="container">
 		<button
 			aria-label="Go to previous card in carousel"

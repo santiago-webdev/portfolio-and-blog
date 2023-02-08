@@ -40,7 +40,7 @@
 			<small>Last updated: {date}</small>
 		</div>
 	</header>
-	<article>
+	<article class="wide">
 		<slot />
 	</article>
 </main>
@@ -88,7 +88,6 @@
 	}
 
 	article {
-		width: min(100% - 1rem, var(--wide));
 		/* display: grid; */
 		/* text-align: center; */
 		/* width: 100%; */

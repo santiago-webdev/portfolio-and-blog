@@ -66,7 +66,7 @@
 	class:headerActive={y > 150 || showMobile}
 >
 	<progress max={pageHeightWithoutWindow} value={y} />
-	<div style:flex-direction={desktop ? 'row' : 'column'} class="nav-container">
+	<div style:flex-direction={desktop ? 'row' : 'column'} class="nav-container wider">
 		<div class="main-nav">
 			<a style:visibility={showMobile ? 'hidden' : 'visible'} href="{base}/"
 				>Santiago Gonzalez</a
@@ -147,7 +147,6 @@
 	.nav-container {
 		display: flex;
 		justify-content: space-between;
-		width: min(100% - 1rem, var(--wide) * 1.6);
 		margin-inline: auto;
 		/* height: auto; */
 	}

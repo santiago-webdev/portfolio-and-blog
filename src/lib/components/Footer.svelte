@@ -15,14 +15,14 @@
 </script>
 
 <footer>
-	<section class="upper">
+	<section class="upper wider">
 		<p>Designed & Built with &lt;3 by Santiago</p>
 
 		<a href="https://github.com/santigo-zero/santigo-zero.github.io"
 			>nth({ghStars}) on GitHub</a
 		>
 	</section>
-	<section class="bottom">
+	<section class="bottom wider">
 		<div class="copyright">
 			<p>© GPL-3.0 Santiago Gonzalez</p>
 			<p>2022-2023. All Rights Reserved</p>
@@ -58,7 +58,6 @@
 
 		min-height: 60px;
 		font-size: 18px;
-		width: min(100% - 3rem, var(--wide));
 		margin-inline: auto;
 	}
 
