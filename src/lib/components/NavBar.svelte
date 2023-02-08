@@ -119,7 +119,6 @@
 <style>
 	/* TODO(santigo-zero): Try making the fonts slightly smaller when scrolling */
 	nav {
-		top: 3px;
 		position: sticky;
 		background-color: var(--clr-background-alt);
 		padding: clamp(0.6rem, 5vw, 2.3rem) 0;
