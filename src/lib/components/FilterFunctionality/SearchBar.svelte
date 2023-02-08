@@ -62,7 +62,7 @@
 			if (window.innerWidth < 700) {
 				window.scrollTo(0, 0);
 			}
-		}, 100)
+		}, 100);
 
 		isCollapsed = true;
 	}
