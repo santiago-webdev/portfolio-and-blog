@@ -11,7 +11,7 @@
 	let isHollow = false;
 	let hollowPrefix = '';
 
-	const keywords = ['How ', 'How to '];
+	const keywords = ['How ', 'How to ', 'How to: '];
 	onMount(() => {
 		if (title) {
 			keywords.some(keyword => {

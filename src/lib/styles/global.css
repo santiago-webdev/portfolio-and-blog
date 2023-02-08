@@ -220,7 +220,8 @@ button {
 	background-color: inherit;
 }
 
-p {
+p,
+small {
 	color: var(--clr-title);
 }
 
