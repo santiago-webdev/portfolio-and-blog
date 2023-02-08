@@ -37,7 +37,7 @@
 				<h1>{title}</h1>
 			{/if}
 			<p>{description}</p>
-			<small>Published: {date}</small>
+			<small>Last updated: {date}</small>
 		</div>
 	</header>
 	<article>
@@ -77,7 +77,7 @@
 <style>
 	header {
 		background-color: var(--clr-background-alt);
-		padding: 3rem 1rem;
+		padding: 3rem 0;
 	}
 
 	.container-header {
@@ -89,8 +89,10 @@
 
 	article {
 		width: min(100% - 1rem, var(--wide));
+		/* display: grid; */
 		/* text-align: center; */
 		/* width: 100%; */
+		padding: 3rem 0;
 		margin-inline: auto;
 	}
 
