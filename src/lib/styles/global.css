@@ -221,7 +221,8 @@ button {
 }
 
 p,
-small {
+small,
+pre {
 	color: var(--clr-title);
 }
 

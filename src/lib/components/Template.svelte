@@ -27,15 +27,18 @@
 
 <main>
 	<header>
-		{#if isHollow}
-			<h1>
-				<Hollow text={hollowPrefix} color={'var(--clr-title)'} />
-				{title}
-			</h1>
-		{:else}
-			<h1>{title}</h1>
-		{/if}
-		<small>Published: {date}</small>
+		<div class="focus container-header">
+			{#if isHollow}
+				<h1>
+					<Hollow text={hollowPrefix} color={'var(--clr-title)'} />
+					{title}
+				</h1>
+			{:else}
+				<h1>{title}</h1>
+			{/if}
+			<p>{description}</p>
+			<small>Published: {date}</small>
+		</div>
 	</header>
 	<article>
 		<slot />
@@ -73,15 +76,27 @@
 
 <style>
 	header {
-		text-align: center;
 		background-color: var(--clr-background-alt);
 		padding: 3rem 1rem;
 	}
 
+	.container-header {
+		display: grid;
+		place-content: center;
+		gap: 1rem;
+		text-align: center;
+	}
+
 	article {
-		/* width: min(100% - 1rem, var(--wide)); */
+		width: min(100% - 1rem, var(--wide));
 		/* text-align: center; */
-		width: 100%;
-		/* margin-inline: auto; */
+		/* width: 100%; */
+		margin-inline: auto;
+	}
+
+	header p {
+		color: var(--clr-subtitle);
+		max-width: 44ch;
+		margin-inline: auto;
 	}
 </style>
