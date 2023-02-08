@@ -3,7 +3,10 @@
 	import { goto, preloadData } from '$app/navigation';
 	import ListCardPost from './ListCardPost.svelte';
 	import { Posts } from './store';
-	import { onMount } from 'svelte';
+
+	let banner: HTMLElement;
+	let isCollapsed: boolean;
+	let hideBanner: boolean;
 
 	$: filteredPosts = $Posts.filter(post => {
 		let searchTerms = `${post.description} ${post.title}`.toLowerCase();
@@ -30,7 +33,7 @@
 
 			setTimeout(() => {
 				placeholder = placeholderDefault;
-			}, 3000);
+			}, 1000);
 
 			return;
 		}
@@ -38,28 +41,43 @@
 		goto(`${base}/blog${filteredPosts[0].href}`);
 	}
 
-	onMount(() => {
-		// TODO(santigo-zero): Add timeout before focusing
-		// TODO(santigo-zero): Add hidden label for screen readers for this input
-		window.onfocus = () => input.focus();
-	});
+	function collapseBanner() {
+		let bannerHeight = banner.scrollHeight;
+		let elementTransition = banner.style.transition;
+		banner.style.transition = '';
+
+		requestAnimationFrame(function () {
+			banner.style.height = `${bannerHeight}px`;
+			banner.style.transition = elementTransition;
+
+			requestAnimationFrame(function () {
+				banner.style.height = 0 + 'px';
+			});
+		});
+
+		isCollapsed = true;
+	}
 </script>
 
 <div class="container">
-	<h1>Blog</h1>
-	<p>
-		In this blog you are going to find articles about <strong>Linux</strong>,
-		<strong>web technologies</strong>
-		and
-		<strong>frontend development</strong>.
-	</p>
-	<br />
+	<div class:hideBanner bind:this={banner} class="wrapper-header">
+		<h1>Blog</h1>
+		<p>
+			In this blog you are going to find articles about <strong>Linux</strong>,
+			<strong>web technologies</strong>
+			and
+			<strong>frontend development</strong>.
+		</p>
+		<br />
+	</div>
 	<form on:submit|preventDefault={handleSubmit} autocomplete="off">
 		<button aria-label="Go to selected blog" type="submit"
 			>{@html search_icon}</button
 		>
 		<input
 			{placeholder}
+			on:focus={() =>
+				!isCollapsed ? setTimeout(collapseBanner, 333) : undefined}
 			bind:this={input}
 			bind:value
 			type="search"
@@ -76,6 +94,13 @@
 <ListCardPost {filteredPosts} />
 
 <style>
+	.wrapper-header {
+		display: grid;
+		gap: 1rem;
+		overflow: hidden;
+		transition: height 100ms ease-in-out 0s;
+	}
+
 	p {
 		width: min(33ch, 100%);
 		margin-inline: auto;
@@ -87,7 +112,7 @@
 		padding: 2rem 0;
 		margin-inline: auto;
 		display: grid;
-		gap: 1rem;
+		/* gap: 3rem; */
 		text-align: center;
 	}
 
