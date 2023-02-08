@@ -236,18 +236,18 @@ strong {
 	color: var(--clr-title);
 }
 
-@media screen and (min-width: 700px) {
-	p,
-	label,
-	input,
-	button {
-		font-size: clamp(1rem, 8vw, 1.6rem);
-	}
-}
-
-/* a, */
-/* button { */
-/* 	font-weight: 400; */
-/* 	font-size: clamp(0.6rem, 8vw, 1.15rem); */
-/* 	color: var(--clr-title); */
+/* @media screen and (min-width: 700px) { */
+/* 	p, */
+/* 	label, */
+/* 	input, */
+/* 	button { */
+/* 		font-size: clamp(1rem, 8vw, 1.3rem); */
+/* 	} */
 /* } */
+
+a,
+button {
+	font-weight: 400;
+	font-size: clamp(0.6rem, 8vw, 1.15rem);
+	color: var(--clr-title);
+}
