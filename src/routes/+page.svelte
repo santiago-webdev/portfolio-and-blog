@@ -3,60 +3,11 @@
 	import Presentation from '$lib/components/Presentation.svelte';
 	import PresentationBlog from '$lib/components/PresentationBlog.svelte';
 	import { DESCRIPTION, TITLE, URL } from '$lib/config';
-	// import { onMount } from 'svelte';
-
-	// let currentIndex = 0;
-	// let main: HTMLElement;
-	// let section1: HTMLElement;
-	// let observer: IntersectionObserver;
-
-	// let sections: Array<HTMLElement>;
-
-	// onMount(() => {
-	// 	sections = [main, section1];
-
-	// 	observer = new IntersectionObserver(entries => {
-	// 		entries.forEach(entry => {
-	// 			if (entry.isIntersecting) {
-	// 				const currentSection = entry.target;
-	// 				currentSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-	// 			}
-	// 		});
-	// 	});
-
-	// 	window.addEventListener('wheel', event => {
-	// 		snapToggle.subscribe(value => {
-	// 			if (value) {
-	// 				if (event.deltaY > 0) {
-	// 					currentIndex = Math.min(currentIndex + 1, sections.length - 1);
-	// 				} else {
-	// 					currentIndex = Math.max(currentIndex - 1, 0);
-	// 				}
-
-	// 				document.body.scrollTop = sections[currentIndex].offsetTop;
-	// 				document.documentElement.scrollTop = sections[currentIndex].offsetTop;
-	// 			}
-	// 		});
-	// 	});
-
-	// 	snapToggle.subscribe(value => {
-	// 		if (value) {
-	// 			sections.forEach(section => observer.observe(section));
-	// 		} else {
-	// 			sections.forEach(section => observer.unobserve(section));
-	// 		}
-	// 	});
-	// });
 </script>
 
-<!-- <main bind:this={main}> -->
 <main>
 	<Presentation />
 </main>
-<!-- TODO(santigo-zero): Avoid using this br -->
-<!-- Use the options for the IntersectionObserver API to not snap immediately -->
-<br />
-<!-- <section bind:this={section1}> -->
 <section id="blog">
 	<PresentationBlog />
 </section>
@@ -97,5 +48,10 @@
 <style>
 	main {
 		background-color: var(--clr-background-alt);
+		/* min-height: min(100vh, 80rem); */
+		/* min-height: min(100dvh, 80rem); */
+		padding: 6rem 0;
+		display: grid;
+		place-content: center;
 	}
 </style>

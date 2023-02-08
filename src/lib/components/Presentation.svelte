@@ -16,9 +16,6 @@
 
 <style>
 	section {
-		min-height: min(100vh, 80rem);
-		min-height: min(100dvh, 80rem);
-		padding: 6rem 0;
 		display: grid;
 		gap: 2.2rem;
 	}

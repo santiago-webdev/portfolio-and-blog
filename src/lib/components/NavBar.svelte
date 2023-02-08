@@ -61,7 +61,6 @@
 <!-- <div class:blur-bg={y || showMobile} class="header-wrapper"> -->
 <!-- TODO(santigo-zero): Remove header and use something else. -->
 <nav
-	class:headerFixed={$page.url.pathname.toString() === `/${base}`}
 	class:headerScroll={y}
 	class:headerActive={y > 150 || showMobile}
 >
@@ -119,6 +118,7 @@
 <style>
 	/* TODO(santigo-zero): Try making the fonts slightly smaller when scrolling */
 	nav {
+		top: 0;
 		position: sticky;
 		background-color: var(--clr-background-alt);
 		padding: clamp(0.6rem, 5vw, 2.3rem) 0;
@@ -128,12 +128,6 @@
 		display: grid;
 		place-items: center stretch;
 		/* TODO(santigo-zero): Fix this */
-	}
-
-	.headerFixed {
-		left: 0;
-		right: 0;
-		position: fixed;
 	}
 
 	.headerScroll {
