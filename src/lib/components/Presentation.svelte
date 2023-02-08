@@ -35,9 +35,11 @@
 		border-radius: 1.1rem;
 		font-size: clamp(1rem, 8vw, 1.3rem);
 		padding: 1rem 2.6rem;
-
+		/* max-width: 100%; */
 		color: var(--clr-subtitle);
-		line-height: calc(1.5 * clamp(1rem, 8vw, 1.8rem));
+		/* flex: 1; */
+		text-align: center;
+		/* width: 100%; */
 	}
 
 	a:first-child {
@@ -51,10 +53,11 @@
 	}
 
 	.wrapper-links {
-		display: grid;
-		max-width: fit-content;
-		place-items: center;
+		/* background-color: red; */
+		display: flex;
+		place-items: start;
 		gap: 1.3rem;
-		grid-template-columns: repeat(2, 1fr);
+		/* justify-content: space-between; */
+		flex-wrap: wrap;
 	}
 </style>
