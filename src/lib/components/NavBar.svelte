@@ -2,7 +2,7 @@
 	import { base } from '$app/paths';
 	import { navigating, page } from '$app/stores';
 	import SwitchButton from './ThemeSwitcher/SwitchButton.svelte';
-	import SnapToggle from './LockSnap/SnapToggle.svelte';
+	// import SnapToggle from './LockSnap/SnapToggle.svelte';
 
 	let burger =
 		'<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M7.95 11.95h32m-32 12h32m-32 12h32"/></svg>';
@@ -83,9 +83,9 @@
 		</div>
 		<section style:display={showMobile || desktop ? 'grid' : 'none'}>
 			<ul style:flex-direction={desktop ? 'row' : 'column'}>
-				<li>
-					<SnapToggle />
-				</li>
+				<!-- <li> -->
+				<!-- 	<SnapToggle /> -->
+				<!-- </li> -->
 				<li>
 					<SwitchButton />
 				</li>
