@@ -55,6 +55,15 @@
 			});
 		});
 
+		setTimeout(() => {
+			// TODO(santigo-zero): Make this transition in phones smoother
+			// Becuase mobile phones have animations disabled and the keyboard pops
+			// up each time you start typing in the search bar.
+			if (window.innerWidth < 700) {
+				window.scrollTo(0, 0);
+			}
+		}, 100)
+
 		isCollapsed = true;
 	}
 </script>
