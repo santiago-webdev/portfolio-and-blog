@@ -60,7 +60,7 @@
 <!-- TODO(santigo-zero): False positive with blur-bg when navigating -->
 <!-- <div class:blur-bg={y || showMobile} class="header-wrapper"> -->
 <!-- TODO(santigo-zero): Remove header and use something else. -->
-<header
+<nav
 	class:headerFixed={$page.url.pathname.toString() === `/${base}`}
 	class:headerScroll={y}
 	class:headerActive={y > 150 || showMobile}
@@ -68,9 +68,9 @@
 	<progress max={pageHeightWithoutWindow} value={y} />
 	<div
 		style:flex-direction={desktop ? 'row' : 'column'}
-		class="header-container"
+		class="nav-container"
 	>
-		<div class="main-header">
+		<div class="main-nav">
 			<a style:visibility={showMobile ? 'hidden' : 'visible'} href="{base}/"
 				>Santiago Gonzalez</a
 			>
@@ -84,7 +84,7 @@
 				</button>
 			{/if}
 		</div>
-		<nav style:display={showMobile || desktop ? 'grid' : 'none'}>
+		<section style:display={showMobile || desktop ? 'grid' : 'none'}>
 			<ul style:flex-direction={desktop ? 'row' : 'column'}>
 				<li>
 					<SnapToggle />
@@ -112,13 +112,13 @@
 					{/if}
 				{/each}
 			</ul>
-		</nav>
+		</section>
 	</div>
-</header>
+</nav>
 
 <style>
 	/* TODO(santigo-zero): Try making the fonts slightly smaller when scrolling */
-	header {
+	nav {
 		top: 3px;
 		position: sticky;
 		background-color: var(--clr-background-alt);
@@ -147,7 +147,7 @@
 			drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 	}
 
-	.header-container {
+	.nav-container {
 		display: flex;
 		justify-content: space-between;
 		width: min(100% - 1rem, var(--wide) * 1.6);
@@ -155,7 +155,7 @@
 		/* height: auto; */
 	}
 
-	.main-header {
+	.main-nav {
 		display: flex;
 		justify-content: space-between;
 		width: 100%;
