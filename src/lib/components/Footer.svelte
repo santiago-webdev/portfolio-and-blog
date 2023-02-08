@@ -48,6 +48,7 @@
 		display: grid;
 		place-items: center;
 		gap: 2rem;
+		background-color: var(--clr-background-alt);
 	}
 
 	section {
