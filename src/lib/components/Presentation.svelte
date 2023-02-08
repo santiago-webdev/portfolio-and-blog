@@ -33,8 +33,8 @@
 
 	a {
 		border-radius: 1.1rem;
-		font-size: clamp(1.6rem, 8vw, 1.3rem);
-		padding: 1rem 2.3rem;
+		font-size: clamp(1rem, 8vw, 1.3rem);
+		padding: 1rem 2.6rem;
 
 		color: var(--clr-subtitle);
 		line-height: calc(1.5 * clamp(1rem, 8vw, 1.8rem));
