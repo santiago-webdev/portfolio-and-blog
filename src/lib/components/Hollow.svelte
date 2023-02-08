@@ -8,14 +8,7 @@
 <style>
 	span {
 		-webkit-text-stroke-color: var(--color);
-		-webkit-text-stroke-width: 0.18rem;
-		/* -webkit-text-stroke-width: 0.1rem; */
+		-webkit-text-stroke-width: 0.09rem;
 		color: transparent;
-	}
-
-	@media (max-width: 700px) {
-		span {
-			-webkit-text-stroke-width: 0.09rem;
-		}
 	}
 </style>

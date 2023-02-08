@@ -1,22 +1,46 @@
 <script lang="ts">
 	import { TITLE_BLOG_COMPOSE } from '$lib/config';
 	import { page } from '$app/stores';
+	import { onMount } from 'svelte';
+	import Hollow from './Hollow.svelte';
 
 	export let title = '';
 	export let date = '';
 	export let description = '';
+
+	let isHollow = false;
+	let hollowPrefix = '';
+
+	const keywords = ['How ', 'How to '];
+	onMount(() => {
+		if (title) {
+			keywords.some(keyword => {
+				if (title.startsWith(keyword)) {
+					hollowPrefix = keyword;
+					title = title.replace(keyword, '');
+					isHollow = true;
+				}
+			});
+		}
+	});
 </script>
 
-<article>
-	{#if title}
-		<h1>{title}</h1>
-	{/if}
-
-	{#if date}
-		<p>PUBLISHED: {date}</p>
-	{/if}
-	<slot />
-</article>
+<main>
+	<header>
+		{#if isHollow}
+			<h1>
+				<Hollow text={hollowPrefix} color={'var(--clr-title)'} />
+				{title}
+			</h1>
+		{:else}
+			<h1>{title}</h1>
+		{/if}
+		<small>Published: {date}</small>
+	</header>
+	<article>
+		<slot />
+	</article>
+</main>
 
 <svelte:head>
 	<title>{title}{TITLE_BLOG_COMPOSE}</title>
@@ -48,8 +72,16 @@
 </svelte:head>
 
 <style>
+	header {
+		text-align: center;
+		background-color: var(--clr-background-alt);
+		padding: 3rem 1rem;
+	}
+
 	article {
-		width: min(100% - 1rem, var(--wide));
-		margin-inline: auto;
+		/* width: min(100% - 1rem, var(--wide)); */
+		/* text-align: center; */
+		width: 100%;
+		/* margin-inline: auto; */
 	}
 </style>

@@ -59,6 +59,7 @@
 
 <!-- TODO(santigo-zero): False positive with blur-bg when navigating -->
 <!-- <div class:blur-bg={y || showMobile} class="header-wrapper"> -->
+<!-- TODO(santigo-zero): Remove header and use something else. -->
 <header
 	class:headerFixed={$page.url.pathname.toString() === `/${base}`}
 	class:headerScroll={y}

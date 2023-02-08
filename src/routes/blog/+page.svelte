@@ -10,3 +10,5 @@
 <svelte:head>
 	<title>{TITLE_BLOG}</title>
 </svelte:head>
+
+<!-- TODO(santigo-zero): Add meta tags -->
