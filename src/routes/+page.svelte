@@ -24,10 +24,6 @@
 			});
 		});
 
-		// sections.forEach((section: any) => {
-		// 	observer.observe(section);
-		// });
-
 		window.addEventListener('wheel', event => {
 			snapToggle.subscribe(value => {
 				if (value) {
