@@ -60,10 +60,7 @@
 <!-- TODO(santigo-zero): False positive with blur-bg when navigating -->
 <!-- <div class:blur-bg={y || showMobile} class="header-wrapper"> -->
 <!-- TODO(santigo-zero): Remove header and use something else. -->
-<nav
-	class:headerScroll={y}
-	class:headerActive={y > 150 || showMobile}
->
+<nav class:headerScroll={y} class:headerActive={y > 150 || showMobile}>
 	<progress max={pageHeightWithoutWindow} value={y} />
 	<div
 		style:flex-direction={desktop ? 'row' : 'column'}
@@ -128,6 +125,12 @@
 		display: grid;
 		place-items: center stretch;
 		/* TODO(santigo-zero): Fix this */
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		nav {
+			padding: 0.6rem 0;
+		}
 	}
 
 	.headerScroll {
