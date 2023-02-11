@@ -1,5 +1,4 @@
 <script lang="ts">
-	// import { snapToggle } from '$lib/components/LockSnap/store';
 	import Presentation from '$lib/components/Presentation.svelte';
 	import PresentationBlog from '$lib/components/PresentationBlog.svelte';
 	import { DESCRIPTION, TITLE, URL } from '$lib/config';
@@ -8,13 +7,13 @@
 <main>
 	<Presentation />
 </main>
-<section id="blog">
-	<PresentationBlog />
-</section>
-
-<section id="projects" />
-
-<section id="contact" />
+<!-- <section id="blog"> -->
+<!-- 	<PresentationBlog /> -->
+<!-- </section> -->
+<!---->
+<!-- <section id="projects" /> -->
+<!---->
+<!-- <section id="contact" /> -->
 
 <svelte:head>
 	<title>{TITLE}</title>

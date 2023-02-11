@@ -37,17 +37,17 @@
 	type NavItems = Array<{
 		label?: string;
 		href?: string;
+    decoration?: string;
 		separator?: string;
 	}>;
 
 	const navItems = [
 		{ separator: '|' },
 		{ label: 'Home', href: `${base}/` },
+    { label: 'Blog', href: `${base}/blog` },
 		{ label: 'Projects', href: `${base}/projects` },
-		{ label: 'Blog', href: `${base}/blog` },
-		{ separator: '|' },
-		{ label: 'About', href: `${base}/#blog` },
-		{ label: 'Contact', href: `${base}/contact` }
+		// { label: 'About', href: `${base}/#blog` },
+		{ label: 'Contact', href: `${base}/contact`, decoration: 'border' }
 	] satisfies NavItems;
 </script>
 
@@ -94,6 +94,7 @@
 							style:display={item.label === 'Home' && desktop
 								? 'none'
 								: 'block'}
+              class={item.decoration === 'border' ? 'decoration-border' : 'none'}
 						>
 							<a href={item.href} on:click={toggleMobile}>{item.label}</a>
 						</li>
@@ -162,9 +163,15 @@
 		color: var(--clr-text);
 	}
 
+  .decoration-border {
+		border-radius: 0.8rem;
+		border: 0.13rem solid var(--clr-text-muted);
+		color: var(--clr-text);
+  }
+
 	button,
 	a {
-		padding: 0.7rem 0.3rem;
+		padding: 0.8rem 1.6rem;
 		display: grid;
 		place-items: center;
 		border-radius: 0.6rem;
@@ -182,7 +189,7 @@
 	}
 
 	ul {
-		gap: 1rem;
+		/* gap: 1rem; */
 		display: flex;
 		flex-direction: row;
 		place-items: center;
