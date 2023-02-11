@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { Post } from '$lib/utils/utils';
-	import CardPost from './CardPost.svelte';
+	import { base } from '$app/paths';
 
 	export let filteredPosts: Array<Post>;
 </script>
@@ -9,7 +9,13 @@
 	<ul class="wider">
 		{#each filteredPosts as post}
 			<li>
-				<CardPost {post} />
+				<a href="{base}/blog{post.href}">
+					<article>
+						<h3>{post.title}</h3>
+						<i>{post.date}</i>
+						<p>{post.description}</p>
+					</article>
+				</a>
 			</li>
 		{/each}
 	</ul>
@@ -46,5 +52,23 @@
 		ul {
 			grid-template-rows: masonry;
 		}
+	}
+
+	article {
+		background-color: var(--clr-background-alt);
+		padding: 1rem;
+		border-radius: 0.6rem;
+		height: 100%;
+		color: var(--clr-text);
+	}
+
+	a,
+	p {
+		color: inherit;
+	}
+
+	a:focus article {
+		color: var(--clr-background-alt);
+		background-color: var(--accent-orange);
 	}
 </style>
