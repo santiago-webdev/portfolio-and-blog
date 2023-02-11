@@ -32,16 +32,15 @@
 		outline: none;
 	}
 
-	li:first-child,
-	li:first-child:hover,
-	ul:hover li:first-child:hover {
-		outline: 0.2rem solid var(--accent-orange);
-	}
+	/* li:first-child, */
+	/* li:first-child:hover, */
+	/* ul:hover li:first-child:hover { */
+	/* 	outline: 0.2rem solid var(--accent-orange); */
+	/* } */
 
-	li:hover {
-		/* box-shadow: 0 12px 12px rgb(0 0 0 / 0.1); */
-		outline: 0.2rem solid var(--accent-orange);
-	}
+	/* li:hover { */
+	/* 	outline: 0.2rem solid var(--accent-orange); */
+	/* } */
 
 	@supports (grid-template-rows: masonry) {
 		ul {

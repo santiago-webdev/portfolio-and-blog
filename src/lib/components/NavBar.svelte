@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { navigating, page } from '$app/stores';
+	import { navigating } from '$app/stores';
 	import SwitchButton from './ThemeSwitcher/SwitchButton.svelte';
 	// import SnapToggle from './LockSnap/SnapToggle.svelte';
 
@@ -37,14 +37,14 @@
 	type NavItems = Array<{
 		label?: string;
 		href?: string;
-    decoration?: string;
+		decoration?: string;
 		separator?: string;
 	}>;
 
 	const navItems = [
 		{ separator: '|' },
 		{ label: 'Home', href: `${base}/` },
-    { label: 'Blog', href: `${base}/blog` },
+		{ label: 'Blog', href: `${base}/blog` },
 		{ label: 'Projects', href: `${base}/projects` },
 		// { label: 'About', href: `${base}/#blog` },
 		{ label: 'Contact', href: `${base}/contact`, decoration: 'border' }
@@ -94,7 +94,9 @@
 							style:display={item.label === 'Home' && desktop
 								? 'none'
 								: 'block'}
-              class={item.decoration === 'border' ? 'decoration-border' : 'none'}
+							class={item.decoration === 'border'
+								? 'decoration-border'
+								: 'none'}
 						>
 							<a href={item.href} on:click={toggleMobile}>{item.label}</a>
 						</li>
@@ -119,7 +121,10 @@
 		top: 0;
 		position: sticky;
 		background-color: var(--clr-background-alt);
-		padding: clamp(0.6rem, 5vw, 2.3rem) 0;
+		/* padding: clamp(0.6rem, 5vw, 2.3rem) 0; */
+		/* TODO(santigo-zero): Bring height change transition back once we finish
+    everything else. */
+		padding: 0.6rem 0;
 		transition: background-color 666ms ease-in-out 0s,
 			padding 333ms ease-in-out 0s;
 
@@ -163,11 +168,11 @@
 		color: var(--clr-text);
 	}
 
-  .decoration-border {
+	.decoration-border {
 		border-radius: 0.8rem;
 		border: 0.13rem solid var(--clr-text-muted);
 		color: var(--clr-text);
-  }
+	}
 
 	button,
 	a {
