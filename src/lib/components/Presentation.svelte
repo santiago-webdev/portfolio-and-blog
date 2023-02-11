@@ -9,8 +9,8 @@
 		it.
 	</h2>
 	<div class="wrapper-links">
-		<a href="{base}/#projects">PROJECTS</a>
-		<a href="{base}/#contact">CONTACT</a>
+		<!-- <a href="{base}/#projects">PROJECTS</a> -->
+		<!-- <a href="{base}/#contact">CONTACT</a> -->
 	</div>
 </section>
 

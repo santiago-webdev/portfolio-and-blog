@@ -1,6 +1,6 @@
 <script lang="ts">
 	import Presentation from '$lib/components/Presentation.svelte';
-	import PresentationBlog from '$lib/components/PresentationBlog.svelte';
+	// import PresentationBlog from '$lib/components/PresentationBlog.svelte';
 	import { DESCRIPTION, TITLE, URL } from '$lib/config';
 </script>
 
