@@ -128,6 +128,8 @@
     transition: background-color 666ms ease-in-out 0s,
       padding 333ms ease-in-out 0s;
 
+    z-index: 999;
+
     display: grid;
     place-items: center stretch;
     /* TODO(santigo-zero): Fix this */

@@ -80,6 +80,9 @@
     border-bottom: 0.12rem solid transparent;
     background-color: var(--clr-background-alt);
     color: var(--clr-text);
+    box-shadow: 8px 6px 8px 0px rgba(0,0,0,0.29);
+    -webkit-box-shadow: 8px 6px 8px 0px rgba(0,0,0,0.29);
+    -moz-box-shadow: 8px 6px 8px 0px rgba(0,0,0,0.29);
 
     padding: 1rem;
     border-radius: 1.1rem;
