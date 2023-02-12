@@ -20,7 +20,6 @@
   let placeholder = placeholderDefault;
 
   let value = get(FilterValue);
-  let input: HTMLElement;
 
   function handleSubmit() {
     if (value.length === 0) {
@@ -81,7 +80,6 @@
       {placeholder}
       on:focus={() =>
         !isCollapsed ? setTimeout(collapseBanner, 333) : undefined}
-      bind:this={input}
       bind:value
       on:input={() => FilterValue.set(searchHandler(value))}
       type="search"
