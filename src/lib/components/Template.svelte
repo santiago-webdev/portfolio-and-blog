@@ -31,7 +31,7 @@
 
     dateRelative = relativeTime(new Date(), new Date(date));
     dateReadable = readableDate(date);
-    setTimeout(() => (showRelative = true), 3000)
+    setTimeout(() => (showRelative = true), 3000);
   });
 </script>
 
@@ -48,7 +48,7 @@
       {/if}
       <p>{description}</p>
       <hr />
-      <button on:click={() => showRelative = !showRelative}>
+      <button on:click={() => (showRelative = !showRelative)}>
         <small>
           Published: {showRelative ? dateRelative : dateReadable}
         </small>
