@@ -52,3 +52,8 @@ The buttons show up above the `NavBar` when scrolling
 ## Make hrs slightly dimmed
 
 Use a muted color for this elements and other details like separators("|", "•")
+
+## Spacing for the entire page
+
+I need to start using a defined width for all components so that the page looks
+concise.
