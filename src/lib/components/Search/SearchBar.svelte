@@ -1,8 +1,9 @@
 <script lang="ts">
+  import ListCardPost from './ListCardPost.svelte';
+  import { FilteredPosts } from './store';
+  import { searchHandler } from './utils';
   import { base } from '$app/paths';
   import { goto, preloadData } from '$app/navigation';
-  import ListCardPost from './ListCardPost.svelte';
-  import { FilteredPosts, searchHandler } from './store';
 
   let banner: HTMLElement;
   let isCollapsed: boolean;
