@@ -1,8 +1,9 @@
 <script lang="ts">
-  import { FilteredPosts } from './store';
+  import { FilteredPosts, FilterValue } from './store';
   import { searchHandler } from './utils';
   import { base } from '$app/paths';
   import { goto, preloadData } from '$app/navigation';
+  import { get } from 'svelte/store';
 
   let banner: HTMLElement;
   let isCollapsed: boolean;
@@ -18,7 +19,7 @@
   const placeholderNoInput = "You haven't searched for any post yet";
   let placeholder = placeholderDefault;
 
-  let value = '';
+  let value = get(FilterValue);
   let input: HTMLElement;
 
   function handleSubmit() {
@@ -82,9 +83,7 @@
         !isCollapsed ? setTimeout(collapseBanner, 333) : undefined}
       bind:this={input}
       bind:value
-      on:input={() => {
-        searchHandler(value);
-      }}
+      on:input={() => FilterValue.set(searchHandler(value))}
       type="search"
       id="search"
       list="search-terms"
