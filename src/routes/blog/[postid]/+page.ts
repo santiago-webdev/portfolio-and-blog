@@ -1,4 +1,4 @@
-import { Posts } from '$lib/components/FilterFunctionality/store';
+import { Posts } from '$lib/components/Search/store';
 import { get } from 'svelte/store';
 import type { PageLoad } from './$types';
 

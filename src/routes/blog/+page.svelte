@@ -1,5 +1,5 @@
 <script lang="ts">
-	import SearchBar from '$lib/components/FilterFunctionality/SearchBar.svelte';
+	import SearchBar from '$lib/components/Search/SearchBar.svelte';
 	import { TITLE_BLOG } from '$lib/config';
 </script>
 
