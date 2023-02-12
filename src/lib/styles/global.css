@@ -233,6 +233,10 @@ pre {
   color: var(--clr-title);
 }
 
+small {
+  font-size: 103%;
+}
+
 p,
 label,
 input,

@@ -37,7 +37,8 @@
         <h1>{title}</h1>
       {/if}
       <p>{description}</p>
-      <small>Last updated: {date}</small>
+      <hr />
+      <small>Published: {date}</small>
     </div>
   </header>
   <article class="wide">
@@ -98,6 +99,20 @@
   header p {
     color: var(--clr-subtitle);
     max-width: 44ch;
+    margin-inline: auto;
+  }
+
+  small {
+    color: var(--clr-text-muted);
+  }
+
+  hr {
+    display: grid;
+    place-items: center;
+    width: min(100% - 1rem);
+    border-color: var(--clr-text-muted);
+    padding: 0;
+    margin: 0;
     margin-inline: auto;
   }
 </style>
