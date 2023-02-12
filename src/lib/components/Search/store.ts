@@ -53,7 +53,7 @@ export const FilteredPosts = writable<Array<Post>>(get(Posts));
 
 export const searchHandler = async (filterPosts: string) => {
   const filtered = get(Posts).filter(post => {
-    let searchTerms = `${post.description} ${post.title}`.toLowerCase();
+    const searchTerms = `${post.description} ${post.title}`.toLowerCase();
     return searchTerms.toLowerCase().includes(filterPosts.toLowerCase());
   });
   FilteredPosts.set(filtered);

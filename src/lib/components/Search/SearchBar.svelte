@@ -2,7 +2,7 @@
   import { base } from '$app/paths';
   import { goto, preloadData } from '$app/navigation';
   import ListCardPost from './ListCardPost.svelte';
-  import { FilteredPosts, Posts, searchHandler } from './store';
+  import { FilteredPosts, searchHandler } from './store';
 
   let banner: HTMLElement;
   let isCollapsed: boolean;
@@ -28,7 +28,6 @@
       setTimeout(() => {
         placeholder = placeholderDefault;
       }, 1000);
-      j;
       return;
     }
 
