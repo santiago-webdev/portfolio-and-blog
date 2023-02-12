@@ -115,7 +115,9 @@
   .container {
     width: 100%;
     background-color: var(--clr-background-alt);
-    padding: 2rem 0;
+    border-bottom-right-radius: 1.1rem;
+    border-bottom-left-radius: 1.1rem;
+    padding: 1.5rem 0.5rem;
     margin-inline: auto;
     display: grid;
     /* gap: 3rem; */
