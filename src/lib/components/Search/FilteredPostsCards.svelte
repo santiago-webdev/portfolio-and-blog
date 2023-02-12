@@ -75,6 +75,7 @@
   }
 
   article {
+    /* TODO(santigo-zero): Make this borders smaller in mobile */
     border-top: 0.12rem solid var(--clr-border-card);
     border-left: 0.12rem solid var(--clr-border-card);
     border-right: 0.12rem solid transparent;
