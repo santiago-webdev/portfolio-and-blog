@@ -1,4 +1,4 @@
-import { FilteredPosts, FilterValue, Posts } from './store';
+import { FilteredPosts, Posts } from './store';
 import { get } from 'svelte/store';
 
 export const searchHandler = (filterPosts: string) => {

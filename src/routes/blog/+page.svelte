@@ -1,12 +1,12 @@
 <script lang="ts">
   import SearchBar from '$lib/components/Search/SearchBar.svelte';
-  import ListCardPost from '$lib/components/Search/ListCardPost.svelte';
+  import FilteredPostsCards from '$lib/components/Search/FilteredPostsCards.svelte';
   import { TITLE_BLOG } from '$lib/config';
 </script>
 
 <main>
   <SearchBar />
-  <ListCardPost />
+  <FilteredPostsCards />
 </main>
 
 <svelte:head>
