@@ -21,7 +21,7 @@
 
   let value = get(FilterValue);
 
-  function handleSubmit() {
+  async function handleSubmit() {
     if (value.length === 0) {
       placeholder = placeholderNoInput;
 
@@ -31,7 +31,7 @@
       return;
     }
 
-    goto(`${base}/blog${$FilteredPosts[0].href}`);
+    await goto(`${base}/blog${$FilteredPosts[0].href}`);
   }
 
   function collapseBanner() {
