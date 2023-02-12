@@ -12,8 +12,14 @@
         <a href="{base}/blog{post.href}">
           <article>
             <h2>{post.title}</h2>
-            <p>{post.description}</p>
-            <small>Published: {post.date}</small>
+            {#if post.description}
+              <p>{post.description}</p>
+            {:else}
+              <p>No description was given.</p>
+            {/if}
+            {#if post.date}
+              <small>Published: {post.date}</small>
+            {/if}
           </article>
         </a>
       </li>
