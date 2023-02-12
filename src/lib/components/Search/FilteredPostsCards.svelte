@@ -27,6 +27,7 @@
     display: grid;
     gap: var(--gap);
     grid-template-columns: repeat(auto-fill, minmax(min(23rem, 100%), 1fr));
+    grid-auto-rows: minmax(11.5rem, 1fr);
     margin-inline: auto;
   }
 
