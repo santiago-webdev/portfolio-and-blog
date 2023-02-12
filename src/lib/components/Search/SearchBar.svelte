@@ -1,5 +1,4 @@
 <script lang="ts">
-  import ListCardPost from './ListCardPost.svelte';
   import { FilteredPosts } from './store';
   import { searchHandler } from './utils';
   import { base } from '$app/paths';
@@ -97,7 +96,6 @@
     </datalist>
   </form>
 </div>
-<ListCardPost />
 
 <style>
   .wrapper-header {
