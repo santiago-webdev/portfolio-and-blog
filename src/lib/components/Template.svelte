@@ -9,8 +9,8 @@
   export let date = '';
   export let description = '';
 
-  let dateRelative: string;
-  let dateReadable: string;
+  let dateRelative = '';
+  let dateReadable = '';
   let showRelative = true;
 
   let isHollow = false;
