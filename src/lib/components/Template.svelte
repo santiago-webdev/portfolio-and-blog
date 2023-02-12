@@ -103,9 +103,6 @@
   }
 
   article {
-    /* display: grid; */
-    /* text-align: center; */
-    /* width: 100%; */
     padding: 3rem 0;
     margin-inline: auto;
   }
@@ -134,7 +131,7 @@
     border: 0.13rem solid transparent;
     border-radius: 0.6rem;
     padding: 0.3rem 0.6rem;
-    width: max-content;
+    max-width: max-content;
     margin-inline: auto;
   }
 
