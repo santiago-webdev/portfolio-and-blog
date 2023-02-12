@@ -1,23 +1,23 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
-	<!-- The default theme for any page is going to be dark for the sake of everyone's eyes-->
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<link href="/global.css" rel="stylesheet" type="text/css" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<script>
-			if (
-				localStorage.theme === 'dark' ||
-				(!localStorage.theme &&
-					window.matchMedia('(prefers-color-scheme: dark)').matches)
-			) {
-				document.documentElement.dataset.theme = 'dark';
-			}
-		</script>
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+  <!-- The default theme for any page is going to be dark for the sake of everyone's eyes-->
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%sveltekit.assets%/favicon.png" />
+    <link href="/global.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      if (
+        localStorage.theme === 'dark' ||
+        (!localStorage.theme &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    %sveltekit.head%
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
+  </body>
 </html>

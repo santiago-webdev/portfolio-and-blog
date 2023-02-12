@@ -2,149 +2,149 @@
 /* @import url('https://fonts.cdnfonts.com/css/basier-square-narrow'); */
 
 :root {
-	/* --ff--dflt: 'PT Sans', system-ui, -apple-system, BlinkMacSystemFont, */
-	/* 	'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', */
-	/* 	'Segoe UI Emoji', 'Segoe UI Symbol'; */
-	/* --ff--cnds: 'PT Sans Narrow', system-ui, -apple-system, BlinkMacSystemFont, */
-	/* 	'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', */
-	/* 	'Segoe UI Emoji', 'Segoe UI Symbol'; */
-	/* --ff-circle: 'Basier Circle', sans-serif; */
-	/* --ff-square: 'Basier Square', sans-serif; */
-	/* --ff-square--cnds: 'Basier Square Narrow', sans-serif; */
+  /* --ff--dflt: 'PT Sans', system-ui, -apple-system, BlinkMacSystemFont, */
+  /* 	'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', */
+  /* 	'Segoe UI Emoji', 'Segoe UI Symbol'; */
+  /* --ff--cnds: 'PT Sans Narrow', system-ui, -apple-system, BlinkMacSystemFont, */
+  /* 	'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', */
+  /* 	'Segoe UI Emoji', 'Segoe UI Symbol'; */
+  /* --ff-circle: 'Basier Circle', sans-serif; */
+  /* --ff-square: 'Basier Square', sans-serif; */
+  /* --ff-square--cnds: 'Basier Square Narrow', sans-serif; */
 
-	--wide: 58rem;
-	--gap: 0.66rem;
-	--br: 0.66rem;
+  --wide: 58rem;
+  --gap: 0.66rem;
+  --br: 0.66rem;
 
-	/* --bg-1: #16171d; */
-	/* --bg-2: #14151a; */
-	/* --bg-3: #121217; */
-	/* --bg-4: #0f1014; */
-	/* --bg-5: #0d0e11; */
-	/* --bg-6: #0b0c0f; */
-	/* --bg-7: #09090c; */
-	/* --bg-8: #070709; */
-	/* --bg-9: #040506; */
+  /* --bg-1: #16171d; */
+  /* --bg-2: #14151a; */
+  /* --bg-3: #121217; */
+  /* --bg-4: #0f1014; */
+  /* --bg-5: #0d0e11; */
+  /* --bg-6: #0b0c0f; */
+  /* --bg-7: #09090c; */
+  /* --bg-8: #070709; */
+  /* --bg-9: #040506; */
 
-	--base-dark-background-000: #16171d;
-	--base-dark-background-000-rgb: rgb(22 23 29 / 90%);
-	--base-dark-background-100: #1d1e26;
-	--base-dark-background-150: #181a20;
-	--base-dark-background-200: #2b2a33;
+  --base-dark-background-000: #16171d;
+  --base-dark-background-000-rgb: rgb(22 23 29 / 90%);
+  --base-dark-background-100: #1d1e26;
+  --base-dark-background-150: #181a20;
+  --base-dark-background-200: #2b2a33;
 
-	--accent-violet: #49364c;
-	--accent-purple: #915268;
-	--accent-peachy: #d4786c;
-	--accent-orange: #fbb163;
+  --accent-violet: #49364c;
+  --accent-purple: #915268;
+  --accent-peachy: #d4786c;
+  --accent-orange: #fbb163;
 
-	/* --bg-alt2: #2d2e34; */
-	/* --bg-alt3: #45454a; */
+  /* --bg-alt2: #2d2e34; */
+  /* --bg-alt3: #45454a; */
 
-	--clr-pale-50: #ffffff;
-	--clr-pale-100: #fffafa;
-	--clr-pale-200: #e6e1e1;
-	--clr-pale-300: #ccc8c8;
-	--clr-pale-400: #b3afaf;
-	--clr-pale-450: #94959a;
-	--clr-pale-500: #999696;
-	--clr-pale-600: #807d7d;
-	--clr-pale-700: #666464;
-	--clr-pale-800: #4c4b4b;
-	--clr-pale-900: #333232;
+  --clr-pale-50: #ffffff;
+  --clr-pale-100: #fffafa;
+  --clr-pale-200: #e6e1e1;
+  --clr-pale-300: #ccc8c8;
+  --clr-pale-400: #b3afaf;
+  --clr-pale-450: #94959a;
+  --clr-pale-500: #999696;
+  --clr-pale-600: #807d7d;
+  --clr-pale-700: #666464;
+  --clr-pale-800: #4c4b4b;
+  --clr-pale-900: #333232;
 
-	/* --fg-alt1: #9da1b4; */
-	/* --fg-alt2: hsl(227.6, 13.5%, 66%); */
+  /* --fg-alt1: #9da1b4; */
+  /* --fg-alt2: hsl(227.6, 13.5%, 66%); */
 
-	--clr-slate-50: #f8fafc;
-	--clr-slate-100: #f1f5f9;
-	--clr-slate-200: #e2e8f0;
-	--clr-slate-250: #d7dfe9;
-	--clr-slate-300: #cbd5e1;
-	--clr-slate-350: #b0bccd;
-	--clr-slate-400: #94a3b8;
-	--clr-slate-500: #64748b;
-	--clr-slate-600: #475569;
-	--clr-slate-700: #334155;
-	--clr-slate-750: #293548;
-	--clr-slate-800: #1e293b;
-	--clr-slate-900: #0f172a;
+  --clr-slate-50: #f8fafc;
+  --clr-slate-100: #f1f5f9;
+  --clr-slate-200: #e2e8f0;
+  --clr-slate-250: #d7dfe9;
+  --clr-slate-300: #cbd5e1;
+  --clr-slate-350: #b0bccd;
+  --clr-slate-400: #94a3b8;
+  --clr-slate-500: #64748b;
+  --clr-slate-600: #475569;
+  --clr-slate-700: #334155;
+  --clr-slate-750: #293548;
+  --clr-slate-800: #1e293b;
+  --clr-slate-900: #0f172a;
 
-	--clr-gray-50: #f9fafb;
-	--clr-gray-100: #f3f4f6;
-	--clr-gray-200: #e5e7eb;
-	--clr-gray-300: #d1d5db;
-	--clr-gray-400: #9ca3af;
-	--clr-gray-500: #6b7280;
-	--clr-gray-600: #4b5563;
-	--clr-gray-700: #374151;
-	--clr-gray-800: #1f2937;
-	--clr-gray-900: #111827;
+  --clr-gray-50: #f9fafb;
+  --clr-gray-100: #f3f4f6;
+  --clr-gray-200: #e5e7eb;
+  --clr-gray-300: #d1d5db;
+  --clr-gray-400: #9ca3af;
+  --clr-gray-500: #6b7280;
+  --clr-gray-600: #4b5563;
+  --clr-gray-700: #374151;
+  --clr-gray-800: #1f2937;
+  --clr-gray-900: #111827;
 
-	--clr-zinc-50: #fafafa;
-	--clr-zinc-100: #f4f4f5;
-	--clr-zinc-200: #e4e4e7;
-	--clr-zinc-300: #d4d4d8;
-	--clr-zinc-400: #a1a1aa;
-	--clr-zinc-500: #71717a;
-	--clr-zinc-600: #52525b;
-	--clr-zinc-700: #3f3f46;
-	--clr-zinc-800: #27272a;
-	--clr-zinc-900: #18181b;
+  --clr-zinc-50: #fafafa;
+  --clr-zinc-100: #f4f4f5;
+  --clr-zinc-200: #e4e4e7;
+  --clr-zinc-300: #d4d4d8;
+  --clr-zinc-400: #a1a1aa;
+  --clr-zinc-500: #71717a;
+  --clr-zinc-600: #52525b;
+  --clr-zinc-700: #3f3f46;
+  --clr-zinc-800: #27272a;
+  --clr-zinc-900: #18181b;
 
-	--clr-neutral-50: #fafafa;
-	--clr-neutral-100: #f5f5f5;
-	--clr-neutral-200: #e5e5e5;
-	--clr-neutral-300: #d4d4d4;
-	--clr-neutral-400: #a3a3a3;
-	--clr-neutral-500: #737373;
-	--clr-neutral-600: #525252;
-	--clr-neutral-700: #404040;
-	--clr-neutral-750: #333333;
-	--clr-neutral-800: #262626;
-	--clr-neutral-900: #171717;
+  --clr-neutral-50: #fafafa;
+  --clr-neutral-100: #f5f5f5;
+  --clr-neutral-200: #e5e5e5;
+  --clr-neutral-300: #d4d4d4;
+  --clr-neutral-400: #a3a3a3;
+  --clr-neutral-500: #737373;
+  --clr-neutral-600: #525252;
+  --clr-neutral-700: #404040;
+  --clr-neutral-750: #333333;
+  --clr-neutral-800: #262626;
+  --clr-neutral-900: #171717;
 
-	--clr-stone-50: #fafaf9;
-	--clr-stone-100: #f5f5f4;
-	--clr-stone-200: #e7e5e4;
-	--clr-stone-300: #d6d3d1;
-	--clr-stone-400: #a8a29e;
-	--clr-stone-500: #78716c;
-	--clr-stone-600: #57534e;
-	--clr-stone-700: #44403c;
-	--clr-stone-800: #292524;
-	--clr-stone-900: #1c1917;
+  --clr-stone-50: #fafaf9;
+  --clr-stone-100: #f5f5f4;
+  --clr-stone-200: #e7e5e4;
+  --clr-stone-300: #d6d3d1;
+  --clr-stone-400: #a8a29e;
+  --clr-stone-500: #78716c;
+  --clr-stone-600: #57534e;
+  --clr-stone-700: #44403c;
+  --clr-stone-800: #292524;
+  --clr-stone-900: #1c1917;
 }
 
 /* Hide scrollbar */
 /* TODO(santigo-zero): Avoid hiding the scrollbar. Style it properly */
 html::-webkit-scrollbar {
-	display: none;
+  display: none;
 }
 
 html {
-	-ms-overflow-style: none; /* IE and Edge */
-	scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 [data-theme='dark'] {
-	--clr-title: var(--clr-slate-50);
-	--clr-subtitle: var(--clr-slate-200);
-	--clr-text: var(--clr-slate-250);
-	--clr-text-muted: var(--clr-pale-450);
+  --clr-title: var(--clr-slate-50);
+  --clr-subtitle: var(--clr-slate-200);
+  --clr-text: var(--clr-slate-250);
+  --clr-text-muted: var(--clr-pale-450);
 
-	--clr-hover: var(--clr-slate-400);
-	--clr-hover-bg: var(--clr-slate-400);
-	--clr-clicked: var(--clr-stone-700);
+  --clr-hover: var(--clr-slate-400);
+  --clr-hover-bg: var(--clr-slate-400);
+  --clr-clicked: var(--clr-stone-700);
 
-	--clr-background: var(--base-dark-background-000);
-	--clr-border-background: var(--clr-slate-800);
-	--clr-background-blur: var(--base-dark-background-000-rgb);
-	--clr-background-alt: var(--base-dark-background-100);
+  --clr-background: var(--base-dark-background-000);
+  --clr-border-background: var(--clr-slate-800);
+  --clr-background-blur: var(--base-dark-background-000-rgb);
+  --clr-background-alt: var(--base-dark-background-100);
 
-	--clr-background-highlight-secondary: var(--base-dark-background-200);
+  --clr-background-highlight-secondary: var(--base-dark-background-200);
 
-	--border-highlight-secondary: 0.11rem solid var(--clr-pale-800);
-	--hover-highlight-secondary: 0.11rem solid var(--clr-hover);
+  --border-highlight-secondary: 0.11rem solid var(--clr-pale-800);
+  --hover-highlight-secondary: 0.11rem solid var(--clr-hover);
 }
 
 /* [data-theme='light'] { */
@@ -154,91 +154,91 @@ html {
 /* } */
 
 ::selection {
-	color: var(--clr-background);
-	background-color: var(--clr-title);
+  color: var(--clr-background);
+  background-color: var(--clr-title);
 }
 
 html {
-	font-family: var(--ff--dflt);
+  font-family: var(--ff--dflt);
 }
 
 .focus {
-	display: grid;
-	place-content: center;
+  display: grid;
+  place-content: center;
 
-	/* min-height: min(100vh, 80rem); */
-	/* min-height: min(100dvh, 80rem); */
-	width: min(100% - 1rem, var(--wide));
-	margin-inline: auto;
+  /* min-height: min(100vh, 80rem); */
+  /* min-height: min(100dvh, 80rem); */
+  width: min(100% - 1rem, var(--wide));
+  margin-inline: auto;
 }
 
 .wide {
-	width: min(100% - 1rem, var(--wide));
+  width: min(100% - 1rem, var(--wide));
 }
 
 .wider {
-	width: min(100% - 1rem, var(--wide) * 1.5);
+  width: min(100% - 1rem, var(--wide) * 1.5);
 }
 
 @media screen and (min-width: 1376px) {
-	.wider {
-		border: none;
-	}
-	/* TODO(santigo-zero): Remove this in production */
-	/* I need this to visualize the query in dev tools */
+  .wider {
+    border: none;
+  }
+  /* TODO(santigo-zero): Remove this in production */
+  /* I need this to visualize the query in dev tools */
 }
 
 .blurbg {
-	background-color: rgb(39 39 42 / 0.3);
-	--blur: 9px;
-	-webkit-backdrop-filter: blur(var(--blur));
-	backdrop-filter: blur(var(--blur));
+  background-color: rgb(39 39 42 / 0.3);
+  --blur: 9px;
+  -webkit-backdrop-filter: blur(var(--blur));
+  backdrop-filter: blur(var(--blur));
 }
 
 h1 {
-	color: var(--clr-title);
-	font-size: clamp(2.6rem, 8vw, 4.6rem);
-	font-weight: 600;
-	line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem));
+  color: var(--clr-title);
+  font-size: clamp(2.6rem, 8vw, 4.6rem);
+  font-weight: 600;
+  line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem));
 }
 
 h2 {
-	/* font-weight: 200; */
-	/* font-family: var(--ff-circle); */
-	font-weight: 400;
-	font-size: clamp(1.3rem, 8vw, 2.3rem);
+  /* font-weight: 200; */
+  /* font-family: var(--ff-circle); */
+  font-weight: 400;
+  font-size: clamp(1.3rem, 8vw, 2.3rem);
 
-	color: var(--clr-subtitle);
-	line-height: calc(1.5 * clamp(1rem, 8vw, 1.8rem));
+  color: var(--clr-subtitle);
+  line-height: calc(1.5 * clamp(1rem, 8vw, 1.8rem));
 }
 
 br {
-	margin-top: var(--gap); /* I could use clamp in here */
+  margin-top: var(--gap); /* I could use clamp in here */
 }
 
 label,
 input,
 button {
-	color: inherit;
-	background-color: inherit;
+  color: inherit;
+  background-color: inherit;
 }
 
 p,
 small,
 pre {
-	color: var(--clr-title);
+  color: var(--clr-title);
 }
 
 p,
 label,
 input,
 button {
-	font-size: clamp(0.8rem, 8vw, 1.3rem);
+  font-size: clamp(0.8rem, 8vw, 1.3rem);
 }
 
 strong {
-	font-weight: 500;
-	color: var(--clr-title);
+  font-weight: 500;
+  color: var(--clr-title);
 }
 
 /* @media screen and (min-width: 700px) { */
@@ -252,7 +252,7 @@ strong {
 
 a,
 button {
-	font-weight: 400;
-	font-size: clamp(0.6rem, 8vw, 1.15rem);
-	color: var(--clr-title);
+  font-weight: 400;
+  font-size: clamp(0.6rem, 8vw, 1.15rem);
+  color: var(--clr-title);
 }
