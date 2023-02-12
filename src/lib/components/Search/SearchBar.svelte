@@ -91,11 +91,11 @@
       id="search"
       list="search-terms"
     />
-    <!-- <datalist id="search-terms"> -->
-    <!--   {#each $FilteredPosts as post} -->
-    <!--     <option value={post.title} /> -->
-    <!--   {/each} -->
-    <!-- </datalist> -->
+    <datalist id="search-terms">
+      {#each $FilteredPosts as post}
+        <option value={post.title} />
+      {/each}
+    </datalist>
   </form>
 </div>
 
@@ -156,13 +156,13 @@
     opacity: 1;
   }
 
-  input[type='search']::-ms-clear {
-    display: none;
-  }
+  /* input[type='search']::-ms-clear { */
+  /*   display: none; */
+  /* } */
 
-  input[type='search']::-webkit-search-cancel-button {
-    display: none;
-  }
+  /* input[type='search']::-webkit-search-cancel-button { */
+  /*   display: none; */
+  /* } */
 
   input,
   button {
