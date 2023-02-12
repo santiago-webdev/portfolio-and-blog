@@ -11,7 +11,7 @@
 
   let dateRelative = '';
   let dateReadable = '';
-  let showRelative = true;
+  let showRelative = false;
 
   let isHollow = false;
   let hollowPrefix = '';
@@ -31,6 +31,7 @@
 
     dateRelative = relativeTime(new Date(), new Date(date));
     dateReadable = readableDate(date);
+    setTimeout(() => (showRelative = true), 3000)
   });
 </script>
 
@@ -47,12 +48,11 @@
       {/if}
       <p>{description}</p>
       <hr />
-      <small
-        on:mouseenter={() => (showRelative = false)}
-        on:mouseleave={() => (showRelative = true)}
-      >
-        Published: {showRelative ? dateRelative : dateReadable}
-      </small>
+      <button on:click={() => showRelative = !showRelative}>
+        <small>
+          Published: {showRelative ? dateRelative : dateReadable}
+        </small>
+      </button>
     </div>
   </header>
   <article class="wide">
@@ -128,5 +128,24 @@
     padding: 0;
     margin: 0;
     margin-inline: auto;
+  }
+
+  button {
+    border: 0.13rem solid transparent;
+    border-radius: 0.6rem;
+    padding: 0.3rem 0.6rem;
+    width: max-content;
+    margin-inline: auto;
+  }
+
+  button:hover {
+    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+      drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+    background-color: var(--clr-background-highlight-secondary);
+    color: var(--clr-text);
+    border-top: 0.13rem solid var(--clr-border-card-active);
+    border-left: 0.13rem solid var(--clr-border-card-active);
+    border-right: 0.13rem solid transparent;
+    border-bottom: 0.13rem solid transparent;
   }
 </style>
