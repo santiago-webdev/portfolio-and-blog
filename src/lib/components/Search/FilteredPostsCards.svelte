@@ -35,17 +35,17 @@
     transition: opacity 0.3s;
   }
 
-  /* ul:hover > li { */
-  /*   opacity: 0.6; */
-  /* } */
+  ul:hover > li {
+    opacity: 0.6;
+  }
 
   ul:hover > li:hover {
     opacity: 1;
   }
 
-  ul:hover > li {
-    opacity: 1;
-  }
+  /* ul:hover > li { */
+  /*   opacity: 1; */
+  /* } */
 
   /* TODO(santigo-zero): Add this programatically instead of hardcoding values */
   /* li:nth-child(4) { */
