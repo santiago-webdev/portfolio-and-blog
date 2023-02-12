@@ -3,15 +3,21 @@
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
   import Hollow from './Hollow.svelte';
+  import { readableDate, relativeTime } from '$lib/utils/utils';
 
   export let title = '';
   export let date = '';
   export let description = '';
 
+  let dateRelative: string;
+  let dateReadable: string;
+  let showRelative = true;
+
   let isHollow = false;
   let hollowPrefix = '';
 
   const keywords = ['How ', 'How to ', 'How to: '];
+
   onMount(() => {
     if (title) {
       keywords.some(keyword => {
@@ -22,6 +28,9 @@
         }
       });
     }
+
+    dateRelative = relativeTime(new Date(), new Date(date));
+    dateReadable = readableDate(date);
   });
 </script>
 
@@ -38,7 +47,12 @@
       {/if}
       <p>{description}</p>
       <hr />
-      <small>Published: {date}</small>
+      <small
+        on:mouseenter={() => (showRelative = false)}
+        on:mouseleave={() => (showRelative = true)}
+      >
+        Published: {showRelative ? dateRelative : dateReadable}
+      </small>
     </div>
   </header>
   <article class="wide">
