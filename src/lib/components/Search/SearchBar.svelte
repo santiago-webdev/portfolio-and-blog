@@ -4,6 +4,8 @@
   import { base } from '$app/paths';
   import { goto, preloadData } from '$app/navigation';
   import { get } from 'svelte/store';
+  import { onDestroy } from 'svelte';
+  import { onMount } from 'svelte';
 
   let banner: HTMLElement;
   let isCollapsed: boolean;
@@ -19,7 +21,7 @@
   const placeholderNoInput = "You haven't searched for any post yet";
   let placeholder = placeholderDefault;
 
-  let value = get(FilterValue);
+  let value = '';
 
   async function handleSubmit() {
     if (value.length === 0) {
@@ -59,6 +61,9 @@
 
     isCollapsed = true;
   }
+
+  onMount(() => (value = get(FilterValue)));
+  onDestroy(() => FilterValue.set(value));
 </script>
 
 <div class="container">
@@ -81,7 +86,7 @@
       on:focus={() =>
         !isCollapsed ? setTimeout(collapseBanner, 333) : undefined}
       bind:value
-      on:input={() => FilterValue.set(searchHandler(value))}
+      on:input={() => searchHandler(value)}
       type="search"
       id="search"
       list="search-terms"
