@@ -2,19 +2,14 @@
 	import { base } from '$app/paths';
 	import { goto, preloadData } from '$app/navigation';
 	import ListCardPost from './ListCardPost.svelte';
-	import { Posts } from './store';
+	import { FilteredPosts, Posts, searchHandler } from './store';
 
 	let banner: HTMLElement;
 	let isCollapsed: boolean;
 	let hideBanner: boolean;
 
-	$: filteredPosts = $Posts.filter(post => {
-		let searchTerms = `${post.description} ${post.title}`.toLowerCase();
-		return searchTerms.toLowerCase().includes(lc_value);
-	});
-
-	$: if (filteredPosts.length === 1) {
-		preloadData(`${base}/blog${filteredPosts[0].href}`);
+	$: if ($FilteredPosts.length === 1) {
+		preloadData(`${base}/blog${$FilteredPosts[0].href}`);
 	}
 
 	const search_icon =
@@ -25,7 +20,6 @@
 
 	let value = '';
 	let input: HTMLElement;
-	$: lc_value = value.toLowerCase();
 
 	function handleSubmit() {
 		if (value.length === 0) {
@@ -38,7 +32,7 @@
 			return;
 		}
 
-		goto(`${base}/blog${filteredPosts[0].href}`);
+		goto(`${base}/blog${$FilteredPosts[0].href}`);
 	}
 
 	function collapseBanner() {
@@ -89,18 +83,21 @@
 				!isCollapsed ? setTimeout(collapseBanner, 333) : undefined}
 			bind:this={input}
 			bind:value
+      on:input={() => {
+        searchHandler(value);
+      }}
 			type="search"
 			id="search"
 			list="search-terms"
 		/>
 		<datalist id="search-terms">
-			{#each filteredPosts as post}
+			{#each $FilteredPosts as post}
 				<option value={post.title} />
 			{/each}
 		</datalist>
 	</form>
 </div>
-<ListCardPost {filteredPosts} />
+<ListCardPost />
 
 <style>
 	.wrapper-header {

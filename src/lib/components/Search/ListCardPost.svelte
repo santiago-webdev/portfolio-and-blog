@@ -1,13 +1,13 @@
 <script lang="ts">
-	import type { Post } from '$lib/utils/utils';
 	import { base } from '$app/paths';
+	import { FilteredPosts } from './store';
 
-	export let filteredPosts: Array<Post>;
+  FilteredPosts
 </script>
 
 <section role="complementary">
 	<ul class="wider">
-		{#each filteredPosts as post}
+		{#each $FilteredPosts as post}
 			<li>
 				<a href="{base}/blog{post.href}">
 					<article>
