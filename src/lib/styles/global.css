@@ -143,11 +143,12 @@ html {
 
   --clr-background-highlight-secondary: var(--base-dark-background-200);
 
-  --border-highlight-secondary: 0.11rem solid var(--clr-pale-800);
+  /* --border-highlight-secondary: 0.13rem solid var(--clr-pale-800); */
+  --border-highlight-secondary: 0.13rem solid var(--clr-text-muted);
   /* --hover-highlight-secondary: 0.11rem solid var(--clr-hover); */
 
-  --clr-border-card: rgba(35 36 44 / 1);
-  --clr-border-card-active: rgba(49 48 57 / 1);
+  --clr-border-card: rgba(33 34 42 / 1);
+  --clr-border-card-active: rgba(47 46 55 / 1);
 }
 
 /* [data-theme='light'] { */

@@ -145,10 +145,10 @@
       drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
     background-color: var(--clr-background-highlight-secondary);
     color: var(--clr-text);
-    border-top: 0.12rem solid var(--clr-border-card-active);
-    border-left: 0.12rem solid var(--clr-border-card-active);
-    border-right: 0.12rem solid transparent;
-    border-bottom: 0.12rem solid transparent;
+    border-top: 0.13rem solid var(--clr-border-card-active);
+    border-left: 0.13rem solid var(--clr-border-card-active);
+    border-right: 0.13rem solid transparent;
+    border-bottom: 0.13rem solid transparent;
   }
 
   input:-moz-placeholder,
@@ -165,6 +165,7 @@
   /* } */
 
   input,
+  input::placeholder,
   button {
     color: inherit;
     background-color: inherit;
