@@ -144,7 +144,10 @@ html {
   --clr-background-highlight-secondary: var(--base-dark-background-200);
 
   --border-highlight-secondary: 0.11rem solid var(--clr-pale-800);
-  --hover-highlight-secondary: 0.11rem solid var(--clr-hover);
+  /* --hover-highlight-secondary: 0.11rem solid var(--clr-hover); */
+
+  --clr-border-card: rgba(35 36 44 / 1);
+  --clr-border-card-active: rgba(49 48 57 / 1);
 }
 
 /* [data-theme='light'] { */

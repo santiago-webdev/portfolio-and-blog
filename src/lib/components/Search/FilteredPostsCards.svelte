@@ -31,21 +31,40 @@
   }
 
   li {
-    border-radius: 0.6rem;
+    transition: opacity 0.3s;
   }
 
-  ul:hover li:first-child {
-    outline: none;
-  }
-
-  /* li:first-child, */
-  /* li:first-child:hover, */
-  /* ul:hover li:first-child:hover { */
-  /* 	outline: 0.2rem solid var(--accent-orange); */
+  /* ul:hover > li { */
+  /*   opacity: 0.6; */
   /* } */
 
-  /* li:hover { */
-  /* 	outline: 0.2rem solid var(--accent-orange); */
+  ul:hover > li:hover {
+    opacity: 1;
+  }
+
+  ul:hover > li {
+    opacity: 1;
+  }
+
+  /* TODO(santigo-zero): Add this programatically instead of hardcoding values */
+  /* li:nth-child(4) { */
+  /*   opacity: 0.8; */
+  /* } */
+  /**/
+  /* li:nth-child(5) { */
+  /*   opacity: 0.75; */
+  /* } */
+  /**/
+  /* li:nth-child(6) { */
+  /*   opacity: 0.7; */
+  /* } */
+  /**/
+  /* li:nth-child(7) { */
+  /*   opacity: 0.65; */
+  /* } */
+  /**/
+  /* li:nth-child(8) { */
+  /*   opacity: 0.6; */
   /* } */
 
   @supports (grid-template-rows: masonry) {
@@ -55,11 +74,32 @@
   }
 
   article {
+    border-top: 0.12rem solid var(--clr-border-card);
+    border-left: 0.12rem solid var(--clr-border-card);
+    border-right: 0.12rem solid transparent;
+    border-bottom: 0.12rem solid transparent;
     background-color: var(--clr-background-alt);
-    padding: 1rem;
-    border-radius: 0.6rem;
-    height: 100%;
     color: var(--clr-text);
+
+    padding: 1rem;
+    border-radius: 1.1rem;
+    height: 100%;
+    transition: transform 0.15s;
+  }
+
+  article:hover {
+    transform: scale(1.02);
+    background-color: var(--clr-background-highlight-secondary);
+    border-top: 0.12rem solid var(--clr-border-card-active);
+    border-left: 0.12rem solid var(--clr-border-card-active);
+    border-right: 0.12rem solid transparent;
+    border-bottom: 0.12rem solid transparent;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    article:hover {
+      transform: scale(1);
+    }
   }
 
   a,
@@ -69,6 +109,6 @@
 
   a:focus article {
     color: var(--clr-background-alt);
-    background-color: var(--accent-orange);
+    background-color: var(--accent-peachy);
   }
 </style>
