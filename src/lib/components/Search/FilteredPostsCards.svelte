@@ -11,9 +11,9 @@
       <li>
         <a href="{base}/blog{post.href}">
           <article>
-            <h3>{post.title}</h3>
-            <i>{post.date}</i>
+            <h2>{post.title}</h2>
             <p>{post.description}</p>
+            <small>Published: {post.date}</small>
           </article>
         </a>
       </li>
@@ -86,6 +86,10 @@
     -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
 
+    display: grid;
+    gap: 0.5rem;
+    grid-template-rows: auto 1fr auto;
+
     padding: 1rem;
     border-radius: 1.1rem;
     height: 100%;
@@ -115,5 +119,17 @@
   a:focus article {
     color: var(--clr-background-alt);
     background-color: var(--accent-peachy);
+  }
+
+  h2 {
+    font-weight: 500;
+    font-size: clamp(1rem, 8vw, 1.4rem);
+
+    color: var(--clr-subtitle);
+    line-height: calc(1.5 * clamp(1rem, 8vw, 1.8rem));
+  }
+
+  small {
+    color: var(--clr-text-muted);
   }
 </style>
