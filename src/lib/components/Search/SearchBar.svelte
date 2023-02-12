@@ -122,6 +122,10 @@
     display: grid;
     /* gap: 3rem; */
     text-align: center;
+
+    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
   }
 
   form {
