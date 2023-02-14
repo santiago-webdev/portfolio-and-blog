@@ -128,8 +128,8 @@
   }
 
   h2 {
-    font-weight: 500;
-    font-size: clamp(1rem, 8vw, 1.4rem);
+    font-weight: 700;
+    font-size: clamp(1rem, 8vw, 1.6rem);
 
     color: var(--clr-subtitle);
     line-height: calc(1.5 * clamp(1rem, 8vw, 1.8rem));

@@ -37,5 +37,8 @@
     "vitest": "^0.25.3"
   },
   "type": "module",
-  "packageManager": "yarn@3.3.1"
+  "packageManager": "yarn@3.3.1",
+  "dependencies": {
+    "@fontsource/pt-sans": "^4.5.11"
+  }
 }

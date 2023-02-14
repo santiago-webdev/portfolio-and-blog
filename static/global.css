@@ -3,7 +3,8 @@
 
 :root {
   --ff--dflt: 'Basier Circle', sans-serif;
-  --ff-square: 'Basier Square', sans-serif;
+  --ff--square: 'Basier Square', sans-serif;
+  --ff--header: 'PT Sans', sans-serif;
   /* --font-fancy--circle: 'Basier Mono Circle', monospace; */
   /* --font-fancy--square: 'Basier Mono Square', monospace; */
   /* --ff-circle: 'Basier Circle', sans-serif; */
