@@ -66,38 +66,35 @@
   onDestroy(() => FilterValue.set(value));
 </script>
 
-<div class="container">
-  <div class:hideBanner bind:this={banner} class="wrapper-header">
-    <h1>Blog</h1>
-    <p>
-      In this blog you are going to find articles about <strong>Linux</strong>,
-      <strong>web technologies</strong>
-      and
-      <strong>frontend development</strong>.
-    </p>
-    <br />
-  </div>
-  <form class="wide" on:submit|preventDefault={handleSubmit} autocomplete="off">
-    <button aria-label="Go to selected blog" type="submit"
-      >{@html search_icon}</button
-    >
-    <input
-      {placeholder}
-      on:focus={() =>
-        !isCollapsed ? setTimeout(collapseBanner, 333) : undefined}
-      bind:value
-      on:input={() => searchHandler(value)}
-      type="search"
-      id="search"
-      list="search-terms"
-    />
-    <datalist id="search-terms">
-      {#each $FilteredPosts as post}
-        <option value={post.title} />
-      {/each}
-    </datalist>
-  </form>
+<div class:hideBanner bind:this={banner} class="wrapper-header">
+  <h1>Blog</h1>
+  <p>
+    In this blog you are going to find articles about <strong>Linux</strong>,
+    <strong>web technologies</strong>
+    and
+    <strong>frontend development</strong>.
+  </p>
 </div>
+<form class="wide" on:submit|preventDefault={handleSubmit} autocomplete="off">
+  <button aria-label="Go to selected blog" type="submit"
+    >{@html search_icon}</button
+  >
+  <input
+    {placeholder}
+    on:focus={() =>
+      !isCollapsed ? setTimeout(collapseBanner, 333) : undefined}
+    bind:value
+    on:input={() => searchHandler(value)}
+    type="search"
+    id="search"
+    list="search-terms"
+  />
+  <datalist id="search-terms">
+    {#each $FilteredPosts as post}
+      <option value={post.title} />
+    {/each}
+  </datalist>
+</form>
 
 <style>
   .wrapper-header {
@@ -105,27 +102,12 @@
     gap: 1rem;
     overflow: hidden;
     transition: height 100ms ease-in-out 0s;
+    padding-bottom: 1rem;
   }
 
   p {
     width: min(33ch, 100%);
     margin-inline: auto;
-  }
-
-  .container {
-    width: 100%;
-    background-color: var(--clr-background-alt);
-    border-bottom-right-radius: 1.1rem;
-    border-bottom-left-radius: 1.1rem;
-    padding: 1.5rem 0.5rem;
-    margin-inline: auto;
-    display: grid;
-    /* gap: 3rem; */
-    text-align: center;
-
-    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
   }
 
   form {

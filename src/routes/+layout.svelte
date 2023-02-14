@@ -6,6 +6,8 @@
   import Footer from '$lib/components/Footer.svelte';
   import Transition from '$lib/components/Transition.svelte';
   import { page } from '$app/stores';
+  import '@fontsource/pt-sans/400.css';
+  import '@fontsource/pt-sans/700.css';
 
   let body: HTMLElement;
   $: pageHeight = 0;

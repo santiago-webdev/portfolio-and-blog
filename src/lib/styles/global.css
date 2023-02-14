@@ -196,6 +196,22 @@ html {
   backdrop-filter: blur(var(--blur));
 }
 
+.banner {
+  width: 100%;
+  background-color: var(--clr-background-alt);
+  border-bottom-right-radius: 1.1rem;
+  border-bottom-left-radius: 1.1rem;
+  padding: 1.5rem 0.5rem;
+  gap: 2rem;
+  margin-inline: auto;
+  display: grid;
+  text-align: center;
+
+  box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
+}
+
 h1,
 h2,
 h3 {

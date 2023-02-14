@@ -37,8 +37,7 @@
 </script>
 
 <main>
-  <header>
-    <div class="focus container-header">
+  <header class="banner">
       {#if isHollow}
         <h1>
           <Hollow text={hollowPrefix} color={'var(--clr-title)'} />
@@ -48,13 +47,11 @@
         <h1>{title}</h1>
       {/if}
       <p>{description}</p>
-      <hr />
       <button on:click={() => (showRelative = !showRelative)}>
         <small>
           Published: {showRelative ? dateRelative : dateReadable}
         </small>
       </button>
-    </div>
   </header>
   <article class="wide">
     <slot />
@@ -91,18 +88,6 @@
 </svelte:head>
 
 <style>
-  header {
-    background-color: var(--clr-background-alt);
-    padding: 3rem 0;
-  }
-
-  .container-header {
-    display: grid;
-    place-content: center;
-    gap: 1rem;
-    text-align: center;
-  }
-
   article {
     padding: 3rem 0;
     margin-inline: auto;
@@ -116,16 +101,6 @@
 
   small {
     color: var(--clr-text-muted);
-  }
-
-  hr {
-    display: grid;
-    place-items: center;
-    width: min(100% - 1rem);
-    border-color: var(--clr-text-muted);
-    padding: 0;
-    margin: 0;
-    margin-inline: auto;
   }
 
   button {

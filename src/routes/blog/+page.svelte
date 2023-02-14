@@ -2,12 +2,12 @@
   import SearchBar from '$lib/components/Search/SearchBar.svelte';
   import FilteredPostsCards from '$lib/components/Search/FilteredPostsCards.svelte';
   import { DESCRIPTION, TITLE_BLOG, URL_BLOG } from '$lib/config';
-  import '@fontsource/pt-sans/400.css';
-  import '@fontsource/pt-sans/700.css';
 </script>
 
 <main>
-  <SearchBar />
+  <div class="banner">
+    <SearchBar />
+  </div>
   <FilteredPostsCards />
 </main>
 
