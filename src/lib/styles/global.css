@@ -184,6 +184,26 @@ html {
   -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
 }
 
+.act {
+  border: 0.13rem solid transparent;
+  border-radius: 1.1rem;
+  background-color: transparent;
+}
+
+.act:focus-within {
+  color: var(--clr-text);
+}
+
+.act:hover {
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  background-color: var(--clr-background-highlight-secondary);
+  border-top: 0.13rem solid var(--clr-border-card-active);
+  border-left: 0.13rem solid var(--clr-border-card-active);
+  border-right: 0.13rem solid transparent;
+  border-bottom: 0.13rem solid transparent;
+}
+
 h1,
 h2,
 h3 {

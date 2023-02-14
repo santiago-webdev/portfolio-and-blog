@@ -58,10 +58,7 @@
         <small> 🚧 Authorized personnel only 🚧 </small>
       </div>
     {/if}
-    <button
-      style="font-size: unset"
-      on:click={() => (showRelative = !showRelative)}
-    >
+    <button class="act" on:click={() => (showRelative = !showRelative)}>
       <small>
         Published: {showRelative ? dateRelative : dateReadable}
       </small>
@@ -128,23 +125,24 @@
   }
 
   button {
-    border: 0.13rem solid transparent;
-    border-radius: 0.6rem;
-    padding: 0.3rem 0.6rem;
+    /* border: 0.13rem solid transparent; */
+    /* border-radius: 0.6rem; */
+    padding: 0.615rem 1.23rem;
     max-width: max-content;
     margin-inline: auto;
+    font-size: unset;
   }
 
-  button:hover {
-    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
-      drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
-    background-color: var(--clr-background-highlight-secondary);
-    color: var(--clr-text);
-    border-top: 0.13rem solid var(--clr-border-card-active);
-    border-left: 0.13rem solid var(--clr-border-card-active);
-    border-right: 0.13rem solid transparent;
-    border-bottom: 0.13rem solid transparent;
-  }
+  /* button:hover { */
+  /*   filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) */
+  /*     drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)); */
+  /*   background-color: var(--clr-background-highlight-secondary); */
+  /*   color: var(--clr-text); */
+  /*   border-top: 0.13rem solid var(--clr-border-card-active); */
+  /*   border-left: 0.13rem solid var(--clr-border-card-active); */
+  /*   border-right: 0.13rem solid transparent; */
+  /*   border-bottom: 0.13rem solid transparent; */
+  /* } */
 
   .sidebar {
     display: grid;

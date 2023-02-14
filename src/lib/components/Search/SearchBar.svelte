@@ -7,10 +7,6 @@
   import { onDestroy } from 'svelte';
   import { onMount } from 'svelte';
 
-  let banner: HTMLElement;
-  let isCollapsed: boolean;
-  let hideBanner: boolean;
-
   $: if ($FilteredPosts.length === 1) {
     preloadData(`${base}/blog${$FilteredPosts[0].href}`);
   }
@@ -36,37 +32,11 @@
     await goto(`${base}/blog${$FilteredPosts[0].href}`);
   }
 
-  function collapseBanner() {
-    let bannerHeight = banner.scrollHeight;
-    let elementTransition = banner.style.transition;
-    banner.style.transition = '';
-
-    requestAnimationFrame(function () {
-      banner.style.height = `${bannerHeight}px`;
-      banner.style.transition = elementTransition;
-
-      requestAnimationFrame(function () {
-        banner.style.height = 0 + 'px';
-      });
-    });
-
-    setTimeout(() => {
-      // TODO(santigo-zero): Make this transition in phones smoother
-      // Becuase mobile phones have animations disabled and the keyboard pops
-      // up each time you start typing in the search bar.
-      if (window.innerWidth < 700) {
-        window.scrollTo(0, 0);
-      }
-    }, 100);
-
-    isCollapsed = true;
-  }
-
   onMount(() => (value = get(FilterValue)));
   onDestroy(() => FilterValue.set(value));
 </script>
 
-<div class:hideBanner bind:this={banner} class="wrapper-header">
+<div class="wrapper-header">
   <h1>Blog</h1>
   <p>
     In this blog you are going to find articles about <strong>Linux</strong>,
@@ -75,14 +45,12 @@
     <strong>frontend development</strong>.
   </p>
 </div>
-<form class="wide" on:submit|preventDefault={handleSubmit} autocomplete="off">
+<form class="wide act" on:submit|preventDefault={handleSubmit}>
   <button aria-label="Go to selected blog" type="submit"
     >{@html search_icon}</button
   >
   <input
     {placeholder}
-    on:focus={() =>
-      !isCollapsed ? setTimeout(collapseBanner, 333) : undefined}
     bind:value
     on:input={() => searchHandler(value)}
     type="search"
@@ -121,17 +89,9 @@
     margin-inline: auto;
   }
 
-  form:focus-within {
-    border-color: transparent;
-    filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
-      drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
-    background-color: var(--clr-background-highlight-secondary);
-    color: var(--clr-text);
-    border-top: 0.13rem solid var(--clr-border-card-active);
-    border-left: 0.13rem solid var(--clr-border-card-active);
-    border-right: 0.13rem solid transparent;
-    border-bottom: 0.13rem solid transparent;
-  }
+  /* form:focus-within { */
+  /*   color: var(--clr-text); */
+  /* } */
 
   input:-moz-placeholder,
   input::-moz-placeholder {
