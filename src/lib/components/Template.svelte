@@ -70,14 +70,12 @@
     <article>
       <slot />
     </article>
-    <!-- </div> -->
   </div>
 </main>
 
 <svelte:head>
   <title>{title}{TITLE_BLOG_COMPOSE}</title>
 
-  <!-- TODO(santigo-zero): meta tags for dynamic routing -->
   <!-- HTML Meta Tags -->
   <meta name="description" content={description} />
 

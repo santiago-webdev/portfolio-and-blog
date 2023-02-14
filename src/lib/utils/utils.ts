@@ -68,21 +68,21 @@ export const articleHeaders = () => {
     //   console.log(heading.innerText);
     // });
 
-    headings.forEach((heading) => {
-      // Create a wrapper div
-      const wrapper = document.createElement('div');
-      wrapper.classList.add('wrapper');
-
-      // Create a link with the heading's text as the href
-      const link = document.createElement('a');
-      link.href = heading.textContent?.toLowerCase().replace(/\s+/g, '-') ?? '/';
-      link.textContent = 'click to save link';
-      wrapper.appendChild(link);
-
-      // Move the heading into the wrapper div
-      wrapper.appendChild(heading.cloneNode(true));
-      heading.replaceWith(wrapper);
-    });
+    // headings.forEach((heading) => {
+    //   // Create a wrapper div
+    //   const wrapper = document.createElement('div');
+    //   wrapper.classList.add('wrapper');
+    //
+    //   // Create a link with the heading's text as the href
+    //   const link = document.createElement('a');
+    //   link.href = heading.textContent?.toLowerCase().replace(/\s+/g, '-') ?? '/';
+    //   link.textContent = 'click to save link';
+    //   wrapper.appendChild(link);
+    //
+    //   // Move the heading into the wrapper div
+    //   wrapper.appendChild(heading.cloneNode(true));
+    //   heading.replaceWith(wrapper);
+    // });
     return Array.prototype.slice.call(headings);
   } else {
     console.log('Could not find the <article> element.');
