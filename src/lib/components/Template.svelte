@@ -141,18 +141,23 @@
   .sidebar {
     display: grid;
     margin-inline: auto;
-    grid-template-columns: fit-content(30ch) minmax(min(50vw, 30ch), 1fr);
+    grid-template-columns: fit-content(33ch) minmax(min(50vw, 30ch), 1fr);
   }
 
   aside {
     position: sticky;
     top: 10rem;
     display: grid;
+    padding: 1.5rem;
+    margin: 1rem;
     place-items: center;
     height: max-content;
     color: var(--clr-subtitle);
     background-color: var(--clr-background-alt);
-    padding: 1.5rem;
-    margin: 1rem;
+  }
+
+  ul {
+    display: grid;
+    gap: 1rem;
   }
 </style>
