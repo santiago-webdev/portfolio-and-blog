@@ -1,5 +1,6 @@
 <script lang="ts">
   import { base } from '$app/paths';
+    import { readableDate } from '$lib/utils/utils';
   import { FilteredPosts } from './store';
 
   FilteredPosts;
@@ -18,7 +19,7 @@
               <p>No description was given.</p>
             {/if}
             {#if post.date}
-              <small>Published: {post.date}</small>
+              <small>Published: {readableDate(post.date)}</small>
             {/if}
           </article>
         </a>
