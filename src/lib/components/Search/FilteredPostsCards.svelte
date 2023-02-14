@@ -11,7 +11,7 @@
     {#each $FilteredPosts as post}
       <li>
         <a href="{base}/blog{post.href}">
-          <article>
+          <article class="act">
             <h2>{post.title}</h2>
             {#if post.description}
               <p>{post.description}</p>
@@ -83,10 +83,10 @@
 
   article {
     /* TODO(santigo-zero): Make this borders smaller in mobile */
-    border-top: 0.12rem solid var(--clr-border-card);
-    border-left: 0.12rem solid var(--clr-border-card);
-    border-right: 0.12rem solid transparent;
-    border-bottom: 0.12rem solid transparent;
+    /* border-top: 0.12rem solid var(--clr-border-card); */
+    /* border-left: 0.12rem solid var(--clr-border-card); */
+    /* border-right: 0.12rem solid transparent; */
+    /* border-bottom: 0.12rem solid transparent; */
     background-color: var(--clr-background-alt);
     color: var(--clr-text);
     box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
@@ -103,14 +103,14 @@
     transition: transform 0.15s;
   }
 
-  article:hover {
-    transform: scale(1.02);
-    background-color: var(--clr-background-highlight-secondary);
-    border-top: 0.12rem solid var(--clr-border-card-active);
-    border-left: 0.12rem solid var(--clr-border-card-active);
-    border-right: 0.12rem solid transparent;
-    border-bottom: 0.12rem solid transparent;
-  }
+  /* article:hover { */
+  /*   transform: scale(1.02); */
+  /*   background-color: var(--clr-background-highlight-secondary); */
+  /*   border-top: 0.12rem solid var(--clr-border-card-active); */
+  /*   border-left: 0.12rem solid var(--clr-border-card-active); */
+  /*   border-right: 0.12rem solid transparent; */
+  /*   border-bottom: 0.12rem solid transparent; */
+  /* } */
 
   @media (prefers-reduced-motion: reduce) {
     article:hover {
@@ -123,10 +123,10 @@
     color: inherit;
   }
 
-  a:focus article {
-    color: var(--clr-background-alt);
-    background-color: var(--accent-peachy);
-  }
+  /* a:focus article { */
+  /*   color: var(--clr-background-alt); */
+  /*   background-color: var(--accent-peachy); */
+  /* } */
 
   h2 {
     font-weight: 700;
@@ -134,9 +134,5 @@
 
     color: var(--clr-subtitle);
     line-height: calc(1.5 * clamp(1rem, 8vw, 1.8rem));
-  }
-
-  small {
-    color: var(--clr-text-muted);
   }
 </style>

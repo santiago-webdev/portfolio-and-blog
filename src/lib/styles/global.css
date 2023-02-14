@@ -4,7 +4,6 @@
   --br: 0.66rem;
 
   --base-dark-background-000: #16171d;
-  --base-dark-background-000-rgb: rgb(22 23 29 / 90%);
   --base-dark-background-100: #1d1e26;
   --base-dark-background-150: #181a20;
   --base-dark-background-200: #2b2a33;
@@ -102,21 +101,16 @@ html {
   --clr-subtitle: var(--clr-slate-200);
   --clr-text: var(--clr-slate-250);
   --clr-text-muted: var(--clr-pale-450);
+  --border-muted: 0.13rem solid var(--clr-text-muted);
 
   --clr-hover: var(--clr-slate-400);
   --clr-hover-bg: var(--clr-slate-400);
   --clr-clicked: var(--clr-stone-700);
 
   --clr-background: var(--base-dark-background-000);
-  --clr-border-background: var(--clr-slate-800);
-  --clr-background-blur: var(--base-dark-background-000-rgb);
   --clr-background-alt: var(--base-dark-background-100);
 
   --clr-background-highlight-secondary: var(--base-dark-background-200);
-
-  /* --border-highlight-secondary: 0.13rem solid var(--clr-pale-800); */
-  --border-highlight-secondary: 0.13rem solid var(--clr-text-muted);
-  /* --hover-highlight-secondary: 0.11rem solid var(--clr-hover); */
 
   --clr-border-card: rgba(33 34 42 / 1);
   --clr-border-card-active: rgba(47 46 55 / 1);
@@ -236,12 +230,12 @@ button {
 }
 
 p,
-small,
 pre {
   color: var(--clr-title);
 }
 
 small {
+    color: var(--clr-text-muted);
   font-size: 103%;
 }
 

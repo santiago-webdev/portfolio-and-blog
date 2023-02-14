@@ -83,15 +83,11 @@
     grid-template-columns: auto 1fr;
     overflow: hidden;
     background-color: transparent;
-    border: var(--border-highlight-secondary);
+    border: var(--border-muted);
     color: var(--clr-text-muted);
     border-radius: 1.1rem;
     margin-inline: auto;
   }
-
-  /* form:focus-within { */
-  /*   color: var(--clr-text); */
-  /* } */
 
   input:-moz-placeholder,
   input::-moz-placeholder {
@@ -117,8 +113,6 @@
     border: none;
     outline: none;
     padding: 0.6rem 1.3rem 0.6rem 0;
-    /* padding-top: 0.6rem; */
-    /* padding-bottom: 0.6rem; */
   }
 
   input:focus::placeholder {
