@@ -4,6 +4,8 @@
   import { onMount } from 'svelte';
   import NavBar from '$lib/components/NavBar.svelte';
   import Footer from '$lib/components/Footer.svelte';
+  import Transition from '$lib/components/Transition.svelte';
+  import { page } from '$app/stores';
 
   let body: HTMLElement;
   $: pageHeight = 0;
@@ -23,7 +25,9 @@
 
 <div class="layout" bind:this={body}>
   <NavBar {pageHeight} />
-  <slot />
+  <Transition url={$page.url}>
+    <slot />
+  </Transition>
   <Footer />
 </div>
 
