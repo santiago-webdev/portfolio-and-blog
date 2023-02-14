@@ -38,17 +38,17 @@
     margin-inline: auto;
   }
 
-  li {
-    transition: opacity 0.3s;
-  }
+  /* li { */
+  /*   transition: opacity 0.3s; */
+  /* } */
 
-  ul:hover > li {
-    opacity: 0.8;
-  }
+  /* ul:hover > li { */
+  /*   opacity: 0.8; */
+  /* } */
 
-  ul:hover > li:hover {
-    opacity: 1;
-  }
+  /* ul:hover > li:hover { */
+  /*   opacity: 1; */
+  /* } */
 
   @supports (grid-template-rows: masonry) {
     ul {
