@@ -59,3 +59,19 @@ export const readableDate = (dateString: string): string => {
 
   return formatter.format(date);
 };
+
+export const articleHeaders = () => {
+  const article = document.querySelector<HTMLDivElement>('article');
+  if (article) {
+    const headings = article.querySelectorAll<HTMLHeadingElement>('h1, h2, h3');
+    // headings.forEach(heading => {
+    //   console.log(heading.innerText);
+    // });
+
+    return Array.prototype.slice.call(headings);
+  } else {
+    console.log('Could not find the <article> element.');
+  }
+
+  return [];
+};

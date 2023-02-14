@@ -3,7 +3,7 @@
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
   import Hollow from './Hollow.svelte';
-  import { readableDate, relativeTime } from '$lib/utils/utils';
+  import { articleHeaders, readableDate, relativeTime } from '$lib/utils/utils';
 
   export let title = '';
   export let date = '';
@@ -19,9 +19,7 @@
 
   const keywords = ['How ', 'How to ', 'How to: '];
 
-  let post: HTMLElement;
-  // let allHeaders: Array<HTMLHeadingElement> = [];
-  let allHeaders = [];
+  let mounted = false;
 
   onMount(() => {
     if (title) {
@@ -38,9 +36,7 @@
     dateReadable = readableDate(date);
     setTimeout(() => (showRelative = true), 3000);
 
-    allHeaders = Array.prototype.slice.call(
-      document.querySelectorAll<HTMLHeadingElement>('h1, h2, h3')
-    );
+    mounted = true;
   });
 </script>
 
@@ -63,15 +59,15 @@
   </header>
   <div class="wider sidebar">
     <aside>
-      {#if allHeaders}
+      {#if mounted}
         <ul>
-          {#each allHeaders as heading}
+          {#each articleHeaders() as heading}
             <li>{heading.innerText}</li>
           {/each}
         </ul>
       {/if}
     </aside>
-    <article bind:this={post}>
+    <article>
       <slot />
     </article>
     <!-- </div> -->

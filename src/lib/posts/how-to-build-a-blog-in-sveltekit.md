@@ -12,46 +12,6 @@ description: How to build your own static blog written in sveltekit and deploy i
 
 Let's get started
 
-## Test2
-
-something
-
-## Test2
-
-something
-
-## Test2
-
-something
-
-## Test2
-
-something
-
-## Test2
-
-something
-
-## Test2
-
-something
-
-## Test2
-
-something
-
-## Test2
-
-something
-
-## Test2
-
-something
-
-## Test2
-
-something
-
 ```bash
 yarn create svelte .
 ```
