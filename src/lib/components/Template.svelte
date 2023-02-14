@@ -149,7 +149,7 @@
   .sidebar {
     display: grid;
     margin-inline: auto;
-    grid-template-columns: fit-content(33ch) minmax(min(50vw, 30ch), 1fr);
+    grid-template-columns: fit-content(33ch) minmax(min(50vw, 65ch), 1fr);
   }
 
   aside {
