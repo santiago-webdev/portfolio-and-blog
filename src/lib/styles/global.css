@@ -161,13 +161,6 @@ html {
   /* I need this to visualize the query in dev tools */
 }
 
-.blurbg {
-  background-color: rgb(39 39 42 / 0.3);
-  --blur: 9px;
-  -webkit-backdrop-filter: blur(var(--blur));
-  backdrop-filter: blur(var(--blur));
-}
-
 .banner {
   width: 100%;
   background-color: var(--clr-background-alt);

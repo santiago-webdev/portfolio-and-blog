@@ -54,10 +54,7 @@
   bind:scrollY={y}
 />
 
-<!-- TODO(santigo-zero): False positive with blur-bg when navigating -->
-<!-- <div class:blur-bg={y || showMobile} class="header-wrapper"> -->
-<!-- TODO(santigo-zero): Remove header and use something else. -->
-<nav class:headerScroll={y} class:headerActive={y > 150 || showMobile}>
+<nav class:headerActive={y > 150 || showMobile}>
   <progress max={pageHeightWithoutWindow} value={y} />
   <div
     style:flex-direction={desktop ? 'row' : 'column'}
@@ -79,12 +76,6 @@
     </div>
     <section style:display={showMobile || desktop ? 'grid' : 'none'}>
       <ul style:flex-direction={desktop ? 'row' : 'column'}>
-        <!-- <li> -->
-        <!-- 	<SnapToggle /> -->
-        <!-- </li> -->
-        <li>
-          <SwitchButton />
-        </li>
         {#each navItems as item}
           {#if item.href}
             <li
@@ -113,33 +104,13 @@
 </nav>
 
 <style>
-  /* TODO(santigo-zero): Try making the fonts slightly smaller when scrolling */
   nav {
     top: 0;
     position: sticky;
     background-color: var(--clr-background-alt);
-    /* padding: clamp(0.6rem, 5vw, 2.3rem) 0; */
-    /* TODO(santigo-zero): Bring height change transition back once we finish
-    everything else. */
     padding: 0.6rem 0;
-    transition: background-color 666ms ease-in-out 0s,
-      padding 333ms ease-in-out 0s;
 
     z-index: 999;
-
-    display: grid;
-    place-items: center stretch;
-    /* TODO(santigo-zero): Fix this */
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    nav {
-      padding: 0.6rem 0;
-    }
-  }
-
-  .headerScroll {
-    padding: 0.6rem 0;
   }
 
   .headerActive {
