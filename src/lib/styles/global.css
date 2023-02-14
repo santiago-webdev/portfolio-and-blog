@@ -220,17 +220,23 @@ h3 {
 
 h1 {
   color: var(--clr-title);
-  font-size: clamp(2.6rem, 8vw, 4.6rem);
   font-weight: 600;
+  font-size: clamp(2.6rem, 8vw, 4.6rem);
   line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem));
 }
 
 h2 {
-  font-weight: 400;
-  font-size: clamp(1.3rem, 8vw, 2.3rem);
-
   color: var(--clr-subtitle);
-  line-height: calc(1.5 * clamp(1rem, 8vw, 1.8rem));
+  font-weight: 400;
+  font-size: clamp(1.6rem, 8vw, 2.84rem);
+  line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem));
+}
+
+h3 {
+  color: var(--clr-subtitle);
+  font-weight: 400;
+  font-size: clamp(0.8rem, 8vw, 1.75rem);
+  line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem));
 }
 
 br {
@@ -258,7 +264,7 @@ p,
 label,
 input,
 button {
-  font-size: clamp(0.8rem, 8vw, 1.3rem);
+  font-size: clamp(0.8rem, 8vw, 1.42rem);
 }
 
 strong {
