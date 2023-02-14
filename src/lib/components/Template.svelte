@@ -127,6 +127,11 @@
     font-size: unset;
   }
 
+  small:active {
+    color: inherit;
+    background-color: inherit;
+  }
+
   .sidebar {
     display: grid;
     margin-inline: auto;

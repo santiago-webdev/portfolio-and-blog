@@ -174,13 +174,13 @@ html {
 .act {
   border: 0.13rem solid transparent;
   border-radius: 1.1rem;
-  background-color: transparent;
 }
 
 .act:focus-within {
   color: var(--clr-text);
 }
 
+.act:focus-within,
 .act:hover {
   filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
     drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
@@ -189,6 +189,12 @@ html {
   border-left: 0.13rem solid var(--clr-border-card-active);
   border-right: 0.13rem solid transparent;
   border-bottom: 0.13rem solid transparent;
+}
+
+.act:active {
+  color: var(--clr-clicked);
+  background-color: var(--clr-background);
+  border: 0.13rem solid transparent;
 }
 
 h1,
@@ -235,7 +241,7 @@ pre {
 }
 
 small {
-    color: var(--clr-text-muted);
+  color: var(--clr-text-muted);
   font-size: 103%;
 }
 

@@ -43,37 +43,12 @@
   }
 
   ul:hover > li {
-    opacity: 0.6;
+    opacity: 0.8;
   }
 
   ul:hover > li:hover {
     opacity: 1;
   }
-
-  /* ul:hover > li { */
-  /*   opacity: 1; */
-  /* } */
-
-  /* TODO(santigo-zero): Add this programatically instead of hardcoding values */
-  /* li:nth-child(4) { */
-  /*   opacity: 0.8; */
-  /* } */
-  /**/
-  /* li:nth-child(5) { */
-  /*   opacity: 0.75; */
-  /* } */
-  /**/
-  /* li:nth-child(6) { */
-  /*   opacity: 0.7; */
-  /* } */
-  /**/
-  /* li:nth-child(7) { */
-  /*   opacity: 0.65; */
-  /* } */
-  /**/
-  /* li:nth-child(8) { */
-  /*   opacity: 0.6; */
-  /* } */
 
   @supports (grid-template-rows: masonry) {
     ul {
@@ -82,17 +57,6 @@
   }
 
   article {
-    /* TODO(santigo-zero): Make this borders smaller in mobile */
-    /* border-top: 0.12rem solid var(--clr-border-card); */
-    /* border-left: 0.12rem solid var(--clr-border-card); */
-    /* border-right: 0.12rem solid transparent; */
-    /* border-bottom: 0.12rem solid transparent; */
-    background-color: var(--clr-background-alt);
-    color: var(--clr-text);
-    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
-
     display: grid;
     gap: 0.5rem;
     grid-template-rows: auto 1fr auto;
@@ -103,14 +67,9 @@
     transition: transform 0.15s;
   }
 
-  /* article:hover { */
-  /*   transform: scale(1.02); */
-  /*   background-color: var(--clr-background-highlight-secondary); */
-  /*   border-top: 0.12rem solid var(--clr-border-card-active); */
-  /*   border-left: 0.12rem solid var(--clr-border-card-active); */
-  /*   border-right: 0.12rem solid transparent; */
-  /*   border-bottom: 0.12rem solid transparent; */
-  /* } */
+  article:hover {
+    transform: scale(1.02);
+  }
 
   @media (prefers-reduced-motion: reduce) {
     article:hover {
@@ -118,21 +77,11 @@
     }
   }
 
-  a,
-  p {
-    color: inherit;
-  }
-
-  /* a:focus article { */
-  /*   color: var(--clr-background-alt); */
-  /*   background-color: var(--accent-peachy); */
-  /* } */
-
   h2 {
     font-weight: 700;
     font-size: clamp(1rem, 8vw, 1.6rem);
 
-    color: var(--clr-subtitle);
+    color: var(--clr-title);
     line-height: calc(1.5 * clamp(1rem, 8vw, 1.8rem));
   }
 </style>
