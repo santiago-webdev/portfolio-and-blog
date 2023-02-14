@@ -20,6 +20,7 @@
   const keywords = ['How ', 'How to ', 'How to: '];
 
   let allHeaders: Array<HTMLHeadingElement> = [];
+  // let allHeaders = [];
 
   onMount(() => {
     if (title) {
