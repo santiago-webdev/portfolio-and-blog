@@ -110,7 +110,7 @@ html {
   --clr-background: var(--base-dark-background-000);
   --clr-background-alt: var(--base-dark-background-100);
 
-  --clr-background-highlight-secondary: var(--base-dark-background-200);
+  --clr-bg-active: var(--base-dark-background-200);
 
   --clr-border-card: rgba(33 34 42 / 1);
   --clr-border-card-active: rgba(47 46 55 / 1);
@@ -184,7 +184,7 @@ html {
 .act:hover {
   filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
     drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
-  background-color: var(--clr-background-highlight-secondary);
+  background-color: var(--clr-bg-active);
   border-top: 0.13rem solid var(--clr-border-card-active);
   border-left: 0.13rem solid var(--clr-border-card-active);
   border-right: 0.13rem solid transparent;
