@@ -57,3 +57,8 @@ Use a muted color for this elements and other details like separators("|", "•"
 
 I need to start using a defined width for all components so that the page looks
 concise.
+
+## Hamburger menu is enabled 
+
+If you middle-click an anchor that page will be loaded with the hamburger menu
+enabled even if you are in a desktop.
