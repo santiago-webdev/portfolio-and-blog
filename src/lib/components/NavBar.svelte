@@ -27,7 +27,7 @@
   export let pageHeight = 0;
   $: pageHeightWithoutWindow = pageHeight - windowHeight;
 
-  $: if ($navigating || desktop || y) {
+  $: if ($navigating || desktop) {
     showMobile = false;
   }
 
