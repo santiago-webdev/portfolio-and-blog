@@ -34,28 +34,50 @@
     dateReadable = readableDate(date);
     setTimeout(() => (showRelative = true), 3000);
   });
+
+  let mounted = false;
+  let allHeaders: Array<HTMLElement> = [];
+
+  onMount(() => {
+    // Get all h1, h2, and h3 tags
+    allHeaders = Array.prototype.slice.call(
+      document.querySelectorAll<HTMLHeadingElement>('h1, h2, h3')
+    )
+    mounted = true
+  });
 </script>
 
 <main>
   <header class="banner">
-      {#if isHollow}
-        <h1>
-          <Hollow text={hollowPrefix} color={'var(--clr-title)'} />
-          {fillSuffix}
-        </h1>
-      {:else}
-        <h1>{title}</h1>
-      {/if}
-      <p>{description}</p>
-      <button on:click={() => (showRelative = !showRelative)}>
-        <small>
-          Published: {showRelative ? dateRelative : dateReadable}
-        </small>
-      </button>
+    {#if isHollow}
+      <h1>
+        <Hollow text={hollowPrefix} color={'var(--clr-title)'} />
+        {fillSuffix}
+      </h1>
+    {:else}
+      <h1>{title}</h1>
+    {/if}
+    <p>{description}</p>
+    <button on:click={() => (showRelative = !showRelative)}>
+      <small>
+        Published: {showRelative ? dateRelative : dateReadable}
+      </small>
+    </button>
   </header>
-  <article class="wide">
-    <slot />
-  </article>
+  <div class="wider sidebar">
+    <aside>
+      {#if mounted}
+        <ul>
+          {#each allHeaders as heading}
+            <li>{heading.innerHTML}</li>
+          {/each}
+        </ul>
+      {/if}
+    </aside>
+    <article>
+      <slot />
+    </article>
+  </div>
 </main>
 
 <svelte:head>
@@ -120,5 +142,23 @@
     border-left: 0.13rem solid var(--clr-border-card-active);
     border-right: 0.13rem solid transparent;
     border-bottom: 0.13rem solid transparent;
+  }
+
+  .sidebar {
+    display: grid;
+    margin-inline: auto;
+    grid-template-columns: fit-content(30ch) minmax(min(50vw, 30ch), 1fr);
+  }
+
+  aside {
+    position: sticky;
+    top: 10rem;
+    display: grid;
+    place-items: center;
+    height: max-content;
+    color: var(--clr-subtitle);
+    background-color: var(--clr-background-alt);
+    padding: 1.5rem;
+    margin: 1rem;
   }
 </style>
