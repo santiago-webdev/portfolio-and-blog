@@ -19,6 +19,8 @@
 
   const keywords = ['How ', 'How to ', 'How to: '];
 
+  let allHeaders: Array<HTMLHeadingElement> = [];
+
   onMount(() => {
     if (title) {
       keywords.some(keyword => {
@@ -33,17 +35,10 @@
     dateRelative = relativeTime(new Date(), new Date(date));
     dateReadable = readableDate(date);
     setTimeout(() => (showRelative = true), 3000);
-  });
 
-  let mounted = false;
-  let allHeaders: Array<HTMLElement> = [];
-
-  onMount(() => {
-    // Get all h1, h2, and h3 tags
     allHeaders = Array.prototype.slice.call(
       document.querySelectorAll<HTMLHeadingElement>('h1, h2, h3')
-    )
-    mounted = true
+    );
   });
 </script>
 
@@ -66,10 +61,10 @@
   </header>
   <div class="wider sidebar">
     <aside>
-      {#if mounted}
+      {#if allHeaders}
         <ul>
           {#each allHeaders as heading}
-            <li>{heading.innerHTML}</li>
+            <li>{heading.innerText}</li>
           {/each}
         </ul>
       {/if}
@@ -77,6 +72,7 @@
     <article>
       <slot />
     </article>
+    <!-- </div> -->
   </div>
 </main>
 
