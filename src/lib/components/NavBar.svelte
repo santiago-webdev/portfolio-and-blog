@@ -31,9 +31,6 @@
     showMobile = false;
   }
 
-  // Why does the logo flickers each time we click in "About"?
-  // $: console.log('showMobile ->', showMobile)
-
   type NavItems = Array<{
     label?: string;
     href?: string;

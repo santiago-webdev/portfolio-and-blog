@@ -3,16 +3,6 @@
   --gap: 0.66rem;
   --br: 0.66rem;
 
-  /* --bg-1: #16171d; */
-  /* --bg-2: #14151a; */
-  /* --bg-3: #121217; */
-  /* --bg-4: #0f1014; */
-  /* --bg-5: #0d0e11; */
-  /* --bg-6: #0b0c0f; */
-  /* --bg-7: #09090c; */
-  /* --bg-8: #070709; */
-  /* --bg-9: #040506; */
-
   --base-dark-background-000: #16171d;
   --base-dark-background-000-rgb: rgb(22 23 29 / 90%);
   --base-dark-background-100: #1d1e26;
@@ -23,9 +13,6 @@
   --accent-purple: #915268;
   --accent-peachy: #d4786c;
   --accent-orange: #fbb163;
-
-  /* --bg-alt2: #2d2e34; */
-  /* --bg-alt3: #45454a; */
 
   --clr-pale-50: #ffffff;
   --clr-pale-100: #fffafa;
@@ -38,9 +25,6 @@
   --clr-pale-700: #666464;
   --clr-pale-800: #4c4b4b;
   --clr-pale-900: #333232;
-
-  /* --fg-alt1: #9da1b4; */
-  /* --fg-alt2: hsl(227.6, 13.5%, 66%); */
 
   --clr-slate-50: #f8fafc;
   --clr-slate-100: #f1f5f9;
@@ -157,8 +141,6 @@ html {
   display: grid;
   place-content: center;
 
-  /* min-height: min(100vh, 80rem); */
-  /* min-height: min(100dvh, 80rem); */
   width: min(100% - 1rem, var(--wide));
   margin-inline: auto;
 }
