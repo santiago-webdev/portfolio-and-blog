@@ -15,6 +15,7 @@
 
   let isHollow = false;
   let hollowPrefix = '';
+  let fillSuffix = '';
 
   const keywords = ['How ', 'How to ', 'How to: '];
 
@@ -23,7 +24,7 @@
       keywords.some(keyword => {
         if (title.startsWith(keyword)) {
           hollowPrefix = keyword;
-          title = title.replace(keyword, '');
+          fillSuffix = title.replace(keyword, '');
           isHollow = true;
         }
       });
@@ -41,7 +42,7 @@
       {#if isHollow}
         <h1>
           <Hollow text={hollowPrefix} color={'var(--clr-title)'} />
-          {title}
+          {fillSuffix}
         </h1>
       {:else}
         <h1>{title}</h1>
