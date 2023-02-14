@@ -19,8 +19,9 @@
 
   const keywords = ['How ', 'How to ', 'How to: '];
 
-  let allHeaders: Array<HTMLHeadingElement> = [];
-  // let allHeaders = [];
+  let post: HTMLElement;
+  // let allHeaders: Array<HTMLHeadingElement> = [];
+  let allHeaders = [];
 
   onMount(() => {
     if (title) {
@@ -70,7 +71,7 @@
         </ul>
       {/if}
     </aside>
-    <article>
+    <article bind:this={post}>
       <slot />
     </article>
     <!-- </div> -->
