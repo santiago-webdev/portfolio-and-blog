@@ -8,6 +8,7 @@
   export let title = '';
   export let date = '';
   export let description = '';
+  export let finished = false;
 
   let dateRelative = '';
   let dateReadable = '';
@@ -51,7 +52,16 @@
       <h1>{title}</h1>
     {/if}
     <p>{description}</p>
-    <button on:click={() => (showRelative = !showRelative)}>
+    {#if !finished}
+      <div class="wip">
+        <small> 🏗 Construction site, keep out 🏗️ </small>
+        <small> 🚧 Authorized personnel only 🚧 </small>
+      </div>
+    {/if}
+    <button
+      style="font-size: unset"
+      on:click={() => (showRelative = !showRelative)}
+    >
       <small>
         Published: {showRelative ? dateRelative : dateReadable}
       </small>
@@ -157,5 +167,10 @@
   ul {
     display: grid;
     gap: 1rem;
+  }
+
+  .wip {
+    display: grid;
+    place-items: center;
   }
 </style>
