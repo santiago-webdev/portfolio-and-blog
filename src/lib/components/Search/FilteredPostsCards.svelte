@@ -1,6 +1,6 @@
 <script lang="ts">
   import { base } from '$app/paths';
-    import { readableDate } from '$lib/utils/utils';
+  import { readableDate } from '$lib/utils/utils';
   import { FilteredPosts } from './store';
 
   FilteredPosts;
