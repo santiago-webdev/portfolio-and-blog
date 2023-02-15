@@ -58,7 +58,10 @@
         <small> 🚧 Authorized personnel only 🚧 </small>
       </div>
     {/if}
-    <button class="act act-border" on:click={() => (showRelative = !showRelative)}>
+    <button
+      class="act act-border"
+      on:click={() => (showRelative = !showRelative)}
+    >
       <small>
         Published: {showRelative ? dateRelative : dateReadable}
       </small>
