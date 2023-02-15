@@ -177,6 +177,8 @@ html {
   border-left: 0.13rem solid var(--clr-border-card);
   border-right: 0.13rem solid transparent;
   border-bottom: 0.13rem solid transparent;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 }
 
 .act {
