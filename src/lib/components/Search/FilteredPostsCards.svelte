@@ -3,14 +3,25 @@
   import { readableDate } from '$lib/utils/utils';
   import { FilteredPosts } from './store';
   import { fly } from 'svelte/transition';
+  import { onMount } from 'svelte';
 
   FilteredPosts;
+
+  let fly_in = { y: 0, duration: 0 };
+  let fly_out = { y: 0, duration: 0 };
+
+  onMount(() => {
+    setTimeout(() => {
+      fly_in = { y: 50, duration: 200 };
+      fly_out = { y: -50, duration: 200 };
+    }, 100);
+  });
 </script>
 
 <section role="complementary">
   <ul class="wider">
     {#each $FilteredPosts as post}
-      <li in:fly={{ y: 50, duration: 300 }} out:fly={{ y: -50, duration: 300 }}>
+      <li in:fly={fly_in} out:fly={fly_out}>
         <a href="{base}/blog{post.href}">
           <article class="base act">
             <h2>{post.title}</h2>
