@@ -133,12 +133,6 @@
     color: var(--clr-text);
   }
 
-  .decoration-border {
-    border-radius: 0.8rem;
-    border: 0.13rem solid var(--clr-text-muted);
-    color: var(--clr-text);
-  }
-
   button,
   a {
     padding: 0.8rem 1.6rem;
