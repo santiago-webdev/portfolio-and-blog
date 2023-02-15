@@ -1,8 +1,6 @@
 <script lang="ts">
   import { base } from '$app/paths';
   import { navigating } from '$app/stores';
-  import SwitchButton from './ThemeSwitcher/SwitchButton.svelte';
-  // import SnapToggle from './LockSnap/SnapToggle.svelte';
 
   let burger =
     '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M7.95 11.95h32m-32 12h32m-32 12h32"/></svg>';
@@ -43,7 +41,6 @@
     { label: 'Home', href: `${base}/` },
     { label: 'Blog', href: `${base}/blog` },
     { label: 'Projects', href: `${base}/projects` },
-    // { label: 'About', href: `${base}/#blog` },
     { label: 'Contact', href: `${base}/contact`, decoration: 'border' }
   ] satisfies NavItems;
 </script>
@@ -123,7 +120,6 @@
     display: flex;
     justify-content: space-between;
     margin-inline: auto;
-    /* height: auto; */
   }
 
   .main-nav {
@@ -150,13 +146,10 @@
     display: grid;
     place-items: center;
     border-radius: 0.6rem;
-    /* outline: 3px solid red; */
   }
 
   a:hover {
     color: var(--clr-hover);
-    /* background-color: var(--clr-hover-bg); */
-    /* text-decoration-color: var(--clr-hover); */
   }
 
   a:focus {
@@ -164,15 +157,10 @@
   }
 
   ul {
-    /* gap: 1rem; */
     display: flex;
     flex-direction: row;
     place-items: center;
   }
-
-  /* ul > li:first-child { */
-  /* 	background-color: red; */
-  /* } */
 
   progress {
     width: 100%;
@@ -183,7 +171,6 @@
     position: fixed;
   }
 
-  /* TODO(santigo-zero): Make background-color match the navbar color even when scrolling */
   progress::-webkit-progress-bar,
   progress {
     background: inherit;
