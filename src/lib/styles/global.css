@@ -171,6 +171,14 @@ html {
   -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
 }
 
+.base {
+  background-color: var(--clr-background-alt);
+  border-top: 0.13rem solid var(--clr-border-card);
+  border-left: 0.13rem solid var(--clr-border-card);
+  border-right: 0.13rem solid transparent;
+  border-bottom: 0.13rem solid transparent;
+}
+
 .act {
   border: 0.13rem solid transparent;
   border-radius: 1.1rem;

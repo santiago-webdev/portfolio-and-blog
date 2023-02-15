@@ -11,7 +11,7 @@
     {#each $FilteredPosts as post}
       <li>
         <a href="{base}/blog{post.href}">
-          <article class="act">
+          <article class="base act">
             <h2>{post.title}</h2>
             {#if post.description}
               <p>{post.description}</p>
