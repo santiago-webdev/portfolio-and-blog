@@ -178,8 +178,8 @@ html {
   border-left: 0.13rem solid var(--clr-border-card);
   border-right: 0.13rem solid transparent;
   border-bottom: 0.13rem solid transparent;
-  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
-    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  /* filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) */
+  /*   drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)); */
 }
 
 .base-border {
@@ -204,8 +204,8 @@ html {
 
 .act:focus-within,
 .act:hover {
-  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
-    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  /* filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) */
+  /*   drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)); */
   background-color: var(--clr-bg-active);
   border-top: 0.13rem solid var(--clr-border-card-active);
   border-left: 0.13rem solid var(--clr-border-card-active);
