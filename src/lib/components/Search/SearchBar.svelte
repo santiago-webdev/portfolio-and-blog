@@ -56,12 +56,33 @@
     type="search"
     id="search"
     list="search-terms"
+    autocomplete="off"
   />
-  <datalist id="search-terms">
-    {#each $FilteredPosts as post}
-      <option value={post.title} />
-    {/each}
-  </datalist>
+  <!-- {#if suggestions.length > 0} -->
+  <!-- {#if true} -->
+  <!--   <div class="suggestions">  -->
+  <!---->
+  <!--   <hr style="width: 100%"/> -->
+  <!--   <ul> -->
+  <!--     {#each $FilteredPosts as post} -->
+  <!--       <li>You could try with: {post.title}</li> -->
+  <!--     {/each} -->
+  <!--   </ul> -->
+  <!--   </div> -->
+  <!-- {/if} -->
+  <!-- {#if true} -->
+  <!--   <div class="suggestions"> -->
+  <!--     <hr style="width: 96%" /> -->
+  <!--     <datalist id="search-terms"> -->
+  <!--       <ul> -->
+  <!--         {#each $FilteredPosts as post} -->
+  <!--           <li>You could try with: {post.title}</li> -->
+  <!--           <option value={post.title} /> -->
+  <!--         {/each} -->
+  <!--       </ul> -->
+  <!--     </datalist> -->
+  <!--   </div> -->
+  <!-- {/if} -->
 </form>
 
 <style>
@@ -85,6 +106,16 @@
     background-color: transparent;
     margin-inline: auto;
   }
+
+  /* .suggestions { */
+  /*   grid-column: 1 / span 2; */
+  /* } */
+
+  /* ul { */
+  /*   display: grid; */
+  /*   place-content: start; */
+  /*   padding-inline: 3rem; */
+  /* } */
 
   input:-moz-placeholder,
   input::-moz-placeholder {
