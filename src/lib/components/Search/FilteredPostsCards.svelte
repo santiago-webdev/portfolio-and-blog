@@ -64,7 +64,7 @@
     padding: 1rem;
     border-radius: 1.1rem;
     height: 100%;
-    transition: transform 0.15s;
+    transition: transform 0.2s;
   }
 
   article:hover {
