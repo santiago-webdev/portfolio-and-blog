@@ -143,7 +143,7 @@
 
   aside {
     position: sticky;
-    top: 10rem;
+    top: 6rem;
     display: grid;
     padding: 1.5rem;
     margin: 1rem;
