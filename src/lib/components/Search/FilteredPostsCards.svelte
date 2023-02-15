@@ -2,6 +2,7 @@
   import { base } from '$app/paths';
   import { readableDate } from '$lib/utils/utils';
   import { FilteredPosts } from './store';
+  import { fly } from 'svelte/transition';
 
   FilteredPosts;
 </script>
@@ -9,7 +10,7 @@
 <section role="complementary">
   <ul class="wider">
     {#each $FilteredPosts as post}
-      <li>
+      <li in:fly={{ y: 50, duration: 300 }} out:fly={{ y: -50, duration: 300 }}>
         <a href="{base}/blog{post.href}">
           <article class="base act">
             <h2>{post.title}</h2>
