@@ -51,7 +51,7 @@
   bind:scrollY={y}
 />
 
-<nav class:headerActive={y > 150 || showMobile}>
+<nav class:headerActive={y > 30 || showMobile}>
   <progress max={pageHeightWithoutWindow} value={y} />
   <div
     style:flex-direction={desktop ? 'row' : 'column'}
@@ -106,12 +106,12 @@
     position: sticky;
     background-color: var(--clr-background-alt);
     padding: 0.6rem 0;
+    transition: filter 0.3s ease-in;
 
     z-index: 999;
   }
 
   .headerActive {
-    background-color: var(--clr-background);
     filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
       drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   }
