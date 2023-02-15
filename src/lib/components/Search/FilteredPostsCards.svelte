@@ -5,10 +5,9 @@
   import { fly } from 'svelte/transition';
   import { onMount } from 'svelte';
 
-  FilteredPosts;
-
   let fly_in = { y: 0, duration: 0 };
   let fly_out = { y: 0, duration: 0 };
+  let postList: HTMLUListElement;
 
   onMount(() => {
     setTimeout(() => {
@@ -19,7 +18,7 @@
 </script>
 
 <section role="complementary">
-  <ul class="wider">
+  <ul bind:this={postList} class="wider">
     {#each $FilteredPosts as post}
       <li in:fly={fly_in} out:fly={fly_out}>
         <a href="{base}/blog{post.href}">

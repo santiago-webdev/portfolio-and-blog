@@ -4,7 +4,6 @@
   import { base } from '$app/paths';
   import { goto, preloadData } from '$app/navigation';
   import { get } from 'svelte/store';
-  import { onDestroy } from 'svelte';
   import { onMount } from 'svelte';
 
   $: if ($FilteredPosts.length === 1) {
@@ -33,7 +32,6 @@
   }
 
   onMount(() => (value = get(FilterValue)));
-  onDestroy(() => FilterValue.set(value));
 </script>
 
 <div class="wrapper-header">
@@ -52,7 +50,7 @@
   <input
     {placeholder}
     bind:value
-    on:input={() => searchHandler(value)}
+    on:input={() => FilterValue.set(searchHandler(value))}
     type="search"
     id="search"
     list="search-terms"
