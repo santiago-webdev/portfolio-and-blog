@@ -76,7 +76,7 @@
     padding: 1rem;
     border-radius: 1.1rem;
     height: 100%;
-    transition: transform 0.2s;
+    transition: transform 100ms, color 100ms, background-color 500ms, border 100ms;
   }
 
   article:hover {

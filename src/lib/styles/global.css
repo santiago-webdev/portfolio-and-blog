@@ -190,8 +190,8 @@ html {
 
 .act {
   border-radius: 1.1rem;
-  transition-delay: 0.1s;
-  transition: all 0.1s;
+  transition: background-color 100ms, border 100ms;
+  transition-delay: 50ms;
 }
 
 .act-border {
