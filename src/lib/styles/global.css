@@ -112,7 +112,7 @@ html {
 
   --clr-bg-active: var(--base-dark-background-200);
 
-  --clr-border-card: rgba(33 34 42 / 1);
+  --clr-border-card: rgba(33 30 42 / 1);
   --clr-border-card-active: rgba(47 46 55 / 1);
 }
 
