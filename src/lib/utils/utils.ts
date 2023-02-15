@@ -1,3 +1,6 @@
+import { page } from '$app/stores';
+import { get } from 'svelte/store';
+
 export class Post {
   title: string;
   description: string;
@@ -90,3 +93,21 @@ export const articleHeaders = () => {
 
   return [];
 };
+
+export function addNumericalIDsToHeadingsInPost(): void {
+  const post = document.querySelector('#post');
+  if (!post) return;
+
+  const headings = post.querySelectorAll('h1, h2, h3');
+  headings.forEach((heading, index) => {
+    const idValue = `heading-${index}`;
+    const anchor = document.createElement('a');
+    anchor.setAttribute('id', idValue);
+    // anchor.setAttribute('href', `${get(page).url.pathname}/#${idValue}`); // add the href attribute with the path prefix
+    anchor.setAttribute('href', `${get(page).url.pathname}/#${idValue}`); // add the href attribute with the path prefix
+    anchor.innerHTML = 'LINK';
+    anchor.style.color = 'blue';
+    anchor.style.textDecoration = 'none';
+    heading.appendChild(anchor);
+  });
+}

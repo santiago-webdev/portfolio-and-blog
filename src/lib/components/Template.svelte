@@ -3,7 +3,7 @@
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
   import Hollow from './Hollow.svelte';
-  import { articleHeaders, readableDate, relativeTime } from '$lib/utils/utils';
+  import { addNumericalIDsToHeadingsInPost, articleHeaders, readableDate, relativeTime } from '$lib/utils/utils';
 
   export let title = '';
   export let date = '';
@@ -38,6 +38,8 @@
     setTimeout(() => (showRelative = true), 3000);
 
     mounted = true;
+    addNumericalIDsToHeadingsInPost()
+    console.log($page.url.pathname)
   });
 </script>
 
@@ -77,7 +79,7 @@
         </ul>
       {/if}
     </aside>
-    <article>
+    <article id="post">
       <slot />
     </article>
   </div>
