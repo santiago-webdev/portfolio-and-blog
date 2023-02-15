@@ -173,6 +173,7 @@ html {
 
 .base {
   background-color: var(--clr-background-alt);
+  border-radius: 1.1rem;
   border-top: 0.13rem solid var(--clr-border-card);
   border-left: 0.13rem solid var(--clr-border-card);
   border-right: 0.13rem solid transparent;

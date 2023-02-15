@@ -68,7 +68,7 @@
     </button>
   </header>
   <div class="wider sidebar">
-    <aside>
+    <aside class="base">
       {#if mounted}
         <ul>
           {#each articleHeaders() as heading}
@@ -150,7 +150,7 @@
     place-items: center;
     height: max-content;
     color: var(--clr-subtitle);
-    background-color: var(--clr-background-alt);
+    /* background-color: var(--clr-background-alt); */
   }
 
   ul {
