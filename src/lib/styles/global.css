@@ -180,10 +180,13 @@ html {
 }
 
 .act {
-  border: 0.13rem solid transparent;
   border-radius: 1.1rem;
   transition-delay: 0.1s;
   transition: all 0.1s;
+}
+
+.act-border {
+  border: 0.13rem solid transparent;
 }
 
 .act:focus-within {
