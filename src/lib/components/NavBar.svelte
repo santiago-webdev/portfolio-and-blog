@@ -79,9 +79,8 @@
               style:display={item.label === 'Home' && desktop
                 ? 'none'
                 : 'block'}
-              class={item.decoration === 'border'
-                ? 'decoration-border'
-                : 'none'}
+              class:base-border={item.decoration}
+              class:act={item.decoration}
             >
               <a href={item.href} on:click={toggleMobile}>{item.label}</a>
             </li>
@@ -105,7 +104,7 @@
     top: 0;
     position: sticky;
     background-color: var(--clr-background-alt);
-    padding: 0.6rem 0;
+    padding: 0.3rem 0;
     transition: filter 0.3s ease-in;
 
     z-index: 999;

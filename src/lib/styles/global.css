@@ -182,6 +182,12 @@ html {
     drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 }
 
+.base-border {
+  border: var(--border-muted);
+  color: var(--clr-text-muted);
+  border-radius: 1.1rem;
+}
+
 .act {
   border-radius: 1.1rem;
   transition-delay: 0.1s;

@@ -45,7 +45,7 @@
     <strong>frontend development</strong>.
   </p>
 </div>
-<form class="wide act" on:submit|preventDefault={handleSubmit}>
+<form class="wide base-border act" on:submit|preventDefault={handleSubmit}>
   <button aria-label="Go to selected blog" type="submit"
     >{@html search_icon}</button
   >
@@ -83,9 +83,6 @@
     grid-template-columns: auto 1fr;
     overflow: hidden;
     background-color: transparent;
-    border: var(--border-muted);
-    color: var(--clr-text-muted);
-    border-radius: 1.1rem;
     margin-inline: auto;
   }
 
