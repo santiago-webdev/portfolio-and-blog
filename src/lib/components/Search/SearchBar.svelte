@@ -34,7 +34,11 @@
   onMount(() => (value = get(FilterValue)));
 </script>
 
-<form class:attn-focus={() => $FilterValue.length >= 2} class="wide attn-border attn" on:submit|preventDefault={handleSubmit}>
+<form
+  class:attn-focus={() => $FilterValue.length >= 2}
+  class="wide attn-border attn"
+  on:submit|preventDefault={handleSubmit}
+>
   <button aria-label="Go to selected blog" type="submit"
     >{@html search_icon}</button
   >
