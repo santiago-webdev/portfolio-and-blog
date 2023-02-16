@@ -36,7 +36,7 @@
 </script>
 
 <form
-  class="wide attn-border attn"
+  class={$FilterValue.length >= 1 ? 'wide attn attn-focus' : 'wide attn attn-border'}
   on:submit|preventDefault={handleSubmit}
   bind:this={form}
 >
