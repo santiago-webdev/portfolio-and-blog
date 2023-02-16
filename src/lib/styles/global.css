@@ -182,8 +182,8 @@ html {
   background-color: var(--clr-bg-active);
   border-top: 0.13rem solid var(--clr-border-card-active);
   border-left: 0.13rem solid var(--clr-border-card-active);
-  border-right: 0.13rem solid transparent;
-  border-bottom: 0.13rem solid transparent;
+  border-right: 0.13rem solid var(--clr-bg-active);
+  border-bottom: 0.13rem solid var(--clr-bg-active);
   filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
     drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 }
@@ -196,6 +196,15 @@ html {
 .attn-border {
   border: var(--border-muted);
   border-radius: 1.1rem;
+  background: linear-gradient(
+    130deg,
+    rgba(43 42 51 / 0.03),
+    rgba(255 255 255/ 0.04)
+  );
+  /* backdrop-filter: blur(30px); */
+  /* -webkit-backdrop-filter: blur(30px); */
+  border: 0.13rem solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
 
 .base {

@@ -80,16 +80,6 @@
     grid-template-columns: auto 1fr;
     overflow: hidden;
     margin-inline: auto;
-    /* background: linear-gradient( */
-    /*   135deg, */
-    /*   rgba(255, 255, 255, 0.05), */
-    /*   rgba(255, 255, 255, 0.05) */
-    /* ); */
-    /* backdrop-filter: blur(10px); */
-    /* -webkit-backdrop-filter: blur(10px); */
-    /* border-radius: 20px; */
-    /* border: 1px solid rgba(255, 255, 255, 0.18); */
-    /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); */
   }
 
   /* .suggestions { */
