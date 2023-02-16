@@ -178,6 +178,7 @@ html {
 
 .attn:focus-within,
 .attn:focus,
+.attn-focus,
 .attn:hover {
   background-color: var(--clr-bg-active);
   border-top: 0.13rem solid var(--clr-border-card-active);
