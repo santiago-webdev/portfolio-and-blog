@@ -61,6 +61,7 @@
     grid-template-columns: auto 1fr;
     overflow: hidden;
     margin-inline: auto;
+    position: relative;
   }
 
   input:-moz-placeholder,
