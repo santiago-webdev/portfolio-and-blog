@@ -1,6 +1,7 @@
 <script lang="ts">
   import SearchBar from '$lib/components/Search/SearchBar.svelte';
 
+  let input: HTMLInputElement;
   let modal: HTMLDialogElement;
 
   const handleModal = (async() => {
@@ -8,6 +9,7 @@
       modal.close()
     } else {
       modal.showModal();
+      input.focus();
     }
   });
 
@@ -29,7 +31,7 @@
 <svelte:window on:keydown={onCtrlK} />
 
 <dialog bind:this={modal}>
-  <SearchBar insideModal={true} />
+  <SearchBar bind:input insideModal={true} />
 </dialog>
 
 <style>

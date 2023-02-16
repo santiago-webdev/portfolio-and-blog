@@ -19,7 +19,7 @@
   let placeholder = placeholderDefault;
 
   let value = '';
-  let input: HTMLElement;
+  export let input: HTMLElement;
 
   async function handleSubmit() {
     if (value.length === 0) {
@@ -35,13 +35,16 @@
   }
 
   onMount(() => (value = get(FilterValue)));
+  FilterValue.subscribe(() => {
+    value = $FilterValue
+  })
 </script>
 
 <form
   class={$FilterValue.trim().length !== 0
     ? 'wide attn attn-focus'
     : 'wide attn attn-border'}
-  style={insideModal ? "width: 100%" : ""}
+  style={insideModal ? 'width: 100%' : ''}
   on:submit|preventDefault={handleSubmit}
 >
   <button aria-label="Go to selected blog" type="submit"
