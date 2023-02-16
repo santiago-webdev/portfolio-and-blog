@@ -101,13 +101,13 @@
     opacity: 1;
   }
 
-  /* input[type='search']::-ms-clear { */
-  /*   display: none; */
-  /* } */
+  input[type='search']::-ms-clear {
+    display: none;
+  }
 
-  /* input[type='search']::-webkit-search-cancel-button { */
-  /*   display: none; */
-  /* } */
+  input[type='search']::-webkit-search-cancel-button {
+    display: none;
+  }
 
   input,
   input::placeholder,
