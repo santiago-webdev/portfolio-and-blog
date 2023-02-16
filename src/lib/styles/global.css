@@ -171,6 +171,33 @@ html {
   -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
 }
 
+.attn {
+  border-radius: 1.1rem;
+  color: var(--clr-text-muted);
+}
+
+.attn:focus-within,
+.attn:focus,
+.attn:hover {
+  background-color: var(--clr-bg-active);
+  border-top: 0.13rem solid var(--clr-border-card-active);
+  border-left: 0.13rem solid var(--clr-border-card-active);
+  border-right: 0.13rem solid transparent;
+  border-bottom: 0.13rem solid transparent;
+  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
+    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+}
+
+.attn:focus-within,
+.attn:focus {
+  color: var(--clr-subtitle);
+}
+
+.attn-border {
+  border: var(--border-muted);
+  border-radius: 1.1rem;
+}
+
 .base {
   background-color: var(--clr-background-alt);
   border-radius: 1.1rem;

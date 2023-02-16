@@ -11,7 +11,7 @@
   }
 
   const search_icon =
-    '<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 32 32"><path fill="currentColor" d="m29 27.586l-7.552-7.552a11.018 11.018 0 1 0-1.414 1.414L27.586 29ZM4 13a9 9 0 1 1 9 9a9.01 9.01 0 0 1-9-9Z"></path></svg>';
+    '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 15 15"><path fill="currentColor" fill-rule="evenodd" d="M10 6.5a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0Zm-.691 3.516a4.5 4.5 0 1 1 .707-.707l2.838 2.837a.5.5 0 0 1-.708.708L9.31 10.016Z" clip-rule="evenodd"/></svg>';
   const placeholderDefault = 'Search';
   const placeholderNoInput = "You haven't searched for any post yet";
   let placeholder = placeholderDefault;
@@ -34,11 +34,7 @@
   onMount(() => (value = get(FilterValue)));
 </script>
 
-<form
-  class:act-active={$FilterValue.length > 1}
-  class="wide base-border act"
-  on:submit|preventDefault={handleSubmit}
->
+<form class="wide attn-border attn" on:submit|preventDefault={handleSubmit}>
   <button aria-label="Go to selected blog" type="submit"
     >{@html search_icon}</button
   >
@@ -84,6 +80,16 @@
     grid-template-columns: auto 1fr;
     overflow: hidden;
     margin-inline: auto;
+    /* background: linear-gradient( */
+    /*   135deg, */
+    /*   rgba(255, 255, 255, 0.05), */
+    /*   rgba(255, 255, 255, 0.05) */
+    /* ); */
+    /* backdrop-filter: blur(10px); */
+    /* -webkit-backdrop-filter: blur(10px); */
+    /* border-radius: 20px; */
+    /* border: 1px solid rgba(255, 255, 255, 0.18); */
+    /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); */
   }
 
   /* .suggestions { */
