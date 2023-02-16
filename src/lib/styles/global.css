@@ -194,6 +194,14 @@ html {
   transition-delay: 50ms;
 }
 
+.act-active {
+  background-color: var(--clr-bg-active);
+  border-top: 0.13rem solid var(--clr-border-card-active);
+  border-left: 0.13rem solid var(--clr-border-card-active);
+  border-right: 0.13rem solid transparent;
+  border-bottom: 0.13rem solid transparent;
+}
+
 .act-border {
   border: 0.13rem solid transparent;
 }

@@ -34,7 +34,11 @@
   onMount(() => (value = get(FilterValue)));
 </script>
 
-<form class="wide base-border act" on:submit|preventDefault={handleSubmit}>
+<form
+  class:act-active={$FilterValue.length > 1}
+  class="wide base-border act"
+  on:submit|preventDefault={handleSubmit}
+>
   <button aria-label="Go to selected blog" type="submit"
     >{@html search_icon}</button
   >
@@ -79,7 +83,6 @@
     display: grid;
     grid-template-columns: auto 1fr;
     overflow: hidden;
-    background-color: transparent;
     margin-inline: auto;
   }
 
