@@ -51,6 +51,7 @@
     list="search-terms"
     autocomplete="off"
   />
+  <kbd>Ctrl K</kbd>
   <!-- {#if suggestions.length > 0} -->
   <!-- {#if true} -->
   <!--   <div class="suggestions">  -->
@@ -130,5 +131,14 @@
     display: grid;
     place-items: center;
     padding-inline: 1.3rem 0.8rem;
+  }
+
+  kbd {
+    position: absolute;
+    right: 1.3rem;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    color: var(--clr-text-muted);
   }
 </style>
