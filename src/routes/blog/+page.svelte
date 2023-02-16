@@ -1,11 +1,13 @@
 <script lang="ts">
   import SearchBar from '$lib/components/Search/SearchBar.svelte';
+  import BlogHeader from '$lib/components/BlogHeader.svelte';
   import FilteredPostsCards from '$lib/components/Search/FilteredPostsCards.svelte';
   import { DESCRIPTION, TITLE_BLOG, URL_BLOG } from '$lib/config';
 </script>
 
 <main>
   <div class="banner">
+    <BlogHeader />
     <SearchBar />
   </div>
   <FilteredPostsCards />
