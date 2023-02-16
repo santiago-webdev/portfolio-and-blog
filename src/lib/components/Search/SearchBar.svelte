@@ -6,6 +6,8 @@
   import { get } from 'svelte/store';
   import { onMount } from 'svelte';
 
+  export let insideModal = false;
+
   $: if ($FilteredPosts.length === 1) {
     preloadData(`${base}/blog${$FilteredPosts[0].href}`);
   }
@@ -17,6 +19,7 @@
   let placeholder = placeholderDefault;
 
   let value = '';
+  let input: HTMLElement;
 
   async function handleSubmit() {
     if (value.length === 0) {
@@ -32,15 +35,14 @@
   }
 
   onMount(() => (value = get(FilterValue)));
-  let form: HTMLFormElement;
 </script>
 
 <form
   class={$FilterValue.trim().length !== 0
     ? 'wide attn attn-focus'
     : 'wide attn attn-border'}
+  style={insideModal ? "width: 100%" : ""}
   on:submit|preventDefault={handleSubmit}
-  bind:this={form}
 >
   <button aria-label="Go to selected blog" type="submit"
     >{@html search_icon}</button
@@ -48,6 +50,7 @@
   <input
     {placeholder}
     bind:value
+    bind:this={input}
     on:input={() => FilterValue.set(searchHandler(value))}
     type="search"
     id="search"

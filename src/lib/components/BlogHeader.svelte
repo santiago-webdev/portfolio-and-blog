@@ -15,6 +15,7 @@
 <style>
   .wrapper-header {
     display: grid;
+    place-items: center;
     gap: 1rem;
     overflow: hidden;
     transition: height 100ms ease-in-out 0s;
