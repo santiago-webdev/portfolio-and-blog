@@ -8,6 +8,7 @@
   import { page } from '$app/stores';
   import '@fontsource/pt-sans/400.css';
   import '@fontsource/pt-sans/700.css';
+  import Modal from '$lib/components/Search/Modal.svelte';
 
   let body: HTMLElement;
   $: pageHeight = 0;
@@ -27,6 +28,7 @@
 
 <div class="layout" bind:this={body}>
   <NavBar {pageHeight} />
+  <Modal />
   <Transition url={$page.url}>
     <slot />
   </Transition>
