@@ -32,12 +32,13 @@
   }
 
   onMount(() => (value = get(FilterValue)));
+  let form: HTMLFormElement;
 </script>
 
 <form
-  class:attn-focus={() => $FilterValue.length >= 2}
   class="wide attn-border attn"
   on:submit|preventDefault={handleSubmit}
+  bind:this={form}
 >
   <button aria-label="Go to selected blog" type="submit"
     >{@html search_icon}</button
@@ -52,31 +53,6 @@
     autocomplete="off"
   />
   <kbd>Ctrl K</kbd>
-  <!-- {#if suggestions.length > 0} -->
-  <!-- {#if true} -->
-  <!--   <div class="suggestions">  -->
-  <!---->
-  <!--   <hr style="width: 100%"/> -->
-  <!--   <ul> -->
-  <!--     {#each $FilteredPosts as post} -->
-  <!--       <li>You could try with: {post.title}</li> -->
-  <!--     {/each} -->
-  <!--   </ul> -->
-  <!--   </div> -->
-  <!-- {/if} -->
-  <!-- {#if true} -->
-  <!--   <div class="suggestions"> -->
-  <!--     <hr style="width: 96%" /> -->
-  <!--     <datalist id="search-terms"> -->
-  <!--       <ul> -->
-  <!--         {#each $FilteredPosts as post} -->
-  <!--           <li>You could try with: {post.title}</li> -->
-  <!--           <option value={post.title} /> -->
-  <!--         {/each} -->
-  <!--       </ul> -->
-  <!--     </datalist> -->
-  <!--   </div> -->
-  <!-- {/if} -->
 </form>
 
 <style>
@@ -86,16 +62,6 @@
     overflow: hidden;
     margin-inline: auto;
   }
-
-  /* .suggestions { */
-  /*   grid-column: 1 / span 2; */
-  /* } */
-
-  /* ul { */
-  /*   display: grid; */
-  /*   place-content: start; */
-  /*   padding-inline: 3rem; */
-  /* } */
 
   input:-moz-placeholder,
   input::-moz-placeholder {
