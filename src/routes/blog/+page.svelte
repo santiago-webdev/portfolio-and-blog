@@ -3,12 +3,16 @@
   import BlogHeader from '$lib/components/BlogHeader.svelte';
   import FilteredPostsCards from '$lib/components/Search/FilteredPostsCards.svelte';
   import { DESCRIPTION, TITLE_BLOG, URL_BLOG } from '$lib/config';
+
+  // TODO(santigo-zero): We don't need this bind, find a way of having a fallback inside
+  // the component if we call the component without a bind.
+  let input: HTMLInputElement;
 </script>
 
 <main>
   <div class="banner">
     <BlogHeader />
-    <SearchBar />
+    <SearchBar bind:input />
   </div>
   <FilteredPostsCards />
 </main>

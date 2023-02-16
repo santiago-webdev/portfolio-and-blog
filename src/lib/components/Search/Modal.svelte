@@ -4,14 +4,14 @@
   let input: HTMLInputElement;
   let modal: HTMLDialogElement;
 
-  const handleModal = (async() => {
+  const handleModal = async () => {
     if (modal.open) {
-      modal.close()
+      modal.close();
     } else {
       modal.showModal();
       input.focus();
     }
-  });
+  };
 
   function onCtrlK(event: KeyboardEvent) {
     let { key, ctrlKey, repeat } = event;
