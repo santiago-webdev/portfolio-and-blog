@@ -79,8 +79,7 @@
               style:display={item.label === 'Home' && desktop
                 ? 'none'
                 : 'block'}
-              class:base-border={item.decoration}
-              class:act={item.decoration}
+              class={item.decoration ? 'attn-border attn' : ''}
             >
               <a
                 aria-current={$page.url.pathname.startsWith(item.href)
