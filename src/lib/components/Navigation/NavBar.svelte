@@ -1,6 +1,6 @@
 <script lang="ts">
   import { base } from '$app/paths';
-  import { navigating } from '$app/stores';
+  import { navigating, page } from '$app/stores';
 
   let burger =
     '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M7.95 11.95h32m-32 12h32m-32 12h32"/></svg>';
@@ -82,7 +82,13 @@
               class:base-border={item.decoration}
               class:act={item.decoration}
             >
-              <a href={item.href} on:click={toggleMobile}>{item.label}</a>
+              <a
+                aria-current={$page.url.pathname.startsWith(item.href)
+                  ? 'page'
+                  : undefined}
+                href={item.href}
+                on:click={toggleMobile}>{item.label}</a
+              >
             </li>
             <hr
               style:display={!desktop ? 'block' : 'none'}
@@ -147,6 +153,10 @@
 
   a:focus {
     color: var(--clr-clicked);
+  }
+
+  a[aria-current='page'] {
+    text-decoration: underline solid var(--accent-peachy) 3px;
   }
 
   ul {
