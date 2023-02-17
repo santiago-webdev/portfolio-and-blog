@@ -1,15 +1,29 @@
 <script lang="ts">
+  import { page } from '$app/stores';
   import SearchBar from '$lib/components/Search/SearchBar.svelte';
+  import FilteredPostsCards from './FilteredPostsCards.svelte';
 
   let input: HTMLInputElement;
   let modal: HTMLDialogElement;
+
+  function checkEnv(): boolean {
+    if ($page.url.pathname.endsWith('blog')) {
+      return true;
+    }
+
+    return false;
+  }
 
   const handleModal = async () => {
     if (modal.open) {
       modal.close();
     } else {
-      modal.showModal();
-      input.focus();
+      const inBlogRoute = checkEnv();
+      if (inBlogRoute) {
+        input.focus();
+      } else {
+        modal.showModal();
+      }
     }
   };
 
@@ -30,8 +44,9 @@
 
 <svelte:window on:keydown={onCtrlK} />
 
-<dialog bind:this={modal}>
+<dialog class="attn wide" bind:this={modal}>
   <SearchBar bind:input insideModal={true} />
+  <FilteredPostsCards />
 </dialog>
 
 <style>
