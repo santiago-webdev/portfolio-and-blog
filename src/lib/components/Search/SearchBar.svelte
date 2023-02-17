@@ -45,6 +45,7 @@
   <button aria-label="Go to selected blog" type="submit"
     >{@html search_icon}</button
   >
+  <!-- <label class="search-label" for="search">Search about recipes:</label> -->
   <input
     {placeholder}
     bind:value
@@ -55,7 +56,8 @@
     list="search-terms"
     autocomplete="off"
   />
-  <kbd>Ctrl K</kbd>
+  <!-- <input class="button" type="button" value="Search"> -->
+  <!-- <kbd>Ctrl K</kbd> -->
 </form>
 
 <style>
@@ -103,12 +105,12 @@
     padding-inline: 1.3rem 0.8rem;
   }
 
-  kbd {
-    position: absolute;
-    right: 1.3rem;
-    height: 100%;
-    display: grid;
-    place-items: center;
-    color: var(--clr-text-muted);
-  }
+  /* kbd { */
+  /*   position: absolute; */
+  /*   right: 1.3rem; */
+  /*   height: 100%; */
+  /*   display: grid; */
+  /*   place-items: center; */
+  /*   color: var(--clr-text-muted); */
+  /* } */
 </style>
