@@ -184,6 +184,8 @@ html {
 .attn {
   border-radius: 1.1rem;
   color: var(--clr-text-muted);
+  transition: background-color 50ms, color 100ms, border 80ms;
+  transition-delay: 50ms;
 }
 
 .attn:focus-within,
@@ -203,6 +205,14 @@ html {
 .attn:focus {
   color: var(--clr-subtitle);
 }
+
+.attn:active {
+  transition-delay: 300ms;
+  color: var(--clr-clicked);
+  background-color: var(--clr-background);
+  border: 0.13rem solid var(--clr-background);
+}
+
 
 .attn-border {
   border: var(--border-muted);
