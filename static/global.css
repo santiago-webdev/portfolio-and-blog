@@ -181,6 +181,10 @@ html {
   -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
 }
 
+.trn-border {
+  border: 0.13rem solid transparent;
+}
+
 .attn {
   border-radius: 1.1rem;
   color: var(--clr-text-muted);
