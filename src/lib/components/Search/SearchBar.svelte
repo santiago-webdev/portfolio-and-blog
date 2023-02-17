@@ -38,7 +38,7 @@
 <form
   class={$FilterValue.trim().length !== 0
     ? 'wide attn attn-focus'
-    : 'wide attn attn-border'}
+    : 'wide attn attn-gradient-border'}
   style={insideModal ? 'width: 100%' : ''}
   on:submit|preventDefault={handleSubmit}
 >
