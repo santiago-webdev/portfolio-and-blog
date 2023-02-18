@@ -176,17 +176,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/pt-sans-narrow@npm:^4.5.11":
-  version: 4.5.11
-  resolution: "@fontsource/pt-sans-narrow@npm:4.5.11"
-  checksum: 951584180b2b2d64f93d8f2bbe9b73aa32588f861e8a453178b9585f75df915d112692fc27742082a668083bc1ffe387b12c45002230ccf91359bf5c2c1e83cb
-  languageName: node
-  linkType: hard
-
-"@fontsource/pt-sans@npm:^4.5.11":
-  version: 4.5.11
-  resolution: "@fontsource/pt-sans@npm:4.5.11"
-  checksum: 548d72f4b2a015b414a8a0b6da383a067440b90ebbc88af453a73bfe03bd9a2986a6bb6bf81d9234a21b445fb1733692eca5f821884c4bf8bf43400d4cacaf80
+"@fontsource/manrope@npm:^4.5.13":
+  version: 4.5.13
+  resolution: "@fontsource/manrope@npm:4.5.13"
+  checksum: 57ed2455a6c516a583bcc497a7620fafbf77febfbb26eba69a628c47c357a5178225d973298663de6f769ace44b607237687ef965255ef145af44d8fdc3d8927
   languageName: node
   linkType: hard
 
@@ -574,8 +567,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "Portfolio and Blog - Santiago Gonzalez@workspace:."
   dependencies:
-    "@fontsource/pt-sans": ^4.5.11
-    "@fontsource/pt-sans-narrow": ^4.5.11
+    "@fontsource/manrope": ^4.5.13
     "@playwright/test": ^1.28.1
     "@sveltejs/adapter-auto": ^1.0.2
     "@sveltejs/adapter-static": ^2.0.0
