@@ -1,5 +1,4 @@
 <script lang="ts">
-  import Hollow from '../Hollow.svelte';
   import SearchBar from '../Search/SearchBar.svelte';
 
   let input: HTMLInputElement;
@@ -14,7 +13,7 @@
       Here we'll discuss about web technologies and show you my projects while
       at it.
     </p>
-    <SearchBar bind:input />
+    <SearchBar placeholder="You can read my blog" bind:input />
   </div>
 </section>
 
@@ -36,14 +35,9 @@
     text-transform: uppercase;
   }
 
-  p {
-    margin-inline: auto;
-  }
-
   .content {
     display: grid;
     place-content: center;
     gap: 1rem;
-    width: 100%;
   }
 </style>

@@ -233,7 +233,7 @@ html {
     rgba(255 255 255/ 0.04)
   );
   border: 0.13rem solid rgba(255, 255, 255, 0.18);
-  /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
 
 .attn-border {
