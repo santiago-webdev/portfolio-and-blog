@@ -32,7 +32,7 @@
   h1 {
     font-size: clamp(3rem, 8vw, 8.1rem);
     line-height: calc(1.5 * clamp(2.3rem, 8vw, 5rem));
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
   }
 
   .content {

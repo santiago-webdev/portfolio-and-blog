@@ -37,10 +37,11 @@
   }>;
 
   const navItems = [
-    { separator: '|' },
     { label: 'Home', href: `${base}/` },
     { label: 'Blog', href: `${base}/blog` },
     { label: 'Projects', href: `${base}/projects` },
+    { separator: '|' },
+    { label: 'About', href: `${base}/about` },
     { label: 'Contact', href: `${base}/contact`, decoration: 'border' }
   ] satisfies NavItems;
 </script>
@@ -58,22 +59,21 @@
     class="nav-container wider"
   >
     <div class="main-nav">
-      <!-- TODO(santigo-zero): Hotfix, padding issue, change it in config -->
       <a
         style:padding-left="0"
         style:visibility={showMobile ? 'hidden' : 'visible'}
         href="{base}/">Santiago Gonzalez</a
       >
-      {#if !desktop}
-        <button on:click={toggleMobile}>
-          {#if !showMobile}
-            {@html burger}
-          {:else}
-            {@html cross}
-          {/if}
-        </button>
-      {/if}
     </div>
+    <!-- {#if !desktop} -->
+    <!--   <button on:click={toggleMobile}> -->
+    <!--     {#if !showMobile} -->
+    <!--       {@html burger} -->
+    <!--     {:else} -->
+    <!--       {@html cross} -->
+    <!--     {/if} -->
+    <!--   </button> -->
+    <!-- {/if} -->
     <section style:display={showMobile || desktop ? 'grid' : 'none'}>
       <ul style:flex-direction={desktop ? 'row' : 'column'}>
         {#each navItems as item}
@@ -128,6 +128,7 @@
     grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
     margin-inline: auto;
+    gap: 1rem;
   }
 
   .main-nav {

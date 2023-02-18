@@ -57,7 +57,7 @@
     autocomplete="off"
   />
   <!-- <input class="button" type="button" value="Search"> -->
-  <!-- <kbd>Ctrl K</kbd> -->
+  <kbd>Ctrl K</kbd>
 </form>
 
 <style>
@@ -107,12 +107,12 @@
     padding-inline: 1.3rem 0.8rem;
   }
 
-  /* kbd { */
-  /*   position: absolute; */
-  /*   right: 1.3rem; */
-  /*   height: 100%; */
-  /*   display: grid; */
-  /*   place-items: center; */
-  /*   color: var(--clr-text-muted); */
-  /* } */
+  kbd {
+    position: absolute;
+    right: 1.3rem;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    color: var(--clr-text-muted);
+  }
 </style>
