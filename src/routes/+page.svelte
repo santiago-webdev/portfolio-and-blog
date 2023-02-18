@@ -4,7 +4,7 @@
   import { DESCRIPTION, TITLE, URL } from '$lib/config';
 </script>
 
-<main>
+<main class="banner">
   <Hero />
 </main>
 <section id="blog">
@@ -43,9 +43,9 @@
 <style>
   main {
     background-color: var(--clr-background-alt);
-    min-height: min(100vh - 3rem, 80rem);
-    min-height: min(100dvh - 3rem, 80rem);
-    min-height: min(100svh - 3rem, 80rem);
+    min-height: min(100vh - 12rem, 80rem);
+    min-height: min(100dvh - 12rem, 80rem);
+    min-height: min(100svh - 12rem, 80rem);
     padding: 6rem 0;
     display: grid;
     place-content: center;

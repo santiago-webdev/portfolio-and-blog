@@ -5,7 +5,6 @@
 </script>
 
 <section class="wide">
-  <div class="noise" />
   <h1>Building websites && clean interfaces</h1>
   <p>
     Here we'll discuss about web technologies and show you my projects while at
@@ -20,5 +19,6 @@
     display: grid;
     gap: 2.2rem;
     margin-inline: auto;
+    position: relative;
   }
 </style>
