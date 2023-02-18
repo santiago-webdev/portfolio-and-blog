@@ -52,7 +52,7 @@
     bind:value
     bind:this={input}
     on:input={() => FilterValue.set(searchHandler(value))}
-    on:focus|once={() => placeholder = placeholderDefault}
+    on:focus|once={() => (placeholder = placeholderDefault)}
     type="search"
     id="search"
     list="search-terms"

@@ -14,7 +14,7 @@
   import '@fontsource/manrope/700.css';
   import '@fontsource/manrope/800.css';
 
-  import '$lib/styles/typography.css'
+  import '$lib/styles/typography.css';
 
   let body: HTMLElement;
   $: pageHeight = 0;
