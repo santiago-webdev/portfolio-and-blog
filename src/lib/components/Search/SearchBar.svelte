@@ -4,7 +4,6 @@
   import { base } from '$app/paths';
   import { goto, preloadData } from '$app/navigation';
 
-  export let insideModal = false;
   export let input: HTMLElement;
 
   $: if ($FilteredPosts.length === 1)
@@ -40,7 +39,6 @@
   class={$FilterValue.trim().length !== 0
     ? 'wide attn attn-focus'
     : 'wide attn attn-gradient-border'}
-  style={insideModal ? 'width: 100%' : ''}
   on:submit|preventDefault={handleSubmit}
 >
   <button aria-label="Go to selected blog" type="submit"
@@ -69,6 +67,7 @@
     overflow: hidden;
     margin-inline: auto;
     position: relative;
+    width: min(100%, var(--wide));
   }
 
   input:-moz-placeholder,

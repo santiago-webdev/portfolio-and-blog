@@ -39,5 +39,6 @@
     display: grid;
     place-content: center;
     gap: 1rem;
+    width: 100%;
   }
 </style>

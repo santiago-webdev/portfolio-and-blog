@@ -124,7 +124,8 @@
   }
 
   .nav-container {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     justify-content: space-between;
     margin-inline: auto;
   }
@@ -165,6 +166,8 @@
     display: flex;
     flex-direction: row;
     place-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
 
   progress {
