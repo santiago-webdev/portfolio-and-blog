@@ -1,16 +1,10 @@
-
+@import 'fonts/Basier/font-face.css';
+@import 'fonts/Basier-Mono/font-face.css';
 
 :root {
-  --ff--header: 'PT Sans', system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
-  --ff--header-narrow: 'PT Sans Narrow', system-ui, -apple-system,
-    BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif,
-    'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
-  --ff--dflt: 'Basier Circle', system-ui, -apple-system, BlinkMacSystemFont,
+  --ff--dflt: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol';
-  --ff--gem: 'Uncut Sans', sans-serif;
 
   --wide: 58rem;
   --gap: 0.66rem;
@@ -132,7 +126,7 @@ html {
 }
 
 [data-theme='dark'] {
-  --clr-title: var(--clr-slate-200);
+  --clr-title: var(--clr-slate-250);
   --clr-subtitle: var(--clr-slate-200);
   --clr-text: var(--clr-slate-250);
   --clr-text-muted: var(--clr-pale-450);

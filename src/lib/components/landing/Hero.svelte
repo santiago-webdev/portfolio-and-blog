@@ -7,11 +7,7 @@
 
 <section class="wider">
   <div class="hero">
-    <h1>
-      Building websites <span>&&</span>
-      clean
-      interfaces
-    </h1>
+    <h1>Building websites <span>&&</span> clean interfaces</h1>
   </div>
   <div class="content">
     <p>
@@ -26,25 +22,23 @@
   section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
-    /* grid-template-columns: 1fr 1fr; */
     gap: 1rem;
     margin-inline: auto;
-    /* width: 100%; */
-    /* height: 100%; */
   }
 
   .hero {
     text-align: left;
   }
 
-  /* h1 { */
-  /*   text-transform: uppercase; */
-  /* } */
+  h1 {
+    font-size: clamp(3rem, 8vw, 8.1rem);
+    line-height: calc(1.5 * clamp(2.3rem, 8vw, 5rem));
+    text-transform: uppercase;
+  }
 
-  /* p { */
-  /*   max-width: 40ch; */
-  /*   margin-inline: auto; */
-  /* } */
+  p {
+    margin-inline: auto;
+  }
 
   .content {
     display: grid;
