@@ -7,6 +7,8 @@
 
   import '@fontsource/pt-sans/400.css';
   import '@fontsource/pt-sans/700.css';
+  import '@fontsource/pt-sans-narrow/400.css';
+  import '@fontsource/pt-sans-narrow/700.css';
 
   let body: HTMLElement;
   $: pageHeight = 0;

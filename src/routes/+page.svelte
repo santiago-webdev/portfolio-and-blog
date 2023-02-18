@@ -1,15 +1,15 @@
 <script lang="ts">
-  // import Presentation from '$lib/components/Presentation.svelte';
-  // import PresentationBlog from '$lib/components/PresentationBlog.svelte';
+  import Hero from '$lib/components/landing/Hero.svelte';
+  import PresentationBlog from '$lib/components/PresentationBlog.svelte';
   import { DESCRIPTION, TITLE, URL } from '$lib/config';
 </script>
 
 <main>
-  <!-- <Presentation /> -->
+  <Hero />
 </main>
-<!-- <section id="blog"> -->
-<!-- 	<PresentationBlog /> -->
-<!-- </section> -->
+<section id="blog">
+  <PresentationBlog />
+</section>
 <!---->
 <!-- <section id="projects" /> -->
 <!---->
@@ -47,10 +47,17 @@
 <style>
   main {
     background-color: var(--clr-background-alt);
-    /* min-height: min(100vh, 80rem); */
-    /* min-height: min(100dvh, 80rem); */
+    min-height: min(100vh - 3rem, 80rem);
+    min-height: min(100dvh - 3rem, 80rem);
+    min-height: min(100svh - 3rem, 80rem);
     padding: 6rem 0;
     display: grid;
     place-content: center;
+  }
+
+  @media screen and (max-width: 700px) {
+    main {
+      padding: 0;
+    }
   }
 </style>

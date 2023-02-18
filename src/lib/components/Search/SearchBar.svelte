@@ -92,6 +92,7 @@
   input {
     border: none;
     outline: none;
+    width: 100%;
     padding: 0.6rem 1.3rem 0.6rem 0;
   }
 

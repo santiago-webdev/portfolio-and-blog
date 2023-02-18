@@ -58,8 +58,11 @@
     class="nav-container wider"
   >
     <div class="main-nav">
-      <a style:visibility={showMobile ? 'hidden' : 'visible'} href="{base}/"
-        >Santiago Gonzalez</a
+      <!-- TODO(santigo-zero): Hotfix, padding issue, change it in config -->
+      <a
+        style:padding-left="0"
+        style:visibility={showMobile ? 'hidden' : 'visible'}
+        href="{base}/">Santiago Gonzalez</a
       >
       {#if !desktop}
         <button on:click={toggleMobile}>
