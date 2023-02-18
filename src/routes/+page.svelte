@@ -10,10 +10,6 @@
 <section id="blog">
   <PresentationBlog />
 </section>
-<!---->
-<!-- <section id="projects" /> -->
-<!---->
-<!-- <section id="contact" /> -->
 
 <svelte:head>
   <title>{TITLE}</title>
