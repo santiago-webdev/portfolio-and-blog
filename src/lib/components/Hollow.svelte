@@ -1,14 +1,14 @@
 <script lang="ts">
-  export let text: string;
   export let color: string;
 </script>
 
-<span style="--color: {color}">{text}</span>
+<span style="--color: {color}">
+  <slot />
+</span>
 
 <style>
   span {
-    -webkit-text-stroke-color: var(--color);
-    -webkit-text-stroke-width: 0.09rem;
+    -webkit-text-stroke: 0.2rem var(--color);
     color: transparent;
   }
 </style>

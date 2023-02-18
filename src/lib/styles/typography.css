@@ -1,15 +1,19 @@
 html {
-  font-family: 'Manrope', sans-serif;
+  font-family: 'Basier Circle', sans-serif;
 }
 
 h1 {
   color: var(--clr-title);
-  font-weight: 650;
-  font-variation-settings: 'wght' 650;
-  font-stretch: 100%;
-  font-variation-settings: 'wdth' 100;
-  font-size: clamp(2.6rem, 8vw, 4.6rem);
+  font-weight: 800;
+  font-variation-settings: 'wght' 800;
+  /* font-size: clamp(2.6rem, 8vw, 4.6rem); */
+  /* line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem)); */
+  font-size: clamp(3.7rem, 8vw, 6rem);
   line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem));
+}
+
+h1 span {
+  font-weight: 200;
 }
 
 h2 {

@@ -5,6 +5,7 @@
   import Transition from '$lib/components/Transition.svelte';
   import { page } from '$app/stores';
 
+  import '@fontsource/manrope/variable.css';
   import '@fontsource/manrope/200.css';
   import '@fontsource/manrope/300.css';
   import '@fontsource/manrope/400.css';

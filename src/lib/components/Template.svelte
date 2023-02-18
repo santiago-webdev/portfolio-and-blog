@@ -45,7 +45,7 @@
   <header class="banner">
     {#if isHollow}
       <h1>
-        <Hollow text={hollowPrefix} color={'var(--clr-title)'} />
+        <Hollow color={'var(--clr-title)'}>{hollowPrefix}</Hollow>
         {fillSuffix}
       </h1>
     {:else}

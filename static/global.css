@@ -1,3 +1,5 @@
+
+
 :root {
   --ff--header: 'PT Sans', system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
@@ -18,6 +20,8 @@
   --base-dark-background-100: #1d1e26;
   --base-dark-background-150: #181a20;
   --base-dark-background-200: #2b2a33;
+
+  --base-blue-background-200: #202028;
 
   --accent-violet: #49364c;
   --accent-purple: #915268;
@@ -139,7 +143,7 @@ html {
   --clr-clicked: var(--clr-stone-700);
 
   --clr-background: var(--base-dark-background-000);
-  --clr-background-alt: var(--base-dark-background-100);
+  --clr-background-alt: var(--base-blue-background-200);
 
   --clr-bg-active: var(--base-dark-background-200);
 
@@ -212,8 +216,8 @@ html {
   border-left: 0.13rem solid var(--clr-border-card-active);
   border-right: 0.13rem solid var(--clr-bg-active);
   border-bottom: 0.13rem solid var(--clr-bg-active);
-  filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
-    drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+  /* filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) */
+  /*   drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)); */
 }
 
 .attn:focus-within,
@@ -235,7 +239,7 @@ html {
     rgba(255 255 255/ 0.04)
   );
   border: 0.13rem solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2); */
 }
 
 .attn-border {
