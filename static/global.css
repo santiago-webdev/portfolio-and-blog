@@ -227,7 +227,7 @@ html {
 }
 
 .attn:active {
-  transition-delay: 300ms;
+  transition-delay: 200ms;
   color: var(--clr-clicked);
   background-color: var(--clr-background);
   border: 0.13rem solid var(--clr-background);
