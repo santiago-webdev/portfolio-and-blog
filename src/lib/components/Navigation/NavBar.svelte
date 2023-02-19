@@ -63,9 +63,7 @@
       <a
         style:padding-left="0"
         style:visibility={showMobile ? 'hidden' : 'visible'}
-        aria-current={$page.url.pathname === `/${base}`
-          ? 'page'
-          : undefined}
+        aria-current={$page.url.pathname === `/${base}` ? 'page' : undefined}
         href="{base}/">Santiago Gonzalez</a
       >
     </div>
