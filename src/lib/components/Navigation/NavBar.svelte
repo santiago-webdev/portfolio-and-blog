@@ -53,7 +53,7 @@
   bind:scrollY={y}
 />
 
-<nav class:headerActive={y > 30 || showMobile}>
+<nav class="artifact-ui" class:headerActive={y > 30 || showMobile}>
   <progress max={pageHeightWithoutWindow} value={y} />
   <div
     style:flex-direction={desktop ? 'row' : 'column'}
@@ -195,8 +195,8 @@
     background: var(--accent-peachy);
   }
 
-  a,
-  button {
+  /* button, */
+  a {
     font-weight: 500;
     font-size: clamp(0.6rem, 8vw, 1.15rem);
     color: var(--clr-title);
