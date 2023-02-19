@@ -22,7 +22,7 @@
     {#each $FilteredPosts as post}
       <li in:fly={fly_in} out:fly={fly_out}>
         <a href="{base}/blog{post.href}">
-          <article class="base act">
+          <article class="base attn">
             <h2>{post.title}</h2>
             {#if post.description}
               <p>{post.description}</p>

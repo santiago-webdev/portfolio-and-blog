@@ -59,7 +59,7 @@
       </div>
     {/if}
     <button
-      class="act act-border"
+      class="attn trn-border"
       on:click={() => (showRelative = !showRelative)}
     >
       <small>
