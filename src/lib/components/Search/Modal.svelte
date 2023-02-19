@@ -45,7 +45,7 @@
 <svelte:window on:keydown={onCtrlK} />
 
 <dialog class="attn wide" bind:this={modal}>
-  <SearchBar bind:input insideModal={true} />
+  <SearchBar bind:input />
   <FilteredPostsCards />
 </dialog>
 
