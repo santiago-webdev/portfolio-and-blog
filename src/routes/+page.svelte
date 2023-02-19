@@ -7,7 +7,7 @@
 <main class="banner">
   <Hero />
 </main>
-<section id="blog">
+<section id="projects">
   <PresentationBlog />
 </section>
 

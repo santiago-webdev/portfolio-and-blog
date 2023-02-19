@@ -1,5 +1,4 @@
 <script lang="ts">
-  // import { fade } from 'svelte/transition';
   import { fly } from 'svelte/transition';
   export let url: URL;
 </script>

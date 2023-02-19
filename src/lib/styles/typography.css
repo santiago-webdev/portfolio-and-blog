@@ -39,6 +39,7 @@ small {
   font-size: 103%;
 }
 
+a,
 p,
 pre,
 kbd,
@@ -53,9 +54,9 @@ strong {
   color: var(--clr-title);
 }
 
-a,
-button {
-  font-weight: 400;
-  font-size: clamp(0.6rem, 8vw, 1.15rem);
-  color: var(--clr-title);
-}
+/* a, */
+/* button { */
+/*   font-weight: 400; */
+/*   font-size: clamp(0.6rem, 8vw, 1.15rem); */
+/*   color: var(--clr-title); */
+/* } */
