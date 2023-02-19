@@ -19,18 +19,6 @@
   let blog: HTMLElement;
   let blogButton: HTMLElement;
   let wrapperCards: HTMLElement;
-  onMount(async () => {
-    let loadBlog: IntersectionObserver = new IntersectionObserver(entries => {
-      entries.some(entry => {
-        if (entry.isIntersecting) {
-          blogButton.focus();
-          loadBlog.disconnect();
-        }
-      });
-    });
-
-    loadBlog.observe(blog);
-  });
 
   let windowWidth: number;
   function gotoCard(direction: string) {
@@ -48,6 +36,19 @@
       });
     }
   }
+
+  onMount(async () => {
+    let loadBlog: IntersectionObserver = new IntersectionObserver(entries => {
+      entries.some(entry => {
+        if (entry.isIntersecting) {
+          blogButton.focus();
+          loadBlog.disconnect();
+        }
+      });
+    });
+
+    loadBlog.observe(blog);
+  });
 </script>
 
 <svelte:window bind:outerWidth={windowWidth} />
