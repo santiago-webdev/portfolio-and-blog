@@ -34,7 +34,7 @@ import {
   U as ve,
   A as Q
 } from '../../../chunks/index-82b2adb0.js';
-import { S as be } from '../../../chunks/SearchBar-622e0734.js';
+import { S as be } from '../../../chunks/SearchBar-641d620d.js';
 import { e as ee } from '../../../chunks/singletons-d69dd340.js';
 import {
   F as ye,
@@ -42,7 +42,7 @@ import {
   b as H,
   D as V,
   c as Ee
-} from '../../../chunks/store-697f4c32.js';
+} from '../../../chunks/store-e3eb94c3.js';
 import { f as ne } from '../../../chunks/index-554623a6.js';
 function $e(l) {
   let t, r, n, a, e, _, s, c, u, b, M, T, E, L, k;
@@ -271,7 +271,7 @@ function oe(l) {
     },
     h() {
       d(a, 'class', 'svelte-956yvo'),
-        d(n, 'class', 'base act svelte-956yvo'),
+        d(n, 'class', 'base attn svelte-956yvo'),
         d(r, 'href', (u = ee + '/blog' + l[5].href)),
         d(t, 'class', 'svelte-956yvo');
     },

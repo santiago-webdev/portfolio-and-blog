@@ -1,8 +1,11 @@
 @import 'fonts/Basier/font-face.css';
-@import 'fonts/Basier-Mono/font-face.css';
+/* @import 'fonts/Basier-Mono/font-face.css'; */
 
 :root {
   --ff--dflt: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+  --ff--ui: 'Basier Circle', system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol';
 
@@ -164,6 +167,15 @@
   border: 0.13rem solid transparent;
 }
 
+.base {
+  background-color: var(--clr-background-alt);
+  border-radius: 1.1rem;
+  border-top: 0.13rem solid var(--clr-border-card);
+  border-left: 0.13rem solid var(--clr-border-card);
+  border-right: 0.13rem solid transparent;
+  border-bottom: 0.13rem solid transparent;
+}
+
 .attn {
   border-radius: 1.1rem;
   color: var(--clr-text-muted);
@@ -218,56 +230,9 @@
   border-radius: 1.1rem;
 }
 
-.base {
-  background-color: var(--clr-background-alt);
-  border-radius: 1.1rem;
-  border-top: 0.13rem solid var(--clr-border-card);
-  border-left: 0.13rem solid var(--clr-border-card);
-  border-right: 0.13rem solid transparent;
-  border-bottom: 0.13rem solid transparent;
-}
-
-.base-border {
-  border: var(--border-muted);
-  color: var(--clr-text-muted);
-  border-radius: 1.1rem;
-}
-
-.act {
-  border-radius: 1.1rem;
-  transition: background-color 100ms, border 100ms;
-  transition-delay: 50ms;
-}
-
-.act-active {
-  background-color: var(--clr-bg-active);
-  border-top: 0.13rem solid var(--clr-border-card-active);
-  border-left: 0.13rem solid var(--clr-border-card-active);
-  border-right: 0.13rem solid transparent;
-  border-bottom: 0.13rem solid transparent;
-}
-
-.act-border {
-  border: 0.13rem solid transparent;
-}
-
-.act:focus-within {
-  color: var(--clr-text);
-}
-
-.act:focus-within,
-.act:hover {
-  background-color: var(--clr-bg-active);
-  border-top: 0.13rem solid var(--clr-border-card-active);
-  border-left: 0.13rem solid var(--clr-border-card-active);
-  border-right: 0.13rem solid transparent;
-  border-bottom: 0.13rem solid transparent;
-}
-
-.act:active {
-  color: var(--clr-clicked);
-  background-color: var(--clr-background);
-  border: 0.13rem solid transparent;
+.artifact-ui {
+  font-family: var(--ff--ui);
+  font-weight: 400;
 }
 
 br {

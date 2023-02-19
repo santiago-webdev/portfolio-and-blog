@@ -1,4 +1,4 @@
-nav.svelte-1dqotvi {
+nav.svelte-1s9r6za {
   top: 0;
   position: sticky;
   background-color: var(--clr-background-alt);
@@ -6,66 +6,66 @@ nav.svelte-1dqotvi {
   transition: filter 0.3s ease-in;
   z-index: 999;
 }
-.headerActive.svelte-1dqotvi {
+.headerActive.svelte-1s9r6za {
   filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
     drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
 }
-.nav-container.svelte-1dqotvi {
+.nav-container.svelte-1s9r6za {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: space-between;
   margin-inline: auto;
   gap: 1rem;
 }
-.main-nav.svelte-1dqotvi {
+.main-nav.svelte-1s9r6za {
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-a.svelte-1dqotvi,
-li.svelte-1dqotvi {
+a.svelte-1s9r6za,
+li.svelte-1s9r6za {
   color: var(--clr-text);
 }
-a.svelte-1dqotvi {
+a.svelte-1s9r6za {
   padding: 0.8rem 1.6rem;
   display: grid;
   place-items: center;
   border-radius: 0.6rem;
 }
-a.svelte-1dqotvi:hover {
+a.svelte-1s9r6za:hover {
   color: var(--clr-hover);
 }
-a.svelte-1dqotvi:focus {
+a.svelte-1s9r6za:focus {
   color: var(--clr-clicked);
 }
-a[aria-current='page'].svelte-1dqotvi {
+a[aria-current='page'].svelte-1s9r6za {
   text-decoration: underline solid var(--accent-peachy) 3px;
 }
-ul.svelte-1dqotvi {
+ul.svelte-1s9r6za {
   display: flex;
   flex-direction: row;
   place-items: center;
   justify-content: space-between;
   width: 100%;
 }
-progress.svelte-1dqotvi {
+progress.svelte-1s9r6za {
   width: 100%;
   height: 3px;
   top: 0;
   border: 0;
   position: fixed;
 }
-progress.svelte-1dqotvi::-webkit-progress-bar,
-progress.svelte-1dqotvi {
+progress.svelte-1s9r6za::-webkit-progress-bar,
+progress.svelte-1s9r6za {
   background: inherit;
 }
-progress.svelte-1dqotvi::-moz-progress-bar {
+progress.svelte-1s9r6za::-moz-progress-bar {
   background: var(--accent-peachy);
 }
-progress.svelte-1dqotvi::-webkit-progress-value {
+progress.svelte-1s9r6za::-webkit-progress-value {
   background: var(--accent-peachy);
 }
-a.svelte-1dqotvi {
+a.svelte-1s9r6za {
   font-weight: 500;
   font-size: clamp(0.6rem, 8vw, 1.15rem);
   color: var(--clr-title);
