@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <!-- The default theme for any page is going to be dark for the sake of everyone's eyes-->
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.png" />
+    <link href="/reset.css" rel="stylesheet" type="text/css" />
+    <link href="/global.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      if (
+        localStorage.theme === 'dark' ||
+        (!localStorage.theme &&
+          window.matchMedia('(prefers-color-scheme: dark)').matches)
+      ) {
+        document.documentElement.dataset.theme = 'dark';
+      }
+    </script>
+    <meta http-equiv="content-security-policy" content="">
+		<link href="./_app/immutable/assets/_layout-fb56b920.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_page-19880e6e.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/SearchBar-aa2abafe.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/store-c1c40a98.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-133363b7.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-82b2adb0.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-d69dd340.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper-41c905a7.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-73e3ad46.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/stores-f9938e62.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-554623a6.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.ts-070df6f0.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-af12d980.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/blog/_page.svelte-43a0919a.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/SearchBar-622e0734.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/store-697f4c32.js"><title>Santiago's Blog</title><!-- HEAD_svelte-jqchef_START --><meta name="description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta itemprop="name" content="Santiago's Blog"><meta itemprop="description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta itemprop="image" content=""><meta property="og:url" content="https://santigo-zero.github.io/blog"><meta property="og:type" content="website"><meta property="og:title" content="Santiago's Blog"><meta property="og:description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta property="og:image" content=""><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Santiago's Blog"><meta name="twitter:description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta name="twitter:image" content=""><!-- HEAD_svelte-jqchef_END -->
+  </head>
+  <body data-sveltekit-preload-data="hover">
+    <div style="display: contents">
+
+
+<div class="layout svelte-1nwuy2o">
+
+<nav class="svelte-1dqotvi"><progress max="0" value="0" class="svelte-1dqotvi"></progress>
+  <div class="nav-container wider svelte-1dqotvi" style="flex-direction: column;"><div class="main-nav svelte-1dqotvi"><a href="/" class="svelte-1dqotvi" style="padding-left: 0; visibility: visible;">Santiago Gonzalez</a></div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <section style="display: none;"><ul class="svelte-1dqotvi" style="flex-direction: column;"><li class="trn-border svelte-1dqotvi" style="display: block;"><a aria-current="page" href="/" class="svelte-1dqotvi">Home</a></li>
+            <hr style="width: 80%; display: block;"><li class="trn-border svelte-1dqotvi" style="display: block;"><a aria-current="page" href="/blog" class="svelte-1dqotvi">Blog</a></li>
+            <hr style="width: 80%; display: block;"><li class="trn-border svelte-1dqotvi" style="display: block;"><a href="/projects" class="svelte-1dqotvi">Projects</a></li>
+            <hr style="width: 80%; display: block;"><li class="svelte-1dqotvi" style="display: none;"><!-- HTML_TAG_START -->|<!-- HTML_TAG_END -->
+            </li><li class="trn-border svelte-1dqotvi" style="display: block;"><a href="/about" class="svelte-1dqotvi">About</a></li>
+            <hr style="width: 80%; display: block;"><li class="attn-border attn svelte-1dqotvi" style="display: block;"><a href="/contact" class="svelte-1dqotvi">Contact</a></li>
+            <hr style="width: 80%; display: block;"></ul></section></div>
+</nav>
+  <div><main><div class="banner"><div class="wrapper-header svelte-1uqgpty"><h1>Blog</h1>
+  <p class="svelte-1uqgpty">In this blog you are going to find articles about <strong>Linux</strong>,
+    <strong>web technologies</strong>
+    and
+    <strong>frontend development</strong>.
+  </p>
+</div>
+    <form class="wide attn attn-gradient-border svelte-1y2xljc"><button aria-label="Go to selected blog" type="submit" class="svelte-1y2xljc"><!-- HTML_TAG_START --><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 15 15"><path fill="currentColor" fill-rule="evenodd" d="M10 6.5a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0Zm-.691 3.516a4.5 4.5 0 1 1 .707-.707l2.838 2.837a.5.5 0 0 1-.708.708L9.31 10.016Z" clip-rule="evenodd"/></svg><!-- HTML_TAG_END --></button>
+  
+  <input placeholder="Search" type="search" id="search" list="search-terms" autocomplete="off" class="svelte-1y2xljc" value="">
+  
+  <kbd class="svelte-1y2xljc">Ctrl K</kbd>
+</form></div>
+  <section role="complementary"><ul class="wider svelte-956yvo"><li class="svelte-956yvo"><a href="/blog/test-test"><article class="base act svelte-956yvo"><h2 class="svelte-956yvo">Test test title</h2>
+            <p>testaoenuhoenuht aontehuotaheunoheu aonetuhonatehuteouh</p>
+            <small>Published: Saturday, February 11, 2023</small>
+          </article></a>
+      </li><li class="svelte-956yvo"><a href="/blog/new_test"><article class="base act svelte-956yvo"><h2 class="svelte-956yvo">New Test title</h2>
+            <p>No description was given.</p>
+            <small>Published: Saturday, February 11, 2023</small>
+          </article></a>
+      </li><li class="svelte-956yvo"><a href="/blog/how-to-build-a-blog-in-sveltekit"><article class="base act svelte-956yvo"><h2 class="svelte-956yvo">How this blog was built</h2>
+            <p>How to build your own static blog written in sveltekit and deploy it to GitHub Pages.</p>
+            <small>Published: Friday, January 27, 2023</small>
+          </article></a>
+      </li><li class="svelte-956yvo"><a href="/blog/hello-world"><article class="base act svelte-956yvo"><h2 class="svelte-956yvo">This is a hello world post</h2>
+            <p>This is the description hello world</p>
+            <small>Published: Saturday, January 14, 2023</small>
+          </article></a>
+      </li><li class="svelte-956yvo"><a href="/blog/4"><article class="base act svelte-956yvo"><h2 class="svelte-956yvo">This is a 4 post</h2>
+            <p>This is the description number 4 four(4) antoehun toehuntaoeuhan toehuntaoeuhan toehuntaoeuhan antoehun antoehun toehuntaoeuhan oehtuoheuna htoeutheo</p>
+            <small>Published: Monday, January 23, 2023</small>
+          </article></a>
+      </li><li class="svelte-956yvo"><a href="/blog/3"><article class="base act svelte-956yvo"><h2 class="svelte-956yvo">This is a 3 post</h2>
+            <p>This is the description number 3 three(3) antoehun toehuntaoeuhan toehuntaoeuhan toehuntaoeuhan antoehun antoehun toehuntaoeuhan oehtuoheuna htoeutheo</p>
+            <small>Published: Saturday, January 21, 2023</small>
+          </article></a>
+      </li><li class="svelte-956yvo"><a href="/blog/2"><article class="base act svelte-956yvo"><h2 class="svelte-956yvo">This is a 2 post</h2>
+            <p>This is description 2</p>
+            
+          </article></a>
+      </li><li class="svelte-956yvo"><a href="/blog/1"><article class="base act svelte-956yvo"><h2 class="svelte-956yvo">This is a 1 post</h2>
+            <p>This is description 1</p>
+            
+          </article></a>
+      </li></ul>
+</section></main>
+
+</div>
+  <footer class="svelte-1elv9q5"><section class="upper wider svelte-1elv9q5"><p>Designed &amp; Built with &lt;3 by Santiago</p>
+
+    <a href="https://github.com/santigo-zero/santigo-zero.github.io">nth(0) on GitHub</a></section>
+  <section class="bottom wider svelte-1elv9q5"><div class="copyright svelte-1elv9q5"><p>© GPL-3.0 Santiago Gonzalez</p>
+      <p>2022-2023. All Rights Reserved</p></div>
+    <ul class="svelte-1elv9q5">
+      <li><a href="https://github.com/santigo-zero/">GitHub @santigo-zero</a></li>
+      <li class="separator svelte-1elv9q5">•</li>
+      <li><a href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/">LinkedIn</a></li></ul></section>
+</footer></div>
+<div class="noise svelte-1nwuy2o"></div>
+
+
+		<script type="module" data-sveltekit-hydrate="pkpbw9">
+			import { start } from "./_app/immutable/start-133363b7.js";
+
+			start({
+				assets: "",
+				env: {},
+				target: document.querySelector('[data-sveltekit-hydrate="pkpbw9"]').parentNode,
+				version: "1676812029932",
+				hydrate: {
+					node_ids: [0, 4],
+					data: [null,null],
+					form: null,
+					error: null
+				}
+			});
+		</script>
+	</div>
+  </body>
+</html>
