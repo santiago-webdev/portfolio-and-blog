@@ -199,8 +199,7 @@
   border-left: 0.13rem solid var(--clr-border-card-active);
   border-right: 0.13rem solid var(--clr-bg-active);
   border-bottom: 0.13rem solid var(--clr-bg-active);
-  /* filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) */
-  /*   drop-shadow(0 4px 3px rgb(0 0 0 / 0.1)); */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
 
 .attn:focus-within,
