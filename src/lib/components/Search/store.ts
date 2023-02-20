@@ -1,5 +1,5 @@
 import { Post } from '$lib/utils/utils';
-import { get, writable } from 'svelte/store';
+import { get, readable, writable } from 'svelte/store';
 
 const getPosts = () => {
   const tmpPost: Array<Post> = [];
@@ -47,7 +47,7 @@ const getPosts = () => {
   return tmpPost;
 };
 
-export const Posts = writable<Array<Post>>(getPosts());
+export const Posts = readable<Array<Post>>(getPosts());
 
 export const FilteredPosts = writable<Array<Post>>(get(Posts));
 export const FilterValue = writable<string>('');
