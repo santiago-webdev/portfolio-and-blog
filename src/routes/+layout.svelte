@@ -67,7 +67,7 @@
     mix-blend-mode: color-dodge;
 
     background-image: url(/noise.png);
-    background-size: 200px;
+    background-size: 100px;
     background-repeat: repeat;
 
     pointer-events: none;
