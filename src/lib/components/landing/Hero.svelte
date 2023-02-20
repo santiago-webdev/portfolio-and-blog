@@ -20,7 +20,7 @@
       data-sveltekit-reload
       data-sveltekit-noscroll
       href="{base}/#projects"
-      class="attn-border attn">Projects {@html chevron_right}</a
+      class="act">Projects {@html chevron_right}</a
     >
     <a
       data-sveltekit-reload

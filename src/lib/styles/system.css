@@ -83,35 +83,34 @@
 }
 
 .attnactive {
+  background-color: #1e1e23;
   background-color: var(--clr-bg-active);
-  border-top: 0.13rem solid var(--clr-border-card-active);
+  border-bottom: 0.13rem solid var(--clr-bg-active);
   border-left: 0.13rem solid var(--clr-border-card-active);
   border-right: 0.13rem solid var(--clr-bg-active);
-  border-bottom: 0.13rem solid var(--clr-bg-active);
+  border-top: 0.13rem solid var(--clr-border-card-active);
 }
 
-.attn:focus-within,
-.attn:focus,
-.attn-focus,
-.attn:hover {
+.attn:is(:focus-within, :focus, :hover),
+.attn-focus {
   background-color: var(--clr-bg-active);
-  border-top: 0.13rem solid var(--clr-border-card-active);
-  border-left: 0.13rem solid var(--clr-border-card-active);
-  border-right: 0.13rem solid var(--clr-bg-active);
   border-bottom: 0.13rem solid var(--clr-bg-active);
+  border-left: 0.13rem solid var(--clr-border-card-active);
+  border-radius: 1.1rem;
+  border-right: 0.13rem solid var(--clr-bg-active);
+  border-top: 0.13rem solid var(--clr-border-card-active);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
 
-.attn:focus-within,
-.attn:focus {
+.attn:is(:focus-within, .attn:focus) {
   color: var(--clr-subtitle);
 }
 
-.attn:active {
-  transition-delay: 200ms;
-  color: var(--clr-clicked);
+.attn:is(:active) {
   background-color: var(--clr-background);
   border: 0.13rem solid var(--clr-background);
+  color: var(--clr-clicked);
+  transition-delay: 200ms;
 }
 
 .attn-gradient-border {
@@ -127,6 +126,22 @@
 .attn-border {
   border: var(--border-muted);
   border-radius: 1.1rem;
+}
+
+.act {
+  background-color: #1e1e23;
+  border-radius: 1.1rem;
+  border: 0.13rem solid #1e1e23;
+  color: var(--clr-text-muted);
+  transition: background-color 50ms, color 100ms, border 80ms;
+}
+
+.act:is(:focus-within, :focus, :hover),
+.act-focus {
+  border-radius: 1.1rem;
+  background-color: #18181c;
+  border: 0.13rem solid #18181c;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
 
 .artifact-ui {
