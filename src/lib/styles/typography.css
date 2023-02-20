@@ -51,7 +51,7 @@ button {
 
 strong {
   font-weight: 800;
-  color: var(--clr-title);
+  color: var(--clr-text);
 }
 
 /* a, */
