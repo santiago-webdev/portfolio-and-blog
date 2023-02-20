@@ -94,6 +94,7 @@
   --clr-stone-800: #292524;
   --clr-stone-900: #1c1917;
 }
+
 br {
   margin-top: var(--gap);
 }
