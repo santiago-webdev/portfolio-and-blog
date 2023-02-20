@@ -1,4 +1,4 @@
-import './index-82b2adb0.js';
+import './index-6fd41c6b.js';
 function y(o) {
   const t = o - 1;
   return t * t * t + 1;

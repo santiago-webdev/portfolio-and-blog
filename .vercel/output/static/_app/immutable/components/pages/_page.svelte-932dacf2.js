@@ -3,7 +3,7 @@ import {
   i as nt,
   s as at,
   v as Z,
-  T as it,
+  R as it,
   k as l,
   q as S,
   a as H,
@@ -12,7 +12,7 @@ import {
   l as s,
   m as M,
   r as j,
-  h as r,
+  h as o,
   c as L,
   L as ut,
   y as K,
@@ -20,7 +20,7 @@ import {
   b as O,
   F as e,
   z as Y,
-  U as dt,
+  T as dt,
   f as J,
   t as Q,
   A as X,
@@ -30,13 +30,13 @@ import {
   H as mt,
   I as pt,
   o as ft,
-  V as _t
-} from '../../chunks/index-82b2adb0.js';
-import { e as st } from '../../chunks/singletons-d69dd340.js';
-import { S as gt } from '../../chunks/SearchBar-641d620d.js';
-import { T as U, D as V, U as vt } from '../../chunks/store-e3eb94c3.js';
+  U as _t
+} from '../../chunks/index-6fd41c6b.js';
+import { e as st } from '../../chunks/singletons-1f164dd2.js';
+import { S as gt } from '../../chunks/SearchBar-754645cd.js';
+import { T as U, D as V, U as vt } from '../../chunks/store-6e42ba8f.js';
 function bt(d) {
-  let t, o, c, m, u, T, _, y, p, g, v, B, w, E, h, $, I, A, P, k, i, a, b;
+  let t, r, c, m, u, T, _, y, p, g, v, B, w, E, h, $, I, A, P, k, i, a, b;
   function f(C) {
     d[1](C);
   }
@@ -48,7 +48,7 @@ function bt(d) {
     {
       c() {
         (t = l('section')),
-          (o = l('h1')),
+          (r = l('h1')),
           (c = S('Building websites ')),
           (m = l('span')),
           (u = S('&&')),
@@ -75,14 +75,14 @@ function bt(d) {
       l(C) {
         t = s(C, 'SECTION', { class: !0 });
         var z = M(t);
-        o = s(z, 'H1', {});
-        var D = M(o);
+        r = s(z, 'H1', {});
+        var D = M(r);
         (c = j(D, 'Building websites ')), (m = s(D, 'SPAN', {}));
         var R = M(m);
         (u = j(R, '&&')),
-          R.forEach(r),
+          R.forEach(o),
           (T = j(D, ' clean interfaces')),
-          D.forEach(r),
+          D.forEach(o),
           (_ = L(z)),
           (y = s(z, 'BR', {})),
           (p = L(z)),
@@ -93,7 +93,7 @@ function bt(d) {
           `Here we'll discuss about web technologies and show you my projects while at
     it.`
         )),
-          G.forEach(r),
+          G.forEach(o),
           (B = L(z)),
           (w = s(z, 'DIV', { class: !0 }));
         var N = M(w);
@@ -106,7 +106,7 @@ function bt(d) {
         var x = M(E);
         (h = j(x, 'Projects ')),
           ($ = ut(x, !1)),
-          x.forEach(r),
+          x.forEach(o),
           (I = L(N)),
           (A = s(N, 'A', {
             'data-sveltekit-reload': !0,
@@ -114,13 +114,13 @@ function bt(d) {
             href: !0,
             class: !0
           }));
-        var rt = M(A);
-        (P = j(rt, 'Contact')),
-          rt.forEach(r),
-          N.forEach(r),
+        var ot = M(A);
+        (P = j(ot, 'Contact')),
+          ot.forEach(o),
+          N.forEach(o),
           (k = L(z)),
           K(i.$$.fragment, z),
-          z.forEach(r),
+          z.forEach(o),
           this.h();
       },
       h() {
@@ -128,7 +128,7 @@ function bt(d) {
           n(E, 'data-sveltekit-reload', ''),
           n(E, 'data-sveltekit-noscroll', ''),
           n(E, 'href', st + '/#projects'),
-          n(E, 'class', 'attn-border attn svelte-5gmdzg'),
+          n(E, 'class', 'act svelte-5gmdzg'),
           n(A, 'data-sveltekit-reload', ''),
           n(A, 'data-sveltekit-noscroll', ''),
           n(A, 'href', '/'),
@@ -138,11 +138,11 @@ function bt(d) {
       },
       m(C, z) {
         O(C, t, z),
-          e(t, o),
-          e(o, c),
-          e(o, m),
+          e(t, r),
+          e(r, c),
+          e(r, m),
           e(m, u),
-          e(o, T),
+          e(r, T),
           e(t, _),
           e(t, y),
           e(t, p),
@@ -172,17 +172,17 @@ function bt(d) {
         Q(i.$$.fragment, C), (b = !1);
       },
       d(C) {
-        C && r(t), X(i);
+        C && o(t), X(i);
       }
     }
   );
 }
 let wt =
   '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 2.4 24 24"><path fill="currentColor" d="M8.7 19.7q-.275-.275-.275-.7t.275-.7l3.9-3.9l-3.9-3.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375q0 .2-.063.375t-.212.325l-4.6 4.6q-.275.275-.7.275t-.7-.275Z"/></svg>';
-function Et(d, t, o) {
+function Et(d, t, r) {
   let c;
   function m(u) {
-    (c = u), o(0, c);
+    (c = u), r(0, c);
   }
   return [c, m];
 }
@@ -191,13 +191,13 @@ class Tt extends et {
     super(), nt(this, t, Et, bt, at, {});
   }
 }
-function ot(d, t, o) {
+function rt(d, t, r) {
   const c = d.slice();
-  return (c[3] = t[o]), (c[13] = o), c;
+  return (c[3] = t[r]), (c[13] = r), c;
 }
 function lt(d) {
   let t,
-    o = d[3].title + '',
+    r = d[3].title + '',
     c,
     m,
     u = d[3].description + '',
@@ -208,7 +208,7 @@ function lt(d) {
   return {
     c() {
       (t = l('article')),
-        (c = S(o)),
+        (c = S(r)),
         (m = H()),
         (T = S(u)),
         (_ = S(`
@@ -220,7 +220,7 @@ function lt(d) {
     l(g) {
       t = s(g, 'ARTICLE', { class: !0 });
       var v = M(t);
-      (c = j(v, o)),
+      (c = j(v, r)),
         (m = L(v)),
         (T = j(v, u)),
         (_ = j(
@@ -230,7 +230,7 @@ function lt(d) {
         )),
         (y = j(v, d[13])),
         (p = L(v)),
-        v.forEach(r),
+        v.forEach(o),
         this.h();
     },
     h() {
@@ -241,20 +241,20 @@ function lt(d) {
     },
     p: tt,
     d(g) {
-      g && r(t);
+      g && o(t);
     }
   };
 }
 function yt(d) {
-  let t, o, c, m, u, T, _, y, p, g, v, B, w, E, h, $, I, A, P;
+  let t, r, c, m, u, T, _, y, p, g, v, B, w, E, h, $, I, A, P;
   ht(d[6]);
   let k = d[4],
     i = [];
-  for (let a = 0; a < k.length; a += 1) i[a] = lt(ot(d, k, a));
+  for (let a = 0; a < k.length; a += 1) i[a] = lt(rt(d, k, a));
   return {
     c() {
       (t = l('section')),
-        (o = l('div')),
+        (r = l('div')),
         (c = l('button')),
         (m = H()),
         (u = l('div'));
@@ -276,32 +276,32 @@ function yt(d) {
     l(a) {
       t = s(a, 'SECTION', { class: !0 });
       var b = M(t);
-      o = s(b, 'DIV', { class: !0 });
-      var f = M(o);
+      r = s(b, 'DIV', { class: !0 });
+      var f = M(r);
       c = s(f, 'BUTTON', { 'aria-label': !0, class: !0 });
       var q = M(c);
-      q.forEach(r), (m = L(f)), (u = s(f, 'DIV', { class: !0 }));
+      q.forEach(o), (m = L(f)), (u = s(f, 'DIV', { class: !0 }));
       var C = M(u);
       for (let x = 0; x < i.length; x += 1) i[x].l(C);
-      C.forEach(r),
+      C.forEach(o),
         (T = L(f)),
         (_ = s(f, 'BUTTON', { 'aria-label': !0, class: !0 }));
       var z = M(_);
-      z.forEach(r), f.forEach(r), (y = L(b)), (p = s(b, 'DIV', { class: !0 }));
+      z.forEach(o), f.forEach(o), (y = L(b)), (p = s(b, 'DIV', { class: !0 }));
       var D = M(p);
       g = s(D, 'H2', {});
       var R = M(g);
-      (v = j(R, 'Read my blog')), R.forEach(r), (B = L(D)), (w = s(D, 'P', {}));
+      (v = j(R, 'Read my blog')), R.forEach(o), (B = L(D)), (w = s(D, 'P', {}));
       var G = M(w);
       (E = j(G, "I don't just focus in one topic, so here's a some articles")),
-        G.forEach(r),
+        G.forEach(o),
         (h = L(D)),
         ($ = s(D, 'A', { href: !0 }));
       var N = M($);
       (I = j(N, 'Go read the blog')),
-        N.forEach(r),
-        D.forEach(r),
-        b.forEach(r),
+        N.forEach(o),
+        D.forEach(o),
+        b.forEach(o),
         this.h();
     },
     h() {
@@ -310,17 +310,17 @@ function yt(d) {
         n(u, 'class', 'wrapper-cards svelte-1d69n5z'),
         n(_, 'aria-label', 'Go to next card in carousel'),
         n(_, 'class', 'right_button svelte-1d69n5z'),
-        n(o, 'class', 'container svelte-1d69n5z'),
+        n(r, 'class', 'container svelte-1d69n5z'),
         n($, 'href', st + '/blog'),
         n(p, 'class', 'wrapper svelte-1d69n5z'),
         n(t, 'class', 'focus wider svelte-1d69n5z');
     },
     m(a, b) {
-      O(a, t, b), e(t, o), e(o, c), (c.innerHTML = qt), e(o, m), e(o, u);
+      O(a, t, b), e(t, r), e(r, c), (c.innerHTML = qt), e(r, m), e(r, u);
       for (let f = 0; f < i.length; f += 1) i[f].m(u, null);
       d[8](u),
-        e(o, T),
-        e(o, _),
+        e(r, T),
+        e(r, _),
         (_.innerHTML = $t),
         e(t, y),
         e(t, p),
@@ -347,7 +347,7 @@ function yt(d) {
         k = a[4];
         let f;
         for (f = 0; f < k.length; f += 1) {
-          const q = ot(a, k, f);
+          const q = rt(a, k, f);
           i[f] ? i[f].p(q, b) : ((i[f] = lt(q)), i[f].c(), i[f].m(u, null));
         }
         for (; f < i.length; f += 1) i[f].d(1);
@@ -357,7 +357,7 @@ function yt(d) {
     i: tt,
     o: tt,
     d(a) {
-      a && r(t),
+      a && o(t),
         mt(i, a),
         d[8](null),
         d[10](null),
@@ -371,7 +371,7 @@ let qt =
     '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M15.125 21.1L6.7 12.7q-.15-.15-.212-.325q-.063-.175-.063-.375t.063-.375q.062-.175.212-.325l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L9.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"/></svg>',
   $t =
     '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M7.15 21.1q-.375-.375-.375-.888q0-.512.375-.887L14.475 12l-7.35-7.35q-.35-.35-.35-.875t.375-.9q.375-.375.888-.375q.512 0 .887.375l8.4 8.425q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325L8.9 21.125q-.35.35-.862.35q-.513 0-.888-.375Z"/></svg>';
-function At(d, t, o) {
+function At(d, t, r) {
   const c = [
     { title: 'Title 1', description: 'Description 1' },
     { title: 'Title 2', description: 'Description 2' },
@@ -396,23 +396,23 @@ function At(d, t, o) {
     h.observe(m);
   });
   function p() {
-    o(2, (_ = window.outerWidth));
+    r(2, (_ = window.outerWidth));
   }
   const g = () => y('previous');
   function v(h) {
     Z[h ? 'unshift' : 'push'](() => {
-      (T = h), o(1, T);
+      (T = h), r(1, T);
     });
   }
   const B = () => y('next');
   function w(h) {
     Z[h ? 'unshift' : 'push'](() => {
-      (u = h), o(0, u);
+      (u = h), r(0, u);
     });
   }
   function E(h) {
     Z[h ? 'unshift' : 'push'](() => {
-      (m = h), o(3, m);
+      (m = h), r(3, m);
     });
   }
   return [u, T, _, m, c, y, p, g, v, B, w, E];
@@ -423,15 +423,15 @@ class Mt extends et {
   }
 }
 function kt(d) {
-  let t, o, c, m, u, T, _, y, p, g, v, B, w, E, h, $, I, A, P, k, i;
+  let t, r, c, m, u, T, _, y, p, g, v, B, w, E, h, $, I, A, P, k, i;
   return (
-    (o = new Tt({})),
+    (r = new Tt({})),
     (u = new Mt({})),
     (document.title = _ = U),
     {
       c() {
         (t = l('main')),
-          F(o.$$.fragment),
+          F(r.$$.fragment),
           (c = H()),
           (m = l('section')),
           F(u.$$.fragment),
@@ -454,12 +454,12 @@ function kt(d) {
       l(a) {
         t = s(a, 'MAIN', { class: !0 });
         var b = M(t);
-        K(o.$$.fragment, b),
-          b.forEach(r),
+        K(r.$$.fragment, b),
+          b.forEach(o),
           (c = L(a)),
           (m = s(a, 'SECTION', { id: !0 }));
         var f = M(m);
-        K(u.$$.fragment, f), f.forEach(r), (T = L(a));
+        K(u.$$.fragment, f), f.forEach(o), (T = L(a));
         const q = _t('svelte-2i912y', document.head);
         (y = s(q, 'META', { name: !0, content: !0 })),
           (p = s(q, 'META', { itemprop: !0, content: !0 })),
@@ -474,7 +474,7 @@ function kt(d) {
           (A = s(q, 'META', { name: !0, content: !0 })),
           (P = s(q, 'META', { name: !0, content: !0 })),
           (k = s(q, 'META', { name: !0, content: !0 })),
-          q.forEach(r),
+          q.forEach(o),
           this.h();
       },
       h() {
@@ -509,7 +509,7 @@ function kt(d) {
       },
       m(a, b) {
         O(a, t, b),
-          Y(o, t, null),
+          Y(r, t, null),
           O(a, c, b),
           O(a, m, b),
           Y(u, m, null),
@@ -533,31 +533,31 @@ function kt(d) {
         (!i || b & 0) && _ !== (_ = U) && (document.title = _);
       },
       i(a) {
-        i || (J(o.$$.fragment, a), J(u.$$.fragment, a), (i = !0));
+        i || (J(r.$$.fragment, a), J(u.$$.fragment, a), (i = !0));
       },
       o(a) {
-        Q(o.$$.fragment, a), Q(u.$$.fragment, a), (i = !1);
+        Q(r.$$.fragment, a), Q(u.$$.fragment, a), (i = !1);
       },
       d(a) {
-        a && r(t),
-          X(o),
-          a && r(c),
-          a && r(m),
+        a && o(t),
+          X(r),
+          a && o(c),
+          a && o(m),
           X(u),
-          a && r(T),
-          r(y),
-          r(p),
-          r(g),
-          r(v),
-          r(B),
-          r(w),
-          r(E),
-          r(h),
-          r($),
-          r(I),
-          r(A),
-          r(P),
-          r(k);
+          a && o(T),
+          o(y),
+          o(p),
+          o(g),
+          o(v),
+          o(B),
+          o(w),
+          o(E),
+          o(h),
+          o($),
+          o(I),
+          o(A),
+          o(P),
+          o(k);
       }
     }
   );
