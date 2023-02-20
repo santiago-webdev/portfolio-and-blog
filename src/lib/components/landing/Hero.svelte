@@ -29,7 +29,7 @@
       class="attn-border attn">Contact</a
     >
   </div>
-  <SearchBar placeholder="Or you can read my blog" bind:input />
+  <SearchBar placeholder="You can also read my blog" bind:input />
 </section>
 
 <style>
