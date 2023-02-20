@@ -14,7 +14,9 @@
   import '@fontsource/manrope/700.css';
   import '@fontsource/manrope/800.css';
 
+  import '$lib/styles/global.css';
   import '$lib/styles/typography.css';
+  import '$lib/styles/system.css';
 
   let body: HTMLElement;
   $: pageHeight = 0;
@@ -61,7 +63,7 @@
 
     -webkit-animation: grain 7s steps(10) infinite;
     animation: grain 7s steps(10) infinite;
-    opacity: 0.20;
+    opacity: 0.2;
     mix-blend-mode: color-dodge;
 
     background-image: url(/noise.png);
