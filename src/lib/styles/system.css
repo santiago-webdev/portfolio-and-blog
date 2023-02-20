@@ -136,7 +136,7 @@
   font-weight: 400;
 }
 
-.artifact-ui *:is(a, button, li, p) {
+.artifact-ui *:is(a, button, li, p, small) {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
