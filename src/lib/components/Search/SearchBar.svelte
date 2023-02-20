@@ -5,6 +5,7 @@
   import { goto, preloadData } from '$app/navigation';
 
   export let input: HTMLElement;
+  export let modal = false;
 
   $: if ($FilteredPosts.length === 1)
     preloadData(`${base}/blog${$FilteredPosts[0].href}`);
@@ -39,6 +40,7 @@
   class={$FilterValue.trim().length !== 0
     ? 'wide attn attn-focus'
     : 'wide attn attn-gradient-border'}
+  class:form-modal={modal}
   on:submit|preventDefault={handleSubmit}
 >
   <button aria-label="Go to selected blog" type="submit"
@@ -56,7 +58,6 @@
     list="search-terms"
     autocomplete="off"
   />
-  <!-- <input class="button" type="button" value="Search"> -->
   <kbd>Ctrl K</kbd>
 </form>
 
@@ -68,6 +69,11 @@
     margin-inline: auto;
     position: relative;
     width: min(100%, var(--wide));
+  }
+
+  .form-modal {
+    box-shadow: none;
+    border: none;
   }
 
   input:-moz-placeholder,

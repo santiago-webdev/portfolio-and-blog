@@ -17,6 +17,7 @@
   import '$lib/styles/global.css';
   import '$lib/styles/typography.css';
   import '$lib/styles/system.css';
+    import Modal from '$lib/components/Search/Modal.svelte';
 
   let body: HTMLElement;
   $: pageHeight = 0;
@@ -35,6 +36,7 @@
 </script>
 
 <div class="layout" bind:this={body}>
+  <Modal />
   <NavBar {pageHeight} />
   <Transition url={$page.url}>
     <slot />
