@@ -55,6 +55,7 @@
     place-items: center;
     gap: 2rem;
     background-color: var(--clr-background-alt);
+    padding: 3rem 0;
   }
 
   a {

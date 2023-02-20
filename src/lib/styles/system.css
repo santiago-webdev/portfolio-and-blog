@@ -10,12 +10,12 @@
   --clr-clicked: var(--clr-stone-700);
 
   --clr-background: var(--base-dark-background-000);
+
   --clr-background-alt: var(--base-blue-background-200);
-
-  --clr-bg-active: var(--base-dark-background-200);
-
   --clr-border-card: rgba(33 30 42 / 1);
-  --clr-border-card-active: rgba(47 46 55 / 1);
+
+  --clr-bg-active: var(--base-dark-background-300);
+  --clr-border-card-active: rgba(58 58 66 / 1);
 }
 
 [data-theme='dark'] ::selection {
@@ -116,9 +116,9 @@
 
 .attn-gradient-border {
   background: linear-gradient(
-    130deg,
-    rgba(43 42 51 / 0.03),
-    rgba(255 255 255/ 0.04)
+    135deg,
+    rgba(190 199 234 / 0.06),
+    rgba(255 255 255 / 0.03)
   );
   border: 0.13rem solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
