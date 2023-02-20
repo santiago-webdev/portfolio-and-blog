@@ -118,4 +118,10 @@
       transform: translate(0, 0);
     }
   }
+
+  @media (prefers-reduced-motion: reduce) {
+    .noise {
+      all: unset;
+    }
+  }
 </style>
