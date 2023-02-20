@@ -14,12 +14,12 @@
   --gap: 0.66rem;
   --br: 0.66rem;
 
-  --base-dark-background-000: #16171d;
+  --base-dark-background-000: #1F1F25;
   --base-dark-background-100: #1d1e26;
   --base-dark-background-150: #181a20;
   --base-dark-background-200: #2b2a33;
 
-  --base-blue-background-200: #202026;
+  --base-blue-background-200: #2B2B33;
 
   --accent-violet: #49364c;
   --accent-purple: #915268;
@@ -99,7 +99,7 @@
 }
 
 [data-theme='dark'] {
-  --clr-title: var(--clr-slate-250);
+  --clr-title: #bec7ea;
   --clr-subtitle: var(--clr-slate-200);
   --clr-text: var(--clr-slate-250);
   --clr-text-muted: var(--clr-pale-450);
@@ -232,6 +232,11 @@
 .artifact-ui {
   font-family: var(--ff--ui);
   font-weight: 400;
+  font-size: clamp(0.8rem, 8vw, 1.18rem);
+
+  /*   font-weight: 500; */
+  /*   font-size: clamp(0.6rem, 8vw, 1.15rem); */
+  /*   color: var(--clr-title); */
 }
 
 br {

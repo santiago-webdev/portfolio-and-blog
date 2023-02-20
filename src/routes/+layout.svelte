@@ -61,11 +61,11 @@
 
     -webkit-animation: grain 7s steps(10) infinite;
     animation: grain 7s steps(10) infinite;
-    opacity: 0.33;
+    opacity: 0.20;
     mix-blend-mode: color-dodge;
 
     background-image: url(/noise.png);
-    background-size: 120px;
+    background-size: 300px;
     background-repeat: repeat;
 
     pointer-events: none;

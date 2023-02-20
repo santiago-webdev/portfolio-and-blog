@@ -196,9 +196,9 @@
   }
 
   /* button, */
-  a {
-    font-weight: 500;
-    font-size: clamp(0.6rem, 8vw, 1.15rem);
-    color: var(--clr-title);
-  }
+  /* a { */
+  /*   font-weight: 500; */
+  /*   font-size: clamp(0.6rem, 8vw, 1.15rem); */
+  /*   color: var(--clr-title); */
+  /* } */
 </style>
