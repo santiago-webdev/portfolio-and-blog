@@ -3,7 +3,8 @@
   import { onMount } from 'svelte';
   var ghStars = 0; // Use 0 in here so that it doesn't show "undefined" while it loads
 
-  let start_icon = '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21L12 17.27Z"/></svg>'
+  let start_icon =
+    '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.62L12 2L9.19 8.62L2 9.24l5.45 4.73L5.82 21L12 17.27Z"/></svg>';
 
   onMount(async () => {
     if (!dev) {
@@ -24,7 +25,7 @@
     <!--   >nth({ghStars}) on GitHub</a -->
     <!-- > -->
     <a href="https://github.com/santigo-zero/santigo-zero.github.io"
-    >GitHub Repo {@html start_icon}{ghStars}</a
+      >GitHub Repo {@html start_icon}{ghStars}</a
     >
   </section>
   <section class="bottom wider">
