@@ -120,13 +120,6 @@
     z-index: 999;
   }
 
-  li,
-  button,
-  a {
-    font-size: inherit;
-    color: var(--clr-text);
-  }
-
   .headerActive {
     filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04))
       drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));

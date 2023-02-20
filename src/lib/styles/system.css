@@ -130,14 +130,17 @@
 }
 
 .artifact-ui {
+  color: var(--clr-text);
   font-family: var(--ff--ui);
-  font-weight: 400;
   font-size: clamp(0.8rem, 8vw, 1.18rem);
-  /* background-color: red; */
+  font-weight: 400;
+}
 
-  /*   font-weight: 500; */
-  /*   font-size: clamp(0.6rem, 8vw, 1.15rem); */
-  /*   color: var(--clr-title); */
+.artifact-ui *:is(a, button, li, p) {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
 }
 
 [aria-current='page'] {

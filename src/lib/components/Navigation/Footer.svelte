@@ -14,7 +14,7 @@
   });
 </script>
 
-<footer>
+<footer class="artifact-ui">
   <section class="upper wider">
     <p>Designed & Built with &lt;3 by Santiago</p>
 
@@ -57,7 +57,7 @@
     align-items: center;
 
     min-height: 60px;
-    font-size: 18px;
+    /* font-size: 18px; */
     margin-inline: auto;
   }
 
