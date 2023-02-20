@@ -26,6 +26,7 @@
       data-sveltekit-reload
       data-sveltekit-noscroll
       href="/"
+      style="color: var(--clr-text)"
       class="attn-border attn">Contact</a
     >
   </div>
@@ -35,27 +36,9 @@
 <style>
   section {
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr)); */
     gap: 1rem;
     margin-inline: auto;
   }
-
-  /* .hero { */
-  /*   text-align: left; */
-  /* } */
-
-  /* h1 { */
-  /*   font-size: clamp(3rem, 8vw, 8.1rem); */
-  /*   line-height: calc(1.5 * clamp(2.3rem, 8vw, 5rem)); */
-  /* } */
-  /* text-transform: uppercase; */
-
-  /* .content { */
-  /*   display: grid; */
-  /*   place-content: center; */
-  /*   gap: 1rem; */
-  /*   width: 100%; */
-  /* } */
 
   .content-navigation {
     display: flex;
@@ -69,7 +52,6 @@
     place-content: center;
     padding: 0.8rem;
     font-size: clamp(0.8rem, 8vw, 1.42rem);
-    color: var(--clr-text);
     width: 100%;
   }
 </style>
