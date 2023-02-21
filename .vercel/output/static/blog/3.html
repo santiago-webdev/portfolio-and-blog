@@ -24,25 +24,26 @@
       }
     </script>
     <meta http-equiv="content-security-policy" content="">
-		<link href="../_app/immutable/assets/_layout-4b7317c1.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/Modal-085daec9.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/SearchBar-af081e00.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/store-ba3958e0.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/start-698ff91b.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index-51d4f6ed.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-41f9c53c.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/paths-24bb4e9c.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-47227c26.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/stores-2c3fbbd9.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index-061cd9ca.js">
-		<link rel="modulepreload" href="../_app/immutable/modules/pages/_layout.ts-070df6f0.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-af12d980.js">
-		<link rel="modulepreload" href="../_app/immutable/components/pages/blog/_postid_/_page.svelte-5bf783c6.js">
-		<link rel="modulepreload" href="../_app/immutable/modules/pages/blog/_postid_/_page.ts-c00559c7.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_page-6a1c9387.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/store-cd59510c.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/config-37d4d261.js">
+		<link href="../_app/immutable/assets/_layout.ac4381bd.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/Modal.085daec9.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/SearchBar.af081e00.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/store.ba3958e0.css" rel="stylesheet">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../_app/immutable/entry/start.3d374784.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../_app/immutable/chunks/index.47215b76.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../_app/immutable/chunks/singletons.21da4295.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../_app/immutable/chunks/paths.2573f696.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../_app/immutable/entry/app.1757c0dc.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../_app/immutable/chunks/preload-helper.41c905a7.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../_app/immutable/entry/_layout.svelte.285edbd6.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../_app/immutable/chunks/stores.f17829ec.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../_app/immutable/chunks/index.e031101c.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../_app/immutable/entry/_layout.ts.3c6b937b.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../_app/immutable/chunks/_layout.af12d980.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../_app/immutable/entry/blog-_postid_-page.svelte.a13e3d91.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../_app/immutable/entry/blog-_postid_-page.ts.99559e93.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../_app/immutable/chunks/_page.c00519e8.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../_app/immutable/chunks/store.c476438a.mjs">
+		<link rel="preload" as="script" crossorigin="anonymous" href="../_app/immutable/chunks/config.37d4d261.mjs">
   </head>
   <body data-sveltekit-preload-data="hover">
     <div style="display: contents">
@@ -79,22 +80,30 @@
 <div class="noise svelte-3b4m7h"></div>
 
 
-		<script type="module" data-sveltekit-hydrate="8vzlno">
-			import { start } from "../_app/immutable/start-698ff91b.js";
+			
+			<script>
+				{
+					__sveltekit_73j1sq = {
+						env: {},
+						assets: new URL("..", location.href).pathname.replace(/^\/$/, ''),
+						element: document.currentScript.parentElement
+					};
 
-			start({
-				assets: "",
-				env: {},
-				target: document.querySelector('[data-sveltekit-hydrate="8vzlno"]').parentNode,
-				version: "1677011078312",
-				hydrate: {
-					node_ids: [0, 5],
-					data: [null,null],
-					form: null,
-					error: null
+					const data = [null,null];
+
+					Promise.all([
+						import("../_app/immutable/entry/start.3d374784.mjs"),
+						import("../_app/immutable/entry/app.1757c0dc.mjs")
+					]).then(([kit, app]) => {
+						kit.start(app, __sveltekit_73j1sq.element, {
+							node_ids: [0, 5],
+							data,
+							form: null,
+							error: null
+						});
+					});
 				}
-			});
-		</script>
-	</div>
+			</script>
+		</div>
   </body>
 </html>
