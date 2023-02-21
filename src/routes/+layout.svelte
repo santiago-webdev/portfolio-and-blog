@@ -5,6 +5,10 @@
   import Transition from '$lib/components/Transition.svelte';
   import { page } from '$app/stores';
 
+  import '$lib/styles/global.css';
+  import '$lib/styles/typography.css';
+  import '$lib/styles/system.css';
+
   import '@fontsource/manrope/variable.css';
   import '@fontsource/manrope/200.css';
   import '@fontsource/manrope/300.css';
@@ -14,10 +18,7 @@
   import '@fontsource/manrope/700.css';
   import '@fontsource/manrope/800.css';
 
-  import '$lib/styles/global.css';
-  import '$lib/styles/typography.css';
-  import '$lib/styles/system.css';
-    import Modal from '$lib/components/Search/Modal.svelte';
+  import 'iconify-icon';
 
   let body: HTMLElement;
   $: pageHeight = 0;
@@ -36,7 +37,9 @@
 </script>
 
 <div class="layout" bind:this={body}>
-  <Modal />
+  {#await import('$lib/components/Search/Modal.svelte') then Modal}
+    <Modal.default />
+  {/await}
   <NavBar {pageHeight} />
   <Transition url={$page.url}>
     <slot />

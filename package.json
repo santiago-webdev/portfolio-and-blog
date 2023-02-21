@@ -40,6 +40,7 @@
   "type": "module",
   "packageManager": "yarn@3.3.1",
   "dependencies": {
-    "@fontsource/manrope": "^4.5.13"
+    "@fontsource/manrope": "^4.5.13",
+    "iconify-icon": "^1.0.7"
   }
 }

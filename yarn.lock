@@ -215,6 +215,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@iconify/types@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@iconify/types@npm:2.0.0"
+  checksum: 029f58542c160e9d4a746869cf2e475b603424d3adf3994c5cc8d0406c47e6e04a3b898b2707840c1c5b9bd5563a1660a34b110d89fce43923baca5222f4e597
+  languageName: node
+  linkType: hard
+
 "@jridgewell/resolve-uri@npm:3.1.0":
   version: 3.1.0
   resolution: "@jridgewell/resolve-uri@npm:3.1.0"
@@ -641,6 +648,7 @@ __metadata:
     eslint-config-prettier: ^8.5.0
     eslint-plugin-svelte3: ^4.0.0
     gh-pages: ^5.0.0
+    iconify-icon: ^1.0.7
     mdsvex: ^0.10.6
     prettier: ^2.8.0
     prettier-plugin-svelte: ^2.8.1
@@ -1880,6 +1888,15 @@ __metadata:
   dependencies:
     ms: ^2.0.0
   checksum: 9c7a74a2827f9294c009266c82031030eae811ca87b0da3dceb8d6071b9bde22c9f3daef0469c3c533cc67a97d8a167cd9fc0389350e5f415f61a79b171ded16
+  languageName: node
+  linkType: hard
+
+"iconify-icon@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "iconify-icon@npm:1.0.7"
+  dependencies:
+    "@iconify/types": ^2.0.0
+  checksum: 49bdf42e435fbd914b8802fa6199389f1508e1bfaeee546387f04f8e34eda9f9e349a0c775302e054e55c11814097057b010a525c34a916c07e9c96b0ed143c8
   languageName: node
   linkType: hard
 

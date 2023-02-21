@@ -1,6 +1,6 @@
 <script lang="ts">
   import { base } from '$app/paths';
-  import SearchBar from '../Search/SearchBar.svelte';
+  // import SearchBar from '../Search/SearchBar.svelte';
 
   let input: HTMLInputElement;
 
@@ -30,7 +30,7 @@
       class="attn-border attn">Contact</a
     >
   </div>
-  <SearchBar placeholder="You can also read my blog" bind:input />
+  <!-- <SearchBar placeholder="You can also read my blog" bind:input /> -->
 </section>
 
 <style>
