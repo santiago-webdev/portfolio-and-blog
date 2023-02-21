@@ -19,19 +19,25 @@
 
 <footer class="artifact-ui">
   <section class="upper wider">
-    <small>Designed & Built with &lt;3 by Santiago</small>
+    <small
+      >Designed & Built with <iconify-icon icon="lucide:heart" /> by Santiago</small
+    >
 
     <!-- <a href="https://github.com/santigo-zero/santigo-zero.github.io" -->
     <!--   >nth({ghStars}) on GitHub</a -->
     <!-- > -->
     <a href="https://github.com/santigo-zero/santigo-zero.github.io"
-      >GitHub Repo {@html start_icon}{ghStars}</a
-    >
+      >Repository at<iconify-icon icon="lucide:github" />-
+      <iconify-icon icon="lucide:star" />
+      <span>
+        {ghStars}
+      </span>
+    </a>
   </section>
   <section class="bottom wider">
     <div class="copyright">
       <small>© GPL-3.0 Santiago Gonzalez</small>
-      <small>2022-2023. All Rights Reserved</small>
+      <small>2023. All Rights Reserved</small>
     </div>
     <ul>
       <!-- TODO(santigo-zero): Move all of this to #cta -->
@@ -44,6 +50,7 @@
           LinkedIn</a
         >
       </li>
+      <!-- TODO(santigo-zero): Add my email here -->
     </ul>
   </section>
 </footer>
@@ -61,6 +68,14 @@
   a {
     display: flex;
     place-items: center;
+  }
+
+  a:hover span::before {
+    content: 'nth(';
+  }
+
+  a:hover span::after {
+    content: ')';
   }
 
   section {
@@ -89,6 +104,12 @@
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
+  }
+
+  small,a {
+    display: flex;
+    place-items: center;
+    gap: 0.5ch;
   }
 
   @media screen and (max-width: 43.75em) {
