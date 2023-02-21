@@ -17,7 +17,7 @@
   });
 </script>
 
-<footer class="artifact-ui">
+<footer class="banner-reverse artifact-ui">
   <section class="upper wider">
     <small
       >Designed & Built with <iconify-icon icon="lucide:heart" /> by Santiago</small
@@ -56,15 +56,6 @@
 </footer>
 
 <style>
-  /* TODO(santigo-zero): Fix this component entirely */
-  footer {
-    display: grid;
-    place-items: center;
-    gap: 2rem;
-    background-color: var(--clr-background-alt);
-    padding: 3rem 0;
-  }
-
   a {
     display: flex;
     place-items: center;
