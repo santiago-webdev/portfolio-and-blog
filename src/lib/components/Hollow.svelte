@@ -8,7 +8,7 @@
 
 <style>
   span {
-    -webkit-text-stroke: 0.2rem var(--color);
+    -webkit-text-stroke: 0.1rem var(--color);
     color: transparent;
   }
 </style>

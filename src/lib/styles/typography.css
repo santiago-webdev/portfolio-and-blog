@@ -10,13 +10,13 @@ h1 {
   line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem));
 }
 
-h1 span {
-  font-weight: 400;
-}
+/* h1 span { */
+/*   font-weight: 400; */
+/* } */
 
 h2 {
   color: var(--clr-subtitle);
-  font-weight: 400;
+  font-weight: 600;
   font-size: clamp(1.6rem, 8vw, 2.84rem);
   /* line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem)); */
 }

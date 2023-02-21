@@ -3,7 +3,7 @@
   import { page } from '$app/stores';
   import { onMount } from 'svelte';
   import Hollow from './Hollow.svelte';
-  import { articleHeaders, readableDate, relativeTime } from '$lib/utils/utils';
+  import { readableDate, relativeTime } from '$lib/utils/utils';
 
   export let title = '';
   export let date = '';
@@ -20,8 +20,6 @@
 
   const keywords = ['How ', 'How to ', 'How to: '];
 
-  let mounted = false;
-
   onMount(() => {
     if (title) {
       keywords.some(keyword => {
@@ -35,9 +33,7 @@
 
     dateRelative = relativeTime(new Date(), new Date(date));
     dateReadable = readableDate(date);
-    setTimeout(() => (showRelative = true), 3000);
-
-    mounted = true;
+    // setTimeout(() => (showRelative = true), 3000);
   });
 </script>
 
@@ -59,7 +55,7 @@
       </div>
     {/if}
     <button
-      class="attn trn-border"
+      class="attn-border attn trn-border"
       on:click={() => (showRelative = !showRelative)}
     >
       <small>
@@ -67,20 +63,9 @@
       </small>
     </button>
   </header>
-  <div class="wider sidebar">
-    <aside class="base">
-      {#if mounted}
-        <ul>
-          {#each articleHeaders() as heading}
-            <li>{heading.innerText}</li>
-          {/each}
-        </ul>
-      {/if}
-    </aside>
-    <article id="post">
-      <slot />
-    </article>
-  </div>
+  <article class='wide'>
+    <slot />
+  </article>
 </main>
 
 <svelte:head>
@@ -113,7 +98,7 @@
 
 <style>
   article {
-    padding: 3rem 0;
+    display: grid;
     margin-inline: auto;
   }
 
@@ -133,29 +118,6 @@
   small:active {
     color: inherit;
     background-color: inherit;
-  }
-
-  .sidebar {
-    display: grid;
-    margin-inline: auto;
-    grid-template-columns: fit-content(33ch) minmax(min(50vw, 65ch), 1fr);
-  }
-
-  aside {
-    position: sticky;
-    top: 6rem;
-    display: grid;
-    padding: 1.5rem;
-    margin: 1rem;
-    place-items: center;
-    height: max-content;
-    color: var(--clr-subtitle);
-    /* background-color: var(--clr-background-alt); */
-  }
-
-  ul {
-    display: grid;
-    gap: 1rem;
   }
 
   .wip {
