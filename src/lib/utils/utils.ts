@@ -1,6 +1,3 @@
-import { page } from '$app/stores';
-import { get } from 'svelte/store';
-
 export class Post {
   title: string;
   description: string;

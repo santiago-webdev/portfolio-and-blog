@@ -10,8 +10,6 @@
   $: if ($FilteredPosts.length === 1)
     preloadData(`${base}/blog${$FilteredPosts[0].href}`);
 
-  const search_icon =
-    '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m17 17l4 4M3 11a8 8 0 1 0 16 0a8 8 0 0 0-16 0Z"/></svg>';
   const placeholderDefault = 'Search';
   const placeholderNoInput = "You haven't searched for any post yet";
 
@@ -46,7 +44,6 @@
   <button aria-label="Go to selected blog" type="submit"
     ><iconify-icon icon="lucide:search" /></button
   >
-  <!-- <label class="search-label" for="search">Search about recipes:</label> -->
   <input
     {placeholder}
     bind:value

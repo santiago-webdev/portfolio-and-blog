@@ -1,8 +1,5 @@
 <script lang="ts">
   import { base } from '$app/paths';
-  // import SearchBar from '../Search/SearchBar.svelte';
-
-  let input: HTMLInputElement;
 
   let chevron_right =
     '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 2.4 24 24"><path fill="currentColor" d="M8.7 19.7q-.275-.275-.275-.7t.275-.7l3.9-3.9l-3.9-3.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l4.6 4.6q.15.15.213.325t.062.375q0 .2-.063.375t-.212.325l-4.6 4.6q-.275.275-.7.275t-.7-.275Z"/></svg>';
@@ -30,7 +27,6 @@
       class="attn-border attn">Contact</a
     >
   </div>
-  <!-- <SearchBar placeholder="You can also read my blog" bind:input /> -->
 </section>
 
 <style>

@@ -1,10 +1,10 @@
 <script lang="ts">
   import { base } from '$app/paths';
-  import { page } from '$app/stores';
+  // import { page } from '$app/stores';
   import SearchBar from '$lib/components/Search/SearchBar.svelte';
   import { FilteredPosts, FilterValue } from './store';
   import { readableDate } from '$lib/utils/utils';
-  import { onMount } from 'svelte';
+  // import { onMount } from 'svelte';
 
   let input: HTMLInputElement;
   let modal: HTMLDialogElement;
@@ -47,9 +47,9 @@
     }
   }
 
-  onMount(() => {
-    modal.showModal();
-  });
+  // onMount(() => {
+  //   modal.showModal();
+  // });
 </script>
 
 <svelte:window on:keydown={onCtrlK} />
