@@ -341,26 +341,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/adapter-auto@npm:^1.0.2":
-  version: 1.0.3
-  resolution: "@sveltejs/adapter-auto@npm:1.0.3"
-  dependencies:
-    import-meta-resolve: ^2.2.0
-  peerDependencies:
-    "@sveltejs/kit": ^1.0.0
-  checksum: 42ef7dc51b28290977210860ece8e58cafd737970091f69bc053b55e1195b8c61cb285f05cae4316bd6c12f333702d166790271730c60b71c2e95392789c73fc
-  languageName: node
-  linkType: hard
-
-"@sveltejs/adapter-static@npm:^2.0.0":
-  version: 2.0.1
-  resolution: "@sveltejs/adapter-static@npm:2.0.1"
-  peerDependencies:
-    "@sveltejs/kit": ^1.5.0
-  checksum: 910c28a7d2a5dfedebaf26a6c297e589d75c29012d6c021ae21f1e1da7d66445eaa54361ca680ef198a0a84da3445d059392bc14f0619e95d342c8f8b6078d95
-  languageName: node
-  linkType: hard
-
 "@sveltejs/adapter-vercel@npm:^2.0.4":
   version: 2.0.4
   resolution: "@sveltejs/adapter-vercel@npm:2.0.4"
@@ -638,8 +618,6 @@ __metadata:
   dependencies:
     "@fontsource/manrope": ^4.5.13
     "@playwright/test": ^1.28.1
-    "@sveltejs/adapter-auto": ^1.0.2
-    "@sveltejs/adapter-static": ^2.0.0
     "@sveltejs/adapter-vercel": ^2.0.4
     "@sveltejs/kit": ^1.5.0
     "@typescript-eslint/eslint-plugin": ^5.45.0
@@ -1923,13 +1901,6 @@ __metadata:
     parent-module: ^1.0.0
     resolve-from: ^4.0.0
   checksum: 2cacfad06e652b1edc50be650f7ec3be08c5e5a6f6d12d035c440a42a8cc028e60a5b99ca08a77ab4d6b1346da7d971915828f33cdab730d3d42f08242d09baa
-  languageName: node
-  linkType: hard
-
-"import-meta-resolve@npm:^2.2.0":
-  version: 2.2.1
-  resolution: "import-meta-resolve@npm:2.2.1"
-  checksum: 8dd5ff7f6e96dea13653cbf79457588b9850949fde0412dba3cc944f8a61a155a3713d65878d903af6b0db7da960600ef66dfe994311743cdd49fe33dc91b0c5
   languageName: node
   linkType: hard
 
