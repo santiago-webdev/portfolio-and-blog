@@ -122,5 +122,6 @@
     display: grid;
     place-items: center;
     color: var(--clr-text-muted);
+    pointer-events: none;
   }
 </style>
