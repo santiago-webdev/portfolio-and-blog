@@ -39,7 +39,7 @@
   width: min(100% - 1rem, var(--wider));
 }
 
-@media screen and (min-width: 1376px) {
+@media screen and (min-width: 90rem) {
   .wider {
     border: none;
   }

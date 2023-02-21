@@ -9,23 +9,17 @@
   // let cross =
   //   '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 4.75l-6.5 6.5m0-6.5l6.5 6.5"/></svg>';
   // let showMobile = false;
-  // let desktop = true;
+  let onDesktop = true;
 
   // const toggleMobile = () => (showMobile = !showMobile);
 
-  let y = 0;
-  $: windowHeight = 0;
-  let windowWidth = 0;
-  // $: {
-  //   if (windowWidth > 700) {
-  //     desktop = true;
-  //   } else {
-  //     desktop = false;
-  //   }
-  // }
+  let scrollY = 0;
+  $: innerHeight = 0;
+  let outerWidth = 0;
+  $: onDesktop = outerWidth > 700 ? true : false;
 
   export let pageHeight = 0;
-  $: pageHeightWithoutWindow = pageHeight - windowHeight;
+  $: pageHeightWithoutWindow = pageHeight - innerHeight;
 
   // $: if ($navigating || desktop) {
   //   showMobile = false;
@@ -42,14 +36,10 @@
   $navStore.push(...navItems);
 </script>
 
-<svelte:window
-  bind:outerWidth={windowWidth}
-  bind:innerHeight={windowHeight}
-  bind:scrollY={y}
-/>
+<svelte:window bind:outerWidth bind:innerHeight bind:scrollY />
 
-<nav class="artifact-ui" class:navActive={y > 30}>
-  <progress max={pageHeightWithoutWindow} value={y} />
+<nav class="artifact-ui" class:scrollY>
+  <progress max={pageHeightWithoutWindow} value={scrollY} />
   <div class="container wider">
     <section class="left">
       <a
@@ -58,25 +48,29 @@
       >
     </section>
     <section class="right">
-      {#each navItems as item}
-        {#if item.href}
-          <a
-            aria-current={$page.url.pathname.startsWith(item.href)
-              ? 'page'
-              : undefined}
-            class={item.decoration ? 'attn-border attn' : 'trn-border'}
-            href={item.href}>{item.label}</a
-          >
-        {:else}
-          {@html item.separator}
-        {/if}
-      {/each}
+      {#if onDesktop}
+        {#each navItems as item}
+          {#if item.href}
+            <a
+              aria-current={$page.url.pathname.startsWith(item.href)
+                ? 'page'
+                : undefined}
+              class={item.decoration ? 'attn-border attn' : 'trn-border'}
+              href={item.href}>{item.label}</a
+            >
+          {:else}
+            {@html item.separator}
+          {/if}
+        {/each}
+      {:else}
+        {2 + 2}
+      {/if}
     </section>
   </div>
 </nav>
 
-<!-- <nav class="artifact-ui" class:navActive={y > 30 || showMobile}> -->
-<!--   <progress max={pageHeightWithoutWindow} value={y} /> -->
+<!-- <nav class="artifact-ui" class:navActive={scrollY > 30 || showMobile}> -->
+<!--   <progress max={pageHeightWithoutWindow} value={scrollY} /> -->
 <!--   <div -->
 <!--     style:flex-direction={desktop ? 'row' : 'column'} -->
 <!--     class="nav-container wider" -->
@@ -142,7 +136,7 @@
     z-index: 999;
   }
 
-  .navActive {
+  .scrollY {
     box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
