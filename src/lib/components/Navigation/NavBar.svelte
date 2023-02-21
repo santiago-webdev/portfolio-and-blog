@@ -126,11 +126,8 @@
   }
 
   .nav-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-content: space-between;
+    display: flex;
     margin-inline: auto;
-    gap: 1rem;
   }
 
   .main-nav {
@@ -141,7 +138,7 @@
 
   button,
   a {
-    padding: 0.8rem 1.6rem;
+    padding: 0.4rem 1.2rem;
     display: grid;
     place-items: center;
     border-radius: 0.6rem;
@@ -159,7 +156,7 @@
     display: flex;
     flex-direction: row;
     place-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 100%;
   }
 

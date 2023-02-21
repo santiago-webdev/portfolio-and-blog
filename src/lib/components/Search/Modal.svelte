@@ -58,7 +58,7 @@
   <SearchBar bind:input modal />
   {#if $FilterValue.length}
     <ul>
-      {#each $FilteredPosts.slice(0, 3) as post}
+      {#each $FilteredPosts.slice(0, 4) as post}
         <hr />
         <li>
           <a href="{base}/blog{post.href}">
@@ -87,7 +87,12 @@
   :modal {
     padding: 0;
     border: 0;
+    margin: 0;
+    margin-inline: auto;
+    top: 5rem;
+    position: absolute;
     border-radius: 1.1rem;
+    background-color: var(--clr-bg-active);
   }
 
   :modal::backdrop {

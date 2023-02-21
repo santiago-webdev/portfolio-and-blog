@@ -58,7 +58,9 @@
     list="search-terms"
     autocomplete="off"
   />
-  <kbd>Ctrl K</kbd>
+  {#if !modal}
+    <kbd>Ctrl K</kbd>
+  {/if}
 </form>
 
 <style>
