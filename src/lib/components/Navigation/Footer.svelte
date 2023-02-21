@@ -97,7 +97,8 @@
     gap: 0.6rem;
   }
 
-  small,a {
+  small,
+  a {
     display: flex;
     place-items: center;
     gap: 0.5ch;

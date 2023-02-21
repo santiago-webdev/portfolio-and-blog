@@ -44,7 +44,7 @@
   on:submit|preventDefault={handleSubmit}
 >
   <button aria-label="Go to selected blog" type="submit"
-    ><iconify-icon icon="lucide:search"></button
+    ><iconify-icon icon="lucide:search" /></button
   >
   <!-- <label class="search-label" for="search">Search about recipes:</label> -->
   <input

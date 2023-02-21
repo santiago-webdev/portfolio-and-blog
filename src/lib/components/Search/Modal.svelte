@@ -28,7 +28,7 @@
       // if (inBlogRoute) {
       //   input.focus();
       // } else {
-        modal.showModal();
+      modal.showModal();
       // }
     }
   };

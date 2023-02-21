@@ -63,7 +63,7 @@
       </small>
     </button>
   </header>
-  <article class='wide'>
+  <article class="wide">
     <slot />
   </article>
 </main>
