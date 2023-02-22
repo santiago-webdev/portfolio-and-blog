@@ -31,7 +31,7 @@
     height: 3px;
     top: 0;
     border: 0;
-    position: sticky;
+    position: fixed;
     z-index: 9999;
   }
 
