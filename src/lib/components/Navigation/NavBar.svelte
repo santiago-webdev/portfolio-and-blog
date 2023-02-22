@@ -2,6 +2,7 @@
   import { base } from '$app/paths';
   // import { navigating, page } from '$app/stores';
   import { page } from '$app/stores';
+  import Separator from '$lib/UI/Separator.svelte';
   import { navStore } from './store';
 
   // let burger =
@@ -50,9 +51,7 @@
     <section class="right">
       {#if onDesktop}
         {#each navItems as item}
-          {#if item.separator}
-            <div class="ui-divider" />
-          {/if}
+          <Separator render={item.separator} orientation="vertical" />
           <a
             aria-current={$page.url.pathname.startsWith(item.href)
               ? 'page'
@@ -111,6 +110,7 @@
   section:is(.right, .left) {
     display: flex;
     place-items: center;
+    gap: 1rem;
   }
 
   section.left a:nth-child(1) {
