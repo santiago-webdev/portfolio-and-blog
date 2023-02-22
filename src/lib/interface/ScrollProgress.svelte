@@ -6,7 +6,7 @@
   $: pageHeight = 0;
 
   onMount(() => {
-    const body = document.querySelector('body')!;
+    const body = document.querySelector('body');
 
     const resizeObserver = new ResizeObserver(entries => {
       const entry = entries.at(0);
@@ -16,8 +16,8 @@
       }
     });
 
-    resizeObserver.observe(body);
-    return () => resizeObserver.unobserve(body);
+    if (body) resizeObserver.observe(body);
+    return () => body && resizeObserver.unobserve(body);
   });
 </script>
 
