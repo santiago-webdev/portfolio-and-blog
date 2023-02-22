@@ -162,7 +162,7 @@
 }
 
 .ui-divider {
-  border-left: 0.12rem solid var(--clr-ui-muted);
+  border-left: 0.13rem solid var(--clr-ui-muted);
   height: calc(var(--bttn-szh-100) * 2);
   background-color: white;
 }
