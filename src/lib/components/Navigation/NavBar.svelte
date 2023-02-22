@@ -28,8 +28,8 @@
 
 <svelte:window bind:outerWidth bind:innerHeight bind:scrollY />
 
-<nav class="artifact-ui" class:scrollY>
-  <div class="container wider">
+<nav aria-labelledby="main-navigation" class="artifact-ui" class:scrollY>
+  <div id="main-navigation" class="wider">
     <section class="left">
       <a
         aria-current={$page.url.pathname === `/${base}` ? 'page' : undefined}
@@ -89,7 +89,7 @@
     color: var(--clr-clicked);
   }
 
-  .container {
+  #main-navigation {
     display: flex;
     place-items: center;
     margin-inline: auto;
