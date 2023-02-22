@@ -46,87 +46,30 @@
         href="{base}/">Santiago Gonzalez</a
       >
     </section>
+
     <section class="right">
       {#if onDesktop}
         {#each navItems as item}
-          {#if item.href}
-            {#if item.separator}
-              <div class="ui-divider" />
-            {/if}
-            <a
-              aria-current={$page.url.pathname.startsWith(item.href)
-                ? 'page'
-                : undefined}
-              class={item.decoration ? 'attn-border attn' : 'trn-border'}
-              href={item.href}>{item.label}</a
-            >
+          {#if item.separator}
+            <div class="ui-divider" />
           {/if}
+          <a
+            aria-current={$page.url.pathname.startsWith(item.href)
+              ? 'page'
+              : undefined}
+            class={item.decoration ? 'attn-border attn' : 'trn-border'}
+            href={item.href}>{item.label}</a
+          >
         {/each}
       {:else}
         <button>
-          <iconify-icon icon="lucide:align-right" width="30" height="30" />
+          <iconify-icon icon="lucide:align-right" width="26" height="26" />
         </button>
       {/if}
     </section>
   </div>
 </nav>
 
-<!-- <nav class="artifact-ui" class:navActive={scrollY > 30 || showMobile}> -->
-<!--   <progress max={pageHeightWithoutWindow} value={scrollY} /> -->
-<!--   <div -->
-<!--     style:flex-direction={desktop ? 'row' : 'column'} -->
-<!--     class="nav-container wider" -->
-<!--   > -->
-<!--     <div class="main-nav"> -->
-<!--       <a -->
-<!--         style:padding-left="0" -->
-<!--         style:visibility={showMobile ? 'hidden' : 'visible'} -->
-<!--         aria-current={$page.url.pathname === `/${base}` ? 'page' : undefined} -->
-<!--         href="{base}/">Santiago Gonzalez</a -->
-<!--       > -->
-<!--     </div> -->
-<!--     {#if !desktop} -->
-<!--       <button on:click={toggleMobile}> -->
-<!--         {#if !showMobile} -->
-<!--           {@html burger} -->
-<!--         {:else} -->
-<!--           {@html cross} -->
-<!--         {/if} -->
-<!--       </button> -->
-<!--     {/if} -->
-<!--     <section style:display={showMobile || desktop ? 'grid' : 'none'}> -->
-<!--       <ul style:flex-direction={desktop ? 'row' : 'column'}> -->
-<!--         {#each navItems as item} -->
-<!--           {#if item.href} -->
-<!--             <li -->
-<!--               style:display={item.label === 'Home' && desktop -->
-<!--                 ? 'none' -->
-<!--                 : 'block'} -->
-<!--               class={item.decoration ? 'attn-border attn' : 'trn-border'} -->
-<!--             > -->
-<!--               <a -->
-<!--                 aria-current={$page.url.pathname.startsWith(item.href) -->
-<!--                   ? 'page' -->
-<!--                   : undefined} -->
-<!--                 href={item.href} -->
-<!--                 on:click={toggleMobile}>{item.label}</a -->
-<!--               > -->
-<!--             </li> -->
-<!--             <hr -->
-<!--               style:display={!desktop ? 'block' : 'none'} -->
-<!--               style="width: 80%" -->
-<!--             /> -->
-<!--           {:else} -->
-<!--             <li style:display={desktop ? 'block' : 'none'}> -->
-<!--               {@html item.separator} -->
-<!--             </li> -->
-<!--           {/if} -->
-<!--         {/each} -->
-<!--       </ul> -->
-<!--     </section> -->
-<!--   </div> -->
-
-<!-- </nav> -->
 <style>
   nav {
     top: 0;
