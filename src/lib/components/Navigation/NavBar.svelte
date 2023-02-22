@@ -2,7 +2,7 @@
   import { base } from '$app/paths';
   // import { navigating, page } from '$app/stores';
   import { page } from '$app/stores';
-  import Separator from '$lib/UI/Separator.svelte';
+  import Separator from '$lib/interface/Separator.svelte';
   import { navStore } from './store';
 
   // let burger =
