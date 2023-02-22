@@ -40,14 +40,6 @@
   width: min(100% - 1rem, var(--wider));
 }
 
-@media screen and (min-width: 90rem) {
-  .wider {
-    border: none;
-  }
-  /* TODO(santigo-zero): Remove this in production */
-  /* I need this to visualize the query in dev tools */
-}
-
 .banner {
   width: 100%;
   background-color: var(--clr-background-alt);
