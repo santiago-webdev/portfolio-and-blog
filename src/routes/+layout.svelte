@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
+  import ScrollProgress from '$lib/interface/ScrollProgress.svelte';
   import NavBar from '$lib/components/Navigation/NavBar.svelte';
   import Footer from '$lib/components/Navigation/Footer.svelte';
   import Transition from '$lib/components/Transition.svelte';
@@ -19,28 +19,14 @@
   import '@fontsource/manrope/800.css';
 
   import 'iconify-icon';
-
-  let body: HTMLElement;
-  $: pageHeight = 0;
-  onMount(() => {
-    const resizeObserver = new ResizeObserver(entries => {
-      const entry = entries.at(0);
-
-      if (entry !== undefined) {
-        pageHeight = Math.floor(entry.contentBoxSize[0].blockSize);
-      }
-    });
-
-    resizeObserver.observe(body);
-    return () => resizeObserver.unobserve(body);
-  });
 </script>
 
-<div class="layout" bind:this={body}>
+<div class="layout">
   {#await import('$lib/components/Search/Modal.svelte') then Modal}
     <Modal.default />
   {/await}
-  <NavBar {pageHeight} />
+  <ScrollProgress />
+  <NavBar />
   <Transition url={$page.url}>
     <slot />
   </Transition>

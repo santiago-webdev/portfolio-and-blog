@@ -5,22 +5,12 @@
   import Separator from '$lib/interface/Separator.svelte';
   import { navStore } from './store';
 
-  // let burger =
-  //   '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 48 48"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M7.95 11.95h32m-32 12h32m-32 12h32"/></svg>';
-  // let cross =
-  //   '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 4.75l-6.5 6.5m0-6.5l6.5 6.5"/></svg>';
-  // let showMobile = false;
   let onDesktop = true;
-
-  // const toggleMobile = () => (showMobile = !showMobile);
 
   let scrollY = 0;
   $: innerHeight = 0;
   let outerWidth = 0;
   $: onDesktop = outerWidth > 768 ? true : false;
-
-  export let pageHeight = 0;
-  $: pageHeightWithoutWindow = pageHeight - innerHeight;
 
   // $: if ($navigating || desktop) {
   //   showMobile = false;
@@ -39,7 +29,6 @@
 <svelte:window bind:outerWidth bind:innerHeight bind:scrollY />
 
 <nav class="artifact-ui" class:scrollY>
-  <progress max={pageHeightWithoutWindow} value={scrollY} />
   <div class="container wider">
     <section class="left">
       <a
@@ -71,7 +60,7 @@
 
 <style>
   nav {
-    top: 0;
+    top: 3px;
     position: sticky;
     background-color: var(--clr-background-alt);
     padding: 0.6rem 0;
@@ -115,27 +104,6 @@
 
   section.left a:nth-child(1) {
     padding-left: 0;
-  }
-
-  progress {
-    width: 100%;
-    height: 3px;
-    top: 0;
-    border: 0;
-    position: fixed;
-  }
-
-  progress::-webkit-progress-bar,
-  progress {
-    background: inherit;
-  }
-
-  progress::-moz-progress-bar {
-    background: var(--accent-peachy);
-  }
-
-  progress::-webkit-progress-value {
-    background: var(--accent-peachy);
   }
 
   button {
