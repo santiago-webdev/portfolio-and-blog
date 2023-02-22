@@ -1,21 +1,17 @@
 <script lang="ts">
   import { base } from '$app/paths';
-  // import { navigating, page } from '$app/stores';
   import { page } from '$app/stores';
   import Separator from '$lib/interface/Separator.svelte';
+  import { inPixels } from '$lib/utils/utils';
   import { navStore } from './store';
 
   let onDesktop = true;
-
   let scrollY = 0;
-  $: innerHeight = 0;
   let outerWidth = 0;
-  $: onDesktop = outerWidth > 768 ? true : false;
-
+  // import { navigating, page } from '$app/stores';
   // $: if ($navigating || desktop) {
   //   showMobile = false;
   // }
-
   const navItems = [
     { label: 'Blog', href: `${base}/blog` },
     { label: 'Projects', href: `${base}/projects` },
@@ -24,6 +20,9 @@
   ];
 
   $navStore.push(...navItems);
+  $: innerHeight = 0;
+  $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
+  $: console.log(onDesktop);
 </script>
 
 <svelte:window bind:outerWidth bind:innerHeight bind:scrollY />

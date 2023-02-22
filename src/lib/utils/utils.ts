@@ -59,3 +59,25 @@ export const readableDate = (dateString: string): string => {
 
   return formatter.format(date);
 };
+
+let baseFontSize: number = 0;
+
+function getBaseFontSize(): number {
+  if (
+    baseFontSize ||
+    typeof document === 'undefined' ||
+    !document.documentElement
+  )
+    return baseFontSize;
+
+  const root = document.documentElement; // Get the root element
+  baseFontSize = parseFloat(getComputedStyle(root).fontSize); // Get the computed font size in pixels and convert it to a number
+  return baseFontSize;
+}
+
+export function inPixels(nmb: string) {
+  const numericString = nmb.replace(/[^0-9]/g, ''); // Remove all non-numeric characters from the string
+  const numericValue = parseInt(numericString, 10); // Parse the numeric string as an integer (base 10)
+
+  return parseInt(`${numericValue * getBaseFontSize()}`);
+}
