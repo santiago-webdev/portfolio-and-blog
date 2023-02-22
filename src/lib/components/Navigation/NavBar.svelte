@@ -1,17 +1,15 @@
 <script lang="ts">
   import { base } from '$app/paths';
-  import { page } from '$app/stores';
+  import { navigating, page } from '$app/stores';
   import Separator from '$lib/interface/Separator.svelte';
   import { inPixels } from '$lib/utils/utils';
   import { navStore } from './store';
 
+  let showMobileMenu = false;
   let onDesktop = true;
   let scrollY = 0;
   let outerWidth = 0;
-  // import { navigating, page } from '$app/stores';
-  // $: if ($navigating || desktop) {
-  //   showMobile = false;
-  // }
+
   const navItems = [
     { label: 'Blog', href: `${base}/blog` },
     { label: 'Projects', href: `${base}/projects` },
@@ -23,6 +21,7 @@
   $: innerHeight = 0;
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
   $: console.log(onDesktop);
+  $: if ($navigating || onDesktop) showMobileMenu = false;
 </script>
 
 <svelte:window bind:outerWidth bind:innerHeight bind:scrollY />
@@ -49,8 +48,12 @@
           >
         {/each}
       {:else}
-        <button>
-          <iconify-icon icon="lucide:align-right" width="26" height="26" />
+        <button on:click={() => (showMobileMenu = !showMobileMenu)}>
+          {#if showMobileMenu}
+            <iconify-icon icon="lucide:x" width="26" height="26" />
+          {:else}
+            <iconify-icon icon="lucide:grip" width="26" height="26" />
+          {/if}
         </button>
       {/if}
     </section>
