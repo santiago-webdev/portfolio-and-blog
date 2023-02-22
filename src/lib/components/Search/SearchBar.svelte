@@ -46,6 +46,7 @@
   >
   <input
     {placeholder}
+    aria-keyshortcuts="Control+K"
     bind:value
     bind:this={input}
     on:input={() => FilterValue.set(searchHandler(value))}
