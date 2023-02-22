@@ -14,7 +14,7 @@
       data-sveltekit-reload
       data-sveltekit-noscroll
       href="{base}/#projects"
-      class="act">Projects <iconify-icon icon="lucide:chevron-right"></iconify-icon></a
+      class="act">Projects <iconify-icon icon="lucide:chevron-right" /></a
     >
     <a
       data-sveltekit-reload
