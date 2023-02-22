@@ -4,6 +4,7 @@
   --clr-text: var(--clr-slate-250);
   --clr-text-muted: var(--clr-pale-450);
   --border-muted: 0.12rem solid var(--clr-text-muted);
+  --clr-ui-muted: var(--clr-pale-800);
 
   --clr-hover: var(--clr-slate-400);
   --clr-hover-bg: var(--clr-slate-400);
@@ -158,6 +159,12 @@
   background-color: #18181c;
   border: 0.12rem solid #18181c;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.ui-divider {
+  border-left: 0.12rem solid var(--clr-ui-muted);
+  height: calc(var(--bttn-szh-100) * 2);
+  background-color: white;
 }
 
 .artifact-ui {

@@ -5,7 +5,7 @@ type NavItems = Array<{
   label?: string;
   href?: string;
   decoration?: string;
-  separator?: string;
+  separator?: boolean;
 }>;
 
 export const navStore = writable<NavItems>([

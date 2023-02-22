@@ -97,7 +97,7 @@
     gap: 0.5ch;
   }
 
-  @media screen and (max-width: 43.75em) {
+  @media screen and (max-width: 48rem) {
     .upper,
     .bottom {
       flex-direction: column-reverse;

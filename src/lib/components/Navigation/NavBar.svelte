@@ -16,7 +16,7 @@
   let scrollY = 0;
   $: innerHeight = 0;
   let outerWidth = 0;
-  $: onDesktop = outerWidth > 700 ? true : false;
+  $: onDesktop = outerWidth > 768 ? true : false;
 
   export let pageHeight = 0;
   $: pageHeightWithoutWindow = pageHeight - innerHeight;
@@ -28,8 +28,7 @@
   const navItems = [
     { label: 'Blog', href: `${base}/blog` },
     { label: 'Projects', href: `${base}/projects` },
-    { separator: '|' },
-    { label: 'About', href: `${base}/about` },
+    { separator: true, label: 'About', href: `${base}/about` },
     { label: 'Contact', href: `${base}/contact`, decoration: 'border' }
   ];
 
@@ -51,6 +50,9 @@
       {#if onDesktop}
         {#each navItems as item}
           {#if item.href}
+            {#if item.separator}
+              <div class="ui-divider" />
+            {/if}
             <a
               aria-current={$page.url.pathname.startsWith(item.href)
                 ? 'page'
@@ -58,12 +60,12 @@
               class={item.decoration ? 'attn-border attn' : 'trn-border'}
               href={item.href}>{item.label}</a
             >
-          {:else}
-            {@html item.separator}
           {/if}
         {/each}
       {:else}
-        {2 + 2}
+        <button>
+          <iconify-icon icon="lucide:align-right" width="30" height="30" />
+        </button>
       {/if}
     </section>
   </div>
@@ -143,8 +145,8 @@
   }
 
   a {
-    padding: 0.6rem 1.2rem;
-    display: grid;
+    padding: var(--bttn-szb-100) var(--bttn-szh-100);
+    display: flex;
     place-items: center;
   }
 
@@ -191,5 +193,10 @@
 
   progress::-webkit-progress-value {
     background: var(--accent-peachy);
+  }
+
+  button {
+    display: flex;
+    place-items: center;
   }
 </style>

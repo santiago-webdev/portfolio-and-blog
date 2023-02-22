@@ -51,7 +51,7 @@
     place-content: center;
   }
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 48rem) {
     main {
       padding: 0;
     }

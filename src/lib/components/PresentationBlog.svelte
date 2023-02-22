@@ -128,7 +128,7 @@
     grid-auto-flow: row dense;
   }
 
-  @media only screen and (max-width: 750px) {
+  @media only screen and (max-width: 48rem) {
     section {
       grid-template-columns: 1fr;
     }

@@ -94,6 +94,9 @@
   --clr-stone-700: #44403c;
   --clr-stone-800: #292524;
   --clr-stone-900: #1c1917;
+
+  --bttn-szb-100: 0.6rem;
+  --bttn-szh-100: 1.2rem;
 }
 
 br {
