@@ -14,7 +14,7 @@ export const navItems = writable<NavItems>([
 ]);
 
 type NavElements = Array<{
-  component?: typeof SvelteComponent
-}>
+  component?: typeof SvelteComponent;
+}>;
 
 export const navElements = writable<NavElements>([]);
