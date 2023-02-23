@@ -8,6 +8,6 @@ type NavItems = Array<{
   separator?: boolean;
 }>;
 
-export const navStore = writable<NavItems>([
+export const navItems = writable<NavItems>([
   { label: 'Home', href: `${base}/` }
 ]);

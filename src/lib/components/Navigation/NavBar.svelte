@@ -2,7 +2,7 @@
   import { base } from '$app/paths';
   import { navigating, page } from '$app/stores';
   import { inPixels } from '$lib/utils/utils';
-  import { navStore } from './store';
+  import { navItems } from './store';
   import Separator from '$lib/interface/Separator.svelte';
 
   let showMobileMenu = false;
@@ -10,14 +10,14 @@
   let scrollY = 0;
   let outerWidth = 0;
 
-  const navItems = [
+  const baseItems = [
     { label: 'Blog', href: `${base}/blog` },
     { label: 'Projects', href: `${base}/projects` },
     { separator: true, label: 'About', href: `${base}/about` },
     { label: 'Contact', href: `${base}/contact`, decoration: 'border' }
   ];
 
-  $navStore.push(...navItems);
+  $navItems.push(...baseItems);
   $: innerHeight = 0;
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
   $: console.log(onDesktop);
@@ -37,7 +37,7 @@
 
     <section class="right">
       {#if onDesktop}
-        {#each navItems as item}
+        {#each baseItems as item}
           <Separator render={item.separator} orientation="vertical" />
           <a
             aria-current={$page.url.pathname.startsWith(item.href)
