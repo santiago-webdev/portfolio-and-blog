@@ -20,7 +20,7 @@
   ];
 
   $navItems.push(...baseItems);
-  $navElements.push({ component: WidgetSearchBar });
+  // $navElements.push({ component: WidgetSearchBar });
   $: innerHeight = 0;
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
   $: console.log(onDesktop);
