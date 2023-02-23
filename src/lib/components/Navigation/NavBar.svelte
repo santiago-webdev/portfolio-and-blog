@@ -4,8 +4,7 @@
   import { inPixels } from '$lib/utils/utils';
   import { navElements, navItems } from './store';
   import Separator from '$lib/interface/Separator.svelte';
-
-  import WidgetSearch from '../Search/WidgetSearch.svelte';
+  import WidgetSearchBar from '$lib/interface/WidgetSearchBar.svelte';
 
   let showMobileMenu = false;
   let onDesktop = true;
@@ -13,14 +12,15 @@
   let outerWidth = 0;
 
   const baseItems = [
-    { label: 'Blog', href: `${base}/blog` },
+    { separator: true, label: 'Blog', href: `${base}/blog` },
+    { label: 'Resume', href: `/` },
     { label: 'Projects', href: `${base}/projects` },
     { separator: true, label: 'About', href: `${base}/about` },
     { label: 'Contact', href: `${base}/contact`, decoration: 'border' }
   ];
 
   $navItems.push(...baseItems);
-  $navElements.push({ component: WidgetSearch });
+  $navElements.push({ component: WidgetSearchBar });
   $: innerHeight = 0;
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
   $: console.log(onDesktop);

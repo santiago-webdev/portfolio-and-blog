@@ -173,6 +173,12 @@
   font-weight: inherit;
 }
 
+.artifact-ui *:is(kbd) {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
 [aria-current='page'] {
   text-decoration: underline solid var(--accent-peachy) 3px;
 }
