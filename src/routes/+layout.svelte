@@ -23,9 +23,6 @@
 </script>
 
 <div class="layout">
-  {#await import('$lib/components/Search/Modal.svelte') then Modal}
-    <Modal.default />
-  {/await}
   <ScrollProgress />
   <NavBar />
   <Transition url={$page.url}>
