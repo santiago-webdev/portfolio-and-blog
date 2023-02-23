@@ -7,16 +7,13 @@
     "dev": "vite dev",
     "build": "vite build",
     "preview": "vite preview",
-    "test": "playwright test",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "test:unit": "vitest",
     "lint": "prettier --plugin-search-dir . --check . && eslint ./src",
     "format": "prettier --plugin-search-dir . --write .",
     "deploy": "gh-pages -d build -t true"
   },
   "devDependencies": {
-    "@playwright/test": "^1.31.0",
     "@sveltejs/adapter-vercel": "^2.1.0",
     "@sveltejs/kit": "^1.8.3",
     "@typescript-eslint/eslint-plugin": "^5.53.0",
@@ -32,8 +29,7 @@
     "svelte-check": "^3.0.3",
     "tslib": "^2.5.0",
     "typescript": "^4.9.5",
-    "vite": "^4.1.4",
-    "vitest": "^0.28.5"
+    "vite": "^4.1.4"
   },
   "type": "module",
   "packageManager": "yarn@3.3.1",
