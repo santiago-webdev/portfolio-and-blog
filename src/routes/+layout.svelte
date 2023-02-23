@@ -1,9 +1,9 @@
 <script lang="ts">
-  // import ScrollProgress from '$lib/interface/ScrollProgress.svelte';
-  // import NavBar from '$lib/components/Navigation/NavBar.svelte';
+  import ScrollProgress from '$lib/interface/ScrollProgress.svelte';
+  import NavBar from '$lib/components/Navigation/NavBar.svelte';
   import Footer from '$lib/components/Navigation/Footer.svelte';
   import Transition from '$lib/components/Transition.svelte';
-  // import Noise from '$lib/components/Noise.svelte';
+  import Noise from '$lib/components/Noise.svelte';
   import { page } from '$app/stores';
 
   import '$lib/styles/global.css';
@@ -23,13 +23,13 @@
 </script>
 
 <div class="layout">
-  <!-- <ScrollProgress /> -->
-  <!-- <NavBar /> -->
-  <!-- <Transition url={$page.url}> -->
-  <slot />
-  <!-- </Transition> -->
+  <ScrollProgress />
+  <NavBar />
+  <Transition url={$page.url}>
+    <slot />
+  </Transition>
   <Footer />
-  <!-- <Noise /> -->
+  <Noise />
 </div>
 
 <style>
