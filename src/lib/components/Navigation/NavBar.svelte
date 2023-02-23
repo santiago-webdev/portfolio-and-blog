@@ -1,9 +1,9 @@
 <script lang="ts">
   import { base } from '$app/paths';
   import { navigating, page } from '$app/stores';
-  import Separator from '$lib/interface/Separator.svelte';
   import { inPixels } from '$lib/utils/utils';
   import { navStore } from './store';
+  import Separator from '$lib/interface/Separator.svelte';
 
   let showMobileMenu = false;
   let onDesktop = true;
@@ -21,7 +21,7 @@
   $: innerHeight = 0;
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
   $: console.log(onDesktop);
-  $: if ($navigating || onDesktop) showMobileMenu = false;
+  $: showMobileMenu = $navigating || onDesktop ? true : false;
 </script>
 
 <svelte:window bind:outerWidth bind:innerHeight bind:scrollY />
