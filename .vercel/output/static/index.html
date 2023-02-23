@@ -24,19 +24,18 @@
       }
     </script>
     <meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_layout.d500df5a.css" rel="stylesheet">
-		<link href="./_app/immutable/assets/_page.b5eb881e.css" rel="stylesheet">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/start.957caa9d.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/index.a07c969b.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/singletons.c1bb9fc0.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/paths.acf61089.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/app.42722187.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/preload-helper.41c905a7.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/_layout.svelte.17baa133.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/_layout.ts.fb1865a6.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/_layout.da46b06b.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/entry/_page.svelte.466262b8.mjs">
-		<link rel="preload" as="script" crossorigin="anonymous" href="./_app/immutable/chunks/config.37d4d261.mjs"><title>Santiago's Portfolio and Blog</title><!-- HEAD_svelte-2i912y_START --><meta name="description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta itemprop="name" content="Santiago's Portfolio and Blog"><meta itemprop="description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta itemprop="image" content=""><meta property="og:url" content="https://santigo-zero.github.io/"><meta property="og:type" content="website"><meta property="og:title" content="Santiago's Portfolio and Blog"><meta property="og:description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta property="og:image" content=""><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Santiago's Portfolio and Blog"><meta name="twitter:description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta name="twitter:image" content=""><!-- HEAD_svelte-2i912y_END -->
+		<link href="./_app/immutable/assets/_layout-0a965443.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_page-b5eb881e.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/start-1df17b0f.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index-2a19ef15.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons-ea0bcbac.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths-24bb4e9c.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper-41c905a7.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_layout.svelte-034e4e6a.js">
+		<link rel="modulepreload" href="./_app/immutable/modules/pages/_layout.ts-9cbb603b.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/_layout-da46b06b.js">
+		<link rel="modulepreload" href="./_app/immutable/components/pages/_page.svelte-96a4f419.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/config-37d4d261.js"><title>Santiago's Portfolio and Blog</title><!-- HEAD_svelte-2i912y_START --><meta name="description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta itemprop="name" content="Santiago's Portfolio and Blog"><meta itemprop="description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta itemprop="image" content=""><meta property="og:url" content="https://santigo-zero.github.io/"><meta property="og:type" content="website"><meta property="og:title" content="Santiago's Portfolio and Blog"><meta property="og:description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta property="og:image" content=""><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Santiago's Portfolio and Blog"><meta name="twitter:description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta name="twitter:image" content=""><!-- HEAD_svelte-2i912y_END -->
   </head>
   <body data-sveltekit-preload-data="hover">
     <div style="display: contents">
@@ -99,30 +98,22 @@
 </div>
 
 
-			
-			<script>
-				{
-					__sveltekit_170bpw1 = {
-						env: {},
-						assets: new URL(".", location.href).pathname.replace(/^\/$/, ''),
-						element: document.currentScript.parentElement
-					};
+		<script type="module" data-sveltekit-hydrate="1bvyuz2">
+			import { start } from "./_app/immutable/start-1df17b0f.js";
 
-					const data = [null,null];
-
-					Promise.all([
-						import("./_app/immutable/entry/start.957caa9d.mjs"),
-						import("./_app/immutable/entry/app.42722187.mjs")
-					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_170bpw1.element, {
-							node_ids: [0, 2],
-							data,
-							form: null,
-							error: null
-						});
-					});
+			start({
+				assets: "",
+				env: {},
+				target: document.querySelector('[data-sveltekit-hydrate="1bvyuz2"]').parentNode,
+				version: "1677195343908",
+				hydrate: {
+					node_ids: [0, 2],
+					data: [null,null],
+					form: null,
+					error: null
 				}
-			</script>
-		</div>
+			});
+		</script>
+	</div>
   </body>
 </html>
