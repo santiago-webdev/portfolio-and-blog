@@ -59,7 +59,9 @@
       on:click={() => (showRelative = !showRelative)}
     >
       <small>
-        Published: {showRelative ? dateRelative : dateReadable}
+        <iconify-icon icon="lucide:calendar" />: {showRelative
+          ? dateRelative
+          : dateReadable}
       </small>
     </button>
   </header>
