@@ -341,7 +341,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sveltejs/kit@npm:^1.8.3":
+"@sveltejs/kit@npm:^1.5.0":
   version: 1.8.3
   resolution: "@sveltejs/kit@npm:1.8.3"
   dependencies:
@@ -442,7 +442,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.53.0":
+"@typescript-eslint/eslint-plugin@npm:^5.45.0":
   version: 5.53.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.53.0"
   dependencies:
@@ -466,7 +466,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.53.0":
+"@typescript-eslint/parser@npm:^5.45.0":
   version: 5.53.0
   resolution: "@typescript-eslint/parser@npm:5.53.0"
   dependencies:
@@ -590,22 +590,22 @@ __metadata:
   dependencies:
     "@fontsource/manrope": ^4.5.13
     "@sveltejs/adapter-vercel": ^2.1.0
-    "@sveltejs/kit": ^1.8.3
-    "@typescript-eslint/eslint-plugin": ^5.53.0
-    "@typescript-eslint/parser": ^5.53.0
-    eslint: ^8.34.0
-    eslint-config-prettier: ^8.6.0
+    "@sveltejs/kit": ^1.5.0
+    "@typescript-eslint/eslint-plugin": ^5.45.0
+    "@typescript-eslint/parser": ^5.45.0
+    eslint: ^8.28.0
+    eslint-config-prettier: ^8.5.0
     eslint-plugin-svelte3: ^4.0.0
     gh-pages: ^5.0.0
     iconify-icon: ^1.0.7
     mdsvex: ^0.10.6
-    prettier: ^2.8.4
-    prettier-plugin-svelte: ^2.9.0
-    svelte: ^3.55.1
-    svelte-check: ^3.0.3
-    tslib: ^2.5.0
-    typescript: ^4.9.5
-    vite: ^4.1.4
+    prettier: ^2.8.0
+    prettier-plugin-svelte: ^2.8.1
+    svelte: ^3.54.0
+    svelte-check: ^3.0.1
+    tslib: ^2.4.1
+    typescript: ^4.9.3
+    vite: ^4.0.0
   languageName: unknown
   linkType: soft
 
@@ -1201,7 +1201,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-prettier@npm:^8.6.0":
+"eslint-config-prettier@npm:^8.5.0":
   version: 8.6.0
   resolution: "eslint-config-prettier@npm:8.6.0"
   peerDependencies:
@@ -1267,7 +1267,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:^8.34.0":
+"eslint@npm:^8.28.0":
   version: 8.34.0
   resolution: "eslint@npm:8.34.0"
   dependencies:
@@ -2604,7 +2604,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier-plugin-svelte@npm:^2.9.0":
+"prettier-plugin-svelte@npm:^2.8.1":
   version: 2.9.0
   resolution: "prettier-plugin-svelte@npm:2.9.0"
   peerDependencies:
@@ -2614,7 +2614,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:^2.8.4":
+"prettier@npm:^2.8.0":
   version: 2.8.4
   resolution: "prettier@npm:2.8.4"
   bin:
@@ -3039,9 +3039,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte-check@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "svelte-check@npm:3.0.3"
+"svelte-check@npm:^3.0.1":
+  version: 3.0.4
+  resolution: "svelte-check@npm:3.0.4"
   dependencies:
     "@jridgewell/trace-mapping": ^0.3.17
     chokidar: ^3.4.1
@@ -3055,7 +3055,7 @@ __metadata:
     svelte: ^3.55.0
   bin:
     svelte-check: bin/svelte-check
-  checksum: 5b215e8567852bb384ed309552638987fb9226e3452f2940ebe588ff9d1afc79e25e1bac0d1f95d24b6e91f3470797a52d630fd47c128ef2045270068f17d3d4
+  checksum: f7fbb36b622f87979d31525aed7c2996baf93bba8695db3c44d6d18a38c4e48ade50609b9aecab182db8233b68f386f10cb49de51194669c2f3dc2536a94fd37
   languageName: node
   linkType: hard
 
@@ -3115,7 +3115,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"svelte@npm:^3.55.1":
+"svelte@npm:^3.54.0":
   version: 3.55.1
   resolution: "svelte@npm:3.55.1"
   checksum: ce66391bae68b2055a0a63ee0477e73f036247d4dd5abd5240372d5f4971a452ad29c4ef2c630ab089697429edd61756ef7b764e7597ad7e897ce9f8a9457fec
@@ -3192,7 +3192,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2.5.0":
+"tslib@npm:^2.4.1":
   version: 2.5.0
   resolution: "tslib@npm:2.5.0"
   checksum: ae3ed5f9ce29932d049908ebfdf21b3a003a85653a9a140d614da6b767a93ef94f460e52c3d787f0e4f383546981713f165037dc2274df212ea9f8a4541004e1
@@ -3226,7 +3226,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.9.4, typescript@npm:^4.9.5":
+"typescript@npm:^4.9.3, typescript@npm:^4.9.4":
   version: 4.9.5
   resolution: "typescript@npm:4.9.5"
   bin:
@@ -3236,7 +3236,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.9.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.9.5#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.9.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.9.4#~builtin<compat/typescript>":
   version: 4.9.5
   resolution: "typescript@patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=ad5954"
   bin:
@@ -3315,7 +3315,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^4.1.4":
+"vite@npm:^4.0.0":
   version: 4.1.4
   resolution: "vite@npm:4.1.4"
   dependencies:
