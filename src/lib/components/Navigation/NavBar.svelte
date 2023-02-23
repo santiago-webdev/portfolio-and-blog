@@ -2,9 +2,9 @@
   import { base } from '$app/paths';
   import { navigating, page } from '$app/stores';
   import { inPixels } from '$lib/utils/utils';
-  import { navElements, navItems } from './store';
+  import { navItems } from './store';
   import Separator from '$lib/interface/Separator.svelte';
-  import WidgetSearchBar from '$lib/interface/WidgetSearchBar.svelte';
+  import WidgetsNavBar from './WidgetsNavBar.svelte';
 
   let showMobileMenu = false;
   let onDesktop = true;
@@ -20,7 +20,6 @@
   ];
 
   $navItems.push(...baseItems);
-  // $navElements.push({ component: WidgetSearchBar });
   $: innerHeight = 0;
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
   $: console.log(onDesktop);
@@ -40,9 +39,7 @@
 
     <section class="right">
       {#if onDesktop}
-        {#each $navElements as element}
-          <svelte:component this={element.component} />
-        {/each}
+        <WidgetsNavBar />
         {#each baseItems as item}
           <Separator render={item.separator} orientation="vertical" />
           <a
