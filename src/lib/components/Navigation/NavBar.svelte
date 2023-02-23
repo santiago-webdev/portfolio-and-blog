@@ -4,7 +4,8 @@
   import { inPixels } from '$lib/utils/utils';
   import { navItems } from './store';
   import Separator from '$lib/interface/Separator.svelte';
-  import WidgetsNavBar from './WidgetsNavBar.svelte';
+  // import WidgetsNavBar from './WidgetsNavBar.svelte';
+  import WidgetSearchBar from '$lib/interface/WidgetSearchBar.svelte';
 
   let showMobileMenu = false;
   let onDesktop = true;
@@ -39,7 +40,8 @@
 
     <section class="right">
       {#if onDesktop}
-        <WidgetsNavBar />
+        <WidgetSearchBar />
+        <!-- <WidgetsNavBar /> -->
         {#each baseItems as item}
           <Separator render={item.separator} orientation="vertical" />
           <a
