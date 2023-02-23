@@ -1,2 +1,2 @@
 export const prerender = true; // Prerender all pages
-export const trailingSlash = 'ignore';
+// export const trailingSlash = 'ignore';
