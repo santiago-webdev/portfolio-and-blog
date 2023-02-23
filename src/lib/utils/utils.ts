@@ -60,7 +60,7 @@ export const readableDate = (dateString: string): string => {
   return formatter.format(date);
 };
 
-let baseFontSize: number = 0;
+let baseFontSize = 0;
 
 function getBaseFontSize(): number {
   if (
