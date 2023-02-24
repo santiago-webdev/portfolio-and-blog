@@ -11,17 +11,13 @@
   </p>
   <div class="content-navigation">
     <a
-      data-sveltekit-reload
-      data-sveltekit-noscroll
       href="{base}/#projects"
-      class="act">Projects <iconify-icon icon="lucide:chevron-right" /></a
+      style="color: var(--clr-text)"
+      class="attn-border attn">Projects <iconify-icon icon="lucide:chevron-right" /></a
     >
     <a
-      data-sveltekit-reload
-      data-sveltekit-noscroll
       href="/"
-      style="color: var(--clr-text)"
-      class="attn-border attn">Contact</a
+      class="act">Contact</a
     >
   </div>
 </section>
