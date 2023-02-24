@@ -13,8 +13,9 @@
   let outerWidth = 0;
 
   const baseItems = [
-    { separator: true, label: 'Blog', href: `${base}/blog` },
-    { label: 'Resume', href: `/` },
+    // { separator: true, label: 'Blog', href: `${base}/blog` },
+    { label: 'Blog', href: `${base}/blog` },
+    { label: 'Resume', href: `${base}/about` },
     { label: 'Projects', href: `${base}/projects` },
     { separator: true, label: 'About', href: `${base}/about` },
     { label: 'Contact', href: `${base}/contact`, decoration: 'border' }
@@ -39,28 +40,28 @@
     </section>
 
     <section class="right">
-      {#if onDesktop}
-        <WidgetSearchBar />
+      <!-- {#if onDesktop} -->
+        <!-- <WidgetSearchBar /> -->
         <!-- <WidgetsNavBar /> -->
-        {#each baseItems as item}
+        {#each $navItems as item}
           <Separator render={item.separator} orientation="vertical" />
           <a
-            aria-current={$page.url.pathname.startsWith(item.href)
+            aria-current={$page.url.pathname.startsWith(item.href ? item.href : '')
               ? 'page'
               : undefined}
             class={item.decoration ? 'attn-border attn' : 'trn-border'}
             href={item.href}>{item.label}</a
           >
         {/each}
-      {:else}
-        <button on:click={() => (showMobileMenu = !showMobileMenu)}>
-          {#if showMobileMenu}
-            <iconify-icon icon="lucide:x" width="26" height="26" />
-          {:else}
-            <iconify-icon icon="lucide:grip" width="26" height="26" />
-          {/if}
-        </button>
-      {/if}
+      <!-- {:else} -->
+      <!--   <button on:click={() => (showMobileMenu = !showMobileMenu)}> -->
+      <!--     {#if showMobileMenu} -->
+      <!--       <iconify-icon icon="lucide:x" width="26" height="26" /> -->
+      <!--     {:else} -->
+      <!--       <iconify-icon icon="lucide:grip" width="26" height="26" /> -->
+      <!--     {/if} -->
+      <!--   </button> -->
+      <!-- {/if} -->
     </section>
   </div>
 </nav>
