@@ -14,7 +14,6 @@
 
   $: innerHeight = 0;
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
-  $: console.log(onDesktop);
   $: showMobileMenu = $navigating || onDesktop ? true : false;
 </script>
 
@@ -106,8 +105,8 @@
     padding-left: 0;
   }
 
-  button {
-    display: flex;
-    place-items: center;
-  }
+  /* button { */
+  /*   display: flex; */
+  /*   place-items: center; */
+  /* } */
 </style>
