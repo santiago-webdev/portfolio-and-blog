@@ -41,18 +41,20 @@
 
     <section class="right">
       <!-- {#if onDesktop} -->
-        <!-- <WidgetSearchBar /> -->
-        <!-- <WidgetsNavBar /> -->
-        {#each $navItems as item}
-          <Separator render={item.separator} orientation="vertical" />
-          <a
-            aria-current={$page.url.pathname.startsWith(item.href ? item.href : '')
-              ? 'page'
-              : undefined}
-            class={item.decoration ? 'attn-border attn' : 'trn-border'}
-            href={item.href}>{item.label}</a
-          >
-        {/each}
+      <!-- <WidgetSearchBar /> -->
+      <!-- <WidgetsNavBar /> -->
+      {#each $navItems as item}
+        <Separator render={item.separator} orientation="vertical" />
+        <a
+          aria-current={$page.url.pathname.startsWith(
+            item.href ? item.href : ''
+          )
+            ? 'page'
+            : undefined}
+          class={item.decoration ? 'attn-border attn' : 'trn-border'}
+          href={item.href}>{item.label}</a
+        >
+      {/each}
       <!-- {:else} -->
       <!--   <button on:click={() => (showMobileMenu = !showMobileMenu)}> -->
       <!--     {#if showMobileMenu} -->
