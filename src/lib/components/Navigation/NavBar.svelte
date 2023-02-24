@@ -5,23 +5,13 @@
   import { navItems } from './store';
   import Separator from '$lib/interface/Separator.svelte';
   // import WidgetsNavBar from './WidgetsNavBar.svelte';
-  import WidgetSearchBar from '$lib/interface/WidgetSearchBar.svelte';
+  // import WidgetSearchBar from '$lib/interface/WidgetSearchBar.svelte';
 
   let showMobileMenu = false;
   let onDesktop = true;
   let scrollY = 0;
   let outerWidth = 0;
 
-  const baseItems = [
-    // { separator: true, label: 'Blog', href: `${base}/blog` },
-    { label: 'Blog', href: `${base}/blog` },
-    { label: 'Resume', href: `${base}/about` },
-    { label: 'Projects', href: `${base}/projects` },
-    { separator: true, label: 'About', href: `${base}/about` },
-    { label: 'Contact', href: `${base}/contact`, decoration: 'border' }
-  ];
-
-  $navItems.push(...baseItems);
   $: innerHeight = 0;
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
   $: console.log(onDesktop);
