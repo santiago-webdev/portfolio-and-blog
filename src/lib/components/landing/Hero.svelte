@@ -13,12 +13,10 @@
     <a
       href="{base}/#projects"
       style="color: var(--clr-text)"
-      class="attn-border attn">Projects <iconify-icon icon="lucide:chevron-right" /></a
+      class="attn-border attn"
+      >Projects <iconify-icon icon="lucide:chevron-right" /></a
     >
-    <a
-      href="/"
-      class="act">Contact</a
-    >
+    <a href="/" class="act">Contact</a>
   </div>
 </section>
 
