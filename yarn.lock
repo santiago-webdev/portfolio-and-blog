@@ -341,6 +341,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@sveltejs/adapter-static@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "@sveltejs/adapter-static@npm:2.0.1"
+  peerDependencies:
+    "@sveltejs/kit": ^1.5.0
+  checksum: 910c28a7d2a5dfedebaf26a6c297e589d75c29012d6c021ae21f1e1da7d66445eaa54361ca680ef198a0a84da3445d059392bc14f0619e95d342c8f8b6078d95
+  languageName: node
+  linkType: hard
+
 "@sveltejs/adapter-vercel@npm:^2.0.4":
   version: 2.0.4
   resolution: "@sveltejs/adapter-vercel@npm:2.0.4"
@@ -618,6 +627,7 @@ __metadata:
   dependencies:
     "@fontsource/manrope": ^4.5.13
     "@playwright/test": ^1.28.1
+    "@sveltejs/adapter-static": ^2.0.1
     "@sveltejs/adapter-vercel": ^2.0.4
     "@sveltejs/kit": ^1.5.0
     "@typescript-eslint/eslint-plugin": ^5.45.0
