@@ -7,9 +7,9 @@
 <main class="banner">
   <Hero />
 </main>
-<section id="projects">
-  <PresentationBlog />
-</section>
+<!-- <section id="projects"> -->
+<!--   <PresentationBlog /> -->
+<!-- </section> -->
 
 <svelte:head>
   <title>{TITLE}</title>

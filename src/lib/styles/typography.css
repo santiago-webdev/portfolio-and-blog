@@ -10,10 +10,6 @@ h1 {
   line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem));
 }
 
-/* h1 span { */
-/*   font-weight: 400; */
-/* } */
-
 h2 {
   color: var(--clr-subtitle);
   font-weight: 600;
@@ -53,10 +49,3 @@ strong {
   font-weight: 800;
   color: var(--clr-text);
 }
-
-/* a, */
-/* button { */
-/*   font-weight: 400; */
-/*   font-size: clamp(0.6rem, 8vw, 1.15rem); */
-/*   color: var(--clr-title); */
-/* } */
