@@ -1,5 +1,5 @@
 <script>
-  import IconSearch from "$lib/Icons/IconSearch.svelte";
+  import IconSearch from '$lib/Icons/IconSearch.svelte';
 </script>
 
 <button aria-label="Open modal box to search for blogs" class="attn-focus attn">
