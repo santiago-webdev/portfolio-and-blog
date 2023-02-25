@@ -20,7 +20,7 @@
   import '@fontsource/manrope/800.css';
 
   import 'iconify-icon';
-    import Modal from '$lib/components/Search/Modal.svelte';
+  import Modal from '$lib/components/Search/Modal.svelte';
 </script>
 
 <div class="layout">

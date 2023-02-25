@@ -1,18 +1,14 @@
 <script lang="ts">
   import { base } from '$app/paths';
-  // import { page } from '$app/stores';
   import SearchBar from '$lib/components/Search/SearchBar.svelte';
   import { FilteredPosts, FilterValue } from './store';
   import { readableDate } from '$lib/utils/utils';
-  // import { onMount } from 'svelte';
+  import IconSearch from '$lib/Icons/IconSearch.svelte';
 
   let input: HTMLInputElement;
   let modal: HTMLDialogElement;
 
-  const search_icon =
-    '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" <circle cx="11" cy="11" r="8" /> <path d="m21 21l-4.35-4.35" /> </g> </svg>';
-
-  const handleModal = () => modal.open ? modal.close() : modal.showModal()
+  const handleModal = () => (modal.open ? modal.close() : modal.showModal());
 
   function onCtrlK(event: KeyboardEvent) {
     let { key, ctrlKey, repeat } = event;
@@ -41,23 +37,7 @@
           <a href="{base}/blog{post.href}">
             <article>
               <h3>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="32"
-                  height="32"
-                  viewBox="0 0 24 24"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
-                    <circle cx="11" cy="11" r="8" />
-                    <path d="m21 21l-4.35-4.35" />
-                  </g>
-                </svg>
+                <IconSearch />
                 {post.title}
               </h3>
               {#if post.description}
