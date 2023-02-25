@@ -140,7 +140,7 @@
 .act {
   background-color: #1e1e23;
   border-radius: 1.1rem;
-  border: 1px solid #34353F;
+  border: 1px solid #34353f;
   color: var(--clr-text);
   transition: background-color 150ms, color 150ms, border 150ms;
 }
