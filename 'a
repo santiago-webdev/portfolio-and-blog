@@ -104,9 +104,8 @@
 
   --clr-bg-active: var(--base-dark-background-300);
   --clr-border-card-active: rgba(66 66 74 / 1);
-
-  --clr-bttn-plain-darker: hsl(240, 8%, 14%);
-  --clr-bttn-border-plain-darker: rgb(69 69 75 / 0.8);
+  --clr-bttn-darker: hsl(240, 8%, 14%);
+  --clr-bttn-border-darker: hsl(235, 10%, 23%);
 }
 
 [data-theme='dark'] ::selection {
@@ -228,9 +227,9 @@
 }
 
 .act {
-  background-color: var(--clr-bttn-plain-darker);
+  background-color: var(--clr-bttn-darker);
   border-radius: 1.1rem;
-  border: 1px solid var(--clr-bttn-border-plain-darker);
+  border: 1px solid var(--clr-bttn-border-darker);
   color: var(--clr-text);
   transition: all 200ms;
 }

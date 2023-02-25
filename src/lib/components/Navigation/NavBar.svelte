@@ -73,7 +73,7 @@
   }
 
   a {
-    padding: var(--bttn-szb-100) var(--bttn-szh-100);
+    padding: 0.4em 0.8em;
     display: flex;
     place-items: center;
   }

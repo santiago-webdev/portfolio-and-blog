@@ -31,7 +31,7 @@
   <Footer />
 
   <ScrollProgress />
-  <Noise />
+  <!-- <Noise /> -->
   <Modal />
 </div>
 

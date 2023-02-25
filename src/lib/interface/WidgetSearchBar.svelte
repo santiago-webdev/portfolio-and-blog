@@ -11,7 +11,7 @@
 <style>
   button {
     /* width: 100%; */
-    padding: var(--bttn-szb-100) var(--bttn-szh-100);
+    padding: 0.4em 0.8em;
     gap: 0.4rem;
   }
 

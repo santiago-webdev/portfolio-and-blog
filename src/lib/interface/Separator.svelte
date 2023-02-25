@@ -14,7 +14,7 @@
 <style>
   .ui-divider {
     border-left: 0.13rem solid var(--clr-ui-muted);
-    height: calc(var(--bttn-szh-100) * 1.5);
+    height: 1.4em;
     background-color: white;
   }
 </style>
