@@ -17,7 +17,7 @@
   --base-dark-background-200: #2b2a33;
   --base-dark-background-300: #37373f;
 
-  --base-blue-background-200: #2b2b33;
+  --base-blue-background-200: hsl(240, 8%, 19%); /* #2d2d34 */
 
   --accent-violet: #49364c;
   --accent-purple: #915268;
