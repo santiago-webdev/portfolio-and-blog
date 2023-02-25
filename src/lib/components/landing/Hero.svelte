@@ -13,7 +13,7 @@
     <a
       href="{base}/#projects"
       style="color: var(--clr-text)"
-      class="attn-border attn"
+      class="attnactive attn"
       >Projects <iconify-icon icon="lucide:chevron-right" /></a
     >
     <a href="/" class="act">Contact</a>

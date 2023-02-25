@@ -16,7 +16,7 @@
   --clr-border-card: rgba(49, 49, 57, 1);
 
   --clr-bg-active: var(--base-dark-background-300);
-  --clr-border-card-active: rgba(61 61 69 / 1);
+  --clr-border-card-active: rgba(66 66 74 / 1);
 }
 
 [data-theme='dark'] ::selection {
@@ -95,8 +95,8 @@
   background-color: #1e1e23;
   background-color: var(--clr-bg-active);
   border-bottom: 0.12rem solid var(--clr-bg-active);
-  border-left: 0.12rem solid var(--clr-border-card-active);
   border-right: 0.12rem solid var(--clr-bg-active);
+  border-left: 0.12rem solid var(--clr-border-card-active);
   border-top: 0.12rem solid var(--clr-border-card-active);
 }
 
@@ -140,9 +140,9 @@
 .act {
   background-color: #1e1e23;
   border-radius: 1.1rem;
-  border: 0.12rem solid #1e1e23;
+  border: 1px solid #34353F;
   color: var(--clr-text);
-  transition: background-color 50ms, color 100ms, border 80ms;
+  transition: background-color 150ms, color 150ms, border 150ms;
 }
 
 .act:is(:focus-within, :focus, :hover),
