@@ -1,17 +1,25 @@
 <script lang="ts">
   import { dev } from '$app/environment';
-  import { onMount } from 'svelte';
-  var ghStars = 0; // Use 0 in here so that it doesn't show "undefined" while it loads
 
-  onMount(async () => {
-    if (!dev) {
+  const getGithubStars = async () => {
+    if (dev) return 0;
+    try {
       const response = await fetch(
         'https://api.github.com/repos/santigo-zero/santigo-zero.github.io'
       );
-      const character = await response.json();
-      ghStars = character.stargazers_count;
+      if (!response.ok) {
+        throw new Error('Network response was not ok.');
+      }
+      const data = await response.json();
+      return data.stargazers_count;
+    } catch (error) {
+      console.error(error);
+      return 0;
     }
-  });
+  };
+
+  let ghStars = 0;
+  getGithubStars().then(stars => (ghStars = stars));
 </script>
 
 <footer class="banner-reverse artifact-ui">
