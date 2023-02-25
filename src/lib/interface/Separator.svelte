@@ -10,3 +10,11 @@
   <div aria-orientation={orientation} role="separator" class="ui-divider" />
   <slot />
 {/if}
+
+<style>
+  .ui-divider {
+    border-left: 0.13rem solid var(--clr-ui-muted);
+    height: calc(var(--bttn-szh-100) * 1.5);
+    background-color: white;
+  }
+</style>

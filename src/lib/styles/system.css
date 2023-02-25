@@ -153,16 +153,10 @@
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
 
-.ui-divider {
-  border-left: 0.13rem solid var(--clr-ui-muted);
-  height: calc(var(--bttn-szh-100) * 2);
-  background-color: white;
-}
-
 .artifact-ui {
   color: var(--clr-text);
   font-family: var(--ff--ui);
-  font-size: clamp(0.8rem, 8vw, 1.18rem);
+  font-size: clamp(0.8rem, 8vw, 1.03rem);
   font-weight: 400;
 }
 

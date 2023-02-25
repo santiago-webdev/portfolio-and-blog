@@ -4,7 +4,7 @@
 
 <button aria-label="Open modal box to search for blogs" class="attn-focus attn">
   <IconSearch />
-  <div id="search">_</div>
+  <div aria-label="Search for a blog" id="searchModal">_</div>
   <kbd>Ctrl K</kbd>
 </button>
 
@@ -27,7 +27,7 @@
     padding-inline: 0.3rem;
   }
 
-  #search {
+  #searchModal {
     /* font-weight: 900; */
     text-decoration: underline solid var(--clr-title) 3px;
     color: transparent;
