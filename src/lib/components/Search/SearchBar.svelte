@@ -44,6 +44,7 @@
   <button aria-label="Go to selected blog" type="submit"
     ><iconify-icon icon="lucide:search" /></button
   >
+
   <input
     {placeholder}
     aria-keyshortcuts="Control+K"

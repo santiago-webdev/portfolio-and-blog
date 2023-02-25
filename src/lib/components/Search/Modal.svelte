@@ -10,28 +10,9 @@
   let modal: HTMLDialogElement;
 
   const search_icon =
-    '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 15 15"><path fill="currentColor" fill-rule="evenodd" d="M10 6.5a3.5 3.5 0 1 1-7 0a3.5 3.5 0 0 1 7 0Zm-.691 3.516a4.5 4.5 0 1 1 .707-.707l2.838 2.837a.5.5 0 0 1-.708.708L9.31 10.016Z" clip-rule="evenodd"/></svg>';
+    '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" <circle cx="11" cy="11" r="8" /> <path d="m21 21l-4.35-4.35" /> </g> </svg>';
 
-  // function checkEnv(): boolean {
-  //   if ($page.url.pathname.endsWith('blog')) {
-  //     return true;
-  //   }
-  //
-  //   return false;
-  // }
-
-  const handleModal = async () => {
-    if (modal.open) {
-      modal.close();
-    } else {
-      // const inBlogRoute = checkEnv();
-      // if (inBlogRoute) {
-      //   input.focus();
-      // } else {
-      modal.showModal();
-      // }
-    }
-  };
+  const handleModal = () => modal.open ? modal.close() : modal.showModal()
 
   function onCtrlK(event: KeyboardEvent) {
     let { key, ctrlKey, repeat } = event;
@@ -46,10 +27,6 @@
         }
     }
   }
-
-  // onMount(() => {
-  //   modal.showModal();
-  // });
 </script>
 
 <svelte:window on:keydown={onCtrlK} />
@@ -64,7 +41,23 @@
           <a href="{base}/blog{post.href}">
             <article>
               <h3>
-                {@html search_icon}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                >
+                  <g
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                  >
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21l-4.35-4.35" />
+                  </g>
+                </svg>
                 {post.title}
               </h3>
               {#if post.description}
@@ -90,17 +83,11 @@
     margin: 0;
     margin-inline: auto;
     top: 5rem;
-    position: absolute;
     border-radius: 1.1rem;
     background-color: var(--clr-bg-active);
   }
 
   :modal::backdrop {
-    /* background: linear-gradient( */
-    /*   130deg, */
-    /*   rgba(43 42 51 / 0.03), */
-    /*   rgba(0 0 0 / 0.04) */
-    /* ); */
     background-color: rgba(31 31 37 / 0.6);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);

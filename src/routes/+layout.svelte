@@ -20,16 +20,19 @@
   import '@fontsource/manrope/800.css';
 
   import 'iconify-icon';
+    import Modal from '$lib/components/Search/Modal.svelte';
 </script>
 
 <div class="layout">
-  <ScrollProgress />
   <NavBar />
   <Transition url={$page.url}>
     <slot />
   </Transition>
   <Footer />
+
+  <ScrollProgress />
   <Noise />
+  <Modal />
 </div>
 
 <style>
