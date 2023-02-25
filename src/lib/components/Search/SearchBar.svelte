@@ -3,6 +3,7 @@
   import { searchHandler } from './utils';
   import { base } from '$app/paths';
   import { goto, preloadData } from '$app/navigation';
+  import IconSearch from '$lib/Icons/IconSearch.svelte';
 
   export let input: HTMLElement;
   export let modal = false;
@@ -41,9 +42,9 @@
   class:form-modal={modal}
   on:submit|preventDefault={handleSubmit}
 >
-  <button aria-label="Go to selected blog" type="submit"
-    ><iconify-icon icon="lucide:search" /></button
-  >
+  <button aria-label="Go to selected blog" type="submit">
+    <IconSearch />
+  </button>
 
   <input
     {placeholder}
