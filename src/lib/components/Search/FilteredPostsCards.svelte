@@ -3,24 +3,23 @@
   import { readableDate } from '$lib/utils/utils';
   import { FilteredPosts } from './store';
   import { fly } from 'svelte/transition';
-  import { onMount } from 'svelte';
 
   let fly_in = { y: 0, duration: 0 };
   let fly_out = { y: 0, duration: 0 };
   let postList: HTMLUListElement;
 
-  onMount(() => {
+  function deferAddSettings(_params: HTMLLIElement) {
     setTimeout(() => {
       fly_in = { y: 50, duration: 200 };
       fly_out = { y: -50, duration: 200 };
     }, 100);
-  });
+  }
 </script>
 
 <section role="complementary">
   <ul bind:this={postList} class="wider">
     {#each $FilteredPosts as post}
-      <li in:fly={fly_in} out:fly={fly_out}>
+      <li use:deferAddSettings in:fly={fly_in} out:fly={fly_out}>
         <a href="{base}/blog{post.href}">
           <article class="base attn">
             <h2>{post.title}</h2>
