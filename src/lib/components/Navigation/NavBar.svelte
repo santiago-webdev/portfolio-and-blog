@@ -4,7 +4,6 @@
   import { inPixels } from '$lib/utils/utils';
   import { navItems } from './store';
   import Separator from '$lib/interface/Separator.svelte';
-  // import WidgetsNavBar from './WidgetsNavBar.svelte';
   import WidgetSearchBar from '$lib/interface/WidgetSearchBar.svelte';
 
   let showMobileMenu = false;
@@ -31,7 +30,6 @@
     <section class="right">
       <!-- {#if onDesktop} -->
       <WidgetSearchBar />
-      <!-- <WidgetsNavBar /> -->
       {#each $navItems as item}
         <Separator render={item.separator} orientation="vertical" />
         <a
@@ -40,7 +38,7 @@
           )
             ? 'page'
             : undefined}
-          class={item.decoration ? 'attn-border attn' : 'trn-border'}
+          class={item.decoration ? 'act' : 'trn-border'}
           href={item.href}>{item.label}</a
         >
       {/each}
@@ -104,9 +102,4 @@
   section.left a:nth-child(1) {
     padding-left: 0;
   }
-
-  /* button { */
-  /*   display: flex; */
-  /*   place-items: center; */
-  /* } */
 </style>

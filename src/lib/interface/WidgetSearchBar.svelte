@@ -10,17 +10,14 @@
 
 <style>
   button {
-    width: 100%;
+    /* width: 100%; */
     padding: var(--bttn-szb-100) var(--bttn-szh-100);
     gap: 0.4rem;
   }
 
   kbd {
-    border-left: 1px solid var(--clr-text-muted);
-    border-top: 1px solid var(--clr-text-muted);
-    border-right: 3px solid var(--clr-text-muted);
-    border-bottom: 3px solid var(--clr-text-muted);
-    border-radius: 0.6rem;
+    outline: 1px solid var(--clr-text-muted);
+    border-radius: 0.5rem;
     pointer-events: none;
 
     /* margin-right: 1rem; */

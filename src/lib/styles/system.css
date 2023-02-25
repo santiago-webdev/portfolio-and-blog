@@ -156,7 +156,7 @@
 .artifact-ui {
   color: var(--clr-text);
   font-family: var(--ff--ui);
-  font-size: clamp(0.8rem, 8vw, 1.03rem);
+  font-size: clamp(0.8rem, 8vw, 1.15rem);
   font-weight: 400;
 }
 
