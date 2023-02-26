@@ -11,6 +11,10 @@
   let scrollY = 0;
   let outerWidth = 0;
 
+  function toggleMobile() {
+    showMobileMenu = !showMobileMenu
+  }
+
   $: innerHeight = 0;
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
   $: showMobileMenu = $navigating || onDesktop ? true : false;
@@ -32,7 +36,7 @@
         <button
           aria-label="Toggle navigation list"
           aria-expanded={showMobileMenu ? 'true' : 'false'}
-          on:click={() => (showMobileMenu = !showMobileMenu)}
+          on:click={toggleMobile}
         >
           {#if showMobileMenu}
             <iconify-icon icon="lucide:x" width="26" height="26" />
