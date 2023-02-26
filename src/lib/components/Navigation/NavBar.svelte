@@ -28,7 +28,19 @@
     </section>
 
     <section class="right">
-      {#if onDesktop}
+      {#if !onDesktop}
+        <button
+          aria-label="Toggle navigation list"
+          aria-expanded={showMobileMenu ? 'true' : 'false'}
+          on:click={() => (showMobileMenu = !showMobileMenu)}
+        >
+          {#if showMobileMenu}
+            <iconify-icon icon="lucide:x" width="26" height="26" />
+          {:else}
+            <iconify-icon icon="lucide:grip" width="26" height="26" />
+          {/if}
+        </button>
+      {:else}
         <WidgetSearchBar />
         {#each $navItems as item}
           <Separator render={item.separator} orientation="vertical" />
@@ -42,18 +54,6 @@
             href={item.href}>{item.label}</a
           >
         {/each}
-      {:else}
-        <button
-          aria-label="Toggle navigation list"
-          aria-expanded={showMobileMenu ? 'true' : 'false'}
-          on:click={() => (showMobileMenu = !showMobileMenu)}
-        >
-          {#if showMobileMenu}
-            <iconify-icon icon="lucide:x" width="26" height="26" />
-          {:else}
-            <iconify-icon icon="lucide:grip" width="26" height="26" />
-          {/if}
-        </button>
       {/if}
     </section>
   </div>
