@@ -42,9 +42,7 @@
       {/if}
     </button>
     {#if onDesktop || showMobileMenu}
-      <div
-        style:grid-column={!onDesktop ? ' 1 / span 2' : ''}
-        class="navItems">
+      <div style:grid-column={!onDesktop ? ' 1 / span 2' : ''} class="navItems">
         <WidgetSearchBar />
         {#each $navItems as item}
           <Separator
