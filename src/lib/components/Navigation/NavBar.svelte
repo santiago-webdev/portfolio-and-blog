@@ -142,6 +142,7 @@
   @media screen and (max-width: 48rem) {
     .navItems {
       flex-direction: column;
+      padding: 1rem;
     }
   }
 </style>
