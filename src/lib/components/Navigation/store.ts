@@ -10,8 +10,7 @@ type NavItems = Array<{
 }>;
 
 export const navItems = writable<NavItems>([
-  // { label: 'Home', href: `${base}/` }
-  // { separator: true, label: 'Blog', href: `${base}/blog` },
+  { separator: true, label: 'Home', href: `${base}/` },
   { label: 'Blog', href: `${base}/blog` },
   { label: 'Resume', href: `${base}/about` },
   { label: 'Projects', href: `${base}/projects` },

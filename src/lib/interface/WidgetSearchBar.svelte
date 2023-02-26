@@ -12,6 +12,7 @@
   button {
     /* width: 100%; */
     padding: 0.4em 0.8em;
+    margin-inline: 1rem;
     gap: 0.4rem;
   }
 
