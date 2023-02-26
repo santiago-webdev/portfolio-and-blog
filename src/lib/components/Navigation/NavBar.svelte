@@ -90,6 +90,10 @@
     box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
+
+    background: var(--clr-background-alt-blur);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   a:first-child {
