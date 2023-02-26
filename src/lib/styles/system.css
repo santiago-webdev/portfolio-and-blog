@@ -146,6 +146,12 @@
   -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
 }
 
+@media screen and (min-width: 48rem) {
+  .banner {
+    padding: 6em 0;
+  }
+}
+
 .banner-reverse {
   width: 100%;
   background-color: var(--clr-background-alt);
