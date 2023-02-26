@@ -22,7 +22,12 @@
 
 <svelte:window bind:outerWidth bind:innerHeight bind:scrollY />
 
-<nav aria-labelledby="main-navigation" class="artifact-ui" class:scrollY>
+<nav
+  aria-labelledby="main-navigation"
+  class="artifact-ui"
+  class:scrollY
+  class:banner={showMobileMenu && scrollY > 5}
+>
   <div id="main-navigation" class="wider">
     <a
       aria-current={$page.url.pathname === `/${base}` ? 'page' : undefined}
@@ -79,6 +84,10 @@
     box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  a:first-child {
+    padding-left: 0;
   }
 
   a {
