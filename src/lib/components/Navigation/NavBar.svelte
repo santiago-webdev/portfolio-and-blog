@@ -26,7 +26,7 @@
   aria-labelledby="main-navigation"
   class="artifact-ui"
   class:scrollY
-  class:banner={showMobileMenu && scrollY > 5}
+  class:banner={!onDesktop && showMobileMenu && scrollY > 5}
 >
   <div id="main-navigation" class="wider">
     <a
