@@ -28,7 +28,7 @@
     </section>
 
     <section class="right">
-      <!-- {#if onDesktop} -->
+      {#if onDesktop}
       <WidgetSearchBar />
       {#each $navItems as item}
         <Separator render={item.separator} orientation="vertical" />
@@ -42,15 +42,15 @@
           href={item.href}>{item.label}</a
         >
       {/each}
-      <!-- {:else} -->
-      <!--   <button on:click={() => (showMobileMenu = !showMobileMenu)}> -->
-      <!--     {#if showMobileMenu} -->
-      <!--       <iconify-icon icon="lucide:x" width="26" height="26" /> -->
-      <!--     {:else} -->
-      <!--       <iconify-icon icon="lucide:grip" width="26" height="26" /> -->
-      <!--     {/if} -->
-      <!--   </button> -->
-      <!-- {/if} -->
+      {:else}
+        <button on:click={() => (showMobileMenu = !showMobileMenu)}>
+          {#if showMobileMenu}
+            <iconify-icon icon="lucide:x" width="26" height="26" />
+          {:else}
+            <iconify-icon icon="lucide:grip" width="26" height="26" />
+          {/if}
+        </button>
+      {/if}
     </section>
   </div>
 </nav>

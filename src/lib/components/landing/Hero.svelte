@@ -24,13 +24,14 @@
   section {
     display: grid;
     gap: 1rem;
+    padding: 1rem 0;
     margin-inline: auto;
   }
 
   .content-navigation {
-    display: flex;
-    justify-content: space-evenly;
-    gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+    gap: 1.5rem 3rem;
   }
 
   a {
@@ -39,6 +40,6 @@
     place-content: center;
     padding: 0.8rem;
     font-size: clamp(0.8rem, 8vw, 1.42rem);
-    width: 100%;
+    /* width: 100%; */
   }
 </style>
