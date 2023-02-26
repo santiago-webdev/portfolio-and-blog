@@ -90,7 +90,7 @@
   --clr-text: hsl(222, 20%, 90%);
 
   --clr-text-muted: hsl(228, 3%, 59%);
-  --border-muted: 0.12rem solid var(--clr-text-muted);
+  --border-muted: 1px solid var(--clr-text-muted);
   --clr-ui-muted: var(--clr-pale-800);
 
   --clr-hover: var(--clr-slate-400);
@@ -163,16 +163,16 @@
 }
 
 .trn-border {
-  border: 0.12rem solid transparent;
+  border: 1px solid transparent;
 }
 
 .base {
   background-color: var(--clr-background-alt);
   border-radius: 1.1rem;
-  border-top: 0.12rem solid var(--clr-border-card);
-  border-left: 0.12rem solid var(--clr-border-card);
-  border-right: 0.12rem solid transparent;
-  border-bottom: 0.12rem solid transparent;
+  border-top: 1px solid var(--clr-border-card);
+  border-left: 1px solid var(--clr-border-card);
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
 }
 
 .attn {
@@ -193,11 +193,11 @@
 .attn:is(:focus-within, :focus, :hover),
 .attn-focus {
   background-color: var(--clr-bg-active);
-  border-bottom: 0.12rem solid var(--clr-bg-active);
-  border-left: 0.12rem solid var(--clr-border-card-active);
+  border-bottom: 1px solid var(--clr-bg-active);
+  border-left: 1px solid var(--clr-border-card-active);
   border-radius: 1.1rem;
-  border-right: 0.12rem solid var(--clr-bg-active);
-  border-top: 0.12rem solid var(--clr-border-card-active);
+  border-right: 1px solid var(--clr-bg-active);
+  border-top: 1px solid var(--clr-border-card-active);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -207,7 +207,7 @@
 
 .attn:is(:active) {
   background-color: var(--clr-background);
-  border: 0.12rem solid var(--clr-background);
+  border: 1px solid var(--clr-background);
   color: var(--clr-clicked);
   transition-delay: 200ms;
 }
@@ -218,7 +218,7 @@
     rgba(190 199 234 / 0.09),
     rgba(255 255 255 / 0.03)
   );
-  border: 0.12rem solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -239,7 +239,7 @@
 .act-focus {
   border-radius: 1.1rem;
   background-color: #18181c;
-  border: 0.12rem solid #18181c;
+  border: 1px solid #18181c;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
 }
 

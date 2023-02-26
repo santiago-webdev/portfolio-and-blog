@@ -12,7 +12,7 @@
   let outerWidth = 0;
 
   function toggleMobile() {
-    showMobileMenu = !showMobileMenu
+    showMobileMenu = !showMobileMenu;
   }
 
   $: innerHeight = 0;
@@ -24,30 +24,33 @@
 
 <nav aria-labelledby="main-navigation" class="artifact-ui" class:scrollY>
   <div id="main-navigation" class="wider">
-    <section class="left">
-      <a
-        aria-current={$page.url.pathname === `/${base}` ? 'page' : undefined}
-        href="{base}/">Santiago Gonzalez</a
-      >
-    </section>
+    <a
+      aria-current={$page.url.pathname === `/${base}` ? 'page' : undefined}
+      href="{base}/">Santiago Gonzalez</a
+    >
 
-    <section class="right">
-      {#if !onDesktop}
-        <button
-          aria-label="Toggle navigation list"
-          aria-expanded={showMobileMenu ? 'true' : 'false'}
-          on:click={toggleMobile}
-        >
-          {#if showMobileMenu}
-            <iconify-icon icon="lucide:x" width="26" height="26" />
-          {:else}
-            <iconify-icon icon="lucide:grip" width="26" height="26" />
-          {/if}
-        </button>
+    <button
+      style:display={onDesktop ? 'none' : ''}
+      aria-label="Toggle navigation list"
+      aria-expanded={showMobileMenu ? 'true' : 'false'}
+      on:click={toggleMobile}
+    >
+      {#if showMobileMenu}
+        <iconify-icon icon="lucide:x" width="26" height="26" />
       {:else}
+        <iconify-icon icon="lucide:grip" width="26" height="26" />
+      {/if}
+    </button>
+    {#if onDesktop || showMobileMenu}
+      <div
+        style:grid-column={!onDesktop ? ' 1 / span 2' : ''}
+        class="navItems">
         <WidgetSearchBar />
         {#each $navItems as item}
-          <Separator render={item.separator} orientation="vertical" />
+          <Separator
+            render={item.separator}
+            orientation={onDesktop ? 'vertical' : 'horizontal'}
+          />
           <a
             aria-current={$page.url.pathname.startsWith(
               item.href ? item.href : ''
@@ -58,8 +61,8 @@
             href={item.href}>{item.label}</a
           >
         {/each}
-      {/if}
-    </section>
+      </div>
+    {/if}
   </div>
 </nav>
 
@@ -94,25 +97,34 @@
     color: var(--clr-clicked);
   }
 
+  /* a, */
+  /* button { */
+  /*   width: 100%; */
+  /* } */
+
   #main-navigation {
-    display: flex;
+    display: grid;
     place-items: center;
     margin-inline: auto;
     justify-content: space-between;
-  }
-
-  section:is(.right, .left) {
-    display: flex;
-    place-items: center;
-    gap: 1rem;
-  }
-
-  section.left a:nth-child(1) {
-    padding-left: 0;
+    grid-template-columns: auto auto;
   }
 
   button {
     display: flex;
     place-items: center;
+  }
+
+  .navItems {
+    width: 100%;
+    display: flex;
+    justify-self: center;
+    place-items: center;
+  }
+
+  @media screen and (max-width: 48rem) {
+    .navItems {
+      flex-direction: column;
+    }
   }
 </style>

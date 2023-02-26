@@ -6,15 +6,24 @@
 </script>
 
 {#if render}
-  <!-- TODO(santigo-zero): Use an icon based on the orientation -->
-  <div aria-orientation={orientation} role="separator" class="ui-divider" />
-  <slot />
+  {#if orientation === 'horizontal'}
+    <hr />
+  {:else if orientation === 'vertical'}
+    <div aria-orientation={orientation} role="separator" class="ui-divider" />
+  {/if}
 {/if}
 
 <style>
+  hr {
+    width: 96%;
+    height: 1px;
+    background-color: var(--clr-ui-muted);
+    border: 0;
+  }
+
   .ui-divider {
-    border-left: 0.13rem solid var(--clr-ui-muted);
-    height: 1.4em;
+    height: 1.6em;
+    border-left: 1px solid var(--clr-ui-muted);
     background-color: white;
   }
 </style>
