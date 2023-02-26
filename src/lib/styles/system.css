@@ -184,10 +184,10 @@
 .attnactive {
   background-color: #1e1e23;
   background-color: var(--clr-bg-active);
-  border-bottom: 0.12rem solid var(--clr-bg-active);
-  border-right: 0.12rem solid var(--clr-bg-active);
-  border-left: 0.12rem solid var(--clr-border-card-active);
-  border-top: 0.12rem solid var(--clr-border-card-active);
+  border-bottom: 1px solid var(--clr-bg-active);
+  border-right: 1px solid var(--clr-bg-active);
+  border-left: 1px solid var(--clr-border-card-active);
+  border-top: 1px solid var(--clr-border-card-active);
 }
 
 .attn:is(:focus-within, :focus, :hover),
