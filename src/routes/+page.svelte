@@ -2,11 +2,13 @@
   import Hero from './Hero.svelte';
   import PresentationBlog from '$lib/components/PresentationBlog.svelte';
   import { DESCRIPTION, TITLE, URL } from '$lib/config';
+  import BlogShowcase from './BlogShowcase.svelte';
 </script>
 
 <main class="banner">
   <Hero />
 </main>
+<BlogShowcase />
 <section id="projects">
   <PresentationBlog />
 </section>
