@@ -9,13 +9,11 @@
   let input: HTMLInputElement;
 </script>
 
-<main>
-  <div class="banner">
-    <BlogHeader />
-    <SearchBar bind:input />
-  </div>
-  <FilteredPostsCards />
+<main class="banner wide">
+  <BlogHeader />
+  <SearchBar bind:input />
 </main>
+<FilteredPostsCards />
 
 <svelte:head>
   <title>{TITLE_BLOG}</title>

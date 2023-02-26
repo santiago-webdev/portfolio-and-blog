@@ -70,7 +70,7 @@
     overflow: hidden;
     margin-inline: auto;
     position: relative;
-    width: min(100%, var(--wide));
+    /* width: min(100%, var(--wide)); */
   }
 
   .form-modal {

@@ -123,11 +123,11 @@
 }
 
 .wide {
-  width: min(100% - 1rem, var(--wide));
+  width: min(100% - 1em, var(--wide));
 }
 
 .wider {
-  width: min(100% - 1rem, var(--wider));
+  width: min(100% - 1em, var(--wider));
 }
 
 .banner {
@@ -135,7 +135,7 @@
   background-color: var(--clr-background-alt);
   border-bottom-right-radius: 1.1rem;
   border-bottom-left-radius: 1.1rem;
-  padding: 1.5rem 0.5rem;
+  padding: 1em 0;
   gap: 2rem;
   margin-inline: auto;
   display: grid;
@@ -151,7 +151,7 @@
   background-color: var(--clr-background-alt);
   border-top-right-radius: 1.1rem;
   border-top-left-radius: 1.1rem;
-  padding: 1.5rem 0.5rem;
+  padding: 1rem 0;
   gap: 2rem;
   margin-inline: auto;
   display: grid;

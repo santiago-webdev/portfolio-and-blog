@@ -80,6 +80,12 @@
     z-index: 999;
   }
 
+  @media screen and (max-width: 48rem) {
+    nav {
+      padding: 0.1rem 0;
+    }
+  }
+
   .scrollY {
     box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);

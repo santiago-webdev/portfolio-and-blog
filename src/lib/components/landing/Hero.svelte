@@ -23,7 +23,6 @@
   section {
     display: grid;
     gap: 2rem;
-    padding: 1rem 0;
     margin-inline: auto;
   }
 
@@ -44,6 +43,5 @@
     place-content: center;
     padding: 0.8rem;
     font-size: clamp(0.8rem, 8vw, 1.42rem);
-    /* width: 100%; */
   }
 </style>
