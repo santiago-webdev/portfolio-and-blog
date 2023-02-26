@@ -43,7 +43,11 @@
           >
         {/each}
       {:else}
-        <button on:click={() => (showMobileMenu = !showMobileMenu)}>
+        <button
+          aria-label="Toggle navigation list"
+          aria-expanded={showMobileMenu ? 'true' : 'false'}
+          on:click={() => (showMobileMenu = !showMobileMenu)}
+        >
           {#if showMobileMenu}
             <iconify-icon icon="lucide:x" width="26" height="26" />
           {:else}
@@ -101,5 +105,10 @@
 
   section.left a:nth-child(1) {
     padding-left: 0;
+  }
+
+  button {
+    display: flex;
+    place-items: center;
   }
 </style>

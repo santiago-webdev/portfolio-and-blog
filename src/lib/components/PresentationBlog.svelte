@@ -37,18 +37,18 @@
     }
   }
 
-  onMount(async () => {
-    let loadBlog: IntersectionObserver = new IntersectionObserver(entries => {
-      entries.some(entry => {
-        if (entry.isIntersecting) {
-          blogButton.focus();
-          loadBlog.disconnect();
-        }
-      });
-    });
-
-    loadBlog.observe(blog);
-  });
+  // onMount(async () => {
+  //   let loadBlog: IntersectionObserver = new IntersectionObserver(entries => {
+  //     entries.some(entry => {
+  //       if (entry.isIntersecting) {
+  //         blogButton.focus();
+  //         loadBlog.disconnect();
+  //       }
+  //     });
+  //   });
+  //
+  //   loadBlog.observe(blog);
+  // });
 </script>
 
 <svelte:window bind:outerWidth={windowWidth} />
