@@ -27,7 +27,9 @@
     <small
       >Designed & Built with <iconify-icon icon="lucide:heart" /> by Santiago</small
     >
-    <a href="https://github.com/santigo-zero/santigo-zero.github.io"
+    <a
+      href="https://github.com/santigo-zero/santigo-zero.github.io"
+      aria-label="Link to git repository for this site at Github"
       >Repository at<iconify-icon icon="lucide:github" />-
       <iconify-icon icon="lucide:star" />
       <span>
@@ -43,11 +45,17 @@
     <ul>
       <!-- TODO(santigo-zero): Move all of this to #cta -->
       <li>
-        <a href="https://github.com/santigo-zero/">GitHub @santigo-zero</a>
+        <a
+          href="https://github.com/santigo-zero/"
+          aria-label="Link to my GitHub profile">GitHub @santigo-zero</a
+        >
       </li>
       <li class="separator">•</li>
       <li>
-        <a href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/">
+        <a
+          href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/"
+          aria-label="Link to my LinkedIn profile"
+        >
           LinkedIn</a
         >
       </li>
