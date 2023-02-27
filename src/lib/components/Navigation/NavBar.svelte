@@ -9,7 +9,19 @@
   var expMenu = false,
     onDesktop = true,
     scrollY = 0,
+    savedY = 0,
     outerWidth = 0;
+
+  const navToggle = (nav: HTMLElement) =>
+    window.addEventListener('scroll', (): void => {
+      const scrollDirection = scrollY > savedY ? 'down' : 'up';
+      savedY = scrollY;
+      if (scrollDirection === 'down') {
+        nav.style.transform = 'translateY(-200%)';
+      } else {
+        nav.style.transform = 'translateY(0)';
+      }
+    });
 
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
   $: expMenu = $navigating || onDesktop ? true : false;
@@ -22,6 +34,7 @@
   class="artifact-ui"
   class:scrollY
   class:banner={!onDesktop && expMenu && scrollY > 30}
+  use:navToggle
 >
   <div id="main-navigation" class="wider">
     <a
@@ -68,7 +81,8 @@
     position: sticky;
     background-color: var(--clr-background-alt);
     padding: 0.4rem 0;
-    transition: filter 0.3s ease-in;
+    /* transition: filter 0.3s ease-in; */
+    transition: all 0.3s;
     z-index: 999;
   }
 
