@@ -68,6 +68,7 @@
             aria-current={$page.url.pathname.startsWith(item.href)
               ? 'page'
               : undefined}
+            aria-label="Link to {item.label}"
             class={item.decoration ? 'act' : 'trn-border'}
             href={item.href}>{item.label}</a
           >
