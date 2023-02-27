@@ -6,48 +6,43 @@
   import Separator from '$lib/interface/Separator.svelte';
   import WidgetSearchBar from '$lib/interface/WidgetSearchBar.svelte';
 
-  let showMobileMenu = false;
-  let onDesktop = true;
-  let scrollY = 0;
-  let outerWidth = 0;
+  var expMenu = false,
+    onDesktop = true,
+    scrollY = 0,
+    outerWidth = 0;
 
-  function toggleMobile() {
-    showMobileMenu = !showMobileMenu;
-  }
-
-  $: innerHeight = 0;
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
-  $: showMobileMenu = $navigating || onDesktop ? true : false;
+  $: expMenu = $navigating || onDesktop ? true : false;
 </script>
 
-<svelte:window bind:outerWidth bind:innerHeight bind:scrollY />
+<svelte:window bind:outerWidth bind:scrollY />
 
 <nav
   aria-labelledby="main-navigation"
   class="artifact-ui"
   class:scrollY
-  class:banner={!onDesktop && showMobileMenu && scrollY > 5}
+  class:banner={!onDesktop && expMenu && scrollY > 30}
 >
   <div id="main-navigation" class="wider">
     <a
       aria-current={$page.url.pathname === `/${base}` ? 'page' : undefined}
       href="{base}/">Santiago Gonzalez</a
     >
-
     <button
-      style:display={onDesktop ? 'none' : ''}
       aria-label="Toggle navigation list"
-      aria-expanded={showMobileMenu ? 'true' : 'false'}
-      on:click={toggleMobile}
+      aria-expanded={expMenu ? 'true' : 'false'}
+      style:display={onDesktop ? 'none' : ''}
+      on:click={() => (expMenu = !expMenu)}
     >
-      {#if showMobileMenu}
+      <!-- TODO(santigo-zero): Use an icon here and conditional rendering -->
+      {#if expMenu}
         <iconify-icon icon="lucide:x" width="26" height="26" />
       {:else}
         <iconify-icon icon="lucide:grip" width="26" height="26" />
       {/if}
     </button>
-    {#if onDesktop || showMobileMenu}
-      <div style:grid-column={!onDesktop ? ' 1 / span 2' : ''} class="navItems">
+    {#if onDesktop || expMenu}
+      <div class="navItems">
         <WidgetSearchBar />
         {#each $navItems as item}
           <Separator
@@ -76,34 +71,26 @@
     background-color: var(--clr-background-alt);
     padding: 0.4rem 0;
     transition: filter 0.3s ease-in;
-
     z-index: 999;
-  }
-
-  @media screen and (max-width: 48rem) {
-    nav {
-      padding: 0.1rem 0;
-    }
   }
 
   .scrollY {
     box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
-
     background: var(--clr-background-alt-blur);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-  }
-
-  a:first-child {
-    padding-left: 0;
   }
 
   a {
     padding: 0.4em 0.8em;
     display: flex;
     place-items: center;
+  }
+
+  a:first-child {
+    padding-left: 0;
   }
 
   a:hover {
@@ -113,11 +100,6 @@
   a:focus {
     color: var(--clr-clicked);
   }
-
-  /* a, */
-  /* button { */
-  /*   width: 100%; */
-  /* } */
 
   #main-navigation {
     display: grid;
@@ -143,6 +125,11 @@
     .navItems {
       flex-direction: column;
       padding: 1rem;
+      grid-column: 1 / span 2;
+    }
+
+    nav {
+      padding: 0.1rem 0;
     }
   }
 </style>
