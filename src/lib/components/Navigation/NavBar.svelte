@@ -85,7 +85,6 @@
     position: sticky;
     background-color: var(--clr-background-alt);
     padding: 0.4rem 0;
-    /* transition: filter 0.3s ease-in; */
     transition: all 0.3s;
     z-index: 999;
   }
@@ -97,6 +96,12 @@
     background: var(--clr-background-alt-blur);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    nav {
+      transition: none;
+    }
   }
 
   a {
