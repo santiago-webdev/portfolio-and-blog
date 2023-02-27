@@ -36,10 +36,14 @@
   use:navToggle
 >
   <div id="main-navigation" class="wider">
-    <a
-      aria-current={$page.url.pathname === `/${base}` ? 'page' : undefined}
-      href="{base}/">Santiago Gonzalez</a
-    >
+    <div class="wrapper-left">
+      <a
+        aria-current={$page.url.pathname === `/${base}` ? 'page' : undefined}
+        href="{base}/"
+        style:display={onDesktop ? 'grid' : 'none'}>Santiago Gonzalez</a
+      >
+      <WidgetSearchBar />
+    </div>
     <button
       aria-label="Toggle navigation list"
       aria-expanded={expMenu}
@@ -55,7 +59,6 @@
     </button>
     {#if expMenu || onDesktop}
       <div class="navItems">
-        <WidgetSearchBar />
         {#each $navItems as item}
           <Separator
             render={item.separator}
@@ -122,7 +125,7 @@
     place-items: center;
     margin-inline: auto;
     justify-content: space-between;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr auto;
   }
 
   button {
@@ -131,10 +134,17 @@
   }
 
   .navItems {
+    padding-left: 1rem;
     width: 100%;
     display: flex;
     justify-self: center;
     place-items: center;
+  }
+
+  .wrapper-left {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
 
   @media screen and (max-width: 48rem) {
