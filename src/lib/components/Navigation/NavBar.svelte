@@ -14,12 +14,12 @@
 
   const navToggle = (nav: HTMLElement) =>
     window.addEventListener('scroll', (): void => {
-      savedY = scrollY;
       if (scrollY > 500 && (!expMenu || onDesktop) && scrollY > savedY) {
         nav.style.transform = 'translateY(-200%)';
       } else {
         nav.style.transform = 'translateY(0)';
       }
+      savedY = scrollY;
     });
 
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
