@@ -37,10 +37,8 @@
 >
   <div id="main-navigation" class="wider">
     <div class="wrapper-left">
-      <a
-        aria-current={$page.url.pathname === `/${base}` ? 'page' : undefined}
-        href="{base}/"
-        style:display={onDesktop ? 'grid' : 'none'}>Santiago Gonzalez</a
+      <a href="{base}/" style:display={onDesktop ? 'grid' : 'none'}
+        >Santiago Gonzalez</a
       >
       <WidgetSearchBar />
     </div>
@@ -65,7 +63,8 @@
             orientation={onDesktop ? 'vertical' : 'horizontal'}
           />
           <a
-            aria-current={$page.url.pathname.startsWith(item.href)
+            aria-current={item.href === $page.url.pathname &&
+            $page.url.pathname.startsWith(item.href)
               ? 'page'
               : undefined}
             aria-label="Link to {item.label}"
