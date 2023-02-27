@@ -3,8 +3,8 @@ import type { SvelteComponent } from 'svelte';
 import { writable } from 'svelte/store';
 
 type NavItems = Array<{
-  label?: string;
-  href?: string;
+  label: string;
+  href: string;
   decoration?: string;
   separator?: boolean;
 }>;

@@ -30,7 +30,7 @@
     >
     <button
       aria-label="Toggle navigation list"
-      aria-expanded={expMenu ? 'true' : 'false'}
+      aria-expanded={expMenu}
       style:display={onDesktop ? 'none' : ''}
       on:click={() => (expMenu = !expMenu)}
     >
@@ -41,7 +41,7 @@
         <iconify-icon icon="lucide:grip" width="26" height="26" />
       {/if}
     </button>
-    {#if onDesktop || expMenu}
+    {#if expMenu || onDesktop}
       <div class="navItems">
         <WidgetSearchBar />
         {#each $navItems as item}
@@ -50,9 +50,7 @@
             orientation={onDesktop ? 'vertical' : 'horizontal'}
           />
           <a
-            aria-current={$page.url.pathname.startsWith(
-              item.href ? item.href : ''
-            )
+            aria-current={$page.url.pathname.startsWith(item.href)
               ? 'page'
               : undefined}
             class={item.decoration ? 'act' : 'trn-border'}
