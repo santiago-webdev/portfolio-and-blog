@@ -14,13 +14,8 @@
 
   const navToggle = (nav: HTMLElement) =>
     window.addEventListener('scroll', (): void => {
-      const scrollDirection = scrollY > savedY ? 'down' : 'up';
       savedY = scrollY;
-      if (
-        scrollY > 500 &&
-        (!expMenu || onDesktop) &&
-        scrollDirection === 'down'
-      ) {
+      if (scrollY > 500 && (!expMenu || onDesktop) && scrollY > savedY) {
         nav.style.transform = 'translateY(-200%)';
       } else {
         nav.style.transform = 'translateY(0)';
