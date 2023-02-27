@@ -10,6 +10,8 @@
   --wider: 90rem;
   --gap: 0.66rem;
   --br: 0.66rem;
+
+  color-scheme: light dark;
 }
 
 br {
