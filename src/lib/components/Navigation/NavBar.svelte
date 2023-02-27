@@ -16,7 +16,11 @@
     window.addEventListener('scroll', (): void => {
       const scrollDirection = scrollY > savedY ? 'down' : 'up';
       savedY = scrollY;
-      if (scrollDirection === 'down') {
+      if (
+        scrollY > 500 &&
+        (!expMenu || onDesktop) &&
+        scrollDirection === 'down'
+      ) {
         nav.style.transform = 'translateY(-200%)';
       } else {
         nav.style.transform = 'translateY(0)';
