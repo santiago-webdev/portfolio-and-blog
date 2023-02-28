@@ -4,7 +4,7 @@
   import { inPixels } from '$lib/utils/utils';
   import { navItems } from './store';
   import Separator from '$lib/interface/Separator.svelte';
-  import WidgetSearchBar from '$lib/interface/WidgetSearchBar.svelte';
+  import WidgetModal from '$lib/interface/WidgetModal.svelte';
 
   var expMenu = false,
     onDesktop = true,
@@ -42,7 +42,7 @@
         aria-label="Logo of this site and link to Home"
         style:display={onDesktop ? 'grid' : 'none'}>Santiago Gonzalez</a
       >
-      <WidgetSearchBar />
+      <WidgetModal />
     </div>
     <button
       aria-label="Toggle navigation list"
