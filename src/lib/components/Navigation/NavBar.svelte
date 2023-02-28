@@ -155,9 +155,5 @@
       padding: 1rem;
       grid-column: 1 / span 2;
     }
-
-    nav {
-      padding: 0.1rem 0;
-    }
   }
 </style>

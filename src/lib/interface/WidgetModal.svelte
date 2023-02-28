@@ -10,10 +10,15 @@
 
 <svelte:window bind:outerWidth />
 
-<button on:click={() => console.log('test')} class="attn attnactive">
+<button
+  on:click={() => console.log('test')}
+  class={onDesktop ? 'attn attnactive' : ''}
+>
   <IconSearch />
-  <span> &nbsp;&nbsp;&nbsp </span>
-  <kbd>Ctrl K</kbd>
+  {#if onDesktop}
+    <span> &nbsp;&nbsp;&nbsp </span>
+    <kbd>Ctrl K</kbd>
+  {/if}
 </button>
 
 <style>
@@ -31,8 +36,11 @@
 
   kbd {
     pointer-events: none;
-    outline: 1px solid var(--clr-text-muted);
+    border-top: 1px solid var(--clr-text-muted);
+    border-left: 1px solid var(--clr-text-muted);
+    border-right: 3px solid var(--clr-text-muted);
+    border-bottom: 3px solid var(--clr-text-muted);
     border-radius: 0.4rem;
-    padding-inline: 0.3rem;
+    /* padding-inline: 0.3rem; */
   }
 </style>
