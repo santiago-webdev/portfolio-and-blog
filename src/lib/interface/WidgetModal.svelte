@@ -13,6 +13,7 @@
 <button
   on:click={() => console.log('test')}
   class={onDesktop ? 'attn attnactive' : ''}
+  aria-keyshortcuts="Control+K"
 >
   <IconSearch />
   {#if onDesktop}
