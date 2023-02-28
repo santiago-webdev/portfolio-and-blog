@@ -1,22 +1,28 @@
 <script lang="ts">
   import IconSearch from '$lib/Icons/IconSearch.svelte';
   import { inPixels } from '$lib/utils/utils';
+  import { onMount } from 'svelte';
 
   var onDesktop = true,
-    outerWidth = 0;
+    outerWidth = 0,
+    complex = true,
+    touchSupport = false;
+
+  onMount(() => (touchSupport = 'ontouchstart' in window ? true : false));
 
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
+  $: complex = onDesktop || !touchSupport;
 </script>
 
 <svelte:window bind:outerWidth />
 
 <button
   on:click={() => console.log('test')}
-  class={onDesktop ? 'attn attnactive' : ''}
+  class={complex ? 'attn attnactive' : ''}
   aria-keyshortcuts="Control+K"
 >
   <IconSearch />
-  {#if onDesktop}
+  {#if complex}
     <span> &nbsp;&nbsp;&nbsp </span>
     <kbd>Ctrl K</kbd>
   {/if}
@@ -42,6 +48,6 @@
     border-right: 3px solid var(--clr-text-muted);
     border-bottom: 3px solid var(--clr-text-muted);
     border-radius: 0.4rem;
-    /* padding-inline: 0.3rem; */
+    padding-inline: 0.3rem;
   }
 </style>
