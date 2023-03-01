@@ -22,6 +22,10 @@
       savedY = scrollY;
     });
 
+  const loadNav = (nav: HTMLElement) => {
+    setTimeout(() => (nav.style.transform = 'translateY(0)'), 500);
+  };
+
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
   $: expMenu = $navigating || onDesktop ? true : false;
 </script>
@@ -34,6 +38,7 @@
   class:scrollY
   class:banner={!onDesktop && expMenu && scrollY > 30}
   use:navToggle
+  use:loadNav
 >
   <div id="main-navigation" class="wider">
     <div class="wrapper-left">
@@ -81,12 +86,13 @@
 
 <style>
   nav {
-    top: 3px;
-    position: sticky;
+    inset: 3px 0 auto 0;
+    position: fixed;
     background-color: var(--clr-background-alt);
     padding: 0.4rem 0;
     transition: all 0.3s;
     z-index: 999;
+    transform: translateY(-200%);
   }
 
   .scrollY {
