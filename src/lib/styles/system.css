@@ -5,6 +5,7 @@
   --base-dark-background-300: #37373f;
 
   --base-blue-background-200: hsl(240, 8%, 19%); /* #2d2d34 */
+  --base-blue-background-200-200: hsl(240, 8%, 23%); /* #2d2d34 */
 
   --accent-violet: #49364c;
   --accent-purple: #915268;
@@ -100,6 +101,7 @@
   --clr-background: var(--base-dark-background-000);
 
   --clr-background-alt: var(--base-blue-background-200);
+  --clr-background-alt-alt: var(--base-blue-background-200-200);
   --clr-background-alt-blur: rgba(45 45 52 / 0.8);
   --clr-border-card: rgba(49, 49, 57, 1);
 
@@ -162,7 +164,6 @@
   gap: 2rem;
   margin-inline: auto;
   display: grid;
-  text-align: center;
 
   box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
