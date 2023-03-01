@@ -3,7 +3,6 @@
   import NavBar from '$lib/components/Navigation/NavBar.svelte';
   import Footer from '$lib/components/Navigation/Footer.svelte';
   import Transition from '$lib/components/Transition.svelte';
-  import Noise from '$lib/components/Noise.svelte';
   import { page } from '$app/stores';
 
   import '$lib/styles/global.css';
@@ -20,7 +19,6 @@
   import '@fontsource/manrope/800.css';
 
   import 'iconify-icon';
-  import Modal from '$lib/components/Search/Modal.svelte';
 </script>
 
 <div class="layout">
@@ -31,8 +29,6 @@
   <Footer />
 
   <ScrollProgress />
-  <Noise />
-  <Modal />
 </div>
 
 <style>
