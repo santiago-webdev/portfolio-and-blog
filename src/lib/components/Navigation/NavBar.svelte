@@ -17,17 +17,17 @@
       const direction = scrollY > savedY ? 'down' : 'up';
 
       if (
-        // Bottom of the page
         window.scrollY + window.innerHeight >=
         document.documentElement.scrollHeight
       ) {
         nav.style.transform = 'translateY(0)';
-      } else if (
-        scrollY >= 500 &&
-        (!expMenu || onDesktop) &&
-        direction === 'down'
-      ) {
+        return;
+      }
+
+      if (direction === 'down' && scrollY > 500 && (!expMenu || onDesktop)) {
         nav.style.transform = 'translateY(-200%)';
+      } else {
+        nav.style.transform = 'translateY(0)';
       }
 
       savedY = scrollY;
