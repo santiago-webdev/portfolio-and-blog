@@ -84,7 +84,7 @@
   </form>
   <ul style:display={value.length ? 'grid' : 'none'}>
     {#each $FilteredPosts.slice(0, 4) as post}
-      <Separator orientation='horizontal' />
+      <Separator render orientation='horizontal' />
       <li>
         <a href="{base}/blog{post.href}">
           <article>
