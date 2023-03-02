@@ -15,7 +15,7 @@
 
 <style>
   hr {
-    width: 96%;
+    width: 100%;
     height: 1px;
     background-color: var(--clr-ui-muted);
     border: 0;
