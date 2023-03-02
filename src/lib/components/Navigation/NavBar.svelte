@@ -172,7 +172,7 @@
       grid-column: 1 / span 2;
     }
 
-    a {
+    .wrapper-left a {
       padding-top: 0;
       padding-bottom: 0;
     }
