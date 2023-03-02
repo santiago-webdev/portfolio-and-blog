@@ -47,15 +47,11 @@
     background-color: var(--clr-background-alt);
     display: grid;
     place-content: center;
-    padding-top: 3em;
-    padding-bottom: 1em;
   }
 
   @media screen and (min-width: 48rem) {
     main {
       min-height: min(100vh, 80rem);
-      padding-top: 3em;
-      padding-bottom: 1em;
     }
   }
 </style>

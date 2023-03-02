@@ -138,7 +138,9 @@
   background-color: var(--clr-background-alt);
   border-bottom-right-radius: 1.1rem;
   border-bottom-left-radius: 1.1rem;
-  padding: 1em 0;
+
+  padding-top: 3em;
+  padding-bottom: 1em;
   gap: 2rem;
   margin-inline: auto;
   display: grid;
@@ -150,8 +152,9 @@
 }
 
 @media screen and (min-width: 48rem) {
-  .banner {
-    padding: 6em 0;
+  main {
+    padding-top: 3em;
+    padding-bottom: 1em;
   }
 }
 
