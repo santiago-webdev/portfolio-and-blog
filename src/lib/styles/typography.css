@@ -24,8 +24,7 @@ h3 {
   /* line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem)); */
 }
 
-p,
-pre {
+p {
   font-weight: 400;
   color: var(--clr-text);
 }
@@ -37,7 +36,6 @@ small {
 
 a,
 p,
-pre,
 kbd,
 label,
 input,

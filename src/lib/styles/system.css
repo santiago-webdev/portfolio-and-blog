@@ -277,3 +277,15 @@
 [aria-current='page'] {
   text-decoration: underline solid var(--accent-peachy) 3px;
 }
+
+pre {
+  width: min(100%, var(--wide));
+  background-color: var(--clr-background-alt);
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  overflow: auto;
+  border-radius: 0.6rem;
+  padding: 1rem;
+  font-size: clamp(0.8rem, 8vw, 1.2rem);
+  font-family: var(--ff--monospace);
+}

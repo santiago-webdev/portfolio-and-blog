@@ -176,6 +176,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/iosevka@npm:^4.5.4":
+  version: 4.5.4
+  resolution: "@fontsource/iosevka@npm:4.5.4"
+  checksum: 184d4711a9d9764462197174e559e93b3ba49b63933fa90e0e85621c01b07f517b3538e04a67af301fa48796dbf19bc51e5fd3e5f8208302cf84962c12bc829d
+  languageName: node
+  linkType: hard
+
 "@fontsource/manrope@npm:^4.5.13":
   version: 4.5.13
   resolution: "@fontsource/manrope@npm:4.5.13"
@@ -625,6 +632,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "Portfolio and Blog - Santiago Gonzalez@workspace:."
   dependencies:
+    "@fontsource/iosevka": ^4.5.4
     "@fontsource/manrope": ^4.5.13
     "@playwright/test": ^1.28.1
     "@sveltejs/adapter-static": ^2.0.1
