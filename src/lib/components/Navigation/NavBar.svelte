@@ -54,9 +54,7 @@
 >
   <div id="main-navigation" class="wider">
     <div class="wrapper-left">
-      <a
-        href="{base}/"
-        aria-label="Logo of this site and link to Home"
+      <a href="{base}/" aria-label="Logo of this site and link to Home"
         >{(onDesktop && AUTHOR) || 'SG'}</a
       >
       <WidgetModal />
