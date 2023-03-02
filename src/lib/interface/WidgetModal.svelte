@@ -6,7 +6,7 @@
   import { inPixels, readableDate } from '$lib/utils/utils';
   import { onMount } from 'svelte';
   import { searchHandler } from '$lib/components/Search/utils';
-    import Separator from './Separator.svelte';
+  import Separator from './Separator.svelte';
 
   var modal: HTMLDialogElement,
     input: HTMLInputElement,
@@ -41,6 +41,13 @@
   }
 
   onMount(() => (touchSupport = 'ontouchstart' in window ? true : false));
+  onMount(() =>
+    modal.addEventListener('click', event => {
+      if (event.target === modal) {
+        modal.close();
+      }
+    })
+  );
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
   $: complex = onDesktop || !touchSupport;
 </script>
@@ -61,8 +68,8 @@
 </button>
 <dialog
   class="wide"
-  on:close={() => value = ''}
-  on:cancel={() => value = ''}
+  on:close={() => (value = '')}
+  on:cancel={() => (value = '')}
   bind:this={modal}
 >
   <form on:submit|preventDefault={handleSubmit}>
@@ -84,7 +91,7 @@
   </form>
   <ul style:display={value.length ? 'grid' : 'none'}>
     {#each $FilteredPosts.slice(0, 4) as post}
-      <Separator render orientation='horizontal' />
+      <Separator render orientation="horizontal" />
       <li>
         <a on:click={() => toggleModal()} href="{base}/blog{post.href}">
           <article>
