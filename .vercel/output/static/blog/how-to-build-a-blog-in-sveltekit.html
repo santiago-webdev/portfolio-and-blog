@@ -24,26 +24,26 @@
       }
     </script>
     <meta http-equiv="content-security-policy" content="">
-		<link href="../_app/immutable/assets/_layout-45e04b31.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_layout-b4dab9c8.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/store-d77f04d9.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/Hollow-e155e60a.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/_layout-3b460f2e.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/start-7ca3e13b.js">
+		<link rel="modulepreload" href="../_app/immutable/start-7c818b7c.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index-deb6541d.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-bcdc1dbe.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/paths-24bb4e9c.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-29225bba.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/store-85866b55.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-9903c6d4.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/store-8cdac0ee.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/config-52f2d091.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/Hollow-7fd06a8d.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index-e3c14a52.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index-44c7ce5c.js">
 		<link rel="modulepreload" href="../_app/immutable/modules/pages/_layout.ts-9cbb603b.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-da46b06b.js">
 		<link rel="modulepreload" href="../_app/immutable/components/pages/blog/_postid_/_layout.svelte-03a3d2bd.js">
 		<link rel="modulepreload" href="../_app/immutable/components/pages/blog/_postid_/_page.svelte-7c32aa3f.js">
-		<link rel="modulepreload" href="../_app/immutable/modules/pages/blog/_postid_/_page.ts-4fffb6d2.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_page-9de50d3e.js"><title>How this blog was built - Santiago Gonzalez Blog</title><!-- HEAD_svelte-1nv67zy_START --><meta name="description" content="How to build your own static blog written in sveltekit and deploy it to GitHub Pages."><meta itemprop="name" content="How this blog was built"><meta itemprop="description" content="How to build your own static blog written in sveltekit and deploy it to GitHub Pages."><meta itemprop="image" content=""><meta property="og:url" content="http://sveltekit-prerender/blog/how-to-build-a-blog-in-sveltekit"><meta property="og:type" content="website"><meta property="og:title" content="How this blog was built"><meta property="og:description" content="How to build your own static blog written in sveltekit and deploy it to GitHub Pages."><meta property="og:image" content=""><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="How this blog was built"><meta name="twitter:description" content="How to build your own static blog written in sveltekit and deploy it to GitHub Pages."><meta name="twitter:image" content=""><!-- HEAD_svelte-1nv67zy_END --><!-- HEAD_svelte-zlwswt_START --><link rel="stylesheet" href="/syntax-highlighting.css" type="text/css"><!-- HEAD_svelte-zlwswt_END -->
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/blog/_postid_/_page.ts-a9378928.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page-90c7c718.js"><title>How this blog was built - Santiago Gonzalez Blog</title><!-- HEAD_svelte-1nv67zy_START --><meta name="description" content="How to build your own static blog written in sveltekit and deploy it to GitHub Pages."><meta itemprop="name" content="How this blog was built"><meta itemprop="description" content="How to build your own static blog written in sveltekit and deploy it to GitHub Pages."><meta itemprop="image" content=""><meta property="og:url" content="http://sveltekit-prerender/blog/how-to-build-a-blog-in-sveltekit"><meta property="og:type" content="website"><meta property="og:title" content="How this blog was built"><meta property="og:description" content="How to build your own static blog written in sveltekit and deploy it to GitHub Pages."><meta property="og:image" content=""><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="How this blog was built"><meta name="twitter:description" content="How to build your own static blog written in sveltekit and deploy it to GitHub Pages."><meta name="twitter:image" content=""><!-- HEAD_svelte-1nv67zy_END --><!-- HEAD_svelte-zlwswt_START --><link rel="stylesheet" href="/syntax-highlighting.css" type="text/css"><!-- HEAD_svelte-zlwswt_END -->
   </head>
   <body data-sveltekit-preload-data="hover">
     <div style="display: contents">
@@ -102,7 +102,60 @@
 <pre class="language-bash"><!-- HTML_TAG_START --><code class="language-bash"><span class="token function">yarn</span> create svelte <span class="token builtin class-name">.</span></code><!-- HTML_TAG_END --></pre>
 <h3>More tests</h3>
 <pre class="language-typescript"><!-- HTML_TAG_START --><code class="language-typescript"><span class="token keyword">let</span> hello<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">=</span> <span class="token string">'world'</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token function-variable function">printHello</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hello<span class="token punctuation">)</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre></article></main>
+<span class="token keyword">const</span> <span class="token function-variable function">printHello</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token builtin">console</span><span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>hello<span class="token punctuation">)</span><span class="token punctuation">;</span></code><!-- HTML_TAG_END --></pre>
+<pre class="language-svelte"><!-- HTML_TAG_START --><code class="language-svelte"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">lang</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>ts<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">
+  <span class="token keyword">import</span> IconSearch <span class="token keyword">from</span> <span class="token string">'$lib/Icons/IconSearch.svelte'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> FilteredPosts <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'$lib/components/Search/store'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> base <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'$app/paths'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> goto <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'$app/navigation'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> inPixels<span class="token punctuation">,</span> readableDate <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'$lib/utils/utils'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> onMount <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'svelte'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> <span class="token punctuation">&#123;</span> searchHandler <span class="token punctuation">&#125;</span> <span class="token keyword">from</span> <span class="token string">'$lib/components/Search/utils'</span><span class="token punctuation">;</span>
+  <span class="token keyword">import</span> Separator <span class="token keyword">from</span> <span class="token string">'./Separator.svelte'</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">var</span> <span class="token literal-property property">modal</span><span class="token operator">:</span> HTMLDialogElement<span class="token punctuation">,</span>
+    <span class="token literal-property property">input</span><span class="token operator">:</span> HTMLInputElement<span class="token punctuation">,</span>
+    value <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">,</span>
+    onDesktop <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    outerWidth <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    complex <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    touchSupport <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">const</span> <span class="token function-variable function">toggleModal</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span>
+    modal<span class="token punctuation">.</span>open
+      <span class="token operator">?</span> <span class="token punctuation">(</span>modal<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>value <span class="token operator">=</span> <span class="token string">''</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+      <span class="token operator">:</span> <span class="token punctuation">(</span>modal<span class="token punctuation">.</span><span class="token function">showModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> input<span class="token punctuation">.</span><span class="token function">focus</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token keyword">function</span> <span class="token function">onCtrlK</span><span class="token punctuation">(</span><span class="token parameter"><span class="token literal-property property">event</span><span class="token operator">:</span> KeyboardEvent</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token keyword">let</span> <span class="token punctuation">&#123;</span> key<span class="token punctuation">,</span> ctrlKey<span class="token punctuation">,</span> repeat <span class="token punctuation">&#125;</span> <span class="token operator">=</span> event<span class="token punctuation">;</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>repeat<span class="token punctuation">)</span> <span class="token keyword">return</span><span class="token punctuation">;</span>
+
+    <span class="token keyword">switch</span> <span class="token punctuation">(</span>key<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">case</span> <span class="token string">'k'</span><span class="token operator">:</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>ctrlKey<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+          event<span class="token punctuation">.</span><span class="token function">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token function">toggleModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+          <span class="token keyword">break</span><span class="token punctuation">;</span>
+        <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token keyword">async</span> <span class="token keyword">function</span> <span class="token function">handleSubmit</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+    <span class="token function">toggleModal</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">await</span> <span class="token function">goto</span><span class="token punctuation">(</span><span class="token template-string"><span class="token template-punctuation string">&#96;</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>base<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token string">/blog</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">$&#123;</span>$FilteredPosts<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>href<span class="token interpolation-punctuation punctuation">&#125;</span></span><span class="token template-punctuation string">&#96;</span></span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">&#125;</span>
+
+  <span class="token function">onMount</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span> <span class="token punctuation">(</span>touchSupport <span class="token operator">=</span> <span class="token string">'ontouchstart'</span> <span class="token keyword">in</span> window <span class="token operator">?</span> <span class="token boolean">true</span> <span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">onMount</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=></span>
+    modal<span class="token punctuation">.</span><span class="token function">addEventListener</span><span class="token punctuation">(</span><span class="token string">'click'</span><span class="token punctuation">,</span> <span class="token parameter">event</span> <span class="token operator">=></span> <span class="token punctuation">&#123;</span>
+      <span class="token keyword">if</span> <span class="token punctuation">(</span>event<span class="token punctuation">.</span>target <span class="token operator">===</span> modal<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>
+        modal<span class="token punctuation">.</span><span class="token function">close</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token punctuation">&#125;</span>
+    <span class="token punctuation">&#125;</span><span class="token punctuation">)</span>
+  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">$</span><span class="token operator">:</span> onDesktop <span class="token operator">=</span> outerWidth <span class="token operator">></span> <span class="token function">inPixels</span><span class="token punctuation">(</span><span class="token string">'48rem'</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token boolean">true</span> <span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token literal-property property">$</span><span class="token operator">:</span> complex <span class="token operator">=</span> onDesktop <span class="token operator">||</span> <span class="token operator">!</span>touchSupport<span class="token punctuation">;</span>
+</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span></code><!-- HTML_TAG_END --></pre></article></main>
 
 
 
@@ -134,14 +187,14 @@
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="yiub53">
-			import { start } from "../_app/immutable/start-7ca3e13b.js";
+		<script type="module" data-sveltekit-hydrate="16q3dqf">
+			import { start } from "../_app/immutable/start-7c818b7c.js";
 
 			start({
 				assets: "",
 				env: {},
-				target: document.querySelector('[data-sveltekit-hydrate="yiub53"]').parentNode,
-				version: "1677799151469",
+				target: document.querySelector('[data-sveltekit-hydrate="16q3dqf"]').parentNode,
+				version: "1677800044992",
 				hydrate: {
 					node_ids: [0, 2, 6],
 					data: [null,null,null],
