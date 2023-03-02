@@ -1,5 +1,5 @@
 <script lang="ts">
-  export let render = false;
+  export let render = true;
   export let orientation: Orientation;
 
   type Orientation = 'horizontal' | 'vertical' | null | undefined;

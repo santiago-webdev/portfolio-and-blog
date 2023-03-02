@@ -6,6 +6,7 @@
   import { inPixels, readableDate } from '$lib/utils/utils';
   import { onMount } from 'svelte';
   import { searchHandler } from '$lib/components/Search/utils';
+    import Separator from './Separator.svelte';
 
   var modal: HTMLDialogElement,
     input: HTMLInputElement,
@@ -58,25 +59,32 @@
     <kbd>Ctrl K</kbd>
   {/if}
 </button>
-<dialog bind:this={modal}>
+<dialog
+  class="wide"
+  on:close={() => value = ''}
+  on:cancel={() => value = ''}
+  bind:this={modal}
+>
   <form on:submit|preventDefault={handleSubmit}>
     <label for="search">Search for a blog post:</label>
-    <button aria-label="Go to selected blog" type="submit">
-      <IconSearch />
-    </button>
-    <input
-      placeholder="Search"
-      bind:value
-      bind:this={input}
-      type="search"
-      id="search"
-      autocomplete="off"
-      on:input={() => searchHandler(value)}
-    />
+    <div class="searchbar">
+      <button aria-label="Go to selected blog" type="submit">
+        <IconSearch />
+      </button>
+      <input
+        placeholder="Search"
+        bind:value
+        bind:this={input}
+        type="search"
+        id="search"
+        autocomplete="off"
+        on:input={() => searchHandler(value)}
+      />
+    </div>
   </form>
   <ul style:display={value.length ? 'grid' : 'none'}>
-    {#each $FilteredPosts.slice(0, 3) as post}
-      <hr />
+    {#each $FilteredPosts.slice(0, 4) as post}
+      <Separator orientation='horizontal' />
       <li>
         <a href="{base}/blog{post.href}">
           <article>
@@ -123,7 +131,7 @@
   }
 
   :modal {
-    padding: 0;
+    padding: 1rem;
     border: 0;
     margin: 0;
     margin-inline: auto;
@@ -137,5 +145,55 @@
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+  }
+
+  :modal button {
+    padding-left: 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    /* flex-wrap: wrap; */
+  }
+
+  .searchbar {
+    display: flex;
+  }
+
+  input:-moz-placeholder,
+  input::-moz-placeholder {
+    opacity: 1;
+  }
+
+  input[type='search']::-ms-clear {
+    display: none;
+  }
+
+  input[type='search']::-webkit-search-cancel-button {
+    display: none;
+  }
+
+  /* input, */
+  /* input::placeholder, */
+  /* button { */
+  /*   color: inherit; */
+  /*   background-color: inherit; */
+  /* } */
+
+  input {
+    border: none;
+    outline: none;
+    width: 100%;
+    /* padding: 0.6rem 1.3rem 0.6rem 0; */
+  }
+
+  input:focus::placeholder {
+    color: transparent;
+  }
+
+  ul {
+    width: 100%;
   }
 </style>
