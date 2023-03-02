@@ -43,18 +43,3 @@
   <meta name="twitter:image" content="" />
   <!-- TODO(santigo-zero): Add image -->
 </svelte:head>
-
-<style>
-  main {
-    padding-top: 3em;
-    padding-bottom: 1em;
-  }
-
-  @media screen and (min-width: 48rem) {
-    main {
-      min-height: min(100vh, 80rem);
-      padding-top: 3em;
-      padding-bottom: 1em;
-    }
-  }
-</style>
