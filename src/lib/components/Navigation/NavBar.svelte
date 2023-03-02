@@ -5,6 +5,7 @@
   import { navItems } from './store';
   import Separator from '$lib/interface/Separator.svelte';
   import WidgetModal from '$lib/interface/WidgetModal.svelte';
+  import { AUTHOR } from '$lib/config';
 
   var expMenu = false,
     onDesktop = true,
@@ -56,7 +57,7 @@
       <a
         href="{base}/"
         aria-label="Logo of this site and link to Home"
-        style:display={onDesktop ? 'grid' : 'none'}>Santiago Gonzalez</a
+        >{(onDesktop && AUTHOR) || 'SG'}</a
       >
       <WidgetModal />
     </div>
@@ -171,6 +172,11 @@
       flex-direction: column;
       padding: 1rem;
       grid-column: 1 / span 2;
+    }
+
+    a {
+      padding-top: 0;
+      padding-bottom: 0;
     }
   }
 </style>
