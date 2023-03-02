@@ -72,7 +72,7 @@
         <IconSearch />
       </button>
       <input
-        placeholder="Search"
+        placeholder=" Search for a blog post"
         bind:value
         bind:this={input}
         type="search"
@@ -86,7 +86,7 @@
     {#each $FilteredPosts.slice(0, 4) as post}
       <Separator render orientation='horizontal' />
       <li>
-        <a href="{base}/blog{post.href}">
+        <a on:click={() => toggleModal()} href="{base}/blog{post.href}">
           <article>
             <h3>
               <IconSearch />
@@ -189,9 +189,9 @@
     /* padding: 0.6rem 1.3rem 0.6rem 0; */
   }
 
-  input:focus::placeholder {
-    color: transparent;
-  }
+  /* input:focus::placeholder { */
+  /*   color: transparent; */
+  /* } */
 
   ul {
     width: 100%;
