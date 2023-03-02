@@ -73,9 +73,6 @@
       autocomplete="off"
       on:input={() => searchHandler(value)}
     />
-    {#if !modal}
-      <kbd>Ctrl K</kbd>
-    {/if}
   </form>
   <ul style:display={value.length ? 'grid' : 'none'}>
     {#each $FilteredPosts.slice(0, 3) as post}
@@ -106,7 +103,7 @@
   button {
     display: flex;
     place-items: center;
-    padding-inline: 0.8rem;
+    padding: 0.2rem 0.8rem;
     gap: 0.6rem;
   }
 
