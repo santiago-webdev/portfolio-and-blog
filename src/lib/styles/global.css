@@ -1,7 +1,7 @@
 :root {
-  --ff-dflt: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol';
+  --ff-dflt: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
   --ff-monospace: 'Iosevka', monospace;
 
   --wide: 58rem;
@@ -355,7 +355,6 @@ strong {
   text-decoration: underline solid var(--accent-peachy) 3px;
 }
 
-
 pre {
   width: min(100%, var(--wide));
   background-color: var(--clr-background-alt);
@@ -367,4 +366,3 @@ pre {
   font-size: clamp(0.8rem, 8vw, 1.2rem);
   font-family: var(--ff-monospace);
 }
-

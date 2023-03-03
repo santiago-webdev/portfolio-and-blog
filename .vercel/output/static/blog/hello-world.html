@@ -2,6 +2,7 @@
 <html lang="en" data-theme="system">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="../favicon.png" />
     <link
       rel="stylesheet"
@@ -9,11 +10,22 @@
       type="text/css"
     />
     <link
-      rel="stylesheet"
-      href="../export-static.css"
-      type="text/css"
+      rel="preload"
+      href="../Manrope[wght].woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      @font-face {
+        font-family: 'Manrope';
+        src: url('../Manrope[wght].woff2')
+            format('woff2 supports variations'),
+          url('../Manrope[wght].woff2')
+            format('woff2-variations');
+        font-weight: 200 800;
+      }
+    </style>
     <script>
       if (
         localStorage.theme === 'dark' ||
@@ -24,26 +36,26 @@
       }
     </script>
     <meta http-equiv="content-security-policy" content="">
-		<link href="../_app/immutable/assets/_layout-b4dab9c8.css" rel="stylesheet">
-		<link href="../_app/immutable/assets/store-d77f04d9.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/_layout-ce1f73bb.css" rel="stylesheet">
+		<link href="../_app/immutable/assets/store-f2e4300d.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/Hollow-e155e60a.css" rel="stylesheet">
 		<link href="../_app/immutable/assets/_layout-3b460f2e.css" rel="stylesheet">
-		<link rel="modulepreload" href="../_app/immutable/start-7c818b7c.js">
+		<link rel="modulepreload" href="../_app/immutable/start-323b7b25.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/index-deb6541d.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/singletons-bcdc1dbe.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/paths-24bb4e9c.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/preload-helper-41c905a7.js">
-		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-9903c6d4.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/store-8cdac0ee.js">
+		<link rel="modulepreload" href="../_app/immutable/components/pages/_layout.svelte-4ad8e13d.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/store-a1b9d9ee.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/config-52f2d091.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/Hollow-7fd06a8d.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/index-44c7ce5c.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/index-7156eb11.js">
 		<link rel="modulepreload" href="../_app/immutable/modules/pages/_layout.ts-9cbb603b.js">
 		<link rel="modulepreload" href="../_app/immutable/chunks/_layout-da46b06b.js">
 		<link rel="modulepreload" href="../_app/immutable/components/pages/blog/_postid_/_layout.svelte-03a3d2bd.js">
 		<link rel="modulepreload" href="../_app/immutable/components/pages/blog/_postid_/_page.svelte-7c32aa3f.js">
-		<link rel="modulepreload" href="../_app/immutable/modules/pages/blog/_postid_/_page.ts-a9378928.js">
-		<link rel="modulepreload" href="../_app/immutable/chunks/_page-90c7c718.js"><!-- HEAD_svelte-zlwswt_START --><link rel="stylesheet" href="/syntax-highlighting.css" type="text/css"><!-- HEAD_svelte-zlwswt_END -->
+		<link rel="modulepreload" href="../_app/immutable/modules/pages/blog/_postid_/_page.ts-6c6884c2.js">
+		<link rel="modulepreload" href="../_app/immutable/chunks/_page-57d6242a.js"><!-- HEAD_svelte-zlwswt_START --><link rel="stylesheet" href="/syntax-highlighting.css" type="text/css"><!-- HEAD_svelte-zlwswt_END -->
   </head>
   <body data-sveltekit-preload-data="hover">
     <div style="display: contents">
@@ -106,7 +118,7 @@
       <div class="aboutme"><h3 class="svelte-66z416">Santiago Gonzalez</h3>
         <h3 class="svelte-66z416">I&#39;m a web developer with a purpose, bring accessibility to the web.
         </h3></div></section>
-    <div class="wrapper-bottom svelte-66z416"><section class="bottom wider svelte-66z416"><div class="copyright svelte-66z416"><small class="svelte-66z416">© GPL-3.0 2023
+    <div class="wrapper-bottom svelte-66z416"><section class="bottom wider svelte-66z416"><div class="copyright svelte-66z416"><small class="svelte-66z416">(c) GPL-3.0 2023
             <span class="separator svelte-66z416">•</span>
             All Rights Reserved.</small></div>
         <small class="svelte-66z416">Designed &amp; Built with <iconify-icon icon="lucide:heart"></iconify-icon> by Santiago</small>
@@ -121,14 +133,14 @@
 </div>
 
 
-		<script type="module" data-sveltekit-hydrate="j7m49l">
-			import { start } from "../_app/immutable/start-7c818b7c.js";
+		<script type="module" data-sveltekit-hydrate="u26h76">
+			import { start } from "../_app/immutable/start-323b7b25.js";
 
 			start({
 				assets: "",
 				env: {},
-				target: document.querySelector('[data-sveltekit-hydrate="j7m49l"]').parentNode,
-				version: "1677800044992",
+				target: document.querySelector('[data-sveltekit-hydrate="u26h76"]').parentNode,
+				version: "1677879032437",
 				hydrate: {
 					node_ids: [0, 2, 6],
 					data: [null,null,null],

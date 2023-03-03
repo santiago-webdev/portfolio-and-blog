@@ -1,7 +1,7 @@
 <script lang="ts">
   import { dev } from '$app/environment';
 
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
 
   const getGithubStars = async () => {
     if (dev) return 0;
