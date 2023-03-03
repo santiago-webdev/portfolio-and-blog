@@ -1,12 +1,10 @@
 <script lang="ts">
-  import ScrollProgress from '$lib/interface/ScrollProgress.svelte';
   import NavBar from '$lib/components/Navigation/NavBar.svelte';
-  import Footer from '$lib/components/Navigation/Footer.svelte';
   import Transition from '$lib/components/Transition.svelte';
+  import Footer from '$lib/components/Navigation/Footer.svelte';
+  import ScrollProgress from '$lib/interface/ScrollProgress.svelte';
   import { page } from '$app/stores';
-
   import '$lib/styles/global.css';
-
   import 'iconify-icon';
 </script>
 
@@ -16,7 +14,6 @@
     <slot />
   </Transition>
   <Footer />
-
   <ScrollProgress />
 </div>
 
