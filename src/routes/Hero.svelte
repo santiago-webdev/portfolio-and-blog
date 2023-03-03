@@ -5,8 +5,9 @@
 <section class="wide">
   <h1>Building websites <span>&&</span> clean interfaces</h1>
   <p>
-    I'm a web developer who focuses on UI and accesibility. Here we'll discuss
-    about <strong> web development </strong> and show you my projects while at it.
+    I'm a web developer and here we'll discuss about <strong>
+      web development
+    </strong> and show you my projects while at it.
   </p>
   <div class="content-navigation">
     <a
