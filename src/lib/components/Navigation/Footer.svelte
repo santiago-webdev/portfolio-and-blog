@@ -1,6 +1,8 @@
 <script lang="ts">
   import { dev } from '$app/environment';
 
+  const year = new Date().getFullYear()
+
   const getGithubStars = async () => {
     if (dev) return 0;
     try {
@@ -78,7 +80,7 @@
       <section class="bottom wider">
         <div class="copyright">
           <small
-            >© GPL-3.0 2023
+            >(c) GPL-3.0 {year}
             <span class="separator">•</span>
             All Rights Reserved.</small
           >
