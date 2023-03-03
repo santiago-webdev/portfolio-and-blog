@@ -2,20 +2,37 @@
 <html lang="en" data-theme="">
   <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="%sveltekit.assets%/favicon.png" />
     <link
       rel="stylesheet"
       href="%sveltekit.assets%/reset.css"
       type="text/css"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="preload"
+      href="%sveltekit.assets%/Manrope[wght].woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <style>
+      @font-face {
+        font-family: 'Manrope';
+        src: url('%sveltekit.assets%/Manrope[wght].woff2')
+            format('woff2 supports variations'),
+          url('%sveltekit.assets%/Manrope[wght].woff2')
+            format('woff2-variations');
+        font-weight: 200 800;
+      }
+    </style>
     <script>
       if (
         localStorage.theme === 'dark' ||
         (!localStorage.theme &&
           window.matchMedia('(prefers-color-scheme: dark)').matches)
       ) {
-        document.documentElement.dataset.theme = 'dark';
+        document.documentElement.dataset.theme = 'dark'
       }
     </script>
     %sveltekit.head%

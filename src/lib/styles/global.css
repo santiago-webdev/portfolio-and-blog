@@ -111,7 +111,7 @@ button {
   --bttn-szb-100: 0.6rem;
   --bttn-szh-100: 1.2rem;
 
-  --clr-title: hsl(222, 33%, 80%);
+  --clr-title: hsl(222, 33%, 83%);
   --clr-subtitle: hsl(222, 33%, 85%);
   --clr-text: hsl(222, 20%, 90%);
 
@@ -146,21 +146,23 @@ html {
   font-family: var(--ff-dflt);
 }
 
+.ff-sz-100,
 h1 {
   color: var(--clr-title);
-  font-weight: 800;
   font-variation-settings: 'wght' 800;
-  font-size: clamp(2.6rem, 8vw, 4.6rem);
-  line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem));
+  font-size: clamp(2.6rem, 8vw, 4.8rem);
+  line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.8rem));
 }
 
+.ff-sz-200,
 h2 {
   color: var(--clr-subtitle);
   font-weight: 600;
   font-size: clamp(1.6rem, 8vw, 2.84rem);
-  /* line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem)); */
+  line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem));
 }
 
+.ff-sz-300,
 h3 {
   color: var(--clr-subtitle);
   font-weight: 500;
@@ -168,9 +170,11 @@ h3 {
   /* line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem)); */
 }
 
+.ff-sz-700,
 p {
-  font-weight: 400;
   color: var(--clr-text);
+  font-variation-settings: 'wght' 400;
+  font-size: clamp(0.8rem, 8vw, 1.4rem);
 }
 
 small {
@@ -179,7 +183,6 @@ small {
 }
 
 a,
-p,
 kbd,
 label,
 input,

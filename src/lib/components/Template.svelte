@@ -38,7 +38,7 @@
 </script>
 
 <main>
-  <header class="banner">
+  <header class="banner wide">
     {#if isHollow}
       <h1>
         <Hollow color={'var(--clr-title)'}>{hollowPrefix}</Hollow>
@@ -106,13 +106,17 @@
 
   header p {
     color: var(--clr-subtitle);
-    max-width: 44ch;
-    margin-inline: auto;
+    /* max-width: 44ch; */
+    /* margin-inline: auto; */
   }
+
+  /* header { */
+  /*   width: 100%; */
+  /* } */
 
   button {
     padding: 0.615rem 1.23rem;
-    max-width: max-content;
+    /* max-width: max-content; */
     margin-inline: auto;
     font-size: unset;
   }
