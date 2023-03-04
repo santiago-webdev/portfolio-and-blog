@@ -71,7 +71,7 @@
   on:cancel={() => (value = '')}
   bind:this={modal}>
   <form on:submit|preventDefault={handleSubmit}>
-    <label for="search">Search for a blog post:</label>
+    <label for="modal-search">Search for a blog post:</label>
     <div class="searchbar">
       <button aria-label="Go to selected blog" type="submit">
         <IconSearch />
@@ -81,7 +81,7 @@
         bind:value
         bind:this={input}
         type="search"
-        id="search"
+        id="modal-search"
         autocomplete="off"
         on:input={() => searchHandler(value)} />
     </div>
