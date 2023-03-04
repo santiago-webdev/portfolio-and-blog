@@ -108,10 +108,11 @@ button {
   --clr-subtitle: hsl(222, 33%, 85%);
   --clr-text: hsl(222, 20%, 90%);
 
-  --clr-muted-100: hsl(240, 5%, 30%);
-  --clr-muted-200: hsl(240, 5%, 40%);
-  --clr-muted-300: hsl(240, 5%, 50%);
-  --clr-muted-400: hsl(240, 5%, 60%);
+  --clr-muted-100: hsl(240, 5%, 25%);
+  --clr-muted-200: hsl(240, 5%, 30%);
+  --clr-muted-300: hsl(240, 5%, 40%);
+  --clr-muted-400: hsl(240, 5%, 50%);
+  --clr-muted-500: hsl(240, 5%, 60%);
 
   --clr-hover: var(--clr-slate-400);
   --clr-hover-bg: var(--clr-slate-400);
