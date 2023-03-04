@@ -141,6 +141,10 @@
 		},
 		{
 			"handle": "filesystem"
+		},
+		{
+			"src": "/.*",
+			"dest": "/fn"
 		}
 	],
 	"overrides": {
