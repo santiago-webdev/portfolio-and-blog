@@ -3,7 +3,6 @@
   import { navigating, page } from '$app/stores';
   import { inPixels } from '$lib/utils/utils';
   import { navItems } from './store';
-  import Separator from '$lib/interface/Separator.svelte';
   import WidgetModal from '$lib/interface/WidgetModal.svelte';
   import { AUTHOR } from '$lib/config';
 
@@ -72,9 +71,12 @@
     {#if expMenu || onDesktop}
       <div class="navItems">
         {#each $navItems as item}
-          <Separator
-            render={item.separator}
-            orientation={onDesktop ? 'vertical' : 'horizontal'} />
+          {#if item.separator}
+            <div
+              style="border-left: 1px solid var(--clr-muted-100); height: 2rem"
+              aria-orientation="vertical"
+              role="separator" />
+          {/if}
           <a
             aria-current={item.href === $page.url.pathname ||
             ($page.url.pathname.startsWith(item.href) && `/` !== item.href)
