@@ -184,6 +184,8 @@
   a {
     display: flex;
     place-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 0.5ch;
   }
 
