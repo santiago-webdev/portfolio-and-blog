@@ -15,8 +15,7 @@
       aria-label="Link to my projects page"
       style="color: var(--clr-text)"
       class="attnactive attn"
-      >Projects <iconify-icon icon="lucide:chevron-right" /></a
-    >
+      >Projects <iconify-icon icon="lucide:chevron-right" /></a>
     <a href="/" aria-label="Link to contact me" class="act">Contact</a>
   </div>
 </section>

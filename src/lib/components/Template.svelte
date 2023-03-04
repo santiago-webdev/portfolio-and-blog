@@ -56,8 +56,7 @@
     {/if}
     <button
       class="attn-border attn trn-border"
-      on:click={() => (showRelative = !showRelative)}
-    >
+      on:click={() => (showRelative = !showRelative)}>
       <small>
         <iconify-icon icon="lucide:calendar" />: {showRelative
           ? dateRelative

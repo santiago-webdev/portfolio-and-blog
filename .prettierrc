@@ -5,6 +5,7 @@
   "trailingComma": "none",
   "printWidth": 80,
   "arrowParens": "avoid",
+  "bracketSameLine": true,
   "plugins": ["prettier-plugin-svelte"],
   "pluginSearchDirs": ["."],
   "overrides": [

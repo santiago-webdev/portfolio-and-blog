@@ -17,13 +17,13 @@
   hr {
     width: 100%;
     height: 1px;
-    background-color: var(--clr-ui-muted);
+    background-color: blue;
     border: 0;
   }
 
   .ui-divider {
     height: 1.6em;
-    border-left: 1px solid var(--clr-ui-muted);
-    background-color: white;
+    border-left: 1px solid var(--clr-muted-300);
+    /* background-color: white; */
   }
 </style>

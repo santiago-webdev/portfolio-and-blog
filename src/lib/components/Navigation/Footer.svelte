@@ -38,35 +38,28 @@
         <li>
           <a
             href="https://github.com/santigo-zero/"
-            aria-label="Link to my GitHub profile">GitHub</a
-          >
+            aria-label="Link to my GitHub profile">GitHub</a>
         </li>
         <li>
           <a
             href="https://github.com/santigo-zero/"
-            aria-label="Link to my GitHub profile">GitHub</a
-          >
+            aria-label="Link to my GitHub profile">GitHub</a>
         </li>
         <li>
           <a
             href="https://github.com/santigo-zero/"
-            aria-label="Link to my GitHub profile">GitHub</a
-          >
+            aria-label="Link to my GitHub profile">GitHub</a>
         </li>
         <li>
           <a
             href="https://github.com/santigo-zero/"
-            aria-label="Link to my GitHub profile">GitHub</a
-          >
+            aria-label="Link to my GitHub profile">GitHub</a>
         </li>
-        <!-- <li class="separator">•</li> -->
         <li>
           <a
             href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/"
-            aria-label="Link to my LinkedIn profile"
-          >
-            LinkedIn</a
-          >
+            aria-label="Link to my LinkedIn profile">
+            LinkedIn</a>
         </li>
       </ul>
       <div class="aboutme">
@@ -79,24 +72,36 @@
     <div class="wrapper-bottom">
       <section class="bottom wider">
         <div class="copyright">
-          <small
-            >(c) GPL-3.0 {year}
-            <span class="separator">•</span>
-            All Rights Reserved.</small
-          >
+          <small>
+            (c) {year}
+            <div aria-orientation="vertical" role="separator">•</div>
+            All Rights Reserved
+            <div aria-orientation="vertical" role="separator">•</div>
+            GPL-3.0
+          </small>
         </div>
-        <small
-          >Designed & Built with <iconify-icon icon="lucide:heart" /> by Santiago</small
-        >
+
         <a
           href="https://github.com/santigo-zero/santigo-zero.github.io"
-          aria-label="Link to git repository for this site at Github"
-          >Repository at<iconify-icon icon="lucide:github" />-
+          aria-label="Link to git repository for this site at Github">
+          Repository <iconify-icon
+            aria-label="GitHub icon"
+            icon="simple-icons:github" />
+          <div aria-orientation="vertical" role="separator">-</div>
           <iconify-icon icon="lucide:star" />
           <span>
             {ghStars}
           </span>
         </a>
+
+        <a
+          href="https://github.com/santigo-zero/santigo-zero.github.io"
+          aria-label="Link to git repository for this site at Github">
+          <small
+            >Designed & Built with <iconify-icon icon="lucide:heart" /> by Santiago</small>
+        </a>
+        <!-- Open Source and powered by -->
+        <!--          <IconSvelteKit /> -->
       </section>
     </div>
   </div>
@@ -121,14 +126,6 @@
   a {
     display: flex;
     place-items: center;
-  }
-
-  a:hover span::before {
-    content: 'nth(';
-  }
-
-  a:hover span::after {
-    content: ')';
   }
 
   section {
@@ -160,7 +157,14 @@
     flex-wrap: wrap;
     gap: 1.5rem;
     padding: 1.5rem 0;
-    color: var(--clr-text-muted);
+  }
+
+  .bottom a {
+    display: flex;
+    place-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    /* flex-direction: column; */
   }
 
   .upper {
@@ -184,10 +188,6 @@
   }
 
   @media screen and (max-width: 48rem) {
-    .separator {
-      display: none;
-    }
-
     .bottom {
       justify-content: space-around;
     }

@@ -58,8 +58,7 @@
   on:click={() => console.log('test')}
   class={complex ? 'attn attnactive' : ''}
   aria-keyshortcuts="Control+K"
-  on:click={toggleModal}
->
+  on:click={toggleModal}>
   <IconSearch />
   {#if complex}
     <span> &nbsp;&nbsp;&nbsp </span>
@@ -70,8 +69,7 @@
   class="wide"
   on:close={() => (value = '')}
   on:cancel={() => (value = '')}
-  bind:this={modal}
->
+  bind:this={modal}>
   <form on:submit|preventDefault={handleSubmit}>
     <label for="search">Search for a blog post:</label>
     <div class="searchbar">
@@ -85,8 +83,7 @@
         type="search"
         id="search"
         autocomplete="off"
-        on:input={() => searchHandler(value)}
-      />
+        on:input={() => searchHandler(value)} />
     </div>
   </form>
   <ul style:display={value.length ? 'grid' : 'none'}>

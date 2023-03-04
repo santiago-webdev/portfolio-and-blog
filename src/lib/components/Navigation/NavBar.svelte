@@ -50,21 +50,18 @@
   class:scrollY
   class:banner={!onDesktop && expMenu && scrollY > 30}
   use:navToggle
-  use:loadNav
->
+  use:loadNav>
   <div id="main-navigation" class="wider">
     <div class="wrapper-left">
       <a href="{base}/" aria-label="Logo of this site and link to Home"
-        >{(onDesktop && AUTHOR) || 'SG'}</a
-      >
+        >{(onDesktop && AUTHOR) || 'SG'}</a>
       <WidgetModal />
     </div>
     <button
       aria-label="Toggle navigation list"
       aria-expanded={expMenu}
       style:display={onDesktop ? 'none' : ''}
-      on:click={() => (expMenu = !expMenu)}
-    >
+      on:click={() => (expMenu = !expMenu)}>
       <!-- TODO(santigo-zero): Use an icon here and conditional rendering -->
       {#if expMenu}
         <iconify-icon icon="lucide:x" width="26" height="26" />
@@ -77,8 +74,7 @@
         {#each $navItems as item}
           <Separator
             render={item.separator}
-            orientation={onDesktop ? 'vertical' : 'horizontal'}
-          />
+            orientation={onDesktop ? 'vertical' : 'horizontal'} />
           <a
             aria-current={item.href === $page.url.pathname &&
             $page.url.pathname.startsWith(item.href)
@@ -86,8 +82,7 @@
               : undefined}
             aria-label="Link to {item.label}"
             class={item.decoration ? 'act' : 'trn-border'}
-            href={item.href}>{item.label}</a
-          >
+            href={item.href}>{item.label}</a>
         {/each}
       </div>
     {/if}

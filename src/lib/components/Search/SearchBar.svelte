@@ -40,8 +40,7 @@
     ? 'wide attn attn-focus'
     : 'wide attn attn-gradient-border'}
   class:form-modal={modal}
-  on:submit|preventDefault={handleSubmit}
->
+  on:submit|preventDefault={handleSubmit}>
   <button aria-label="Go to selected blog" type="submit">
     <IconSearch />
   </button>
@@ -56,8 +55,7 @@
     type="search"
     id="search"
     list="search-terms"
-    autocomplete="off"
-  />
+    autocomplete="off" />
   {#if !modal}
     <kbd>Ctrl K</kbd>
   {/if}

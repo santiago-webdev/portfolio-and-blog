@@ -24,13 +24,9 @@ button {
 }
 
 [data-theme='dark'] {
-  --base-dark-background-000: hsl(240, 8%, 14%);
   --base-dark-background-150: #181a20;
   --base-dark-background-200: #2b2a33;
   --base-dark-background-300: #37373f;
-
-  --base-blue-background-200: hsl(240, 8%, 19%); /* #2d2d34 */
-  --base-blue-background-200-200: hsl(240, 8%, 23%); /* #2d2d34 */
 
   --accent-violet: #49364c;
   --accent-purple: #915268;
@@ -108,25 +104,22 @@ button {
   --clr-stone-800: #292524;
   --clr-stone-900: #1c1917;
 
-  --bttn-szb-100: 0.6rem;
-  --bttn-szh-100: 1.2rem;
-
   --clr-title: hsl(222, 33%, 83%);
   --clr-subtitle: hsl(222, 33%, 85%);
   --clr-text: hsl(222, 20%, 90%);
 
-  --clr-text-muted: hsl(228, 3%, 59%);
-  --border-muted: 1px solid var(--clr-text-muted);
-  --clr-ui-muted: var(--clr-pale-800);
+  --clr-muted-100: hsl(240, 5%, 30%);
+  --clr-muted-200: hsl(240, 5%, 40%);
+  --clr-muted-300: hsl(240, 5%, 50%);
+  --clr-muted-400: hsl(240, 5%, 60%);
 
   --clr-hover: var(--clr-slate-400);
   --clr-hover-bg: var(--clr-slate-400);
   --clr-clicked: var(--clr-stone-700);
 
-  --clr-background: var(--base-dark-background-000);
-
-  --clr-background-alt: var(--base-blue-background-200);
-  --clr-background-alt-alt: var(--base-blue-background-200-200);
+  --clr-background: hsl(240, 8%, 14%);
+  --clr-background-alt: hsl(240, 8%, 19%);
+  --clr-background-alt-alt: hsl(240, 8%, 23%);
   --clr-background-alt-blur: rgba(45 45 52 / 0.8);
   --clr-border-card: rgba(49, 49, 57, 1);
 

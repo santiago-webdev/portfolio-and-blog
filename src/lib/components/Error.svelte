@@ -12,8 +12,7 @@
   <!-- TODO(santigo-zero): Use the size of an h3 for this h2 -->
   <p>You can either use the search bar located in the navbar or:</p>
   <a href="{base}/" aria-label="Link to go back to home" class="attn attnactive"
-    >Go back Home</a
-  >
+    >Go back Home</a>
 </div>
 
 <style>
