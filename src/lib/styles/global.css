@@ -197,10 +197,12 @@ strong {
 
 .wide {
   width: min(100% - 1em, var(--wide));
+  margin-inline: auto;
 }
 
 .wider {
   width: min(100% - 1em, var(--wider));
+  margin-inline: auto;
 }
 
 .banner {

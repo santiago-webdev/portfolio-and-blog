@@ -39,30 +39,32 @@
 
 <main>
   <header class="banner wide">
-    {#if isHollow}
-      <h1>
-        <Hollow color={'var(--clr-title)'}>{hollowPrefix}</Hollow>
-        {fillSuffix}
-      </h1>
-    {:else}
-      <h1>{title}</h1>
-    {/if}
-    <p>{description}</p>
-    {#if !finished}
-      <div class="wip">
-        <small> 🏗 Construction site, keep out 🏗️ </small>
-        <small> 🚧 Authorized personnel only 🚧 </small>
-      </div>
-    {/if}
-    <button
-      class="attn-border attn trn-border"
-      on:click={() => (showRelative = !showRelative)}>
-      <small>
-        <iconify-icon icon="lucide:calendar" />: {showRelative
-          ? dateRelative
-          : dateReadable}
-      </small>
-    </button>
+    <div class="wide">
+      {#if isHollow}
+        <h1>
+          <Hollow color={'var(--clr-title)'}>{hollowPrefix}</Hollow>
+          {fillSuffix}
+        </h1>
+      {:else}
+        <h1>{title}</h1>
+      {/if}
+      <p>{description}</p>
+      {#if !finished}
+        <div class="wip">
+          <small> 🏗 Construction site, keep out 🏗️ </small>
+          <small> 🚧 Authorized personnel only 🚧 </small>
+        </div>
+      {/if}
+      <button
+        class="attn-border attn trn-border"
+        on:click={() => (showRelative = !showRelative)}>
+        <small>
+          <iconify-icon icon="lucide:calendar" />: {showRelative
+            ? dateRelative
+            : dateReadable}
+        </small>
+      </button>
+    </div>
   </header>
   <article class="wide">
     <slot />
