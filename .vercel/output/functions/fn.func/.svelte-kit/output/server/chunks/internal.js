@@ -132,7 +132,7 @@ const options = {
     <style>
       @font-face {
         font-family: 'Manrope';
-        src: url('` + assets + "/Manrope[wght].woff2')\n            format('woff2 supports variations'),\n          url('" + assets + "/Manrope[wght].woff2')\n            format('woff2-variations');\n        font-weight: 200 800;\n      }\n    </style>\n    <script>\n      if (\n        localStorage.theme === 'dark' ||\n        (!localStorage.theme &&\n          window.matchMedia('(prefers-color-scheme: dark)').matches)\n      ) {\n        document.documentElement.dataset.theme = 'dark';\n      }\n    <\/script>\n    " + head + '\n  </head>\n  <body data-sveltekit-preload-data="hover">\n    <div style="display: contents">' + body + "</div>\n  </body>\n</html>\n",
+        src: url('` + assets + "/Manrope[wght].woff2')\n            format('woff2 supports variations'),\n          url('" + assets + "/Manrope[wght].woff2')\n            format('woff2-variations');\n        font-weight: 200 800;\n        font-display: swap;\n      }\n    </style>\n    <script>\n      if (\n        localStorage.theme === 'dark' ||\n        (!localStorage.theme &&\n          window.matchMedia('(prefers-color-scheme: dark)').matches)\n      ) {\n        document.documentElement.dataset.theme = 'dark';\n      }\n    <\/script>\n    " + head + '\n  </head>\n  <body data-sveltekit-preload-data="hover">\n    <div style="display: contents">' + body + "</div>\n  </body>\n</html>\n",
     error: ({ status, message }) => '<!DOCTYPE html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -180,7 +180,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "zv3toy"
+  version_hash: "kri3md"
 };
 function get_hooks() {
   return import("./hooks.server.js");
