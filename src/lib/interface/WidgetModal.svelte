@@ -135,9 +135,9 @@
   }
 
   :modal {
-    padding: 1rem;
     border: 0;
     margin: 0;
+    padding: 0;
     margin-inline: auto;
     top: 5rem;
     border-radius: 1.1rem;
@@ -149,6 +149,7 @@
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
   }
 
   :modal button {
@@ -158,6 +159,7 @@
   form {
     display: flex;
     flex-direction: column;
+    padding: 1rem;
     gap: 1rem;
     /* flex-wrap: wrap; */
   }
