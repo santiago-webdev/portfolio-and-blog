@@ -136,6 +136,24 @@ button {
   color: #f3f2f9;
 }
 
+[data-theme='dark']::-webkit-scrollbar {
+  width: 8px;
+  background-color: #fff;
+}
+
+[data-theme='dark']::-webkit-scrollbar-track {
+  background-color: var(--clr-background);
+}
+
+[data-theme='dark']::-webkit-scrollbar-thumb {
+  background-color: var(--accent-peachy);
+  border-radius: 9rem;
+}
+
+[data-theme='dark']::-webkit-scrollbar-thumb:hover {
+  background-color: var(--clr-muted-500);
+}
+
 html {
   font-family: var(--ff-dflt);
 }
