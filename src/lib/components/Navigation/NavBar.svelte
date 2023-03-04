@@ -76,8 +76,8 @@
             render={item.separator}
             orientation={onDesktop ? 'vertical' : 'horizontal'} />
           <a
-            aria-current={item.href === $page.url.pathname &&
-            $page.url.pathname.startsWith(item.href)
+            aria-current={item.href === $page.url.pathname ||
+            ($page.url.pathname.startsWith(item.href) && `/` !== item.href)
               ? 'page'
               : undefined}
             aria-label="Link to {item.label}"
