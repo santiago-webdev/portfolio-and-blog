@@ -46,9 +46,9 @@ const WidgetModal = create_ssr_component(($$result, $$props, $$bindings, slots) 
 <button class="${escape(null_to_empty(complex ? "attn attnactive" : ""), true) + " svelte-26l9w7"}" aria-keyshortcuts="${"Control+K"}" aria-label="${"Click to open the modal box to search for blogs"}">${validate_component(IconSearch, "IconSearch").$$render($$result, {}, {}, {})}
   ${complex ? `<span class="${"svelte-26l9w7"}">    </span>
     <kbd class="${"svelte-26l9w7"}">Ctrl K</kbd>` : ``}</button>
-<dialog class="${"wide svelte-26l9w7"}"${add_attribute("this", modal, 0)}><form class="${"svelte-26l9w7"}"><label for="${"search"}" class="${"svelte-26l9w7"}">Search for a blog post:</label>
+<dialog class="${"wide svelte-26l9w7"}"${add_attribute("this", modal, 0)}><form class="${"svelte-26l9w7"}"><label for="${"modal-search"}" class="${"svelte-26l9w7"}">Search for a blog post:</label>
     <div class="${"searchbar svelte-26l9w7"}"><button aria-label="${"Go to selected blog"}" type="${"submit"}" class="${"svelte-26l9w7"}">${validate_component(IconSearch, "IconSearch").$$render($$result, {}, {}, {})}</button>
-      <input placeholder="${" Search for a blog post"}" type="${"search"}" id="${"search"}" autocomplete="${"off"}" class="${"svelte-26l9w7"}"${add_attribute("value", value, 0)}${add_attribute("this", input, 0)}></div></form>
+      <input placeholder="${" Search for a blog post"}" type="${"search"}" id="${"modal-search"}" autocomplete="${"off"}" class="${"svelte-26l9w7"}"${add_attribute("value", value, 0)}${add_attribute("this", input, 0)}></div></form>
   <ul class="${"svelte-26l9w7"}"${add_styles({
     "display": value.length ? "grid" : "none"
   })}>${each($FilteredPosts.slice(0, 4), (post) => {
@@ -91,15 +91,7 @@ const NavBar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
     <button aria-label="${"Toggle navigation list"}"${add_attribute("aria-expanded", expMenu, 0)} class="${"svelte-13xk5iq"}"${add_styles({ "display": onDesktop ? "none" : "" })}>
       ${expMenu ? `<iconify-icon icon="${"lucide:x"}" width="${"26"}" height="${"26"}"></iconify-icon>` : `<iconify-icon icon="${"lucide:grip"}" width="${"26"}" height="${"26"}"></iconify-icon>`}</button>
     ${expMenu || onDesktop ? `<div class="${"navItems svelte-13xk5iq"}">${each($navItems, (item) => {
-    return `${validate_component(Separator, "Separator").$$render(
-      $$result,
-      {
-        render: item.separator,
-        orientation: onDesktop ? "vertical" : "horizontal"
-      },
-      {},
-      {}
-    )}
+    return `${item.separator ? `<div style="${"border-left: 1px solid var(--clr-muted-100); height: 2rem"}" aria-orientation="${"vertical"}" role="${"separator"}"></div>` : ``}
           <a${add_attribute(
       "aria-current",
       item.href === $page.url.pathname || $page.url.pathname.startsWith(item.href) && `/` !== item.href ? "page" : void 0,
