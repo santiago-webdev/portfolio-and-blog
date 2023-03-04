@@ -86,6 +86,7 @@
           aria-label="Link to git repository for this site at Github">
           Repository <iconify-icon
             aria-label="GitHub icon"
+            role='img'
             icon="simple-icons:github" />
           <div aria-orientation="vertical" role="separator">-</div>
           <iconify-icon icon="lucide:star" />
