@@ -55,9 +55,9 @@
 <svelte:window bind:outerWidth on:keydown={onCtrlK} />
 
 <button
-  on:click={() => console.log('test')}
   class={complex ? 'attn attnactive' : ''}
   aria-keyshortcuts="Control+K"
+  aria-label="Click to open the modal box to search for blogs"
   on:click={toggleModal}>
   <IconSearch />
   {#if complex}

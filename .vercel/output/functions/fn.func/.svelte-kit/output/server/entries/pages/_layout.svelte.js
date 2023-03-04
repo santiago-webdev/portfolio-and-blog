@@ -43,7 +43,7 @@ const WidgetModal = create_ssr_component(($$result, $$props, $$bindings, slots) 
   $$unsubscribe_FilteredPosts();
   return `
 
-<button class="${escape(null_to_empty(complex ? "attn attnactive" : ""), true) + " svelte-26l9w7"}" aria-keyshortcuts="${"Control+K"}">${validate_component(IconSearch, "IconSearch").$$render($$result, {}, {}, {})}
+<button class="${escape(null_to_empty(complex ? "attn attnactive" : ""), true) + " svelte-26l9w7"}" aria-keyshortcuts="${"Control+K"}" aria-label="${"Click to open the modal box to search for blogs"}">${validate_component(IconSearch, "IconSearch").$$render($$result, {}, {}, {})}
   ${complex ? `<span class="${"svelte-26l9w7"}">    </span>
     <kbd class="${"svelte-26l9w7"}">Ctrl K</kbd>` : ``}</button>
 <dialog class="${"wide svelte-26l9w7"}"${add_attribute("this", modal, 0)}><form class="${"svelte-26l9w7"}"><label for="${"search"}" class="${"svelte-26l9w7"}">Search for a blog post:</label>
