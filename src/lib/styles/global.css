@@ -16,11 +16,15 @@ br {
   margin-top: var(--gap);
 }
 
-label,
 input,
 button {
   color: inherit;
   background-color: inherit;
+}
+
+label {
+  color: var(--clr-muted-700);
+  font-variation-settings: 'wght' 300;
 }
 
 [data-theme='dark'] {
@@ -120,6 +124,7 @@ button {
   --clr-muted-400: hsl(240, 5%, 50%);
   --clr-muted-500: hsl(240, 5%, 55%);
   --clr-muted-600: hsl(240, 5%, 60%);
+  --clr-muted-700: hsl(240, 5%, 70%);
 
   /* Background colors, used in buttons, cards and borders to make this cards
    * shiny.
@@ -430,7 +435,22 @@ strong {
   text-decoration: underline solid var(--accent-peachy) 3px;
 }
 
-pre {
+[aria-orientation='vertical'][role='separator'] {
+  border-left: 1px solid var(--clr-muted-100);
+  height: 2rem;
+}
+
+hr[aria-orientation='horizontal'] {
+  width: 100%;
+  margin: 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 1px solid var(--clr-muted-100);
+}
+
+pre,
+code {
   width: min(100%, var(--wide));
   background-color: var(--clr-bg-400);
   word-wrap: break-word;

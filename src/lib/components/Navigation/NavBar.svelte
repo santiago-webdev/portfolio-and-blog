@@ -77,7 +77,6 @@
         {#each $navItems as item}
           {#if item.separator}
             <div
-              style="border-left: 1px solid var(--clr-muted-100); height: 2rem"
               aria-orientation="vertical"
               role="separator" />
           {/if}

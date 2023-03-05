@@ -48,6 +48,11 @@
       }
     })
   );
+  //
+  // onMount(() => {
+  //   modal.showModal()
+  //   value = 'test'
+  // })
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
   $: complex = onDesktop || !touchSupport;
 </script>
@@ -88,7 +93,7 @@
   </form>
   <ul style:display={value.length ? 'grid' : 'none'}>
     {#each $FilteredPosts.slice(0, 4) as post}
-      <Separator render orientation="horizontal" />
+      <hr aria-orientation="horizontal" />
       <li>
         <a on:click={() => toggleModal()} href="{base}/blog{post.href}">
           <article>
@@ -206,7 +211,12 @@
   /*   color: transparent; */
   /* } */
 
-  ul {
-    width: 100%;
+  ul:empty {
+    padding: 0;
+  }
+
+  li {
+    padding: 0.8rem;
+    padding-left: 0;
   }
 </style>
