@@ -8,7 +8,7 @@
   </h1>
   <p>
     I'm a web developer and here we'll discuss about <strong>
-      web development
+      web de&shy;vel&shy;op&shy;ment
     </strong> and show you my projects while at it.
   </p>
   <div class="content-navigation">

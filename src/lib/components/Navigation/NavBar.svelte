@@ -98,7 +98,7 @@
 <style>
   nav {
     inset: 3px 0 auto 0;
-    position: fixed;
+    position: sticky;
     background-color: var(--clr-bg-400);
     padding: 0.4rem 0;
     transition: all 0.3s;
