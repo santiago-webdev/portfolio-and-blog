@@ -76,9 +76,7 @@
       <div class="navItems">
         {#each $navItems as item}
           {#if item.separator}
-            <div
-              aria-orientation="vertical"
-              role="separator" />
+            <div aria-orientation="vertical" role="separator" />
           {/if}
           <a
             aria-current={item.href === $page.url.pathname ||

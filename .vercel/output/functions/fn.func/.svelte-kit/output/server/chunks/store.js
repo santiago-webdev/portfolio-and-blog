@@ -1,4 +1,4 @@
-import { i as getContext, c as create_ssr_component, e as escape, d as subscribe, b as add_attribute, v as validate_component, j as get_store_value } from "./index2.js";
+import { i as getContext, c as create_ssr_component, e as escape, b as subscribe, f as add_attribute, v as validate_component, j as get_store_value } from "./index2.js";
 import { T as TITLE_BLOG_COMPOSE } from "./config.js";
 /* empty css                                      */import { r as readable, w as writable } from "./index.js";
 const getStores = () => {
@@ -42,6 +42,28 @@ class Post {
     this.metadata = metadata2;
   }
 }
+const relativeTime = (now, postDate) => {
+  const difference = now.getTime() - postDate.getTime();
+  const formatter = new Intl.RelativeTimeFormat("en", { style: "long" });
+  let value;
+  let unit;
+  if (difference < 1e3) {
+    return "just now";
+  } else if (difference < 6e4) {
+    value = Math.floor(difference / 1e3);
+    unit = "second";
+  } else if (difference < 36e5) {
+    value = Math.floor(difference / 6e4);
+    unit = "minute";
+  } else if (difference < 864e5) {
+    value = Math.floor(difference / 36e5);
+    unit = "hour";
+  } else {
+    value = Math.floor(difference / 864e5);
+    unit = "day";
+  }
+  return formatter.format(-value, unit);
+};
 const readableDate = (dateString) => {
   const date2 = new Date(dateString);
   const formatter = new Intl.DateTimeFormat("en", {
@@ -103,7 +125,7 @@ const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.def
 }, Symbol.toStringTag, { value: "Module" }));
 const Template_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "article.svelte-18ratwu.svelte-18ratwu{display:grid;margin-inline:auto}header.svelte-18ratwu p.svelte-18ratwu{color:var(--clr-subtitle)}button.svelte-18ratwu.svelte-18ratwu{padding:0.615rem 1.23rem;margin-inline:auto;font-size:unset}small.svelte-18ratwu.svelte-18ratwu:active{color:inherit;background-color:inherit}.wip.svelte-18ratwu.svelte-18ratwu{display:grid;place-items:center}",
+  code: "article.svelte-4xdosg.svelte-4xdosg{display:grid;margin-inline:auto}.wrapper-header.svelte-4xdosg.svelte-4xdosg{display:grid;gap:1rem}.wrapper-header.svelte-4xdosg p.svelte-4xdosg{color:var(--clr-subtitle);max-width:44ch;margin-inline:auto}small.svelte-4xdosg.svelte-4xdosg{margin-inline:auto;color:var(--clr-muted-600)}.wip.svelte-4xdosg.svelte-4xdosg{display:grid;place-items:center}time.svelte-4xdosg.svelte-4xdosg{display:flex;place-items:center}",
   map: null
 };
 const Template = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -113,7 +135,8 @@ const Template = create_ssr_component(($$result, $$props, $$bindings, slots) => 
   let { date: date2 = "" } = $$props;
   let { description: description2 = "" } = $$props;
   let { finished = false } = $$props;
-  let dateReadable = "";
+  const dateRelative = relativeTime(new Date(), new Date(date2));
+  const dateReadable = readableDate(date2);
   if ($$props.title === void 0 && $$bindings.title && title2 !== void 0)
     $$bindings.title(title2);
   if ($$props.date === void 0 && $$bindings.date && date2 !== void 0)
@@ -124,12 +147,14 @@ const Template = create_ssr_component(($$result, $$props, $$bindings, slots) => 
     $$bindings.finished(finished);
   $$result.css.add(css);
   $$unsubscribe_page();
-  return `<main><header class="${"banner wide svelte-18ratwu"}"><div class="${"wide"}">${`<h1>${escape(title2)}</h1>`}
-      <p class="${"svelte-18ratwu"}">${escape(description2)}</p>
-      ${!finished ? `<div class="${"wip svelte-18ratwu"}"><small class="${"svelte-18ratwu"}">🏗 Construction site, keep out 🏗️ </small>
-          <small class="${"svelte-18ratwu"}">🚧 Authorized personnel only 🚧 </small></div>` : ``}
-      <button class="${"attn-border attn trn-border svelte-18ratwu"}"><small class="${"svelte-18ratwu"}"><time${add_attribute("datetime", date2, 0)}><iconify-icon icon="${"lucide:calendar"}"></iconify-icon>: ${escape(dateReadable)}</time></small></button></div></header>
-  <article class="${"wide svelte-18ratwu"}">${slots.default ? slots.default({}) : ``}</article></main>
+  return `<main><header id="${"page-header-info"}" class="${"banner"}"><div aria-labelledby="${"page-header-info"}" class="${"wrapper-header wide svelte-4xdosg"}">${`<h1>${escape(title2)}</h1>`}
+      <p class="${"svelte-4xdosg"}">${escape(description2)}</p>
+      ${!finished ? `<div class="${"wip svelte-4xdosg"}"><small class="${"svelte-4xdosg"}">🏗 Construction site, keep out 🏗️ </small>
+          <small class="${"svelte-4xdosg"}">🚧 Authorized personnel only 🚧 </small></div>` : ``}
+      <small class="${"svelte-4xdosg"}"><time${add_attribute("datetime", date2, 0)} class="${"svelte-4xdosg"}"><iconify-icon icon="${"lucide:calendar"}"></iconify-icon>: ${escape(dateRelative)}
+          <div aria-orientation="${"vertical"}" role="${"separator"}">•</div>
+          ${escape(dateReadable)}</time></small></div></header>
+  <article class="${"wide svelte-4xdosg"}">${slots.default ? slots.default({}) : ``}</article></main>
 
 ${$$result.head += `<!-- HEAD_svelte-1nv67zy_START -->${$$result.title = `<title>${escape(title2)}${escape(TITLE_BLOG_COMPOSE)}</title>`, ""}<meta name="${"description"}"${add_attribute("content", description2, 0)}><meta itemprop="${"name"}"${add_attribute("content", title2, 0)}><meta itemprop="${"description"}"${add_attribute("content", description2, 0)}><meta itemprop="${"image"}" content="${""}"><meta property="${"og:url"}"${add_attribute("content", $page.url.toString(), 0)}><meta property="${"og:type"}" content="${"website"}"><meta property="${"og:title"}"${add_attribute("content", title2, 0)}><meta property="${"og:description"}"${add_attribute("content", description2, 0)}><meta property="${"og:image"}" content="${""}"><meta name="${"twitter:card"}" content="${"summary_large_image"}"><meta name="${"twitter:title"}"${add_attribute("content", title2, 0)}><meta name="${"twitter:description"}"${add_attribute("content", description2, 0)}><meta name="${"twitter:image"}" content="${""}"><!-- HEAD_svelte-1nv67zy_END -->`, ""}`;
 });
@@ -168,7 +193,7 @@ const __vite_glob_0_4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.def
 }, Symbol.toStringTag, { value: "Module" }));
 const metadata$2 = {
   "title": "How this blog was built",
-  "date": "2023-03-05T00:00:00.000Z",
+  "date": "2023-01-27 20:59",
   "description": "How to build your own static blog written in sveltekit and deploy it to GitHub Pages.",
   "finished": false
 };

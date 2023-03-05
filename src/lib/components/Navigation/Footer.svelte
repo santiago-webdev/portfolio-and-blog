@@ -2,8 +2,6 @@
   import { dev } from '$app/environment';
   import { AUTHOR, AUTHOR_NAME } from '$lib/config';
 
-  const year = new Date().getFullYear();
-
   const getGithubStars = async () => {
     if (dev) return 0;
     try {
@@ -74,7 +72,7 @@
       <section class="bottom wider">
         <div class="copyright">
           <small>
-            (c) {year}
+            (c) {new Date().getFullYear()}
             <div aria-orientation="vertical" role="separator">•</div>
             All Rights Reserved
             <div aria-orientation="vertical" role="separator">•</div>
@@ -101,7 +99,8 @@
           aria-label="Link to git repository for this site at Github">
           <small
             >Designed & Built with <iconify-icon icon="lucide:heart" /> by
-            <address>{AUTHOR_NAME}</address></small>
+            <address>{AUTHOR_NAME}</address>
+          </small>
         </a>
         <!-- Open Source and powered by -->
         <!--          <IconSvelteKit /> -->

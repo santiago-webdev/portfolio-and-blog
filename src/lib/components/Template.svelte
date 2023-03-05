@@ -10,9 +10,8 @@
   export let description = '';
   export let finished = false;
 
-  let dateRelative = '';
-  let dateReadable = '';
-  let showRelative = false;
+  const dateRelative = relativeTime(new Date(), new Date(date));
+  const dateReadable = readableDate(date);
 
   let isHollow = false;
   let hollowPrefix = '';
@@ -30,10 +29,6 @@
         }
       });
     }
-
-    dateRelative = relativeTime(new Date(), new Date(date));
-    dateReadable = readableDate(date);
-    // setTimeout(() => (showRelative = true), 3000);
   });
 </script>
 
@@ -55,17 +50,13 @@
           <small> 🚧 Authorized personnel only 🚧 </small>
         </div>
       {/if}
-      <button
-        class="attn-border attn trn-border"
-        on:click={() => (showRelative = !showRelative)}>
-        <small>
-          <time datetime={date}>
-            <iconify-icon icon="lucide:calendar" />: {showRelative
-              ? dateRelative
-              : dateReadable}
-          </time>
-        </small>
-      </button>
+      <small>
+        <time datetime={date}>
+          <iconify-icon icon="lucide:calendar" />: {dateRelative}
+          <div aria-orientation="vertical" role="separator">•</div>
+          {dateReadable}
+        </time>
+      </small>
     </div>
   </header>
   <article class="wide">
@@ -118,17 +109,12 @@
     margin-inline: auto;
   }
 
-  button {
-    padding: 0.615rem 1.23rem;
+  small {
+    /* padding: 0.615rem 1.23rem; */
     /* max-width: max-content; */
+    /* font-size: unset; */
     margin-inline: auto;
-    font-size: unset;
     color: var(--clr-muted-600);
-  }
-
-  small:active {
-    color: inherit;
-    background-color: inherit;
   }
 
   .wip {

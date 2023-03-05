@@ -1,4 +1,4 @@
-import { c as create_ssr_component, b as add_attribute, d as subscribe, e as escape, f as null_to_empty, v as validate_component, g as add_styles, h as each } from "../../chunks/index2.js";
+import { c as create_ssr_component, b as subscribe, e as escape, d as null_to_empty, v as validate_component, f as add_attribute, g as add_styles, h as each } from "../../chunks/index2.js";
 import { b as base } from "../../chunks/paths.js";
 import { F as FilteredPosts, i as inPixels, r as readableDate, n as navigating, p as page } from "../../chunks/store.js";
 import { w as writable } from "../../chunks/index.js";
@@ -14,23 +14,9 @@ const navItems = writable([
   { label: "Contact", href: `${base}/contact`, decoration: "border" }
 ]);
 const Separator_svelte_svelte_type_style_lang = "";
-const css$6 = {
-  code: "hr.svelte-yl5m4k{width:100%;height:1px;background-color:blue;border:0}.ui-divider.svelte-yl5m4k{height:1.6em;border-left:1px solid var(--clr-muted-300)}",
-  map: null
-};
-const Separator = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { render = false } = $$props;
-  let { orientation } = $$props;
-  if ($$props.render === void 0 && $$bindings.render && render !== void 0)
-    $$bindings.render(render);
-  if ($$props.orientation === void 0 && $$bindings.orientation && orientation !== void 0)
-    $$bindings.orientation(orientation);
-  $$result.css.add(css$6);
-  return `${render ? `${orientation === "horizontal" ? `<hr class="${"svelte-yl5m4k"}">` : `${orientation === "vertical" ? `<div${add_attribute("aria-orientation", orientation, 0)} role="${"separator"}" class="${"ui-divider svelte-yl5m4k"}"></div>` : ``}`}` : ``}`;
-});
 const WidgetModal_svelte_svelte_type_style_lang = "";
 const css$5 = {
-  code: "button.svelte-kpv43e.svelte-kpv43e{display:flex;place-items:center;padding:0.2rem 0.8rem;gap:0.6rem;border-radius:1rem}span.svelte-kpv43e.svelte-kpv43e{text-decoration:underline solid var(--accent-orange) 0.15em;text-underline-offset:0em}kbd.svelte-kpv43e.svelte-kpv43e{pointer-events:none;border-top:1px solid var(--clr-text-muted);border-left:1px solid var(--clr-text-muted);border-right:3px solid var(--clr-text-muted);border-bottom:3px solid var(--clr-text-muted);border-radius:0.4rem;padding-inline:0.3rem}.svelte-kpv43e.svelte-kpv43e:modal{padding:0;margin:0;margin-inline:auto;top:5vh}.svelte-kpv43e.svelte-kpv43e:modal::backdrop{background-color:rgba(31 31 37 / 0.8);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 8px 32px 0 rgba(0, 0, 0, 0.2);cursor:pointer}.svelte-kpv43e:modal>.svelte-kpv43e{padding:1rem}.svelte-kpv43e:modal button.svelte-kpv43e{padding-left:0}form.svelte-kpv43e.svelte-kpv43e{display:flex;flex-direction:column;gap:1rem}.searchbar.svelte-kpv43e.svelte-kpv43e{display:flex}input.svelte-kpv43e.svelte-kpv43e:-moz-placeholder,input.svelte-kpv43e.svelte-kpv43e::-moz-placeholder{opacity:1}input[type='search'].svelte-kpv43e.svelte-kpv43e::-ms-clear{display:none}input[type='search'].svelte-kpv43e.svelte-kpv43e::-webkit-search-cancel-button{display:none}input.svelte-kpv43e.svelte-kpv43e{border:none;outline:none;width:100%}ul.svelte-kpv43e.svelte-kpv43e{width:100%}",
+  code: "button.svelte-rid665.svelte-rid665{display:flex;place-items:center;padding:0.2rem 0.8rem;gap:0.6rem;border-radius:1rem}span.svelte-rid665.svelte-rid665{text-decoration:underline solid var(--accent-orange) 0.15em;text-underline-offset:0em}kbd.svelte-rid665.svelte-rid665{pointer-events:none;border-top:1px solid var(--clr-text-muted);border-left:1px solid var(--clr-text-muted);border-right:3px solid var(--clr-text-muted);border-bottom:3px solid var(--clr-text-muted);border-radius:0.4rem;padding-inline:0.3rem}.svelte-rid665.svelte-rid665:modal{padding:0;margin:0;margin-inline:auto;top:5vh}.svelte-rid665.svelte-rid665:modal::backdrop{background-color:rgba(31 31 37 / 0.8);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 8px 32px 0 rgba(0, 0, 0, 0.2);cursor:pointer}.svelte-rid665:modal>.svelte-rid665{padding:1rem}.svelte-rid665:modal button.svelte-rid665{padding-left:0}form.svelte-rid665.svelte-rid665{display:flex;flex-direction:column;gap:1rem}.searchbar.svelte-rid665.svelte-rid665{display:flex}input.svelte-rid665.svelte-rid665:-moz-placeholder,input.svelte-rid665.svelte-rid665::-moz-placeholder{opacity:1}input[type='search'].svelte-rid665.svelte-rid665::-ms-clear{display:none}input[type='search'].svelte-rid665.svelte-rid665::-webkit-search-cancel-button{display:none}input.svelte-rid665.svelte-rid665{border:none;outline:none;width:100%}ul.svelte-rid665.svelte-rid665:empty{padding:0}li.svelte-rid665.svelte-rid665{padding:0.8rem;padding-left:0}",
   map: null
 };
 const WidgetModal = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -43,21 +29,21 @@ const WidgetModal = create_ssr_component(($$result, $$props, $$bindings, slots) 
   $$unsubscribe_FilteredPosts();
   return `
 
-<button class="${escape(null_to_empty(complex ? "shiny hover" : ""), true) + " svelte-kpv43e"}" aria-keyshortcuts="${"Control+K"}" aria-label="${"Click to open the modal box to search for blogs"}">${validate_component(IconSearch, "IconSearch").$$render($$result, {}, {}, {})}
-  ${complex ? `<span class="${"svelte-kpv43e"}">    </span>
-    <kbd class="${"svelte-kpv43e"}">Ctrl K</kbd>` : ``}</button>
-<dialog class="${"wide shiny blur svelte-kpv43e"}"${add_attribute("this", modal, 0)}><form class="${"svelte-kpv43e"}"><label for="${"modal-search"}" class="${"svelte-kpv43e"}">Search for a blog post:</label>
-    <div class="${"searchbar svelte-kpv43e"}"><button aria-label="${"Go to selected blog"}" type="${"submit"}" class="${"svelte-kpv43e"}">${validate_component(IconSearch, "IconSearch").$$render($$result, {}, {}, {})}</button>
-      <input placeholder="${"Search for a blog post"}" type="${"search"}" id="${"modal-search"}" autocomplete="${"off"}" class="${"svelte-kpv43e"}"${add_attribute("value", value, 0)}${add_attribute("this", input, 0)}></div></form>
-  <ul class="${"svelte-kpv43e"}"${add_styles({
+<button class="${escape(null_to_empty(complex ? "shiny hover" : ""), true) + " svelte-rid665"}" aria-keyshortcuts="${"Control+K"}" aria-label="${"Click to open the modal box to search for blogs"}">${validate_component(IconSearch, "IconSearch").$$render($$result, {}, {}, {})}
+  ${complex ? `<span class="${"svelte-rid665"}">    </span>
+    <kbd class="${"svelte-rid665"}">Ctrl K</kbd>` : ``}</button>
+<dialog class="${"wide shiny blur svelte-rid665"}"${add_attribute("this", modal, 0)}><form class="${"svelte-rid665"}"><label for="${"modal-search"}" class="${"svelte-rid665"}">Search for a blog post:</label>
+    <div class="${"searchbar svelte-rid665"}"><button aria-label="${"Go to selected blog"}" type="${"submit"}" class="${"svelte-rid665"}">${validate_component(IconSearch, "IconSearch").$$render($$result, {}, {}, {})}</button>
+      <input placeholder="${"Search for a blog post"}" type="${"search"}" id="${"modal-search"}" autocomplete="${"off"}" class="${"svelte-rid665"}"${add_attribute("value", value, 0)}${add_attribute("this", input, 0)}></div></form>
+  <ul class="${"svelte-rid665"}"${add_styles({
     "display": value.length ? "grid" : "none"
   })}>${each($FilteredPosts.slice(0, 4), (post) => {
-    return `${validate_component(Separator, "Separator").$$render($$result, { render: true, orientation: "horizontal" }, {}, {})}
-      <li class="${"svelte-kpv43e"}"><a href="${escape(base, true) + "/blog" + escape(post.href, true)}" class="${"svelte-kpv43e"}"><article class="${"svelte-kpv43e"}"><h3 class="${"svelte-kpv43e"}">${validate_component(IconSearch, "IconSearch").$$render($$result, {}, {}, {})}
+    return `<hr aria-orientation="${"horizontal"}" class="${"svelte-rid665"}">
+      <li class="${"svelte-rid665"}"><a href="${escape(base, true) + "/blog" + escape(post.href, true)}" class="${"svelte-rid665"}"><article class="${"svelte-rid665"}"><h3 class="${"svelte-rid665"}">${validate_component(IconSearch, "IconSearch").$$render($$result, {}, {}, {})}
               ${escape(post.title)}</h3>
-            ${post.description ? `<p class="${"svelte-kpv43e"}">${escape(post.description)}</p>` : `<p class="${"svelte-kpv43e"}">No description was given.</p>`}
-            ${post.date ? `<small class="${"svelte-kpv43e"}">Published: ${escape(readableDate(post.date))}
-                <time${add_attribute("datetime", post.date, 0)} class="${"svelte-kpv43e"}"><iconify-icon icon="${"lucide:calendar"}" class="${"svelte-kpv43e"}"></iconify-icon>: ${escape(readableDate(post.date))}</time>
+            ${post.description ? `<p class="${"svelte-rid665"}">${escape(post.description)}</p>` : `<p class="${"svelte-rid665"}">No description was given.</p>`}
+            ${post.date ? `<small class="${"svelte-rid665"}">Published: ${escape(readableDate(post.date))}
+                <time${add_attribute("datetime", post.date, 0)} class="${"svelte-rid665"}"><iconify-icon icon="${"lucide:calendar"}" class="${"svelte-rid665"}"></iconify-icon>: ${escape(readableDate(post.date))}</time>
               </small>` : ``}
           </article></a>
       </li>`;
@@ -88,7 +74,7 @@ const WidgetTheme = create_ssr_component(($$result, $$props, $$bindings, slots) 
 });
 const NavBar_svelte_svelte_type_style_lang = "";
 const css$3 = {
-  code: "nav.svelte-gobibg.svelte-gobibg{inset:3px 0 auto 0;position:sticky;background-color:var(--clr-bg-400);padding:0.4rem 0;transition:all 0.3s;z-index:999;transform:translateY(-200%)}.scrollY.svelte-gobibg.svelte-gobibg{box-shadow:6px 6px 6px 0px rgba(0, 0, 0, 0.1);-webkit-box-shadow:6px 6px 6px 0px rgba(0, 0, 0, 0.1);-moz-box-shadow:6px 6px 6px 0px rgba(0, 0, 0, 0.1);background:var(--clr-bg-400-t);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}@media(prefers-reduced-motion: reduce){nav.svelte-gobibg.svelte-gobibg{transition:none}}a.svelte-gobibg.svelte-gobibg{padding:0.4em 0.8em;display:flex;place-items:center}a.svelte-gobibg.svelte-gobibg:first-child{padding-left:0}a.svelte-gobibg.svelte-gobibg:hover{color:var(--clr-txt-hover)}@media(hover: none){a.svelte-gobibg.svelte-gobibg:hover{color:inherit}}a.svelte-gobibg.svelte-gobibg:focus{color:var(--clr-txt-clicked)}#main-navigation.svelte-gobibg.svelte-gobibg{display:grid;place-items:center;margin-inline:auto;justify-content:space-between;grid-template-columns:1fr auto}button.svelte-gobibg.svelte-gobibg{display:flex;place-items:center}.navItems.svelte-gobibg.svelte-gobibg{padding-left:1rem;width:100%;display:flex;justify-self:center;place-items:center}.wrapper-left.svelte-gobibg.svelte-gobibg{display:flex;justify-content:space-between;width:100%}.widget.svelte-gobibg.svelte-gobibg{display:flex;flex-wrap:wrap;gap:1rem}@media screen and (max-width: 48rem){.navItems.svelte-gobibg.svelte-gobibg{flex-direction:column;padding:1rem;grid-column:1 / span 2}.wrapper-left.svelte-gobibg a.svelte-gobibg{padding-top:0;padding-bottom:0}}",
+  code: "nav.svelte-1yn7k8b.svelte-1yn7k8b{inset:3px 0 auto 0;position:sticky;background-color:var(--clr-bg-400);padding:0.4rem 0;transition:all 0.3s;z-index:999;transform:translateY(-200%)}.scrollY.svelte-1yn7k8b.svelte-1yn7k8b{box-shadow:6px 6px 6px 0px rgba(0, 0, 0, 0.1);-webkit-box-shadow:6px 6px 6px 0px rgba(0, 0, 0, 0.1);-moz-box-shadow:6px 6px 6px 0px rgba(0, 0, 0, 0.1);background:var(--clr-bg-400-t);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}@media(prefers-reduced-motion: reduce){nav.svelte-1yn7k8b.svelte-1yn7k8b{transition:none}}a.svelte-1yn7k8b.svelte-1yn7k8b{padding:0.4em 0.8em;display:flex;place-items:center;border-radius:1rem}a.svelte-1yn7k8b.svelte-1yn7k8b:first-child{padding-left:0}a.svelte-1yn7k8b.svelte-1yn7k8b:hover{color:var(--clr-txt-hover)}@media(hover: none){a.svelte-1yn7k8b.svelte-1yn7k8b:hover{color:inherit}}a.svelte-1yn7k8b.svelte-1yn7k8b:focus{color:var(--clr-txt-clicked)}#main-navigation.svelte-1yn7k8b.svelte-1yn7k8b{display:grid;place-items:center;margin-inline:auto;justify-content:space-between;grid-template-columns:1fr auto}button.svelte-1yn7k8b.svelte-1yn7k8b{display:flex;place-items:center}.navItems.svelte-1yn7k8b.svelte-1yn7k8b{padding-left:1rem;width:100%;display:flex;justify-self:center;place-items:center}.wrapper-left.svelte-1yn7k8b.svelte-1yn7k8b{display:flex;justify-content:space-between;width:100%}.widget.svelte-1yn7k8b.svelte-1yn7k8b{display:flex;flex-wrap:wrap;gap:1rem}@media screen and (max-width: 48rem){.navItems.svelte-1yn7k8b.svelte-1yn7k8b{flex-direction:column;padding:1rem;grid-column:1 / span 2}.wrapper-left.svelte-1yn7k8b a.svelte-1yn7k8b{padding-top:0;padding-bottom:0}}",
   map: null
 };
 const NavBar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -108,20 +94,20 @@ const NavBar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
 <nav aria-labelledby="${"main-navigation"}" class="${[
-    "artifact-ui svelte-gobibg",
+    "artifact-ui svelte-1yn7k8b",
     " " + (!onDesktop && expMenu && scrollY > 30 ? "banner" : "")
-  ].join(" ").trim()}"><div id="${"main-navigation"}" class="${"wider svelte-gobibg"}"><div class="${"wrapper-left svelte-gobibg"}"><a href="${escape(base, true) + "/"}" aria-label="${"Logo of this site and link to Home"}" class="${"svelte-gobibg"}">${escape(onDesktop && AUTHOR || "SG")}</a>
-      <div class="${"widget svelte-gobibg"}">${validate_component(WidgetModal, "WidgetModal").$$render($$result, {}, {}, {})}
+  ].join(" ").trim()}"><div id="${"main-navigation"}" class="${"wider svelte-1yn7k8b"}"><div class="${"wrapper-left svelte-1yn7k8b"}"><a href="${escape(base, true) + "/"}" aria-label="${"Logo of this site and link to Home"}" class="${"svelte-1yn7k8b"}">${escape(onDesktop && AUTHOR || "SG")}</a>
+      <div class="${"widget svelte-1yn7k8b"}">${validate_component(WidgetModal, "WidgetModal").$$render($$result, {}, {}, {})}
         ${validate_component(WidgetTheme, "WidgetTheme").$$render($$result, {}, {}, {})}</div></div>
-    <button aria-label="${"Toggle navigation list"}"${add_attribute("aria-expanded", expMenu, 0)} class="${"svelte-gobibg"}"${add_styles({ "display": onDesktop ? "none" : "" })}>
+    <button aria-label="${"Toggle navigation list"}"${add_attribute("aria-expanded", expMenu, 0)} class="${"svelte-1yn7k8b"}"${add_styles({ "display": onDesktop ? "none" : "" })}>
       ${expMenu ? `<iconify-icon icon="${"lucide:x"}" width="${"26"}" height="${"26"}"></iconify-icon>` : `<iconify-icon icon="${"lucide:grip"}" width="${"26"}" height="${"26"}"></iconify-icon>`}</button>
-    ${expMenu || onDesktop ? `<div class="${"navItems svelte-gobibg"}">${each($navItems, (item) => {
-    return `${item.separator ? `<div style="${"border-left: 1px solid var(--clr-muted-100); height: 2rem"}" aria-orientation="${"vertical"}" role="${"separator"}"></div>` : ``}
+    ${expMenu || onDesktop ? `<div class="${"navItems svelte-1yn7k8b"}">${each($navItems, (item) => {
+    return `${item.separator ? `<div aria-orientation="${"vertical"}" role="${"separator"}"></div>` : ``}
           <a${add_attribute(
       "aria-current",
       item.href === $page.url.pathname || $page.url.pathname.startsWith(item.href) && `/` !== item.href ? "page" : void 0,
       0
-    )} aria-label="${"Link to " + escape(item.label, true)}" class="${escape(null_to_empty(item.decoration ? "block hover" : ""), true) + " svelte-gobibg"}"${add_attribute("href", item.href, 0)}>${escape(item.label)}</a>`;
+    )} aria-label="${"Link to " + escape(item.label, true)}" class="${escape(null_to_empty(item.decoration ? "block hover" : ""), true) + " svelte-1yn7k8b"}"${add_attribute("href", item.href, 0)}>${escape(item.label)}</a>`;
   })}</div>` : ``}</div>
 </nav>`;
 });
@@ -137,7 +123,6 @@ const css$2 = {
   map: null
 };
 const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  const year = new Date().getFullYear();
   const getGithubStars = async () => {
     try {
       const response = await fetch("https://api.github.com/repos/santigo-zero/santigo-zero.github.io");
@@ -165,7 +150,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       <div class="${"aboutme"}"><h3 class="${"svelte-87qrtx"}">${escape(AUTHOR)}</h3>
         <h3 class="${"svelte-87qrtx"}">I&#39;m a web developer with a purpose, bring accessibility to the web.
         </h3></div></section>
-    <div class="${"wrapper-bottom svelte-87qrtx"}"><section class="${"bottom wider svelte-87qrtx"}"><div class="${"copyright svelte-87qrtx"}"><small class="${"svelte-87qrtx"}">(c) ${escape(year)}
+    <div class="${"wrapper-bottom svelte-87qrtx"}"><section class="${"bottom wider svelte-87qrtx"}"><div class="${"copyright svelte-87qrtx"}"><small class="${"svelte-87qrtx"}">(c) ${escape(new Date().getFullYear())}
             <div aria-orientation="${"vertical"}" role="${"separator"}">•</div>
             All Rights Reserved
             <div aria-orientation="${"vertical"}" role="${"separator"}">•</div>

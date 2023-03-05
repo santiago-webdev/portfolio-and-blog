@@ -134,11 +134,11 @@ function add_styles(style_object) {
 }
 export {
   safe_not_equal as a,
-  add_attribute as b,
+  subscribe as b,
   create_ssr_component as c,
-  subscribe as d,
+  null_to_empty as d,
   escape as e,
-  null_to_empty as f,
+  add_attribute as f,
   add_styles as g,
   each as h,
   getContext as i,
