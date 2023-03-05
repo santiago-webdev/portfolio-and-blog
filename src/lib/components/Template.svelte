@@ -6,12 +6,14 @@
   import { readableDate, relativeTime } from '$lib/utils/utils';
 
   export let title = '';
-  export let date = '';
+  export let datetime = '';
   export let description = '';
   export let finished = false;
 
-  const dateRelative = relativeTime(new Date(), new Date(date));
-  const dateReadable = readableDate(date);
+  const dateRelative = !datetime
+    ? datetime
+    : relativeTime(new Date(), new Date(datetime));
+  const dateReadable = !datetime ? datetime : readableDate(datetime);
 
   let isHollow = false;
   let hollowPrefix = '';
@@ -50,13 +52,15 @@
           <small> 🚧 Authorized personnel only 🚧 </small>
         </div>
       {/if}
-      <small>
-        <time datetime={date}>
-          <iconify-icon icon="lucide:calendar" />: {dateRelative}
-          <div aria-orientation="vertical" role="separator">•</div>
-          {dateReadable}
-        </time>
-      </small>
+      {#if datetime}
+        <small>
+          <time {datetime}>
+            <iconify-icon icon="lucide:calendar" />: {dateRelative}
+            <div aria-orientation="vertical" role="separator">•</div>
+            {dateReadable}
+          </time>
+        </small>
+      {/if}
     </div>
   </header>
   <article class="wide">

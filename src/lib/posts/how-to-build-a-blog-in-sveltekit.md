@@ -1,6 +1,6 @@
 ---
 title: How this blog was built
-date: 2023-01-27 20:59
+datetime: 2023-01-27 20:59
 description: How to build your own static blog written in sveltekit and deploy it to GitHub Pages.
 finished: false
 ---
