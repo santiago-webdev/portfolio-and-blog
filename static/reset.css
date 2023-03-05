@@ -91,8 +91,9 @@ button {
   cursor: pointer;
 }
 
-var, address {
-  font-style: normal
+var,
+address {
+  font-style: normal;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer

@@ -5,12 +5,14 @@ const DESCRIPTION = "Personal blog and portfolio, I talk about web development a
 const URL = "https://santigo-zero.github.io/";
 const URL_BLOG = "https://santigo-zero.github.io/blog";
 const AUTHOR = "Santiago Gonzalez";
+const AUTHOR_NAME = "Santiago";
 export {
   AUTHOR as A,
   DESCRIPTION as D,
   TITLE_BLOG_COMPOSE as T,
   URL as U,
-  TITLE as a,
-  TITLE_BLOG as b,
-  URL_BLOG as c
+  AUTHOR_NAME as a,
+  TITLE as b,
+  TITLE_BLOG as c,
+  URL_BLOG as d
 };

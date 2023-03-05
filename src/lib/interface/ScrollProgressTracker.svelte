@@ -6,18 +6,15 @@
   $: pageHeight = 0;
 
   onMount(() => {
-    const body = document.querySelector('body');
-
     const resizeObserver = new ResizeObserver(entries => {
       const entry = entries.at(0);
 
-      if (entry !== undefined) {
-        pageHeight = Math.floor(entry.contentBoxSize[0].blockSize);
-      }
+      if (entry === undefined) return;
+      pageHeight = Math.floor(entry.contentBoxSize[0].blockSize);
     });
 
-    if (body) resizeObserver.observe(body);
-    return () => body && resizeObserver.unobserve(body);
+    resizeObserver.observe(document.body);
+    return () => resizeObserver.unobserve(document.body);
   });
 </script>
 

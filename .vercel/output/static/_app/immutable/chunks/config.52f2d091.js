@@ -1,1 +1,0 @@
-const o="Santiago's Portfolio and Blog",t="Santiago's Blog",a=" - Santiago Gonzalez Blog",s="Personal blog and portfolio, I talk about web development and show you my projects while at it.",n="https://santigo-zero.github.io/",i="https://santigo-zero.github.io/blog",g="Santiago Gonzalez";export{g as A,s as D,a as T,n as U,o as a,t as b,i as c};

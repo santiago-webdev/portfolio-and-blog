@@ -3,7 +3,7 @@ import { b as base } from "../../chunks/paths.js";
 import { F as FilteredPosts, i as inPixels, r as readableDate, n as navigating, p as page } from "../../chunks/store.js";
 import { w as writable } from "../../chunks/index.js";
 import { I as IconSearch } from "../../chunks/IconSearch.js";
-import { A as AUTHOR } from "../../chunks/config.js";
+import { A as AUTHOR, a as AUTHOR_NAME } from "../../chunks/config.js";
 import "iconify-icon";
 const navItems = writable([
   { separator: true, label: "Home", href: `${base}/` },
@@ -64,29 +64,29 @@ const WidgetModal = create_ssr_component(($$result, $$props, $$bindings, slots) 
 });
 const WidgetTheme_svelte_svelte_type_style_lang = "";
 const css$4 = {
-  code: "button.svelte-3m7cml{position:relative}dialog.svelte-3m7cml{position:absolute;margin:0;border:transparent;margin-top:var(--gap)}fieldset.svelte-3m7cml{display:grid;border:2px solid var(--clr-muted-300);border-radius:0.8rem}legend.svelte-3m7cml{padding-inline:0.5ch;color:var(--clr-title);margin-inline:auto;font-weight:bold;font-size:110%}",
+  code: "button.svelte-1ptr8c4{position:relative}dialog.svelte-1ptr8c4{position:absolute;margin:0;border:transparent;margin-top:var(--gap)}fieldset.svelte-1ptr8c4{display:grid;border:2px solid var(--clr-muted-300);border-radius:0.8rem}legend.svelte-1ptr8c4{padding-inline:0.5ch;color:var(--clr-title);margin-inline:auto;font-weight:bold;font-size:110%}input.svelte-1ptr8c4:checked{background-color:red;outline:3px hotpink solid}",
   map: null
 };
 const WidgetTheme = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let dialog;
   let button;
   $$result.css.add(css$4);
-  return `<button class="${"svelte-3m7cml"}"${add_attribute("this", button, 0)}>Theme in use </button>
-<dialog class="${"attn attnactive trn-border svelte-3m7cml"}"${add_attribute("this", dialog, 0)}><form><fieldset class="${"svelte-3m7cml"}"><legend class="${"svelte-3m7cml"}">Choose a colorscheme</legend>
+  return `<button class="${"svelte-1ptr8c4"}"${add_attribute("this", button, 0)}>Theme in use </button>
+<dialog class="${"attn attnactive trn-border svelte-1ptr8c4"}"${add_attribute("this", dialog, 0)}><form><fieldset class="${"svelte-1ptr8c4"}"><legend class="${"svelte-1ptr8c4"}">Choose a colorscheme</legend>
 
       <section><label for="${"theme"}">Light Lorem, ipsum dolor. </label>
-        <input type="${"radio"}" name="${"theme"}" id="${"light"}"></section>
+        <input type="${"radio"}" name="${"theme"}" id="${"light"}" class="${"svelte-1ptr8c4"}"></section>
 
       <section><label for="${"theme"}">Dark</label>
-        <input type="${"radio"}" name="${"theme"}" id="${"dark"}"></section>
+        <input type="${"radio"}" name="${"theme"}" id="${"dark"}" class="${"svelte-1ptr8c4"}"></section>
 
       <section><label for="${"theme"}">System</label>
-        <input type="${"radio"}" name="${"theme"}" id="${"system"}" checked></section></fieldset></form>
+        <input type="${"radio"}" name="${"theme"}" id="${"system"}" checked class="${"svelte-1ptr8c4"}"></section></fieldset></form>
 </dialog>`;
 });
 const NavBar_svelte_svelte_type_style_lang = "";
 const css$3 = {
-  code: "nav.svelte-n0l2l.svelte-n0l2l{inset:3px 0 auto 0;position:fixed;background-color:var(--clr-bg-400);padding:0.4rem 0;transition:all 0.3s;z-index:999;transform:translateY(-200%)}.scrollY.svelte-n0l2l.svelte-n0l2l{box-shadow:6px 6px 6px 0px rgba(0, 0, 0, 0.1);-webkit-box-shadow:6px 6px 6px 0px rgba(0, 0, 0, 0.1);-moz-box-shadow:6px 6px 6px 0px rgba(0, 0, 0, 0.1);background:var(--clr-bg-400-t);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}@media(prefers-reduced-motion: reduce){nav.svelte-n0l2l.svelte-n0l2l{transition:none}}a.svelte-n0l2l.svelte-n0l2l{padding:0.4em 0.8em;display:flex;place-items:center}a.svelte-n0l2l.svelte-n0l2l:first-child{padding-left:0}a.svelte-n0l2l.svelte-n0l2l:hover{color:var(--clr-txt-hover)}@media(hover: none){a.svelte-n0l2l.svelte-n0l2l:hover{color:inherit}}a.svelte-n0l2l.svelte-n0l2l:focus{color:var(--clr-txt-clicked)}#main-navigation.svelte-n0l2l.svelte-n0l2l{display:grid;place-items:center;margin-inline:auto;justify-content:space-between;grid-template-columns:1fr auto}button.svelte-n0l2l.svelte-n0l2l{display:flex;place-items:center}.navItems.svelte-n0l2l.svelte-n0l2l{padding-left:1rem;width:100%;display:flex;justify-self:center;place-items:center}.wrapper-left.svelte-n0l2l.svelte-n0l2l{display:flex;justify-content:space-between;width:100%}.widget.svelte-n0l2l.svelte-n0l2l{display:flex;flex-wrap:wrap;gap:1rem}@media screen and (max-width: 48rem){.navItems.svelte-n0l2l.svelte-n0l2l{flex-direction:column;padding:1rem;grid-column:1 / span 2}.wrapper-left.svelte-n0l2l a.svelte-n0l2l{padding-top:0;padding-bottom:0}}",
+  code: "nav.svelte-gobibg.svelte-gobibg{inset:3px 0 auto 0;position:sticky;background-color:var(--clr-bg-400);padding:0.4rem 0;transition:all 0.3s;z-index:999;transform:translateY(-200%)}.scrollY.svelte-gobibg.svelte-gobibg{box-shadow:6px 6px 6px 0px rgba(0, 0, 0, 0.1);-webkit-box-shadow:6px 6px 6px 0px rgba(0, 0, 0, 0.1);-moz-box-shadow:6px 6px 6px 0px rgba(0, 0, 0, 0.1);background:var(--clr-bg-400-t);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}@media(prefers-reduced-motion: reduce){nav.svelte-gobibg.svelte-gobibg{transition:none}}a.svelte-gobibg.svelte-gobibg{padding:0.4em 0.8em;display:flex;place-items:center}a.svelte-gobibg.svelte-gobibg:first-child{padding-left:0}a.svelte-gobibg.svelte-gobibg:hover{color:var(--clr-txt-hover)}@media(hover: none){a.svelte-gobibg.svelte-gobibg:hover{color:inherit}}a.svelte-gobibg.svelte-gobibg:focus{color:var(--clr-txt-clicked)}#main-navigation.svelte-gobibg.svelte-gobibg{display:grid;place-items:center;margin-inline:auto;justify-content:space-between;grid-template-columns:1fr auto}button.svelte-gobibg.svelte-gobibg{display:flex;place-items:center}.navItems.svelte-gobibg.svelte-gobibg{padding-left:1rem;width:100%;display:flex;justify-self:center;place-items:center}.wrapper-left.svelte-gobibg.svelte-gobibg{display:flex;justify-content:space-between;width:100%}.widget.svelte-gobibg.svelte-gobibg{display:flex;flex-wrap:wrap;gap:1rem}@media screen and (max-width: 48rem){.navItems.svelte-gobibg.svelte-gobibg{flex-direction:column;padding:1rem;grid-column:1 / span 2}.wrapper-left.svelte-gobibg a.svelte-gobibg{padding-top:0;padding-bottom:0}}",
   map: null
 };
 const NavBar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -106,20 +106,20 @@ const NavBar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `
 
 <nav aria-labelledby="${"main-navigation"}" class="${[
-    "artifact-ui svelte-n0l2l",
+    "artifact-ui svelte-gobibg",
     " " + (!onDesktop && expMenu && scrollY > 30 ? "banner" : "")
-  ].join(" ").trim()}"><div id="${"main-navigation"}" class="${"wider svelte-n0l2l"}"><div class="${"wrapper-left svelte-n0l2l"}"><a href="${escape(base, true) + "/"}" aria-label="${"Logo of this site and link to Home"}" class="${"svelte-n0l2l"}">${escape(onDesktop && AUTHOR || "SG")}</a>
-      <div class="${"widget svelte-n0l2l"}">${validate_component(WidgetModal, "WidgetModal").$$render($$result, {}, {}, {})}
+  ].join(" ").trim()}"><div id="${"main-navigation"}" class="${"wider svelte-gobibg"}"><div class="${"wrapper-left svelte-gobibg"}"><a href="${escape(base, true) + "/"}" aria-label="${"Logo of this site and link to Home"}" class="${"svelte-gobibg"}">${escape(onDesktop && AUTHOR || "SG")}</a>
+      <div class="${"widget svelte-gobibg"}">${validate_component(WidgetModal, "WidgetModal").$$render($$result, {}, {}, {})}
         ${validate_component(WidgetTheme, "WidgetTheme").$$render($$result, {}, {}, {})}</div></div>
-    <button aria-label="${"Toggle navigation list"}"${add_attribute("aria-expanded", expMenu, 0)} class="${"svelte-n0l2l"}"${add_styles({ "display": onDesktop ? "none" : "" })}>
+    <button aria-label="${"Toggle navigation list"}"${add_attribute("aria-expanded", expMenu, 0)} class="${"svelte-gobibg"}"${add_styles({ "display": onDesktop ? "none" : "" })}>
       ${expMenu ? `<iconify-icon icon="${"lucide:x"}" width="${"26"}" height="${"26"}"></iconify-icon>` : `<iconify-icon icon="${"lucide:grip"}" width="${"26"}" height="${"26"}"></iconify-icon>`}</button>
-    ${expMenu || onDesktop ? `<div class="${"navItems svelte-n0l2l"}">${each($navItems, (item) => {
+    ${expMenu || onDesktop ? `<div class="${"navItems svelte-gobibg"}">${each($navItems, (item) => {
     return `${item.separator ? `<div style="${"border-left: 1px solid var(--clr-muted-100); height: 2rem"}" aria-orientation="${"vertical"}" role="${"separator"}"></div>` : ``}
           <a${add_attribute(
       "aria-current",
       item.href === $page.url.pathname || $page.url.pathname.startsWith(item.href) && `/` !== item.href ? "page" : void 0,
       0
-    )} aria-label="${"Link to " + escape(item.label, true)}" class="${escape(null_to_empty(item.decoration ? "block hover" : ""), true) + " svelte-n0l2l"}"${add_attribute("href", item.href, 0)}>${escape(item.label)}</a>`;
+    )} aria-label="${"Link to " + escape(item.label, true)}" class="${escape(null_to_empty(item.decoration ? "block hover" : ""), true) + " svelte-gobibg"}"${add_attribute("href", item.href, 0)}>${escape(item.label)}</a>`;
   })}</div>` : ``}</div>
 </nav>`;
 });
@@ -160,7 +160,7 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         <li><a href="${"https://github.com/santigo-zero/"}" aria-label="${"Link to my GitHub profile"}" class="${"svelte-87qrtx"}">GitHub</a></li>
         <li><a href="${"https://github.com/santigo-zero/"}" aria-label="${"Link to my GitHub profile"}" class="${"svelte-87qrtx"}">GitHub</a></li>
         <li><a href="${"https://www.linkedin.com/in/santiago-gonzalez-62557221b/"}" aria-label="${"Link to my LinkedIn profile"}" class="${"svelte-87qrtx"}">LinkedIn</a></li></ul>
-      <div class="${"aboutme"}"><h3 class="${"svelte-87qrtx"}">Santiago Gonzalez</h3>
+      <div class="${"aboutme"}"><h3 class="${"svelte-87qrtx"}">${escape(AUTHOR)}</h3>
         <h3 class="${"svelte-87qrtx"}">I&#39;m a web developer with a purpose, bring accessibility to the web.
         </h3></div></section>
     <div class="${"wrapper-bottom svelte-87qrtx"}"><section class="${"bottom wider svelte-87qrtx"}"><div class="${"copyright svelte-87qrtx"}"><small class="${"svelte-87qrtx"}">(c) ${escape(year)}
@@ -173,19 +173,20 @@ const Footer = create_ssr_component(($$result, $$props, $$bindings, slots) => {
         <a href="${"https://github.com/santigo-zero/santigo-zero.github.io"}" aria-label="${"Link to git repository for this site at Github"}" class="${"svelte-87qrtx"}">Repository <iconify-icon aria-label="${"GitHub icon"}" role="${"img"}" icon="${"simple-icons:github"}"></iconify-icon>
           <div aria-orientation="${"vertical"}" role="${"separator"}">-</div>
           <iconify-icon icon="${"lucide:star"}"></iconify-icon>
-          <span>${escape(ghStars)}</span></a>
+          <var aria-label="${"Amount of stars in the GitHub repository"}">${escape(ghStars)}</var></a>
 
-        <a href="${"https://github.com/santigo-zero/santigo-zero.github.io"}" aria-label="${"Link to git repository for this site at Github"}" class="${"svelte-87qrtx"}"><small class="${"svelte-87qrtx"}">Designed &amp; Built with <iconify-icon icon="${"lucide:heart"}"></iconify-icon> by Santiago</small></a>
+        <a href="${"https://github.com/santigo-zero/santigo-zero.github.io"}" aria-label="${"Link to git repository for this site at Github"}" class="${"svelte-87qrtx"}"><small class="${"svelte-87qrtx"}">Designed &amp; Built with <iconify-icon icon="${"lucide:heart"}"></iconify-icon> by
+            <address>${escape(AUTHOR_NAME)}</address></small></a>
         
         </section></div></div>
 </footer>`;
 });
-const ScrollProgress_svelte_svelte_type_style_lang = "";
+const ScrollProgressTracker_svelte_svelte_type_style_lang = "";
 const css$1 = {
   code: "progress.svelte-uzpiq3{width:100%;height:3px;top:0;border:0;position:fixed;z-index:9999}progress.svelte-uzpiq3::-webkit-progress-bar,progress.svelte-uzpiq3{background-color:var(--clr-bg-400)}progress.svelte-uzpiq3::-moz-progress-bar{background:var(--accent-peachy)}progress.svelte-uzpiq3::-webkit-progress-value{background:var(--accent-peachy)}",
   map: null
 };
-const ScrollProgress = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+const ScrollProgressTracker = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let innerHeight;
   let pageHeight;
   let scrollY = 0;
@@ -199,7 +200,7 @@ const ScrollProgress = create_ssr_component(($$result, $$props, $$bindings, slot
 const global = "";
 const _layout_svelte_svelte_type_style_lang = "";
 const css = {
-  code: ".layout.svelte-m1ws8e{min-height:100vh;min-height:100dvh;display:grid;grid-template-rows:1fr auto;background-color:var(--clr-bg-100)}",
+  code: ".layout.svelte-afzn99{min-height:100vh;min-height:100dvh;display:grid;grid-template-rows:1fr auto;background-color:var(--clr-bg-200)}",
   map: null
 };
 const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -207,14 +208,14 @@ const Layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
   $$result.css.add(css);
   $$unsubscribe_page();
-  return `<div class="${"layout svelte-m1ws8e"}">${validate_component(NavBar, "NavBar").$$render($$result, {}, {}, {})}
+  return `<div class="${"layout svelte-afzn99"}">${validate_component(NavBar, "NavBar").$$render($$result, {}, {}, {})}
   ${validate_component(Transition, "Transition").$$render($$result, { url: $page.url }, {}, {
     default: () => {
       return `${slots.default ? slots.default({}) : ``}`;
     }
   })}
   ${validate_component(Footer, "Footer").$$render($$result, {}, {}, {})}
-  ${validate_component(ScrollProgress, "ScrollProgress").$$render($$result, {}, {}, {})}
+  ${validate_component(ScrollProgressTracker, "ScrollProgressTracker").$$render($$result, {}, {}, {})}
 </div>`;
 });
 export {

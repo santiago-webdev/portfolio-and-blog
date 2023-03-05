@@ -91,8 +91,7 @@
             icon="simple-icons:github" />
           <div aria-orientation="vertical" role="separator">-</div>
           <iconify-icon icon="lucide:star" />
-          <var
-            aria-label="Amount of stars in the GitHub repository">
+          <var aria-label="Amount of stars in the GitHub repository">
             {ghStars}
           </var>
         </a>
