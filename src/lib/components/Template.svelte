@@ -39,7 +39,7 @@
 
 <main>
   <header id="page-header-info" class="banner">
-    <div aria-labelledby="page-header-info" class="wrapper-header">
+    <div aria-labelledby="page-header-info" class="wrapper-header wide">
       {#if isHollow}
         <h1>
           <Hollow color={'var(--clr-title)'}>{hollowPrefix}</Hollow>
