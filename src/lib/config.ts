@@ -10,3 +10,4 @@ export const REPO = 'https://github.com/santigo-zero/santigo-zero.github.io';
 export const HOST = 'https://github.com/santigo-zero/santigo-zero.github.io';
 
 export const AUTHOR = 'Santiago Gonzalez';
+export const AUTHOR_NAME = 'Santiago';

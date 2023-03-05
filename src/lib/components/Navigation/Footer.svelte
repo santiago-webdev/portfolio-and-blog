@@ -1,5 +1,6 @@
 <script lang="ts">
   import { dev } from '$app/environment';
+  import { AUTHOR, AUTHOR_NAME } from '$lib/config';
 
   const year = new Date().getFullYear();
 
@@ -63,7 +64,7 @@
         </li>
       </ul>
       <div class="aboutme">
-        <h3>Santiago Gonzalez</h3>
+        <h3>{AUTHOR}</h3>
         <h3>
           I'm a web developer with a purpose, bring accessibility to the web.
         </h3>
@@ -91,8 +92,7 @@
           <div aria-orientation="vertical" role="separator">-</div>
           <iconify-icon icon="lucide:star" />
           <var
-            aria-label="Amount of stars in the GitHub repository"
-            style="font-style: normal">
+            aria-label="Amount of stars in the GitHub repository">
             {ghStars}
           </var>
         </a>
@@ -101,7 +101,8 @@
           href="https://github.com/santigo-zero/santigo-zero.github.io"
           aria-label="Link to git repository for this site at Github">
           <small
-            >Designed & Built with <iconify-icon icon="lucide:heart" /> by Santiago</small>
+            >Designed & Built with <iconify-icon icon="lucide:heart" /> by
+            <address>{AUTHOR_NAME}</address></small>
         </a>
         <!-- Open Source and powered by -->
         <!--          <IconSvelteKit /> -->
