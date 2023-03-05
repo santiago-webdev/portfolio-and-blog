@@ -5,6 +5,7 @@
   import { navItems } from './store';
   import WidgetModal from '$lib/interface/WidgetModal.svelte';
   import { AUTHOR } from '$lib/config';
+  import WidgetTheme from '$lib/interface/WidgetTheme.svelte';
 
   var expMenu = false,
     onDesktop = true,
@@ -54,7 +55,10 @@
     <div class="wrapper-left">
       <a href="{base}/" aria-label="Logo of this site and link to Home"
         >{(onDesktop && AUTHOR) || 'SG'}</a>
-      <WidgetModal />
+      <div class="widget">
+        <WidgetModal />
+        <WidgetTheme />
+      </div>
     </div>
     <button
       aria-label="Toggle navigation list"
@@ -99,7 +103,7 @@
     padding: 0.4rem 0;
     transition: all 0.3s;
     z-index: 999;
-    transform: translateY(-200%);
+    /* transform: translateY(-200%); */
   }
 
   .scrollY {
@@ -160,6 +164,12 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
+  }
+
+  .widget {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
   }
 
   @media screen and (max-width: 48rem) {
