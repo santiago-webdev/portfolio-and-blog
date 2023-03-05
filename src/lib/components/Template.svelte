@@ -133,4 +133,9 @@
     display: grid;
     place-items: center;
   }
+
+  time {
+    display: flex;
+    place-items: center;
+  }
 </style>
