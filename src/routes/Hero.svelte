@@ -3,7 +3,9 @@
 </script>
 
 <section class="wide">
-  <h1>Building websites <span>&&</span> clean interfaces</h1>
+  <h1>
+    Build<wbr />ing web<wbr />sites <span>&&</span> clean inter<wbr />faces
+  </h1>
   <p>
     I'm a web developer and here we'll discuss about <strong>
       web development
