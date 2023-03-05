@@ -124,6 +124,7 @@
     padding: 0.4em 0.8em;
     display: flex;
     place-items: center;
+    border-radius: 1rem;
   }
 
   a:first-child {
