@@ -38,8 +38,8 @@
 </script>
 
 <main>
-  <header class="banner wide">
-    <div class="wide">
+  <header id="page-header-info" class="banner">
+    <div aria-labelledby="page-header-info" class="wrapper-header">
       {#if isHollow}
         <h1>
           <Hollow color={'var(--clr-title)'}>{hollowPrefix}</Hollow>
@@ -107,21 +107,23 @@
     margin-inline: auto;
   }
 
-  header p {
-    color: var(--clr-subtitle);
-    /* max-width: 44ch; */
-    /* margin-inline: auto; */
+  .wrapper-header {
+    display: grid;
+    gap: 1rem;
   }
 
-  /* header { */
-  /*   width: 100%; */
-  /* } */
+  .wrapper-header p {
+    color: var(--clr-subtitle);
+    max-width: 44ch;
+    margin-inline: auto;
+  }
 
   button {
     padding: 0.615rem 1.23rem;
     /* max-width: max-content; */
     margin-inline: auto;
     font-size: unset;
+    color: var(--clr-muted-600);
   }
 
   small:active {
