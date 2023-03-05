@@ -55,7 +55,7 @@
 <svelte:window bind:outerWidth on:keydown={onCtrlK} />
 
 <button
-  class={complex ? 'attn attnactive' : ''}
+  class={complex ? 'shiny hover' : ''}
   aria-keyshortcuts="Control+K"
   aria-label="Click to open the modal box to search for blogs"
   on:click={toggleModal}>
@@ -66,7 +66,7 @@
   {/if}
 </button>
 <dialog
-  class="wide"
+  class="wide shiny"
   on:close={() => (value = '')}
   on:cancel={() => (value = '')}
   bind:this={modal}>
@@ -77,7 +77,7 @@
         <IconSearch />
       </button>
       <input
-        placeholder=" Search for a blog post"
+        placeholder="Search for a blog post"
         bind:value
         bind:this={input}
         type="search"
@@ -117,6 +117,7 @@
     place-items: center;
     padding: 0.2rem 0.8rem;
     gap: 0.6rem;
+    border-radius: 1rem;
   }
 
   span {
@@ -135,11 +136,10 @@
   }
 
   :modal {
-    border: 0;
-    margin: 0;
     padding: 0;
+    margin: 0;
     margin-inline: auto;
-    top: 5rem;
+    top: 5vh;
     border-radius: 1.1rem;
     background-color: var(--clr-bg-active);
   }
@@ -152,6 +152,10 @@
     cursor: pointer;
   }
 
+  :modal > * {
+    padding: 1rem;
+  }
+
   :modal button {
     padding-left: 0;
   }
@@ -159,9 +163,7 @@
   form {
     display: flex;
     flex-direction: column;
-    padding: 1rem;
     gap: 1rem;
-    /* flex-wrap: wrap; */
   }
 
   .searchbar {

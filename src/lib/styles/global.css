@@ -130,8 +130,9 @@ button {
   --clr-bg-400: hsl(240, 9%, 19%);
   --clr-bg-500: hsl(240, 9%, 21%);
   --clr-bg-600: hsl(240, 8%, 23%);
-  --clr-bg-700: hsl(240, 7%, 26%);
-  --clr-bg-800: hsl(240, 6%, 29%);
+  --clr-bg-700: hsl(240, 8%, 24%);
+  --clr-bg-800: hsl(240, 8%, 26%);
+  --clr-bg-900: hsl(240, 8%, 28%);
 
   --clr-background-alt: hsl(240, 8%, 19%);
   --clr-background-alt-alt: hsl(240, 8%, 23%);
@@ -286,6 +287,30 @@ strong {
   border-left: 1px solid var(--clr-border-card);
   border-right: 1px solid transparent;
   border-bottom: 1px solid transparent;
+}
+
+.shiny {
+  --background: var(--clr-bg-600);
+  --border: var(--clr-bg-800);
+
+  background-color: var(--background);
+  border-bottom: 1px solid var(--background);
+  border-right: 1px solid var(--background);
+
+  border-left: 1px solid var(--border);
+  border-top: 1px solid var(--border);
+
+  box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
+
+  border-radius: 1.2rem;
+  transition: background-color 50ms, border 80ms, box-shadow 300ms;
+}
+
+.shiny.hover:hover {
+  --background: var(--clr-bg-700);
+  --border: var(--clr-bg-900);
+
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
 }
 
 .attn {
