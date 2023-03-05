@@ -102,7 +102,14 @@
               <p>No description was given.</p>
             {/if}
             {#if post.date}
-              <small>Published: {readableDate(post.date)}</small>
+              <small>
+                Published: {readableDate(post.date)}
+                <time datetime={post.date}>
+                  <iconify-icon icon="lucide:calendar" />: {readableDate(
+                    post.date
+                  )}
+                </time>
+              </small>
             {/if}
           </article>
         </a>

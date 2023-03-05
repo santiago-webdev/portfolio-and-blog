@@ -56,7 +56,9 @@ const WidgetModal = create_ssr_component(($$result, $$props, $$bindings, slots) 
       <li class="${"svelte-kpv43e"}"><a href="${escape(base, true) + "/blog" + escape(post.href, true)}" class="${"svelte-kpv43e"}"><article class="${"svelte-kpv43e"}"><h3 class="${"svelte-kpv43e"}">${validate_component(IconSearch, "IconSearch").$$render($$result, {}, {}, {})}
               ${escape(post.title)}</h3>
             ${post.description ? `<p class="${"svelte-kpv43e"}">${escape(post.description)}</p>` : `<p class="${"svelte-kpv43e"}">No description was given.</p>`}
-            ${post.date ? `<small class="${"svelte-kpv43e"}">Published: ${escape(readableDate(post.date))}</small>` : ``}
+            ${post.date ? `<small class="${"svelte-kpv43e"}">Published: ${escape(readableDate(post.date))}
+                <time${add_attribute("datetime", post.date, 0)} class="${"svelte-kpv43e"}"><iconify-icon icon="${"lucide:calendar"}" class="${"svelte-kpv43e"}"></iconify-icon>: ${escape(readableDate(post.date))}</time>
+              </small>` : ``}
           </article></a>
       </li>`;
   })}</ul>

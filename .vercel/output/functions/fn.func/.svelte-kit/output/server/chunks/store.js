@@ -128,7 +128,7 @@ const Template = create_ssr_component(($$result, $$props, $$bindings, slots) => 
       <p class="${"svelte-18ratwu"}">${escape(description2)}</p>
       ${!finished ? `<div class="${"wip svelte-18ratwu"}"><small class="${"svelte-18ratwu"}">🏗 Construction site, keep out 🏗️ </small>
           <small class="${"svelte-18ratwu"}">🚧 Authorized personnel only 🚧 </small></div>` : ``}
-      <button class="${"attn-border attn trn-border svelte-18ratwu"}"><small class="${"svelte-18ratwu"}"><iconify-icon icon="${"lucide:calendar"}"></iconify-icon>: ${escape(dateReadable)}</small></button></div></header>
+      <button class="${"attn-border attn trn-border svelte-18ratwu"}"><small class="${"svelte-18ratwu"}"><time${add_attribute("datetime", date2, 0)}><iconify-icon icon="${"lucide:calendar"}"></iconify-icon>: ${escape(dateReadable)}</time></small></button></div></header>
   <article class="${"wide svelte-18ratwu"}">${slots.default ? slots.default({}) : ``}</article></main>
 
 ${$$result.head += `<!-- HEAD_svelte-1nv67zy_START -->${$$result.title = `<title>${escape(title2)}${escape(TITLE_BLOG_COMPOSE)}</title>`, ""}<meta name="${"description"}"${add_attribute("content", description2, 0)}><meta itemprop="${"name"}"${add_attribute("content", title2, 0)}><meta itemprop="${"description"}"${add_attribute("content", description2, 0)}><meta itemprop="${"image"}" content="${""}"><meta property="${"og:url"}"${add_attribute("content", $page.url.toString(), 0)}><meta property="${"og:type"}" content="${"website"}"><meta property="${"og:title"}"${add_attribute("content", title2, 0)}><meta property="${"og:description"}"${add_attribute("content", description2, 0)}><meta property="${"og:image"}" content="${""}"><meta name="${"twitter:card"}" content="${"summary_large_image"}"><meta name="${"twitter:title"}"${add_attribute("content", title2, 0)}><meta name="${"twitter:description"}"${add_attribute("content", description2, 0)}><meta name="${"twitter:image"}" content="${""}"><!-- HEAD_svelte-1nv67zy_END -->`, ""}`;
@@ -168,7 +168,7 @@ const __vite_glob_0_4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.def
 }, Symbol.toStringTag, { value: "Module" }));
 const metadata$2 = {
   "title": "How this blog was built",
-  "date": "2023-01-27 20:59",
+  "date": "2023-03-05T00:00:00.000Z",
   "description": "How to build your own static blog written in sveltekit and deploy it to GitHub Pages.",
   "finished": false
 };
