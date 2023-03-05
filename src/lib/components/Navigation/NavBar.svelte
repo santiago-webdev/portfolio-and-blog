@@ -135,6 +135,12 @@
     color: var(--clr-txt-hover);
   }
 
+  @media (hover: none) {
+    a:hover {
+      color: inherit;
+    }
+  }
+
   a:focus {
     color: var(--clr-txt-clicked);
   }
