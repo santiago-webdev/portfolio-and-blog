@@ -77,7 +77,7 @@
     transition: transform 100ms, color 100ms, background-color 500ms,
       border 100ms;
 
-    color: var(--clr-muted-000);
+    color: var(--clr-muted-600);
   }
 
   article:hover {

@@ -64,6 +64,7 @@
   legend {
     padding-inline: 0.5ch;
     color: var(--clr-title);
+    margin-inline: auto;
     font-weight: bold;
     font-size: 110%;
   }

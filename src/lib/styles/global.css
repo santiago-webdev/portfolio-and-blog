@@ -108,27 +108,38 @@ button {
   --clr-subtitle: hsl(222, 33%, 85%);
   --clr-text: hsl(222, 20%, 90%);
 
+  --clr-txt-hover: hsl(230, 20%, 65%);
+  --clr-txt-clicked: hsl(200, 80%, 80%);
+
+  /* Muted colors, for UI(separators, borders) or text that is not the most
+   * important in the page.
+   * */
   --clr-muted-100: hsl(240, 5%, 25%);
   --clr-muted-200: hsl(240, 5%, 30%);
   --clr-muted-300: hsl(240, 5%, 40%);
   --clr-muted-400: hsl(240, 5%, 50%);
-  --clr-muted-500: hsl(240, 5%, 60%);
+  --clr-muted-500: hsl(240, 5%, 55%);
+  --clr-muted-600: hsl(240, 5%, 60%);
 
-  --clr-hover: var(--clr-slate-400);
-  --clr-hover-bg: var(--clr-slate-400);
-  --clr-clicked: var(--clr-stone-700);
+  /* Background colors, used in buttons, cards and borders to make this cards
+   * shiny.
+   * */
+  --clr-bg-100: hsl(240, 9%, 12%);
+  --clr-bg-200: hsl(240, 9%, 14%);
+  --clr-bg-300: hsl(240, 9%, 16%);
+  --clr-bg-400: hsl(240, 9%, 19%);
+  --clr-bg-500: hsl(240, 9%, 21%);
+  --clr-bg-600: hsl(240, 8%, 23%);
+  --clr-bg-700: hsl(240, 7%, 26%);
+  --clr-bg-800: hsl(240, 6%, 29%);
 
-  --clr-background: hsl(240, 8%, 14%);
   --clr-background-alt: hsl(240, 8%, 19%);
   --clr-background-alt-alt: hsl(240, 8%, 23%);
-  --clr-background-alt-blur: rgba(45 45 52 / 0.8);
+  --clr-background-alt-blur: rgba(45, 45, 52, 0.8);
   --clr-border-card: rgba(49, 49, 57, 1);
 
   --clr-bg-active: var(--base-dark-background-300);
   --clr-border-card-active: rgba(66 66 74 / 1);
-
-  --clr-bttn-plain-darker: hsl(240, 8%, 14%);
-  --clr-bttn-border-plain-darker: rgb(69 69 75 / 0.8);
 }
 
 [data-theme='dark'] ::selection {
@@ -137,12 +148,12 @@ button {
 }
 
 [data-theme='dark']::-webkit-scrollbar {
-  width: 8px;
-  background-color: #fff;
+  width: 6px;
+  background-color: var(--clr-bg-200);
 }
 
 [data-theme='dark']::-webkit-scrollbar-track {
-  background-color: var(--clr-background);
+  background-color: var(--clr-bg-200);
 }
 
 [data-theme='dark']::-webkit-scrollbar-thumb {
@@ -226,7 +237,7 @@ strong {
 
 .banner {
   width: 100%;
-  background-color: var(--clr-background-alt);
+  background-color: var(--clr-bg-400);
   border-bottom-right-radius: 1.1rem;
   border-bottom-left-radius: 1.1rem;
 
@@ -251,7 +262,7 @@ strong {
 
 .banner-reverse {
   width: 100%;
-  background-color: var(--clr-background-alt);
+  background-color: var(--clr-bg-400);
   border-top-right-radius: 1.1rem;
   border-top-left-radius: 1.1rem;
   padding: 1rem 0;
@@ -269,7 +280,7 @@ strong {
 }
 
 .base {
-  background-color: var(--clr-background-alt);
+  background-color: var(--clr-bg-400);
   border-radius: 1.1rem;
   border-top: 1px solid var(--clr-border-card);
   border-left: 1px solid var(--clr-border-card);
@@ -284,12 +295,16 @@ strong {
 }
 
 .attnactive {
-  background-color: #1e1e23;
-  background-color: var(--clr-bg-active);
-  border-bottom: 1px solid var(--clr-bg-active);
-  border-right: 1px solid var(--clr-bg-active);
-  border-left: 1px solid var(--clr-border-card-active);
-  border-top: 1px solid var(--clr-border-card-active);
+  --background: var(--clr-bg-600);
+  --border: var(--clr-bg-700);
+
+  background-color: var(--background);
+
+  border-bottom: 1px solid var(--background);
+  border-right: 1px solid var(--background);
+
+  border-left: 1px solid var(--border);
+  border-top: 1px solid var(--border);
 }
 
 .attn:is(:focus-within, :focus, :hover),
@@ -308,8 +323,8 @@ strong {
 }
 
 .attn:is(:active) {
-  background-color: var(--clr-background);
-  border: 1px solid var(--clr-background);
+  background-color: var(--clr-bg-200);
+  border: 1px solid var(--clr-bg-200);
   color: var(--clr-clicked);
   transition-delay: 200ms;
 }
@@ -330,9 +345,9 @@ strong {
 }
 
 .act {
-  background-color: var(--clr-bttn-plain-darker);
+  background-color: var(--clr-bg-200);
   border-radius: 1.1rem;
-  border: 1px solid var(--clr-bttn-border-plain-darker);
+  border: 1px solid var(--clr-bg-700);
   color: var(--clr-text);
   transition: all 200ms;
 }
@@ -348,20 +363,21 @@ strong {
 .artifact-ui {
   color: var(--clr-text);
   font-size: clamp(0.8rem, 8vw, 1.15rem);
-  font-weight: 400;
+  font-weight: 500;
+  font-variation-settings: 'wght' 450;
 }
 
 .artifact-ui *:is(a, button, li, p, small) {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
-  font-weight: inherit;
+  /* font-weight: inherit; */
 }
 
 .artifact-ui *:is(kbd) {
   color: inherit;
   font-size: inherit;
-  font-weight: inherit;
+  /* font-weight: inherit; */
 }
 
 [aria-current='page'] {
@@ -370,7 +386,7 @@ strong {
 
 pre {
   width: min(100%, var(--wide));
-  background-color: var(--clr-background-alt);
+  background-color: var(--clr-bg-400);
   word-wrap: break-word;
   white-space: pre-wrap;
   overflow: auto;

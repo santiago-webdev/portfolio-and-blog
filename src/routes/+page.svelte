@@ -44,7 +44,6 @@
 
 <style>
   main {
-    background-color: var(--clr-background-alt);
     display: grid;
     place-content: center;
   }

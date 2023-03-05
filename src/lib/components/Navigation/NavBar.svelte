@@ -99,11 +99,11 @@
   nav {
     inset: 3px 0 auto 0;
     position: fixed;
-    background-color: var(--clr-background-alt);
+    background-color: var(--clr-bg-400);
     padding: 0.4rem 0;
     transition: all 0.3s;
     z-index: 999;
-    /* transform: translateY(-200%); */
+    transform: translateY(-200%);
   }
 
   .scrollY {
@@ -132,11 +132,11 @@
   }
 
   a:hover {
-    color: var(--clr-hover);
+    color: var(--clr-txt-hover);
   }
 
   a:focus {
-    color: var(--clr-clicked);
+    color: var(--clr-txt-clicked);
   }
 
   #main-navigation {
