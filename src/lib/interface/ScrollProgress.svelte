@@ -37,7 +37,7 @@
 
   progress::-webkit-progress-bar,
   progress {
-    background-color: var(--clr-background-alt);
+    background-color: var(--clr-bg-400);
   }
 
   progress::-moz-progress-bar {

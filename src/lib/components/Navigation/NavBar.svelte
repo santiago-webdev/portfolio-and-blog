@@ -110,7 +110,7 @@
     box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
     -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
-    background: var(--clr-background-alt-blur);
+    background: var(--clr-bg-400-t);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
   }

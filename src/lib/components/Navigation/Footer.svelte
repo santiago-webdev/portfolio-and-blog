@@ -150,7 +150,7 @@
 
   .wrapper-bottom {
     width: 100%;
-    background-color: var(--clr-background-alt-alt);
+    background-color: var(--clr-bg-600);
   }
 
   .bottom {
