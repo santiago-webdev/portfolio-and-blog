@@ -23,6 +23,6 @@
     min-height: 100dvh;
     display: grid;
     grid-template-rows: 1fr auto;
-    background-color: var(--clr-bg-100);
+    background-color: var(--clr-bg-200);
   }
 </style>
