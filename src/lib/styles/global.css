@@ -130,6 +130,7 @@ button {
   --clr-bg-400: hsl(240, 9%, 19%);
   --clr-bg-400-t: hsl(240, 9%, 19%, 0.8);
   --clr-bg-500: hsl(240, 9%, 21%);
+  --clr-bg-600-val: 240 8% 23%;
   --clr-bg-600: hsl(240, 8%, 23%);
   --clr-bg-700: hsl(240, 8%, 24%);
   --clr-bg-800: hsl(240, 8%, 26%);
@@ -313,6 +314,10 @@ strong {
 
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
   }
+}
+
+.shiny.blur {
+  background-color: hsla(var(--clr-bg-600-val) / 75%);
 }
 
 .attn {

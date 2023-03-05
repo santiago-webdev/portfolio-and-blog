@@ -66,7 +66,7 @@
   {/if}
 </button>
 <dialog
-  class="wide shiny"
+  class="wide shiny blur"
   on:close={() => (value = '')}
   on:cancel={() => (value = '')}
   bind:this={modal}>
@@ -140,8 +140,6 @@
     margin: 0;
     margin-inline: auto;
     top: 5vh;
-    border-radius: 1.1rem;
-    background-color: var(--clr-bg-active);
   }
 
   :modal::backdrop {
