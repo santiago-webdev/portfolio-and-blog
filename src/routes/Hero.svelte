@@ -11,7 +11,7 @@
   </p>
   <div class="content-navigation">
     <a
-      href={'/'}
+      href="{base}/projects"
       aria-label="Link to my projects page"
       style="color: var(--clr-text)"
       class="shiny hover"
