@@ -68,4 +68,9 @@
     font-weight: bold;
     font-size: 110%;
   }
+
+  input:checked {
+    background-color: red;
+    outline: 3px hotpink solid;
+  }
 </style>
