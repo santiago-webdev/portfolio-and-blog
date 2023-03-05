@@ -11,12 +11,12 @@
   </p>
   <div class="content-navigation">
     <a
-      href="{base}/#projects"
+      href={'/'}
       aria-label="Link to my projects page"
       style="color: var(--clr-text)"
       class="shiny hover"
       >Projects <iconify-icon icon="lucide:chevron-right" /></a>
-    <a href="/" aria-label="Link to contact me" class="act">Contact</a>
+    <a href="/" aria-label="Link to contact me" class="block hover">Contact</a>
   </div>
 </section>
 

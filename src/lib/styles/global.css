@@ -304,13 +304,16 @@ strong {
 
   border-radius: 1.2rem;
   transition: background-color 50ms, border 80ms, box-shadow 300ms;
+  color: inherit;
 }
 
-.shiny.hover:hover {
-  --background: var(--clr-bg-700);
-  --border: var(--clr-bg-900);
+@media (hover: hover) {
+  .shiny.hover:hover {
+    --background: var(--clr-bg-700);
+    --border: var(--clr-bg-900);
 
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+  }
 }
 
 .attn {
@@ -383,6 +386,27 @@ strong {
   background-color: #18181c;
   border: 1px solid #18181c;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+.block {
+  --background: var(--clr-bg-200);
+  --border: var(--clr-bg-700);
+  background-color: var(--background);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
+
+  border-radius: 1.2rem;
+  transition: background-color 50ms, border 80ms, box-shadow 300ms;
+  color: inherit;
+}
+
+@media (hover: hover) {
+  .block.hover:hover {
+    --background: var(--clr-bg-100);
+    --border: var(--clr-bg-100);
+
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+  }
 }
 
 .artifact-ui {

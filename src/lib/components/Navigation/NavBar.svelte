@@ -87,7 +87,7 @@
               ? 'page'
               : undefined}
             aria-label="Link to {item.label}"
-            class={item.decoration ? 'act' : 'trn-border'}
+            class={item.decoration ? 'block hover' : ''}
             href={item.href}>{item.label}</a>
         {/each}
       </div>
