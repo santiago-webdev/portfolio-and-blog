@@ -28,11 +28,11 @@
     <script>
       if (document.documentElement.dataset.theme === 'system') {
         if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          document.documentElement.dataset.theme = 'dark'
+          document.documentElement.dataset.theme = 'dark';
         } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-          document.documentElement.dataset.theme = 'light'
+          document.documentElement.dataset.theme = 'light';
         } else {
-          document.documentElement.dataset.theme = 'dark'
+          document.documentElement.dataset.theme = 'dark';
         }
       }
     </script>

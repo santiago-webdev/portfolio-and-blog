@@ -58,18 +58,40 @@ const css$4 = {
 const WidgetTheme = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let dialog;
   let button;
+  let theme = "";
+  const themeColorscheme = [
+    {
+      label: "System",
+      value: "system",
+      icon: "bxs:adjust"
+    },
+    {
+      label: "Light",
+      value: "light",
+      icon: "lucide:sun"
+    },
+    {
+      label: "Dark",
+      value: "dark",
+      icon: "lucide:moon"
+    }
+  ];
   $$result.css.add(css$4);
+  {
+    if (typeof document !== "undefined" && theme) {
+      document.documentElement.dataset.theme = theme;
+      document.cookie = `theme=${theme};`;
+      console.log("theme has been changed");
+    }
+  }
   return `<button class="${"svelte-hb5cgv"}"${add_attribute("this", button, 0)}>Theme in use </button>
 <dialog class="${"shiny svelte-hb5cgv"}"${add_attribute("this", dialog, 0)}><form><fieldset class="${"svelte-hb5cgv"}"><legend class="${"svelte-hb5cgv"}">Choose a colorscheme</legend>
-
-      <input type="${"radio"}" name="${"theme"}" id="${"system"}" checked class="${"svelte-hb5cgv"}">
-      <label class="${"shiny-select svelte-hb5cgv"}" for="${"system"}"><iconify-icon icon="${"bxs:adjust"}"></iconify-icon> System</label>
-
-      <input type="${"radio"}" name="${"theme"}" id="${"light"}" class="${"svelte-hb5cgv"}">
-      <label class="${"shiny-select svelte-hb5cgv"}" for="${"light"}"><iconify-icon icon="${"lucide:sun"}"></iconify-icon> Light</label>
-
-      <input type="${"radio"}" name="${"theme"}" id="${"dark"}" class="${"svelte-hb5cgv"}">
-      <label class="${"shiny-select svelte-hb5cgv"}" for="${"dark"}"><iconify-icon icon="${"lucide:moon"}"></iconify-icon> Dark</label></fieldset></form>
+      ${each(themeColorscheme, (color) => {
+    return `<input type="${"radio"}" name="${"theme"}"${add_attribute("id", color.value, 0)}${add_attribute("value", color.value, 0)} class="${"svelte-hb5cgv"}"${color.value === theme ? add_attribute("checked", true, 1) : ""}>
+        <label class="${"shiny-select svelte-hb5cgv"}"${add_attribute("for", color.value, 0)}><iconify-icon${add_attribute("icon", color.icon, 0)}></iconify-icon> 
+          ${escape(color.label)}
+        </label>`;
+  })}</fieldset></form>
 </dialog>`;
 });
 const NavBar_svelte_svelte_type_style_lang = "";

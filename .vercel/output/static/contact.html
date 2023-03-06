@@ -26,29 +26,31 @@
       }
     </style>
     <script>
-      if (
-        localStorage.theme === 'dark' ||
-        (!localStorage.theme &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        document.documentElement.dataset.theme = 'dark';
+      if (document.documentElement.dataset.theme === 'system') {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.dataset.theme = 'dark';
+        } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+          document.documentElement.dataset.theme = 'light';
+        } else {
+          document.documentElement.dataset.theme = 'dark';
+        }
       }
     </script>
     <meta http-equiv="content-security-policy" content="">
-		<link href="./_app/immutable/assets/_layout.ea011a4e.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/_layout.58006579.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/store.b123c976.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/Hollow.e155e60a.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.e89ee760.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.235f527f.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.93f4b5e8.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.b692dda0.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/paths.add7ccdc.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.f49fc4b6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.c27cbed2.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths.6d0dc602.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.3591e2ea.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.41c905a7.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/_layout.svelte.02501dc0.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/store.f9c979ce.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/_layout.svelte.fc1c4d12.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/store.b9be8a9d.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/config.b1cd1a42.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/Hollow.f0e51e5e.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index.382df8f6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.0b2aa0d0.js">
 		<link rel="modulepreload" href="./_app/immutable/entry/_layout.ts.984db11e.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout.da46b06b.js">
 		<link rel="modulepreload" href="./_app/immutable/entry/contact-page.svelte.b2d09342.js">
@@ -102,15 +104,16 @@
 </dialog>
         <button class="svelte-hb5cgv">Theme in use </button>
 <dialog class="shiny svelte-hb5cgv"><form><fieldset class="svelte-hb5cgv"><legend class="svelte-hb5cgv">Choose a colorscheme</legend>
-
-      <input type="radio" name="theme" id="system" checked class="svelte-hb5cgv">
-      <label class="shiny-select svelte-hb5cgv" for="system"><iconify-icon icon="bxs:adjust"></iconify-icon> System</label>
-
-      <input type="radio" name="theme" id="light" class="svelte-hb5cgv">
-      <label class="shiny-select svelte-hb5cgv" for="light"><iconify-icon icon="lucide:sun"></iconify-icon> Light</label>
-
-      <input type="radio" name="theme" id="dark" class="svelte-hb5cgv">
-      <label class="shiny-select svelte-hb5cgv" for="dark"><iconify-icon icon="lucide:moon"></iconify-icon> Dark</label></fieldset></form>
+      <input type="radio" name="theme" id="system" value="system" class="svelte-hb5cgv">
+        <label class="shiny-select svelte-hb5cgv" for="system"><iconify-icon icon="bxs:adjust"></iconify-icon> 
+          System
+        </label><input type="radio" name="theme" id="light" value="light" class="svelte-hb5cgv">
+        <label class="shiny-select svelte-hb5cgv" for="light"><iconify-icon icon="lucide:sun"></iconify-icon> 
+          Light
+        </label><input type="radio" name="theme" id="dark" value="dark" class="svelte-hb5cgv">
+        <label class="shiny-select svelte-hb5cgv" for="dark"><iconify-icon icon="lucide:moon"></iconify-icon> 
+          Dark
+        </label></fieldset></form>
 </dialog></div></div>
     <button aria-label="Toggle navigation list" aria-expanded="false" class="svelte-1bcri2b">
       <iconify-icon icon="lucide:grip" width="26" height="26"></iconify-icon></button>
@@ -154,7 +157,7 @@
 			
 			<script>
 				{
-					__sveltekit_1ss3pm9 = {
+					__sveltekit_9u8x5f = {
 						env: {},
 						base: new URL(".", location).pathname.slice(0, -1),
 						element: document.currentScript.parentElement
@@ -163,10 +166,10 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.e89ee760.js"),
-						import("./_app/immutable/entry/app.f49fc4b6.js")
+						import("./_app/immutable/entry/start.235f527f.js"),
+						import("./_app/immutable/entry/app.3591e2ea.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_1ss3pm9.element, {
+						kit.start(app, __sveltekit_9u8x5f.element, {
 							node_ids: [0, 7],
 							data,
 							form: null,
