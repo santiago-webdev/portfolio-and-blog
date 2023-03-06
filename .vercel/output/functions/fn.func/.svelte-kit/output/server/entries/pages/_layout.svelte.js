@@ -52,29 +52,29 @@ const WidgetModal = create_ssr_component(($$result, $$props, $$bindings, slots) 
 });
 const WidgetTheme_svelte_svelte_type_style_lang = "";
 const css$4 = {
-  code: "button.svelte-1ptr8c4{position:relative}dialog.svelte-1ptr8c4{position:absolute;margin:0;border:transparent;margin-top:var(--gap)}fieldset.svelte-1ptr8c4{display:grid;border:2px solid var(--clr-muted-300);border-radius:0.8rem}legend.svelte-1ptr8c4{padding-inline:0.5ch;color:var(--clr-title);margin-inline:auto;font-weight:bold;font-size:110%}input.svelte-1ptr8c4:checked{background-color:red;outline:3px hotpink solid}",
+  code: "button.svelte-hb5cgv{position:relative}dialog.svelte-hb5cgv{position:absolute;margin:var(--gap) 0;padding:var(--gap)}fieldset.svelte-hb5cgv{display:grid;border:2px solid var(--clr-muted-150);border-radius:0.8rem;width:100%;padding:var(--gap);gap:calc(var(--gap) / 2)}legend.svelte-hb5cgv{color:var(--clr-title);margin-inline:1ch;padding:0}label.svelte-hb5cgv{display:flex;place-items:center;width:100%}input.svelte-hb5cgv{display:none}",
   map: null
 };
 const WidgetTheme = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let dialog;
   let button;
   $$result.css.add(css$4);
-  return `<button class="${"svelte-1ptr8c4"}"${add_attribute("this", button, 0)}>Theme in use </button>
-<dialog class="${"attn attnactive trn-border svelte-1ptr8c4"}"${add_attribute("this", dialog, 0)}><form><fieldset class="${"svelte-1ptr8c4"}"><legend class="${"svelte-1ptr8c4"}">Choose a colorscheme</legend>
+  return `<button class="${"svelte-hb5cgv"}"${add_attribute("this", button, 0)}>Theme in use </button>
+<dialog class="${"shiny svelte-hb5cgv"}"${add_attribute("this", dialog, 0)}><form><fieldset class="${"svelte-hb5cgv"}"><legend class="${"svelte-hb5cgv"}">Choose a colorscheme</legend>
 
-      <section><label for="${"theme"}">Light Lorem, ipsum dolor. </label>
-        <input type="${"radio"}" name="${"theme"}" id="${"light"}" class="${"svelte-1ptr8c4"}"></section>
+      <input type="${"radio"}" name="${"theme"}" id="${"system"}" checked class="${"svelte-hb5cgv"}">
+      <label class="${"shiny-select svelte-hb5cgv"}" for="${"system"}"><iconify-icon icon="${"bxs:adjust"}"></iconify-icon> System</label>
 
-      <section><label for="${"theme"}">Dark</label>
-        <input type="${"radio"}" name="${"theme"}" id="${"dark"}" class="${"svelte-1ptr8c4"}"></section>
+      <input type="${"radio"}" name="${"theme"}" id="${"light"}" class="${"svelte-hb5cgv"}">
+      <label class="${"shiny-select svelte-hb5cgv"}" for="${"light"}"><iconify-icon icon="${"lucide:sun"}"></iconify-icon> Light</label>
 
-      <section><label for="${"theme"}">System</label>
-        <input type="${"radio"}" name="${"theme"}" id="${"system"}" checked class="${"svelte-1ptr8c4"}"></section></fieldset></form>
+      <input type="${"radio"}" name="${"theme"}" id="${"dark"}" class="${"svelte-hb5cgv"}">
+      <label class="${"shiny-select svelte-hb5cgv"}" for="${"dark"}"><iconify-icon icon="${"lucide:moon"}"></iconify-icon> Dark</label></fieldset></form>
 </dialog>`;
 });
 const NavBar_svelte_svelte_type_style_lang = "";
 const css$3 = {
-  code: "nav.svelte-zj35sl.svelte-zj35sl{inset:3px 0 auto 0;position:sticky;background-color:var(--clr-bg-400);padding:0.4rem 0;transition:all 0.3s;z-index:999;transform:translateY(-200%)}.scrollY.svelte-zj35sl.svelte-zj35sl{box-shadow:6px 6px 6px 0px rgba(0, 0, 0, 0.1);background-color:var(--clr-bg-400-t);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--clr-muted-300)}@media(prefers-reduced-motion: reduce){nav.svelte-zj35sl.svelte-zj35sl{transition:none}}a.svelte-zj35sl.svelte-zj35sl{padding:0.4em 0.8em;display:flex;place-items:center;border-radius:1rem}a.svelte-zj35sl.svelte-zj35sl:first-child{padding-left:0}a.svelte-zj35sl.svelte-zj35sl:hover{color:var(--clr-txt-hover)}@media(hover: none){a.svelte-zj35sl.svelte-zj35sl:hover{color:inherit}}a.svelte-zj35sl.svelte-zj35sl:focus{color:var(--clr-txt-clicked)}#main-navigation.svelte-zj35sl.svelte-zj35sl{display:grid;place-items:center;margin-inline:auto;justify-content:space-between;grid-template-columns:1fr auto}button.svelte-zj35sl.svelte-zj35sl{display:flex;place-items:center}.navItems.svelte-zj35sl.svelte-zj35sl{padding-left:1rem;width:100%;display:flex;justify-self:center;place-items:center}.wrapper-left.svelte-zj35sl.svelte-zj35sl{display:flex;justify-content:space-between;width:100%}.widget.svelte-zj35sl.svelte-zj35sl{display:flex;flex-wrap:wrap;gap:1rem}@media screen and (max-width: 48rem){.navItems.svelte-zj35sl.svelte-zj35sl{flex-direction:column;padding:1rem;grid-column:1 / span 2}.wrapper-left.svelte-zj35sl a.svelte-zj35sl{padding-top:0;padding-bottom:0}}",
+  code: "nav.svelte-1bcri2b.svelte-1bcri2b{inset:3px 0 auto 0;position:sticky;background-color:var(--clr-bg-400);padding:0.4rem 0;transition:all 0.3s;z-index:999}.scrollY.svelte-1bcri2b.svelte-1bcri2b{box-shadow:6px 6px 6px 0px rgba(0, 0, 0, 0.1);background-color:var(--clr-bg-400-t);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--clr-muted-300)}@media(prefers-reduced-motion: reduce){nav.svelte-1bcri2b.svelte-1bcri2b{transition:none}}a.svelte-1bcri2b.svelte-1bcri2b{padding:0.4em 0.8em;display:flex;place-items:center;border-radius:1rem}a.svelte-1bcri2b.svelte-1bcri2b:first-child{padding-left:0}a.svelte-1bcri2b.svelte-1bcri2b:hover{color:var(--clr-txt-hover)}@media(hover: none){a.svelte-1bcri2b.svelte-1bcri2b:hover{color:inherit}}a.svelte-1bcri2b.svelte-1bcri2b:focus{color:var(--clr-txt-clicked)}#main-navigation.svelte-1bcri2b.svelte-1bcri2b{display:grid;place-items:center;margin-inline:auto;justify-content:space-between;grid-template-columns:1fr auto}button.svelte-1bcri2b.svelte-1bcri2b{display:flex;place-items:center}.navItems.svelte-1bcri2b.svelte-1bcri2b{padding-left:1rem;width:100%;display:flex;justify-self:center;place-items:center}.wrapper-left.svelte-1bcri2b.svelte-1bcri2b{display:flex;justify-content:space-between;width:100%}.widget.svelte-1bcri2b.svelte-1bcri2b{display:flex;flex-wrap:wrap;gap:1rem}@media screen and (max-width: 48rem){.navItems.svelte-1bcri2b.svelte-1bcri2b{flex-direction:column;padding:1rem;grid-column:1 / span 2}.wrapper-left.svelte-1bcri2b a.svelte-1bcri2b{padding-top:0;padding-bottom:0}}",
   map: null
 };
 const NavBar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -93,18 +93,18 @@ const NavBar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_page();
   return `
 
-<nav aria-labelledby="${"main-navigation"}" class="${["artifact-ui svelte-zj35sl", ""].join(" ").trim()}"><div id="${"main-navigation"}" class="${"wider svelte-zj35sl"}"><div class="${"wrapper-left svelte-zj35sl"}"><a href="${escape(base, true) + "/"}" aria-label="${"Logo of this site and link to Home"}" class="${"svelte-zj35sl"}">${escape(onDesktop && AUTHOR || "SG")}</a>
-      <div class="${"widget svelte-zj35sl"}">${validate_component(WidgetModal, "WidgetModal").$$render($$result, {}, {}, {})}
+<nav aria-labelledby="${"main-navigation"}" class="${["artifact-ui svelte-1bcri2b", ""].join(" ").trim()}"><div id="${"main-navigation"}" class="${"wider svelte-1bcri2b"}"><div class="${"wrapper-left svelte-1bcri2b"}"><a href="${escape(base, true) + "/"}" aria-label="${"Logo of this site and link to Home"}" class="${"svelte-1bcri2b"}">${escape(onDesktop && AUTHOR || "SG")}</a>
+      <div class="${"widget svelte-1bcri2b"}">${validate_component(WidgetModal, "WidgetModal").$$render($$result, {}, {}, {})}
         ${validate_component(WidgetTheme, "WidgetTheme").$$render($$result, {}, {}, {})}</div></div>
-    <button aria-label="${"Toggle navigation list"}"${add_attribute("aria-expanded", expMenu, 0)} class="${"svelte-zj35sl"}"${add_styles({ "display": onDesktop ? "none" : "" })}>
+    <button aria-label="${"Toggle navigation list"}"${add_attribute("aria-expanded", expMenu, 0)} class="${"svelte-1bcri2b"}"${add_styles({ "display": onDesktop ? "none" : "" })}>
       ${expMenu ? `<iconify-icon icon="${"lucide:x"}" width="${"26"}" height="${"26"}"></iconify-icon>` : `<iconify-icon icon="${"lucide:grip"}" width="${"26"}" height="${"26"}"></iconify-icon>`}</button>
-    ${expMenu || onDesktop ? `<div class="${"navItems svelte-zj35sl"}">${each($navItems, (item) => {
+    ${expMenu || onDesktop ? `<div class="${"navItems svelte-1bcri2b"}">${each($navItems, (item) => {
     return `${item.separator ? `<div aria-orientation="${"vertical"}" role="${"separator"}"></div>` : ``}
           <a${add_attribute(
       "aria-current",
       item.href === $page.url.pathname || $page.url.pathname.startsWith(item.href) && `/` !== item.href ? "page" : void 0,
       0
-    )} aria-label="${"Link to " + escape(item.label, true)}" class="${escape(null_to_empty(item.decoration ? "block hover" : ""), true) + " svelte-zj35sl"}"${add_attribute("href", item.href, 0)}>${escape(item.label)}</a>`;
+    )} aria-label="${"Link to " + escape(item.label, true)}" class="${escape(null_to_empty(item.decoration ? "block hover" : ""), true) + " svelte-1bcri2b"}"${add_attribute("href", item.href, 0)}>${escape(item.label)}</a>`;
   })}</div>` : ``}</div>
 </nav>`;
 });
