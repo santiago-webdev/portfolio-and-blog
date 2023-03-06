@@ -48,7 +48,6 @@
   aria-labelledby="main-navigation"
   class="artifact-ui"
   class:scrollY
-  class:banner={!onDesktop && expMenu && scrollY > 30}
   use:navToggle
   use:loadNav>
   <div id="main-navigation" class="wider">
@@ -105,11 +104,10 @@
 
   .scrollY {
     box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
-    -webkit-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
-    background: var(--clr-bg-400-t);
+    background-color: var(--clr-bg-400-t);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--clr-muted-300);
   }
 
   @media (prefers-reduced-motion: reduce) {
