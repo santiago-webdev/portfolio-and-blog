@@ -128,6 +128,7 @@
 
   time {
     display: flex;
-    place-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
   }
 </style>
