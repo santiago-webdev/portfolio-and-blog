@@ -142,6 +142,11 @@ label {
   --clr-bg-800: hsl(240, 8%, 26%);
   --clr-bg-900: hsl(240, 8%, 28%);
 
+  --clr-bg-selection-100: hsl(240, 10%, 35%);
+  --clr-bg-selection-200: hsl(240, 10%, 40%);
+  --clr-bg-selection-300: hsl(240, 10%, 42%);
+  --clr-bg-selection-400: hsl(240, 10%, 44%);
+
   --clr-background-alt: hsl(240, 8%, 19%);
   --clr-border-card: rgba(49, 49, 57, 1);
 
@@ -320,13 +325,33 @@ strong {
 }
 
 .shiny-select {
+  border: 1px solid transparent;
   padding: 0.3rem 0.6rem;
   border-radius: 0.6rem;
 }
 
-.shiny-select:hover {
-  background-color: var(--clr-bg-900);
-  color: var(--clr-text)
+input[type='radio']:checked + .shiny-select {
+  --background: var(--clr-bg-300);
+  --color: var(--clr-text);
+  background-color: var(--background);
+  color: var(--color);
+}
+
+@media (hover: hover) {
+  input[type='radio']:hover + .shiny-select,
+  .shiny-select:hover {
+    --background: var(--clr-bg-selection-100);
+    --border: var(--clr-bg-selection-200);
+    --color: var(--clr-text);
+
+    background-color: var(--background);
+    border-bottom: 1px solid var(--background);
+    border-right: 1px solid var(--background);
+
+    border-left: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+    color: var(--clr-text);
+  }
 }
 
 .attn {

@@ -54,6 +54,7 @@
     border-radius: 0.8rem;
     width: 100%;
     padding: var(--gap);
+    gap: calc(var(--gap) / 2);
   }
 
   legend {
