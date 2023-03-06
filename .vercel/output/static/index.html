@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="system">
+<html lang="en" data-theme="default">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -25,36 +25,25 @@
         font-display: swap;
       }
     </style>
-    <script>
-      if (document.documentElement.dataset.theme === 'system') {
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          document.documentElement.dataset.theme = 'dark';
-        } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-          document.documentElement.dataset.theme = 'light';
-        } else {
-          document.documentElement.dataset.theme = 'dark';
-        }
-      }
-    </script>
     <meta http-equiv="content-security-policy" content="">
 		<link href="./_app/immutable/assets/_layout.58006579.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/store.b123c976.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/Hollow.e155e60a.css" rel="stylesheet">
 		<link href="./_app/immutable/assets/_page.c1103672.css" rel="stylesheet">
-		<link rel="modulepreload" href="./_app/immutable/entry/start.235f527f.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.420d657e.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/index.93f4b5e8.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.c27cbed2.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/paths.6d0dc602.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/app.3591e2ea.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/singletons.c53415b6.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/paths.fb4b4921.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.ac452afd.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/preload-helper.41c905a7.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/_layout.svelte.fc1c4d12.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/store.b9be8a9d.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/_layout.svelte.2c87ad03.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/store.6f0bc750.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/config.b1cd1a42.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/Hollow.f0e51e5e.js">
-		<link rel="modulepreload" href="./_app/immutable/chunks/index.0b2aa0d0.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/index.b5db8dd9.js">
 		<link rel="modulepreload" href="./_app/immutable/entry/_layout.ts.984db11e.js">
 		<link rel="modulepreload" href="./_app/immutable/chunks/_layout.da46b06b.js">
-		<link rel="modulepreload" href="./_app/immutable/entry/_page.svelte.0e0ae35a.js"><title>Santiago's Portfolio and Blog</title><!-- HEAD_svelte-2i912y_START --><meta name="description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta itemprop="name" content="Santiago's Portfolio and Blog"><meta itemprop="description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta itemprop="image" content=""><meta property="og:url" content="https://santigo-zero.github.io/"><meta property="og:type" content="website"><meta property="og:title" content="Santiago's Portfolio and Blog"><meta property="og:description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta property="og:image" content=""><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Santiago's Portfolio and Blog"><meta name="twitter:description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta name="twitter:image" content=""><!-- HEAD_svelte-2i912y_END -->
+		<link rel="modulepreload" href="./_app/immutable/entry/_page.svelte.7314a0a8.js"><title>Santiago's Portfolio and Blog</title><!-- HEAD_svelte-2i912y_START --><meta name="description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta itemprop="name" content="Santiago's Portfolio and Blog"><meta itemprop="description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta itemprop="image" content=""><meta property="og:url" content="https://santigo-zero.github.io/"><meta property="og:type" content="website"><meta property="og:title" content="Santiago's Portfolio and Blog"><meta property="og:description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta property="og:image" content=""><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Santiago's Portfolio and Blog"><meta name="twitter:description" content="Personal blog and portfolio, I talk about web development and show you my projects while at it."><meta name="twitter:image" content=""><!-- HEAD_svelte-2i912y_END -->
   </head>
   <body data-sveltekit-preload-data="hover">
     <div style="display: contents">
@@ -208,7 +197,7 @@
 			
 			<script>
 				{
-					__sveltekit_9u8x5f = {
+					__sveltekit_1bnejxw = {
 						env: {},
 						base: new URL(".", location).pathname.slice(0, -1),
 						element: document.currentScript.parentElement
@@ -217,10 +206,10 @@
 					const data = [null,null];
 
 					Promise.all([
-						import("./_app/immutable/entry/start.235f527f.js"),
-						import("./_app/immutable/entry/app.3591e2ea.js")
+						import("./_app/immutable/entry/start.420d657e.js"),
+						import("./_app/immutable/entry/app.ac452afd.js")
 					]).then(([kit, app]) => {
-						kit.start(app, __sveltekit_9u8x5f.element, {
+						kit.start(app, __sveltekit_1bnejxw.element, {
 							node_ids: [0, 3],
 							data,
 							form: null,

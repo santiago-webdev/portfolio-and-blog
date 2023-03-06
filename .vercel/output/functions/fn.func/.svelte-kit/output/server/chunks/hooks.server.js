@@ -1,5 +1,5 @@
 const handle = async ({ event, resolve }) => {
-  const theme = event.cookies.get("theme") || "system";
+  const theme = event.cookies.get("theme") || "default";
   const response = await resolve(event, {
     transformPageChunk: ({ html }) => html.replace('data-theme=""', `data-theme="${theme}"`)
   });
