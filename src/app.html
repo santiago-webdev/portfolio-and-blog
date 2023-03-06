@@ -26,12 +26,14 @@
       }
     </style>
     <script>
-      if (
-        localStorage.theme === 'dark' ||
-        (!localStorage.theme &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
-        document.documentElement.dataset.theme = 'dark';
+      if (document.documentElement.dataset.theme === 'system') {
+        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+          document.documentElement.dataset.theme = 'dark'
+        } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
+          document.documentElement.dataset.theme = 'light'
+        } else {
+          document.documentElement.dataset.theme = 'dark'
+        }
       }
     </script>
     %sveltekit.head%

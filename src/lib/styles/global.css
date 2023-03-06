@@ -10,6 +10,8 @@
   --br: 0.66rem;
 
   color-scheme: light dark;
+
+  background-color: brown;
 }
 
 br {
@@ -25,6 +27,10 @@ button {
 label {
   color: var(--clr-muted-700);
   font-variation-settings: 'wght' 350;
+}
+
+[data-theme='light'] {
+  background-color: darkslateblue;
 }
 
 [data-theme='dark'] {
@@ -327,7 +333,7 @@ strong {
 .shiny-select {
   border: 1px solid transparent;
   padding: 0.3rem 0.6rem;
-  border-radius: 0.6rem;
+  border-radius: 0.8rem;
 }
 
 input[type='radio']:checked + .shiny-select:active,

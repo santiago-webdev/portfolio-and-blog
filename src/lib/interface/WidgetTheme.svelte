@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { onMount } from 'svelte';
+
   let dialog: HTMLDialogElement;
   let button: HTMLButtonElement;
 
@@ -14,6 +16,25 @@
       dialog.offsetWidth / 2 +
       'px';
   }
+
+  let theme = '';
+  $: if (typeof document !== 'undefined' && theme) {
+    document.documentElement.dataset.theme = theme;
+    document.cookie = `theme=${theme};`;
+    console.log('theme has been changed');
+  }
+
+  onMount(() => {
+    // document.documentElement.dataset.theme = theme;
+    // theme = document.documentElement.dataset.theme || 'system';
+  });
+
+  type ThemeOptions = { label: string; value: string; icon: string };
+  const themeColorscheme: ThemeOptions[] = [
+    { label: 'System', value: 'system', icon: 'bxs:adjust' },
+    { label: 'Light', value: 'light', icon: 'lucide:sun' },
+    { label: 'Dark', value: 'dark', icon: 'lucide:moon' }
+  ];
 </script>
 
 <button bind:this={button} on:click={togglePicker}> Theme in use </button>
@@ -21,18 +42,18 @@
   <form>
     <fieldset>
       <legend>Choose a colorscheme</legend>
-
-      <input type="radio" name="theme" id="system" checked />
-      <label class="shiny-select" for="system"
-        ><iconify-icon icon="bxs:adjust" />&nbsp;System</label>
-
-      <input type="radio" name="theme" id="light" />
-      <label class="shiny-select" for="light"
-        ><iconify-icon icon="lucide:sun" />&nbsp;Light</label>
-
-      <input type="radio" name="theme" id="dark" />
-      <label class="shiny-select" for="dark"
-        ><iconify-icon icon="lucide:moon" />&nbsp;Dark</label>
+      {#each themeColorscheme as color}
+        <input
+          type="radio"
+          name="theme"
+          id={color.value}
+          value={color.value}
+          bind:group={theme} />
+        <label class="shiny-select" for={color.value}>
+          <iconify-icon icon={color.icon} />&nbsp;
+          {color.label}
+        </label>
+      {/each}
     </fieldset>
   </form>
 </dialog>
