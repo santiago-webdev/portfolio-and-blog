@@ -17,7 +17,7 @@
 </script>
 
 <button bind:this={button} on:click={togglePicker}> Theme in use </button>
-<dialog class="attn attnactive trn-border" bind:this={dialog}>
+<dialog class="shiny" bind:this={dialog}>
   <form>
     <fieldset>
       <legend>Choose a colorscheme</legend>
@@ -47,26 +47,18 @@
 
   dialog {
     position: absolute;
-    margin: 0;
-    border: transparent;
-    margin-top: var(--gap);
+    margin: var(--gap) 0;
   }
 
   fieldset {
-    /* padding: 0; */
-    /* margin: 0; */
     display: grid;
-    /* width: 100%; */
-    border: 2px solid var(--clr-muted-300);
+    border: 2px solid var(--clr-muted-200);
     border-radius: 0.8rem;
   }
 
   legend {
-    padding-inline: 0.5ch;
     color: var(--clr-title);
     margin-inline: auto;
-    font-weight: bold;
-    font-size: 110%;
   }
 
   input:checked {
