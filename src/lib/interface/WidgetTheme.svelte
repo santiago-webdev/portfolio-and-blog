@@ -22,20 +22,17 @@
     <fieldset>
       <legend>Choose a colorscheme</legend>
 
-      <section>
-        <label for="theme">Light Lorem, ipsum dolor. </label>
-        <input type="radio" name="theme" id="light" />
-      </section>
+      <input type="radio" name="theme" id="system" checked />
+      <label class="shiny-select" for="system"
+        ><iconify-icon icon="bxs:adjust" />&nbsp;System</label>
 
-      <section>
-        <label for="theme">Dark</label>
-        <input type="radio" name="theme" id="dark" />
-      </section>
+      <input type="radio" name="theme" id="light" />
+      <label class="shiny-select" for="light"
+        ><iconify-icon icon="lucide:sun" />&nbsp;Light</label>
 
-      <section>
-        <label for="theme">System</label>
-        <input type="radio" name="theme" id="system" checked />
-      </section>
+      <input type="radio" name="theme" id="dark" />
+      <label class="shiny-select" for="dark"
+        ><iconify-icon icon="lucide:moon" />&nbsp;Dark</label>
     </fieldset>
   </form>
 </dialog>
@@ -48,21 +45,30 @@
   dialog {
     position: absolute;
     margin: var(--gap) 0;
+    padding: var(--gap);
   }
 
   fieldset {
     display: grid;
-    border: 2px solid var(--clr-muted-200);
+    border: 2px solid var(--clr-muted-150);
     border-radius: 0.8rem;
+    width: 100%;
+    padding: var(--gap);
   }
 
   legend {
     color: var(--clr-title);
-    margin-inline: auto;
+    margin-inline: 1ch;
+    padding: 0;
   }
 
-  input:checked {
-    background-color: red;
-    outline: 3px hotpink solid;
+  label {
+    display: flex;
+    place-items: center;
+    width: 100%;
+  }
+
+  input {
+    display: none;
   }
 </style>

@@ -99,7 +99,7 @@
     padding: 0.4rem 0;
     transition: all 0.3s;
     z-index: 999;
-    transform: translateY(-200%);
+    /* transform: translateY(-200%); */
   }
 
   .scrollY {

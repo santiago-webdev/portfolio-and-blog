@@ -24,7 +24,7 @@ button {
 
 label {
   color: var(--clr-muted-700);
-  font-variation-settings: 'wght' 300;
+  font-variation-settings: 'wght' 350;
 }
 
 [data-theme='dark'] {
@@ -119,6 +119,7 @@ label {
    * important in the page.
    * */
   --clr-muted-100: hsl(240, 5%, 25%);
+  --clr-muted-150: hsl(240, 5%, 27%);
   --clr-muted-200: hsl(240, 5%, 30%);
   --clr-muted-300: hsl(240, 5%, 40%);
   --clr-muted-400: hsl(240, 5%, 50%);
@@ -316,6 +317,16 @@ strong {
 
 .shiny.blur {
   background-color: hsla(var(--clr-bg-600-val) / 75%);
+}
+
+.shiny-select {
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.6rem;
+}
+
+.shiny-select:hover {
+  background-color: var(--clr-bg-900);
+  color: var(--clr-text)
 }
 
 .attn {
