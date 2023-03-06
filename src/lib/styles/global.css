@@ -330,10 +330,14 @@ strong {
   border-radius: 0.6rem;
 }
 
+input[type='radio']:checked + .shiny-select:active,
 input[type='radio']:checked + .shiny-select {
   --background: var(--clr-bg-300);
+  --border: var(--clr-bg-selection-200);
   --color: var(--clr-text);
   background-color: var(--background);
+  border: 1px solid var(--border);
+
   color: var(--color);
 }
 
