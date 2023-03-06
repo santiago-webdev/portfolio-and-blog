@@ -5,7 +5,7 @@
   import BlogShowcase from './BlogShowcase.svelte';
 </script>
 
-<main class="banner">
+<main role="banner" class="banner">
   <Hero />
 </main>
 <BlogShowcase />

@@ -74,7 +74,7 @@ const WidgetTheme = create_ssr_component(($$result, $$props, $$bindings, slots) 
 });
 const NavBar_svelte_svelte_type_style_lang = "";
 const css$3 = {
-  code: "nav.svelte-1yn7k8b.svelte-1yn7k8b{inset:3px 0 auto 0;position:sticky;background-color:var(--clr-bg-400);padding:0.4rem 0;transition:all 0.3s;z-index:999;transform:translateY(-200%)}.scrollY.svelte-1yn7k8b.svelte-1yn7k8b{box-shadow:6px 6px 6px 0px rgba(0, 0, 0, 0.1);-webkit-box-shadow:6px 6px 6px 0px rgba(0, 0, 0, 0.1);-moz-box-shadow:6px 6px 6px 0px rgba(0, 0, 0, 0.1);background:var(--clr-bg-400-t);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}@media(prefers-reduced-motion: reduce){nav.svelte-1yn7k8b.svelte-1yn7k8b{transition:none}}a.svelte-1yn7k8b.svelte-1yn7k8b{padding:0.4em 0.8em;display:flex;place-items:center;border-radius:1rem}a.svelte-1yn7k8b.svelte-1yn7k8b:first-child{padding-left:0}a.svelte-1yn7k8b.svelte-1yn7k8b:hover{color:var(--clr-txt-hover)}@media(hover: none){a.svelte-1yn7k8b.svelte-1yn7k8b:hover{color:inherit}}a.svelte-1yn7k8b.svelte-1yn7k8b:focus{color:var(--clr-txt-clicked)}#main-navigation.svelte-1yn7k8b.svelte-1yn7k8b{display:grid;place-items:center;margin-inline:auto;justify-content:space-between;grid-template-columns:1fr auto}button.svelte-1yn7k8b.svelte-1yn7k8b{display:flex;place-items:center}.navItems.svelte-1yn7k8b.svelte-1yn7k8b{padding-left:1rem;width:100%;display:flex;justify-self:center;place-items:center}.wrapper-left.svelte-1yn7k8b.svelte-1yn7k8b{display:flex;justify-content:space-between;width:100%}.widget.svelte-1yn7k8b.svelte-1yn7k8b{display:flex;flex-wrap:wrap;gap:1rem}@media screen and (max-width: 48rem){.navItems.svelte-1yn7k8b.svelte-1yn7k8b{flex-direction:column;padding:1rem;grid-column:1 / span 2}.wrapper-left.svelte-1yn7k8b a.svelte-1yn7k8b{padding-top:0;padding-bottom:0}}",
+  code: "nav.svelte-zj35sl.svelte-zj35sl{inset:3px 0 auto 0;position:sticky;background-color:var(--clr-bg-400);padding:0.4rem 0;transition:all 0.3s;z-index:999;transform:translateY(-200%)}.scrollY.svelte-zj35sl.svelte-zj35sl{box-shadow:6px 6px 6px 0px rgba(0, 0, 0, 0.1);background-color:var(--clr-bg-400-t);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--clr-muted-300)}@media(prefers-reduced-motion: reduce){nav.svelte-zj35sl.svelte-zj35sl{transition:none}}a.svelte-zj35sl.svelte-zj35sl{padding:0.4em 0.8em;display:flex;place-items:center;border-radius:1rem}a.svelte-zj35sl.svelte-zj35sl:first-child{padding-left:0}a.svelte-zj35sl.svelte-zj35sl:hover{color:var(--clr-txt-hover)}@media(hover: none){a.svelte-zj35sl.svelte-zj35sl:hover{color:inherit}}a.svelte-zj35sl.svelte-zj35sl:focus{color:var(--clr-txt-clicked)}#main-navigation.svelte-zj35sl.svelte-zj35sl{display:grid;place-items:center;margin-inline:auto;justify-content:space-between;grid-template-columns:1fr auto}button.svelte-zj35sl.svelte-zj35sl{display:flex;place-items:center}.navItems.svelte-zj35sl.svelte-zj35sl{padding-left:1rem;width:100%;display:flex;justify-self:center;place-items:center}.wrapper-left.svelte-zj35sl.svelte-zj35sl{display:flex;justify-content:space-between;width:100%}.widget.svelte-zj35sl.svelte-zj35sl{display:flex;flex-wrap:wrap;gap:1rem}@media screen and (max-width: 48rem){.navItems.svelte-zj35sl.svelte-zj35sl{flex-direction:column;padding:1rem;grid-column:1 / span 2}.wrapper-left.svelte-zj35sl a.svelte-zj35sl{padding-top:0;padding-bottom:0}}",
   map: null
 };
 const NavBar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -84,7 +84,7 @@ const NavBar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_navigating = subscribe(navigating, (value) => $navigating = value);
   $$unsubscribe_navItems = subscribe(navItems, (value) => $navItems = value);
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
-  var expMenu = false, onDesktop = true, scrollY = 0, outerWidth = 0;
+  var expMenu = false, onDesktop = true, outerWidth = 0;
   $$result.css.add(css$3);
   onDesktop = outerWidth > inPixels("48rem") ? true : false;
   expMenu = $navigating || onDesktop ? true : false;
@@ -93,21 +93,18 @@ const NavBar = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$unsubscribe_page();
   return `
 
-<nav aria-labelledby="${"main-navigation"}" class="${[
-    "artifact-ui svelte-1yn7k8b",
-    " " + (!onDesktop && expMenu && scrollY > 30 ? "banner" : "")
-  ].join(" ").trim()}"><div id="${"main-navigation"}" class="${"wider svelte-1yn7k8b"}"><div class="${"wrapper-left svelte-1yn7k8b"}"><a href="${escape(base, true) + "/"}" aria-label="${"Logo of this site and link to Home"}" class="${"svelte-1yn7k8b"}">${escape(onDesktop && AUTHOR || "SG")}</a>
-      <div class="${"widget svelte-1yn7k8b"}">${validate_component(WidgetModal, "WidgetModal").$$render($$result, {}, {}, {})}
+<nav aria-labelledby="${"main-navigation"}" class="${["artifact-ui svelte-zj35sl", ""].join(" ").trim()}"><div id="${"main-navigation"}" class="${"wider svelte-zj35sl"}"><div class="${"wrapper-left svelte-zj35sl"}"><a href="${escape(base, true) + "/"}" aria-label="${"Logo of this site and link to Home"}" class="${"svelte-zj35sl"}">${escape(onDesktop && AUTHOR || "SG")}</a>
+      <div class="${"widget svelte-zj35sl"}">${validate_component(WidgetModal, "WidgetModal").$$render($$result, {}, {}, {})}
         ${validate_component(WidgetTheme, "WidgetTheme").$$render($$result, {}, {}, {})}</div></div>
-    <button aria-label="${"Toggle navigation list"}"${add_attribute("aria-expanded", expMenu, 0)} class="${"svelte-1yn7k8b"}"${add_styles({ "display": onDesktop ? "none" : "" })}>
+    <button aria-label="${"Toggle navigation list"}"${add_attribute("aria-expanded", expMenu, 0)} class="${"svelte-zj35sl"}"${add_styles({ "display": onDesktop ? "none" : "" })}>
       ${expMenu ? `<iconify-icon icon="${"lucide:x"}" width="${"26"}" height="${"26"}"></iconify-icon>` : `<iconify-icon icon="${"lucide:grip"}" width="${"26"}" height="${"26"}"></iconify-icon>`}</button>
-    ${expMenu || onDesktop ? `<div class="${"navItems svelte-1yn7k8b"}">${each($navItems, (item) => {
+    ${expMenu || onDesktop ? `<div class="${"navItems svelte-zj35sl"}">${each($navItems, (item) => {
     return `${item.separator ? `<div aria-orientation="${"vertical"}" role="${"separator"}"></div>` : ``}
           <a${add_attribute(
       "aria-current",
       item.href === $page.url.pathname || $page.url.pathname.startsWith(item.href) && `/` !== item.href ? "page" : void 0,
       0
-    )} aria-label="${"Link to " + escape(item.label, true)}" class="${escape(null_to_empty(item.decoration ? "block hover" : ""), true) + " svelte-1yn7k8b"}"${add_attribute("href", item.href, 0)}>${escape(item.label)}</a>`;
+    )} aria-label="${"Link to " + escape(item.label, true)}" class="${escape(null_to_empty(item.decoration ? "block hover" : ""), true) + " svelte-zj35sl"}"${add_attribute("href", item.href, 0)}>${escape(item.label)}</a>`;
   })}</div>` : ``}</div>
 </nav>`;
 });

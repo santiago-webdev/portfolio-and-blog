@@ -9,7 +9,7 @@
   let input: HTMLInputElement;
 </script>
 
-<main class="banner wide">
+<main role="banner" class="banner wide">
   <BlogHeader />
   <SearchBar bind:input />
 </main>

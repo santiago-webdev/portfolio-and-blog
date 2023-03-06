@@ -19,7 +19,7 @@ const css = {
 };
 const Error = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `<section class="${"wide banner svelte-17cdesx"}"><h1>${validate_component(Hollow, "Hollow").$$render($$result, { color: "var(--clr-title)" }, {}, {
+  return `<section role="${"banner"}" class="${"wide banner svelte-17cdesx"}"><h1>${validate_component(Hollow, "Hollow").$$render($$result, { color: "var(--clr-title)" }, {}, {
     default: () => {
       return `404`;
     }

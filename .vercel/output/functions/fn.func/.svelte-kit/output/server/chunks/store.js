@@ -125,36 +125,37 @@ const __vite_glob_0_2 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.def
 }, Symbol.toStringTag, { value: "Module" }));
 const Template_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "article.svelte-4xdosg.svelte-4xdosg{display:grid;margin-inline:auto}.wrapper-header.svelte-4xdosg.svelte-4xdosg{display:grid;gap:1rem}.wrapper-header.svelte-4xdosg p.svelte-4xdosg{color:var(--clr-subtitle);max-width:44ch;margin-inline:auto}small.svelte-4xdosg.svelte-4xdosg{margin-inline:auto;color:var(--clr-muted-600)}.wip.svelte-4xdosg.svelte-4xdosg{display:grid;place-items:center}time.svelte-4xdosg.svelte-4xdosg{display:flex;place-items:center}",
+  code: "article.svelte-lt2hnt.svelte-lt2hnt{display:grid;margin-inline:auto}.wrapper-header.svelte-lt2hnt.svelte-lt2hnt{display:grid;gap:1rem}.wrapper-header.svelte-lt2hnt p.svelte-lt2hnt{color:var(--clr-subtitle);max-width:44ch;margin-inline:auto}small.svelte-lt2hnt.svelte-lt2hnt{margin-inline:auto;color:var(--clr-muted-600)}.wip.svelte-lt2hnt.svelte-lt2hnt{display:grid;place-items:center}time.svelte-lt2hnt.svelte-lt2hnt{display:flex;place-items:center;justify-content:center;flex-wrap:wrap}",
   map: null
 };
 const Template = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $page, $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => $page = value);
   let { title: title2 = "" } = $$props;
-  let { date: date2 = "" } = $$props;
+  let { datetime = "" } = $$props;
   let { description: description2 = "" } = $$props;
   let { finished = false } = $$props;
-  const dateRelative = relativeTime(new Date(), new Date(date2));
-  const dateReadable = readableDate(date2);
+  const dateRelative = !datetime ? datetime : relativeTime(new Date(), new Date(datetime));
+  const dateReadable = !datetime ? datetime : readableDate(datetime);
   if ($$props.title === void 0 && $$bindings.title && title2 !== void 0)
     $$bindings.title(title2);
-  if ($$props.date === void 0 && $$bindings.date && date2 !== void 0)
-    $$bindings.date(date2);
+  if ($$props.datetime === void 0 && $$bindings.datetime && datetime !== void 0)
+    $$bindings.datetime(datetime);
   if ($$props.description === void 0 && $$bindings.description && description2 !== void 0)
     $$bindings.description(description2);
   if ($$props.finished === void 0 && $$bindings.finished && finished !== void 0)
     $$bindings.finished(finished);
   $$result.css.add(css);
   $$unsubscribe_page();
-  return `<main><header id="${"page-header-info"}" class="${"banner"}"><div aria-labelledby="${"page-header-info"}" class="${"wrapper-header wide svelte-4xdosg"}">${`<h1>${escape(title2)}</h1>`}
-      <p class="${"svelte-4xdosg"}">${escape(description2)}</p>
-      ${!finished ? `<div class="${"wip svelte-4xdosg"}"><small class="${"svelte-4xdosg"}">🏗 Construction site, keep out 🏗️ </small>
-          <small class="${"svelte-4xdosg"}">🚧 Authorized personnel only 🚧 </small></div>` : ``}
-      <small class="${"svelte-4xdosg"}"><time${add_attribute("datetime", date2, 0)} class="${"svelte-4xdosg"}"><iconify-icon icon="${"lucide:calendar"}"></iconify-icon>: ${escape(dateRelative)}
-          <div aria-orientation="${"vertical"}" role="${"separator"}">•</div>
-          ${escape(dateReadable)}</time></small></div></header>
-  <article class="${"wide svelte-4xdosg"}">${slots.default ? slots.default({}) : ``}</article></main>
+  return `<main><header id="${"page-header-info"}" class="${"banner"}"><div aria-labelledby="${"page-header-info"}" class="${"wrapper-header wide svelte-lt2hnt"}">${`<h1>${escape(title2)}</h1>`}
+      <p class="${"svelte-lt2hnt"}">${escape(description2)}</p>
+      ${!finished ? `<div class="${"wip svelte-lt2hnt"}"><small class="${"svelte-lt2hnt"}">🏗 Construction site, keep out 🏗️ </small>
+          <small class="${"svelte-lt2hnt"}">🚧 Authorized personnel only 🚧 </small></div>` : ``}
+      ${datetime ? `<hr style="${"width: 50%; margin-inline: auto"}" aria-orientation="${"horizontal"}">
+        <small class="${"svelte-lt2hnt"}"><time${add_attribute("datetime", datetime, 0)} class="${"svelte-lt2hnt"}"><iconify-icon icon="${"lucide:calendar"}"></iconify-icon>: ${escape(dateRelative)}
+            <div aria-orientation="${"vertical"}" role="${"separator"}">•</div>
+            ${escape(dateReadable)}</time></small>` : ``}</div></header>
+  <article class="${"wide svelte-lt2hnt"}">${slots.default ? slots.default({}) : ``}</article></main>
 
 ${$$result.head += `<!-- HEAD_svelte-1nv67zy_START -->${$$result.title = `<title>${escape(title2)}${escape(TITLE_BLOG_COMPOSE)}</title>`, ""}<meta name="${"description"}"${add_attribute("content", description2, 0)}><meta itemprop="${"name"}"${add_attribute("content", title2, 0)}><meta itemprop="${"description"}"${add_attribute("content", description2, 0)}><meta itemprop="${"image"}" content="${""}"><meta property="${"og:url"}"${add_attribute("content", $page.url.toString(), 0)}><meta property="${"og:type"}" content="${"website"}"><meta property="${"og:title"}"${add_attribute("content", title2, 0)}><meta property="${"og:description"}"${add_attribute("content", description2, 0)}><meta property="${"og:image"}" content="${""}"><meta name="${"twitter:card"}" content="${"summary_large_image"}"><meta name="${"twitter:title"}"${add_attribute("content", title2, 0)}><meta name="${"twitter:description"}"${add_attribute("content", description2, 0)}><meta name="${"twitter:image"}" content="${""}"><!-- HEAD_svelte-1nv67zy_END -->`, ""}`;
 });
@@ -193,7 +194,7 @@ const __vite_glob_0_4 = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.def
 }, Symbol.toStringTag, { value: "Module" }));
 const metadata$2 = {
   "title": "How this blog was built",
-  "date": "2023-01-27 20:59",
+  "datetime": "2023-01-27 20:59",
   "description": "How to build your own static blog written in sveltekit and deploy it to GitHub Pages.",
   "finished": false
 };
