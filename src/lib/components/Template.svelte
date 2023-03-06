@@ -53,6 +53,9 @@
         </div>
       {/if}
       {#if datetime}
+        <hr
+          style="width: 50%; margin-inline: auto"
+          aria-orientation="horizontal" />
         <small>
           <time {datetime}>
             <iconify-icon icon="lucide:calendar" />: {dateRelative}
