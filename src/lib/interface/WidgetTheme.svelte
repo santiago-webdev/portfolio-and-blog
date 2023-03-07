@@ -25,8 +25,7 @@
   }
 
   onMount(() => {
-    // document.documentElement.dataset.theme = theme;
-    // theme = document.documentElement.dataset.theme || 'system';
+    theme = document.documentElement.dataset.theme || 'system';
   });
 
   type ThemeOptions = { label: string; value: string; icon: string };
