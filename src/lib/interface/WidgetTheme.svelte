@@ -20,7 +20,7 @@
   let theme = '';
   $: if (typeof document !== 'undefined' && theme) {
     document.documentElement.dataset.theme = theme;
-    document.cookie = `theme=${theme};`;
+    document.cookie = `theme=${theme};max-age=31536000;path="/"`;
     console.log('theme has been changed');
   }
 
