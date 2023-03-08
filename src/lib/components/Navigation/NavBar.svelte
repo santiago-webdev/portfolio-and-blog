@@ -44,12 +44,7 @@
 
 <svelte:window bind:outerWidth bind:scrollY />
 
-<nav
-  aria-labelledby="main-navigation"
-  class="artifact-ui"
-  class:scrollY
-  use:navToggle
-  use:loadNav>
+<nav class="artifact-ui" class:scrollY use:navToggle use:loadNav>
   <div id="main-navigation" class="wider">
     <div class="wrapper-left">
       <a href="{base}/" aria-label="Logo of this site and link to Home"

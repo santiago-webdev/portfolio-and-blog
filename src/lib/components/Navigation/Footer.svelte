@@ -23,7 +23,7 @@
   getGithubStars().then(stars => (ghStars = stars));
 </script>
 
-<footer aria-labelledby="main-footer" class="banner-reverse artifact-ui">
+<footer class="banner-reverse artifact-ui">
   <div id="main-footer">
     <section class="upper wider">
       <div class="services">
