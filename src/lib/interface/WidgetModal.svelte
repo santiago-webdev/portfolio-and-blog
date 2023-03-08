@@ -1,12 +1,10 @@
 <script lang="ts">
-  import IconSearch from '$lib/Icons/IconSearch.svelte';
   import { FilteredPosts } from '$lib/components/Search/store';
   import { base } from '$app/paths';
   import { goto } from '$app/navigation';
   import { inPixels, readableDate } from '$lib/utils/utils';
   import { onMount } from 'svelte';
   import { searchHandler } from '$lib/components/Search/utils';
-  import Separator from './Separator.svelte';
 
   var modal: HTMLDialogElement,
     input: HTMLInputElement,
@@ -40,19 +38,19 @@
     await goto(`${base}/blog${$FilteredPosts[0].href}`);
   }
 
-  onMount(() => (touchSupport = 'ontouchstart' in window ? true : false));
-  onMount(() =>
+  onMount(async () => {
+    touchSupport = 'ontouchstart' in window ? true : false;
     modal.addEventListener('click', event => {
       if (event.target === modal) {
         modal.close();
       }
-    })
-  );
-  //
+    });
+  });
+
   // onMount(() => {
-  //   modal.showModal()
-  //   value = 'test'
-  // })
+  //   toggleModal();
+  //   value = 'h';
+  // });
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
   $: complex = onDesktop || !touchSupport;
 </script>
@@ -64,7 +62,7 @@
   aria-keyshortcuts="Control+K"
   aria-label="Click to open the modal box to search for blogs"
   on:click={toggleModal}>
-  <IconSearch />
+  <iconify-icon width="24" icon="lucide:search" />
   {#if complex}
     <span> &nbsp;&nbsp;&nbsp </span>
     <kbd>Ctrl K</kbd>
@@ -78,8 +76,8 @@
   <form on:submit|preventDefault={handleSubmit}>
     <label for="modal-search">Search for a blog post:</label>
     <div class="searchbar">
-      <button aria-label="Go to selected blog" type="submit">
-        <IconSearch />
+      <button aria-label="Navigate to best match" type="submit">
+        <iconify-icon width="24" icon="lucide:search" />
       </button>
       <input
         placeholder="Search for a blog post"
@@ -89,28 +87,35 @@
         id="modal-search"
         autocomplete="off"
         on:input={() => searchHandler(value)} />
+      <button
+        aria-label="Clear the search bar and search again"
+        on:click={() => {
+          value = '';
+          input.focus();
+        }}
+        disabled={!value}
+        type="button"><iconify-icon width="24" icon="lucide:x" /></button>
     </div>
   </form>
-  <ul style:display={value.length ? 'grid' : 'none'}>
+  <ul style:display={value ? 'grid' : 'none'}>
     {#each $FilteredPosts.slice(0, 4) as post}
       <hr aria-orientation="horizontal" />
       <li>
-        <a on:click={() => toggleModal()} href="{base}/blog{post.href}">
+        <a
+          class="shiny-select"
+          on:click={() => toggleModal()}
+          href="{base}/blog{post.href}">
           <article>
             <h3>
-              <IconSearch />
+              <iconify-icon width="24" icon="lucide:search" />
               {post.title}
             </h3>
-            {#if post.description}
-              <p>{post.description}</p>
-            {:else}
-              <p>No description was given.</p>
-            {/if}
+            <p>{post.description}</p>
             {#if post.date}
               <small>
                 Published: {readableDate(post.date)}
                 <time datetime={post.date}>
-                  <iconify-icon icon="lucide:calendar" />: {readableDate(
+                  <iconify-icon width="24" icon="lucide:calendar" />: {readableDate(
                     post.date
                   )}
                 </time>
@@ -171,12 +176,12 @@
   }
 
   :modal > * {
-    padding: 1rem;
+    padding: var(--gap);
   }
 
-  :modal button {
-    padding-left: 0;
-  }
+  /* :modal button { */
+  /*   padding-left: 0; */
+  /* } */
 
   form {
     display: flex;
@@ -223,8 +228,14 @@
     padding: 0;
   }
 
-  li {
-    padding: 0.8rem;
-    padding-left: 0;
+  /* li { */
+  /*   padding: 0.8rem; */
+  /*   padding-left: 0; */
+  /* } */
+
+  a {
+    display: grid;
+    place-items: start;
+    /* outline: 3px solid palegoldenrod; */
   }
 </style>

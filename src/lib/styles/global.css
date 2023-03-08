@@ -41,8 +41,8 @@ button {
   --clr-subtitle: hsl(222 33% 85%);
   --clr-text: hsl(222 20% 90%);
 
-  --clr-txt-A: hsl(222 90% 90%);
-  --clr-txt-G: hsl(222 60% 88%);
+  --clr-txt-A: hsl(222 80% 90%);
+  --clr-txt-G: hsl(222 80% 85%);
 
   --clr-txt-hover: hsl(230 20% 70%);
   --clr-txt-clicked: hsl(220 80% 80%);
@@ -130,9 +130,12 @@ h3 {
 
 .ff-sz-700,
 p {
-  color: var(--clr-text);
+  --range: clamp(0.8rem, 12vw, 1.4rem);
+  font-size: var(--range);
+  line-height: calc(1.2 * var(--range));
+
   font-variation-settings: 'wght' 400;
-  font-size: clamp(0.8rem, 8vw, 1.4rem);
+  color: var(--clr-txt-G);
 }
 
 small {
@@ -440,4 +443,8 @@ pre {
 a:active,
 button:active {
   color: var(--clr-txt-clicked);
+}
+
+button:disabled {
+  color: transparent;
 }
