@@ -160,6 +160,17 @@
     -webkit-backdrop-filter: blur(8px);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
     cursor: pointer;
+    animation: fade-in 0.4s;
+  }
+
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
   }
 
   :modal > * {
