@@ -127,20 +127,6 @@
     padding-left: 0;
   }
 
-  a:hover {
-    color: var(--clr-txt-hover);
-  }
-
-  @media (hover: none) {
-    a:hover {
-      color: inherit;
-    }
-  }
-
-  a:focus {
-    color: var(--clr-txt-clicked);
-  }
-
   #main-navigation {
     display: grid;
     place-items: center;

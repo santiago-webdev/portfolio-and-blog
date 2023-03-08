@@ -34,7 +34,7 @@
   onMount(() => (theme = document.documentElement.dataset.theme || 'system'));
 </script>
 
-<button bind:this={button} on:click={togglePicker}
+<button class="shiny hover" bind:this={button} on:click={togglePicker}
   >Theme
   <iconify-icon icon="lucide:chevron-down" />
 </button>
@@ -63,6 +63,7 @@
     position: relative;
     display: flex;
     place-items: center;
+    border-radius: 0.8rem;
   }
 
   dialog {
