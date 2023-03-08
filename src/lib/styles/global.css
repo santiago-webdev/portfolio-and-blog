@@ -212,14 +212,10 @@ strong {
 .shiny {
   --background: var(--clr-bg-600);
   --border: var(--clr-bg-800);
-
   background-color: var(--background);
-  border-bottom: 1px solid var(--background);
-  border-right: 1px solid var(--background);
-
-  border-left: 1px solid var(--border);
-  border-top: 1px solid var(--border);
-
+  border: 1px solid var(--background);
+  border-top-color: var(--border);
+  border-left-color: var(--border);
   box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
 
   border-radius: 1.2rem;
@@ -236,7 +232,6 @@ strong {
   .shiny.hover:hover {
     --background: var(--clr-bg-700);
     --border: var(--clr-bg-900);
-
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
   }
 }
@@ -273,13 +268,10 @@ input[type='radio']:checked + .shiny-select {
     --background: var(--clr-bg-selection-100);
     --border: var(--clr-bg-selection-200);
     --color: var(--clr-text);
-
     background-color: var(--background);
-    border-bottom: 1px solid var(--background);
-    border-right: 1px solid var(--background);
-
-    border-left: 1px solid var(--border);
-    border-top: 1px solid var(--border);
+    border: 1px solid var(--background);
+    border-left-color: var(--border);
+    border-top-color: var(--border);
     color: var(--clr-text);
   }
 }
