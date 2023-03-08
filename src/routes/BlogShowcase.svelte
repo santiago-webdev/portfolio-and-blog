@@ -10,17 +10,17 @@
     posts
   </p>
   <section>
-    <article class="base attn">
+    <article class="shiny less attn">
       <h3>Title</h3>
       <p>Description</p>
     </article>
 
-    <article class="base attn">
+    <article class="shiny less attn">
       <h3>Title</h3>
       <p>Description</p>
     </article>
 
-    <article class="base attn">
+    <article class="shiny less attn">
       <h3>Title</h3>
       <p>Description</p>
     </article>
@@ -50,11 +50,5 @@
     grid-template-columns: repeat(auto-fill, minmax(min(22rem, 100%), 1fr));
     width: 100%;
     gap: 1rem;
-  }
-
-  article {
-    background-color: var(--clr-background-alt);
-    width: 100%;
-    height: 100%;
   }
 </style>

@@ -34,10 +34,6 @@ label {
 }
 
 [data-theme='dark'] {
-  --base-dark-background-150: #181a20;
-  --base-dark-background-200: #2b2a33;
-  --base-dark-background-300: #37373f; /* hsl(240, 7%, 23%) */
-
   --accent-violet: #49364c;
   --accent-purple: #915268;
   --accent-peachy: #d4786c;
@@ -50,9 +46,6 @@ label {
   --clr-txt-hover: hsl(230, 20%, 65%);
   --clr-txt-clicked: hsl(200, 80%, 80%);
 
-  /* Muted colors, for UI(separators, borders) or text that is not the most
-   * important in the page.
-   * */
   --clr-muted-100: hsl(240, 5%, 25%);
   --clr-muted-150: hsl(240, 5%, 27%);
   --clr-muted-200: hsl(240, 5%, 30%);
@@ -62,9 +55,6 @@ label {
   --clr-muted-600: hsl(240, 5%, 60%);
   --clr-muted-700: hsl(240, 5%, 70%);
 
-  /* Background colors, used in buttons, cards and borders to make this cards
-   * shiny.
-   * */
   --clr-bg-100: hsl(240, 9%, 12%);
   --clr-bg-200: hsl(240, 9%, 14%);
   --clr-bg-300: hsl(240, 9%, 16%);
@@ -217,15 +207,6 @@ strong {
 
 .trn-border {
   border: 1px solid transparent;
-}
-
-.base {
-  background-color: var(--clr-bg-400);
-  border-radius: 1.1rem;
-  border-top: 1px solid var(--clr-border-card);
-  border-left: 1px solid var(--clr-border-card);
-  border-right: 1px solid transparent;
-  border-bottom: 1px solid transparent;
 }
 
 .shiny {
