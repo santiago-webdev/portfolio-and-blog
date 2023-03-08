@@ -64,6 +64,7 @@
     display: flex;
     place-items: center;
     border-radius: 0.8rem;
+    padding: 0.2rem 0.8rem;
   }
 
   dialog {
