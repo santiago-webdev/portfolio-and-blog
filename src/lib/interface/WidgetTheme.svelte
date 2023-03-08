@@ -34,7 +34,10 @@
   onMount(() => (theme = document.documentElement.dataset.theme || 'system'));
 </script>
 
-<button bind:this={button} on:click={togglePicker}>Theme</button>
+<button bind:this={button} on:click={togglePicker}
+  >Theme
+  <iconify-icon icon="lucide:chevron-down" />
+</button>
 <dialog class="shiny" bind:this={dialog}>
   <form>
     <fieldset>
@@ -58,6 +61,8 @@
 <style>
   button {
     position: relative;
+    display: flex;
+    place-items: center;
   }
 
   dialog {

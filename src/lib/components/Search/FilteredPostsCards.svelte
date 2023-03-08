@@ -21,7 +21,7 @@
     {#each $FilteredPosts as post}
       <li use:deferAddSettings in:fly={fly_in} out:fly={fly_out}>
         <a href="{base}/blog{post.href}">
-          <article class="base attn">
+          <article class="shiny less attn">
             <h2>{post.title}</h2>
             {#if post.description}
               <p>{post.description}</p>

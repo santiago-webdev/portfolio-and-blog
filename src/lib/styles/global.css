@@ -36,83 +36,12 @@ label {
 [data-theme='dark'] {
   --base-dark-background-150: #181a20;
   --base-dark-background-200: #2b2a33;
-  --base-dark-background-300: #37373f;
+  --base-dark-background-300: #37373f; /* hsl(240, 7%, 23%) */
 
   --accent-violet: #49364c;
   --accent-purple: #915268;
   --accent-peachy: #d4786c;
   --accent-orange: #fbb163;
-
-  --clr-pale-50: #ffffff;
-  --clr-pale-100: #fffafa;
-  --clr-pale-200: #e6e1e1;
-  --clr-pale-300: #ccc8c8;
-  --clr-pale-400: #b3afaf;
-  --clr-pale-450: #94959a;
-  --clr-pale-500: #999696;
-  --clr-pale-600: #807d7d;
-  --clr-pale-700: #666464;
-  --clr-pale-800: #4c4b4b;
-  --clr-pale-900: #333232;
-
-  --clr-slate-50: #f8fafc;
-  --clr-slate-100: #f1f5f9;
-  --clr-slate-200: #e2e8f0;
-  --clr-slate-250: #d7dfe9;
-  --clr-slate-300: #cbd5e1;
-  --clr-slate-350: #b0bccd;
-  --clr-slate-400: #94a3b8;
-  --clr-slate-500: #64748b;
-  --clr-slate-600: #475569;
-  --clr-slate-700: #334155;
-  --clr-slate-750: #293548;
-  --clr-slate-800: #1e293b;
-  --clr-slate-900: #0f172a;
-
-  --clr-gray-50: #f9fafb;
-  --clr-gray-100: #f3f4f6;
-  --clr-gray-200: #e5e7eb;
-  --clr-gray-300: #d1d5db;
-  --clr-gray-400: #9ca3af;
-  --clr-gray-500: #6b7280;
-  --clr-gray-600: #4b5563;
-  --clr-gray-700: #374151;
-  --clr-gray-800: #1f2937;
-  --clr-gray-900: #111827;
-
-  --clr-zinc-50: #fafafa;
-  --clr-zinc-100: #f4f4f5;
-  --clr-zinc-200: #e4e4e7;
-  --clr-zinc-300: #d4d4d8;
-  --clr-zinc-400: #a1a1aa;
-  --clr-zinc-500: #71717a;
-  --clr-zinc-600: #52525b;
-  --clr-zinc-700: #3f3f46;
-  --clr-zinc-800: #27272a;
-  --clr-zinc-900: #18181b;
-
-  --clr-neutral-50: #fafafa;
-  --clr-neutral-100: #f5f5f5;
-  --clr-neutral-200: #e5e5e5;
-  --clr-neutral-300: #d4d4d4;
-  --clr-neutral-400: #a3a3a3;
-  --clr-neutral-500: #737373;
-  --clr-neutral-600: #525252;
-  --clr-neutral-700: #404040;
-  --clr-neutral-750: #333333;
-  --clr-neutral-800: #262626;
-  --clr-neutral-900: #171717;
-
-  --clr-stone-50: #fafaf9;
-  --clr-stone-100: #f5f5f4;
-  --clr-stone-200: #e7e5e4;
-  --clr-stone-300: #d6d3d1;
-  --clr-stone-400: #a8a29e;
-  --clr-stone-500: #78716c;
-  --clr-stone-600: #57534e;
-  --clr-stone-700: #44403c;
-  --clr-stone-800: #292524;
-  --clr-stone-900: #1c1917;
 
   --clr-title: hsl(222, 33%, 83%);
   --clr-subtitle: hsl(222, 33%, 85%);
@@ -156,7 +85,7 @@ label {
   --clr-background-alt: hsl(240, 8%, 19%);
   --clr-border-card: rgba(49, 49, 57, 1);
 
-  --clr-bg-active: var(--base-dark-background-300);
+  --clr-bg-active: var(--clr-bg-600);
   --clr-border-card-active: rgba(66 66 74 / 1);
 }
 
@@ -315,6 +244,11 @@ strong {
   border-radius: 1.2rem;
   transition: background-color 50ms, border 80ms, box-shadow 300ms;
   color: inherit;
+}
+
+.shiny.less {
+  --background: var(--clr-bg-400);
+  --border: var(--clr-bg-600);
 }
 
 @media (hover: hover) {
