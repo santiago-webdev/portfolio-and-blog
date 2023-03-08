@@ -10,12 +10,11 @@
   --br: 0.66rem;
 
   color-scheme: light dark;
-
-  background-color: brown;
 }
 
 html {
   font-family: var(--ff-dflt);
+  background-color: var(--clr-bg-200);
 }
 
 br {
@@ -38,9 +37,12 @@ button {
   --accent-peachy: #d4786c;
   --accent-orange: #fbb163;
 
-  --clr-title: hsl(222, 33%, 83%);
+  --clr-title: hsl(222, 33%, 88%);
   --clr-subtitle: hsl(222, 33%, 85%);
   --clr-text: hsl(222, 20%, 90%);
+
+  --clr-txt-A: hsl(222, 90%, 90%);
+  --clr-txt-G: hsl(222, 60%, 88%);
 
   --clr-txt-hover: hsl(230, 20%, 70%);
   --clr-txt-clicked: hsl(220, 80%, 80%);
@@ -103,18 +105,18 @@ button {
 
 .ff-sz-100,
 h1 {
-  color: var(--clr-title);
+  --range: clamp(2.7rem, 12vw, 4.8rem);
+  font-size: var(--range);
+  line-height: calc(1.2 * var(--range));
+
   font-variation-settings: 'wght' 800;
-  font-size: clamp(2.6rem, 8vw, 4.8rem);
-  line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.8rem));
+  color: var(--clr-txt-A);
 }
 
 .ff-sz-200,
 h2 {
-  color: var(--clr-subtitle);
-  font-weight: 600;
-  font-size: clamp(1.6rem, 8vw, 2.84rem);
-  line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem));
+  font-size: clamp(1.6rem, 12vw, 2.84rem);
+  line-height: calc(1.5 * clamp(2.3rem, 10vw, 3.6rem));
 }
 
 .ff-sz-300,
@@ -241,6 +243,7 @@ button {
 }
 
 .shiny.blur {
+  /* I don't think I need this class anymore. */
   background-color: hsla(var(--clr-bg-600-val) / 75%);
 }
 

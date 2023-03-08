@@ -136,7 +136,7 @@
   }
 
   .navItems {
-    padding-left: 1rem;
+    padding-left: var(--gap);
     width: 100%;
     display: flex;
     justify-self: center;
@@ -152,7 +152,7 @@
   .widget {
     display: flex;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: var(--gap);
   }
 
   @media screen and (max-width: 48rem) {

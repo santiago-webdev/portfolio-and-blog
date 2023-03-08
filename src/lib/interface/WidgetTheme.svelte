@@ -69,7 +69,7 @@
 
   dialog {
     position: absolute;
-    margin: var(--gap) 0;
+    margin: var(--gap) 0 0 0;
     padding: var(--gap);
   }
 

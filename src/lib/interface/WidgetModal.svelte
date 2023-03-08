@@ -128,7 +128,7 @@
     display: flex;
     place-items: center;
     padding: 0.2rem 0.8rem;
-    gap: 0.6rem;
+    gap: var(--gap);
     border-radius: 1rem;
   }
 
