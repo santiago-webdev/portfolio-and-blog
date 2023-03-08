@@ -92,7 +92,8 @@
     position: sticky;
     background-color: var(--clr-bg-400);
     padding: 0.4rem 0;
-    transition: all 0.3s;
+    transition: box-shadow 200ms ease-in-out, background-color 200ms ease-in-out,
+      backdrop-filter 200ms ease-in-out;
     z-index: 999;
     /* transform: translateY(-200%); */
   }
@@ -101,7 +102,6 @@
     box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
     background-color: var(--trp-bg-400);
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--clr-muted-300);
   }
 
