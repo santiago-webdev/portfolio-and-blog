@@ -24,16 +24,14 @@
     console.log('theme has been changed');
   }
 
-  onMount(() => {
-    theme = document.documentElement.dataset.theme || 'system';
-  });
-
   type ThemeOptions = { label: string; value: string; icon: string };
   const themeColorscheme: ThemeOptions[] = [
     { label: 'System', value: 'system', icon: 'bxs:adjust' },
     { label: 'Light', value: 'light', icon: 'lucide:sun' },
     { label: 'Dark', value: 'dark', icon: 'lucide:moon' }
   ];
+
+  onMount(() => (theme = document.documentElement.dataset.theme || 'system'));
 </script>
 
 <button bind:this={button} on:click={togglePicker}> Theme in use </button>
