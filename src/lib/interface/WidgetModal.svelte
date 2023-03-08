@@ -139,12 +139,12 @@
 
   kbd {
     pointer-events: none;
-    border-top: 1px solid var(--clr-text-muted);
-    border-left: 1px solid var(--clr-text-muted);
-    border-right: 3px solid var(--clr-text-muted);
-    border-bottom: 3px solid var(--clr-text-muted);
-    border-radius: 0.4rem;
+    border-radius: 0.5em;
     padding-inline: 0.3rem;
+
+    border: 1px solid var(--clr-muted-300);
+    border-right-width: 3px;
+    border-bottom-width: 3px;
   }
 
   :modal {
