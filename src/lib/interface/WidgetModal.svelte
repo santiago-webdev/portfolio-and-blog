@@ -155,10 +155,7 @@
   }
 
   :modal::backdrop {
-    background-color: rgba(31 31 37 / 0.8);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
     cursor: pointer;
     animation: fade-in 0.4s;
   }

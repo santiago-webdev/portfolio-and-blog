@@ -99,7 +99,7 @@
 
   .scrollY {
     box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
-    background-color: var(--clr-bg-400-t);
+    background-color: var(--trp-bg-400);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--clr-muted-300);

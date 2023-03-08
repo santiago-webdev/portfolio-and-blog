@@ -37,44 +37,45 @@ button {
   --accent-peachy: #d4786c;
   --accent-orange: #fbb163;
 
-  --clr-title: hsl(222, 33%, 88%);
-  --clr-subtitle: hsl(222, 33%, 85%);
-  --clr-text: hsl(222, 20%, 90%);
+  --clr-title: hsl(222 33% 88%);
+  --clr-subtitle: hsl(222 33% 85%);
+  --clr-text: hsl(222 20% 90%);
 
-  --clr-txt-A: hsl(222, 90%, 90%);
-  --clr-txt-G: hsl(222, 60%, 88%);
+  --clr-txt-A: hsl(222 90% 90%);
+  --clr-txt-G: hsl(222 60% 88%);
 
-  --clr-txt-hover: hsl(230, 20%, 70%);
-  --clr-txt-clicked: hsl(220, 80%, 80%);
+  --clr-txt-hover: hsl(230 20% 70%);
+  --clr-txt-clicked: hsl(220 80% 80%);
 
-  --clr-muted-100: hsl(240, 5%, 25%);
-  --clr-muted-150: hsl(240, 5%, 27%);
-  --clr-muted-200: hsl(240, 5%, 30%);
-  --clr-muted-300: hsl(240, 5%, 40%);
-  --clr-muted-400: hsl(240, 5%, 50%);
-  --clr-muted-500: hsl(240, 5%, 55%);
-  --clr-muted-600: hsl(240, 5%, 60%);
-  --clr-muted-700: hsl(240, 5%, 70%);
+  --clr-muted-100: hsl(240 5% 25%);
+  --clr-muted-150: hsl(240 5% 27%);
+  --clr-muted-200: hsl(240 5% 30%);
+  --clr-muted-300: hsl(240 5% 40%);
+  --clr-muted-400: hsl(240 5% 50%);
+  --clr-muted-500: hsl(240 5% 55%);
+  --clr-muted-600: hsl(240 5% 60%);
+  --clr-muted-700: hsl(240 5% 70%);
 
-  --clr-bg-100: hsl(240, 9%, 12%);
-  --clr-bg-200: hsl(240, 9%, 14%);
-  --clr-bg-300: hsl(240, 9%, 16%);
-  --clr-bg-400: hsl(240, 9%, 19%);
-  --clr-bg-400-t: hsl(240, 9%, 19%, 0.8);
-  --clr-bg-500: hsl(240, 9%, 21%);
-  --clr-bg-600: hsl(240, 8%, 23%);
-  --clr-bg-600-val: 240 8% 23%;
-  --clr-bg-700: hsl(240, 8%, 24%);
-  --clr-bg-800: hsl(240, 8%, 26%);
-  --clr-bg-900: hsl(240, 8%, 28%);
+  --clr-bg-100: hsl(240 9% 12%);
+  --clr-bg-200: hsl(240 9% 14%);
+  --clr-bg-300: hsl(240 9% 16%);
+  --clr-bg-400: hsl(240 9% 19%);
+  --clr-bg-500: hsl(240 9% 21%);
+  --clr-bg-600: hsl(240 8% 23%);
+  --clr-bg-700: hsl(240 8% 24%);
+  --clr-bg-800: hsl(240 8% 26%);
+  --clr-bg-900: hsl(240 8% 28%);
 
-  --clr-bg-selection-100: hsl(240, 10%, 35%);
-  --clr-bg-selection-200: hsl(240, 10%, 40%);
-  --clr-bg-selection-300: hsl(240, 10%, 42%);
-  --clr-bg-selection-400: hsl(240, 10%, 44%);
+  --trp-bg-400: hsl(240 9% 19% / 94%);
+  --trp-bg-600: hsl(240 8% 23% / 94%);
 
-  --clr-background-alt: hsl(240, 8%, 19%);
-  --clr-border-card: rgba(49, 49, 57, 1);
+  --clr-bg-selection-100: hsl(240 10% 35%);
+  --clr-bg-selection-200: hsl(240 10% 40%);
+  --clr-bg-selection-300: hsl(240 10% 42%);
+  --clr-bg-selection-400: hsl(240 10% 44%);
+
+  --clr-background-alt: hsl(240 8% 19%);
+  --clr-border-card: rgba(49 49 57 1);
 
   --clr-bg-active: var(--clr-bg-600);
   --clr-border-card-active: rgba(66 66 74 / 1);
@@ -243,8 +244,7 @@ button {
 }
 
 .shiny.blur {
-  /* I don't think I need this class anymore. */
-  background-color: hsla(var(--clr-bg-600-val) / 75%);
+  --background: var(--trp-bg-600);
 }
 
 .shiny-select {
