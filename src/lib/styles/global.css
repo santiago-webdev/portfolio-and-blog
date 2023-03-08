@@ -343,6 +343,7 @@ input[type='radio']:checked + .shiny-select {
   --color: var(--clr-text);
   background-color: var(--background);
   border: 1px solid var(--border);
+  font-variation-settings: 'wght' 500;
 
   color: var(--color);
 }

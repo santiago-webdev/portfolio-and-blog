@@ -34,7 +34,7 @@
   onMount(() => (theme = document.documentElement.dataset.theme || 'system'));
 </script>
 
-<button bind:this={button} on:click={togglePicker}> Theme in use </button>
+<button bind:this={button} on:click={togglePicker}>Theme</button>
 <dialog class="shiny" bind:this={dialog}>
   <form>
     <fieldset>
