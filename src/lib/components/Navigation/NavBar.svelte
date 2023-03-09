@@ -34,17 +34,13 @@
       savedY = scrollY;
     });
 
-  const loadNav = (nav: HTMLElement) => {
-    setTimeout(() => (nav.style.transform = 'translateY(0)'), 500);
-  };
-
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
   $: expMenu = $navigating || onDesktop ? true : false;
 </script>
 
 <svelte:window bind:outerWidth bind:scrollY />
 
-<nav class="artifact-ui" class:scrollY use:navToggle use:loadNav>
+<nav class="artifact-ui" class:scrollY use:navToggle>
   <div id="main-navigation" class="wider">
     <div class="wrapper-left">
       <a href="{base}/" aria-label="Logo of this site and link to Home"
@@ -95,9 +91,8 @@
     background-color: var(--clr-bg-400);
     padding: 0.4rem 0;
     transition: box-shadow 200ms ease-in-out, background-color 200ms ease-in-out,
-      backdrop-filter 200ms ease-in-out;
+      backdrop-filter 200ms ease-in-out, transform 0.6s ease-in-out;
     z-index: 999;
-    /* transform: translateY(-200%); */
   }
 
   .scrollY {
