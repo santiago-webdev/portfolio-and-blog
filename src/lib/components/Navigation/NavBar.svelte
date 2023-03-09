@@ -69,8 +69,10 @@
     {#if expMenu || onDesktop}
       <div class="navItems">
         {#each $navItems as item}
-          {#if item.separator}
+          {#if item.separator && onDesktop}
             <div aria-orientation="vertical" role="separator" />
+          {:else if item.separator && !onDesktop}
+            <hr aria-orientation="horizontal" />
           {/if}
           <a
             aria-current={item.href === $page.url.pathname ||
