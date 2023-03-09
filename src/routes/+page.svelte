@@ -50,7 +50,7 @@
 
   @media screen and (min-width: 48rem) {
     main {
-      min-height: min(100vh, 80rem);
+      min-height: min(50vh, 80rem);
     }
   }
 </style>
