@@ -33,7 +33,6 @@
         </ol>
       </div>
       <ul>
-        <!-- TODO(santigo-zero): Move all of this to #cta -->
         <li>
           <a
             href="https://github.com/santigo-zero/"
@@ -102,8 +101,6 @@
             <address>{AUTHOR_NAME}</address>
           </small>
         </a>
-        <!-- Open Source and powered by -->
-        <!--          <IconSvelteKit /> -->
       </section>
     </div>
   </div>
