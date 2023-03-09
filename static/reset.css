@@ -33,20 +33,8 @@ ol {
 }
 
 html {
-  /* For some reason webkit based browsers cause the page to shrink when
-	 * scrollbars are present, so I'll need this to keep my navbar from slightly
-   * changing the width size
-   * */
-  /* overflow-y: scroll; */
   scrollbar-gutter: stable;
-  /* TODO(santigo-zero): Style this ^^ */
-
   scroll-behavior: smooth;
-}
-
-/* Set core root defaults */
-html:focus-within {
-  font-display: swap;
 }
 
 /* Set core body defaults */
