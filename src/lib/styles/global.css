@@ -28,10 +28,11 @@ button {
 }
 
 [data-theme='light'] {
-  background-color: darkslateblue;
+  color-scheme: light;
 }
 
 [data-theme='dark'] {
+  color-scheme: dark;
   --accent-violet: #49364c;
   --accent-purple: #915268;
   --accent-peachy: #d4786c;
