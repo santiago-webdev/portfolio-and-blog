@@ -58,7 +58,7 @@
 <svelte:window bind:outerWidth on:keydown={keydown} />
 
 <button
-  class={complex ? 'shiny hover' : ''}
+  class={complex ? 'shiny hover complex' : ''}
   aria-keyshortcuts="Control+K"
   aria-label="Click to open the modal box to search for blogs"
   on:click={toggleModal}>
@@ -132,9 +132,13 @@
   button {
     display: flex;
     place-items: center;
-    padding: 0.2rem 0.8rem;
+    padding: 0.2rem 0;
     gap: var(--gap);
     border-radius: 1rem;
+  }
+
+  .complex {
+    padding: 0.2rem 0.8rem;
   }
 
   span {

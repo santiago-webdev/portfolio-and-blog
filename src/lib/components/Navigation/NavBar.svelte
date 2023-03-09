@@ -133,6 +133,7 @@
   button {
     display: flex;
     place-items: center;
+    padding-left: var(--gap);
   }
 
   .navItems {
