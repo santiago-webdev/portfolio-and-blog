@@ -17,21 +17,34 @@
       'px';
   }
 
-  let theme = '';
-  $: if (typeof document !== 'undefined' && theme) {
-    document.documentElement.dataset.theme = theme;
-    document.cookie = `theme=${theme};max-age=31536000;path="/"`;
-    console.log('theme has been changed');
-  }
-
   type ThemeOptions = { label: string; value: string; icon: string };
   const themeColorscheme: ThemeOptions[] = [
-    { label: 'System', value: 'system', icon: 'bxs:adjust' },
+    { label: 'OS Default', value: 'system', icon: 'bxs:adjust' },
     { label: 'Light', value: 'light', icon: 'lucide:sun' },
     { label: 'Dark', value: 'dark', icon: 'lucide:moon' }
   ];
 
+  $: theme = 'initial';
+  function setTheme() {
+    if (theme === 'light' || theme === 'dark')
+      document.documentElement.dataset.theme = theme;
+
+    if (theme === 'system') themeSystem();
+
+    document.cookie = `theme=${theme};max-age=31536000;path="/"`;
+    console.log('From setTheme ->', theme);
+  }
+
+  const themeSystem = () =>
+    (document.documentElement.dataset.theme = window.matchMedia(
+      '(prefers-color-scheme: dark)'
+    ).matches
+      ? 'dark'
+      : 'light');
+
   onMount(() => (theme = document.documentElement.dataset.theme || 'system'));
+
+  $: if (theme !== 'initial') setTheme();
 </script>
 
 <button class="shiny hover" bind:this={button} on:click={togglePicker}
