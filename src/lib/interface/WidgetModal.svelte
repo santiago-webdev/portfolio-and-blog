@@ -19,7 +19,7 @@
       ? (modal.close(), (value = ''))
       : (modal.showModal(), input.focus());
 
-  function onCtrlK(event: KeyboardEvent) {
+  function keydown(event: KeyboardEvent) {
     let { key, ctrlKey, repeat } = event;
     if (repeat) return;
 
@@ -55,7 +55,7 @@
   $: complex = onDesktop || !touchSupport;
 </script>
 
-<svelte:window bind:outerWidth on:keydown={onCtrlK} />
+<svelte:window bind:outerWidth on:keydown={keydown} />
 
 <button
   class={complex ? 'shiny hover' : ''}
