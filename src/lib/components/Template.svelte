@@ -39,7 +39,7 @@
     <div class="wrapper-header wide">
       {#if isHollow}
         <h1>
-          <Hollow color={'var(--clr-title)'}>{hollowPrefix}</Hollow>
+          <Hollow color={'var(--clr-txt-A)'}>{hollowPrefix}</Hollow>
           {fillSuffix}
         </h1>
       {:else}
@@ -111,7 +111,6 @@
   }
 
   .wrapper-header p {
-    color: var(--clr-subtitle);
     max-width: 44ch;
     margin-inline: auto;
   }

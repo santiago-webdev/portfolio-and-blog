@@ -15,7 +15,6 @@
     <a
       href="{base}/projects"
       aria-label="Link to my projects page"
-      style="color: var(--clr-text)"
       class="shiny hover"
       >Projects <iconify-icon icon="lucide:chevron-right" /></a>
     <a href="/" aria-label="Link to contact me" class="block hover">Contact</a>

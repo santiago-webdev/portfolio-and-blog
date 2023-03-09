@@ -5,7 +5,7 @@
 
 <section role="banner" class="wide banner">
   <h1>
-    <Hollow color="var(--clr-title)">404</Hollow>: This page doesn't exists
+    <Hollow color="var(--clr-txt-A)">404</Hollow>: This page doesn't exists
   </h1>
 </section>
 <div class="wide goback">

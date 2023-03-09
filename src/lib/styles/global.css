@@ -41,8 +41,11 @@ button {
   --clr-subtitle: hsl(222 33% 85%);
   --clr-text: hsl(222 20% 90%);
 
-  --clr-txt-A: hsl(222 80% 90%);
-  --clr-txt-G: hsl(222 80% 85%);
+  --clr-txt-A: hsl(228 50% 85%);
+  --clr-txt-B: hsl(228 52% 86%);
+  --clr-txt-C: hsl(228 51% 87%);
+  --clr-txt-F: hsl(228 58% 90%);
+  --clr-txt-G: hsl(228 53% 86%);
 
   --clr-txt-hover: hsl(230 20% 70%);
   --clr-txt-clicked: hsl(220 80% 80%);
@@ -85,24 +88,6 @@ button {
   background-color: #606887;
   color: #f3f2f9;
 }
-
-/* [data-theme='dark']::-webkit-scrollbar { */
-/*   width: 6px; */
-/*   background-color: var(--clr-bg-200); */
-/* } */
-/**/
-/* [data-theme='dark']::-webkit-scrollbar-track { */
-/*   background-color: var(--clr-bg-200); */
-/* } */
-/**/
-/* [data-theme='dark']::-webkit-scrollbar-thumb { */
-/*   background-color: var(--accent-peachy); */
-/*   border-radius: 9rem; */
-/* } */
-/**/
-/* [data-theme='dark']::-webkit-scrollbar-thumb:hover { */
-/*   background-color: var(--clr-muted-500); */
-/* } */
 
 .ff-sz-100,
 h1 {
@@ -376,7 +361,7 @@ input[type='radio']:checked + .shiny-select {
 }
 
 .artifact-ui {
-  color: var(--clr-text);
+  color: var(--clr-txt-F);
   font-size: clamp(0.8rem, 8vw, 1.2rem);
   font-weight: 500;
   font-variation-settings: 'wght' 500;
