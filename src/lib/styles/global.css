@@ -268,7 +268,6 @@ strong {
 
   border-radius: var(--radius);
   transition: background-color 50ms, border 80ms, box-shadow 300ms;
-  color: inherit;
 }
 
 .shiny.less {
@@ -406,7 +405,6 @@ input[type='radio']:checked + .shiny-select {
 
   border-radius: var(--radius);
   transition: background-color 50ms, border 80ms, box-shadow 300ms;
-  color: inherit;
 }
 
 @media (hover: hover) {
