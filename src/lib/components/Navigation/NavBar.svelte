@@ -6,6 +6,7 @@
   import WidgetModal from '$lib/interface/WidgetModal.svelte';
   import { AUTHOR } from '$lib/config';
   import WidgetTheme from '$lib/interface/WidgetTheme.svelte';
+  import { beforeNavigate } from '$app/navigation';
 
   var expMenu = false,
     onDesktop = true,
@@ -35,7 +36,10 @@
     });
 
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
-  $: expMenu = $navigating || onDesktop ? true : false;
+  $: expMenu = onDesktop ? true : false;
+  beforeNavigate(() => {
+    expMenu = false;
+  });
 </script>
 
 <svelte:window bind:outerWidth bind:scrollY />
