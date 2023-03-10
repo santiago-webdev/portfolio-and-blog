@@ -161,9 +161,14 @@ p {
   color: var(--clr-txt-G);
 }
 
+.ff-sz-800,
 small {
+  --range: clamp(0.6rem, 12vw, 1rem);
+  font-size: var(--range);
+  line-height: calc(1.2 * var(--range));
+
   color: var(--clr-text-muted);
-  font-size: 103%;
+  /* font-size: 103%; */
 }
 
 label {
@@ -405,7 +410,7 @@ input[type='radio']:checked + .shiny-select {
   font-variation-settings: 'wght' 500;
 }
 
-.artifact-ui *:is(a, button, li, p, small) {
+.artifact-ui *:is(a, button, li, p) {
   color: inherit;
   font-family: inherit;
   font-size: inherit;
