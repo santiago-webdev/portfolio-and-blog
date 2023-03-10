@@ -15,6 +15,7 @@
 html {
   font-family: var(--ff-dflt);
   background-color: var(--clr-bg-200);
+  color: var(--clr-txt-G);
 }
 
 br {
@@ -78,11 +79,11 @@ button {
   --clr-subtitle: hsl(222 33% 85%);
   --clr-text: hsl(222 20% 90%);
 
-  --clr-txt-A: hsl(228 50% 85%);
-  --clr-txt-B: hsl(228 52% 86%);
-  --clr-txt-C: hsl(228 51% 87%);
-  --clr-txt-F: hsl(228 58% 90%);
-  --clr-txt-G: hsl(228 53% 86%);
+  --clr-txt-A: hsl(228 50% 86%);
+  --clr-txt-B: hsl(228 52% 87%);
+  --clr-txt-C: hsl(228 51% 88%);
+  --clr-txt-F: hsl(228 58% 91%);
+  --clr-txt-G: hsl(228 53% 87%);
 
   --clr-txt-hover: hsl(230 20% 70%);
   --clr-txt-clicked: hsl(220 80% 80%);
