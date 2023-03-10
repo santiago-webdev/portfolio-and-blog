@@ -1,9 +1,11 @@
 <script lang="ts">
+  import { afterNavigate } from '$app/navigation';
   import { getCookie } from '$lib/utils/utils';
   import { onMount } from 'svelte';
 
   let dialog: HTMLDialogElement;
   let button: HTMLButtonElement;
+  let scrollY = 0;
 
   const togglePicker = () =>
     dialog.open ? dialog.close() : openDialogRelatively();
@@ -36,7 +38,6 @@
     if (theme === 'system') setSystemByUserPrefs();
 
     writeThemeCookie();
-    console.log('From setTheme ->', theme);
   }
 
   const setSystemByUserPrefs = () => {
@@ -49,13 +50,17 @@
 
   onMount(() => (theme = getCookie('theme')));
   $: if (theme !== 'initial') setTheme();
+  $: scrollY && dialog.close();
+  afterNavigate(() => dialog.close());
 </script>
+
+  <svelte:window bind:scrollY />
 
 <button class="shiny hover" bind:this={button} on:click={togglePicker}
   >Theme
   <iconify-icon icon="lucide:chevron-down" />
 </button>
-<dialog class="shiny" bind:this={dialog}>
+<dialog on:mouseleave={() => dialog.close()} class="shiny" bind:this={dialog}>
   <form>
     <fieldset>
       <legend>Choose a colorscheme</legend>
