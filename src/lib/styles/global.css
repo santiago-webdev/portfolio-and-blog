@@ -425,6 +425,7 @@ input[type='radio']:checked + .shiny-select {
   font-size: inherit;
   font-weight: inherit;
   font-variation-settings: inherit;
+  line-height: inherit;
 }
 
 .artifact *:is(kbd) {
