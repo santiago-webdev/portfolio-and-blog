@@ -153,7 +153,8 @@
 
   .bottom {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: column wrap;
+    justify-content: center;
     gap: 1.5rem;
     padding: 1.5rem 0;
   }
@@ -188,9 +189,10 @@
     gap: 0.5ch;
   }
 
-  @media screen and (max-width: 48rem) {
+  @media screen and (min-width: 48rem) {
     .bottom {
-      justify-content: space-around;
+      flex-direction: row;
+      justify-content: space-between;
     }
   }
 </style>
