@@ -6,7 +6,7 @@
   import WidgetModal from '$lib/interface/WidgetModal.svelte';
   import { AUTHOR } from '$lib/config';
   import WidgetTheme from '$lib/interface/WidgetTheme.svelte';
-  import { beforeNavigate } from '$app/navigation';
+  import { afterNavigate, beforeNavigate } from '$app/navigation';
 
   var expMenu = false,
     onDesktop = true,
@@ -37,7 +37,7 @@
 
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
   $: expMenu = onDesktop ? true : false;
-  beforeNavigate(() => {
+  afterNavigate(() => {
     expMenu = false;
   });
 </script>
