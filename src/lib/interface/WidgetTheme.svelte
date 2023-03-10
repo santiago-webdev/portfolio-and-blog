@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { getCookie } from '$lib/utils/utils';
   import { onMount } from 'svelte';
 
   let dialog: HTMLDialogElement;
@@ -46,23 +47,7 @@
       : 'light';
   };
 
-  function getCookie(name: string): string {
-    const cookies: string[] = document.cookie.split(';');
-    for (let i = 0; i < cookies.length; i++) {
-      const cookie: string = cookies[i].trim();
-      if (cookie.startsWith(`${name}=`)) {
-        return cookie.substring(`${name}=`.length, cookie.length);
-      }
-    }
-    return 'system';
-  }
-
-  onMount(() => {
-    theme = getCookie('theme');
-    // if (document.documentElement.dataset.theme === 'system')
-    //   setSystemByUserPrefs();
-  });
-
+  onMount(() => (theme = getCookie('theme')));
   $: if (theme !== 'initial') setTheme();
 </script>
 
