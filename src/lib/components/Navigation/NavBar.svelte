@@ -5,8 +5,8 @@
   import { navItems } from './store';
   import { afterNavigate } from '$app/navigation';
   import { onMount } from 'svelte';
-  import WidgetModal from '$lib/interface/WidgetModal.svelte';
-  import WidgetTheme from '$lib/interface/WidgetTheme.svelte';
+  import WidgetModal from '$lib/components/WidgetModal.svelte';
+  import WidgetTheme from '$lib/components/WidgetTheme.svelte';
 
   var expMenu = false,
     onDesktop = false,
