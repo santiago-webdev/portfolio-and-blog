@@ -25,24 +25,43 @@
   ];
 
   $: theme = 'initial';
+  const writeThemeCookie = () =>
+    (document.cookie = `theme=${theme};max-age=31536000;path="/"`);
+
   function setTheme() {
     if (theme === 'light' || theme === 'dark')
       document.documentElement.dataset.theme = theme;
 
-    if (theme === 'system') themeSystem();
+    if (theme === 'system') setSystemByUserPrefs();
 
-    document.cookie = `theme=${theme};max-age=31536000;path="/"`;
+    writeThemeCookie();
     console.log('From setTheme ->', theme);
   }
 
-  const themeSystem = () =>
-    (document.documentElement.dataset.theme = window.matchMedia(
+  const setSystemByUserPrefs = () => {
+    document.documentElement.dataset.theme = window.matchMedia(
       '(prefers-color-scheme: dark)'
     ).matches
       ? 'dark'
-      : 'light');
+      : 'light';
+  };
 
-  onMount(() => (theme = document.documentElement.dataset.theme || 'system'));
+  function getCookie(name: string): string {
+    const cookies: string[] = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      const cookie: string = cookies[i].trim();
+      if (cookie.startsWith(`${name}=`)) {
+        return cookie.substring(`${name}=`.length, cookie.length);
+      }
+    }
+    return 'system';
+  }
+
+  onMount(() => {
+    theme = getCookie('theme');
+    // if (document.documentElement.dataset.theme === 'system')
+    //   setSystemByUserPrefs();
+  });
 
   $: if (theme !== 'initial') setTheme();
 </script>
