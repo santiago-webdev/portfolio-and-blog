@@ -12,7 +12,6 @@
     onDesktop = false,
     scrollY = 0,
     savedY = 0,
-    outerWidth = 0,
     nav: HTMLElement;
 
   onMount(() => {
@@ -46,7 +45,7 @@
   afterNavigate(() => (expMenu = false));
 </script>
 
-<svelte:window bind:outerWidth bind:scrollY />
+<svelte:window bind:scrollY />
 
 <nav class="artifact" class:scrollY bind:this={nav}>
   <div id="main-navigation" class="wider">
