@@ -44,6 +44,6 @@
     place-items: center;
     place-content: center;
     padding: 0.8rem;
-    font-size: clamp(0.8rem, 8vw, 1.42rem);
+    font-size: 140%;
   }
 </style>
