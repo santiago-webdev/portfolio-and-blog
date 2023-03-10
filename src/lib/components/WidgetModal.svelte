@@ -136,12 +136,11 @@
   button {
     display: flex;
     place-items: center;
-    padding: 0.2rem 0;
-    gap: var(--gap);
+    gap: 0.4rem;
   }
 
   .complex {
-    padding: 0.2rem 0.8rem;
+    padding: 0.4rem 0.8rem;
   }
 
   span {
@@ -151,12 +150,10 @@
 
   kbd {
     pointer-events: none;
-    border-radius: 0.5em;
     padding-inline: 0.3rem;
 
-    border: 1px solid var(--clr-muted-300);
-    border-right-width: 3px;
-    border-bottom-width: 3px;
+    border-radius: 0.4rem;
+    outline: 1px solid var(--clr-muted-300);
   }
 
   :modal {
@@ -186,10 +183,6 @@
     padding: var(--gap);
   }
 
-  /* :modal button { */
-  /*   padding-left: 0; */
-  /* } */
-
   form {
     display: flex;
     flex-direction: column;
@@ -213,36 +206,18 @@
     display: none;
   }
 
-  /* input, */
-  /* input::placeholder, */
-  /* button { */
-  /*   color: inherit; */
-  /*   background-color: inherit; */
-  /* } */
-
   input {
     border: none;
     outline: none;
     width: 100%;
-    /* padding: 0.6rem 1.3rem 0.6rem 0; */
   }
-
-  /* input:focus::placeholder { */
-  /*   color: transparent; */
-  /* } */
 
   ul:empty {
     padding: 0;
   }
 
-  /* li { */
-  /*   padding: 0.8rem; */
-  /*   padding-left: 0; */
-  /* } */
-
   a {
     display: grid;
     place-items: start;
-    /* outline: 3px solid palegoldenrod; */
   }
 </style>
