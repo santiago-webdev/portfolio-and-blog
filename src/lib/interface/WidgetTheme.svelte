@@ -50,11 +50,8 @@
 
   onMount(() => (theme = getCookie('theme')));
   $: if (theme !== 'initial') setTheme();
-  $: scrollY && dialog.close();
   afterNavigate(() => dialog.close());
 </script>
-
-  <svelte:window bind:scrollY />
 
 <button class="shiny hover" bind:this={button} on:click={togglePicker}
   >Theme
