@@ -1,20 +1,27 @@
 <script lang="ts">
-  import { base } from '$app/paths';
-  import { navigating, page } from '$app/stores';
-  import { inPixels } from '$lib/utils/utils';
-  import { navItems } from './store';
-  import WidgetModal from '$lib/interface/WidgetModal.svelte';
   import { AUTHOR } from '$lib/config';
+  import { base } from '$app/paths';
+  import { page } from '$app/stores';
+  import { navItems } from './store';
+  import { afterNavigate } from '$app/navigation';
+  import { onMount } from 'svelte';
+  import WidgetModal from '$lib/interface/WidgetModal.svelte';
   import WidgetTheme from '$lib/interface/WidgetTheme.svelte';
-  import { afterNavigate, beforeNavigate } from '$app/navigation';
 
   var expMenu = false,
-    onDesktop = true,
+    onDesktop = false,
     scrollY = 0,
     savedY = 0,
-    outerWidth = 0;
+    outerWidth = 0,
+    nav: HTMLElement;
 
-  const navToggle = (nav: HTMLElement) =>
+  onMount(() => {
+    onDesktop = window.matchMedia('(min-width: 48rem)').matches;
+    window.addEventListener('resize', () => {
+      onDesktop = window.matchMedia('(min-width: 48rem)').matches;
+      if (onDesktop) expMenu = false;
+    });
+
     window.addEventListener('scroll', (): void => {
       const direction = scrollY > savedY ? 'down' : 'up';
 
@@ -34,17 +41,14 @@
 
       savedY = scrollY;
     });
-
-  $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
-  $: expMenu = onDesktop ? true : false;
-  afterNavigate(() => {
-    expMenu = false;
   });
+
+  afterNavigate(() => (expMenu = false));
 </script>
 
 <svelte:window bind:outerWidth bind:scrollY />
 
-<nav class="artifact-ui" class:scrollY use:navToggle>
+<nav class="artifact-ui" class:scrollY bind:this={nav}>
   <div id="main-navigation" class="wider">
     <div class="wrapper-left">
       <a href="{base}/" aria-label="Logo of this site and link to Home"
@@ -66,7 +70,7 @@
         <iconify-icon icon="lucide:grip" width="26" height="26" />
       {/if}
     </button>
-    {#if expMenu || onDesktop}
+    {#if onDesktop || expMenu}
       <div class="navItems">
         {#each $navItems as item}
           {#if item.separator && onDesktop}
