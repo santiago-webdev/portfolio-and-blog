@@ -97,7 +97,7 @@
     inset: 3px 0 auto 0;
     position: sticky;
     background-color: var(--clr-bg-400);
-    padding: 0.4rem 0;
+    padding: 0.2rem 0;
     transition: box-shadow 200ms ease-in-out, background-color 200ms ease-in-out,
       backdrop-filter 200ms ease-in-out, transform 0.6s ease-in-out;
     z-index: 999;
@@ -117,10 +117,9 @@
   }
 
   a {
-    padding: 0.4em 0.8em;
+    padding: 0.4rem 0.8rem;
     display: flex;
     place-items: center;
-    border-radius: 1rem;
   }
 
   a:first-child {
@@ -168,9 +167,9 @@
       grid-column: 1 / span 2;
     }
 
-    .wrapper-left a {
-      padding-top: 0;
-      padding-bottom: 0;
-    }
+    /* .wrapper-left a { */
+    /*   padding-top: 0; */
+    /*   padding-bottom: 0; */
+    /* } */
   }
 </style>

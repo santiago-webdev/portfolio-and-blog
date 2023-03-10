@@ -77,8 +77,8 @@
     <label for="modal-search"
       >Search for a blog posts or go to <a
         href="{base}/blog"
-        style="display: inline-flex; padding: 0.1em 0.4rem;
-        border-radius: 0.6rem">/blog</a> for a better view</label>
+        style="display: inline-flex; padding: 0.1em 0.4rem; border-radius: 0.4rem"
+        class='bordered'>/blog</a> for a better view</label>
     <div class="searchbar">
       <button aria-label="Navigate to best match" type="submit">
         <iconify-icon width="24" icon="lucide:search" />
@@ -138,7 +138,6 @@
     place-items: center;
     padding: 0.2rem 0;
     gap: var(--gap);
-    border-radius: 1rem;
   }
 
   .complex {
