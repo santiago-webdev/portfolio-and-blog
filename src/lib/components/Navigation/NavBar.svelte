@@ -2,7 +2,6 @@
   import { AUTHOR } from '$lib/config';
   import { base } from '$app/paths';
   import { page } from '$app/stores';
-  import { navItems } from './store';
   import { afterNavigate } from '$app/navigation';
   import { onMount } from 'svelte';
   import WidgetModal from '$lib/components/WidgetModal.svelte';
@@ -13,6 +12,14 @@
     scrollY = 0,
     savedY = 0,
     nav: HTMLElement;
+
+  const navItems = [
+    { separator: true, label: 'Home', href: `${base}/` },
+    { label: 'Blog', href: `${base}/blog` },
+    { label: 'Projects', href: `${base}/projects` },
+    { separator: true, label: 'About', href: `${base}/about` },
+    { label: 'Contact', href: `${base}/contact`, decoration: 'border' }
+  ];
 
   onMount(() => {
     onDesktop = window.matchMedia('(min-width: 48rem)').matches;
@@ -71,7 +78,7 @@
     </button>
     {#if onDesktop || expMenu}
       <div class="navItems">
-        {#each $navItems as item}
+        {#each navItems as item}
           {#if item.separator && onDesktop}
             <div aria-orientation="vertical" role="separator" />
           {:else if item.separator && !onDesktop}
