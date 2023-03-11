@@ -53,10 +53,11 @@
     on:focus|once={() => (placeholder = placeholderDefault)}
     type="search"
     id="search"
+    class="ff-sz-700"
     list="search-terms"
     autocomplete="off" />
   {#if !modal}
-    <kbd>Ctrl K</kbd>
+    <kbd class="ff-sz-700">Ctrl K</kbd>
   {/if}
 </form>
 
