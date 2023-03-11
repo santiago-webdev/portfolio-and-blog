@@ -290,7 +290,7 @@ strong {
 .shiny-select {
   border: 1px solid transparent;
   padding: 0.3rem 0.6rem;
-  border-radius: 0.8rem;
+  border-radius: var(--radius);
 }
 
 input[type='radio']:checked + .shiny-select:active,
