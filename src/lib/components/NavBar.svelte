@@ -28,26 +28,72 @@
 
   type NavItem = ComponentNavItem | LinkNavItem;
 
-  const navItems: NavItem[] = [
-    { component: true, widget: WidgetModal },
+  const navItems1: NavItem[] = [{ component: true, widget: WidgetModal }];
+
+  const navItems2: NavItem[] = [
+    { component: false, label: 'Blog', href: `${base}/blog` },
+    { component: false, label: 'Projects', href: `${base}/projects` }
+  ];
+
+  const navItems3: NavItem[] = [
     { component: true, widget: WidgetTheme },
     { component: false, label: 'Home', href: `${base}/` },
     { component: false, label: 'Blog', href: `${base}/blog` },
-    { component: false, label: 'Projects', href: `${base}/projects` },
+    { component: false, label: 'Projects', href: `${base}/projects` }
   ];
 
-  const viewItems: NavItem[] = [...navItems];
-  const contextItems: NavItem[] = [
+  const navItems4: NavItem[] = [
     { component: false, label: 'About', href: `${base}/about` },
     { component: false, label: 'Contact', href: `${base}/contact` }
   ];
 
+  let displayedNavItems: NavItem[] = [];
+  let contextNavItems: NavItem[] = [];
+
   onMount(() => {
-    onDesktop = window.matchMedia('(min-width: 48rem)').matches;
-    window.addEventListener('resize', () => {
-      onDesktop = window.matchMedia('(min-width: 48rem)').matches;
-      if (onDesktop) expanded = false;
-    });
+    const mediaQuery1 = window.matchMedia('(max-width: 48rem)');
+    const mediaQuery2 = window.matchMedia('(min-width: 48rem)');
+    const mediaQuery3 = window.matchMedia('(min-width: 64rem)');
+    const mediaQuery4 = window.matchMedia('(min-width: 90rem)');
+
+    function updateContext() {
+      switch (true) {
+        case mediaQuery4.matches:
+          displayedNavItems = [...navItems1, ...navItems3, ...navItems4];
+          contextNavItems = [];
+          currentContext = '';
+          onDesktop = true;
+          break;
+        case mediaQuery3.matches:
+          displayedNavItems = [...navItems1, ...navItems3];
+          contextNavItems = navItems4;
+          currentContext = 'lucide:more-horizontal'; // 3 dots
+          onDesktop = true;
+          break;
+        case mediaQuery2.matches:
+          displayedNavItems = [...navItems1, ...navItems2];
+          contextNavItems = [
+            { component: true, widget: WidgetTheme },
+            { component: false, label: 'Home', href: `${base}/` },
+            ...navItems4
+          ];
+          currentContext = 'lucide:grip-horizontal'; // 6 dots
+          onDesktop = true;
+          break;
+        default:
+          displayedNavItems = navItems1;
+          contextNavItems = [...navItems3, ...navItems4];
+          currentContext = 'lucide:grip'; // 9 dots
+          onDesktop = false;
+          break;
+      }
+    }
+
+    updateContext();
+    mediaQuery1.addEventListener('change', updateContext);
+    mediaQuery2.addEventListener('change', updateContext);
+    mediaQuery3.addEventListener('change', updateContext);
+    mediaQuery4.addEventListener('change', updateContext);
 
     window.addEventListener('scroll', (): void => {
       const direction = scrollY > savedY ? 'down' : 'up';
@@ -68,23 +114,6 @@
 
       savedY = scrollY;
     });
-
-    const updateCurrentContext = () => {
-      let width = document.body.clientWidth / 16; // convert to rem
-      if (width < 58) {
-        currentContext = 'lucide:grip';
-      } else if (width < 64) {
-        currentContext = 'lucide:grip-horizontal';
-      } else if (width < 90) {
-        currentContext = 'lucide:more-horizontal';
-      } else if (width > 90) {
-        currentContext = '';
-      } else {
-        currentContext = ''; // set a default value if none of the conditions are met
-      }
-    };
-    updateCurrentContext();
-    window.addEventListener('resize', updateCurrentContext);
   });
 
   afterNavigate(() => (expanded = false));
@@ -103,7 +132,7 @@
     <a href="{base}/" aria-label="Logo of this site and link to Home"
       >{(onDesktop && AUTHOR) || 'SG'}</a>
     <div id="contextual">
-      {#each viewItems as item}
+      {#each displayedNavItems as item}
         {#if item.component}
           <svelte:component this={item.widget} />
         {:else}
@@ -127,7 +156,7 @@
     </div>
   </div>
   <section style:display={expanded ? 'flex' : 'none'}>
-    {#each contextItems as item}
+    {#each contextNavItems as item}
       {#if item.component}
         <svelte:component this={item.widget} />
       {:else}
