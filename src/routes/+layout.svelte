@@ -1,7 +1,7 @@
 <script lang="ts">
-  import NavBar from '$lib/components/Navigation/NavBar.svelte';
+  import NavBar from '$lib/components/NavBar.svelte';
   import Transition from '$lib/components/Transition.svelte';
-  import Footer from '$lib/components/Navigation/Footer.svelte';
+  import Footer from '$lib/components/Footer.svelte';
   import ScrollProgressTracker from '$lib/components/ScrollProgressTracker.svelte';
   import { page } from '$app/stores';
   import '$lib/styles/global.css';
