@@ -28,30 +28,19 @@
 
   type NavItem = ComponentNavItem | LinkNavItem;
 
-  const navItems: NavItem[] = [{ component: true, widget: WidgetModal }];
-
-  const viewItems: NavItem[] = [...navItems];
-  const contextItems: NavItem[] = [
+  const navItems: NavItem[] = [
+    { component: true, widget: WidgetModal },
     { component: true, widget: WidgetTheme },
     { component: false, label: 'Home', href: `${base}/` },
     { component: false, label: 'Blog', href: `${base}/blog` },
     { component: false, label: 'Projects', href: `${base}/projects` },
+  ];
+
+  const viewItems: NavItem[] = [...navItems];
+  const contextItems: NavItem[] = [
     { component: false, label: 'About', href: `${base}/about` },
     { component: false, label: 'Contact', href: `${base}/contact` }
   ];
-
-  const updateCurrentContext = () => {
-    let width = document.body.clientWidth / 16; // convert to rem
-    if (width < 48) {
-      currentContext = 'lucide:grip';
-    } else if (width < 64) {
-      currentContext = 'lucide:grip-horizontal';
-    } else if (width < 90) {
-      currentContext = 'lucide:more-horizontal';
-    } else {
-      currentContext = ''; // set a default value if none of the conditions are met
-    }
-  };
 
   onMount(() => {
     onDesktop = window.matchMedia('(min-width: 48rem)').matches;
@@ -79,6 +68,21 @@
 
       savedY = scrollY;
     });
+
+    const updateCurrentContext = () => {
+      let width = document.body.clientWidth / 16; // convert to rem
+      if (width < 58) {
+        currentContext = 'lucide:grip';
+      } else if (width < 64) {
+        currentContext = 'lucide:grip-horizontal';
+      } else if (width < 90) {
+        currentContext = 'lucide:more-horizontal';
+      } else if (width > 90) {
+        currentContext = '';
+      } else {
+        currentContext = ''; // set a default value if none of the conditions are met
+      }
+    };
     updateCurrentContext();
     window.addEventListener('resize', updateCurrentContext);
   });
@@ -115,8 +119,8 @@
       {/each}
       <button
         aria-expanded={expanded}
-        on:click={() => expanded = !expanded}
-        style:display={contextItems.length > 0 ? '' : 'none'}
+        on:click={() => (expanded = !expanded)}
+        style:display={currentContext.length > 0 ? '' : 'none'}
         bind:this={button}>
         <iconify-icon width="24" icon={currentContext} />
       </button>
@@ -199,6 +203,7 @@
     flex-flow: column wrap;
     place-items: center;
     gap: calc(var(--gap) / 2) 0;
+    padding-top: var(--gap);
   }
 
   section a,
