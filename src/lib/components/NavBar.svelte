@@ -7,14 +7,13 @@
   import WidgetModal from '$lib/components/Search/WidgetModal.svelte';
   import WidgetTheme from '$lib/components/WidgetTheme.svelte';
 
-  var expMenu = false,
+  var expanded = false,
     onDesktop = false,
     scrollY = 0,
     savedY = 0,
     currentContext = '',
     nav: HTMLElement,
-    button: HTMLButtonElement,
-    dialog: HTMLDialogElement;
+    button: HTMLButtonElement;
 
   interface ComponentNavItem {
     component: true;
@@ -29,16 +28,14 @@
 
   type NavItem = ComponentNavItem | LinkNavItem;
 
-  const navItems: NavItem[] = [
-    { component: true, widget: WidgetModal },
-    { component: true, widget: WidgetTheme },
-    { component: false, label: 'Home', href: `${base}/` },
-    { component: false, label: 'Blog', href: `${base}/blog` },
-    { component: false, label: 'Projects', href: `${base}/projects` }
-  ];
+  const navItems: NavItem[] = [{ component: true, widget: WidgetModal }];
 
   const viewItems: NavItem[] = [...navItems];
   const contextItems: NavItem[] = [
+    { component: true, widget: WidgetTheme },
+    { component: false, label: 'Home', href: `${base}/` },
+    { component: false, label: 'Blog', href: `${base}/blog` },
+    { component: false, label: 'Projects', href: `${base}/projects` },
     { component: false, label: 'About', href: `${base}/about` },
     { component: false, label: 'Contact', href: `${base}/contact` }
   ];
@@ -56,25 +53,11 @@
     }
   };
 
-  const togglePicker = () =>
-    dialog.open ? dialog.close() : openDialogRelatively();
-
-  function openDialogRelatively() {
-    dialog.show();
-    const buttonRect = button.getBoundingClientRect();
-    const dialogRect = dialog.getBoundingClientRect();
-    const left = buttonRect.left + buttonRect.width / 2 - dialogRect.width / 2;
-    dialog.style.left =
-      Math.min(Math.max(left, 0), window.innerWidth - dialogRect.width) + 'px';
-    // dialog.style.top = buttonRect.top + buttonRect.height + 'px';
-    dialog.style.top = button.offsetTop + button.offsetHeight + 'px';
-  }
-
   onMount(() => {
     onDesktop = window.matchMedia('(min-width: 48rem)').matches;
     window.addEventListener('resize', () => {
       onDesktop = window.matchMedia('(min-width: 48rem)').matches;
-      if (onDesktop) expMenu = false;
+      if (onDesktop) expanded = false;
     });
 
     window.addEventListener('scroll', (): void => {
@@ -88,7 +71,7 @@
         return;
       }
 
-      if (direction === 'down' && scrollY > 500 && (!expMenu || onDesktop)) {
+      if (direction === 'down' && scrollY > 500 && (!expanded || onDesktop)) {
         nav.style.transform = 'translateY(-200%)';
       } else {
         nav.style.transform = 'translateY(0)';
@@ -100,12 +83,18 @@
     window.addEventListener('resize', updateCurrentContext);
   });
 
-  afterNavigate(() => (expMenu = false));
+  afterNavigate(() => (expanded = false));
 </script>
 
 <svelte:window bind:scrollY />
 
-<nav class="artifact" class:scrollY bind:this={nav}>
+<nav
+  class="artifact"
+  style:border-bottom={expanded || scrollY
+    ? '1px solid var(--clr-muted-300)'
+    : ''}
+  class:scrollY
+  bind:this={nav}>
   <div id="wrapper" class="wider">
     <a href="{base}/" aria-label="Logo of this site and link to Home"
       >{(onDesktop && AUTHOR) || 'SG'}</a>
@@ -124,18 +113,33 @@
             href={item.href}>{item.label}</a>
         {/if}
       {/each}
-      <div id="contextual-menu">
-        <button
-          on:click={togglePicker}
-          style:display={contextItems.length > 0 ? '' : 'none'}
-          bind:this={button}>
-          <iconify-icon width="24" icon={currentContext} />
-        </button>
-      </div>
+      <button
+        aria-expanded={expanded}
+        on:click={() => expanded = !expanded}
+        style:display={contextItems.length > 0 ? '' : 'none'}
+        bind:this={button}>
+        <iconify-icon width="24" icon={currentContext} />
+      </button>
     </div>
   </div>
+  <section style:display={expanded ? 'flex' : 'none'}>
+    {#each contextItems as item}
+      {#if item.component}
+        <svelte:component this={item.widget} />
+      {:else}
+        <hr aria-orientation="horizontal" />
+        <a
+          class="shiny-select"
+          aria-current={item.href === $page.url.pathname ||
+          ($page.url.pathname.startsWith(item.href || '') && `/` !== item.href)
+            ? 'page'
+            : undefined}
+          aria-label="Link to {item.label}"
+          href={item.href}>{item.label}</a>
+      {/if}
+    {/each}
+  </section>
 </nav>
-<dialog class="shiny" bind:this={dialog}>context test test</dialog>
 
 <style>
   nav {
@@ -152,7 +156,6 @@
     box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
     background-color: var(--trp-bg-400);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--clr-muted-300);
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -166,12 +169,8 @@
     padding: 0.4rem 0.8rem;
     display: flex;
     place-items: center;
-    outline: 1px paleturquoise solid;
+    /* outline: 1px paleturquoise solid; */
   }
-
-  /* a:first-child { */
-  /*   padding-left: 0; */
-  /* } */
 
   #wrapper {
     display: flex;
@@ -196,47 +195,14 @@
     /* position: relative; */
   }
 
-  #contextual-menu {
-    position: relative;
+  section {
+    flex-flow: column wrap;
+    place-items: center;
+    gap: calc(var(--gap) / 2) 0;
   }
 
-  dialog {
-    position: absolute;
-    /* padding: var(--gap); */
-    margin: var(--gap) var(--gap) 0 0;
-    padding: var(--gap);
-    left: 0;
-    /* top: calc(100% + .3rem); */
-    /* margin: var(--gap) 0 0 0; */
-    /* padding: var(--gap); */
-    /* max-width: 90%; */
+  section a,
+  hr {
+    width: calc(100% - var(--gap) * 3);
   }
-
-  /* padding-left: var(--gap); */
-  /* .navItems { */
-  /*   width: 100%; */
-  /*   display: flex; */
-  /*   justify-self: center; */
-  /*   place-items: center; */
-  /* } */
-
-  /* .wrapper-left { */
-  /*   display: flex; */
-  /*   justify-content: space-between; */
-  /*   width: 100%; */
-  /* } */
-
-  /* .widget { */
-  /*   display: flex; */
-  /*   flex-wrap: wrap; */
-  /*   gap: var(--gap); */
-  /* } */
-
-  /* @media screen and (max-width: 48rem) { */
-  /*   .navItems { */
-  /*     flex-direction: column; */
-  /*     padding: 1rem; */
-  /*     grid-column: 1 / span 2; */
-  /*   } */
-  /* } */
 </style>
