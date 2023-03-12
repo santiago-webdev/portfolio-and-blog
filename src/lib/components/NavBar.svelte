@@ -135,7 +135,7 @@
     </div>
   </div>
 </nav>
-        <dialog class="shiny" bind:this={dialog}>context test test</dialog>
+<dialog class="shiny" bind:this={dialog}>context test test</dialog>
 
 <style>
   nav {
