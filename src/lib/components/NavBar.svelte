@@ -4,7 +4,7 @@
   import { page } from '$app/stores';
   import { afterNavigate } from '$app/navigation';
   import { onMount, type ComponentType } from 'svelte';
-  import WidgetModal from '$lib/components/WidgetModal.svelte';
+  import WidgetModal from '$lib/components/Search/WidgetModal.svelte';
   import WidgetTheme from '$lib/components/WidgetTheme.svelte';
 
   var expMenu = false,
