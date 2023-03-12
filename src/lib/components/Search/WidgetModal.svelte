@@ -69,7 +69,7 @@
   {/if}
 </button>
 <dialog
-  class="wide shiny blur"
+  class="wide shiny"
   on:close={() => (value = '')}
   on:cancel={() => (value = '')}
   bind:this={modal}>
@@ -164,7 +164,7 @@
   }
 
   :modal::backdrop {
-    backdrop-filter: blur(12px);
+    backdrop-filter: blur(30px);
     cursor: pointer;
     animation: fade-in 0.4s;
   }

@@ -45,8 +45,14 @@
   --clr-bg-800: hsl(210 10% 90%);
   --clr-bg-900: hsl(210 10% 92%);
 
+  --trp-bg-100: hsl(240 9% 7% / 94%);
+  --trp-bg-200: hsl(240 9% 11% / 94%);
+  --trp-bg-300: hsl(240 9% 15% / 94%);
   --trp-bg-400: hsl(240 9% 19% / 94%);
   --trp-bg-600: hsl(240 8% 23% / 94%);
+  --trp-bg-700: hsl(240 8% 27% / 94%);
+  --trp-bg-800: hsl(240 8% 31% / 94%);
+  --trp-bg-900: hsl(240 8% 35% / 94%);
 
   --clr-bg-selection-100: hsl(240 10% 35%);
   --clr-bg-selection-200: hsl(240 10% 40%);
@@ -284,9 +290,9 @@ strong {
   }
 }
 
-.shiny.blur {
-  --background: var(--trp-bg-600);
-}
+/* .shiny.blur { */
+/*   --background: var(--trp-bg-600); */
+/* } */
 
 .shiny-select {
   border: 1px solid transparent;
