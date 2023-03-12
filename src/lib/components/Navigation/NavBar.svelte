@@ -3,7 +3,7 @@
   import { base } from '$app/paths';
   import { page } from '$app/stores';
   import { afterNavigate } from '$app/navigation';
-  import { onMount } from 'svelte';
+  import { onMount, type ComponentType } from 'svelte';
   import WidgetModal from '$lib/components/WidgetModal.svelte';
   import WidgetTheme from '$lib/components/WidgetTheme.svelte';
 
@@ -11,15 +11,64 @@
     onDesktop = false,
     scrollY = 0,
     savedY = 0,
-    nav: HTMLElement;
+    currentContext = '',
+    nav: HTMLElement,
+    button: HTMLButtonElement,
+    dialog: HTMLDialogElement;
 
-  const navItems = [
-    { separator: true, label: 'Home', href: `${base}/` },
-    { label: 'Blog', href: `${base}/blog` },
-    { label: 'Projects', href: `${base}/projects` },
-    { separator: true, label: 'About', href: `${base}/about` },
-    { label: 'Contact', href: `${base}/contact`, decoration: 'border' }
+  interface ComponentNavItem {
+    component: true;
+    widget: ComponentType;
+  }
+
+  interface LinkNavItem {
+    component: false;
+    label: string;
+    href: string;
+  }
+
+  type NavItem = ComponentNavItem | LinkNavItem;
+
+  const navItems: NavItem[] = [
+    { component: true, widget: WidgetModal },
+    { component: true, widget: WidgetTheme },
+    { component: false, label: 'Home', href: `${base}/` },
+    { component: false, label: 'Blog', href: `${base}/blog` },
+    { component: false, label: 'Projects', href: `${base}/projects` }
   ];
+
+  const viewItems: NavItem[] = [...navItems];
+  const contextItems: NavItem[] = [
+    { component: false, label: 'About', href: `${base}/about` },
+    { component: false, label: 'Contact', href: `${base}/contact` }
+  ];
+
+  const updateCurrentContext = () => {
+    let width = document.body.clientWidth / 16; // convert to rem
+    if (width < 48) {
+      currentContext = 'lucide:grip';
+    } else if (width < 64) {
+      currentContext = 'lucide:grip-horizontal';
+    } else if (width < 90) {
+      currentContext = 'lucide:more-horizontal';
+    } else {
+      currentContext = ''; // set a default value if none of the conditions are met
+    }
+  };
+
+  const togglePicker = () =>
+    dialog.open ? dialog.close() : openDialogRelatively();
+
+  function openDialogRelatively() {
+    dialog.show();
+    const buttonRect = button.getBoundingClientRect();
+    const dialogRect = dialog.getBoundingClientRect();
+    const left = buttonRect.left + buttonRect.width / 2 - dialogRect.width / 2;
+    dialog.style.left =
+      Math.min(Math.max(left, 0), window.innerWidth - dialogRect.width) + 'px';
+    // dialog.style.top = buttonRect.top + buttonRect.height + 'px';
+    dialog.style.top = button.offsetTop + button.offsetHeight + 'px';
+  }
 
   onMount(() => {
     onDesktop = window.matchMedia('(min-width: 48rem)').matches;
@@ -47,6 +96,8 @@
 
       savedY = scrollY;
     });
+    updateCurrentContext();
+    window.addEventListener('resize', updateCurrentContext);
   });
 
   afterNavigate(() => (expMenu = false));
@@ -55,48 +106,36 @@
 <svelte:window bind:scrollY />
 
 <nav class="artifact" class:scrollY bind:this={nav}>
-  <div id="main-navigation" class="wider">
-    <div class="wrapper-left">
-      <a href="{base}/" aria-label="Logo of this site and link to Home"
-        >{(onDesktop && AUTHOR) || 'SG'}</a>
-      <div class="widget">
-        <WidgetModal />
-        <WidgetTheme />
-      </div>
-    </div>
-    <button
-      aria-label="Toggle navigation list"
-      aria-expanded={expMenu}
-      style:display={onDesktop ? 'none' : ''}
-      on:click={() => (expMenu = !expMenu)}>
-      <!-- TODO(santigo-zero): Use an icon here and conditional rendering -->
-      {#if expMenu}
-        <iconify-icon icon="lucide:x" width="26" height="26" />
-      {:else}
-        <iconify-icon icon="lucide:grip" width="26" height="26" />
-      {/if}
-    </button>
-    {#if onDesktop || expMenu}
-      <div class="navItems">
-        {#each navItems as item}
-          {#if item.separator && onDesktop}
-            <div aria-orientation="vertical" role="separator" />
-          {:else if item.separator && !onDesktop}
-            <hr aria-orientation="horizontal" />
-          {/if}
+  <div id="wrapper" class="wider">
+    <a href="{base}/" aria-label="Logo of this site and link to Home"
+      >{(onDesktop && AUTHOR) || 'SG'}</a>
+    <div id="contextual">
+      {#each viewItems as item}
+        {#if item.component}
+          <svelte:component this={item.widget} />
+        {:else}
           <a
             aria-current={item.href === $page.url.pathname ||
-            ($page.url.pathname.startsWith(item.href) && `/` !== item.href)
+            ($page.url.pathname.startsWith(item.href || '') &&
+              `/` !== item.href)
               ? 'page'
               : undefined}
             aria-label="Link to {item.label}"
-            class={item.decoration ? 'block hover' : ''}
             href={item.href}>{item.label}</a>
-        {/each}
+        {/if}
+      {/each}
+      <div id="contextual-menu">
+        <button
+          on:click={togglePicker}
+          style:display={contextItems.length > 0 ? '' : 'none'}
+          bind:this={button}>
+          <iconify-icon width="24" icon={currentContext} />
+        </button>
       </div>
-    {/if}
+    </div>
   </div>
 </nav>
+        <dialog class="shiny" bind:this={dialog}>context test test</dialog>
 
 <style>
   nav {
@@ -122,49 +161,76 @@
     }
   }
 
-  a {
+  a,
+  button {
     padding: 0.4rem 0.8rem;
     display: flex;
     place-items: center;
+    outline: 1px paleturquoise solid;
   }
 
-  a:first-child {
-    padding-left: 0;
-  }
+  /* a:first-child { */
+  /*   padding-left: 0; */
+  /* } */
 
-  #main-navigation {
-    display: grid;
+  #wrapper {
+    display: flex;
     place-items: center;
-    margin-inline: auto;
+    /* margin-inline: auto; */
     justify-content: space-between;
-    grid-template-columns: 1fr auto;
+    /* grid-template-columns: 1fr auto; */
+    flex-flow: row wrap;
+  }
+
+  #contextual {
+    display: flex;
+    flex-flow: row wrap;
+    place-items: center;
+    gap: var(--gap);
   }
 
   button {
     display: flex;
     place-items: center;
     padding-left: var(--gap);
+    /* position: relative; */
   }
 
-  .navItems {
-    /* padding-left: var(--gap); */
-    width: 100%;
-    display: flex;
-    justify-self: center;
-    place-items: center;
+  #contextual-menu {
+    position: relative;
   }
 
-  .wrapper-left {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
+  dialog {
+    position: absolute;
+    /* padding: var(--gap); */
+    margin: var(--gap) var(--gap) 0 0;
+    padding: var(--gap);
+    left: 0;
+    /* top: calc(100% + .3rem); */
+    /* margin: var(--gap) 0 0 0; */
+    /* padding: var(--gap); */
+    /* max-width: 90%; */
   }
 
-  .widget {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--gap);
-  }
+  /* padding-left: var(--gap); */
+  /* .navItems { */
+  /*   width: 100%; */
+  /*   display: flex; */
+  /*   justify-self: center; */
+  /*   place-items: center; */
+  /* } */
+
+  /* .wrapper-left { */
+  /*   display: flex; */
+  /*   justify-content: space-between; */
+  /*   width: 100%; */
+  /* } */
+
+  /* .widget { */
+  /*   display: flex; */
+  /*   flex-wrap: wrap; */
+  /*   gap: var(--gap); */
+  /* } */
 
   /* @media screen and (max-width: 48rem) { */
   /*   .navItems { */

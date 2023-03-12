@@ -126,11 +126,12 @@
     grid-auto-flow: row dense;
   }
 
-  @media only screen and (max-width: 48rem) {
-    section {
-      grid-template-columns: 1fr;
-    }
-  }
+  /* TODO(santigo-zero): Fix this */
+  /* @media only screen and (max-width: 48rem) { */
+  /*   section { */
+  /*     grid-template-columns: 1fr; */
+  /*   } */
+  /* } */
 
   .blog-selection {
     background-color: var(--clr-background-alt);

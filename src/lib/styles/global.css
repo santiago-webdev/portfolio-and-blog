@@ -4,7 +4,8 @@
     'Segoe UI Symbol';
   --ff-monospace: 'Iosevka', monospace;
 
-  --wide: 58rem;
+  --wide: 48rem;
+  --middle-wide: 64rem;
   --wider: 90rem;
   --gap: 0.809rem;
   --br: 0.809rem;
