@@ -1,8 +1,6 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@fontsource/iosevka': ^4.5.4
-  '@fontsource/manrope': ^4.5.13
   '@playwright/test': ^1.31.2
   '@sveltejs/adapter-vercel': ^2.3.0
   '@sveltejs/kit': ^1.10.0
@@ -24,8 +22,6 @@ specifiers:
   vitest: ^0.25.8
 
 dependencies:
-  '@fontsource/iosevka': 4.5.4
-  '@fontsource/manrope': 4.5.13
   iconify-icon: 1.0.7
 
 devDependencies:
@@ -284,14 +280,6 @@ packages:
     resolution: {integrity: sha512-lxJ9R5ygVm8ZWgYdUweoq5ownDlJ4upvoWmO4eLxBYHdMo+vZ/Rx0EN6MbKWDJOSUGrqJy2Gt+Dyv/VKml0fjg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
-
-  /@fontsource/iosevka/4.5.4:
-    resolution: {integrity: sha512-S3rNmYP8EvjeyAJ8mwtt+9CZK8p5LdxYXpgv9lSBtHbRkwjcg8MbPs7vzWLRYs0R0MRmpvlLw864xvn3XKXclA==}
-    dev: false
-
-  /@fontsource/manrope/4.5.13:
-    resolution: {integrity: sha512-UFN5DMGBp8nFpwhPQXfpSbsEm4OVISqUKQy+rA+pb1zYGoH+OGN1woKEND8VLx+pC7rY3nrPRCJvSuuOaNdW7Q==}
-    dev: false
 
   /@humanwhocodes/config-array/0.11.8:
     resolution: {integrity: sha512-UybHIJzJnR5Qc/MsD9Kr+RpO2h+/P1GhOwdiLPXK5TWk5sgTdu88bTD9UP+CKbPPh5Rni1u0GjAdYQLemG8g+g==}

@@ -37,8 +37,6 @@
   },
   "type": "module",
   "dependencies": {
-    "@fontsource/iosevka": "^4.5.4",
-    "@fontsource/manrope": "^4.5.13",
     "iconify-icon": "^1.0.7"
   }
 }

@@ -2,7 +2,7 @@
   --ff-dflt: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
     Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
-  --ff-monospace: 'Iosevka', monospace;
+  --ff-monospace: 'Iosevka';
 
   --wide: 48rem;
   --middle-wide: 64rem;
