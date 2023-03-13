@@ -1,7 +1,7 @@
 export class Post {
   title: string;
   description: string;
-  date: string;
+  datetime: string;
   href: string;
   extension: string;
   metadata?: Array<Post>;
@@ -10,14 +10,14 @@ export class Post {
     href: string,
     title: string,
     description: string,
-    date: string,
+    datetime: string,
     extension: string,
     metadata?: Array<Post>
   ) {
     this.href = href;
     this.title = title;
     this.description = description;
-    this.date = date;
+    this.datetime = datetime;
     this.extension = extension;
     this.metadata = metadata;
   }

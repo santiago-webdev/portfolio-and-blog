@@ -32,14 +32,20 @@ const getPosts = () => {
           href,
           postData.title,
           postData.description,
-          postData.date,
+          postData.datetime,
           extension
         )
       );
     } else {
       const postMD: Post = postData.metadata as unknown as Post;
       tmpPost.unshift(
-        new Post(href, postMD.title, postMD.description, postMD.date, extension)
+        new Post(
+          href,
+          postMD.title,
+          postMD.description,
+          postMD.datetime,
+          extension
+        )
       );
     }
   }

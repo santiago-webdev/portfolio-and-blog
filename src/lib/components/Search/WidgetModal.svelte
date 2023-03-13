@@ -115,12 +115,12 @@
               {post.title}
             </h3>
             <p>{post.description}</p>
-            {#if post.date}
+            {#if post.datetime}
               <small>
-                Published: {readableDate(post.date)}
-                <time datetime={post.date}>
+                Published: {readableDate(post.datetime)}
+                <time datetime={post.datetime}>
                   <iconify-icon width="24" icon="lucide:calendar" />: {readableDate(
-                    post.date
+                    post.datetime
                   )}
                 </time>
               </small>

@@ -6,7 +6,6 @@
 
   let fly_in = { y: 0, duration: 0 };
   let fly_out = { y: 0, duration: 0 };
-  let postList: HTMLUListElement;
 
   function deferAddSettings(_params: HTMLLIElement) {
     setTimeout(() => {
@@ -17,7 +16,7 @@
 </script>
 
 <section role="complementary">
-  <ul bind:this={postList} class="wider">
+  <ul class="wider">
     {#each $FilteredPosts as post}
       <li use:deferAddSettings in:fly={fly_in} out:fly={fly_out}>
         <a href="{base}/blog{post.href}">
@@ -28,8 +27,8 @@
             {:else}
               <p>No description was given.</p>
             {/if}
-            {#if post.date}
-              <small>Published: {readableDate(post.date)}</small>
+            {#if post.datetime}
+              <small>Published: {readableDate(post.datetime)}</small>
             {/if}
           </article>
         </a>
