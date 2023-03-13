@@ -155,7 +155,7 @@
       </button>
     </div>
   </div>
-  <section style:display={expanded ? 'flex' : 'none'}>
+  <section class="wide" style:display={expanded ? 'flex' : 'none'}>
     {#each contextNavItems as item}
       {#if item.component}
         <svelte:component this={item.widget} />
@@ -235,8 +235,7 @@
     padding-top: var(--gap);
   }
 
-  section a,
-  hr {
-    width: calc(100% - var(--gap) * 3);
+  section a {
+    width: 100%;
   }
 </style>
