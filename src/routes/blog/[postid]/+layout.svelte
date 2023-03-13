@@ -1,7 +1,3 @@
-<script lang="ts">
-  import '@fontsource/iosevka';
-</script>
-
 <slot />
 
 <svelte:head>
