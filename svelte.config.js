@@ -1,7 +1,7 @@
-import adapter from '@sveltejs/adapter-vercel';
-import { vitePreprocess } from '@sveltejs/kit/vite';
-import { mdsvex } from 'mdsvex';
-import path from 'path';
+import adapter from '@sveltejs/adapter-vercel'
+import { vitePreprocess } from '@sveltejs/kit/vite'
+import { mdsvex } from 'mdsvex'
+import path from 'path'
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -10,22 +10,22 @@ const config = {
     vitePreprocess(),
     mdsvex({
       extensions: ['.md'],
-      layout: './src/lib/components/Template.svelte'
-    })
+      layout: './src/lib/components/Template.svelte',
+    }),
   ],
 
   kit: {
     adapter: adapter(),
     alias: {
-      '@ui': path.resolve('./src/lib/components')
-    }
+      '@ui': path.resolve('./src/lib/components'),
+    },
   },
 
   vitePlugin: {
     experimental: {
-      inspector: true
-    }
-  }
-};
+      inspector: true,
+    },
+  },
+}
 
-export default config;
+export default config

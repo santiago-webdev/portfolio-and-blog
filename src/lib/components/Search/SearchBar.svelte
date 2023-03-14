@@ -1,37 +1,37 @@
 <script lang="ts">
-  import { FilteredPosts, FilterValue } from './store';
-  import { searchHandler } from './utils';
-  import { base } from '$app/paths';
-  import { goto, preloadData } from '$app/navigation';
+  import { FilteredPosts, FilterValue } from './store'
+  import { searchHandler } from './utils'
+  import { base } from '$app/paths'
+  import { goto, preloadData } from '$app/navigation'
 
-  export let input: HTMLElement;
-  export let modal = false;
+  export let input: HTMLElement
+  export let modal = false
 
   $: if ($FilteredPosts.length === 1)
-    preloadData(`${base}/blog${$FilteredPosts[0].href}`);
+    preloadData(`${base}/blog${$FilteredPosts[0].href}`)
 
-  const placeholderDefault = 'Search';
-  const placeholderNoInput = "You haven't searched for any post yet";
+  const placeholderDefault = 'Search'
+  const placeholderNoInput = "You haven't searched for any post yet"
 
-  export let placeholder = placeholderDefault;
-  let value = '';
+  export let placeholder = placeholderDefault
+  let value = ''
 
   async function handleSubmit() {
     if (value.length === 0) {
-      placeholder = placeholderNoInput;
+      placeholder = placeholderNoInput
 
       setTimeout(() => {
-        placeholder = placeholderDefault;
-      }, 1000);
-      return;
+        placeholder = placeholderDefault
+      }, 1000)
+      return
     }
 
-    await goto(`${base}/blog${$FilteredPosts[0].href}`);
+    await goto(`${base}/blog${$FilteredPosts[0].href}`)
   }
 
   FilterValue.subscribe(() => {
-    value = $FilterValue;
-  });
+    value = $FilterValue
+  })
 </script>
 
 <form

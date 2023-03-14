@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { FilteredPosts } from '$lib/components/Search/store';
-  import { base } from '$app/paths';
-  import { goto } from '$app/navigation';
-  import { inPixels, readableDate } from '$lib/utils/utils';
-  import { onMount } from 'svelte';
-  import { searchHandler } from '$lib/components/Search/utils';
+  import { FilteredPosts } from '$lib/components/Search/store'
+  import { base } from '$app/paths'
+  import { goto } from '$app/navigation'
+  import { inPixels, readableDate } from '$lib/utils/utils'
+  import { onMount } from 'svelte'
+  import { searchHandler } from '$lib/components/Search/utils'
 
   var modal: HTMLDialogElement,
     input: HTMLInputElement,
@@ -12,47 +12,47 @@
     onDesktop = true,
     outerWidth = 0,
     complex = true,
-    touchSupport = false;
+    touchSupport = false
 
   const toggleModal = () =>
     modal.open
       ? (modal.close(), (value = ''))
-      : (modal.showModal(), input.focus());
+      : (modal.showModal(), input.focus())
 
   function keydown(event: KeyboardEvent) {
-    let { key, ctrlKey, repeat } = event;
-    if (repeat) return;
+    let { key, ctrlKey, repeat } = event
+    if (repeat) return
 
     switch (key) {
       case 'k':
         if (ctrlKey) {
-          event.preventDefault();
-          toggleModal();
-          break;
+          event.preventDefault()
+          toggleModal()
+          break
         }
     }
   }
 
   async function handleSubmit() {
-    toggleModal();
-    await goto(`${base}/blog${$FilteredPosts[0].href}`);
+    toggleModal()
+    await goto(`${base}/blog${$FilteredPosts[0].href}`)
   }
 
   onMount(async () => {
-    touchSupport = 'ontouchstart' in window ? true : false;
+    touchSupport = 'ontouchstart' in window ? true : false
     modal.addEventListener('click', event => {
       if (event.target === modal) {
-        modal.close();
+        modal.close()
       }
-    });
-  });
+    })
+  })
 
   // onMount(() => {
   //   toggleModal();
   //   value = 'h';
   // });
-  $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
-  $: complex = onDesktop || !touchSupport;
+  $: onDesktop = outerWidth > inPixels('48rem') ? true : false
+  $: complex = onDesktop || !touchSupport
 </script>
 
 <svelte:window bind:outerWidth on:keydown={keydown} />
@@ -94,8 +94,8 @@
       <button
         aria-label="Clear the search bar and search again"
         on:click={() => {
-          value = '';
-          input.focus();
+          value = ''
+          input.focus()
         }}
         disabled={!value}
         type="button"><iconify-icon width="24" icon="lucide:x" /></button>

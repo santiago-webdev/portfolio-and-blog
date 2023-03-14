@@ -1,43 +1,40 @@
 <script lang="ts">
-  import { afterNavigate } from '$app/navigation';
-  import { getCookie } from '$lib/utils/utils';
-  import { onMount } from 'svelte';
+  import { afterNavigate } from '$app/navigation'
+  import { getCookie } from '$lib/utils/utils'
+  import { onMount } from 'svelte'
 
-  let dialog: HTMLDialogElement;
-  let button: HTMLButtonElement;
-  let scrollY = 0;
+  let dialog: HTMLDialogElement
+  let button: HTMLButtonElement
+  let scrollY = 0
 
   const togglePicker = () =>
-    dialog.open ? dialog.close() : openDialogRelatively();
+    dialog.open ? dialog.close() : openDialogRelatively()
 
   function openDialogRelatively() {
-    dialog.show();
-    dialog.style.top = button.offsetTop + button.offsetHeight + 'px';
+    dialog.show()
+    dialog.style.top = button.offsetTop + button.offsetHeight + 'px'
     dialog.style.left =
-      button.offsetLeft +
-      button.offsetWidth / 2 -
-      dialog.offsetWidth / 2 +
-      'px';
+      button.offsetLeft + button.offsetWidth / 2 - dialog.offsetWidth / 2 + 'px'
   }
 
-  type ThemeOptions = { label: string; value: string; icon: string };
+  type ThemeOptions = { label: string; value: string; icon: string }
   const themeColorscheme: ThemeOptions[] = [
     { label: 'OS Default', value: 'system', icon: 'bxs:adjust' },
     { label: 'Light', value: 'light', icon: 'lucide:sun' },
-    { label: 'Dark', value: 'dark', icon: 'lucide:moon' }
-  ];
+    { label: 'Dark', value: 'dark', icon: 'lucide:moon' },
+  ]
 
-  $: theme = 'initial';
+  $: theme = 'initial'
   const writeThemeCookie = () =>
-    (document.cookie = `theme=${theme};max-age=31536000;path="/"`);
+    (document.cookie = `theme=${theme};max-age=31536000;path="/"`)
 
   function setTheme() {
     if (theme === 'light' || theme === 'dark')
-      document.documentElement.dataset.theme = theme;
+      document.documentElement.dataset.theme = theme
 
-    if (theme === 'system') setSystemByUserPrefs();
+    if (theme === 'system') setSystemByUserPrefs()
 
-    writeThemeCookie();
+    writeThemeCookie()
   }
 
   const setSystemByUserPrefs = () => {
@@ -45,12 +42,12 @@
       '(prefers-color-scheme: dark)'
     ).matches
       ? 'dark'
-      : 'light';
-  };
+      : 'light'
+  }
 
-  onMount(() => (theme = getCookie('theme')));
-  $: if (theme !== 'initial') setTheme();
-  afterNavigate(() => dialog.close());
+  onMount(() => (theme = getCookie('theme')))
+  $: if (theme !== 'initial') setTheme()
+  afterNavigate(() => dialog.close())
 </script>
 
 <button class="shiny hover" bind:this={button} on:click={togglePicker}

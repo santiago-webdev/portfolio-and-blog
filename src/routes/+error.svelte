@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { base } from '$app/paths';
-  import Hollow from '$lib/components/Hollow.svelte';
+  import { base } from '$app/paths'
+  import Hollow from '$lib/components/Hollow.svelte'
 </script>
 
 <section role="banner" class="wide banner">

@@ -1,12 +1,12 @@
 <script lang="ts">
-  import SearchBar from '$lib/components/Search/SearchBar.svelte';
-  import BlogHeader from '$lib/components/BlogHeader.svelte';
-  import FilteredPostsCards from '$lib/components/Search/FilteredPostsCards.svelte';
-  import { DESCRIPTION, TITLE_BLOG, URL_BLOG } from '$lib/config';
+  import SearchBar from '$lib/components/Search/SearchBar.svelte'
+  import BlogHeader from '$lib/components/BlogHeader.svelte'
+  import FilteredPostsCards from '$lib/components/Search/FilteredPostsCards.svelte'
+  import { DESCRIPTION, TITLE_BLOG, URL_BLOG } from '$lib/config'
 
   // TODO(santigo-zero): We don't need this bind, find a way of having a fallback inside
   // the component if we call the component without a bind.
-  let input: HTMLInputElement;
+  let input: HTMLInputElement
 </script>
 
 <main role="banner" class="banner wide">

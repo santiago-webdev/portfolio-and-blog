@@ -1,11 +1,11 @@
 <script lang="ts">
-  import { base } from '$app/paths';
-  import { onMount } from 'svelte';
+  import { base } from '$app/paths'
+  import { onMount } from 'svelte'
 
   let leftButton =
-    '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M15.125 21.1L6.7 12.7q-.15-.15-.212-.325q-.063-.175-.063-.375t.063-.375q.062-.175.212-.325l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L9.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"/></svg>';
+    '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M15.125 21.1L6.7 12.7q-.15-.15-.212-.325q-.063-.175-.063-.375t.063-.375q.062-.175.212-.325l8.425-8.425q.35-.35.875-.35t.9.375q.375.375.375.875t-.375.875L9.55 12l7.35 7.35q.35.35.35.862q0 .513-.375.888t-.875.375q-.5 0-.875-.375Z"/></svg>'
   let rightButton =
-    '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M7.15 21.1q-.375-.375-.375-.888q0-.512.375-.887L14.475 12l-7.35-7.35q-.35-.35-.35-.875t.375-.9q.375-.375.888-.375q.512 0 .887.375l8.4 8.425q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325L8.9 21.125q-.35.35-.862.35q-.513 0-.888-.375Z"/></svg>';
+    '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M7.15 21.1q-.375-.375-.375-.888q0-.512.375-.887L14.475 12l-7.35-7.35q-.35-.35-.35-.875t.375-.9q.375-.375.888-.375q.512 0 .887.375l8.4 8.425q.15.15.213.325q.062.175.062.375t-.062.375q-.063.175-.213.325L8.9 21.125q-.35.35-.862.35q-.513 0-.888-.375Z"/></svg>'
 
   const blogCards = [
     { title: 'Title 1', description: 'Description 1' },
@@ -13,27 +13,27 @@
     { title: 'Title 3', description: 'Description 3' },
     { title: 'Title 4', description: 'Description 4' },
     { title: 'Title 5', description: 'Description 5' },
-    { title: 'Title 6', description: 'Description 6' }
-  ];
+    { title: 'Title 6', description: 'Description 6' },
+  ]
 
-  let blog: HTMLElement;
-  let blogButton: HTMLElement;
-  let wrapperCards: HTMLElement;
+  let blog: HTMLElement
+  let blogButton: HTMLElement
+  let wrapperCards: HTMLElement
 
-  let windowWidth: number;
+  let windowWidth: number
   function gotoCard(direction: string) {
     if (direction === 'next') {
       wrapperCards.scrollBy({
         top: 0,
         left: windowWidth / 2.3,
-        behavior: 'smooth'
-      });
+        behavior: 'smooth',
+      })
     } else if (direction === 'previous') {
       wrapperCards.scrollBy({
         top: 0,
         left: (windowWidth / 2.3) * -1,
-        behavior: 'smooth'
-      });
+        behavior: 'smooth',
+      })
     }
   }
 

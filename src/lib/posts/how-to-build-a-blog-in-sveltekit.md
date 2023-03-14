@@ -20,18 +20,18 @@ yarn create svelte .
 ### More tests
 
 ```typescript
-let hello: string = 'world';
-const printHello = () => console.log(hello);
+let hello: string = 'world'
+const printHello = () => console.log(hello)
 ```
 
 ```svelte
 <script lang="ts">
-  import { FilteredPosts } from '$lib/components/Search/store';
-  import { base } from '$app/paths';
-  import { goto } from '$app/navigation';
-  import { inPixels, readableDate } from '$lib/utils/utils';
-  import { onMount } from 'svelte';
-  import { searchHandler } from '$lib/components/Search/utils';
+  import { FilteredPosts } from '$lib/components/Search/store'
+  import { base } from '$app/paths'
+  import { goto } from '$app/navigation'
+  import { inPixels, readableDate } from '$lib/utils/utils'
+  import { onMount } from 'svelte'
+  import { searchHandler } from '$lib/components/Search/utils'
 
   var modal: HTMLDialogElement,
     input: HTMLInputElement,
@@ -39,41 +39,41 @@ const printHello = () => console.log(hello);
     onDesktop = true,
     outerWidth = 0,
     complex = true,
-    touchSupport = false;
+    touchSupport = false
 
   const toggleModal = () =>
     modal.open
       ? (modal.close(), (value = ''))
-      : (modal.showModal(), input.focus());
+      : (modal.showModal(), input.focus())
 
   function onCtrlK(event: KeyboardEvent) {
-    let { key, ctrlKey, repeat } = event;
-    if (repeat) return;
+    let { key, ctrlKey, repeat } = event
+    if (repeat) return
 
     switch (key) {
       case 'k':
         if (ctrlKey) {
-          event.preventDefault();
-          toggleModal();
-          break;
+          event.preventDefault()
+          toggleModal()
+          break
         }
     }
   }
 
   async function handleSubmit() {
-    toggleModal();
-    await goto(`${base}/blog${$FilteredPosts[0].href}`);
+    toggleModal()
+    await goto(`${base}/blog${$FilteredPosts[0].href}`)
   }
 
-  onMount(() => (touchSupport = 'ontouchstart' in window ? true : false));
+  onMount(() => (touchSupport = 'ontouchstart' in window ? true : false))
   onMount(() =>
     modal.addEventListener('click', event => {
       if (event.target === modal) {
-        modal.close();
+        modal.close()
       }
     })
-  );
-  $: onDesktop = outerWidth > inPixels('48rem') ? true : false;
-  $: complex = onDesktop || !touchSupport;
+  )
+  $: onDesktop = outerWidth > inPixels('48rem') ? true : false
+  $: complex = onDesktop || !touchSupport
 </script>
 ```

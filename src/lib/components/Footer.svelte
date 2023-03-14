@@ -1,26 +1,26 @@
 <script lang="ts">
-  import { dev } from '$app/environment';
-  import { AUTHOR, AUTHOR_NAME } from '$lib/config';
+  import { dev } from '$app/environment'
+  import { AUTHOR, AUTHOR_NAME } from '$lib/config'
 
   const getGithubStars = async () => {
-    if (dev) return 0;
+    if (dev) return 0
     try {
       const response = await fetch(
         'https://api.github.com/repos/santigo-zero/santigo-zero.github.io'
-      );
+      )
       if (!response.ok) {
-        throw new Error('Network response was not ok.');
+        throw new Error('Network response was not ok.')
       }
-      const data = await response.json();
-      return data.stargazers_count;
+      const data = await response.json()
+      return data.stargazers_count
     } catch (error) {
-      console.error(error);
-      return 0;
+      console.error(error)
+      return 0
     }
-  };
+  }
 
-  let ghStars = 0;
-  getGithubStars().then(stars => (ghStars = stars));
+  let ghStars = 0
+  getGithubStars().then(stars => (ghStars = stars))
 </script>
 
 <footer class="banner-reverse artifact">

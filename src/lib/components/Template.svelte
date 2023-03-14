@@ -1,37 +1,37 @@
 <script lang="ts">
-  import { TITLE_BLOG_COMPOSE } from '$lib/config';
-  import { page } from '$app/stores';
-  import { onMount } from 'svelte';
-  import Hollow from './Hollow.svelte';
-  import { readableDate, relativeTime } from '$lib/utils/utils';
+  import { TITLE_BLOG_COMPOSE } from '$lib/config'
+  import { page } from '$app/stores'
+  import { onMount } from 'svelte'
+  import Hollow from './Hollow.svelte'
+  import { readableDate, relativeTime } from '$lib/utils/utils'
 
-  export let title = '';
-  export let datetime = '';
-  export let description = '';
-  export let finished = false;
+  export let title = ''
+  export let datetime = ''
+  export let description = ''
+  export let finished = false
 
   const dateRelative = !datetime
     ? datetime
-    : relativeTime(new Date(), new Date(datetime));
-  const dateReadable = !datetime ? datetime : readableDate(datetime);
+    : relativeTime(new Date(), new Date(datetime))
+  const dateReadable = !datetime ? datetime : readableDate(datetime)
 
-  let isHollow = false;
-  let hollowPrefix = '';
-  let fillSuffix = '';
+  let isHollow = false
+  let hollowPrefix = ''
+  let fillSuffix = ''
 
-  const keywords = ['How ', 'How to ', 'How to: '];
+  const keywords = ['How ', 'How to ', 'How to: ']
 
   onMount(() => {
     if (title) {
       keywords.some(keyword => {
         if (title.startsWith(keyword)) {
-          hollowPrefix = keyword;
-          fillSuffix = title.replace(keyword, '');
-          isHollow = true;
+          hollowPrefix = keyword
+          fillSuffix = title.replace(keyword, '')
+          isHollow = true
         }
-      });
+      })
     }
-  });
+  })
 </script>
 
 <main>

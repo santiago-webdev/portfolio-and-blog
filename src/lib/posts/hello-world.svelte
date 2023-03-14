@@ -1,7 +1,7 @@
 <script context="module" lang="ts">
-  export let title = 'This is a hello world post';
-  export let description = 'This is the description hello world';
-  export let date = '2023-01-14';
+  export let title = 'This is a hello world post'
+  export let description = 'This is the description hello world'
+  export let date = '2023-01-14'
 </script>
 
 <article>

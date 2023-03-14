@@ -1,17 +1,17 @@
 <script lang="ts">
-  import { base } from '$app/paths';
-  import { readableDate } from '$lib/utils/utils';
-  import { FilteredPosts } from './store';
-  import { fly } from 'svelte/transition';
+  import { base } from '$app/paths'
+  import { readableDate } from '$lib/utils/utils'
+  import { FilteredPosts } from './store'
+  import { fly } from 'svelte/transition'
 
-  let fly_in = { y: 0, duration: 0 };
-  let fly_out = { y: 0, duration: 0 };
+  let fly_in = { y: 0, duration: 0 }
+  let fly_out = { y: 0, duration: 0 }
 
   function deferAddSettings(_params: HTMLLIElement) {
     setTimeout(() => {
-      fly_in = { y: 50, duration: 200 };
-      fly_out = { y: -50, duration: 200 };
-    }, 100);
+      fly_in = { y: 50, duration: 200 }
+      fly_out = { y: -50, duration: 200 }
+    }, 100)
   }
 </script>
 

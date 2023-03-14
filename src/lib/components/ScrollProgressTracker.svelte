@@ -1,21 +1,21 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
+  import { onMount } from 'svelte'
 
-  let scrollY = 0;
-  $: innerHeight = 0;
-  $: pageHeight = 0;
+  let scrollY = 0
+  $: innerHeight = 0
+  $: pageHeight = 0
 
   onMount(() => {
     const resizeObserver = new ResizeObserver(entries => {
-      const entry = entries.at(0);
+      const entry = entries.at(0)
 
-      if (entry === undefined) return;
-      pageHeight = Math.floor(entry.contentBoxSize[0].blockSize);
-    });
+      if (entry === undefined) return
+      pageHeight = Math.floor(entry.contentBoxSize[0].blockSize)
+    })
 
-    resizeObserver.observe(document.body);
-    return () => resizeObserver.unobserve(document.body);
-  });
+    resizeObserver.observe(document.body)
+    return () => resizeObserver.unobserve(document.body)
+  })
 </script>
 
 <svelte:window bind:innerHeight bind:scrollY />

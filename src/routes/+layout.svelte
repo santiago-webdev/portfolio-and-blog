@@ -1,11 +1,11 @@
 <script lang="ts">
-  import NavBar from '$lib/components/NavBar.svelte';
-  import Transition from '$lib/components/Transition.svelte';
-  import Footer from '$lib/components/Footer.svelte';
-  import ScrollProgressTracker from '$lib/components/ScrollProgressTracker.svelte';
-  import { page } from '$app/stores';
-  import '$lib/styles/global.css';
-  import 'iconify-icon';
+  import NavBar from '$lib/components/NavBar.svelte'
+  import Transition from '$lib/components/Transition.svelte'
+  import Footer from '$lib/components/Footer.svelte'
+  import ScrollProgressTracker from '$lib/components/ScrollProgressTracker.svelte'
+  import { page } from '$app/stores'
+  import '$lib/styles/global.css'
+  import 'iconify-icon'
 </script>
 
 <div class="layout">
