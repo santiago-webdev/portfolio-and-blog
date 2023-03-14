@@ -36,7 +36,7 @@
 
 <main>
   <header class="banner">
-    <div class="wrapper-header wide">
+    <div class="wrapper-header wider">
       {#if isHollow}
         <h1>
           <Hollow color={'var(--clr-txt-A)'}>{hollowPrefix}</Hollow>
@@ -100,13 +100,13 @@
 </svelte:head>
 
 <style>
-  article {
+  article,
+  .wrapper-header,
+  .wip {
     display: grid;
-    margin-inline: auto;
   }
 
   .wrapper-header {
-    display: grid;
     gap: 1rem;
   }
 
@@ -115,16 +115,7 @@
     margin-inline: auto;
   }
 
-  small {
-    /* padding: 0.615rem 1.23rem; */
-    /* max-width: max-content; */
-    /* font-size: unset; */
-    margin-inline: auto;
-    color: var(--clr-muted-600);
-  }
-
   .wip {
-    display: grid;
     place-items: center;
   }
 

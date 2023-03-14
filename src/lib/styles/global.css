@@ -196,6 +196,8 @@ small {
   --range: clamp(0.6rem, 12vw, 1rem);
   font-size: var(--range);
   line-height: calc(1.2 * var(--range));
+
+  color: var(--clr-muted-600);
 }
 
 label {
