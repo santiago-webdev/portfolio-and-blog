@@ -3,9 +3,16 @@
     Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
     'Segoe UI Symbol';
 
+  --xs: 20rem; /* 320px */
+  --sm: 48rem; /* 768px */
+  --base: 64rem; /* 1024px */
+  --lg: 90rem; /* 1440px */
+  --xl: 120rem; /* 1920px */
+
   --wide: 48rem;
   --middle-wide: 64rem;
   --wider: 90rem;
+
   --gap: 0.809rem;
   --br: 0.809rem;
   --radius: 0.8em;
