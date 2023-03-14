@@ -3,9 +3,9 @@
   import { getCookie } from '$lib/utils/utils'
   import { onMount } from 'svelte'
 
-  let dialog: HTMLDialogElement
-  let button: HTMLButtonElement
-  let scrollY = 0
+  var dialog: HTMLDialogElement,
+    button: HTMLButtonElement,
+    theme = 'initial'
 
   const togglePicker = () =>
     dialog.open ? dialog.close() : openDialogRelatively()
@@ -18,13 +18,13 @@
   }
 
   type ThemeOptions = { label: string; value: string; icon: string }
+
   const themeColorscheme: ThemeOptions[] = [
     { label: 'OS Default', value: 'system', icon: 'bxs:adjust' },
     { label: 'Light', value: 'light', icon: 'lucide:sun' },
     { label: 'Dark', value: 'dark', icon: 'lucide:moon' },
   ]
 
-  $: theme = 'initial'
   const writeThemeCookie = () =>
     (document.cookie = `theme=${theme};max-age=31536000;path="/"`)
 
