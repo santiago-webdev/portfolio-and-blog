@@ -147,6 +147,7 @@
         {/if}
       {/each}
       <button
+        aria-label="Click to expand navigation menu"
         aria-expanded={expanded}
         on:click={() => (expanded = !expanded)}
         style:display={currentContext.length > 0 ? '' : 'none'}
