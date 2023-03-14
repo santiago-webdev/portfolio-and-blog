@@ -1,10 +1,17 @@
-import type { Handle } from '@sveltejs/kit';
+import type { Handle } from '@sveltejs/kit'
+
+type Theme = 'light' | 'dark' | 'system'
 
 export const handle = (async ({ event, resolve }) => {
-  const theme = event.cookies.get('theme') || 'system';
-  const response = await resolve(event, {
-    transformPageChunk: ({ html }) =>
-      html.replace('data-theme=""', `data-theme="${theme}"`)
-  });
-  return response;
-}) satisfies Handle;
+  const get_theme = event.cookies.get('theme')
+  let theme: Theme =
+    get_theme === 'light' || get_theme === 'dark' ? get_theme : 'system'
+
+  return theme === 'system'
+    ? await resolve(event)
+    : await resolve(event, {
+        transformPageChunk: ({ html }) => {
+          return html.replace('data-theme="system"', `data-theme="${theme}"`)
+        }
+      })
+}) satisfies Handle
