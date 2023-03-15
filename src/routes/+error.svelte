@@ -3,7 +3,7 @@
   import Hollow from '$lib/components/Hollow.svelte'
 </script>
 
-<section role="banner" class="wide banner">
+<section role="top-layer" class="wide top-layer">
   <h1>
     <Hollow color="var(--clr-txt-A)">404</Hollow>: This page doesn't exists
   </h1>

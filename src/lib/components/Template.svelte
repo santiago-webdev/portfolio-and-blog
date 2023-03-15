@@ -35,7 +35,7 @@
 </script>
 
 <main>
-  <header class="banner">
+  <header class="top-layer">
     <div class="wrapper-header wider">
       {#if isHollow}
         <h1>

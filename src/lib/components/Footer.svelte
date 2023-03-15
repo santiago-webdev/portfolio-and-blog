@@ -23,7 +23,7 @@
   getGithubStars().then(stars => (ghStars = stars))
 </script>
 
-<footer class="banner-reverse artifact">
+<footer class="top-layer-reverse artifact">
   <div id="main-footer">
     <section class="upper wider">
       <div class="services">

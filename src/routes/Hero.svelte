@@ -2,7 +2,7 @@
   import { base } from '$app/paths'
 </script>
 
-<div class="banner">
+<div class="top-layer">
   <main class="wide">
     <h1>
       Build<wbr />ing web<wbr />sites <span>&&</span> clean inter<wbr />faces

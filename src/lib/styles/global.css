@@ -242,7 +242,7 @@ strong {
   margin-inline: auto;
 }
 
-.banner {
+.top-layer {
   width: 100%;
   background-color: var(--clr-bg-400);
   border-bottom-right-radius: 1.2rem;
@@ -257,7 +257,7 @@ strong {
   box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
 }
 
-.banner-reverse {
+.top-layer-reverse {
   background-color: var(--clr-bg-400);
   border-top-right-radius: 1.2rem;
   border-top-left-radius: 1.2rem;
