@@ -12,3 +12,7 @@ It's just much clearer to read
 
 If the viewport is seeing let's say #projects for more than 5 seconds update the
 link to include that without modifying the view.
+
+## Redo the navbar
+
+**Once again** redo the navbar, the code is unreadable.
