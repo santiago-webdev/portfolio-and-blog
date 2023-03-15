@@ -54,10 +54,13 @@
   >Theme
   <iconify-icon icon="lucide:chevron-down" />
 </button>
-<dialog on:mouseleave={() => dialog.close()} class="shiny" bind:this={dialog}>
+<dialog
+  on:mouseleave={() => dialog.close()}
+  class="shiny float"
+  bind:this={dialog}>
   <form>
     <fieldset>
-      <legend>Choose a colorscheme</legend>
+      <legend aria-label="Choose a colorscheme" />
       {#each themeColorscheme as color}
         <input
           type="radio"
@@ -90,10 +93,9 @@
 
   fieldset {
     display: grid;
-    border: 2px solid var(--clr-muted-150);
-    border-radius: 0.8rem;
-    width: 100%;
-    padding: var(--gap);
+    border: 0;
+    margin: 0;
+    padding: 0;
     gap: calc(var(--gap) / 2);
   }
 
@@ -107,6 +109,7 @@
     display: flex;
     place-items: center;
     width: 100%;
+    border-radius: 0.7rem;
   }
 
   input {

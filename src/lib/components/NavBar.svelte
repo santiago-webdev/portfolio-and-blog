@@ -45,7 +45,12 @@
 
   const navItems4: NavItem[] = [
     { component: false, label: 'About', href: `${base}/about` },
-    { component: false, label: 'Contact', href: `${base}/contact`, classes: 'block' },
+    {
+      component: false,
+      label: 'Contact',
+      href: `${base}/contact`,
+      classes: 'block',
+    },
   ]
 
   let displayedNavItems: NavItem[] = []

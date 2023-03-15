@@ -297,6 +297,10 @@ strong {
   --border: var(--clr-bg-600);
 }
 
+.shiny.float {
+  box-shadow: 8px 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
 @media (hover: hover) {
   .shiny.hover:hover {
     --background: var(--clr-bg-700);
@@ -311,7 +315,7 @@ strong {
 
 .shiny-select {
   border: 1px solid transparent;
-  padding: 0.3rem 0.6rem;
+  padding: 0.4rem 0.8rem;
   border-radius: var(--radius);
 }
 
