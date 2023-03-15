@@ -166,6 +166,7 @@
     margin: 0;
     margin-inline: auto;
     top: 5vh;
+    width: min(100% - var(--gap), var(--sm));
   }
 
   :modal::backdrop {
