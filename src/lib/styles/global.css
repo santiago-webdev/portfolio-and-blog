@@ -189,7 +189,14 @@ h3 {
 }
 
 .ff-sz-700,
-p {
+p,
+ul,
+ol,
+li,
+input,
+label,
+legend,
+fieldset {
   --range: clamp(0.8rem, 10vw, 1.4rem);
   font-size: var(--range);
   line-height: calc(1.2 * var(--range));
