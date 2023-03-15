@@ -47,10 +47,10 @@
     })
   })
 
-  onMount(() => {
-    toggleModal();
-    value = 'h';
-  });
+  // onMount(() => {
+  //   toggleModal();
+  //   value = 'h';
+  // });
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false
   $: complex = onDesktop || !touchSupport
 </script>

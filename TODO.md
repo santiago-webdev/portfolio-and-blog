@@ -16,3 +16,7 @@ link to include that without modifying the view.
 ## Redo the navbar
 
 **Once again** redo the navbar, the code is unreadable.
+
+## More minimalistic buttons for `Hero`
+
+And maybe include some nice animation.
