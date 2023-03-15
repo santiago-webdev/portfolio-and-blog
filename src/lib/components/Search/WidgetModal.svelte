@@ -47,10 +47,10 @@
     })
   })
 
-  // onMount(() => {
-  //   toggleModal();
-  //   value = 'h';
-  // });
+  onMount(() => {
+    toggleModal();
+    value = 'h';
+  });
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false
   $: complex = onDesktop || !touchSupport
 </script>
@@ -62,20 +62,20 @@
   aria-keyshortcuts="Control+K"
   aria-label="Click to open the modal box to search for blogs"
   on:click={toggleModal}>
-  <iconify-icon width="24" icon="lucide:search" />
+  <iconify-icon width="22" icon="lucide:search" />
   {#if complex}
     <span> &nbsp;&nbsp;&nbsp </span>
     <kbd>Ctrl K</kbd>
   {/if}
 </button>
 <dialog
-  class="wide shiny"
+  class="shiny ff-sz-700"
   on:close={() => (value = '')}
   on:cancel={() => (value = '')}
   bind:this={modal}>
   <form on:submit|preventDefault={handleSubmit}>
     <label for="modal-search"
-      >Search for a blog posts or go to <a
+      >Type to search or go to <a
         href="{base}/blog"
         style="display: inline-flex; padding: 0.1em 0.4rem; border-radius: 0.4rem"
         class="bordered">/blog</a> for a better view</label>
@@ -84,7 +84,7 @@
         <iconify-icon width="24" icon="lucide:search" />
       </button>
       <input
-        placeholder="Search"
+        placeholder=" "
         bind:value
         bind:this={input}
         type="search"
@@ -110,7 +110,7 @@
           on:click={() => toggleModal()}
           href="{base}/blog{post.href}">
           <article>
-            <h3>
+            <h3 class="ff-sz-700">
               <iconify-icon width="24" icon="lucide:search" />
               {post.title}
             </h3>
@@ -156,6 +156,11 @@
     outline: 1px solid var(--clr-muted-300);
   }
 
+  :modal > * {
+    font-size: inherit;
+    padding: var(--gap);
+  }
+
   :modal {
     padding: 0;
     margin: 0;
@@ -177,10 +182,6 @@
     to {
       opacity: 1;
     }
-  }
-
-  :modal > * {
-    padding: var(--gap);
   }
 
   form {
