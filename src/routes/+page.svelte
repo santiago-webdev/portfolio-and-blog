@@ -5,9 +5,7 @@
   import BlogShowcase from './BlogShowcase.svelte'
 </script>
 
-<main role="banner" class="banner">
-  <Hero />
-</main>
+<Hero />
 <BlogShowcase />
 <section id="projects">
   <PresentationBlog />
@@ -41,16 +39,3 @@
   <meta name="twitter:image" content="" />
   <!-- TODO(santigo-zero): Add image -->
 </svelte:head>
-
-<style>
-  main {
-    display: grid;
-    place-content: center;
-  }
-
-  @media screen and (min-width: 48rem) {
-    main {
-      min-height: min(50vh, 80rem);
-    }
-  }
-</style>
