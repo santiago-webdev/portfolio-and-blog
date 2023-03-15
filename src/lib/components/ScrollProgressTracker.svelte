@@ -1,9 +1,9 @@
 <script lang="ts">
   import { onMount } from 'svelte'
 
-  let scrollY = 0
-  $: innerHeight = 0
-  $: pageHeight = 0
+  var scrollY = 0,
+    pageHeight = 0,
+    innerHeight = 0
 
   onMount(() => {
     const resizeObserver = new ResizeObserver(entries => {
