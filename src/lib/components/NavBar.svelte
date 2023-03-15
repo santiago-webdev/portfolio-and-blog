@@ -159,7 +159,9 @@
         on:click={() => (expanded = !expanded)}
         style:display={currentContext.length > 0 ? '' : 'none'}
         bind:this={button}>
-        <iconify-icon width="24" icon={expanded ? 'lucide:x' : currentContext} />
+        <iconify-icon
+          width="24"
+          icon={expanded ? 'lucide:x' : currentContext} />
       </button>
     </div>
   </div>
