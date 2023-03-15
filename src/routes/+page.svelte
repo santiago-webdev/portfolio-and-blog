@@ -7,9 +7,7 @@
 
 <Hero />
 <BlogShowcase />
-<section id="projects">
-  <PresentationBlog />
-</section>
+<PresentationBlog />
 
 <svelte:head>
   <title>{TITLE}</title>
