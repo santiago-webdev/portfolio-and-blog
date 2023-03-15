@@ -24,6 +24,7 @@
     component: false
     label: string
     href: string
+    classes?: string
   }
 
   type NavItem = ComponentNavItem | LinkNavItem
@@ -44,7 +45,7 @@
 
   const navItems4: NavItem[] = [
     { component: false, label: 'About', href: `${base}/about` },
-    { component: false, label: 'Contact', href: `${base}/contact` },
+    { component: false, label: 'Contact', href: `${base}/contact`, classes: 'block' },
   ]
 
   let displayedNavItems: NavItem[] = []
@@ -143,6 +144,7 @@
               ? 'page'
               : undefined}
             aria-label="Link to {item.label}"
+            class={item.classes}
             href={item.href}>{item.label}</a>
         {/if}
       {/each}
