@@ -9,7 +9,7 @@
   let input: HTMLInputElement
 </script>
 
-<main role="top-layer" class="top-layer wide">
+<main class="top-layer wide">
   <BlogHeader />
   <SearchBar bind:input />
 </main>
