@@ -130,7 +130,7 @@
 <nav
   class="artifact"
   style:border-bottom={expanded || scrollY
-    ? '1px solid var(--clr-muted-700)'
+    ? '1px solid var(--clr-muted-300)'
     : ''}
   class:scrollY
   bind:this={nav}>
