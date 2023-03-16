@@ -98,7 +98,8 @@
         }}
         disabled={value.length >= 1 ? false : true}
         type="button"><iconify-icon width="24" icon="lucide:x" /></button>
-      <button on:click={toggleModal} type="button"> <kbd>Esc</kbd></button>
+      <button aria-keyshortcuts="Esc" on:click={toggleModal} type="button">
+        <kbd>Esc</kbd></button>
     </div>
   </form>
   <ul style:display={value ? 'grid' : 'none'}>
