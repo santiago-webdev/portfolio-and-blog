@@ -129,9 +129,7 @@
 
 <nav
   class="artifact"
-  style:border-bottom-width={expanded || scrollY
-    ? '1px'
-    : ''}
+  style:border-bottom-width={expanded || scrollY ? '1px' : ''}
   class:scrollY
   bind:this={nav}>
   <div id="wrapper" class="wider">

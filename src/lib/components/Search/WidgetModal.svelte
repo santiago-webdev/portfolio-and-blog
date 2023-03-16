@@ -74,17 +74,16 @@
   on:cancel={() => (value = '')}
   bind:this={modal}>
   <form on:submit|preventDefault={handleSubmit}>
-    <label for="modal-search"
-      >Type to search or go to <a
-        href="{base}/blog"
-        style="display: inline-flex; padding: 0.1em 0.4rem; border-radius: 0.4rem"
-        class="bordered">/blog</a> for a better view</label>
+    <label
+      aria-label="Search and find a blog post using a search bar"
+      style:display="none"
+      for="modal-search" />
     <div class="searchbar">
-      <button aria-label="Navigate to best match" type="submit">
+      <button aria-label="Navigate to best match">
         <iconify-icon width="24" icon="lucide:search" />
       </button>
       <input
-        placeholder=" "
+        placeholder="Search for articles"
         bind:value
         bind:this={input}
         type="search"
@@ -97,8 +96,9 @@
           value = ''
           input.focus()
         }}
-        disabled={!value}
+        disabled={value.length >= 1 ? false : true}
         type="button"><iconify-icon width="24" icon="lucide:x" /></button>
+      <button on:click={toggleModal} type="button"> <kbd>Esc</kbd></button>
     </div>
   </form>
   <ul style:display={value ? 'grid' : 'none'}>
@@ -111,7 +111,6 @@
           href="{base}/blog{post.href}">
           <article>
             <h3 class="ff-sz-700">
-              <iconify-icon width="24" icon="lucide:search" />
               {post.title}
             </h3>
             <p>{post.description}</p>
@@ -147,10 +146,6 @@
     text-decoration: underline solid var(--accent-orange) 0.15em;
     text-underline-offset: 0em;
   }
-
-  /* kbd { */
-  /*   font-size: 90%; */
-  /* } */
 
   :modal > * {
     font-size: inherit;
@@ -189,6 +184,8 @@
 
   .searchbar {
     display: flex;
+    gap: var(--gap);
+    margin-inline: calc(var(--gap) / 2);
   }
 
   input:-moz-placeholder,
@@ -217,5 +214,9 @@
   a {
     display: grid;
     place-items: start;
+  }
+
+  hr {
+    margin: calc(var(--gap) / 2) 0;
   }
 </style>
