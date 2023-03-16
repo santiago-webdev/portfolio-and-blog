@@ -66,6 +66,7 @@
   --clr-bg-selection-400: hsl(240 10% 44%);
 }
 
+[data-theme='system'],
 [data-theme='dark'] {
   color-scheme: dark;
   --accent-violet: #49364c;
@@ -89,6 +90,7 @@
   --clr-muted-100: hsl(240 5% 25%);
   --clr-muted-150: hsl(240 5% 27%);
   --clr-muted-200: hsl(240 5% 30%);
+  --clr-muted-250: hsl(240 5% 35%);
   --clr-muted-300: hsl(240 5% 40%);
   --clr-muted-400: hsl(240 5% 50%);
   --clr-muted-500: hsl(240 5% 55%);
