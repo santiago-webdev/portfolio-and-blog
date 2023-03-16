@@ -129,8 +129,8 @@
 
 <nav
   class="artifact"
-  style:border-bottom={expanded || scrollY
-    ? '1px solid var(--clr-muted-300)'
+  style:border-bottom-width={expanded || scrollY
+    ? '1px'
     : ''}
   class:scrollY
   bind:this={nav}>
@@ -193,6 +193,7 @@
     transition: box-shadow 200ms ease-in-out, background-color 200ms ease-in-out,
       backdrop-filter 200ms ease-in-out, transform 0.6s ease-in-out;
     z-index: 999;
+    border: 0 solid var(--clr-muted-300);
   }
 
   .scrollY {
