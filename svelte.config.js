@@ -17,7 +17,7 @@ const config = {
   kit: {
     adapter: adapter(),
     alias: {
-      '@ui': path.resolve('./src/lib/components'),
+      $ui: path.resolve('./src/lib/components'),
     },
   },
 

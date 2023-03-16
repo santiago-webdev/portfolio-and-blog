@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { FilteredPosts } from '$lib/components/Search/store'
+  import { FilteredPosts } from '$ui/Search/store'
   import { base } from '$app/paths'
   import { goto } from '$app/navigation'
   import { inPixels, readableDate } from '$lib/utils/utils'
   import { onMount } from 'svelte'
-  import { searchHandler } from '$lib/components/Search/utils'
+  import { searchHandler } from '$ui/Search/utils'
 
   var modal: HTMLDialogElement,
     input: HTMLInputElement,
