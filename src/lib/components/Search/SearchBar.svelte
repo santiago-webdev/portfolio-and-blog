@@ -57,7 +57,7 @@
     list="search-terms"
     autocomplete="off" />
   {#if !modal}
-    <kbd class="ff-sz-700">Ctrl K</kbd>
+    <kbd>Ctrl K</kbd>
   {/if}
 </form>
 
@@ -114,12 +114,12 @@
   }
 
   kbd {
+    display: grid;
+    place-items: center;
     position: absolute;
     right: 1.3rem;
     height: 100%;
-    display: grid;
-    place-items: center;
-    color: var(--clr-text-muted);
     pointer-events: none;
+    background-color: transparent;
   }
 </style>

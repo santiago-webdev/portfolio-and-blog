@@ -221,14 +221,6 @@ label {
   font-variation-settings: 'wght' 500;
 }
 
-/* a, */
-/* kbd, */
-/* label, */
-/* input, */
-/* button { */
-/*   font-size: clamp(0.8rem, 8vw, 1.42rem); */
-/* } */
-
 strong {
   font-variation-settings: 'wght' 800;
 }
@@ -460,11 +452,6 @@ input[type='radio']:checked + .shiny-select {
   line-height: inherit;
 }
 
-.artifact *:is(kbd) {
-  color: inherit;
-  font-size: inherit;
-}
-
 [aria-current='page'] {
   text-decoration: underline solid var(--accent-peachy) 3px;
 }
@@ -499,4 +486,15 @@ pre {
   padding: 1rem;
   font-size: clamp(0.8rem, 8vw, 1.2rem);
   font-family: monospace;
+}
+
+kbd {
+  pointer-events: none;
+  padding-inline: 0.3rem;
+
+  border-radius: 0.4rem;
+  background-color: var(--clr-muted-250);
+  text-transform: uppercase;
+  font-size: 90%;
+  font-weight: bold;
 }

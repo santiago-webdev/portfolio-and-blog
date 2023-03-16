@@ -148,18 +148,9 @@
     text-underline-offset: 0em;
   }
 
-  kbd {
-    pointer-events: none;
-    padding-inline: 0.3rem;
-
-    border-radius: 0.4rem;
-    /* outline: 1px solid var(--clr-muted-300); */
-    background-color: var(--clr-muted-250);
-    /* color: var(--clr-bg-300); */
-    text-transform: uppercase;
-    font-size: 80%;
-    /* height: 100%; */
-  }
+  /* kbd { */
+  /*   font-size: 90%; */
+  /* } */
 
   :modal > * {
     font-size: inherit;
