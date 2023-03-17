@@ -95,24 +95,27 @@
   svg {
     position: absolute;
     transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1),
-      opacity 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+      opacity 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
-  /* #arrow-head { */
-  /*   transform: translateX(-3px); */
-  /* } */
+  #arrow-head {
+    transform: translateX(-3px);
+  }
 
   #arrow-tail {
     opacity: 0;
+    transition-delay: -150ms;
   }
 
-  a:hover #arrow-head {
-    transform: translateX(5px);
-  }
+  @media (hover: hover) {
+    a:hover #arrow-head {
+      transform: translateX(6px);
+    }
 
-  a:hover #arrow-tail {
-    opacity: 1;
-    transition: none;
+    a:hover #arrow-tail {
+      opacity: 1;
+      transition-delay: 50ms;
+    }
   }
 
   @media screen and (min-width: 68rem) {
