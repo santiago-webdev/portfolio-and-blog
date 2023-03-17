@@ -20,3 +20,7 @@ link to include that without modifying the view.
 ## More minimalistic buttons for `Hero`
 
 And maybe include some nice animation.
+
+## For the scroll tracker
+
+Make it smooth and put it in the sidebar in the desktop
