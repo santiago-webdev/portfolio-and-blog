@@ -95,31 +95,34 @@
       }
     }
 
-    updateContext()
-    mediaQuery1.addEventListener('change', updateContext)
-    mediaQuery2.addEventListener('change', updateContext)
-    mediaQuery3.addEventListener('change', updateContext)
-    mediaQuery4.addEventListener('change', updateContext)
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      window.addEventListener('scroll', (): void => {
+        const direction = scrollY > savedY ? 'down' : 'up'
 
-    window.addEventListener('scroll', (): void => {
-      const direction = scrollY > savedY ? 'down' : 'up'
+        if (
+          window.scrollY + window.innerHeight >=
+          document.documentElement.scrollHeight
+        ) {
+          nav.style.transform = 'translateY(0)'
+          return
+        }
 
-      if (
-        window.scrollY + window.innerHeight >=
-        document.documentElement.scrollHeight
-      ) {
-        nav.style.transform = 'translateY(0)'
-        return
-      }
+        if (direction === 'down' && scrollY > 500 && (!expanded || onDesktop)) {
+          nav.style.transform = 'translateY(-200%)'
+        } else {
+          nav.style.transform = 'translateY(0)'
+        }
 
-      if (direction === 'down' && scrollY > 500 && (!expanded || onDesktop)) {
-        nav.style.transform = 'translateY(-200%)'
-      } else {
-        nav.style.transform = 'translateY(0)'
-      }
-
-      savedY = scrollY
-    })
+        savedY = scrollY
+      })
+      updateContext()
+      mediaQuery1.addEventListener('change', updateContext)
+      mediaQuery2.addEventListener('change', updateContext)
+      mediaQuery3.addEventListener('change', updateContext)
+      mediaQuery4.addEventListener('change', updateContext)
+    } else {
+      updateContext()
+    }
   })
 
   afterNavigate(() => (expanded = false))
