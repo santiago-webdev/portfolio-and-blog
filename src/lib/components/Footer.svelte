@@ -187,6 +187,7 @@
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.5ch;
+    color: inherit;
   }
 
   @media screen and (min-width: 48rem) {
