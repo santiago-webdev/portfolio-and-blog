@@ -2,7 +2,7 @@
   import { FilteredPosts } from '$compose/Search/store'
   import { base } from '$app/paths'
   import { goto } from '$app/navigation'
-  import { inPixels, readableDate } from '$lib/utils/utils'
+  import { inPixels, readableDate, relativeTime } from '$lib/utils/utils'
   import { onMount } from 'svelte'
   import { searchHandler } from '$compose/Search/utils'
 
@@ -125,9 +125,12 @@
             {#if post.datetime}
               <small>
                 <time datetime={post.datetime}>
-                  <iconify-icon width="24" icon="lucide:calendar" />: {readableDate(
-                    post.datetime
+                  <iconify-icon icon="lucide:calendar" />: {relativeTime(
+                    new Date(),
+                    new Date(post.datetime)
                   )}
+                  <div aria-orientation="vertical" role="separator">•</div>
+                  {readableDate(post.datetime)}
                 </time>
               </small>
             {/if}
