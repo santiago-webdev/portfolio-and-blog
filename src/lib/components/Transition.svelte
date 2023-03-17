@@ -3,23 +3,22 @@
   import { fly } from 'svelte/transition'
   export let url: URL
 
-  let client_big_screen = false
+  let use = false
 
   onMount(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
     const bigger_than_48 = window.matchMedia('(min-width: 48rem)')
-    client_big_screen = bigger_than_48.matches
+    use = bigger_than_48.matches
     bigger_than_48.addEventListener(
       'change',
-      (event: MediaQueryListEvent) => (client_big_screen = event.matches)
+      (event: MediaQueryListEvent) => (use = event.matches)
     )
   })
 </script>
 
 {#key url}
-  <div
-    in:fly={client_big_screen
-      ? { y: -60, duration: 250 }
-      : { y: 0, duration: 0 }}>
+  <div in:fly={{ y: -60, duration: use ? 250 : 0 }}>
     <slot />
   </div>
 {/key}
