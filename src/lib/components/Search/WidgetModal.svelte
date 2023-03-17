@@ -48,9 +48,10 @@
   })
 
   // onMount(() => {
-  //   toggleModal();
-  //   value = 'h';
-  // });
+  //   toggleModal()
+  //   value = 'h'
+  // })
+
   $: onDesktop = outerWidth > inPixels('48rem') ? true : false
   $: complex = onDesktop || !touchSupport
 </script>
@@ -69,7 +70,7 @@
   {/if}
 </button>
 <dialog
-  class="shiny ff-sz-700"
+  class={onDesktop ? 'shiny ff-sz-700' : 'shiny ff-sz-800'}
   on:close={() => (value = '')}
   on:cancel={() => (value = '')}
   bind:this={modal}>
@@ -161,24 +162,28 @@
   :modal {
     padding: 0;
     margin: 0;
-    margin-inline: auto;
-    top: 5vh;
-    width: min(100% - var(--gap), var(--sm));
+    min-width: 100%;
+    min-height: 100%;
+    border-radius: 0;
   }
 
   :modal::backdrop {
-    backdrop-filter: blur(30px);
-    cursor: pointer;
-    animation: fade-in 0.4s;
+    background-color: none;
   }
 
-  @keyframes fade-in {
-    from {
-      opacity: 0;
+  @media screen and (min-width: 48rem) {
+    :modal {
+      top: 5vh;
+      min-width: 0;
+      min-height: 0;
+      width: min(100% - var(--gap), var(--sm));
+      margin-inline: auto;
+      border-radius: var(--radius);
     }
 
-    to {
-      opacity: 1;
+    :modal::backdrop {
+      backdrop-filter: blur(30px);
+      cursor: pointer;
     }
   }
 
