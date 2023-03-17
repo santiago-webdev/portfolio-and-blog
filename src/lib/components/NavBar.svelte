@@ -4,8 +4,8 @@
   import { page } from '$app/stores'
   import { afterNavigate } from '$app/navigation'
   import { onMount, type ComponentType } from 'svelte'
-  import WidgetModal from '$ui/Search/WidgetModal.svelte'
-  import WidgetTheme from '$ui/WidgetTheme.svelte'
+  import WidgetModal from '$compose/Search/WidgetModal.svelte'
+  import WidgetTheme from '$compose/WidgetTheme.svelte'
 
   var expanded = false,
     onDesktop = false,

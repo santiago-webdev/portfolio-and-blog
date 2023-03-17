@@ -1,7 +1,7 @@
 <script lang="ts">
-  import SearchBar from '$ui/Search/SearchBar.svelte'
-  import BlogHeader from '$ui/BlogHeader.svelte'
-  import FilteredPostsCards from '$ui/Search/FilteredPostsCards.svelte'
+  import SearchBar from '$compose/Search/SearchBar.svelte'
+  import BlogHeader from '$compose/BlogHeader.svelte'
+  import FilteredPostsCards from '$compose/Search/FilteredPostsCards.svelte'
   import { DESCRIPTION, TITLE_BLOG, URL_BLOG } from '$lib/config'
 
   // TODO(santigo-zero): We don't need this bind, find a way of having a fallback inside

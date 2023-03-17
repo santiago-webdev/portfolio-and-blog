@@ -1,6 +1,6 @@
 <script lang="ts">
   import { base } from '$app/paths'
-  import Hollow from '$ui/Hollow.svelte'
+  import Hollow from '$compose/Hollow.svelte'
 </script>
 
 <section class="wide top-layer">
