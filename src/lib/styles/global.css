@@ -444,7 +444,7 @@ input[type='radio']:checked + .shiny-select {
   font-variation-settings: 'wght' 500;
 }
 
-.artifact *:is(a, li, p, small) {
+.artifact *:is(a, li, p) {
   color: inherit;
   font-family: inherit;
   font-size: inherit;

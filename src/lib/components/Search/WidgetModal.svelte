@@ -70,7 +70,7 @@
   {/if}
 </button>
 <dialog
-  class={onDesktop ? 'shiny ff-sz-700' : 'shiny ff-sz-800'}
+  class="shiny"
   on:close={() => (value = '')}
   on:cancel={() => (value = '')}
   bind:this={modal}>
@@ -90,7 +90,8 @@
         type="search"
         id="modal-search"
         autocomplete="off"
-        on:input={() => searchHandler(value)} />
+        on:input={() => searchHandler(value)}
+        class="ff-sz-700" />
       <button
         title="Clear the search bar"
         aria-label="Clear the search bar and search again"
@@ -123,7 +124,6 @@
             <p>{post.description}</p>
             {#if post.datetime}
               <small>
-                Published: {readableDate(post.datetime)}
                 <time datetime={post.datetime}>
                   <iconify-icon width="24" icon="lucide:calendar" />: {readableDate(
                     post.datetime
@@ -222,6 +222,15 @@
     padding: 0;
   }
 
+  li {
+    display: grid;
+  }
+
+  article {
+    display: grid;
+    gap: 0.4rem;
+  }
+
   a {
     display: grid;
     place-items: start;
@@ -229,5 +238,10 @@
 
   hr {
     margin: calc(var(--gap) / 2) 0;
+  }
+
+  time {
+    display: flex;
+    place-items: center;
   }
 </style>
