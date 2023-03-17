@@ -15,12 +15,11 @@
   })
 </script>
 
-{#if client_big_screen}
-  {#key url}
-    <div in:fly={{ y: -60, duration: 250 }}>
-      <slot />
-    </div>
-  {/key}
-{:else}
-  <slot />
-{/if}
+{#key url}
+  <div
+    in:fly={client_big_screen
+      ? { y: -60, duration: 250 }
+      : { y: 0, duration: 0 }}>
+    <slot />
+  </div>
+{/key}
