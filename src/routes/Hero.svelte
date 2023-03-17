@@ -104,7 +104,7 @@
 
   #arrow-tail {
     opacity: 0;
-    transition-delay: -150ms;
+    transition-delay: -50ms;
   }
 
   @media (hover: hover) {
