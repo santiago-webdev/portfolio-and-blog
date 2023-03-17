@@ -154,9 +154,7 @@ button[disabled] {
 }
 
 @media (hover: hover) {
-  a:hover {
-    color: var(--clr-txt-hover);
-  }
+  a:hover,
   button:hover {
     color: var(--clr-txt-hover);
   }
@@ -442,15 +440,6 @@ input[type='radio']:checked + .shiny-select {
   font-size: clamp(0.8rem, 12vw, 1.1rem);
   font-weight: 500;
   font-variation-settings: 'wght' 500;
-}
-
-.artifact *:is(a, li, p) {
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-  font-variation-settings: inherit;
-  line-height: inherit;
 }
 
 [aria-current='page'] {
