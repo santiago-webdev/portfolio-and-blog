@@ -35,11 +35,15 @@
     display: flex;
     place-items: center;
     position: relative;
-    /* top: 2px; */
+    left: 0.1rem;
+    top: 1px;
+  }
+
+  svg:first-child {
+    position: absolute;
   }
 
   svg {
-    position: absolute;
     transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1),
       opacity 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
   }

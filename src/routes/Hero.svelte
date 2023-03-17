@@ -17,14 +17,14 @@
       <a
         href="{base}/projects"
         aria-label="Link to my projects page"
-        class="shiny hover"
+        class="shiny hover ff-sz-400"
         >Projects
         <ChevronToArrow />
       </a>
 
       <a
         aria-label="Link to contact me"
-        class="block hover"
+        class="block hover ff-sz-400"
         href="{base}/contact"
         >Contact
       </a>
@@ -41,8 +41,10 @@
   }
 
   section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr));
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(min(20rem, 100%), 1fr)); */
+    display: flex;
+    flex-flow: row wrap;
     gap: 1rem 2rem;
   }
 
@@ -55,9 +57,12 @@
     place-items: center;
     place-content: center;
     /* position: relative; */
-    padding: 0.8rem;
-    font-size: 140%;
+    /* padding: 0.8rem; */
+    /* font-size: 140%; */
+    padding: 0.4rem 0.8rem;
     gap: 0.2rem;
+    /* text-transform: uppercase; */
+    border-radius: 1rem;
   }
 
   @media screen and (min-width: 68rem) {

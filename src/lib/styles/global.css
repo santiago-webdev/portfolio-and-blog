@@ -189,6 +189,12 @@ h3 {
   /* line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem)); */
 }
 
+.ff-sz-400 {
+  --range: clamp(0.6rem, 12vw, 1.6rem);
+  font-size: var(--range);
+  line-height: calc(1.2 * var(--range));
+}
+
 .ff-sz-700,
 p,
 ul,
