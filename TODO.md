@@ -24,3 +24,7 @@ And maybe include some nice animation.
 ## For the scroll tracker
 
 Make it smooth and put it in the sidebar in the desktop
+
+## Improve navigation in modal box
+
+For the search modal box, close it when using the back arrow in the browser.
