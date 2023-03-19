@@ -22,14 +22,14 @@
         <a
           href="{base}/projects"
           aria-label="Link to my projects page"
-          class="shiny hover ff-sz-400"
+          class="shiny hover ff-sz-700"
           >Projects
           <ChevronToArrow />
         </a>
 
         <a
           aria-label="Link to contact me"
-          class="block hover ff-sz-400"
+          class="block hover ff-sz-700"
           href="{base}/contact"
           >Contact
         </a>
@@ -44,8 +44,7 @@
     place-items: center;
     flex-flow: column;
     width: min(100% - var(--gap), var(--base));
-    text-align: left;
-    gap: var(--gap);
+    gap: 2rem;
     margin-inline: auto;
   }
 
@@ -64,10 +63,11 @@
     display: flex;
     flex-flow: row wrap;
     gap: var(--gap);
+    margin-inline: auto;
   }
 
   p {
-    max-width: 80%;
+    margin-inline: auto;
   }
 
   a {
@@ -80,7 +80,7 @@
     padding: 0.4rem 0.8rem;
     gap: 0.2rem;
     /* text-transform: uppercase; */
-    border-radius: 0.8rem;
+    border-radius: 999rem;
   }
 
   @media screen and (max-width: 64rem) {
@@ -94,6 +94,16 @@
       flex-flow: row-reverse;
       min-height: min(75vh, 80rem);
       padding: var(--gap) 0;
+      text-align: left;
+    }
+
+    p {
+      max-width: 80%;
+      margin-left: 0;
+    }
+
+    section {
+      margin-inline: 0;
     }
   }
 </style>
