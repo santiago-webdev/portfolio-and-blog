@@ -5,8 +5,11 @@
 
 <div class="top-layer">
   <main>
-    <img src="/logo.svg" alt="TODO" class="hero" />
-    <div class="left">
+    <img
+      src="/logo.svg"
+      title="Logo of the page representing my nickname santigo-zero"
+      alt="Logo of the page representing my nickname santigo-zero" />
+    <div class="description">
       <h1>
         Build<wbr />ing web<wbr />sites <span>&&</span> clean interfaces
       </h1>
@@ -46,13 +49,13 @@
     margin-inline: auto;
   }
 
-  .left {
+  .description {
     display: flex;
     flex-flow: column wrap;
     gap: 2rem;
   }
 
-  .hero {
+  img {
     max-width: var(--xs);
     margin-inline: auto;
   }
@@ -81,7 +84,7 @@
   }
 
   @media screen and (max-width: 64rem) {
-    .hero {
+    img {
       width: 50%;
     }
   }

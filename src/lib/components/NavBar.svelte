@@ -140,7 +140,10 @@
       style="width: 60px"
       href="{base}/"
       aria-label="Logo of this site and link to Home"
-      ><img src="/logo.svg" alt="Santiago's logo" /></a>
+      ><img
+        src="/logo.svg"
+        title="Logo of the page representing my nickname santigo-zero"
+        alt="Logo of the page representing my nickname santigo-zero" /></a>
     <div id="contextual">
       {#each displayedNavItems as item}
         {#if item.component}
