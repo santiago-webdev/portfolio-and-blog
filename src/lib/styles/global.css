@@ -100,6 +100,7 @@
   --clr-bg-100: hsl(240 9% 12%);
   --clr-bg-200: hsl(240 9% 14%);
   --clr-bg-300: hsl(240 9% 16%);
+  --clr-bg-350: hsl(240 9% 18%);
   --clr-bg-400: hsl(240 9% 19%);
   --clr-bg-500: hsl(240 9% 21%);
   --clr-bg-600: hsl(240 8% 23%);
@@ -298,6 +299,15 @@ strong {
 
 .shiny.float {
   box-shadow: 8px 8px 32px 0 rgba(0, 0, 0, 0.4);
+}
+
+.shiny.block {
+  --background: var(--clr-bg-350);
+  --border: var(--clr-bg-700);
+}
+
+.shiny.block:hover {
+  --background: var(--clr-bg-400);
 }
 
 @media (hover: hover) {

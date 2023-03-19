@@ -32,6 +32,7 @@
           class="block hover ff-sz-700"
           href="{base}/contact"
           >Contact
+          <ChevronToArrow />
         </a>
       </section>
     </div>

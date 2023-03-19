@@ -90,10 +90,10 @@
   button {
     display: grid;
     place-items: center;
-    background-color: var(--clr-background-alt);
+    background-color: var(--clr-bg-400);
     color: var(--accent-orange);
     border-radius: 999px;
-    border: 0.3rem solid var(--clr-background);
+    border: 0.3rem solid var(--clr-bg-200);
     /* height: 3rem; */
     aspect-ratio: 1;
     margin: auto;
@@ -122,7 +122,8 @@
     place-content: center;
     padding: 6rem 0;
     text-align: center;
-    grid-template-columns: minmax(min(30rem, 100%), 1fr) fit-content(100%);
+    grid-template-columns: minmax(min(60rem, 100%), 1fr) 1fr;
+    /* grid-template-columns: 1fr 1fr; */
     grid-auto-flow: row dense;
   }
 
