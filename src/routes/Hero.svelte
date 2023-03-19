@@ -89,7 +89,7 @@
     }
   }
 
-  @media screen and (min-width: 64rem) {
+  @media screen and (min-width: 68rem) {
     main {
       flex-flow: row-reverse;
       min-height: min(75vh, 80rem);
