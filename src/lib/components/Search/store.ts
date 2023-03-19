@@ -50,6 +50,21 @@ const getPosts = () => {
     }
   }
 
+  tmpPost.sort((a, b) => {
+    if (!a.datetime && !b.datetime) {
+      return 0
+    }
+    if (a.datetime && !b.datetime) {
+      return -1
+    }
+    if (!a.datetime && b.datetime) {
+      return 1
+    }
+    const dateA = Date.parse(a.datetime)
+    const dateB = Date.parse(b.datetime)
+    return dateB - dateA // Compare dateB with dateA instead of dateA with dateB
+  })
+
   return tmpPost
 }
 

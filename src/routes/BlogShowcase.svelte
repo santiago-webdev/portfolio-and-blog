@@ -1,6 +1,7 @@
 <script>
   import { base } from '$app/paths'
   import ChevronToArrow from '$compose/ChevronToArrow.svelte'
+  import { Posts } from '$compose/Search/store'
 </script>
 
 <!-- <script lang="ts"> -->
@@ -71,10 +72,10 @@
     </a>
   </div>
 
-  <a href="/todo">
+  <a href="{base}/blog{$Posts[0].href}">
     <article class="shiny block">
-      <h3>Title</h3>
-      <p>Description</p>
+      <h3>{$Posts[0].title}</h3>
+      <p>{$Posts[0].description}</p>
     </article>
   </a>
 
