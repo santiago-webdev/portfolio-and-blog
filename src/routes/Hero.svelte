@@ -5,6 +5,7 @@
 
 <div class="top-layer">
   <main>
+    <img src="/logo.svg" alt="TODO" class="hero" />
     <div class="left">
       <h1>
         Build<wbr />ing web<wbr />sites <span>&&</span> clean interfaces
@@ -31,37 +32,29 @@
         </a>
       </section>
     </div>
-    <div class="right">
-      Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
-      labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
-      Nisi anim cupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum
-      Lorem est aliquip amet voluptate voluptate dolor minim nulla est proident.
-      Nostrud officia pariatur ut officia. Sit irure elit esse ea nulla sunt ex
-      occaecat reprehenderit commodo officia dolor Lorem duis laboris cupidatat
-      officia voluptate. Culpa proident adipisicing id nulla nisi laboris ex in
-      Lorem sunt duis officia eiusmod. Aliqua reprehenderit commodo ex non
-      excepteur duis sunt velit enim. Voluptate laboris sint cupidatat ullamco
-      ut ea consectetur et est culpa et culpa duis.
-    </div>
   </main>
 </div>
 
 <style>
   main {
-    display: grid;
+    display: flex;
     place-items: center;
-    /* outline: 2px solid paleturquoise; */
+    flex-flow: column;
     width: min(100% - var(--gap), var(--base));
-    grid-template-columns: 1fr;
-    margin-inline: auto;
     text-align: left;
     gap: var(--gap);
+    margin-inline: auto;
   }
 
   .left {
     display: flex;
     flex-flow: column wrap;
     gap: 2rem;
+  }
+
+  .hero {
+    max-width: var(--xs);
+    margin-inline: auto;
   }
 
   section {
@@ -87,13 +80,17 @@
     border-radius: 0.8rem;
   }
 
-  @media screen and (min-width: 68rem) {
+  @media screen and (max-width: 64rem) {
+    .hero {
+      width: 50%;
+    }
+  }
+
+  @media screen and (min-width: 64rem) {
     main {
-      flex-flow: column wrap;
+      flex-flow: row-reverse;
       min-height: min(75vh, 80rem);
-      margin-inline: auto;
       padding: var(--gap) 0;
-      grid-template-columns: 2fr 1fr;
     }
   }
 </style>

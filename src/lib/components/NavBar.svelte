@@ -136,8 +136,11 @@
   class:scrollY
   bind:this={nav}>
   <div id="wrapper" class="wider">
-    <a href="{base}/" aria-label="Logo of this site and link to Home"
-      >{(onDesktop && AUTHOR) || 'SG'}</a>
+    <a
+      style="width: 60px"
+      href="{base}/"
+      aria-label="Logo of this site and link to Home"
+      ><img src="/logo.svg" alt="Santiago's logo" /></a>
     <div id="contextual">
       {#each displayedNavItems as item}
         {#if item.component}
