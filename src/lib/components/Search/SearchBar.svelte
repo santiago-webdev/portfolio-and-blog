@@ -4,7 +4,6 @@
   import { base } from '$app/paths'
   import { goto, preloadData } from '$app/navigation'
 
-  export let input: HTMLElement
   export let modal = false
 
   $: if ($FilteredPosts.length === 1)
@@ -48,7 +47,6 @@
     {placeholder}
     aria-keyshortcuts="Control+K"
     bind:value
-    bind:this={input}
     on:input={() => FilterValue.set(searchHandler(value))}
     on:focus|once={() => (placeholder = placeholderDefault)}
     type="search"
