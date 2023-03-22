@@ -78,7 +78,7 @@
     /* position: relative; */
     /* padding: 0.8rem; */
     /* font-size: 140%; */
-    padding: 0.4rem 0.8rem;
+    padding: 1.5rem 3rem;
     gap: 0.2rem;
     /* text-transform: uppercase; */
     border-radius: 999rem;
