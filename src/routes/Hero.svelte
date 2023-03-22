@@ -15,9 +15,9 @@
         <span>&&</span> clean interfaces
       </h1>
       <p>
-        I'm a web developer and here we'll discuss about <strong>
-          web deve&shylopment
-        </strong> and show you my projects while at it.
+        I'm a web developer and here we'll discuss <br />about
+        <strong> web deve&shylopment </strong> and show you my projects while at
+        it.
       </p>
       <section>
         <a
@@ -65,7 +65,7 @@
     display: flex;
     flex-flow: row wrap;
     gap: var(--gap);
-    margin-inline: auto;
+    margin-right: auto;
   }
 
   p {
@@ -102,10 +102,6 @@
     p {
       max-width: 80%;
       margin-left: 0;
-    }
-
-    section {
-      margin-inline: 0;
     }
   }
 </style>

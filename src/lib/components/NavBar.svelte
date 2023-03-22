@@ -135,6 +135,7 @@
   bind:this={nav}>
   <div id="wrapper">
     <a
+      style='position: relative; right: 0.6rem'
       href="{base}/"
       aria-label="Logo of this site and link to Home"
       aria-current={`${base}/` === $page.url.pathname ? 'page' : undefined}>
