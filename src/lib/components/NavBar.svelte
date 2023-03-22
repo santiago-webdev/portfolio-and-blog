@@ -38,7 +38,6 @@
 
   const navItems3: NavItem[] = [
     { component: true, widget: WidgetTheme },
-    { component: false, label: 'Home', href: `${base}/` },
     { component: false, label: 'Blog', href: `${base}/blog` },
     { component: false, label: 'Projects', href: `${base}/projects` },
   ]
@@ -137,13 +136,10 @@
   bind:this={nav}>
   <div id="wrapper" class="wider">
     <a
-      style="width: 60px"
       href="{base}/"
       aria-label="Logo of this site and link to Home"
-      ><img
-        src="/logo.svg"
-        title="Logo of the page representing my nickname santigo-zero"
-        alt="Logo of the page representing my nickname santigo-zero" /></a>
+      aria-current={`${base}/` === $page.url.pathname ? 'page' : undefined}>
+      Santiago Gonzalez</a>
     <div id="contextual">
       {#each displayedNavItems as item}
         {#if item.component}
