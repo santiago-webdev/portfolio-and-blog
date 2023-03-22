@@ -87,15 +87,15 @@
   --clr-txt-hover: hsl(230 20% 70%);
   --clr-txt-clicked: hsl(220 80% 80%);
 
-  --clr-muted-100: hsl(240 5% 25%);
-  --clr-muted-150: hsl(240 5% 27%);
-  --clr-muted-200: hsl(240 5% 30%);
-  --clr-muted-250: hsl(240 5% 35%);
-  --clr-muted-300: hsl(240 5% 40%);
-  --clr-muted-400: hsl(240 5% 50%);
-  --clr-muted-500: hsl(240 5% 55%);
-  --clr-muted-600: hsl(240 5% 60%);
-  --clr-muted-700: hsl(240 5% 70%);
+  --clr-muted-100: hsl(236 12% 25%);
+  --clr-muted-150: hsl(236 12% 27%);
+  --clr-muted-200: hsl(236 12% 30%);
+  --clr-muted-250: hsl(236 12% 35%);
+  --clr-muted-300: hsl(236 12% 40%);
+  --clr-muted-400: hsl(236 12% 50%);
+  --clr-muted-500: hsl(236 12% 55%);
+  --clr-muted-600: hsl(236 12% 60%);
+  --clr-muted-700: hsl(236 12% 70%);
 
   --clr-bg-100: hsl(236 13% 12%);
   --clr-bg-200: hsl(236 13% 14%);
