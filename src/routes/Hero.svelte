@@ -11,7 +11,8 @@
       alt="Logo of the page representing my nickname santigo-zero" />
     <div class="description">
       <h1>
-        Build<wbr />ing web<wbr />sites <span>&&</span> clean interfaces
+        Building the web <br />
+        <span>&&</span> clean interfaces
       </h1>
       <p>
         I'm a web developer and here we'll discuss about <strong>
@@ -44,7 +45,7 @@
     display: flex;
     place-items: center;
     flex-flow: column;
-    width: min(100% - var(--gap), var(--base));
+    width: min(100% - var(--gap), var(--md));
     gap: 2rem;
     margin-inline: auto;
   }

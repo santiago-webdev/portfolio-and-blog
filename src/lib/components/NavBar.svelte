@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { AUTHOR } from '$lib/config'
   import { base } from '$app/paths'
   import { page } from '$app/stores'
   import { afterNavigate } from '$app/navigation'
@@ -134,7 +133,7 @@
   style:border-bottom-width={expanded || scrollY ? '1px' : ''}
   class:scrollY
   bind:this={nav}>
-  <div id="wrapper" class="wider">
+  <div id="wrapper">
     <a
       href="{base}/"
       aria-label="Logo of this site and link to Home"
@@ -222,9 +221,9 @@
   #wrapper {
     display: flex;
     place-items: center;
-    /* margin-inline: auto; */
+    margin-inline: auto;
+    width: min(100% - var(--gap), var(--md));
     justify-content: space-between;
-    /* grid-template-columns: 1fr auto; */
     flex-flow: row wrap;
   }
 
