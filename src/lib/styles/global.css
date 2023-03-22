@@ -172,7 +172,7 @@ h1 {
   font-size: var(--range);
   line-height: calc(1.2 * var(--range));
 
-  font-variation-settings: 'wght' 800;
+  font-variation-settings: 'wght' 660;
   color: var(--clr-txt-A);
 }
 
