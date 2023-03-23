@@ -15,9 +15,9 @@
         <span>&&</span> clean interfaces
       </h1>
       <p>
-        I'm a web developer and here we'll discuss <br />about
-        <strong> web deve&shylopment </strong> and show you my projects while at
-        it.
+        I'm a web developer and here we'll discuss about <strong>
+          web deve&shylopment
+        </strong> and show you my projects while at it.
       </p>
       <section>
         <a
@@ -57,8 +57,7 @@
   }
 
   img {
-    max-width: var(--xs);
-    margin-inline: auto;
+    max-width: 45%;
   }
 
   section {
@@ -76,7 +75,7 @@
     display: flex;
     place-items: center;
     place-content: center;
-    padding: 1.5rem 3rem;
+    padding: clamp(1rem, 1.5vw, 2rem) clamp(2rem, 3vw, 3rem);
     gap: 0.2rem;
     border-radius: 999rem;
   }
@@ -91,6 +90,10 @@
     p {
       max-width: 80%;
       margin-left: 0;
+    }
+
+    img {
+      max-width: 23%;
     }
   }
 </style>
