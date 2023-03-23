@@ -190,12 +190,17 @@
     inset: 3px 0 auto 0;
     position: sticky;
     background-color: var(--clr-bg-400);
-    padding: 2rem 0;
     transition: box-shadow 150ms ease-in-out, background-color 150ms ease-in-out,
       backdrop-filter 150ms ease-in-out, transform 0.6s ease-in-out,
       padding 150ms ease-in-out;
     z-index: 999;
     border: 0 solid var(--clr-muted-300);
+  }
+
+  @media screen and (min-width: 48rem) {
+    nav {
+      padding: 2rem 0;
+    }
   }
 
   .scrollY {
