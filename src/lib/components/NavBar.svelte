@@ -11,8 +11,7 @@
     scrollY = 0,
     savedY = 0,
     currentContext = '',
-    nav: HTMLElement,
-    button: HTMLButtonElement
+    nav: HTMLElement
 
   interface ComponentNavItem {
     component: true
@@ -160,8 +159,7 @@
         aria-label="Click to expand navigation menu"
         aria-expanded={expanded}
         on:click={() => (expanded = !expanded)}
-        style:display={currentContext.length > 0 ? '' : 'none'}
-        bind:this={button}>
+        style:display={currentContext.length > 0 ? '' : 'none'}>
         <iconify-icon
           width="24"
           icon={expanded ? 'lucide:x' : currentContext} />
@@ -192,9 +190,10 @@
     inset: 3px 0 auto 0;
     position: sticky;
     background-color: var(--clr-bg-400);
-    padding: 0.2rem 0;
-    transition: box-shadow 200ms ease-in-out, background-color 200ms ease-in-out,
-      backdrop-filter 200ms ease-in-out, transform 0.6s ease-in-out;
+    padding: 2rem 0;
+    transition: box-shadow 150ms ease-in-out, background-color 150ms ease-in-out,
+      backdrop-filter 150ms ease-in-out, transform 0.6s ease-in-out,
+      padding 150ms ease-in-out;
     z-index: 999;
     border: 0 solid var(--clr-muted-300);
   }
@@ -203,6 +202,7 @@
     box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
     background-color: var(--trp-bg-400);
     backdrop-filter: blur(10px);
+    padding: 0.3rem 0;
   }
 
   @media (prefers-reduced-motion: reduce) {
