@@ -76,26 +76,15 @@
     display: flex;
     place-items: center;
     place-content: center;
-    /* position: relative; */
-    /* padding: 0.8rem; */
-    /* font-size: 140%; */
     padding: 1.5rem 3rem;
     gap: 0.2rem;
-    /* text-transform: uppercase; */
     border-radius: 999rem;
   }
 
-  @media screen and (max-width: 64rem) {
-    img {
-      width: 50%;
-    }
-  }
-
-  @media screen and (min-width: 68rem) {
+  @media screen and (min-width: 64rem) {
     main {
       flex-flow: row-reverse;
-      min-height: min(75vh, 80rem);
-      padding: var(--gap) 0;
+      padding: 6rem 3rem;
       text-align: left;
     }
 
