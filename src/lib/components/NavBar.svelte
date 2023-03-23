@@ -134,7 +134,6 @@
   bind:this={nav}>
   <div id="wrapper">
     <a
-      style="position: relative; right: 0.6rem"
       href="{base}/"
       aria-label="Logo of this site and link to Home"
       aria-current={`${base}/` === $page.url.pathname ? 'page' : undefined}>
@@ -195,12 +194,7 @@
       padding 150ms ease-in-out;
     z-index: 999;
     border: 0 solid var(--clr-muted-300);
-  }
-
-  @media screen and (min-width: 48rem) {
-    nav {
-      padding: 2rem 0;
-    }
+    padding: 0.3rem 0;
   }
 
   .scrollY {
@@ -208,12 +202,6 @@
     background-color: var(--trp-bg-400);
     backdrop-filter: blur(10px);
     padding: 0.3rem 0;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    nav {
-      transition: none;
-    }
   }
 
   a,
@@ -256,5 +244,21 @@
 
   section a {
     width: 100%;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    nav {
+      transition: none;
+    }
+  }
+
+  @media screen and (min-width: 48rem) {
+    nav {
+      padding: 2rem 0;
+    }
+
+    #wrapper {
+      padding-inline: 2rem;
+    }
   }
 </style>
