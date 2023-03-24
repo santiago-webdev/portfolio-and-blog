@@ -34,7 +34,6 @@ ol {
 
 html {
   scrollbar-gutter: stable;
-  scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
