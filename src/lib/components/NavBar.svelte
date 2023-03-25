@@ -125,7 +125,7 @@
   afterNavigate(() => (expanded = false))
 </script>
 
-<svelte:window bind:scrollY />
+<!-- <svelte:window bind:scrollY /> -->
 
 <nav
   class="artifact"
@@ -254,13 +254,9 @@
     }
   }
 
-  @media screen and (min-width: 48rem) {
-    nav {
-      padding: 2rem 0;
-    }
-    /**/
-    /* #wrapper { */
-    /*   width: min(100% - 3rem, var(--lg) + 1.6rem); */
-    /* } */
-  }
+  /* @media screen and (min-width: 48rem) { */
+  /*   nav { */
+  /*     padding: 2rem 0; */
+  /*   } */
+  /* } */
 </style>
