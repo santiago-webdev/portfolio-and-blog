@@ -137,6 +137,11 @@
     margin-inline: auto;
   }
 
+  a,
+  small {
+    font-size: inherit;
+  }
+
   ul {
     display: flex;
     place-items: center;

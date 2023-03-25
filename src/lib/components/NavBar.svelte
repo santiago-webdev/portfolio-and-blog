@@ -241,7 +241,7 @@
     place-items: center;
     gap: calc(var(--gap) / 2) 0;
     padding-top: var(--gap);
-    width: min(100%, var(--base)) ;
+    width: min(100%, var(--base));
     margin-inline: auto;
   }
 

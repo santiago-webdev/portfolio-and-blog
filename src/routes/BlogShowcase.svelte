@@ -13,7 +13,7 @@
     <p class="ff-sz-700">
       I don't focus on just one subject, so here's a few of my posts
     </p>
-    <a id='goto_blog' href="{base}/blog" class="ff-sz-700 bordered">
+    <a id="goto_blog" href="{base}/blog" class="ff-sz-700 bordered">
       My blog
       <ChevronToArrow />
     </a>
