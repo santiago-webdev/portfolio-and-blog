@@ -13,7 +13,7 @@
     <p class="ff-sz-700">
       I don't focus on just one subject, so here's a few of my posts
     </p>
-    <a href="{base}/blog" class="ff-sz-700 bordered">
+    <a id='goto_blog' href="{base}/blog" class="ff-sz-700 bordered">
       My blog
       <ChevronToArrow />
     </a>
@@ -55,6 +55,10 @@
   article {
     height: 100%;
     padding: var(--gap);
+  }
+
+  #goto_blog {
+    padding: clamp(1rem, 1.5vw, 2rem) clamp(2rem, 3vw, 3rem);
   }
 
   @media screen and (min-width: 48rem) {
