@@ -6,14 +6,15 @@
   let use = false
 
   onMount(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    use = !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+    // if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-    const bigger_than_48 = window.matchMedia('(min-width: 48rem)')
-    use = bigger_than_48.matches
-    bigger_than_48.addEventListener(
-      'change',
-      (event: MediaQueryListEvent) => (use = event.matches)
-    )
+    // const bigger_than_48 = window.matchMedia('(min-width: 48rem)')
+    // use = bigger_than_48.matches
+    // bigger_than_48.addEventListener(
+    //   'change',
+    //   (event: MediaQueryListEvent) => (use = event.matches)
+    // )
   })
 </script>
 
