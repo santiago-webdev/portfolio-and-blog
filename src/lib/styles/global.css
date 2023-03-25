@@ -270,11 +270,8 @@ strong {
   background-color: var(--clr-bg-400);
   border-top-right-radius: 1.2rem;
   border-top-left-radius: 1.2rem;
-  padding: 1rem 0;
   gap: 1rem;
   display: grid;
-
-  box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
 }
 
 .trn-border {

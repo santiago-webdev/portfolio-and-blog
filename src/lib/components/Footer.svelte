@@ -25,7 +25,7 @@
 
 <footer class="top-layer-reverse artifact">
   <div id="main-footer">
-    <section class="upper wider">
+    <section class="upper">
       <div class="services">
         My services
         <ol>
@@ -68,7 +68,7 @@
       </div>
     </section>
     <div class="wrapper-bottom">
-      <section class="bottom wider">
+      <section class="bottom">
         <div class="copyright">
           <small>
             (c) {new Date().getFullYear()}
@@ -147,7 +147,7 @@
   }
 
   .wrapper-bottom {
-    width: 100%;
+    /* width: 100%; */
     background-color: var(--clr-bg-600);
   }
 
@@ -155,8 +155,9 @@
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    gap: 1.5rem;
-    padding: 1.5rem 0;
+    gap: 1.6rem;
+    padding: 1.6rem 0;
+    width: min(100% - clamp(2rem, 5vw, 3rem), var(--lg));
   }
 
   .bottom a {
@@ -169,9 +170,10 @@
 
   .upper {
     display: grid;
-    gap: 3rem;
     grid-template-columns: repeat(auto-fill, minmax(min(30ch, 100%), 1fr));
-    padding: 1rem;
+    gap: 3rem;
+    padding: 1rem 0;
+    width: min(100% - clamp(2rem, 5vw, 3rem), var(--lg));
   }
 
   .copyright {

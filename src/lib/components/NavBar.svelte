@@ -165,7 +165,7 @@
       </button>
     </div>
   </div>
-  <section class="wide" style:display={expanded ? 'flex' : 'none'}>
+  <section style:display={expanded ? 'flex' : 'none'}>
     {#each contextNavItems as item}
       {#if item.component}
         <svelte:component this={item.widget} />
@@ -216,7 +216,7 @@
     display: flex;
     place-items: center;
     margin-inline: auto;
-    width: min(100% - var(--gap), var(--md));
+    width: min(100% - 1rem, var(--lg) + 1.6rem);
     justify-content: space-between;
     flex-flow: row wrap;
   }
@@ -240,6 +240,8 @@
     place-items: center;
     gap: calc(var(--gap) / 2) 0;
     padding-top: var(--gap);
+    width: min(100%, var(--base)) ;
+    margin-inline: auto;
   }
 
   section a {
@@ -258,7 +260,7 @@
     }
 
     #wrapper {
-      padding-inline: 2rem;
+      width: min(100% - 3rem, var(--lg) + 1.6rem);
     }
   }
 </style>
