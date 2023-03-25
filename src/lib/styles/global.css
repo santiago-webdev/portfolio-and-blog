@@ -421,22 +421,6 @@ input[type='radio']:checked + .shiny-select {
   border-radius: 1.1rem;
 }
 
-.act {
-  background-color: var(--clr-bg-200);
-  border-radius: 1.1rem;
-  border: 1px solid var(--clr-bg-700);
-  color: var(--clr-text);
-  transition: all 200ms;
-}
-
-.act:is(:focus-within, :focus, :hover),
-.act-focus {
-  border-radius: 1.1rem;
-  background-color: #18181c;
-  border: 1px solid #18181c;
-  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
-}
-
 .block {
   --background: var(--clr-bg-200);
   --border: var(--clr-bg-700);
