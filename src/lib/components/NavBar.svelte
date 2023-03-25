@@ -129,6 +129,7 @@
 
 <nav
   class="artifact"
+  id='#'
   style:border-bottom-width={expanded || scrollY ? '1px' : ''}
   class:scrollY
   bind:this={nav}>
