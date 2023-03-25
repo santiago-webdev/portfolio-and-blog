@@ -71,7 +71,7 @@
       <section class="bottom">
         <div class="copyright">
           <small>
-            (c) {new Date().getFullYear()}
+            (c) {new Date().getFullYear()} -- present
             <div aria-orientation="vertical" role="separator">•</div>
             All Rights Reserved
             <div aria-orientation="vertical" role="separator">•</div>
@@ -97,7 +97,7 @@
           href="https://github.com/santigo-zero/santigo-zero.github.io"
           aria-label="Link to git repository for this site at Github">
           <small
-            >Designed & Built with <iconify-icon icon="lucide:heart" /> by
+            >Designed & Built with &lt;3 by
             <address>{AUTHOR_NAME}</address>
           </small>
         </a>
