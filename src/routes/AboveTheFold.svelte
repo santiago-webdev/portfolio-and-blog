@@ -6,6 +6,7 @@
 <div class="top-layer">
   <main>
     <img
+      class='hero'
       src="/logo.svg"
       title="Logo of the page representing my nickname santigo-zero"
       alt="Logo of the page representing my nickname santigo-zero" />
@@ -56,7 +57,7 @@
     gap: 2rem;
   }
 
-  img {
+  .hero {
     max-width: 45%;
   }
 
@@ -92,7 +93,7 @@
       margin-left: 0;
     }
 
-    img {
+    .hero {
       max-width: 23%;
     }
   }
