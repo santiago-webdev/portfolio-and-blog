@@ -258,9 +258,9 @@
     nav {
       padding: 2rem 0;
     }
-
-    #wrapper {
-      width: min(100% - 3rem, var(--lg) + 1.6rem);
-    }
+    /**/
+    /* #wrapper { */
+    /*   width: min(100% - 3rem, var(--lg) + 1.6rem); */
+    /* } */
   }
 </style>
