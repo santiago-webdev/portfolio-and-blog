@@ -1,10 +1,10 @@
 <script lang="ts">
-  import Hero from './Hero.svelte'
   import { DESCRIPTION, TITLE, URL } from '$lib/config'
+  import AboveTheFold from './AboveTheFold.svelte'
   import BlogShowcase from './BlogShowcase.svelte'
 </script>
 
-<Hero />
+<AboveTheFold />
 <BlogShowcase />
 
 <svelte:head>
