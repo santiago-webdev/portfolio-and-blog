@@ -10,6 +10,8 @@
 
 {#if js_is_enabled}
   <button
+    aria-label="Scroll to the top of the page"
+    title="Scroll to the top of the page"
     on:click={() =>
       window.scrollTo({
         top: 0,
