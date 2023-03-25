@@ -6,7 +6,7 @@
   import { page } from '$app/stores'
   import '$lib/styles/global.css'
   import 'iconify-icon'
-    import ScrollBackToTop from '$compose/ScrollBackToTop.svelte'
+  import ScrollBackToTop from '$compose/ScrollBackToTop.svelte'
 </script>
 
 <div class="layout">

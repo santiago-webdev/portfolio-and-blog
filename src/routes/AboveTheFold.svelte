@@ -6,7 +6,7 @@
 <div class="top-layer">
   <main>
     <img
-      class='hero'
+      class="hero"
       src="/logo.svg"
       title="Logo of the page representing my nickname santigo-zero"
       alt="Logo of the page representing my nickname santigo-zero" />
