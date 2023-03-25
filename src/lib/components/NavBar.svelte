@@ -187,7 +187,8 @@
 <style>
   nav {
     inset: 3px 0 auto 0;
-    position: sticky;
+    /* position: sticky; */
+    position: relative;
     background-color: var(--clr-bg-400);
     transition: box-shadow 150ms ease-in-out, background-color 150ms ease-in-out,
       backdrop-filter 150ms ease-in-out, transform 0.6s ease-in-out,
