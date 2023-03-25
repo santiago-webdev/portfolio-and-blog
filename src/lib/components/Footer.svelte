@@ -197,7 +197,7 @@
     color: inherit;
   }
 
-  @media screen and (min-width: 48rem) {
+  @media screen and (min-width: 90rem) {
     .bottom {
       flex-direction: row;
       justify-content: space-between;
