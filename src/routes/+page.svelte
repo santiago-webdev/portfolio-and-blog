@@ -1,13 +1,11 @@
 <script lang="ts">
   import Hero from './Hero.svelte'
-  import PresentationBlog from './PresentationBlog.svelte'
   import { DESCRIPTION, TITLE, URL } from '$lib/config'
   import BlogShowcase from './BlogShowcase.svelte'
 </script>
 
 <Hero />
 <BlogShowcase />
-<PresentationBlog />
 
 <svelte:head>
   <title>{TITLE}</title>
