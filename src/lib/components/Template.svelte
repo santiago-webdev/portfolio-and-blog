@@ -4,6 +4,7 @@
   import { onMount } from 'svelte'
   import Hollow from './Hollow.svelte'
   import { readableDate, relativeTime } from '$lib/utils/utils'
+  import { base } from '$app/paths'
 
   export let title = ''
   export let datetime = ''
@@ -37,6 +38,7 @@
 <main>
   <header class="top-layer">
     <div class="wrapper-header wider">
+      <a id="backtoblog" href="{base}/blog">&lt;- Back To Blog</a>
       {#if isHollow}
         <h1>
           <Hollow color={'var(--clr-txt-A)'}>{hollowPrefix}</Hollow>
@@ -48,8 +50,9 @@
       <p>{description}</p>
       {#if !finished}
         <div class="wip">
-          <small> 🏗 Construction site, keep out 🏗️ </small>
-          <small> 🚧 Authorized personnel only 🚧 </small>
+          <small> 🏗 Construction site, keep out 🚧 </small>
+          <small> 🚧 Authorized personnel only 🏗️ </small>
+          <small> 🏗️ This article is not finished 🏗 </small>
         </div>
       {/if}
       {#if datetime}
@@ -124,5 +127,17 @@
     place-items: center;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  #backtoblog {
+    text-align: left;
+    width: min(100% - 1rem, var(--base));
+    color: var(--clr-muted-700);
+    margin-inline: auto;
+    transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  #backtoblog:hover {
+    transform: translateX(-0.5ch);
   }
 </style>
