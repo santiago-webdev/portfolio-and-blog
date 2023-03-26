@@ -460,15 +460,21 @@ input[type='radio']:checked + .shiny-select {
   /* height: 2rem; */
 }
 
-.slide {
+.slide-backwards,
+.slide-forwards {
   transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
-.slide:before {
+.slide-backwards:before {
   content: '<- ';
 }
 
-.slide:hover {
+.slide-fordwards:after {
+  content: ' ->';
+}
+
+.slide-backwards:hover,
+.slide-forwards:hover {
   transform: translateX(-0.5ch);
 }
 

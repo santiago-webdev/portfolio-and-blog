@@ -31,6 +31,11 @@
 </div>
 
 <style>
+  * {
+    transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1),
+      opacity 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
   .wrapper-arrow {
     display: flex;
     place-items: center;
@@ -39,13 +44,13 @@
     top: 1px;
   }
 
-  svg:first-child {
-    position: absolute;
+  :global(a:hover .wrapper-arrow) {
+    transform: translateX(0.5ch);
+    transition-delay: 175ms;
   }
 
-  svg {
-    transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1),
-      opacity 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  svg:first-child {
+    position: absolute;
   }
 
   #arrow-head {
