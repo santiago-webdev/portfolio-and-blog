@@ -180,8 +180,8 @@ h1 {
 
 .ff-sz-200,
 h2 {
-  font-size: clamp(1.6rem, 12vw, 2.84rem);
-  line-height: calc(1.5 * clamp(2.3rem, 10vw, 3.6rem));
+  font-size: clamp(1.6rem, 6vw, 2.84rem);
+  line-height: calc(1.5 * clamp(2.3rem, 6vw, 3.6rem));
 }
 
 .ff-sz-300,
@@ -193,7 +193,7 @@ h3 {
 }
 
 .ff-sz-400 {
-  --range: clamp(0.6rem, 12vw, 1.6rem);
+  --range: clamp(0.6rem, 6vw, 1.6rem);
   font-size: var(--range);
   line-height: calc(1.2 * var(--range));
 }
@@ -207,7 +207,7 @@ input,
 label,
 legend,
 fieldset {
-  --range: clamp(0.8rem, 10vw, 1.4rem);
+  --range: clamp(0.8rem, 6vw, 1.4rem);
   font-size: var(--range);
   line-height: calc(1.2 * var(--range));
 
@@ -217,7 +217,7 @@ fieldset {
 
 .ff-sz-800,
 small {
-  --range: clamp(0.6rem, 12vw, 1rem);
+  --range: clamp(0.6rem, 6vw, 1rem);
   font-size: var(--range);
   line-height: calc(1.2 * var(--range));
 
