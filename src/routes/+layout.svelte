@@ -15,9 +15,9 @@
     <slot />
   </Transition>
   <Footer />
-  <ScrollProgressTracker />
-  <ScrollBackToTop />
 </div>
+<ScrollProgressTracker />
+<ScrollBackToTop />
 
 <style>
   .layout {
