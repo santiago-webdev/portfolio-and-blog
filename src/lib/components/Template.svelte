@@ -38,7 +38,7 @@
 <main>
   <header class="top-layer">
     <div class="wrapper-header wider">
-      <a id="backtoblog" href="{base}/blog">&lt;- Back To Blog</a>
+      <a class="slide" id="backtoblog" href="{base}/blog">Back To Blog</a>
       {#if isHollow}
         <h1>
           <Hollow color={'var(--clr-txt-A)'}>{hollowPrefix}</Hollow>
@@ -134,11 +134,6 @@
     width: min(100% - 1rem, var(--base));
     color: var(--clr-muted-700);
     margin-inline: auto;
-    transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
     font-variation-settings: 'wght' 600;
-  }
-
-  #backtoblog:hover {
-    transform: translateX(-0.5ch);
   }
 </style>

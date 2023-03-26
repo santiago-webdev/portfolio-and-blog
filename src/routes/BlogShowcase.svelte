@@ -6,41 +6,40 @@
   let latestPost = $Posts[0]
 </script>
 
-  <section>
+<section>
+  <div class="present">
+    <h2>Check out my blog</h2>
+    <p class="ff-sz-700">
+      I don't focus on just one subject, so here's a few of my posts
+    </p>
+    <a id="goto_blog" href="{base}/blog" class="ff-sz-700 bordered">
+      My blog
+      <ChevronToArrow />
+    </a>
+  </div>
 
-<div class="present">
-  <h2>Check out my blog</h2>
-  <p class="ff-sz-700">
-    I don't focus on just one subject, so here's a few of my posts
-  </p>
-  <a id="goto_blog" href="{base}/blog" class="ff-sz-700 bordered">
-    My blog
-    <ChevronToArrow />
-  </a>
-</div>
+  <section class="wider" id="blog">
+    <a href="{base}/blog{latestPost.href}">
+      <article class="shiny block">
+        <h3>{latestPost.title}</h3>
+        <p>{latestPost.description}</p>
+      </article>
+    </a>
 
-<section class="wider" id="blog">
-  <a href="{base}/blog{latestPost.href}">
-    <article class="shiny block">
-      <h3>{latestPost.title}</h3>
-      <p>{latestPost.description}</p>
-    </article>
-  </a>
+    <a href="{base}/blog{latestPost.href}">
+      <article class="shiny block">
+        <h3>{latestPost.title}</h3>
+        <p>{latestPost.description}</p>
+      </article>
+    </a>
 
-  <a href="{base}/blog{latestPost.href}">
-    <article class="shiny block">
-      <h3>{latestPost.title}</h3>
-      <p>{latestPost.description}</p>
-    </article>
-  </a>
-
-  <a href="/todo">
-    <article class="shiny block">
-      <h3>Title</h3>
-      <p>Description</p>
-    </article>
-  </a>
-</section>
+    <a href="/todo">
+      <article class="shiny block">
+        <h3>Title</h3>
+        <p>Description</p>
+      </article>
+    </a>
+  </section>
 </section>
 
 <style>
