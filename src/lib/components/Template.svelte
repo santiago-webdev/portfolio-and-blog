@@ -135,6 +135,7 @@
     color: var(--clr-muted-700);
     margin-inline: auto;
     transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    font-variation-settings: 'wght' 600;
   }
 
   #backtoblog:hover {

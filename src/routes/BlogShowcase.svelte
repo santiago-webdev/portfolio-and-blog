@@ -10,7 +10,6 @@
 
 <div class="present">
   <h2>Check out my blog</h2>
-  <a href="#blog" class="ff-sz-700">test</a>
   <p class="ff-sz-700">
     I don't focus on just one subject, so here's a few of my posts
   </p>
@@ -62,6 +61,7 @@
     flex-flow: column wrap;
     margin-inline: auto;
     place-content: center;
+    place-items: center;
   }
 
   .present a {
