@@ -238,6 +238,7 @@
   .aboutme:after {
     content: '';
     position: absolute;
+    pointer-events: none;
     display: none;
     width: 100%;
     height: 100%;
