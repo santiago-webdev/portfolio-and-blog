@@ -10,12 +10,11 @@
   <div class="present">
     <h2>Check out my blog</h2>
     <p class="ff-sz-700">
-      I don't focus on just one subject, so here's a few of my posts
+      I don't focus on just one subject, so here's a few of my posts or if you
+      are curious you can search for a <a
+        class="slide-forwards"
+        href="{base}/blog">blog</a>
     </p>
-    <a id="goto_blog" href="{base}/blog" class="ff-sz-700 bordered">
-      My blog
-      <ChevronToArrow />
-    </a>
   </div>
 
   <section class="wider" id="blog">
@@ -63,21 +62,21 @@
     place-items: center;
   }
 
+  .present p {
+    width: min(100% - 1rem, var(--sm))
+  }
+
   .present a {
-    display: flex;
+    display: inline-block;
     place-items: center;
 
     border-radius: 999rem;
-    padding: 0.2rem 0.8rem;
+    /* padding: 0.2rem 0.8rem; */
     width: max-content;
   }
 
   article {
     height: 100%;
     padding: var(--gap);
-  }
-
-  #goto_blog {
-    padding: clamp(1rem, 1.5vw, 2rem) clamp(2rem, 3vw, 3rem);
   }
 </style>

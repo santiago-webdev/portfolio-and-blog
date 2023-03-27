@@ -46,7 +46,7 @@
 
   :global(a:hover .wrapper-arrow) {
     transform: translateX(0.5ch);
-    transition-delay: 175ms;
+    transition-delay: 400ms;
   }
 
   svg:first-child {

@@ -469,12 +469,15 @@ input[type='radio']:checked + .shiny-select {
   content: '<- ';
 }
 
-.slide-fordwards:after {
+.slide-forwards:after {
   content: ' ->';
 }
 
-.slide-backwards:hover,
 .slide-forwards:hover {
+  transform: translateX(0.5ch);
+}
+
+.slide-backwards:hover {
   transform: translateX(-0.5ch);
 }
 
