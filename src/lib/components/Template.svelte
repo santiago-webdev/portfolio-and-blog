@@ -39,7 +39,7 @@
   <header class="top-layer">
     <div class="wrapper-header wider">
       <a class="slide-backwards" id="backtoblog" href="{base}/blog"
-        >Back To Blog</a>
+        >Back to blog</a>
       {#if isHollow}
         <h1>
           <Hollow color={'var(--clr-txt-A)'}>{hollowPrefix}</Hollow>

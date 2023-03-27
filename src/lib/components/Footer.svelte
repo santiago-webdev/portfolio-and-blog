@@ -163,7 +163,7 @@
       <small class="copyright">
         (c) {new Date().getFullYear()} -- present
         <div aria-orientation="vertical" role="separator">•</div>
-        All Rights Reserved
+        All rights reserved
         <div aria-orientation="vertical" role="separator">•</div>
         GPL-3.0
       </small>
