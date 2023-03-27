@@ -2,10 +2,12 @@
   import { DESCRIPTION, TITLE, URL } from '$lib/config'
   import AboveTheFold from './AboveTheFold.svelte'
   import BlogShowcase from './BlogShowcase.svelte'
+  import IntroductionAbout from './IntroductionAbout.svelte'
 </script>
 
 <AboveTheFold />
 <BlogShowcase />
+<IntroductionAbout />
 
 <svelte:head>
   <title>{TITLE}</title>
