@@ -128,7 +128,7 @@
 <!-- <svelte:window bind:scrollY /> -->
 
 <nav
-  class="artifact"
+  class="ff-sz-900"
   style:border-bottom-width={expanded || scrollY ? '1px' : ''}
   class:scrollY
   bind:this={nav}>

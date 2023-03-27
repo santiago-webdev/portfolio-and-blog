@@ -84,6 +84,10 @@ address {
   font-style: normal;
 }
 
+var {
+  font-family: monospace;
+}
+
 /* Remove all animations, transitions and smooth scroll for people that prefer
  * not to see them.
  * */

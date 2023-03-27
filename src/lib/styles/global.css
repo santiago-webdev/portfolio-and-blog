@@ -170,7 +170,7 @@ button:active {
 
 .ff-sz-100,
 h1 {
-  --range: clamp(3rem, 6vw, 6rem);
+  --range: clamp(3rem, 2vw + 1.5rem, 6rem);
   font-size: var(--range);
   line-height: calc(1 * var(--range));
 
@@ -180,34 +180,27 @@ h1 {
 
 .ff-sz-200,
 h2 {
-  font-size: clamp(1.6rem, 6vw, 2.84rem);
-  line-height: calc(1.5 * clamp(2.3rem, 6vw, 3.6rem));
+  font-size: clamp(1.6rem, 2vw + 1.5rem, 2.84rem);
+  line-height: calc(1.5 * clamp(2.3rem, 2vw + 1.5rem, 3.6rem));
 }
 
 .ff-sz-300,
 h3 {
   color: var(--clr-subtitle);
   font-weight: 500;
-  font-size: clamp(0.8rem, 8vw, 1.75rem);
+  font-size: clamp(0.8rem, 2vw + 1.5rem, 1.75rem);
   /* line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem)); */
 }
 
 .ff-sz-400 {
-  --range: clamp(0.6rem, 6vw, 1.6rem);
+  --range: clamp(0.6rem, 2vw + 1.5rem, 1.6rem);
   font-size: var(--range);
   line-height: calc(1.2 * var(--range));
 }
 
 .ff-sz-700,
-p,
-ul,
-ol,
-li,
-input,
-label,
-legend,
-fieldset {
-  --range: clamp(0.8rem, 6vw, 1.4rem);
+p {
+  --range: clamp(0.8rem, 2vw + 1.5rem, 1.4rem);
   font-size: var(--range);
   line-height: calc(1.2 * var(--range));
 
@@ -217,11 +210,17 @@ fieldset {
 
 .ff-sz-800,
 small {
-  --range: clamp(0.6rem, 6vw, 1rem);
+  --range: clamp(0.6rem, 2vw + 1.5rem, 1.2rem);
   font-size: var(--range);
   line-height: calc(1.2 * var(--range));
 
   color: var(--clr-muted-600);
+}
+
+.ff-sz-900 {
+  --range: clamp(0.8rem, 2vw + 1.5rem, 1.1rem);
+  font-size: var(--range);
+  line-height: calc(1.2 * var(--range));
 }
 
 label {
@@ -323,7 +322,7 @@ strong {
 
 .shiny-select {
   border: 1px solid transparent;
-  padding: 0.4rem 0.8rem;
+  padding: 0.3rem 0.6rem;
   border-radius: var(--radius);
 }
 
@@ -436,13 +435,6 @@ input[type='radio']:checked + .shiny-select {
 
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
   }
-}
-
-.artifact {
-  color: var(--clr-txt-G);
-  font-size: clamp(0.8rem, 12vw, 1.1rem);
-  font-weight: 500;
-  font-variation-settings: 'wght' 500;
 }
 
 [aria-current='page'] {

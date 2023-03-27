@@ -1,6 +1,7 @@
 <script lang="ts">
   import { dev } from '$app/environment'
   import { base } from '$app/paths'
+  import { page } from '$app/stores'
   import { AUTHOR_NAME } from '$lib/config'
 
   const getGithubStars = async () => {
@@ -23,6 +24,14 @@
   let ghStars = 0
   getGithubStars().then(stars => (ghStars = stars))
 
+  const donateItems = [
+    {
+      name: 'Bitcoin(BEP20)',
+      logo: 'bitcoin',
+      direction: '0x3f8347d947c5bbdd166013e01ec4b645883e0fbb',
+    },
+  ]
+
   const browseItems = [
     { label: 'Home', href: `${base}/` },
     { label: 'Blog', href: `${base}/blog` },
@@ -32,7 +41,88 @@
   ]
 </script>
 
-<footer class="top-layer-reverse artifact">
+<footer class="ff-sz-900 top-layer-reverse">
+  <div class="footer-start">
+    <section>
+      <div class="ff-sz-700 aboutme">
+        <img src="./logo.svg" alt="My personal logo" title="My personal logo" />
+        <h4>Santiago Gonzalez</h4>
+        <p class="ff-sz-700">
+          I'm a web developer that can help you craft accessible website
+          experiences without leaving the aesthetics aside.
+        </p>
+      </div>
+
+      <div class="browse">
+        <h4>Browse</h4>
+        <hr style="width: 95%" />
+        {#each browseItems as item}
+          <a
+            class="shiny-select"
+            aria-current={item.href === $page.url.pathname ||
+            ($page.url.pathname.startsWith(item.href || '') &&
+              `/` !== item.href)
+              ? 'page'
+              : undefined}
+            aria-label="Link to {item.label}"
+            href={item.href}>{item.label}</a>
+        {/each}
+      </div>
+
+      <div class="donate">
+        <h4>Donate</h4>
+        <hr style="width: 95%" />
+        <ul>
+          {#each donateItems as item}
+            <li>
+              <a class="shiny-select" href="bitcoin:{item.direction}">
+                <address>
+                  <iconify-icon icon="simple-icons:{item.logo}" />
+                  {item.name}
+                </address>
+              </a>
+              <button
+                class="shiny-select"
+                on:click={() =>
+                  navigator.clipboard
+                    .writeText(item.direction)
+                    .then(() => console.log('Text copied to clipboard'))
+                    .catch(error =>
+                      console.error('Could not copy text: ', error)
+                    )}><iconify-icon icon="lucide:clipboard-copy" /></button>
+            </li>
+          {/each}
+        </ul>
+      </div>
+
+      <div class="contact">
+        <h4>Contact</h4>
+        <hr style="width: 95%" />
+        <address>
+          <a
+            class="shiny-select"
+            href="mailto:santiagogonzalezbogado@gmail.com">
+            <iconify-icon icon="lucide:mail" />
+            Email me</a>
+        </address>
+        <address>
+          <a class="shiny-select" href="https://github.com/santigo-zero/">
+            <iconify-icon
+              aria-label="GitHub icon"
+              role="img"
+              icon="simple-icons:github" />
+            GitHub profile</a>
+        </address>
+        <address>
+          <a
+            class="shiny-select"
+            href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/">
+            <iconify-icon icon="simple-icons:linkedin" />LinkedIn profile
+          </a>
+        </address>
+      </div>
+    </section>
+  </div>
   <div class="footer-end">
     <section>
       <a
@@ -57,7 +147,6 @@
         <div aria-orientation="vertical" role="separator">--</div>
         <iconify-icon icon="lucide:star" />
         <var
-          style="font-family: monospace"
           aria-label="Amount of stars in the GitHub repository"
           title="Amount of stars in the GitHub repository">
           {ghStars}
@@ -76,25 +165,117 @@
 </footer>
 
 <style>
+  small,
+  button,
+  li,
   a {
     display: flex;
     place-items: center;
+    gap: 0.5ch;
+    font-size: inherit;
+    color: inherit;
   }
 
   section {
     display: flex;
-    min-height: 60px;
-    /* font-size: 18px; */
+    margin-inline: auto;
+    width: min(100% - clamp(2rem, 5vw, 3rem), var(--lg));
+  }
+
+  .footer-start section {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding: 3rem 0;
+    gap: 2rem;
+  }
+
+  .footer-start h4 {
+    font-variation-settings: 'wght' 600;
+    font-size: 110%;
+    text-indent: 0.6rem;
+  }
+
+  .footer-start hr {
+    margin-left: 0.6rem;
+    color: var(--clr-muted-250);
+  }
+
+  .aboutme h4 {
+    text-indent: 0;
+  }
+
+  .shiny-select {
+    border-radius: 0.6rem;
+  }
+
+  .footer-start p,
+  .footer-start a {
+    color: var(--clr-muted-700);
+  }
+
+  .footer-start img {
+    width: 50%;
     margin-inline: auto;
   }
 
-  a,
-  small {
-    font-size: inherit;
+  .aboutme {
+    display: flex;
+    position: relative;
+    place-content: center;
+    flex-flow: column wrap;
+    max-width: 28ch;
+    gap: var(--gap);
   }
 
-  section {
-    width: min(100% - clamp(2rem, 5vw, 3rem), var(--lg));
+  .aboutme:after {
+    content: '';
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: url('./logo.svg');
+    background-repeat: no-repeat;
+    background-position: 50% 0;
+    background-size: 50% 100%;
+  }
+
+  .browse {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .donate {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .donate address {
+    display: flex;
+    place-items: center;
+    gap: 0.5ch;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .contact {
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (min-width: 64rem) {
+    .footer-start section {
+      flex-direction: row;
+    }
+
+    .footer-start img {
+      display: none;
+    }
+
+    .aboutme:after {
+      display: block;
+    }
   }
 
   .footer-end {
@@ -118,19 +299,10 @@
     place-content: center;
   }
 
-  small,
-  a {
-    display: flex;
-    place-items: center;
-    /* This centers the icons */
-    gap: 0.5ch;
-    color: inherit;
-  }
-
-  @media screen and (min-width: 90rem) {
+  @media screen and (min-width: 64rem) {
     .footer-end section {
       flex-direction: row;
-      padding: 0;
+      padding: 1rem 0;
     }
   }
 </style>
