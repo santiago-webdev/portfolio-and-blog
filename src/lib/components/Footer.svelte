@@ -100,13 +100,17 @@
         <hr style="width: 95%" />
         <address>
           <a
+            target="_blank"
             class="shiny-select"
             href="mailto:santiagogonzalezbogado@gmail.com">
             <iconify-icon icon="lucide:mail" />
             Email me</a>
         </address>
         <address>
-          <a class="shiny-select" href="https://github.com/santigo-zero/">
+          <a
+            target="_blank"
+            class="shiny-select"
+            href="https://github.com/santigo-zero/">
             <iconify-icon
               aria-label="GitHub icon"
               role="img"
@@ -115,6 +119,7 @@
         </address>
         <address>
           <a
+            target="_blank"
             class="shiny-select"
             href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/">
             <iconify-icon icon="simple-icons:linkedin" />LinkedIn profile
@@ -126,6 +131,7 @@
   <div class="footer-end">
     <section>
       <a
+        target="_blank"
         href="https://github.com/santigo-zero"
         aria-label="Link to my GitHub profile"
         title="Link to my GitHub profile">
@@ -137,6 +143,7 @@
       </a>
 
       <a
+        target="_blank"
         href="https://github.com/santigo-zero/santigo-zero.github.io"
         aria-label="Link to git repository for this site at Github"
         title="Link to git repository for this site at Github">
