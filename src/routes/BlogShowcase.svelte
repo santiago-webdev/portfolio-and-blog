@@ -63,7 +63,7 @@
   }
 
   .present p {
-    width: min(100% - 1rem, var(--sm))
+    width: min(100% - 1rem, var(--sm));
   }
 
   .present a {

@@ -17,7 +17,8 @@
   <Footer />
 </div>
 <ScrollProgressTracker />
-<ScrollBackToTop />
+
+<!-- <ScrollBackToTop /> -->
 
 <style>
   .layout {

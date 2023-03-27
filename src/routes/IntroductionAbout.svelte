@@ -1,4 +1,4 @@
-<div class='about-me'>
+<div class="about-me">
   <span>Hello!</span>
   <h2>I'm Santiago Gonzalez, a web developer based in Argentina.</h2>
   <p>And I'm trying to make my way into the IT</p>

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { dev } from '$app/environment'
-  import { AUTHOR, AUTHOR_NAME } from '$lib/config'
+  import { base } from '$app/paths'
+  import { AUTHOR_NAME } from '$lib/config'
 
   const getGithubStars = async () => {
     if (dev) return 0
@@ -21,107 +22,60 @@
 
   let ghStars = 0
   getGithubStars().then(stars => (ghStars = stars))
+
+  const browseItems = [
+    { label: 'Home', href: `${base}/` },
+    { label: 'Blog', href: `${base}/blog` },
+    { label: 'Projects', href: `${base}/projects` },
+    { label: 'About', href: `${base}/about` },
+    { label: 'Contact', href: `${base}/contact` },
+  ]
 </script>
 
 <footer class="top-layer-reverse artifact">
-  <div id="main-footer">
-    <section class="upper">
-      <div class="services">
-        My services
-        <ol>
-          <li>Web Design</li>
-        </ol>
-      </div>
-      <ul>
-        <li>
-          <a
-            href="https://github.com/santigo-zero/"
-            aria-label="Link to my GitHub profile">GitHub</a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/santigo-zero/"
-            aria-label="Link to my GitHub profile">GitHub</a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/santigo-zero/"
-            aria-label="Link to my GitHub profile">GitHub</a>
-        </li>
-        <li>
-          <a
-            href="https://github.com/santigo-zero/"
-            aria-label="Link to my GitHub profile">GitHub</a>
-        </li>
-        <li>
-          <a
-            href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/"
-            aria-label="Link to my LinkedIn profile">
-            LinkedIn</a>
-        </li>
-      </ul>
-      <div class="aboutme">
-        <h3>{AUTHOR}</h3>
-        <h3>
-          I'm a web developer with a purpose, bring accessibility to the web.
-        </h3>
-      </div>
+  <div class="footer-end">
+    <section>
+      <a
+        href="https://github.com/santigo-zero"
+        aria-label="Link to my GitHub profile"
+        title="Link to my GitHub profile">
+        <small>
+          Designed & Built with <iconify-icon icon="lucide:heart" />
+          by
+          <address>{AUTHOR_NAME}</address>
+        </small>
+      </a>
+
+      <a
+        href="https://github.com/santigo-zero/santigo-zero.github.io"
+        aria-label="Link to git repository for this site at Github"
+        title="Link to git repository for this site at Github">
+        Repository <iconify-icon
+          aria-label="GitHub icon"
+          role="img"
+          icon="simple-icons:github" />
+        <div aria-orientation="vertical" role="separator">--</div>
+        <iconify-icon icon="lucide:star" />
+        <var
+          style="font-family: monospace"
+          aria-label="Amount of stars in the GitHub repository"
+          title="Amount of stars in the GitHub repository">
+          {ghStars}
+        </var>
+      </a>
+
+      <small class="copyright">
+        (c) {new Date().getFullYear()} -- present
+        <div aria-orientation="vertical" role="separator">•</div>
+        All Rights Reserved
+        <div aria-orientation="vertical" role="separator">•</div>
+        GPL-3.0
+      </small>
     </section>
-    <div class="wrapper-bottom">
-      <section class="bottom">
-        <div class="copyright">
-          <small>
-            (c) {new Date().getFullYear()} -- present
-            <div aria-orientation="vertical" role="separator">•</div>
-            All Rights Reserved
-            <div aria-orientation="vertical" role="separator">•</div>
-            GPL-3.0
-          </small>
-        </div>
-
-        <a
-          href="https://github.com/santigo-zero/santigo-zero.github.io"
-          aria-label="Link to git repository for this site at Github">
-          Repository <iconify-icon
-            aria-label="GitHub icon"
-            role="img"
-            icon="simple-icons:github" />
-          <div aria-orientation="vertical" role="separator">--</div>
-          <iconify-icon icon="lucide:star" />
-          <var aria-label="Amount of stars in the GitHub repository">
-            {ghStars}
-          </var>
-        </a>
-
-        <a
-          href="https://github.com/santigo-zero/santigo-zero.github.io"
-          aria-label="Link to git repository for this site at Github">
-          <small
-            >Designed & Built with &lt;3 by
-            <address>{AUTHOR_NAME}</address>
-          </small>
-        </a>
-      </section>
-    </div>
   </div>
 </footer>
 
 <style>
-  footer {
-    min-height: min(50vh, calc(var(--wide) / (16 / 9)));
-    padding-bottom: 0;
-  }
-
-  #main-footer {
-    display: grid;
-    grid-template-rows: 1fr auto;
-  }
-
-  h3:last-child {
-    font-weight: lighter;
-    color: var(--clr-text-muted);
-  }
-
   a {
     display: flex;
     place-items: center;
@@ -129,9 +83,6 @@
 
   section {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-
     min-height: 60px;
     /* font-size: 18px; */
     margin-inline: auto;
@@ -142,65 +93,44 @@
     font-size: inherit;
   }
 
-  ul {
-    display: flex;
-    place-items: center;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: inherit;
-    gap: 1.5rem;
+  section {
+    width: min(100% - clamp(2rem, 5vw, 3rem), var(--lg));
   }
 
-  .wrapper-bottom {
-    /* width: 100%; */
+  .footer-end {
+    display: flex;
+    place-content: center;
     background-color: var(--clr-bg-600);
   }
 
-  .bottom {
+  .footer-end section {
     display: flex;
-    flex-flow: column wrap;
-    justify-content: center;
-    gap: 1.6rem;
-    padding: 1.6rem 0;
-    width: min(100% - clamp(2rem, 5vw, 3rem), var(--lg));
-  }
-
-  .bottom a {
-    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     place-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    /* flex-direction: column; */
-  }
-
-  .upper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(30ch, 100%), 1fr));
-    gap: 3rem;
-    padding: 1rem 0;
-    width: min(100% - clamp(2rem, 5vw, 3rem), var(--lg));
+    gap: 1.6rem;
+    padding: 2rem 0;
   }
 
   .copyright {
     display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
+    flex-wrap: wrap;
+    place-content: center;
   }
 
   small,
   a {
     display: flex;
     place-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    /* This centers the icons */
     gap: 0.5ch;
     color: inherit;
   }
 
   @media screen and (min-width: 90rem) {
-    .bottom {
+    .footer-end section {
       flex-direction: row;
-      justify-content: space-between;
+      padding: 0;
     }
   }
 </style>
