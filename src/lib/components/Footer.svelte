@@ -156,7 +156,7 @@
         <div aria-orientation="vertical" role="separator">--</div>
         <iconify-icon icon="lucide:star" />
         <var
-          style='margin-top: 1px'
+          style="margin-top: 1px"
           aria-label="Amount of stars in the GitHub repository"
           title="Amount of stars in the GitHub repository">
           {ghStars}
