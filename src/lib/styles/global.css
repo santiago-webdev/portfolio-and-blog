@@ -263,7 +263,6 @@ strong {
   background-color: var(--clr-bg-400);
   border-top-right-radius: 1.2rem;
   border-top-left-radius: 1.2rem;
-  gap: 1rem;
   display: grid;
 }
 

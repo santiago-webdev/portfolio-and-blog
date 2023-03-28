@@ -196,8 +196,8 @@
     display: flex;
     flex-flow: column wrap;
     justify-content: space-between;
-    padding: 3rem 0;
-    gap: 2rem;
+    padding: clamp(1rem, 3vw, 2rem) 0;
+    gap: calc(var(--gap) * 2);
   }
 
   .footer-start h3 {
@@ -235,8 +235,13 @@
     position: relative;
     place-content: center;
     flex-flow: column wrap;
-    max-width: 28ch;
+    /* max-width: 28ch; */
+    flex: 2;
     gap: var(--gap);
+    /* outline: 3px hotpink solid; */
+    background-color: var(--clr-bg-500);
+    padding: 2rem;
+    border-radius: 1rem;
   }
 
   .aboutme:after {
@@ -246,21 +251,23 @@
     display: none;
     width: 100%;
     height: 100%;
-    opacity: 0.1;
+    opacity: 0.05;
     background-image: url('/logo.svg');
     background-repeat: no-repeat;
-    background-position: 50% 0;
-    background-size: 50% 100%;
+    background-position: 50% 50%;
+    background-size: 50% 75%;
   }
 
   .browse {
     display: flex;
     flex-direction: column;
+    flex: 1;
   }
 
   .donate {
     display: flex;
     flex-direction: column;
+    flex: 1;
   }
 
   .donate address {
@@ -274,6 +281,7 @@
   .contact {
     display: flex;
     flex-direction: column;
+    flex: 1;
   }
 
   @media screen and (min-width: 64rem) {
