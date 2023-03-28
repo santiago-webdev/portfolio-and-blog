@@ -46,7 +46,7 @@
     <section>
       <div class="ff-sz-700 aboutme">
         <img src="/logo.svg" alt="My personal logo" title="My personal logo" />
-        <h4>Santiago Gonzalez</h4>
+        <h3>Santiago Gonzalez</h3>
         <p class="ff-sz-700">
           I'm a web developer that can help you craft accessible website
           experiences without leaving the aesthetics aside.
@@ -54,7 +54,7 @@
       </div>
 
       <div class="browse">
-        <h4>Browse</h4>
+        <h3>Browse</h3>
         <hr style="width: 95%" />
         {#each browseItems as item}
           <a
@@ -70,7 +70,7 @@
       </div>
 
       <div class="donate">
-        <h4>Donate</h4>
+        <h3>Donate</h3>
         <hr style="width: 95%" />
         <ul>
           {#each donateItems as item}
@@ -83,6 +83,8 @@
               </a>
               <button
                 class="shiny-select"
+                aria-label="Copy the direction of the wallet"
+                title="Copy the direction of the wallet"
                 on:click={() =>
                   navigator.clipboard
                     .writeText(item.direction)
@@ -96,7 +98,7 @@
       </div>
 
       <div class="contact">
-        <h4>Contact</h4>
+        <h3>Contact</h3>
         <hr style="width: 95%" />
         <address>
           <a
@@ -197,7 +199,7 @@
     gap: 2rem;
   }
 
-  .footer-start h4 {
+  .footer-start h3 {
     font-variation-settings: 'wght' 600;
     font-size: 110%;
     text-indent: 0.6rem;
@@ -208,7 +210,7 @@
     color: var(--clr-muted-250);
   }
 
-  .aboutme h4 {
+  .aboutme h3 {
     text-indent: 0;
   }
 
