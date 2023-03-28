@@ -44,7 +44,7 @@
 <footer class="ff-sz-900 top-layer-reverse">
   <div class="footer-start">
     <section>
-      <div class="ff-sz-700 aboutme">
+      <div class="ff-sz-700 shiny aboutme">
         <img src="/logo.svg" alt="My personal logo" title="My personal logo" />
         <h3>Santiago Gonzalez</h3>
         <p class="ff-sz-700">
@@ -235,11 +235,10 @@
     position: relative;
     place-content: center;
     flex-flow: column wrap;
-    /* max-width: 28ch; */
     flex: 2;
     gap: var(--gap);
-    /* outline: 3px hotpink solid; */
-    background-color: var(--clr-bg-500);
+    --background: var(--clr-bg-500);
+    --border: var(--clr-bg-600);
     padding: 2rem;
     border-radius: 1rem;
   }
