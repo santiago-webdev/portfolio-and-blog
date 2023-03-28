@@ -16,9 +16,7 @@
   --wider: 90rem;
 
   --gap: 0.809rem;
-  --br: 0.809rem;
   --radius: 0.8rem;
-
   color-scheme: light dark;
 }
 
@@ -134,10 +132,6 @@ html {
   font-family: var(--ff-dflt);
   background-color: var(--clr-bg-200);
   color: var(--clr-txt-G);
-}
-
-br {
-  margin-top: var(--gap);
 }
 
 input,
@@ -453,10 +447,12 @@ input[type='radio']:checked + .shiny-select {
 
 .slide-backwards:before {
   content: '<- ';
+  padding-left: 0.2ch;
 }
 
 .slide-forwards:after {
   content: ' ->';
+  padding-right: 0.2ch;
 }
 
 .slide-forwards:hover {

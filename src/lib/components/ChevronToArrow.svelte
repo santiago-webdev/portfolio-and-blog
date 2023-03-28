@@ -55,6 +55,7 @@
 
   #arrow-head {
     transform: translateX(-3px);
+    margin-right: 0.4rem;
   }
 
   #arrow-tail {
