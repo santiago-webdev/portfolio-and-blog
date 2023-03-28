@@ -12,7 +12,7 @@
 
 {#if js_is_enabled}
   <button
-    style:display={is_past_half_screen ? 'flex' : 'none'}
+    style:transform={is_past_half_screen ? 'translateY(0)' : 'translateY(300%)'}
     aria-label="Scroll to the top of the page"
     title="Scroll to the top of the page"
     on:click={() =>
@@ -29,6 +29,7 @@
 <style>
   button,
   a {
+    display: flex;
     align-items: center;
     gap: 0.4rem;
     position: fixed;
@@ -41,5 +42,6 @@
     padding: 0.6rem;
     border-radius: 0.8rem;
     font-weight: bolder;
+    transition: all 0.5s;
   }
 </style>
