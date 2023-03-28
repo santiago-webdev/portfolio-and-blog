@@ -53,6 +53,21 @@
   let displayedNavItems: NavItem[] = []
   let contextNavItems: NavItem[] = []
 
+  function useConditionalNavColor(nav: HTMLElement) {
+    // check if an element with the data-nav-current-color attribute exists
+    let currentColorElement = document.querySelector('[data-nav-current-color]')
+    if (currentColorElement) {
+      // get the background color of the current color element
+      nav.style.backgroundColor =
+        getComputedStyle(currentColorElement).backgroundColor
+    } else {
+      const bgColor = getComputedStyle(
+        document.documentElement
+      ).getPropertyValue('--clr-bg-400') /* This colors are the same */
+      nav.style.backgroundColor = bgColor
+    }
+  }
+
   onMount(() => {
     const mediaQuery1 = window.matchMedia('(max-width: 48rem)')
     const mediaQuery2 = window.matchMedia('(min-width: 48rem)')
@@ -123,15 +138,17 @@
   })
 
   afterNavigate(() => (expanded = false))
+  afterNavigate(() => useConditionalNavColor(nav))
 </script>
 
-<!-- <svelte:window bind:scrollY /> -->
+<svelte:window bind:scrollY />
 
 <nav
   class="ff-sz-900"
   style:border-bottom-width={expanded || scrollY ? '1px' : ''}
   class:scrollY
-  bind:this={nav}>
+  bind:this={nav}
+  use:useConditionalNavColor>
   <div id="wrapper">
     <a
       href="{base}/"
@@ -187,8 +204,9 @@
 <style>
   nav {
     inset: 3px 0 auto 0;
-    /* position: sticky; */
-    position: relative;
+    position: sticky;
+    /* position: relative; */
+    /* This colors are the same */
     background-color: var(--clr-bg-400);
     transition: box-shadow 150ms ease-in-out, background-color 150ms ease-in-out,
       backdrop-filter 150ms ease-in-out, transform 0.6s ease-in-out,
