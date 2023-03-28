@@ -26,7 +26,7 @@
   ]
 
   const writeThemeCookie = () =>
-    (document.cookie = `theme=${theme};max-age=31536000;path="/"`)
+    (document.cookie = `theme=${theme};max-age=31536000;path="/";SameSite=none;Secure`)
 
   function setTheme() {
     if (theme === 'light' || theme === 'dark')
