@@ -347,12 +347,12 @@ input[type='radio']:checked + .shiny-select {
 }
 
 .bordered {
-  --border: var(--clr-muted-300);
+  --border: var(--clr-txt-hover);
   border: 2px solid var(--border);
 }
 
 .bordered:hover {
-  --border: var(--clr-txt-hover);
+  --border: var(--clr-muted-300);
 }
 
 .attn {
