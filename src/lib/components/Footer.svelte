@@ -209,6 +209,7 @@
   .footer-start hr {
     margin-left: 0.6rem;
     color: var(--clr-muted-250);
+    border: 1px solid var(--clr-muted-250);
     width: 95%;
   }
 
