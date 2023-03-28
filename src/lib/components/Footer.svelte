@@ -45,7 +45,7 @@
   <div class="footer-start">
     <section>
       <div class="ff-sz-700 aboutme">
-        <img src="./logo.svg" alt="My personal logo" title="My personal logo" />
+        <img src="/logo.svg" alt="My personal logo" title="My personal logo" />
         <h4>Santiago Gonzalez</h4>
         <p class="ff-sz-700">
           I'm a web developer that can help you craft accessible website
@@ -243,7 +243,7 @@
     width: 100%;
     height: 100%;
     opacity: 0.1;
-    background-image: url('./logo.svg');
+    background-image: url('/logo.svg');
     background-repeat: no-repeat;
     background-position: 50% 0;
     background-size: 50% 100%;
