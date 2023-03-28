@@ -55,7 +55,7 @@
 
       <div class="browse">
         <h3>Browse</h3>
-        <hr style="width: 95%" />
+        <hr />
         {#each browseItems as item}
           <a
             class="shiny-select"
@@ -71,7 +71,7 @@
 
       <div class="donate">
         <h3>Donate</h3>
-        <hr style="width: 95%" />
+        <hr />
         <ul>
           {#each donateItems as item}
             <li>
@@ -99,7 +99,7 @@
 
       <div class="contact">
         <h3>Contact</h3>
-        <hr style="width: 95%" />
+        <hr />
         <address>
           <a
             target="_blank"
@@ -209,6 +209,7 @@
   .footer-start hr {
     margin-left: 0.6rem;
     color: var(--clr-muted-250);
+    width: 95%;
   }
 
   .aboutme h3 {
