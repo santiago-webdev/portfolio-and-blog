@@ -10,7 +10,7 @@
     </a>
     <h3 style="color: inherit" class="ff-sz-800">Hello!</h3>
     <p>
-      I'm Santiago Gonzalez, a web developer based in Argentina. And I'm trying
+      I'm Santiago Gonzalez, a web developer based in Argentina and I'm trying
       to make my way into the IT
     </p>
 
