@@ -1,5 +1,4 @@
-<!-- TODO(santigo-zero): Make this component not go past the footer in the layout -->
-<!-- There must be a way of limiting the heigth of it to reach a top of the <footer> -->
+<!-- TODO(santigo-zero): Add fallback for progressive enhancement -->
 <script lang="ts">
   var js_is_enabled = true,
     scrollY = 0,
