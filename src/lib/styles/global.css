@@ -132,6 +132,8 @@ html {
   font-family: var(--ff-dflt);
   background-color: var(--clr-bg-200);
   color: var(--clr-txt-G);
+
+  scroll-behavior: smooth;
 }
 
 input,

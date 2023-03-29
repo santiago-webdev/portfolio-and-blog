@@ -16,12 +16,12 @@
     "deploy": "gh-pages -d build -t true"
   },
   "devDependencies": {
-    "@playwright/test": "^1.32.0",
-    "@sveltejs/adapter-vercel": "^2.4.0",
+    "@playwright/test": "^1.32.1",
+    "@sveltejs/adapter-vercel": "^2.4.1",
     "@sveltejs/kit": "^1.14.0",
-    "@typescript-eslint/eslint-plugin": "^5.56.0",
-    "@typescript-eslint/parser": "^5.56.0",
-    "eslint": "^8.36.0",
+    "@typescript-eslint/eslint-plugin": "^5.57.0",
+    "@typescript-eslint/parser": "^5.57.0",
+    "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-svelte3": "^4.0.0",
     "gh-pages": "^5.0.0",
@@ -33,7 +33,7 @@
     "tslib": "^2.5.0",
     "typescript": "^5.0.2",
     "vite": "^4.2.1",
-    "vitest": "^0.29.7"
+    "vitest": "^0.29.8"
   },
   "type": "module",
   "dependencies": {
