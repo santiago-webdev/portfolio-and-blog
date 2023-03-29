@@ -14,10 +14,10 @@
   <Transition url={$page.url}>
     <slot />
   </Transition>
-  <Footer />
+  <ScrollBackToTop />
 </div>
+<Footer />
 <ScrollProgressTracker />
-<ScrollBackToTop />
 
 <style>
   .layout {
@@ -26,5 +26,6 @@
     display: grid;
     grid-template-rows: auto 1fr auto;
     scroll-behavior: smooth;
+    position: relative;
   }
 </style>
