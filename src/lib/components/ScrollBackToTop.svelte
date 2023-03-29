@@ -6,12 +6,13 @@
     outerHeight = 0
 
   $: is_past_half_screen = scrollY > outerHeight / 2
+  $: should_enable = scrollY > outerHeight / 3
 </script>
 
 <svelte:window bind:scrollY bind:outerHeight />
 
 {#if js_is_enabled}
-  <div class="wrapper-button">
+  <div style:display={should_enable ? 'flex' : 'none'} class="wrapper-button">
     <button
       style:transform={is_past_half_screen
         ? 'translateY(0)'
@@ -52,7 +53,7 @@
     padding: 0.6rem;
     border-radius: 0.8rem;
     font-weight: bolder;
-    transition: all 0.5s ease-in-out;
+    transition: all 300ms ease-in-out;
     background-color: var(--accent-peachy);
     color: var(--clr-bg-400);
   }
