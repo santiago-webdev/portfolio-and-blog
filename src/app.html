@@ -1,45 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="system">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="preload" as="image" href="%sveltekit.assets%/logo.svg" />
-    <link rel="icon" href="%sveltekit.assets%/logo.svg" />
-    <link
-      rel="preload"
-      href="%sveltekit.assets%/Manrope[wght].woff2"
-      as="font"
-      type="font/woff2"
-      crossorigin />
-    <link
-      rel="stylesheet"
-      href="%sveltekit.assets%/reset.css"
-      type="text/css" />
-    <style>
-      @font-face {
-        font-family: 'Manrope';
-        font-weight: 200 800;
-        font-display: optional;
-        src: url('%sveltekit.assets%/Manrope[wght].woff2')
-            format('woff2 supports variations'),
-          url('%sveltekit.assets%/Manrope[wght].woff2')
-            format('woff2-variations');
-      }
-    </style>
-    <script>
-      if (document.documentElement.dataset.theme === 'system') {
-        if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-          document.documentElement.dataset.theme = 'dark'
-        } else if (window.matchMedia('(prefers-color-scheme: light)').matches) {
-          document.documentElement.dataset.theme = 'light'
-        } else {
-          document.documentElement.dataset.theme = 'dark'
-        }
-      }
-    </script>
-    %sveltekit.head%
-  </head>
-  <body data-sveltekit-preload-data="hover" id="body">
-    <div style="display: contents">%sveltekit.body%</div>
-  </body>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		%sveltekit.head%
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">%sveltekit.body%</div>
+	</body>
 </html>
