@@ -58,12 +58,12 @@
     --dim-700: hsl(236 12% 70%);
 
     /* Background colors */
-    --bg-100: hsl(236 13% 12%);
-    --bg-200: hsl(236 13% 14%);
-    --bg-300: hsl(236 13% 16%);
-    --bg-350: hsl(236 13% 18%);
-    --bg-400: hsl(236 13% 19%);
-    --bg-500: hsl(236 13% 21%);
+    --bg-100: hsl(236 12% 12%);
+    --bg-200: hsl(236 12% 14%);
+    --bg-300: hsl(236 12% 16%);
+    --bg-350: hsl(236 12% 18%);
+    --bg-400: hsl(236 12% 19%);
+    --bg-500: hsl(236 12% 21%);
     --bg-600: hsl(236 12% 23%);
     --bg-700: hsl(236 12% 24%);
     --bg-800: hsl(236 12% 26%);
@@ -106,6 +106,10 @@
   var {
     font: normal 1em/1.5 monospace;
     margin-top: 1px;
+  }
+
+  address {
+    font-style: normal;
   }
 
   .ff-sz-100,
@@ -153,7 +157,7 @@
   }
 
   .ff-sz-900 {
-    --range: clamp(0.8rem, 2vw + 1.5rem, 1.1rem);
+    --range: clamp(0.8rem, 2vw + 1.5rem, 1.2rem);
     font-size: var(--range);
     line-height: calc(1.2 * var(--range));
   }
@@ -162,7 +166,6 @@
     width: 100%;
     background-color: var(--bg-400);
 
-    padding: 1rem 0;
     gap: 1rem;
     margin-inline: auto;
     display: grid;
@@ -259,6 +262,6 @@
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    border-bottom: 1px solid var(--clr-muted-200);
+    border: 1px solid var(--dim-250);
   }
 </style>

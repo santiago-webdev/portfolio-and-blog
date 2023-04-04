@@ -53,7 +53,7 @@
       </div>
 
       <div class="browse">
-        <h3>Browse</h3>
+        <h3>Sitemap</h3>
         <hr />
         {#each browseItems as item}
           <a
@@ -174,6 +174,11 @@
 </footer>
 
 <style>
+  footer {
+    border-top-right-radius: 1rem;
+    border-top-left-radius: 1rem;
+  }
+
   small,
   button,
   li,
@@ -205,10 +210,8 @@
     text-indent: 0.6rem;
   }
 
-  .footer-start hr {
+  hr {
     margin-left: 0.6rem;
-    color: var(--dim-250);
-    border: 1px solid var(--dim-250);
     width: 95%;
   }
 
@@ -257,6 +260,7 @@
     display: flex;
     flex-direction: column;
     flex: 1;
+    gap: 0.1rem;
   }
 
   .donate {
