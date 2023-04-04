@@ -21,14 +21,14 @@
       </p>
       <section>
         <a
-          class="shiny hover"
+          class="shiny hover ff-sz-700"
           href="{base}/projects"
           aria-label="Link to my projects"
           >Projects
         </a>
 
         <a
-          class="block hover"
+          class="block hover ff-sz-700"
           aria-label="Link to contact me"
           href="{base}/contact"
           >Contact
