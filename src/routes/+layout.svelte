@@ -1,8 +1,10 @@
 <script lang="ts">
+  import Footer from '$lib/components/Footer.svelte'
   import '$lib/styles/reset.css'
 </script>
 
 <slot />
+<Footer />
 
 <style global>
   :root {
@@ -11,12 +13,18 @@
       'Segoe UI Emoji', 'Segoe UI Symbol';
 
     /* Breakpoints */
-    --xs: 20rem; /* 320px */
-    --sm: 48rem; /* 768px */
-    --base: 64rem; /* 1024px Prose */
-    --md: 85.375rem; /* 1366px */
-    --lg: 90rem; /* 1440px */
-    --xl: 120rem; /* 1920px */
+    --xs: 20rem;
+    /* 320px */
+    --sm: 48rem;
+    /* 768px */
+    --base: 64rem;
+    /* 1024px Prose */
+    --md: 85.375rem;
+    /* 1366px */
+    --lg: 90rem;
+    /* 1440px */
+    --xl: 120rem;
+    /* 1920px */
   }
 
   [data-theme='system'],
