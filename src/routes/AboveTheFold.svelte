@@ -9,7 +9,7 @@
       src="/logo.svg"
       title="Logo of the page representing my nickname santigo-zero"
       alt="Logo of the page representing my nickname santigo-zero" />
-    <div class="description">
+    <div class="introduction">
       <h1>
         Building the web <br />
         <span>&&</span> clean interfaces
@@ -52,7 +52,7 @@
     gap: 2rem;
   }
 
-  .description {
+  .introduction {
     display: flex;
     flex-flow: column wrap;
     gap: 2rem;
