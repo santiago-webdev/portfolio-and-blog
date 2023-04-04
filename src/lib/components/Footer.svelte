@@ -40,7 +40,7 @@
   ]
 </script>
 
-<footer class="ff-sz-900 top-layer-reverse">
+<footer class="ff-sz-900 ontop">
   <div class="footer-start">
     <section>
       <div class="ff-sz-700 shiny aboutme">
@@ -196,7 +196,7 @@
     flex-flow: column wrap;
     justify-content: space-between;
     padding: clamp(1rem, 3vw, 2rem) 0;
-    gap: 2rem;
+    gap: 3rem;
   }
 
   .footer-start h3 {
@@ -214,10 +214,6 @@
 
   .aboutme h3 {
     text-indent: 0;
-  }
-
-  .shiny-select {
-    border-radius: 0.6rem;
   }
 
   .footer-start p,
@@ -239,7 +235,7 @@
     gap: 1rem;
     --background: var(--bg-500);
     --border: var(--bg-600);
-    padding: 2rem 0;
+    padding: 2rem;
     border-radius: 1rem;
   }
 

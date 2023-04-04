@@ -1,7 +1,7 @@
 <script lang="ts">
   import Footer from '$lib/components/Footer.svelte'
   import '$lib/styles/reset.css'
-  import 'iconify-icon';
+  import 'iconify-icon'
 </script>
 
 <div id="layout">
@@ -156,5 +156,109 @@
     --range: clamp(0.8rem, 2vw + 1.5rem, 1.1rem);
     font-size: var(--range);
     line-height: calc(1.2 * var(--range));
+  }
+
+  .ontop {
+    width: 100%;
+    background-color: var(--bg-400);
+
+    padding: 1rem 0;
+    gap: 1rem;
+    margin-inline: auto;
+    display: grid;
+
+    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
+  }
+
+  .trn-border {
+    border: 1px solid transparent;
+  }
+
+  .shiny {
+    --background: var(--bg-600);
+    --border: var(--bg-800);
+    background-color: var(--background);
+    border: 1px solid var(--background);
+    border-top-color: var(--border);
+    border-left-color: var(--border);
+    box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
+
+    border-radius: var(--radius);
+    transition: background-color 50ms, border 80ms, box-shadow 300ms;
+  }
+
+  .shiny.less {
+    --background: var(--bg-400);
+    --border: var(--bg-600);
+  }
+
+  .shiny.float {
+    box-shadow: 8px 8px 32px 0 rgba(0, 0, 0, 0.4);
+  }
+
+  .shiny.block {
+    --background: var(--bg-350);
+    --border: var(--bg-700);
+  }
+
+  .shiny.block:hover {
+    --background: var(--bg-400);
+  }
+
+  @media (hover: hover) {
+    .shiny.hover:hover {
+      --background: var(--bg-700);
+      --border: var(--bg-900);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  .shiny-select {
+    border: 1px solid transparent;
+    padding: 0.3rem 0.6rem;
+    border-radius: 0.5rem;
+  }
+
+  input[type='radio']:checked + .shiny-select:active,
+  input[type='radio']:checked + .shiny-select {
+    --background: var(--bg-300);
+    --border: var(--bg-select-200);
+    --color: var(--text-A);
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    font-variation-settings: 'wght' 500;
+    color: var(--color);
+  }
+
+  @media (hover: hover) {
+    input[type='radio']:hover + .shiny-select,
+    .shiny-select:hover {
+      --background: var(--bg-select-100);
+      --border: var(--bg-select-200);
+      --color: var(--text-A);
+      background-color: var(--background);
+      border: 1px solid var(--background);
+      border-left-color: var(--border);
+      border-top-color: var(--border);
+      color: var(--color);
+    }
+  }
+
+  [aria-current='page'] {
+    text-decoration: underline solid var(--accent-peachy) 3px;
+  }
+
+  [aria-orientation='vertical'][role='separator']:empty {
+    border-left: 1px solid var(--clr-muted-100);
+    height: 2rem;
+  }
+
+  hr {
+    width: 100%;
+    margin: 0;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid var(--clr-muted-200);
   }
 </style>
