@@ -2,33 +2,47 @@
   import { base } from '$app/paths'
 </script>
 
-<main>
-  <img
-    class="hero"
-    src="/logo.svg"
-    title="Logo of the page representing my nickname santigo-zero"
-    alt="Logo of the page representing my nickname santigo-zero" />
-  <div class="description">
-    <h1>
-      Building the web <br />
-      <span>&&</span> clean interfaces
-    </h1>
-    <p>
-      I'm a web developer and here we'll discuss about <strong>
-        web deve&shylopment
-      </strong> and show you my projects while at it.
-    </p>
-    <section>
-      <a href="{base}/projects" aria-label="Link to my projects page"
-        >Projects
-      </a>
+<div class="wrapper">
+  <main>
+    <img
+      class="hero"
+      src="/logo.svg"
+      title="Logo of the page representing my nickname santigo-zero"
+      alt="Logo of the page representing my nickname santigo-zero" />
+    <div class="description">
+      <h1>
+        Building the web <br />
+        <span>&&</span> clean interfaces
+      </h1>
+      <p>
+        I'm a web developer and here we'll discuss about <strong>
+          web deve&shylopment
+        </strong> and show you my projects while at it.
+      </p>
+      <section>
+        <a
+          class="shiny hover"
+          href="{base}/projects"
+          aria-label="Link to my projects"
+          >Projects
+        </a>
 
-      <a aria-label="Link to contact me" href="{base}/contact">Contact </a>
-    </section>
-  </div>
-</main>
+        <a
+          class="block hover"
+          aria-label="Link to contact me"
+          href="{base}/contact"
+          >Contact
+        </a>
+      </section>
+    </div>
+  </main>
+</div>
 
 <style>
+  .wrapper {
+    background-color: var(--bg-400);
+  }
+
   main {
     display: flex;
     place-items: center;
