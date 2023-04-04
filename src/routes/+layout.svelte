@@ -91,6 +91,11 @@
     color: var(--txt-A);
   }
 
+  var {
+    font: normal 1em/1.5 monospace;
+    margin-top: 1px;
+  }
+
   .ff-sz-100,
   h1 {
     --range: clamp(3rem, 2vw + 1.5rem, 6rem);
