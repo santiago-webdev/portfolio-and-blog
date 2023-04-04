@@ -118,12 +118,15 @@
     padding: 0;
   }
 
+  a {
+    color: var(--txt-A);
+  }
+
   .ff-sz-100,
   h1 {
     --range: clamp(3rem, 2vw + 1.5rem, 6rem);
     font-size: var(--range);
     line-height: calc(1 * var(--range));
-
     font-variation-settings: 'wght' 800;
   }
 
