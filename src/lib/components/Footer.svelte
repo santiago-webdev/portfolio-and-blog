@@ -187,7 +187,6 @@
     place-items: center;
     gap: 0.5ch;
     font-size: inherit;
-    color: inherit;
   }
 
   section {

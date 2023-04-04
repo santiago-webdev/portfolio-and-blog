@@ -226,7 +226,7 @@
   .shiny-select {
     border: 1px solid transparent;
     padding: 0.3rem 0.6rem;
-    border-radius: 0.5rem;
+    border-radius: 0.4rem;
     color: var(--dim-700);
   }
 
@@ -255,12 +255,32 @@
     }
   }
 
+  .block {
+    --background: var(--bg-200);
+    --border: var(--bg-700);
+    background-color: var(--background);
+    border: 1px solid var(--border);
+    box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
+
+    border-radius: 0.8rem;
+    transition: background-color 50ms, border 80ms, box-shadow 300ms;
+  }
+
+  @media (hover: hover) {
+    .block.hover:hover {
+      --background: var(--bg-100);
+      --border: var(--bg-100);
+
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
+    }
+  }
+
   [aria-current='page'] {
     text-decoration: underline solid var(--accent-peachy) 3px;
   }
 
   [aria-orientation='vertical'][role='separator']:empty {
-    border-left: 1px solid var(--clr-muted-100);
+    border-left: 1px solid var(--dim-100);
     height: 2rem;
   }
 
