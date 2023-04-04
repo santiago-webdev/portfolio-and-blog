@@ -4,8 +4,10 @@
   import 'iconify-icon';
 </script>
 
-<slot />
-<Footer />
+<div id="layout">
+  <slot />
+  <Footer />
+</div>
 
 <style global>
   :root {
@@ -89,6 +91,16 @@
     font-family: var(--ff-dflt);
     background-color: var(--bg-200);
     color: var(--txt-A);
+  }
+
+  #layout {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer {
+    margin-top: auto;
   }
 
   var {
