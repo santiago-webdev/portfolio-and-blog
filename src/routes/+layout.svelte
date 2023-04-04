@@ -77,7 +77,58 @@
   html {
     scroll-behavior: smooth;
     color-scheme: light dark;
+    font-family: var(--ff-dflt);
     background-color: var(--bg-200);
     color: var(--txt-A);
+  }
+
+  .ff-sz-100,
+  h1 {
+    --range: clamp(3rem, 2vw + 1.5rem, 6rem);
+    font-size: var(--range);
+    line-height: calc(1 * var(--range));
+
+    font-variation-settings: 'wght' 800;
+  }
+
+  .ff-sz-200,
+  h2 {
+    font-size: clamp(1.6rem, 2vw + 1.5rem, 2.84rem);
+    line-height: calc(1.5 * clamp(2.3rem, 2vw + 1.5rem, 3.6rem));
+  }
+
+  .ff-sz-300,
+  h3 {
+    font-weight: 500;
+    font-size: clamp(0.8rem, 2vw + 1.5rem, 1.75rem);
+    /* line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem)); */
+  }
+
+  .ff-sz-400 {
+    --range: clamp(0.6rem, 2vw + 1.5rem, 1.6rem);
+    font-size: var(--range);
+    line-height: calc(1.2 * var(--range));
+  }
+
+  .ff-sz-700,
+  p {
+    --range: clamp(0.8rem, 2vw + 1.5rem, 1.4rem);
+    font-size: var(--range);
+    line-height: calc(1.2 * var(--range));
+
+    font-variation-settings: 'wght' 400;
+  }
+
+  .ff-sz-800,
+  small {
+    --range: clamp(0.5rem, 2vw + 1.5rem, 1rem);
+    font-size: var(--range);
+    line-height: calc(1.2 * var(--range));
+  }
+
+  .ff-sz-900 {
+    --range: clamp(0.8rem, 2vw + 1.5rem, 1.1rem);
+    font-size: var(--range);
+    line-height: calc(1.2 * var(--range));
   }
 </style>
