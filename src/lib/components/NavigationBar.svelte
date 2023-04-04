@@ -9,7 +9,7 @@
     scrollY = 0,
     savedY = 0,
     currentContext = '',
-    nav: HTMLElement
+    header: HTMLElement
 
   const navItems = [
     { label: 'Blog', href: `${base}/blog` },
@@ -17,21 +17,6 @@
     { label: 'About', href: `${base}/about` },
     { label: 'Contact', href: `${base}/contact`, classes: 'block' },
   ]
-
-  function useConditionalNavColor(nav: HTMLElement) {
-    // check if an element with the data-nav-current-color attribute exists
-    let currentColorElement = document.querySelector('[data-nav-current-color]')
-    if (currentColorElement) {
-      // get the background color of the current color element
-      nav.style.backgroundColor =
-        getComputedStyle(currentColorElement).backgroundColor
-    } else {
-      const bgColor = getComputedStyle(
-        document.documentElement
-      ).getPropertyValue('--bg-400') /* This colors are the same */
-      nav.style.backgroundColor = bgColor
-    }
-  }
 
   onMount(() => {
     if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
@@ -42,14 +27,14 @@
           window.scrollY + window.innerHeight >=
           document.documentElement.scrollHeight
         ) {
-          nav.style.transform = 'translateY(0)'
+          header.style.transform = 'translateY(0)'
           return
         }
 
-        if (direction === 'down' && scrollY > 500 && (!expanded || onDesktop)) {
-          nav.style.transform = 'translateY(-200%)'
+        if (direction === 'down' && scrollY && (!expanded || onDesktop)) {
+          header.style.transform = 'translateY(-200%)'
         } else {
-          nav.style.transform = 'translateY(0)'
+          header.style.transform = 'translateY(0)'
         }
 
         savedY = scrollY
@@ -58,17 +43,12 @@
   })
 
   afterNavigate(() => (expanded = false))
-  afterNavigate(() => useConditionalNavColor(nav))
 </script>
 
 <svelte:window bind:scrollY />
 
-<nav
-  class="ff-sz-900"
-  style:border-bottom-width={expanded || scrollY ? '1px' : ''}
-  bind:this={nav}
-  use:useConditionalNavColor>
-  <div id="wrapper">
+<header style:border-bottom-width={expanded || scrollY ? '2px' : ''} bind:this={header}>
+  <nav aria-label='primary-navigation' class="ff-sz-900">
     <a
       href="{base}/"
       aria-label="Logo of this site and link to Home"
@@ -95,10 +75,10 @@
           icon={expanded ? 'lucide:x' : currentContext} />
       </button>
     </div>
-  </div>
+  </nav>
   <section style:display={expanded ? 'flex' : 'none'}>
     {#each navItems as item}
-      <hr aria-orientation="horizontal" />
+      <hr />
       <a
         class="shiny-select"
         aria-current={item.href === $page.url.pathname ||
@@ -109,36 +89,35 @@
         href={item.href}>{item.label}</a>
     {/each}
   </section>
-</nav>
+</header>
 
 <style>
-  nav {
+  header {
     top: 0;
     position: sticky;
-    /* position: relative; */
-    /* This colors are the same */
     background-color: var(--bg-400);
     transition: box-shadow 150ms ease-in-out, background-color 150ms ease-in-out,
       backdrop-filter 150ms ease-in-out, transform 0.6s ease-in-out,
       padding 150ms ease-in-out;
     z-index: 999;
     border: 0 solid var(--dim-300);
-    padding: 0.3rem 0;
+    padding: 0.4rem 0;
   }
 
   a,
   button {
+    color: inherit;
     padding: 0.4rem 0.8rem;
     display: flex;
     place-items: center;
     /* outline: 1px paleturquoise solid; */
   }
 
-  #wrapper {
+  nav {
     display: flex;
     place-items: center;
     margin-inline: auto;
-    width: min(100% - 1rem, var(--lg) + 1.6rem);
+    width: min(100% - 1rem, var(--lg));
     justify-content: space-between;
     flex-flow: row wrap;
   }

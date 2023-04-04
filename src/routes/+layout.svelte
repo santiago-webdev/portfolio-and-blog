@@ -166,6 +166,7 @@
     --range: clamp(0.8rem, 2vw + 1.5rem, 1.2rem);
     font-size: var(--range);
     line-height: calc(1.2 * var(--range));
+    color: var(--txt-A)
   }
 
   .ontop {
@@ -232,7 +233,7 @@
   input[type='radio']:checked + .shiny-select {
     --background: var(--bg-300);
     --border: var(--bg-select-200);
-    --color: var(--text-A);
+    --color: var(--txt-A);
     background-color: var(--background);
     border: 1px solid var(--border);
     font-variation-settings: 'wght' 500;
@@ -244,7 +245,7 @@
     .shiny-select:hover {
       --background: var(--bg-select-100);
       --border: var(--bg-select-200);
-      --color: var(--text-A);
+      --color: var(--txt-A);
       background-color: var(--background);
       border: 1px solid var(--background);
       border-left-color: var(--border);
