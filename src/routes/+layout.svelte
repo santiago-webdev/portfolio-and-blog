@@ -112,6 +112,10 @@
     font-style: normal;
   }
 
+  ul {
+    padding: 0;
+  }
+
   .ff-sz-100,
   h1 {
     --range: clamp(3rem, 2vw + 1.5rem, 6rem);
