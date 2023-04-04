@@ -139,8 +139,8 @@
         <small>
           Designed & Built with <iconify-icon icon="lucide:heart" />
           by
-          <address>Santiago</address>
         </small>
+        <address>Santiago</address>
       </a>
 
       <a
@@ -193,10 +193,10 @@
   section {
     display: flex;
     margin-inline: auto;
-    width: min(100% - clamp(2rem, 5vw, 3rem), var(--lg));
+    width: min(100% - 1rem, var(--lg));
   }
 
-  .footer-start > * {
+  .footer-start * {
     gap: 0.1rem;
   }
 
