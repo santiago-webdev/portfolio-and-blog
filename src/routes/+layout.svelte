@@ -166,7 +166,7 @@
     --range: clamp(0.8rem, 2vw + 1.5rem, 1.2rem);
     font-size: var(--range);
     line-height: calc(1.2 * var(--range));
-    color: var(--txt-A)
+    color: var(--txt-A);
   }
 
   .ontop {
@@ -227,6 +227,7 @@
     border: 1px solid transparent;
     padding: 0.3rem 0.6rem;
     border-radius: 0.5rem;
+    color: var(--dim-700);
   }
 
   input[type='radio']:checked + .shiny-select:active,

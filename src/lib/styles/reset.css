@@ -54,6 +54,18 @@ a {
   text-decoration: none;
 }
 
+/* Remove unnecessary button styles */
+button {
+  background-color: transparent;
+  border-width: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  padding: 0;
+}
+
 /* 9. Create a root stacking context */
 #root,
 #__next {

@@ -11,6 +11,8 @@
     currentContext = '',
     header: HTMLElement
 
+  $: console.log(onDesktop)
+
   const navItems = [
     { label: 'Blog', href: `${base}/blog` },
     { label: 'Projects', href: `${base}/projects` },
@@ -43,52 +45,68 @@
   })
 
   afterNavigate(() => (expanded = false))
+
+  onMount(() => {
+    const checkForDesktop = () =>
+      window.matchMedia('(min-width: 64rem)').matches
+        ? ((onDesktop = true), (expanded = false))
+        : (onDesktop = false)
+
+    checkForDesktop()
+    window.addEventListener('resize', checkForDesktop)
+  })
 </script>
 
 <svelte:window bind:scrollY />
 
-<header style:border-bottom-width={expanded || scrollY ? '2px' : ''} bind:this={header}>
-  <nav aria-label='primary-navigation' class="ff-sz-900">
+<header
+  style:border-bottom={expanded || scrollY ? '2px solid var(--dim-300)' : ''}
+  bind:this={header}>
+  <nav aria-label="primary-navigation" class="ff-sz-900">
     <a
       href="{base}/"
       aria-label="Logo of this site and link to Home"
       aria-current={`${base}/` === $page.url.pathname ? 'page' : undefined}>
       Santiago Gonzalez</a>
     <div id="contextual">
+      {#if !onDesktop}
+        <button
+          aria-label="Click to expand navigation menu"
+          aria-expanded={expanded}
+          on:click={() => (expanded = !expanded)}
+          style:display={!onDesktop ? 'flex' : 'none'}>
+          <iconify-icon
+            width="24"
+            icon={expanded ? 'lucide:x' : 'lucide:align-justify'} />
+        </button>
+      {:else}
+        {#each navItems as item}
+          <a
+            aria-current={item.href === $page.url.pathname ||
+            ($page.url.pathname.startsWith(item.href || '') &&
+              `/` !== item.href)
+              ? 'page'
+              : undefined}
+            aria-label="Link to {item.label}"
+            class={item.classes}
+            href={item.href}>{item.label}</a>
+        {/each}
+      {/if}
+    </div>
+    <section style:display={expanded ? 'flex' : 'none'}>
       {#each navItems as item}
+        <hr />
         <a
+          class="shiny-select"
           aria-current={item.href === $page.url.pathname ||
           ($page.url.pathname.startsWith(item.href || '') && `/` !== item.href)
             ? 'page'
             : undefined}
           aria-label="Link to {item.label}"
-          class={item.classes}
           href={item.href}>{item.label}</a>
       {/each}
-      <button
-        aria-label="Click to expand navigation menu"
-        aria-expanded={expanded}
-        on:click={() => (expanded = !expanded)}
-        style:display={currentContext.length > 0 ? '' : 'none'}>
-        <iconify-icon
-          width="24"
-          icon={expanded ? 'lucide:x' : currentContext} />
-      </button>
-    </div>
+    </section>
   </nav>
-  <section style:display={expanded ? 'flex' : 'none'}>
-    {#each navItems as item}
-      <hr />
-      <a
-        class="shiny-select"
-        aria-current={item.href === $page.url.pathname ||
-        ($page.url.pathname.startsWith(item.href || '') && `/` !== item.href)
-          ? 'page'
-          : undefined}
-        aria-label="Link to {item.label}"
-        href={item.href}>{item.label}</a>
-    {/each}
-  </section>
 </header>
 
 <style>
@@ -96,11 +114,8 @@
     top: 0;
     position: sticky;
     background-color: var(--bg-400);
-    transition: box-shadow 150ms ease-in-out, background-color 150ms ease-in-out,
-      backdrop-filter 150ms ease-in-out, transform 0.6s ease-in-out,
-      padding 150ms ease-in-out;
+    transition: transform 0.3s ease-in-out;
     z-index: 999;
-    border: 0 solid var(--dim-300);
     padding: 0.4rem 0;
   }
 
@@ -126,21 +141,14 @@
     display: flex;
     flex-flow: row wrap;
     place-items: center;
-    gap: var(--gap);
-  }
-
-  button {
-    display: flex;
-    place-items: center;
-    padding-left: var(--gap);
-    /* position: relative; */
+    gap: 2rem;
   }
 
   section {
     flex-flow: column wrap;
     place-items: center;
-    gap: calc(var(--gap) / 2) 0;
-    padding-top: var(--gap);
+    gap: 0.5rem 0;
+    padding-top: 1rem;
     width: min(100%, var(--base));
     margin-inline: auto;
   }
@@ -154,10 +162,4 @@
       transition: none;
     }
   }
-
-  /* @media screen and (min-width: 48rem) { */
-  /*   nav { */
-  /*     padding: 2rem 0; */
-  /*   } */
-  /* } */
 </style>

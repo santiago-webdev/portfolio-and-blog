@@ -52,7 +52,7 @@
         </p>
       </div>
 
-      <nav aria-label='footer-navigation'>
+      <nav aria-label="footer-navigation">
         <h3>Sitemap</h3>
         <hr />
         {#each browseItems as item}
@@ -223,8 +223,7 @@
     text-indent: 0;
   }
 
-  .footer-start p,
-  .footer-start a {
+  .footer-start p {
     color: var(--dim-700);
   }
 
