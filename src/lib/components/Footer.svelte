@@ -196,6 +196,10 @@
     width: min(100% - clamp(2rem, 5vw, 3rem), var(--lg));
   }
 
+  .footer-start > * {
+    gap: 0.1rem;
+  }
+
   .footer-start section {
     display: flex;
     flex-flow: column wrap;
@@ -260,7 +264,6 @@
     display: flex;
     flex-direction: column;
     flex: 1;
-    gap: 0.1rem;
   }
 
   .donate {
