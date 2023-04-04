@@ -10,12 +10,6 @@
   margin: 0;
 }
 
-/* 3. Allow percentage-based heights in the application */
-html,
-body {
-  height: 100%;
-}
-
 /*
   Typographic tweaks!
   4. Add accessible line-height
@@ -53,6 +47,11 @@ h4,
 h5,
 h6 {
   overflow-wrap: break-word;
+}
+
+/* Remove unnecessary anchor styles */
+a {
+  text-decoration: none;
 }
 
 /* 9. Create a root stacking context */
