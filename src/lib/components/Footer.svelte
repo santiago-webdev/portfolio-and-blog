@@ -52,7 +52,7 @@
         </p>
       </div>
 
-      <div class="browse">
+      <nav aria-label='footer-navigation'>
         <h3>Sitemap</h3>
         <hr />
         {#each browseItems as item}
@@ -66,7 +66,7 @@
             aria-label="Link to {item.label}"
             href={item.href}>{item.label}</a>
         {/each}
-      </div>
+      </nav>
 
       <div class="donate">
         <h3>Donate</h3>
@@ -260,7 +260,7 @@
     background-size: 50% 75%;
   }
 
-  .browse {
+  nav {
     display: flex;
     flex-direction: column;
     flex: 1;
