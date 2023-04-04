@@ -1,10 +1,12 @@
 <script lang="ts">
   import Footer from '$lib/components/Footer.svelte'
+  import NavigationBar from '$lib/components/NavigationBar.svelte'
   import '$lib/styles/reset.css'
   import 'iconify-icon'
 </script>
 
 <div id="layout">
+  <NavigationBar />
   <slot />
   <Footer />
 </div>
