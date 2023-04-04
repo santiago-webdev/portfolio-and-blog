@@ -304,6 +304,10 @@
     background-color: var(--bg-600);
   }
 
+  .footer-end a {
+    color: var(--txt-A);
+  }
+
   .footer-end section {
     display: flex;
     flex-direction: column;
