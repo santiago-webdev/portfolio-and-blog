@@ -239,7 +239,7 @@
     gap: 1rem;
     --background: var(--bg-500);
     --border: var(--bg-600);
-    padding: 2rem;
+    padding: 2rem 0;
     border-radius: 1rem;
   }
 

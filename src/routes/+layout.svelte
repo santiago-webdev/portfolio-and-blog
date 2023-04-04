@@ -1,6 +1,7 @@
 <script lang="ts">
   import Footer from '$lib/components/Footer.svelte'
   import '$lib/styles/reset.css'
+  import 'iconify-icon';
 </script>
 
 <slot />
