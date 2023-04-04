@@ -172,17 +172,6 @@
     color: var(--txt-A);
   }
 
-  .ontop {
-    width: 100%;
-    background-color: var(--bg-400);
-
-    gap: 1rem;
-    margin-inline: auto;
-    display: grid;
-
-    box-shadow: 6px 6px 6px 0px rgba(0, 0, 0, 0.1);
-  }
-
   .trn-border {
     border: 1px solid transparent;
   }

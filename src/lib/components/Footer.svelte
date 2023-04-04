@@ -40,7 +40,7 @@
   ]
 </script>
 
-<footer class="ff-sz-900 ontop">
+<footer class="ff-sz-900">
   <div class="footer-start">
     <section>
       <div class="ff-sz-700 shiny aboutme">
@@ -177,6 +177,7 @@
   footer {
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
+    background-color: var(--bg-400);
   }
 
   small,
