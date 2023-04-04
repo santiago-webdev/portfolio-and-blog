@@ -36,11 +36,11 @@
   [data-theme='dark'] {
     color-scheme: dark;
     /* Foreground colors */
-    --txt-A: hsl(228 60% 86%);
-    --txt-B: hsl(228 60% 87%);
-    --txt-C: hsl(228 60% 90%);
-    --txt-D: hsl(228 60% 95%);
-    --txt-E: hsl(228 60% 100%);
+    --txt-A: hsl(228 50% 86%);
+    --txt-B: hsl(228 50% 87%);
+    --txt-C: hsl(228 50% 90%);
+    --txt-D: hsl(228 50% 94%);
+    --txt-E: hsl(228 50% 96%);
     --txt-hover: hsl(220 20% 70%);
     --txt-clicked: hsl(228 70% 80%);
 

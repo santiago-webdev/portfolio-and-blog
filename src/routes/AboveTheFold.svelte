@@ -24,14 +24,14 @@
           class="shiny hover ff-sz-700"
           href="{base}/projects"
           aria-label="Link to my projects"
-          >Projects
+          >What I've built
         </a>
 
         <a
-          class="block hover ff-sz-700"
-          aria-label="Link to contact me"
+          class="ff-sz-700"
           href="{base}/contact"
-          >Contact
+          id='go-read-my-blog'
+          >Read my blog
         </a>
       </section>
     </div>
@@ -80,6 +80,11 @@
     padding: clamp(1rem, 1.5vw, 2rem) clamp(2rem, 3vw, 3rem);
     gap: 0.2rem;
     border-radius: 999rem;
+  }
+
+  #go-read-my-blog {
+    background-color: var(--txt-A);
+    color: var(--bg-200);
   }
 
   @media screen and (min-width: 64rem) {
