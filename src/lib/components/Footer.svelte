@@ -193,7 +193,7 @@
   section {
     display: flex;
     margin-inline: auto;
-    width: min(100% - 1rem, var(--lg));
+    width: min(100% - clamp(1rem, 2vw + 1.5rem, 3rem), var(--lg));
   }
 
   .footer-start * {
