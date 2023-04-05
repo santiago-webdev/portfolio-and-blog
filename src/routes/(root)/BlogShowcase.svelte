@@ -68,8 +68,8 @@
 
   #blog {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(29rem, 100%), 1fr));
-    grid-auto-rows: min(100%, var(--xs));
+    grid-template-columns: repeat(auto-fill, minmax(min(25rem, 100%), 1fr));
+    grid-auto-rows: minmax(100%, var(--xs));
     gap: 1rem;
     padding: 2rem 0;
   }
