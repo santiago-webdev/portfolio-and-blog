@@ -198,15 +198,6 @@
     box-shadow: 8px 8px 32px 0 rgba(0, 0, 0, 0.4);
   }
 
-  .shiny.block {
-    --background: var(--bg-350);
-    --border: var(--bg-700);
-  }
-
-  .shiny.block:hover {
-    --background: var(--bg-400);
-  }
-
   @media (hover: hover) {
     .shiny.hover:hover {
       --background: var(--bg-700);

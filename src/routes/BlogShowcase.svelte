@@ -99,6 +99,12 @@
     flex-flow: column wrap;
     height: 100%;
     overflow: hidden;
+    background-color: var(--bg-350);
+    border: 1px solid var(--bg-700);
+  }
+
+  article:hover {
+    background-color: var(--bg-400);
   }
 
   article h3 {
