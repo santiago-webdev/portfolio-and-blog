@@ -1,6 +1,6 @@
 <script>
   import { base } from '$app/paths'
-  import ChevronToLeft from '$lib/components/ChevronToLeft.svelte'
+  import ChevronToArrow from '$lib/components/ChevronToArrow.svelte'
 </script>
 
 <div id="introduction-about-me" class="about-me">
@@ -18,7 +18,7 @@
 
     <a class="reverse ff-sz-700" href="{base}/about"
       >Learn more
-      <ChevronToLeft />
+      <ChevronToArrow />
     </a>
   </section>
   <div class="about-me-hero" />
