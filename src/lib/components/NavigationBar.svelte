@@ -8,10 +8,8 @@
     onDesktop = false,
     scrollY = 0,
     savedY = 0,
-    currentContext = '',
+    innerHeight = 0,
     header: HTMLElement
-
-  $: console.log(onDesktop)
 
   const navItems = [
     { label: 'Blog', href: `${base}/blog` },
@@ -20,32 +18,7 @@
     { label: 'Contact', href: `${base}/contact`, classes: 'block' },
   ]
 
-  onMount(() => {
-    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      window.addEventListener('scroll', (): void => {
-        const direction = scrollY > savedY ? 'down' : 'up'
-
-        if (
-          window.scrollY + window.innerHeight >=
-          document.documentElement.scrollHeight
-        ) {
-          header.style.transform = 'translateY(0)'
-          return
-        }
-
-        if (direction === 'down' && scrollY && (!expanded || onDesktop)) {
-          header.style.transform = 'translateY(-200%)'
-        } else {
-          header.style.transform = 'translateY(0)'
-        }
-
-        savedY = scrollY
-      })
-    }
-  })
-
   afterNavigate(() => (expanded = false))
-
   onMount(() => {
     const checkForDesktop = () =>
       window.matchMedia('(min-width: 64rem)').matches
@@ -54,10 +27,19 @@
 
     checkForDesktop()
     window.addEventListener('resize', checkForDesktop)
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+    const hideNav = () =>
+      (header.style.transform =
+        !expanded && scrollY > savedY ? 'translateY(-200%)' : 'translateY(0)')
+
+    window.addEventListener('scroll', hideNav)
+    window.addEventListener('scroll', () => (savedY = scrollY))
   })
 </script>
 
-<svelte:window bind:scrollY />
+<svelte:window bind:scrollY bind:innerHeight />
 
 <header
   style:border-bottom={expanded || scrollY ? '2px solid var(--dim-300)' : ''}
