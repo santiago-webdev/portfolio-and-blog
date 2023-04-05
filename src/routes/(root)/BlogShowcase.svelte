@@ -64,6 +64,7 @@
   section {
     padding: 3rem 0;
     margin-inline: auto;
+    width: min(100% - 1rem, var(--lg));
   }
 
   #blog {
