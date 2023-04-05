@@ -27,7 +27,7 @@
           >What I've built
         </a>
 
-        <a class="ff-sz-700" href="{base}/contact" id="go-read-my-blog"
+        <a class="ff-sz-700 reverse" href="{base}/contact" id="go-read-my-blog"
           >Read my blog
         </a>
       </section>
@@ -38,6 +38,7 @@
 <style>
   .wrapper {
     background-color: var(--bg-400);
+    padding: 3rem 0;
   }
 
   main {
@@ -77,11 +78,6 @@
     padding: clamp(1rem, 1.5vw, 2rem) clamp(2rem, 3vw, 3rem);
     gap: 0.2rem;
     border-radius: 999rem;
-  }
-
-  #go-read-my-blog {
-    background-color: var(--txt-A);
-    color: var(--bg-200);
   }
 
   @media screen and (min-width: 64rem) {

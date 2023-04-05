@@ -226,6 +226,22 @@
     }
   }
 
+  .reverse {
+    --background: var(--txt-A);
+    --border: var(--txt-C);
+    --color: var(--bg-200);
+
+    background-color: var(--background);
+    border: 1px solid var(--background);
+    border-top-color: var(--border);
+    border-left-color: var(--border);
+    box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.2);
+
+    border-radius: var(--radius);
+    transition: background-color 50ms, border 80ms, box-shadow 300ms;
+    color: var(--color);
+  }
+
   .block {
     --background: var(--bg-200);
     --border: var(--bg-700);
@@ -301,7 +317,7 @@
     padding-inline: 0.3rem;
 
     border-radius: 0.4rem;
-    background-color: var(--clr-muted-250);
+    background-color: var(--dim-250);
     text-transform: uppercase;
     font-size: 90%;
     font-weight: bold;

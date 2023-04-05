@@ -1,6 +1,6 @@
 <script>
   import { base } from '$app/paths'
-    import ChevronToLeft from '$lib/components/ChevronToLeft.svelte'
+  import ChevronToLeft from '$lib/components/ChevronToLeft.svelte'
 </script>
 
 <div id="introduction-about-me" class="about-me">
@@ -14,7 +14,7 @@
       to make my way into the IT
     </p>
 
-    <a class="bordered ff-sz-700" href="{base}/about"
+    <a class="reverse ff-sz-700" href="{base}/about"
       >Learn more <ChevronToLeft />
     </a>
   </div>
@@ -27,10 +27,10 @@
     margin: 1.5rem auto;
     display: grid;
     grid-template-columns: 1fr;
-    background-color: var(--clr-bg-400);
-    padding: calc(var(--gap) * 2);
+    background-color: var(--bg-401);
+    padding: 2rem;
     border-radius: 1.2rem;
-    gap: var(--gap);
+    gap: 1rem;
   }
 
   @media (min-width: 48rem) {
@@ -39,19 +39,20 @@
     }
   }
 
-  a.bordered {
+  a.reverse {
     display: flex;
     place-items: center;
     width: max-content;
     padding: 0.4rem 0.8rem;
     gap: 0.2rem;
     border-radius: 999rem;
+    font-size: 98%;
   }
 
   .introduction-about-me {
     display: flex;
     flex-flow: column wrap;
-    gap: var(--gap);
+    gap: 1rem;
   }
 
   .about-me-hero {
