@@ -1,15 +1,9 @@
 <script lang="ts">
-  import Footer from '$lib/components/Footer.svelte'
-  import NavigationBar from '$lib/components/NavigationBar.svelte'
   import '$lib/styles/reset.css'
   import 'iconify-icon'
 </script>
 
-<div id="layout">
-  <NavigationBar />
-  <slot />
-  <Footer />
-</div>
+<slot />
 
 <style global>
   :root {
@@ -93,12 +87,6 @@
     font-family: var(--ff-dflt);
     background-color: var(--bg-200);
     color: var(--txt-A);
-  }
-
-  #layout {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
   }
 
   footer {
