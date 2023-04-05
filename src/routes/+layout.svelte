@@ -272,7 +272,7 @@
   }
 
   [aria-current='page'] {
-    text-decoration: underline solid var(--accent-peachy) 3px;
+    text-decoration: underline solid var(--txt-hover) 3px;
   }
 
   [aria-orientation='vertical'][role='separator']:empty {
