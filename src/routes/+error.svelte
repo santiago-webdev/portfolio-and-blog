@@ -4,7 +4,8 @@
 </script>
 
 <section>
-  <h1>404 {$page.error?.message}</h1>
+  <h1>404 - {$page.error?.message}</h1>
+  <p>Something has gone wrong</p>
   <a class="shiny hover ff-sz-700" href="{base}/">Home</a>
 </section>
 
@@ -14,6 +15,7 @@
     display: flex;
     flex-flow: column wrap;
     place-content: center;
+    place-items: center;
     margin-inline: auto;
     gap: 2rem;
     width: min(100% - 1rem, var(--base));
