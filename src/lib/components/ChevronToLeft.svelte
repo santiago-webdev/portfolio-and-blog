@@ -50,7 +50,7 @@
 
   #arrow-head {
     transform: translateX(-3px);
-    margin-right: 0.4rem;
+    margin-right: 0.2ch;
   }
 
   #arrow-tail {
@@ -60,12 +60,12 @@
 
   @media (hover: hover) {
     :global(a:hover .wrapper-arrow) {
-      transform: translateX(0.3ch);
+      transform: translateX(0.4ch);
       transition-delay: 400ms;
     }
 
     :global(a:hover #arrow-head) {
-      transform: translateX(3px);
+      transform: translateX(4px);
     }
 
     :global(a:hover #arrow-tail) {
