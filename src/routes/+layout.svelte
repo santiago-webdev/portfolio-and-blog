@@ -139,7 +139,7 @@
 
   .ff-sz-700,
   p {
-    --range: clamp(0.8rem, 2vw + 1.5rem, 1.4rem);
+    --range: clamp(0.8rem, 2vw + 1.5rem, 1.2rem);
     font-size: var(--range);
     line-height: calc(1.2 * var(--range));
 
@@ -244,6 +244,15 @@
 
       box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
     }
+  }
+
+  .bordered {
+    --border: var(--txt-hover);
+    border: 2px solid var(--border);
+  }
+
+  .bordered:hover {
+    --border: var(--dim-300);
   }
 
   [aria-current='page'] {
