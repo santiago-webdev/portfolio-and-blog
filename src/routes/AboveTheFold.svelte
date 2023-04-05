@@ -27,10 +27,7 @@
           >What I've built
         </a>
 
-        <a
-          class="ff-sz-700"
-          href="{base}/contact"
-          id='go-read-my-blog'
+        <a class="ff-sz-700" href="{base}/contact" id="go-read-my-blog"
           >Read my blog
         </a>
       </section>

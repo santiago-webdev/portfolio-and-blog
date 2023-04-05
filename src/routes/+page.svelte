@@ -5,3 +5,9 @@
 
 <AboveTheFold />
 <BlogShowcase />
+
+<style>
+  :global(header) {
+    background-color: var(--bg-400);
+  }
+</style>

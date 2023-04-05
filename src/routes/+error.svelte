@@ -1,11 +1,11 @@
 <script lang="ts">
-    import { base } from '$app/paths'
+  import { base } from '$app/paths'
   import { page } from '$app/stores'
 </script>
 
 <section>
   <h1>404 {$page.error?.message}</h1>
-  <a class='shiny hover ff-sz-700' href="{base}/">Home</a>
+  <a class="shiny hover ff-sz-700" href="{base}/">Home</a>
 </section>
 
 <style>

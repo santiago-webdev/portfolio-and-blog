@@ -113,7 +113,6 @@
   header {
     top: 0;
     position: sticky;
-    background-color: var(--bg-400);
     transition: transform 0.3s ease-in-out;
     z-index: 999;
     padding: 0.4rem 0;
