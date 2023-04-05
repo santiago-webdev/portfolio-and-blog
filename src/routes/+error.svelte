@@ -10,9 +10,13 @@
 
 <style>
   section {
-    display: grid;
-    margin: auto;
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column wrap;
+    place-content: center;
+    margin-inline: auto;
     gap: 2rem;
+    width: min(100% - 1rem, var(--base));
   }
 
   a {
