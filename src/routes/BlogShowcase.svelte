@@ -63,6 +63,7 @@
 <style>
   section {
     padding: 3rem 0;
+    margin-inline: auto;
   }
 
   #blog {
