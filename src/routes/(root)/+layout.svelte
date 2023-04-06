@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores'
+  import ButtonToTheTop from '$lib/components/ButtonToTheTop.svelte'
   import Footer from '$lib/components/Footer.svelte'
   import NavigationBar from '$lib/components/NavigationBar.svelte'
   import Transition from '$lib/components/Transition.svelte'
@@ -10,6 +11,7 @@
   <Transition url={$page.url}>
     <slot />
   </Transition>
+  <ButtonToTheTop />
   <Footer />
 </div>
 

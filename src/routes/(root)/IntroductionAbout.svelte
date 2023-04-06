@@ -27,7 +27,7 @@
 <style>
   .about-me {
     width: min(100% - 1rem, var(--base));
-    margin: 1.5rem auto;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr;
     background-color: var(--bg-400);
@@ -40,18 +40,6 @@
     .about-me {
       grid-template-columns: 2fr 1fr;
     }
-  }
-
-  a.reverse {
-    display: flex;
-    place-items: center;
-    width: max-content;
-    padding: 0.4rem 0.8rem;
-    gap: 0.2rem;
-    border-radius: 999rem;
-    font-size: 98%;
-
-    font-variation-settings: 'wght' 550;
   }
 
   section {

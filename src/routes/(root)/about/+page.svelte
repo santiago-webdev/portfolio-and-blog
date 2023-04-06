@@ -2,7 +2,9 @@
   // <script context="module" lang="ts">
 </script>
 
-<h1>About me</h1>
+<main>
+  <h1>About me</h1>
+</main>
 
 <style>
 </style>

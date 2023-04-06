@@ -240,6 +240,15 @@
     border-radius: var(--radius);
     transition: background-color 50ms, border 80ms, box-shadow 300ms;
     color: var(--color);
+
+    display: flex;
+    place-items: center;
+    width: max-content;
+    padding: 0.4rem 0.8rem;
+    gap: 0.2rem;
+    border-radius: 999rem;
+
+    font-variation-settings: 'wght' 550;
   }
 
   .block {
