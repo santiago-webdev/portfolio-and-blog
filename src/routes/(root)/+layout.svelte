@@ -1,11 +1,15 @@
 <script lang="ts">
+  import { page } from '$app/stores'
   import Footer from '$lib/components/Footer.svelte'
   import NavigationBar from '$lib/components/NavigationBar.svelte'
+  import Transition from '$lib/components/Transition.svelte'
 </script>
 
 <div id="layout">
   <NavigationBar />
-  <slot />
+  <Transition url={$page.url}>
+    <slot />
+  </Transition>
   <Footer />
 </div>
 
