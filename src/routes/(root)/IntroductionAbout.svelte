@@ -17,7 +17,7 @@
     </div>
 
     <a class="reverse ff-sz-700" href="{base}/about"
-      >Learn more
+      >More about me
       <ChevronToArrow />
     </a>
   </section>
