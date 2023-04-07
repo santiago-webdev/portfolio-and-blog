@@ -2,7 +2,7 @@
   import { afterUpdate } from 'svelte'
 
   let scrollY = 0,
-    showElement = false
+    isNecessary = false
 
   const startObserving = () => {
     const main = document.querySelector('main')
@@ -11,7 +11,7 @@
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.target === main) {
-            showElement = !entry.isIntersecting
+            isNecessary = !entry.isIntersecting
           }
         })
       })
@@ -25,9 +25,8 @@
 
 <svelte:window bind:scrollY />
 
-<section class:showElement>
+<section class:isNecessary>
   <a
-    style:transform={showElement ? 'translateY(0)' : 'translateY(100px)'}
     on:click|preventDefault={() =>
       window.scrollTo({ top: 0, behavior: 'smooth' })}
     data-sveltekit-reload
@@ -48,12 +47,7 @@
     display: none;
   }
 
-  .showElement {
+  .isNecessary {
     display: flex;
-  }
-
-  /* TODO(santigo-zero): The transition doesn't work because of display: none */
-  a {
-    transition: translate 0.5s;
   }
 </style>
