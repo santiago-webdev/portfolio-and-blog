@@ -43,6 +43,7 @@
 
 <header
   style:border-bottom={expanded || scrollY ? '2px solid var(--dim-300)' : ''}
+  style:padding={scrollY ? '0.4rem 0' : '3rem 0'}
   bind:this={header}>
   <nav aria-label="primary-navigation" class="ff-sz-900">
     <a
@@ -95,9 +96,9 @@
   header {
     top: 0;
     position: sticky;
-    transition: transform 0.3s ease-in-out;
+    transition: padding 300ms cubic-bezier(0.07, 0.95, 0, 1),
+      transform 300ms ease-in-out;
     z-index: 999;
-    padding: 0.4rem 0;
   }
 
   a,
