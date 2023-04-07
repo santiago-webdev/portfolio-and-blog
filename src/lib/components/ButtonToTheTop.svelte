@@ -5,10 +5,19 @@
     showElement = false
 
   const startObserving = () => {
-    new IntersectionObserver(
-      (entries: IntersectionObserverEntry[]) =>
-        (showElement = entries[0].boundingClientRect.y < scrollY)
-    ).observe(document.querySelector('main')!)
+    const main = document.querySelector('main')
+
+    if (main) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.target === main) {
+            showElement = !entry.isIntersecting
+          }
+        })
+      })
+
+      observer.observe(main)
+    }
   }
 
   afterUpdate(() => startObserving())

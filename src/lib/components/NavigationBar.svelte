@@ -9,6 +9,7 @@
     scrollY = 0,
     savedY = 0,
     innerHeight = 0,
+    hideElement: boolean = false,
     header: HTMLElement
 
   const navItems = [
@@ -32,10 +33,24 @@
 
     const hideNav = () =>
       (header.style.transform =
-        !expanded && scrollY > savedY ? 'translateY(-200%)' : 'translateY(0)')
+        !expanded && hideElement && scrollY > savedY ? 'translateY(-200%)' : 'translateY(0)')
 
     window.addEventListener('scroll', hideNav)
     window.addEventListener('scroll', () => (savedY = scrollY))
+
+    const main = document.querySelector('main')
+
+    if (main) {
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.target === main) {
+            hideElement = !entry.isIntersecting
+          }
+        })
+      })
+
+      observer.observe(main)
+    }
   })
 </script>
 
@@ -43,7 +58,7 @@
 
 <header
   style:border-bottom={expanded || scrollY ? '2px solid var(--dim-300)' : ''}
-  style:padding={scrollY ? '0.4rem 0' : '3rem 0'}
+  style:padding={scrollY ? '0.4rem 0' : '1.5rem 0'}
   bind:this={header}>
   <nav aria-label="primary-navigation" class="ff-sz-900">
     <a
