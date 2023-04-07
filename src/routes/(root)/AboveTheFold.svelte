@@ -45,7 +45,7 @@
     display: flex;
     place-items: center;
     flex-flow: column;
-    width: min(100% - 1rem, var(--base));
+    width: min(100% - 1rem, var(--md));
     margin-inline: auto;
     gap: 2rem;
   }
