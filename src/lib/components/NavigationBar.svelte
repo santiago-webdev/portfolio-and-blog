@@ -33,7 +33,9 @@
 
     const hideNav = () =>
       (header.style.transform =
-        !expanded && hideElement && scrollY > savedY ? 'translateY(-200%)' : 'translateY(0)')
+        !expanded && hideElement && scrollY > savedY
+          ? 'translateY(-200%)'
+          : 'translateY(0)')
 
     window.addEventListener('scroll', hideNav)
     window.addEventListener('scroll', () => (savedY = scrollY))
