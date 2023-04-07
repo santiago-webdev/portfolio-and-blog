@@ -1,12 +1,12 @@
 <script lang="ts">
   import AboveTheFold from './AboveTheFold.svelte'
   import BlogShowcase from './BlogShowcase.svelte'
-  import IntroductionAbout from './IntroductionAbout.svelte'
+  import Introduction from './Introduction.svelte'
 </script>
 
 <AboveTheFold />
 <BlogShowcase />
-<IntroductionAbout />
+<Introduction />
 
 <style>
   :global(header) {
