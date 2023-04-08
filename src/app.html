@@ -26,6 +26,19 @@
         font-display: optional;
       }
     </style>
+    <script>
+      const doc = document.documentElement
+      if (
+        doc.dataset.theme === 'system' ||
+        doc.dataset.theme === 'system-light'
+      )
+        doc.setAttribute(
+          'data-theme',
+          window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'system' // Same as [data-theme='dark'] in +layout.svelte
+            : 'system-light' // Same as [data-theme='light'] in +layout.svelte
+        )
+    </script>
     %sveltekit.head%
   </head>
   <body id="body" data-sveltekit-preload-data="hover">
