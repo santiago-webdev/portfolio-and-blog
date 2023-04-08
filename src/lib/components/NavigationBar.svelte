@@ -3,6 +3,7 @@
   import { page } from '$app/stores'
   import { afterNavigate } from '$app/navigation'
   import { onMount } from 'svelte'
+  import ThemeSwitch from './ThemeSwitch.svelte'
 
   var expanded = false,
     onDesktop = false,
@@ -69,6 +70,7 @@
       aria-current={`${base}/` === $page.url.pathname ? 'page' : undefined}>
       Santiago Gonzalez</a>
     <div id="contextual">
+      <ThemeSwitch />
       {#if !onDesktop}
         <button
           aria-label="Click to expand navigation menu"
