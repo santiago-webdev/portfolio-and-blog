@@ -47,7 +47,7 @@
 
         if (!theme.startsWith('system')) return
         event.matches ? (theme = 'system') : (theme = 'system-light')
-        document.documentElement.dataset.theme = theme
+        doc.theme = theme
       })
   })
 </script>
