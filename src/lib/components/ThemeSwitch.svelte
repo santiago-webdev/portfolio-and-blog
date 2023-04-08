@@ -50,13 +50,13 @@
     pointer-events: none;
     /* margin-inline: auto; */
     display: flex;
-    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 300ms cubic-bezier(0.3, 0, 0.3, 1);
   }
 
   #sun {
     color: orangered;
     transform: rotate(90deg);
-    transform-origin: 50% 100px 0px;
+    transform-origin: 50% 6rem;
   }
 
   :global([data-theme='light'] #sun) {
@@ -66,7 +66,7 @@
   #moon {
     color: orange;
     transform: rotate(-90deg);
-    transform-origin: -50% -100px 0px;
+    transform-origin: -50% -6rem;
   }
 
   :global([data-theme='dark'] #moon) {
