@@ -7,12 +7,21 @@
   <section>
     <div>
       <a href="#introduction-about-me">
-        <h2>About</h2>
+        <h2>Santiago Gonzalez</h2>
       </a>
       <h3 style="color: inherit" class="ff-sz-800">Hello!</h3>
       <p>
-        I'm Santiago Gonzalez, a web developer based in Argentina, I'm
-        interested in Linux, UI/UX and Open Source.
+        I'm a web developer based in
+        <em>Argentina</em>
+        , with a passion for
+        <strong> Free And Open Source </strong>
+        ,
+        <strong> UI/UX </strong>
+        and
+        <strong> Linux </strong>
+        . I believe that technology should be accesible to everyone that's why I'm
+        always in the lookout to include every bit of my life experiences into my
+        projects.
       </p>
     </div>
 

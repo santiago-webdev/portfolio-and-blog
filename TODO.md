@@ -21,3 +21,5 @@ Make it smooth and put it in the sidebar in the desktop
 
 For the search modal box, close it when using the back arrow in the browser. And
 also add keyboard navigation with arrow keys.
+
+## Fix padding in button to top
