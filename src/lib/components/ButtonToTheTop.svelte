@@ -50,4 +50,9 @@
   .isNecessary {
     display: flex;
   }
+
+  a {
+    border-radius: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
 </style>
