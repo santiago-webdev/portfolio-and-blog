@@ -1,33 +1,6 @@
 <div class="wrapper-arrow">
-  <svg
-    id="arrow-tail"
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24">
-    <path
-      fill="none"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="M5 12h14" />
-  </svg>
-
-  <svg
-    id="arrow-head"
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24">
-    <path
-      fill="none"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-      d="m9 18l6-6l-6-6" />
-  </svg>
+  <iconify-icon id="arrow-tail" icon="lucide:minus" />
+  <iconify-icon id="arrow-head" icon="lucide:chevron-right" />
 </div>
 
 <style>
@@ -44,7 +17,7 @@
     top: 1px;
   }
 
-  svg:first-child {
+  iconify-icon:first-child {
     position: absolute;
   }
 
