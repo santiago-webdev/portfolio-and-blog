@@ -52,11 +52,15 @@
   })
 </script>
 
-<button class="shiny" on:click={click}>
-  <div class="theme-wrapper">
-    <iconify-icon width="24" id="sun" icon="lucide:sun" />
-    <iconify-icon width="24" id="moon" icon="lucide:moon" />
-    <iconify-icon width="24" id="system" icon="mdi:circle-half-full" />
+<button
+  on:click={click}
+  class="shiny"
+  aria-label="Theme switcher, current theme is {theme}"
+  title="Theme switcher: Switch between a dark or light theme, or leave it to the system to decide">
+  <div class="theme-wrapper" aria-hidden="true">
+    <iconify-icon id="sun" icon="lucide:sun" />
+    <iconify-icon id="moon" icon="lucide:moon" />
+    <iconify-icon id="system" icon="mdi:circle-half-full" />
   </div>
   Theme
 </button>
