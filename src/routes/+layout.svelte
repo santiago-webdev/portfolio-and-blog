@@ -66,7 +66,7 @@
     --bg-900: hsl(236 12% 28%);
 
     /* Transparent background colors */
-    --bg-trp-400: hsl(236 13% 19% / 94%);
+    --bg-trp-400: hsl(236 13% 19% / 88%);
     --bg-trp-600: hsl(236 12% 23% / 94%);
 
     /* For elements that have some kind of selection */

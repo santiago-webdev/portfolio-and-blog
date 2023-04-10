@@ -55,15 +55,22 @@
 <svelte:window bind:scrollY bind:innerHeight />
 
 <header
-  style:border-bottom={expanded || scrollY ? '2px solid var(--dim-600)' : ''}
-  style:padding={scrollY ? '0.4rem 0' : '1.5rem 0'}
+  style:border-bottom={expanded || scrollY ? '2px solid var(--dim-200)' : ''}
+  class:scrollY
   bind:this={header}>
   <nav aria-label="primary-navigation" class="ff-sz-900">
     <a
       href="{base}/"
-      aria-label="Logo of this site and link to Home"
+      aria-label="Home"
       aria-current={`${base}/` === $page.url.pathname ? 'page' : undefined}>
-      Santiago Gonzalez</a>
+      <img
+        style="width: 2rem"
+        aria-hidden="true"
+        src="/logo.svg"
+        alt="My personal logo"
+        title="My personal logo" />
+      <span class:scrollY>Santiago Gonzalez</span>
+    </a>
     <div id="contextual">
       <ThemeSwitch />
       {#if !onDesktop}
@@ -112,6 +119,13 @@
     transition: padding 300ms cubic-bezier(0.07, 0.95, 0, 1),
       transform 300ms ease-in-out;
     z-index: 999;
+    padding: 1.5rem 0;
+  }
+
+  header.scrollY {
+    padding: 0.2rem 0;
+    background-color: var(--bg-trp-400);
+    backdrop-filter: blur(6px);
   }
 
   a,
@@ -127,9 +141,25 @@
     display: flex;
     place-items: center;
     margin-inline: auto;
-    width: min(100% - 1rem, var(--lg));
+    width: min(100% - 1rem, var(--xl));
     justify-content: space-between;
     flex-flow: row wrap;
+  }
+
+  nav a:first-child {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 0.8rem;
+    font-variation-settings: 'wght' 660;
+  }
+
+  nav a:first-child span {
+    transition: opacity 150ms ease-in-out;
+    opacity: 1;
+  }
+
+  nav a:first-child span.scrollY {
+    opacity: 0;
   }
 
   #contextual {
