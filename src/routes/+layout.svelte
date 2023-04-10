@@ -136,10 +136,6 @@
     color: var(--txt-A);
   }
 
-  footer {
-    margin-top: auto;
-  }
-
   var {
     font: normal 1em/1.5 monospace;
     margin-top: 1px;

@@ -18,7 +18,7 @@
 <style>
   #layout {
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
   }
 </style>
