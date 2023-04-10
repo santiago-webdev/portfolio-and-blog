@@ -178,6 +178,7 @@
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
     background-color: var(--bg-400);
+    margin-top: 1rem ;
   }
 
   small,

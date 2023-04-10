@@ -41,7 +41,7 @@
   section {
     position: sticky;
     bottom: 1rem;
-    margin: 1rem auto;
+    margin-top: 1rem;
     width: min(100% - 1rem, var(--xl));
     justify-content: flex-end;
     display: none;
