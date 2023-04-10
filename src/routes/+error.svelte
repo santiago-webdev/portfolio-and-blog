@@ -6,7 +6,7 @@
 <section>
   <h1>404 - {$page.error?.message}</h1>
   <p>Something has gone wrong</p>
-  <a class="shiny hover ff-sz-700" href="{base}/">Home</a>
+  <a class="shiny hover" href="{base}/">Home</a>
 </section>
 
 <style>

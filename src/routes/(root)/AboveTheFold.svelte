@@ -16,14 +16,14 @@
       </p>
       <section>
         <a
-          class="shiny hover ff-sz-700"
+          class="shiny hover"
           href="{base}/"
           aria-label="Link to my projects"
           >What I've built
           <Forward />
         </a>
 
-        <a class="ff-sz-700 reverse" href="{base}/" id="go-read-my-blog"
+        <a class="reverse" href="{base}/" id="go-read-my-blog"
           >Read my blog
           <Forward />
         </a>

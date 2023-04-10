@@ -20,11 +20,11 @@
     </div>
 
     <div class="wrapper-introduction-links">
-      <a class="shiny ff-sz-700" href="{base}/about">
+      <a class="shiny" href="{base}/about">
         More about me
         <Forward />
       </a>
-      <a class="block ff-sz-700" href="{base}/about">
+      <a class="block" href="{base}/about">
         Want to get in touch?
         <Forward />
       </a>

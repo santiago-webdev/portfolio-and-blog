@@ -58,7 +58,7 @@
   style:border-bottom={expanded || scrollY ? '2px solid var(--dim-200)' : ''}
   class:scrollY
   bind:this={header}>
-  <nav aria-label="primary-navigation" class="ff-sz-900">
+  <nav aria-label="primary-navigation">
     <a
       href="{base}/"
       aria-label="Home"

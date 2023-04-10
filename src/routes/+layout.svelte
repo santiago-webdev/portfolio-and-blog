@@ -186,7 +186,6 @@
     /* line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem)); */
   }
 
-  .ff-sz-700,
   p {
     --range: clamp(0.8rem, 2vw + 1.5rem, 1.2rem);
     font-size: var(--range);
@@ -195,18 +194,10 @@
     font-variation-settings: 'wght' 400;
   }
 
-  .ff-sz-800,
   small {
     --range: clamp(0.5rem, 2vw + 1.5rem, 1rem);
     font-size: var(--range);
     line-height: calc(1.2 * var(--range));
-  }
-
-  .ff-sz-900 {
-    --range: clamp(0.8rem, 2vw + 1.5rem, 1.1rem);
-    font-size: var(--range);
-    line-height: calc(1.2 * var(--range));
-    color: var(--txt-A);
   }
 
   .trn-border {

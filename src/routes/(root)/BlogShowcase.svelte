@@ -33,7 +33,7 @@
   <!--     <h3>Latest Post</h3> -->
   <!--     <p> -->
   <!--       description -->
-  <!--       <button class="ff-sz-700">Read </button> -->
+  <!--       <button>Read </button> -->
   <!--     </p> -->
   <!--   </article> -->
   <!-- </a> -->
@@ -43,7 +43,7 @@
   <!--     <h3>Latest Post</h3> -->
   <!--     <p> -->
   <!--       description -->
-  <!--       <button class="ff-sz-700">Read </button> -->
+  <!--       <button>Read </button> -->
   <!--     </p> -->
   <!--   </article> -->
   <!-- </a> -->
@@ -53,7 +53,7 @@
   <!--     <h3>Latest Post</h3> -->
   <!--     <p> -->
   <!--       description -->
-  <!--       <button class="ff-sz-700">Read </button> -->
+  <!--       <button>Read </button> -->
   <!--     </p> -->
   <!--   </article> -->
   <!-- </a> -->
