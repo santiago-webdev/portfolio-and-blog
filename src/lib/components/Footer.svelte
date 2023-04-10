@@ -184,15 +184,13 @@
   small,
   button,
   li,
+  p,
+  h3,
   a {
     display: flex;
     place-items: center;
     gap: 0.5ch;
-    font-size: inherit;
-  }
-
-  h3 {
-    --range: var(--fz-3);
+    --range: var(--fz-2);
   }
 
   section {
@@ -215,18 +213,12 @@
 
   .footer-start h3 {
     font-variation-settings: 'wght' 600;
-    /* font-size: 110%; */
     text-indent: 0.6rem;
   }
 
   hr {
     margin-left: 0.6rem;
     width: 95%;
-  }
-
-  .aboutme h3 {
-    text-indent: 0;
-    /* --range: var(--fz-3); */
   }
 
   .footer-start p {
@@ -269,6 +261,11 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 50% 75%;
+  }
+
+  .aboutme h3 {
+    --range: var(--fz-3);
+    text-indent: 0;
   }
 
   nav {

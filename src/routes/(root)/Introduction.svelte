@@ -51,7 +51,6 @@
 
   p {
     --range: var(--fz-3);
-
     width: min(100% - 1rem, var(--sm));
   }
 

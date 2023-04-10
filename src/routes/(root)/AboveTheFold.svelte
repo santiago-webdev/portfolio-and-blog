@@ -15,10 +15,7 @@
           >web deve&shylopment</strong> and show you my projects while at it.
       </p>
       <section>
-        <a
-          class="shiny hover"
-          href="{base}/"
-          aria-label="Link to my projects"
+        <a class="shiny hover" href="{base}/" aria-label="Link to my projects"
           >What I've built
           <Forward />
         </a>
@@ -54,7 +51,7 @@
   }
 
   .introduction p {
-    --range: var(--fz-4)
+    --range: var(--fz-4);
   }
 
   section {

@@ -192,10 +192,9 @@
   }
 
   p {
-    --range: clamp(0.8rem, 2vw + 1.5rem, 1.2rem);
+    --range: var(--fz-4);
     font-size: var(--range);
     line-height: calc(1.2 * var(--range));
-
     font-variation-settings: 'wght' 400;
   }
 
