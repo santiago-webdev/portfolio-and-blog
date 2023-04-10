@@ -68,7 +68,7 @@
       </nav>
 
       <div class="relevant-projects">
-        <h3>Relevant Projects</h3>
+        <h3>Projects</h3>
         <ul>
           <li>
             <a class="shiny-select" target="_blank" href="https://zapzsh.org"
@@ -215,12 +215,12 @@
     flex-flow: column wrap;
     justify-content: space-between;
     padding: clamp(1rem, 3vw, 2rem) 0;
-    gap: 3rem;
+    gap: 1.6rem;
   }
 
   .footer-start h3 {
     font-variation-settings: 'wght' 600;
-    text-indent: 0.6rem;
+    margin-inline: 0.6rem;
     text-decoration: underline solid var(--dim-300) 2px;
     text-underline-offset: 3px;
   }
@@ -274,12 +274,13 @@
   }
 
   nav,
+  .aboutme,
   .relevant-projects,
   .donate,
   .contact {
     display: flex;
     flex-direction: column;
-    flex: 1;
+    min-width: calc(var(--xs) / 2);
   }
 
   ul li a {
