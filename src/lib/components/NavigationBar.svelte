@@ -55,7 +55,7 @@
 <svelte:window bind:scrollY bind:innerHeight />
 
 <header
-  style:border-bottom={expanded || scrollY ? '2px solid var(--dim-300)' : ''}
+  style:border-bottom={expanded || scrollY ? '2px solid var(--dim-600)' : ''}
   style:padding={scrollY ? '0.4rem 0' : '1.5rem 0'}
   bind:this={header}>
   <nav aria-label="primary-navigation" class="ff-sz-900">
