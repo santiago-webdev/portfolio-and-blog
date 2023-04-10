@@ -28,7 +28,7 @@
     /* 1920px */
 
     --fz-1: clamp(0.75rem, 2vw, 1rem);
-    --fz-2: clamp(1.2rem, 4vw, 1.8rem);
+    --fz-2: clamp(1.2rem, 4vw, 1.4rem);
     --fz-3: clamp(1.6rem, 6vw, 2.6rem);
     --fz-4: clamp(2rem, 9vw, 3.5rem);
     --fz-5: clamp(3rem, 13vw, 4.5rem);
@@ -159,6 +159,9 @@
   }
 
   a {
+    --range: var(--fz-2);
+    font-size: var(--range);
+    line-height: calc(1.2 * var(--range));
     color: var(--txt-A);
   }
 
@@ -222,6 +225,8 @@
     padding: 0.4rem 0.8rem;
     gap: 0.2rem;
     border-radius: 999rem;
+
+    font-variation-settings: 'wght' 550;
   }
 
   .shiny.less {
