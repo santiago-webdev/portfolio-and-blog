@@ -9,6 +9,7 @@
       <a href="#introduction-about-me">
         <h2>About</h2>
       </a>
+      <br />
       <p>
         I'm a web developer based in <em>Argentina</em>, with a passion for
         <strong>Free And Open Source</strong>,
