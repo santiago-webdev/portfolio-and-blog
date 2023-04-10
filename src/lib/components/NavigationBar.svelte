@@ -14,10 +14,7 @@
     header: HTMLElement
 
   const navItems = [
-    { label: 'Blog', href: `${base}/blog` },
-    { label: 'Projects', href: `${base}/projects` },
     { label: 'About', href: `${base}/about` },
-    { label: 'Contact', href: `${base}/contact`, classes: 'block' },
   ]
 
   afterNavigate(() => (expanded = false))

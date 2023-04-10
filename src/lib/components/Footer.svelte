@@ -33,10 +33,10 @@
 
   const browseItems = [
     { label: 'Home', href: `${base}/` },
-    { label: 'Blog', href: `${base}/blog` },
-    { label: 'Projects', href: `${base}/projects` },
+    { label: 'Blog', href: `${base}/` },
+    { label: 'Projects', href: `${base}/` },
     { label: 'About', href: `${base}/about` },
-    { label: 'Contact', href: `${base}/contact` },
+    { label: 'Contact', href: `${base}/` },
   ]
 </script>
 
@@ -178,7 +178,7 @@
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
     background-color: var(--bg-400);
-    margin-top: 1rem ;
+    margin-top: 1rem;
   }
 
   small,

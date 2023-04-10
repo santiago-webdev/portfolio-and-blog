@@ -22,12 +22,12 @@
       <section>
         <a
           class="shiny hover ff-sz-700"
-          href="{base}/projects"
+          href="{base}/"
           aria-label="Link to my projects"
           >What I've built
         </a>
 
-        <a class="ff-sz-700 reverse" href="{base}/contact" id="go-read-my-blog"
+        <a class="ff-sz-700 reverse" href="{base}/" id="go-read-my-blog"
           >Read my blog
         </a>
       </section>

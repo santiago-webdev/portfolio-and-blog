@@ -28,7 +28,7 @@
   <!--   </small> -->
   <!-- {/if} -->
   <section class="wider" id="blog">
-    <a href="/blog/latestpost1">
+    <a href="{base}/">
       <article class="shiny block">
         <h3>Latest Post</h3>
         <p>
@@ -38,7 +38,7 @@
       </article>
     </a>
 
-    <a href="/blog/latestpost2">
+    <a href="{base}/">
       <article class="shiny block">
         <h3>Latest Post</h3>
         <p>
@@ -48,7 +48,7 @@
       </article>
     </a>
 
-    <a href="/blog/latestpost3">
+    <a href="{base}/">
       <article class="shiny block">
         <h3>Latest Post</h3>
         <p>
