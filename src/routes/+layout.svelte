@@ -28,11 +28,12 @@
     /* 1920px */
 
     --fz-1: clamp(0.75rem, 2vw, 1rem);
-    --fz-2: clamp(1.2rem, 4vw, 1.4rem);
-    --fz-3: clamp(1.6rem, 6vw, 2.6rem);
-    --fz-4: clamp(2rem, 9vw, 3.5rem);
-    --fz-5: clamp(3rem, 13vw, 4.5rem);
-    --fz-6: clamp(3.3rem, 13vw, 5.6rem);
+    --fz-2: clamp(1rem, 3vw, 1.2rem);
+    --fz-3: clamp(1.3rem, 4vw, 1.6rem);
+    --fz-4: clamp(1.6rem, 6vw, 2.6rem);
+    --fz-5: clamp(2rem, 9vw, 3.5rem);
+    --fz-6: clamp(3rem, 13vw, 4.5rem);
+    --fz-7: clamp(3.3rem, 13vw, 5.6rem);
   }
 
   [data-theme='system'],
@@ -170,23 +171,24 @@
   }
 
   h1 {
-    --range: var(--fz-6);
+    --range: var(--fz-7);
     font-size: var(--range);
     line-height: calc(1.2 * var(--range));
     font-variation-settings: 'wght' 800;
   }
 
   h2 {
-    --range: var(--fz-5);
+    --range: var(--fz-6);
     font-size: var(--range);
     line-height: calc(1.2 * var(--range));
     font-variation-settings: 'wght' 700;
   }
 
   h3 {
-    font-weight: 500;
-    font-size: clamp(0.8rem, 2vw + 1.5rem, 1.75rem);
-    /* line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem)); */
+    --range: var(--fz-5);
+    font-size: var(--range);
+    line-height: calc(1.2 * var(--range));
+    font-variation-settings: 'wght' 500;
   }
 
   p {

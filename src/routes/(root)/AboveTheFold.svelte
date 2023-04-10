@@ -54,7 +54,7 @@
   }
 
   .introduction p {
-    --range: var(--fz-3)
+    --range: var(--fz-4)
   }
 
   section {

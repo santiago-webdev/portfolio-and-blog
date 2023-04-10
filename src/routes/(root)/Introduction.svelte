@@ -46,11 +46,11 @@
   }
 
   h2 {
-    --range: var(--fz-4);
+    --range: var(--fz-5);
   }
 
   p {
-    --range: var(--fz-2);
+    --range: var(--fz-3);
 
     width: min(100% - 1rem, var(--sm));
   }

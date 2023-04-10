@@ -191,6 +191,10 @@
     font-size: inherit;
   }
 
+  h3 {
+    --range: var(--fz-3);
+  }
+
   section {
     display: flex;
     margin-inline: auto;
@@ -211,7 +215,7 @@
 
   .footer-start h3 {
     font-variation-settings: 'wght' 600;
-    font-size: 110%;
+    /* font-size: 110%; */
     text-indent: 0.6rem;
   }
 
@@ -222,6 +226,7 @@
 
   .aboutme h3 {
     text-indent: 0;
+    /* --range: var(--fz-3); */
   }
 
   .footer-start p {

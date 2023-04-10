@@ -85,11 +85,11 @@
 
   .present p {
     width: min(100% - 1rem, 33ch);
-    --range: var(--fz-3);
+    --range: var(--fz-4);
   }
 
   .present a h2 {
-    --range: var(--fz-4);
+    --range: var(--fz-5);
   }
 
   /* article { */
