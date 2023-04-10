@@ -28,8 +28,8 @@
     /* 1920px */
 
     --fz-1: clamp(0.75rem, 2vw, 1rem);
-    --fz-2: clamp(1rem, 4vw, 1.5rem);
-    --fz-3: clamp(1.5rem, 6vw, 2.5rem);
+    --fz-2: clamp(1.2rem, 4vw, 1.8rem);
+    --fz-3: clamp(1.6rem, 6vw, 2.6rem);
     --fz-4: clamp(2rem, 9vw, 3.5rem);
     --fz-5: clamp(3rem, 13vw, 4.5rem);
     --fz-6: clamp(3.3rem, 13vw, 5.6rem);

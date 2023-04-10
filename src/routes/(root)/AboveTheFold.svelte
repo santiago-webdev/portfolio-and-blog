@@ -5,11 +5,6 @@
 
 <div class="wrapper">
   <main>
-    <img
-      class="hero"
-      src="/logo.svg"
-      title="Logo of the page representing my nickname santigo-zero"
-      alt="Logo of the page representing my nickname santigo-zero" />
     <div class="introduction">
       <h1>
         Building the web <br />
@@ -62,10 +57,6 @@
     --range: var(--fz-3)
   }
 
-  .hero {
-    max-width: 45%;
-  }
-
   section {
     display: flex;
     flex-flow: row wrap;
@@ -92,10 +83,6 @@
     p {
       max-width: 80%;
       margin-left: 0;
-    }
-
-    .hero {
-      max-width: 23%;
     }
   }
 </style>

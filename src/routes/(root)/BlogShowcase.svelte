@@ -8,9 +8,9 @@
       <h2>Check out my blog</h2>
     </a>
     <p>
-      I don't focus on just one subject, so here's a few of my posts. If you are
-      curious you can search for <a class="slide-forwards" href="{base}/blog"
-        >articles here</a>
+      If you are curious you can search for <a
+        class="slide-forwards"
+        href="{base}/blog">articles here</a>
       or using the modal with <kbd aria-keyshortcuts="Control+K">Ctrl K</kbd>.
     </p>
   </div>
@@ -28,35 +28,35 @@
   <!--   </small> -->
   <!-- {/if} -->
   <!-- <section id="blog"> -->
-    <!-- <a href="{base}/"> -->
-    <!--   <article class="shiny block"> -->
-    <!--     <h3>Latest Post</h3> -->
-    <!--     <p> -->
-    <!--       description -->
-    <!--       <button class="ff-sz-700">Read </button> -->
-    <!--     </p> -->
-    <!--   </article> -->
-    <!-- </a> -->
-    <!---->
-    <!-- <a href="{base}/"> -->
-    <!--   <article class="shiny block"> -->
-    <!--     <h3>Latest Post</h3> -->
-    <!--     <p> -->
-    <!--       description -->
-    <!--       <button class="ff-sz-700">Read </button> -->
-    <!--     </p> -->
-    <!--   </article> -->
-    <!-- </a> -->
-    <!---->
-    <!-- <a href="{base}/"> -->
-    <!--   <article class="shiny block"> -->
-    <!--     <h3>Latest Post</h3> -->
-    <!--     <p> -->
-    <!--       description -->
-    <!--       <button class="ff-sz-700">Read </button> -->
-    <!--     </p> -->
-    <!--   </article> -->
-    <!-- </a> -->
+  <!-- <a href="{base}/"> -->
+  <!--   <article class="shiny block"> -->
+  <!--     <h3>Latest Post</h3> -->
+  <!--     <p> -->
+  <!--       description -->
+  <!--       <button class="ff-sz-700">Read </button> -->
+  <!--     </p> -->
+  <!--   </article> -->
+  <!-- </a> -->
+  <!---->
+  <!-- <a href="{base}/"> -->
+  <!--   <article class="shiny block"> -->
+  <!--     <h3>Latest Post</h3> -->
+  <!--     <p> -->
+  <!--       description -->
+  <!--       <button class="ff-sz-700">Read </button> -->
+  <!--     </p> -->
+  <!--   </article> -->
+  <!-- </a> -->
+  <!---->
+  <!-- <a href="{base}/"> -->
+  <!--   <article class="shiny block"> -->
+  <!--     <h3>Latest Post</h3> -->
+  <!--     <p> -->
+  <!--       description -->
+  <!--       <button class="ff-sz-700">Read </button> -->
+  <!--     </p> -->
+  <!--   </article> -->
+  <!-- </a> -->
   <!-- </section> -->
 </section>
 
@@ -84,7 +84,8 @@
   }
 
   .present p {
-    width: min(100% - 1rem, 38ch);
+    width: min(100% - 1rem, 33ch);
+    --range: var(--fz-3);
   }
 
   .present a h2 {
