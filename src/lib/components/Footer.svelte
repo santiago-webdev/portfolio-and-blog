@@ -54,7 +54,6 @@
 
       <nav aria-label="footer-navigation">
         <h3>Sitemap</h3>
-        <hr />
         {#each browseItems as item}
           <a
             class="shiny-select"
@@ -68,9 +67,18 @@
         {/each}
       </nav>
 
+      <div class="relevant-projects">
+        <h3>Relevant Projects</h3>
+        <ul>
+          <li>
+            <a class="shiny-select" target="_blank" href="https://zapzsh.org"
+              >Zap website</a>
+          </li>
+        </ul>
+      </div>
+
       <div class="donate">
         <h3>Donate</h3>
-        <hr />
         <ul>
           {#each donateItems as item}
             <li>
@@ -98,7 +106,6 @@
 
       <div class="contact">
         <h3>Contact</h3>
-        <hr />
         <address>
           <a
             target="_blank"
@@ -214,11 +221,8 @@
   .footer-start h3 {
     font-variation-settings: 'wght' 600;
     text-indent: 0.6rem;
-  }
-
-  hr {
-    margin-left: 0.6rem;
-    width: 95%;
+    text-decoration: underline solid var(--dim-300) 2px;
+    text-underline-offset: 3px;
   }
 
   .footer-start p {
@@ -266,18 +270,20 @@
   .aboutme h3 {
     --range: var(--fz-3);
     text-indent: 0;
+    text-decoration: none;
   }
 
-  nav {
+  nav,
+  .relevant-projects,
+  .donate,
+  .contact {
     display: flex;
     flex-direction: column;
     flex: 1;
   }
 
-  .donate {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+  ul li a {
+    width: 100%;
   }
 
   .donate address {
@@ -286,12 +292,6 @@
     gap: 0.5ch;
     padding: 0;
     border-radius: 0;
-  }
-
-  .contact {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
   }
 
   @media screen and (min-width: 64rem) {

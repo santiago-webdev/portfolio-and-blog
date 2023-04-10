@@ -250,7 +250,7 @@
   .shiny-select {
     border: 1px solid transparent;
     padding: 0.3rem 0.6rem;
-    border-radius: 0.4rem;
+    border-radius: 0.6rem;
     color: var(--dim-700);
   }
 
