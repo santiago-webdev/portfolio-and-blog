@@ -10,6 +10,8 @@
     --ff-dflt: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont,
       'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
       'Segoe UI Emoji', 'Segoe UI Symbol';
+    --ff-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace,
+      SF Mono, Monaco, Droid Sans Mono, Source Code Pro, monospace;
 
     /* Breakpoints */
     --xs: 20rem;
@@ -137,7 +139,7 @@
   }
 
   var {
-    font: normal 1em/1.5 monospace;
+    font: normal 1em/1.5 var(--ff-mono);
     margin-top: 1px;
   }
 
