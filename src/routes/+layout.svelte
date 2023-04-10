@@ -174,8 +174,10 @@
   }
 
   h2 {
-    font-size: clamp(1.6rem, 2vw + 1.5rem, 2.84rem);
-    line-height: calc(1.5 * clamp(2.3rem, 2vw + 1.5rem, 3.6rem));
+    --range: var(--fz-5);
+    font-size: var(--range);
+    line-height: calc(1.2 * var(--range));
+    font-variation-settings: 'wght' 700;
   }
 
   h3 {

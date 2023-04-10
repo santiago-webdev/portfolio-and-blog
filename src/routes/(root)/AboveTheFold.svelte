@@ -58,6 +58,10 @@
     gap: 2rem;
   }
 
+  .introduction p {
+    --range: var(--fz-3)
+  }
+
   .hero {
     max-width: 45%;
   }
@@ -67,10 +71,6 @@
     flex-flow: row wrap;
     gap: 1rem;
     margin-right: auto;
-  }
-
-  p {
-    margin-inline: auto;
   }
 
   a {

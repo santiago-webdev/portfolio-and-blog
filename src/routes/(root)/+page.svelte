@@ -1,13 +1,13 @@
 <script lang="ts">
   import AboveTheFold from './AboveTheFold.svelte'
-  // import BlogShowcase from './BlogShowcase.svelte'
+  import BlogShowcase from './BlogShowcase.svelte'
   import Introduction from './Introduction.svelte'
   import site from '$lib/site.json'
 </script>
 
 <AboveTheFold />
 <br />
-<!-- <BlogShowcase /> -->
+<BlogShowcase />
 <Introduction />
 
 <svelte:head>
