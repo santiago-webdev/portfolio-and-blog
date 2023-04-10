@@ -124,8 +124,13 @@
 
   header.scrollY {
     padding: 0.2rem 0;
-    background-color: var(--bg-trp-400);
-    backdrop-filter: blur(6px);
+  }
+
+  @media screen and (min-width: 90rem) {
+    header.scrollY {
+      backdrop-filter: blur(6px);
+      background-color: var(--bg-trp-400);
+    }
   }
 
   a,
