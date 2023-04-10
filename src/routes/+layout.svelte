@@ -26,6 +26,13 @@
     /* 1440px */
     --xl: 120rem;
     /* 1920px */
+
+    --fz-1: clamp(0.75rem, 2vw, 1rem);
+    --fz-2: clamp(1rem, 4vw, 1.5rem);
+    --fz-3: clamp(1.5rem, 6vw, 2.5rem);
+    --fz-4: clamp(2rem, 9vw, 3.5rem);
+    --fz-5: clamp(3rem, 13vw, 4.5rem);
+    --fz-6: clamp(3.3rem, 13vw, 5.6rem);
   }
 
   [data-theme='system'],
@@ -159,31 +166,22 @@
     font-variation-settings: 'wght' 660;
   }
 
-  .ff-sz-100,
   h1 {
-    --range: clamp(3rem, 2vw + 1.5rem, 6rem);
+    --range: var(--fz-6);
     font-size: var(--range);
-    line-height: calc(1 * var(--range));
+    line-height: calc(1.2 * var(--range));
     font-variation-settings: 'wght' 800;
   }
 
-  .ff-sz-200,
   h2 {
     font-size: clamp(1.6rem, 2vw + 1.5rem, 2.84rem);
     line-height: calc(1.5 * clamp(2.3rem, 2vw + 1.5rem, 3.6rem));
   }
 
-  .ff-sz-300,
   h3 {
     font-weight: 500;
     font-size: clamp(0.8rem, 2vw + 1.5rem, 1.75rem);
     /* line-height: calc(1.5 * clamp(2.3rem, 8vw, 3.6rem)); */
-  }
-
-  .ff-sz-400 {
-    --range: clamp(0.6rem, 2vw + 1.5rem, 1.6rem);
-    font-size: var(--range);
-    line-height: calc(1.2 * var(--range));
   }
 
   .ff-sz-700,
