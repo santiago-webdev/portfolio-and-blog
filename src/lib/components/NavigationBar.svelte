@@ -13,9 +13,7 @@
     hideElement: boolean = false,
     header: HTMLElement
 
-  const navItems = [
-    { label: 'About', href: `${base}/about` },
-  ]
+  const navItems = [{ label: 'About', href: `${base}/about` }]
 
   afterNavigate(() => (expanded = false))
   onMount(() => {
@@ -87,7 +85,6 @@
               ? 'page'
               : undefined}
             aria-label="Link to {item.label}"
-            class={item.classes}
             href={item.href}>{item.label}</a>
         {/each}
       {/if}

@@ -28,16 +28,24 @@
     </style>
     <script>
       const doc = document.documentElement
-      if (
-        doc.dataset.theme === 'system' ||
-        doc.dataset.theme === 'system-light'
-      )
+      const storedTheme = localStorage.getItem('theme')
+
+      if (storedTheme) doc.setAttribute('data-theme', storedTheme)
+      else
         doc.setAttribute(
           'data-theme',
           window.matchMedia('(prefers-color-scheme: dark)').matches
             ? 'system' // Same as [data-theme='dark'] in +layout.svelte
             : 'system-light' // Same as [data-theme='light'] in +layout.svelte
         )
+
+      window.addEventListener('load', () => {
+        const storedData = localStorage.getItem('myData')
+        if (storedData) {
+          doc.setAttribute('data-theme', storedTheme)
+        }
+        // Code to set the theme based on localStorage data goes here
+      })
     </script>
     %sveltekit.head%
   </head>

@@ -29,10 +29,15 @@
     document.cookie = `theme=${theme}; expires=${expireDate.toUTCString()}; path=/; SameSite=None; secure=true;`
   }
 
+  function setThemeLocalStorage() {
+    localStorage.setItem('theme', theme)
+  }
+
   function click() {
     toggleTheme()
     document.documentElement.dataset.theme = theme
     setThemeCookie()
+    setThemeLocalStorage()
   }
 
   onMount(() => {
