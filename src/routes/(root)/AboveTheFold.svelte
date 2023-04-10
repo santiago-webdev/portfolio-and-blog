@@ -1,5 +1,6 @@
 <script lang="ts">
   import { base } from '$app/paths'
+  import Forward from '$lib/components/Forward.svelte'
 </script>
 
 <div class="wrapper">
@@ -15,9 +16,8 @@
         <span>&&</span> clean interfaces
       </h1>
       <p>
-        I'm a web developer and here we'll discuss about <strong>
-          web deve&shylopment
-        </strong> and show you my projects while at it.
+        I'm a web developer and here we'll discuss about <strong
+          >web deve&shylopment</strong> and show you my projects while at it.
       </p>
       <section>
         <a
@@ -25,10 +25,12 @@
           href="{base}/"
           aria-label="Link to my projects"
           >What I've built
+          <Forward />
         </a>
 
         <a class="ff-sz-700 reverse" href="{base}/" id="go-read-my-blog"
           >Read my blog
+          <Forward />
         </a>
       </section>
     </div>

@@ -212,7 +212,7 @@
   }
 
   .shiny {
-    --background: var(--bg-600);
+    --background: var(--bg-700);
     --border: var(--bg-800);
     background-color: var(--background);
     border: 1px solid var(--background);
@@ -222,6 +222,13 @@
 
     border-radius: var(--radius);
     transition: background-color 50ms, border 80ms, box-shadow 300ms;
+
+    display: flex;
+    place-items: center;
+    width: max-content;
+    padding: 0.4rem 0.8rem;
+    gap: 0.2rem;
+    border-radius: 999rem;
   }
 
   .shiny.less {
@@ -307,6 +314,13 @@
 
     border-radius: 0.8rem;
     transition: background-color 50ms, border 80ms, box-shadow 300ms;
+
+    display: flex;
+    place-items: center;
+    width: max-content;
+    padding: 0.4rem 0.8rem;
+    gap: 0.2rem;
+    border-radius: 999rem;
   }
 
   @media (hover: hover) {
