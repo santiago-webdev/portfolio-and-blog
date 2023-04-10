@@ -43,8 +43,8 @@
 <footer class="ff-sz-900">
   <div class="footer-start">
     <section>
-      <div class="ff-sz-700 shiny aboutme">
-        <!-- <img src="/logo.svg" alt="My personal logo" title="My personal logo" /> -->
+      <div class="ff-sz-700 aboutme">
+        <img src="/logo.svg" alt="My personal logo" title="My personal logo" />
         <h3>Santiago Gonzalez</h3>
         <p class="ff-sz-700">
           I'm a web developer that can help you craft accessible website
@@ -240,10 +240,16 @@
     flex-flow: column wrap;
     flex: 2;
     gap: 1rem;
-    --background: var(--bg-500);
-    --border: var(--bg-600);
     padding: 2rem;
     border-radius: 1rem;
+
+    --background: var(--bg-500);
+    --border: var(--bg-600);
+    background-color: var(--background);
+    border: 1px solid var(--background);
+    border-top-color: var(--border);
+    border-left-color: var(--border);
+    box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
   }
 
   .aboutme:after {

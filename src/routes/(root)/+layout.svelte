@@ -12,7 +12,7 @@
     <slot />
   </Transition>
   <ButtonToTheTop />
-  <!-- <Footer /> -->
+  <Footer />
 </div>
 
 <style>
