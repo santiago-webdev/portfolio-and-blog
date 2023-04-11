@@ -355,9 +355,10 @@
     transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
 
     text-align: left;
-    width: min(100% - 1rem, var(--base));
+    /* width: min(100% - 1rem, var(--base)); */
+    margin-right: auto;
     color: var(--dim-700);
-    margin-inline: auto;
+    /* margin-inline: auto; */
     font-variation-settings: 'wght' 650;
   }
 

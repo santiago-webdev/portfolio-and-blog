@@ -37,9 +37,8 @@
 
 <section>
   <main>
-    <div class="wrapper-header wider">
-      <a class="slide-backwards" id="backtoblog" href="{base}/blog"
-        >Back to blog</a>
+    <div class="wrapper-header">
+      <a class="slide-backwards" href="{base}/blog">Back to blog</a>
       {#if isHollow}
         <h1>
           <Hollow color={'var(--txt-A)'}>{hollowPrefix}</Hollow>
@@ -70,7 +69,7 @@
       {/if}
     </div>
   </main>
-  <article class="wide">
+  <article>
     <slot />
   </article>
 </section>
@@ -135,13 +134,5 @@
     place-items: center;
     justify-content: center;
     flex-wrap: wrap;
-  }
-
-  #backtoblog {
-    text-align: left;
-    width: min(100% - 1rem, var(--base));
-    color: var(--dim-700);
-    margin-inline: auto;
-    font-variation-settings: 'wght' 600;
   }
 </style>
