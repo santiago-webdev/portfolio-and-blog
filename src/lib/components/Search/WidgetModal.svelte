@@ -78,7 +78,6 @@
 </button>
 
 <dialog
-  class="shiny"
   on:close={() => (value = '')}
   on:cancel={() => (value = '')}
   bind:this={modal}>
@@ -154,7 +153,6 @@
     place-items: center;
     gap: 0.4rem;
 
-    padding: 0.4rem 0.8rem;
     border-radius: 0.8rem;
   }
 
@@ -173,11 +171,20 @@
   }
 
   :modal {
+    --background: var(--bg-600);
+    --border: var(--bg-800);
+    background-color: var(--background);
+    border: 1px solid var(--background);
+    border-top-color: var(--border);
+    border-left-color: var(--border);
+
     padding: 0;
     margin: 0;
     min-width: 100%;
     min-height: 100%;
-    border-radius: 0;
+
+    transition: background-color 50ms, border 80ms, box-shadow 300ms;
+    font-variation-settings: 'wght' 500;
   }
 
   :modal::backdrop {
@@ -196,7 +203,6 @@
 
     :modal::backdrop {
       backdrop-filter: blur(30px);
-      cursor: pointer;
     }
   }
 
@@ -228,6 +234,7 @@
   input {
     border: none;
     outline: none;
+    background-color: inherit;
     width: 100%;
   }
 
@@ -244,9 +251,20 @@
     gap: 0.4rem;
   }
 
+  h3 {
+    --range: var(--fz-3);
+    color: var(--txt-A);
+  }
+
+  p {
+    --range: var(--fz-2);
+    color: var(--txt-A);
+  }
+
   a {
     display: grid;
     place-items: start;
+    --range: var(--fz-3);
   }
 
   hr {

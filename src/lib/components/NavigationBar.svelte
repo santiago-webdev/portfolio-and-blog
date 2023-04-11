@@ -4,6 +4,7 @@
   import { afterNavigate } from '$app/navigation'
   import { onMount } from 'svelte'
   import ThemeSwitch from './ThemeSwitch.svelte'
+  import WidgetModal from './Search/WidgetModal.svelte'
 
   var expanded = false,
     onDesktop = false,
@@ -75,6 +76,7 @@
       <span class:scrollY>Santiago Gonzalez</span>
     </a>
     <div id="contextual">
+      <WidgetModal />
       <ThemeSwitch />
       {#if !onDesktop}
         <button
