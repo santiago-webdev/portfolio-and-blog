@@ -160,7 +160,9 @@
   }
 
   a,
-  span {
+  input,
+  form,
+  li span {
     --range: var(--fz-2);
     font-size: var(--range);
     line-height: calc(1.2 * var(--range));
@@ -370,6 +372,10 @@
     transform: translateX(-0.5ch);
   }
 
+  small {
+    color: var(--dim-700);
+  }
+
   hr {
     width: 100%;
     margin: 0;
@@ -377,6 +383,18 @@
     border-left: 0;
     border-right: 0;
     border: 1px solid var(--dim-250);
+  }
+
+  pre {
+    width: min(100% - 1rem, var(--base));
+    background-color: var(--bg-400);
+    word-wrap: break-word;
+    white-space: pre-wrap;
+    overflow: auto;
+    border-radius: 0.6rem;
+    padding: 1rem;
+    font-size: clamp(0.8rem, 8vw, 1.2rem);
+    font-family: var(--ff-mono);
   }
 
   kbd {

@@ -36,7 +36,7 @@
 
   const browseItems = [
     { label: 'Home', href: `${base}/` },
-    { label: 'Blog', href: `${base}/` },
+    { label: 'Blog', href: `${base}/blog` },
     { label: 'Projects', href: `${base}/` },
     { label: 'About', href: `${base}/about` },
     { label: 'Contact', href: `${base}/` },
@@ -203,6 +203,7 @@
     place-items: center;
     gap: 0.5ch;
     --range: var(--fz-2);
+    color: inherit;
   }
 
   section {

@@ -20,7 +20,7 @@
           <Forward />
         </a>
 
-        <a class="reverse" href="{base}/" id="go-read-my-blog"
+        <a class="reverse" href="{base}/blog" id="go-read-my-blog"
           >Read my blog
           <Forward />
         </a>
