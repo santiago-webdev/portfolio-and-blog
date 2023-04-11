@@ -159,7 +159,8 @@
     padding: 0;
   }
 
-  a {
+  a,
+  span {
     --range: var(--fz-2);
     font-size: var(--range);
     line-height: calc(1.2 * var(--range));
