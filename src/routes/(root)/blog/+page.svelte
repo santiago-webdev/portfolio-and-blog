@@ -7,6 +7,7 @@
 
 <main>
   <BlogHeader />
+  <br />
   <SearchBar />
 </main>
 <FilteredPostsCards />

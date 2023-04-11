@@ -4,7 +4,6 @@
   import { afterNavigate } from '$app/navigation'
   import { onMount } from 'svelte'
   import ThemeSwitch from './ThemeSwitch.svelte'
-  import WidgetModal from './Search/WidgetModal.svelte'
 
   var expanded = false,
     onDesktop = false,
@@ -77,7 +76,6 @@
     </a>
     <div id="contextual">
       <ThemeSwitch />
-      <WidgetModal />
       {#if !onDesktop}
         <button
           aria-label="Click to expand navigation menu"
