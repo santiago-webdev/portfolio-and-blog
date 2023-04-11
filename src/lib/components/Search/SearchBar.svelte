@@ -94,6 +94,7 @@
   }
 
   input {
+    --range: var(--fz-3);
     border: none;
     outline: none;
     width: 100%;

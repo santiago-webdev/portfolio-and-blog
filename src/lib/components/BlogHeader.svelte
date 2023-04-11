@@ -7,7 +7,8 @@
 </p>
 
 <style>
-  h1,p {
+  h1,
+  p {
     text-align: center;
   }
 

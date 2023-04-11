@@ -48,7 +48,7 @@
       {:else}
         <h1>{title}</h1>
       {/if}
-      <p>{description}</p>
+      <p style="--range: var(--fz-3)">{description}</p>
       {#if !finished}
         <div class="wip">
           <small>🏗 Construction site, keep out 🚧</small>
