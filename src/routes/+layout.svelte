@@ -170,6 +170,10 @@
     color: var(--txt-A);
   }
 
+  button[disabled] {
+    color: var(--dim-300);
+  }
+
   strong {
     font-variation-settings: 'wght' 660;
   }
