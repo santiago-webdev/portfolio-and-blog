@@ -64,7 +64,7 @@
     overflow: hidden;
     margin-inline: auto;
     position: relative;
-    border-radius: 1.2rem;
+    border-radius: 1rem;
     width: min(100% - 1rem, var(--sm));
   }
 
@@ -98,7 +98,7 @@
     border: none;
     outline: none;
     width: 100%;
-    padding: 0.6rem 1.3rem 0.6rem 0;
+    padding: 0.3rem 0;
   }
 
   input:focus::placeholder {
@@ -108,7 +108,7 @@
   button {
     display: grid;
     place-items: center;
-    padding-inline: 1.3rem 0.8rem;
+    padding-inline: 0.8rem;
   }
 
   kbd {
