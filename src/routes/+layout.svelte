@@ -222,7 +222,6 @@
 
     display: flex;
     place-items: center;
-    width: max-content;
     padding: 0.4rem 0.8rem;
     gap: 0.2rem;
     border-radius: 999rem;
@@ -296,7 +295,6 @@
 
     display: flex;
     place-items: center;
-    width: max-content;
     padding: 0.4rem 0.8rem;
     gap: 0.2rem;
     border-radius: 999rem;
@@ -316,7 +314,6 @@
 
     display: flex;
     place-items: center;
-    width: max-content;
     padding: 0.4rem 0.8rem;
     gap: 0.2rem;
     border-radius: 999rem;

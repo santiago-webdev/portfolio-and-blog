@@ -65,7 +65,7 @@
     display: flex;
     place-items: center;
     place-content: center;
-    padding: clamp(1rem, 1.5vw, 2rem) clamp(2rem, 3vw, 3rem);
+    padding: clamp(1rem, 3vw, 2rem) clamp(2rem, 6vw, 3rem);
     gap: 0.2rem;
     border-radius: 999rem;
   }
