@@ -77,7 +77,6 @@
     </a>
     <div id="contextual">
       <WidgetModal />
-      <ThemeSwitch />
       {#if !onDesktop}
         <button
           aria-label="Click to expand navigation menu"
@@ -89,6 +88,7 @@
             icon={expanded ? 'lucide:x' : 'lucide:align-justify'} />
         </button>
       {:else}
+        <ThemeSwitch />
         {#each navItems as item}
           <a
             aria-current={item.href === $page.url.pathname ||
@@ -102,6 +102,7 @@
       {/if}
     </div>
     <section style:display={expanded ? 'flex' : 'none'}>
+      <ThemeSwitch />
       {#each navItems as item}
         <hr />
         <a
@@ -176,7 +177,7 @@
     display: flex;
     flex-flow: row wrap;
     place-items: center;
-    gap: 2rem;
+    gap: 0.8rem;
   }
 
   section {
