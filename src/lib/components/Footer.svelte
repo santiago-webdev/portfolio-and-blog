@@ -2,6 +2,10 @@
   import { dev } from '$app/environment'
   import { base } from '$app/paths'
   import { page } from '$app/stores'
+  import { afterUpdate } from 'svelte'
+
+  let ghStars = 0,
+    onAboutPage = false
 
   const getGithubStars = async () => {
     if (dev) return 0
@@ -20,7 +24,6 @@
     }
   }
 
-  let ghStars = 0
   getGithubStars().then(stars => (ghStars = stars))
 
   const donateItems = [
@@ -38,12 +41,14 @@
     { label: 'About', href: `${base}/about` },
     { label: 'Contact', href: `${base}/` },
   ]
+
+  afterUpdate(() => (onAboutPage = $page.url.pathname === `${base}/about`))
 </script>
 
 <footer>
   <div class="footer-start">
     <section>
-      <div class="aboutme">
+      <div style:display={onAboutPage ? 'none' : 'flex'} class="aboutme">
         <img src="/logo.svg" alt="My personal logo" title="My personal logo" />
         <h3>Santiago Gonzalez</h3>
         <p>

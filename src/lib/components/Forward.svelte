@@ -14,6 +14,7 @@
     place-items: center;
     position: relative;
     left: 0.1rem;
+    top: 1px;
   }
 
   iconify-icon:first-child {
