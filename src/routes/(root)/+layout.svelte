@@ -1,16 +1,21 @@
 <script lang="ts">
-  import { page } from '$app/stores'
   import ButtonToTheTop from '$lib/components/ButtonToTheTop.svelte'
   import Footer from '$lib/components/Footer.svelte'
   import NavigationBar from '$lib/components/NavigationBar.svelte'
-  import Transition from '$lib/components/Transition.svelte'
+  import { fly } from 'svelte/transition'
+
+  export let data
 </script>
 
 <div id="layout">
   <NavigationBar />
-  <Transition url={$page.url}>
-    <slot />
-  </Transition>
+  {#key data.pathname}
+    <div
+      in:fly={{ y: -30, duration: 200, delay: 150 }}
+      out:fly={{ y: -30, duration: 200 }}>
+      <slot />
+    </div>
+  {/key}
   <ButtonToTheTop />
   <Footer />
 </div>

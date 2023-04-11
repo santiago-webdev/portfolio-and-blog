@@ -35,8 +35,8 @@
   })
 </script>
 
-<main>
-  <header>
+<section>
+  <main>
     <div class="wrapper-header wider">
       <a class="slide-backwards" id="backtoblog" href="{base}/blog"
         >Back to blog</a>
@@ -69,11 +69,11 @@
         </small>
       {/if}
     </div>
-  </header>
+  </main>
   <article class="wide">
     <slot />
   </article>
-</main>
+</section>
 
 <svelte:head>
   <title>{title}{site.title_blog_append}</title>
@@ -104,7 +104,7 @@
 </svelte:head>
 
 <style>
-  header {
+  main {
     background-color: var(--bg-400);
   }
 

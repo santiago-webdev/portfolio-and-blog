@@ -21,7 +21,11 @@
     </div>
 
     <div class="wrapper-introduction-links">
-      <a class="shiny" href="{base}/about">
+      <a
+        class="shiny"
+        data-sveltekit-noscroll
+        data-sveltekit-reload
+        href="{base}/about">
         More about me
         <Forward />
       </a>

@@ -2,7 +2,7 @@
   import { afterUpdate } from 'svelte'
 
   let scrollY = 0,
-    isNecessary = false
+    isNotNecessary = false
 
   const startObserving = () => {
     const main = document.querySelector('main')
@@ -11,7 +11,7 @@
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.target === main) {
-            isNecessary = !entry.isIntersecting
+            isNotNecessary = entry.isIntersecting
           }
         })
       })
@@ -25,11 +25,11 @@
 
 <svelte:window bind:scrollY />
 
-<section class:isNecessary>
+<section class:isNotNecessary>
   <a
     on:click|preventDefault={() =>
       window.scrollTo({ top: 0, behavior: 'smooth' })}
-    data-sveltekit-reload
+    data-sveltekit-replacestate
     class="reverse"
     href="#body">
     <iconify-icon icon="lucide:arrow-up" />
@@ -44,11 +44,11 @@
     margin-top: 1rem;
     width: min(100% - 1rem, var(--xl));
     justify-content: flex-end;
-    display: none;
+    display: flex;
   }
 
-  .isNecessary {
-    display: flex;
+  .isNotNecessary {
+    display: none;
   }
 
   a {
