@@ -141,8 +141,8 @@
     flex-flow: column wrap;
     height: 100%;
     overflow: hidden;
-    background-color: var(--bg-350);
-    border: 1px solid var(--bg-700);
+    background-color: var(--sc-20);
+    border: 1px solid var(--sc-40);
   }
 
   article hr {
@@ -150,7 +150,7 @@
   }
 
   article:hover {
-    background-color: var(--bg-400);
+    background-color: var(--sc-25);
   }
 
   article h3 {
@@ -162,7 +162,7 @@
     display: grid;
     grid-template-rows: 1fr 1fr auto;
     gap: 1rem;
-    background-color: var(--clr-bg-300);
+    background-color: var(--clr-sc-15);
     /* padding: 1.5rem; */
     /* padding-top: 1rem; */
   }

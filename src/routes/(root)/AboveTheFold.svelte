@@ -31,7 +31,7 @@
 
 <style>
   .wrapper {
-    background-color: var(--bg-400);
+    background-color: var(--sc-25);
     padding: 3rem 0;
   }
 

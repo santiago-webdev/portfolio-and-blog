@@ -59,7 +59,7 @@
 <svelte:window bind:scrollY bind:innerHeight />
 
 <header
-  style:border-bottom={expanded || scrollY ? '2px solid var(--dim-200)' : ''}
+  style:border-bottom={expanded || scrollY ? '2px solid var(--sc-55)' : ''}
   class:scrollY
   bind:this={header}>
   <nav aria-label="primary-navigation">
@@ -89,6 +89,7 @@
         </button>
       {:else}
         <ThemeSwitch />
+        <div role='separator' aria-orientation='vertical'></div>
         {#each navItems as item}
           <a
             aria-current={item.href === $page.url.pathname ||

@@ -174,8 +174,8 @@
   }
 
   :modal {
-    --background: var(--bg-600);
-    --border: var(--bg-800);
+    --background: var(--sc-35);
+    --border: var(--sc-45);
     background-color: var(--background);
     border: 1px solid var(--background);
     border-top-color: var(--border);

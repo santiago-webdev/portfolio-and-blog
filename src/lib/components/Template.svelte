@@ -105,7 +105,7 @@
 
 <style>
   main {
-    background-color: var(--bg-400);
+    background-color: var(--sc-25);
   }
 
   article,

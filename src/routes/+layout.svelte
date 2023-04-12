@@ -48,32 +48,31 @@
     --txt-hover: hsl(220 20% 70%);
     --txt-clicked: hsl(228 70% 80%);
 
-    /* Midground colors: this set of colors have enough contrast with both
-     * foreground and background colors, it's being used mainly for outlines,
-     * but it could be used for text, hover states, as a fill color or for text
-     * depending on the situation.
-     * */
-    --dim-100: hsl(236 12% 25%);
-    --dim-150: hsl(236 12% 27%);
-    --dim-200: hsl(236 12% 30%);
-    --dim-250: hsl(236 12% 35%);
-    --dim-300: hsl(236 12% 40%);
-    --dim-400: hsl(236 12% 50%);
-    --dim-500: hsl(236 12% 55%);
-    --dim-600: hsl(236 12% 60%);
-    --dim-700: hsl(236 12% 70%);
+    --sc-10: hsl(236 12% 14%);
+    --sc-15: hsl(236 12% 16%);
+    --sc-20: hsl(236 12% 18%);
+    --sc-25: hsl(236 12% 19%);
+    --sc-30: hsl(236 12% 21%);
+    --sc-35: hsl(236 12% 23%);
+    --sc-40: hsl(236 12% 24%);
+    --sc-45: hsl(236 12% 26%);
+    --sc-50: hsl(236 12% 28%);
+    --sc-55: hsl(236 12% 30%);
 
-    /* Background colors */
-    --bg-100: hsl(236 12% 12%);
-    --bg-200: hsl(236 12% 14%);
-    --bg-300: hsl(236 12% 16%);
-    --bg-350: hsl(236 12% 18%);
-    --bg-400: hsl(236 12% 19%);
-    --bg-500: hsl(236 12% 21%);
-    --bg-600: hsl(236 12% 23%);
-    --bg-700: hsl(236 12% 24%);
-    --bg-800: hsl(236 12% 26%);
-    --bg-900: hsl(236 12% 28%);
+    --sc-60: hsl(236 12% 35%);
+    --sc-65: hsl(236 12% 40%);
+    --sc-70: hsl(236 12% 45%);
+    --sc-75: hsl(236 12% 50%);
+    --sc-80: hsl(236 12% 55%);
+    --sc-85: hsl(236 12% 60%);
+    --sc-90: hsl(236 12% 65%);
+    --sc-95: hsl(236 12% 70%);
+
+    --sc-100: hsl(236 56% 86%);
+    --sc-100: hsl(236 54% 87%);
+    --sc-100: hsl(236 52% 90%);
+    --sc-100: hsl(236 50% 94%);
+    --sc-100: hsl(236 48% 96%);
 
     /* Transparent background colors */
     --bg-trp-400: hsl(236 13% 19% / 88%);
@@ -91,58 +90,11 @@
     --bg-select-900: hsl(240 10% 70%);
   }
 
-  [data-theme='system-light'],
-  [data-theme='light'] {
-    color-scheme: light;
-
-    --txt-A: hsl(270 2% 25%);
-    --txt-B: hsl(270 4% 26%);
-    --txt-C: hsl(270 6% 27%);
-    --txt-F: hsl(270 13% 30%);
-    --txt-G: hsl(270 8% 26%);
-
-    --txt-hover: hsl(240 0% 0%);
-    --txt-clicked: hsl(220 30% 30%);
-
-    --dim-100: hsl(210 5% 76%);
-    --dim-150: hsl(210 5% 74%);
-    --dim-200: hsl(210 5% 72%);
-    --dim-300: hsl(210 5% 45%);
-    --dim-400: hsl(210 5% 50%);
-    --dim-500: hsl(210 5% 55%);
-    --dim-600: hsl(210 5% 60%);
-    --dim-700: hsl(210 5% 70%);
-
-    --bg-100: hsl(210 5% 70%);
-    --bg-200: hsl(210 5% 72%);
-    --bg-300: hsl(210 10% 84%);
-    --bg-400: hsl(210 10% 86%);
-    --bg-500: hsl(210 10% 88%);
-    --bg-600: hsl(210 10% 90%);
-    --bg-700: hsl(210 10% 60%);
-    --bg-800: hsl(210 10% 90%);
-    --bg-900: hsl(210 10% 92%);
-
-    --trp-bg-100: hsl(240 9% 7% / 94%);
-    --trp-bg-200: hsl(240 9% 11% / 94%);
-    --trp-bg-300: hsl(240 9% 15% / 94%);
-    --trp-bg-400: hsl(240 9% 19% / 94%);
-    --trp-bg-600: hsl(240 8% 23% / 94%);
-    --trp-bg-700: hsl(240 8% 27% / 94%);
-    --trp-bg-800: hsl(240 8% 31% / 94%);
-    --trp-bg-900: hsl(240 8% 35% / 94%);
-
-    --bg-select-100: hsl(240 10% 35%);
-    --bg-select-200: hsl(240 10% 40%);
-    --bg-select-300: hsl(240 10% 42%);
-    --bg-select-400: hsl(240 10% 44%);
-  }
-
   html {
     scroll-behavior: smooth;
     color-scheme: light dark;
     font-family: var(--ff-dflt);
-    background-color: var(--bg-200);
+    background-color: var(--sc-10);
     color: var(--txt-A);
   }
 
@@ -171,7 +123,7 @@
   }
 
   button[disabled] {
-    color: var(--dim-300);
+    color: var(--sc-65);
   }
 
   strong {
@@ -217,8 +169,8 @@
   }
 
   .shiny {
-    --background: var(--bg-700);
-    --border: var(--bg-800);
+    --background: var(--sc-40);
+    --border: var(--sc-45);
     background-color: var(--background);
     border: 1px solid var(--background);
     border-top-color: var(--border);
@@ -238,8 +190,8 @@
   }
 
   .shiny.less {
-    --background: var(--bg-400);
-    --border: var(--bg-500);
+    --background: var(--sc-25);
+    --border: var(--sc-30);
   }
 
   .shiny.float {
@@ -248,8 +200,8 @@
 
   @media (hover: hover) {
     .shiny.hover:hover {
-      --background: var(--bg-700);
-      --border: var(--bg-900);
+      --background: var(--sc-40);
+      --border: var(--sc-50);
       box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
     }
   }
@@ -258,12 +210,12 @@
     border: 1px solid transparent;
     padding: 0.3rem 0.6rem;
     border-radius: 0.6rem;
-    color: var(--dim-700);
+    color: var(--sc-95);
   }
 
   input[type='radio']:checked + .shiny-select:active,
   input[type='radio']:checked + .shiny-select {
-    --background: var(--bg-300);
+    --background: var(--sc-15);
     --border: var(--bg-select-200);
     --color: var(--txt-A);
     background-color: var(--background);
@@ -289,7 +241,7 @@
   .reverse {
     --background: var(--txt-A);
     --border: var(--txt-C);
-    --color: var(--bg-200);
+    --color: var(--sc-10);
 
     background-color: var(--background);
     border: 1px solid var(--background);
@@ -311,8 +263,8 @@
   }
 
   .block {
-    --background: var(--bg-200);
-    --border: var(--bg-700);
+    --background: var(--sc-10);
+    --border: var(--sc-40);
     background-color: var(--background);
     border: 1px solid var(--border);
     box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
@@ -329,8 +281,8 @@
 
   @media (hover: hover) {
     .block.hover:hover {
-      --background: var(--bg-100);
-      --border: var(--bg-100);
+      --background: var(--sc-10);
+      --border: var(--sc-10);
 
       box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
     }
@@ -342,7 +294,7 @@
   }
 
   .bordered:hover {
-    --border: var(--dim-300);
+    --border: var(--sc-65);
   }
 
   [aria-current='page'] {
@@ -350,7 +302,7 @@
   }
 
   [aria-orientation='vertical'][role='separator']:empty {
-    border-left: 1px solid var(--dim-100);
+    border-left: 1px solid var(--sc-60);
     height: 2rem;
   }
 
@@ -361,7 +313,7 @@
     text-align: left;
     /* width: min(100% - 1rem, var(--base)); */
     margin-right: auto;
-    color: var(--dim-700);
+    color: var(--sc-95);
     /* margin-inline: auto; */
     font-variation-settings: 'wght' 650;
   }
@@ -385,7 +337,7 @@
   }
 
   small {
-    color: var(--dim-600)
+    color: var(--sc-85);
   }
 
   time {
@@ -399,12 +351,12 @@
     border-top: 0;
     border-left: 0;
     border-right: 0;
-    border: 1px solid var(--dim-250);
+    border: 1px solid var(--sc-60);
   }
 
   pre {
     width: min(100% - 1rem, var(--base));
-    background-color: var(--bg-400);
+    background-color: var(--sc-25);
     word-wrap: break-word;
     white-space: pre-wrap;
     overflow: auto;
@@ -419,7 +371,7 @@
     padding-inline: 0.3rem;
 
     border-radius: 0.4rem;
-    background-color: var(--dim-250);
+    background-color: var(--sc-60);
     text-transform: uppercase;
     font-size: 90%;
     font-weight: bold;

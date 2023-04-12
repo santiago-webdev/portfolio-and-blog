@@ -102,7 +102,7 @@
 
   input::placeholder,
   form button {
-    color: var(--dim-600);
+    color: var(--sc-85);
   }
 
   input:focus::placeholder {

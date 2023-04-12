@@ -54,7 +54,7 @@
 <style>
   button {
     display: flex;
-    color: var(--dim-700);
+    color: var(--sc-95);
     /* outline: 3px hotpink solid; */
   }
 
@@ -63,7 +63,7 @@
     flex-flow: column wrap;
     place-content: center;
     place-items: start;
-    background-color: var(--bg-300);
+    background-color: var(--sc-15);
   }
 
   section {
@@ -90,7 +90,7 @@
     --range: var(--fz-2);
     display: flex;
     place-items: center;
-    border: 1px solid var(--dim-700);
+    border: 1px solid var(--sc-95);
     border-radius: 1rem;
     padding: 0.6rem 1.2rem;
     gap: 0.6rem;
