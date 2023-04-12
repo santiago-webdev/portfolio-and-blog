@@ -46,6 +46,7 @@
     modal.addEventListener('click', event => {
       if (event.target === modal) {
         modal.close()
+        document.body.style.overflow = ''
       }
     })
 
