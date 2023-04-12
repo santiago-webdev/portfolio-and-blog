@@ -385,7 +385,12 @@
   }
 
   small {
-    color: var(--dim-700);
+    color: var(--dim-600)
+  }
+
+  time {
+    display: flex;
+    place-items: center;
   }
 
   hr {
