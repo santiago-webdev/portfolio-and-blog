@@ -16,8 +16,10 @@
 
   const toggleModal = () =>
     modal.open
-      ? (modal.close(), (value = ''))
-      : (modal.showModal(), input.focus())
+      ? (modal.close(), (document.body.style.overflow = ''), (value = ''))
+      : (modal.showModal(),
+        (document.body.style.overflow = 'hidden'),
+        input.focus())
 
   function keydown(event: KeyboardEvent) {
     let { key, ctrlKey, repeat } = event
