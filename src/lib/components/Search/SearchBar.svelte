@@ -121,12 +121,7 @@
   }
 
   kbd {
-    display: grid;
-    place-items: center;
     position: absolute;
     right: 1.3rem;
-    height: 100%;
-    pointer-events: none;
-    background-color: transparent;
   }
 </style>
