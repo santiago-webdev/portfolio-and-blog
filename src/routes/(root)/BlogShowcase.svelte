@@ -23,61 +23,64 @@
     <a href="{base}/blog{$Posts[0].href}">
       <article>
         <h3>{$Posts[0].title}</h3>
+        <hr />
         <p>
           {$Posts[0].description}
-          {#if $Posts[0].datetime}
-            <small>
-              <time datetime={$Posts[0].datetime}>
-                <iconify-icon icon="lucide:calendar" />: {relativeTime(
-                  new Date(),
-                  new Date($Posts[0].datetime)
-                )}
-                <div aria-orientation="vertical" role="separator">•</div>
-                {readableDate($Posts[0].datetime)}
-              </time>
-            </small>
-          {/if}
         </p>
+        {#if $Posts[0].datetime}
+          <small>
+            <time datetime={$Posts[0].datetime}>
+              <iconify-icon icon="lucide:calendar" />: {relativeTime(
+                new Date(),
+                new Date($Posts[0].datetime)
+              )}
+              <div aria-orientation="vertical" role="separator">•</div>
+              {readableDate($Posts[0].datetime)}
+            </time>
+          </small>
+        {/if}
       </article>
     </a>
     <a href="{base}/blog{$Posts[1].href}">
       <article>
         <h3>{$Posts[1].title}</h3>
+        <hr />
         <p>
           {$Posts[1].description}
-          {#if $Posts[1].datetime}
-            <small>
-              <time datetime={$Posts[1].datetime}>
-                <iconify-icon icon="lucide:calendar" />: {relativeTime(
-                  new Date(),
-                  new Date($Posts[1].datetime)
-                )}
-                <div aria-orientation="vertical" role="separator">•</div>
-                {readableDate($Posts[1].datetime)}
-              </time>
-            </small>
-          {/if}
         </p>
+        {#if $Posts[1].datetime}
+          <small>
+            <time datetime={$Posts[1].datetime}>
+              <iconify-icon icon="lucide:calendar" />: {relativeTime(
+                new Date(),
+                new Date($Posts[1].datetime)
+              )}
+              <div aria-orientation="vertical" role="separator">•</div>
+              {readableDate($Posts[1].datetime)}
+            </time>
+          </small>
+        {/if}
       </article>
     </a>
     <a href="{base}/blog{$Posts[2].href}">
       <article>
         <h3>{$Posts[2].title}</h3>
+        <hr />
         <p>
           {$Posts[2].description}
-          {#if $Posts[2].datetime}
-            <small>
-              <time datetime={$Posts[2].datetime}>
-                <iconify-icon icon="lucide:calendar" />: {relativeTime(
-                  new Date(),
-                  new Date($Posts[2].datetime)
-                )}
-                <div aria-orientation="vertical" role="separator">•</div>
-                {readableDate($Posts[2].datetime)}
-              </time>
-            </small>
-          {/if}
         </p>
+        {#if $Posts[2].datetime}
+          <small>
+            <time datetime={$Posts[2].datetime}>
+              <iconify-icon icon="lucide:calendar" />: {relativeTime(
+                new Date(),
+                new Date($Posts[2].datetime)
+              )}
+              <div aria-orientation="vertical" role="separator">•</div>
+              {readableDate($Posts[2].datetime)}
+            </time>
+          </small>
+        {/if}
       </article>
     </a>
   </div>
@@ -107,12 +110,16 @@
   }
 
   .present p {
-    width: min(100% - 1rem, 33ch);
-    --range: var(--fz-4);
+    width: min(100% - 1rem, 40ch);
+    text-align: center;
   }
 
   .present a h2 {
     --range: var(--fz-5);
+  }
+
+  h3 {
+    font-variation-settings: 'wght' 650;
   }
 
   h3,
@@ -130,12 +137,16 @@
     padding: 1rem;
     border-radius: 0.8rem;
     display: grid;
-    grid-template-rows: auto 1fr;
+    grid-template-rows: auto auto 1fr auto;
     flex-flow: column wrap;
     height: 100%;
     overflow: hidden;
     background-color: var(--bg-350);
     border: 1px solid var(--bg-700);
+  }
+
+  article hr {
+    margin: 0.6rem 0;
   }
 
   article:hover {
@@ -150,14 +161,16 @@
   article p {
     display: grid;
     grid-template-rows: 1fr 1fr auto;
-    gap: var(--gap);
+    gap: 1rem;
     background-color: var(--clr-bg-300);
-    padding: calc(var(--gap) * 1.5);
-    padding-top: var(--gap);
+    /* padding: 1.5rem; */
+    /* padding-top: 1rem; */
   }
 
   article time {
     display: flex;
     flex-flow: row wrap;
+
+    font-variation-settings: 'wght' 500;
   }
 </style>

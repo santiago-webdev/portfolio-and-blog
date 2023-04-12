@@ -239,7 +239,7 @@
 
   .shiny.less {
     --background: var(--bg-400);
-    --border: var(--bg-600);
+    --border: var(--bg-500);
   }
 
   .shiny.float {
