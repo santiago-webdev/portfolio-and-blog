@@ -89,7 +89,7 @@
         </button>
       {:else}
         <ThemeSwitch />
-        <div role='separator' aria-orientation='vertical'></div>
+        <div role="separator" aria-orientation="vertical" />
         {#each navItems as item}
           <a
             aria-current={item.href === $page.url.pathname ||

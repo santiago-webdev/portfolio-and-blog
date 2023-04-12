@@ -67,7 +67,7 @@
           </time>
         </small>
       {/if}
-      <br>
+      <br />
     </div>
   </main>
   <article>
