@@ -1,5 +1,8 @@
 <script>
   import { base } from '$app/paths'
+  import Forward from '$lib/components/Forward.svelte'
+  import { Posts } from '$lib/components/Search/store'
+  import { readableDate, relativeTime } from '$lib/utils/utils'
 </script>
 
 <section id="blog-showcase">
@@ -14,50 +17,70 @@
       or using the modal with <kbd aria-keyshortcuts="Control+K">Ctrl K</kbd>.
     </p>
   </div>
-
-  <!-- {#if $Posts[0].datetime} -->
-  <!--   <small> -->
-  <!--     <time datetime={$Posts[0].datetime}> -->
-  <!--       <iconify-icon icon="lucide:calendar" />: {relativeTime( -->
-  <!--         new Date(), -->
-  <!--         new Date($Posts[0].datetime) -->
-  <!--       )} -->
-  <!--       <div aria-orientation="vertical" role="separator">•</div> -->
-  <!--       {readableDate($Posts[0].datetime)} -->
-  <!--     </time> -->
-  <!--   </small> -->
-  <!-- {/if} -->
-  <!-- <section id="blog"> -->
-  <!-- <a href="{base}/"> -->
-  <!--   <article class="shiny block"> -->
-  <!--     <h3>Latest Post</h3> -->
-  <!--     <p> -->
-  <!--       description -->
-  <!--       <button>Read </button> -->
-  <!--     </p> -->
-  <!--   </article> -->
-  <!-- </a> -->
-  <!---->
-  <!-- <a href="{base}/"> -->
-  <!--   <article class="shiny block"> -->
-  <!--     <h3>Latest Post</h3> -->
-  <!--     <p> -->
-  <!--       description -->
-  <!--       <button>Read </button> -->
-  <!--     </p> -->
-  <!--   </article> -->
-  <!-- </a> -->
-  <!---->
-  <!-- <a href="{base}/"> -->
-  <!--   <article class="shiny block"> -->
-  <!--     <h3>Latest Post</h3> -->
-  <!--     <p> -->
-  <!--       description -->
-  <!--       <button>Read </button> -->
-  <!--     </p> -->
-  <!--   </article> -->
-  <!-- </a> -->
-  <!-- </section> -->
+  <br />
+  <!-- TODO(santigo-zero): Put time at the end of the card -->
+  <div class="latest-articles">
+    <a href="{base}/blog{$Posts[0].href}">
+      <article>
+        <h3>{$Posts[0].title}</h3>
+        <p>
+          {$Posts[0].description}
+          {#if $Posts[0].datetime}
+            <small>
+              <time datetime={$Posts[0].datetime}>
+                <iconify-icon icon="lucide:calendar" />: {relativeTime(
+                  new Date(),
+                  new Date($Posts[0].datetime)
+                )}
+                <div aria-orientation="vertical" role="separator">•</div>
+                {readableDate($Posts[0].datetime)}
+              </time>
+            </small>
+          {/if}
+        </p>
+      </article>
+    </a>
+    <a href="{base}/blog{$Posts[1].href}">
+      <article>
+        <h3>{$Posts[1].title}</h3>
+        <p>
+          {$Posts[1].description}
+          {#if $Posts[1].datetime}
+            <small>
+              <time datetime={$Posts[1].datetime}>
+                <iconify-icon icon="lucide:calendar" />: {relativeTime(
+                  new Date(),
+                  new Date($Posts[1].datetime)
+                )}
+                <div aria-orientation="vertical" role="separator">•</div>
+                {readableDate($Posts[1].datetime)}
+              </time>
+            </small>
+          {/if}
+        </p>
+      </article>
+    </a>
+    <a href="{base}/blog{$Posts[2].href}">
+      <article>
+        <h3>{$Posts[2].title}</h3>
+        <p>
+          {$Posts[2].description}
+          {#if $Posts[2].datetime}
+            <small>
+              <time datetime={$Posts[2].datetime}>
+                <iconify-icon icon="lucide:calendar" />: {relativeTime(
+                  new Date(),
+                  new Date($Posts[2].datetime)
+                )}
+                <div aria-orientation="vertical" role="separator">•</div>
+                {readableDate($Posts[2].datetime)}
+              </time>
+            </small>
+          {/if}
+        </p>
+      </article>
+    </a>
+  </div>
 </section>
 
 <style>
@@ -92,47 +115,49 @@
     --range: var(--fz-5);
   }
 
-  /* article { */
-  /*   display: grid; */
-  /*   grid-template-rows: auto 1fr; */
-  /*   flex-flow: column wrap; */
-  /*   height: 100%; */
-  /*   overflow: hidden; */
-  /*   background-color: var(--bg-350); */
-  /*   border: 1px solid var(--bg-700); */
-  /* } */
+  h3,
+  p {
+    --range: var(--fz-3);
+  }
 
-  /* article:hover { */
-  /*   background-color: var(--bg-400); */
-  /* } */
+  .latest-articles {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
 
-  /* article h3 { */
-  /*   padding: var(--gap); */
-  /*   padding-inline: calc(var(--gap) * 1.5); */
-  /* } */
+  article {
+    padding: 1rem;
+    border-radius: 0.8rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    flex-flow: column wrap;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--bg-350);
+    border: 1px solid var(--bg-700);
+  }
 
-  /* article p { */
-  /*   display: grid; */
-  /*   grid-template-rows: 1fr 1fr auto; */
-  /*   gap: var(--gap); */
-  /*   background-color: var(--clr-bg-300); */
-  /*   padding: calc(var(--gap) * 1.5); */
-  /*   padding-top: var(--gap); */
-  /* } */
+  article:hover {
+    background-color: var(--bg-400);
+  }
 
-  /* article time { */
-  /*   display: flex; */
-  /*   flex-flow: row wrap; */
-  /* } */
+  article h3 {
+    padding: var(--gap);
+    padding-inline: calc(var(--gap) * 1.5);
+  }
 
-  /* button { */
-  /*   display: flex; */
-  /*   flex-flow: row; */
-  /*   width: fit-content; */
-  /*   height: min-content; */
-  /* } */
+  article p {
+    display: grid;
+    grid-template-rows: 1fr 1fr auto;
+    gap: var(--gap);
+    background-color: var(--clr-bg-300);
+    padding: calc(var(--gap) * 1.5);
+    padding-top: var(--gap);
+  }
 
-  /* button:hover { */
-  /*   color: inherit; */
-  /* } */
+  article time {
+    display: flex;
+    flex-flow: row wrap;
+  }
 </style>
