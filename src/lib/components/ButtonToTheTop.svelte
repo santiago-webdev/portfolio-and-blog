@@ -7,17 +7,19 @@
   const startObserving = () => {
     const main = document.querySelector('main')
 
-    if (main) {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.target === main) {
-            isNotNecessary = entry.isIntersecting
-          }
-        })
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.target === main) {
+          isNotNecessary = entry.isIntersecting
+        }
       })
+    })
 
+    if (main) {
       observer.observe(main)
     }
+
+    return observer.disconnect
   }
 
   afterUpdate(() => startObserving())
