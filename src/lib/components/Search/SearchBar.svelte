@@ -89,7 +89,6 @@
   input,
   input::placeholder,
   button {
-    color: inherit;
     background-color: inherit;
   }
 
@@ -101,8 +100,18 @@
     padding: 0.3rem 0;
   }
 
+  input::placeholder,
+  form button {
+    color: var(--dim-600);
+  }
+
   input:focus::placeholder {
     color: transparent;
+  }
+
+  input,
+  form:focus-within button {
+    color: inherit;
   }
 
   button {
