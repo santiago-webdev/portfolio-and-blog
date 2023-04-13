@@ -119,6 +119,7 @@
 
   .wrapper-header {
     gap: 1rem;
+    text-align: center;
   }
 
   .wrapper-header p {
