@@ -11,8 +11,8 @@
   <NavigationBar />
   {#key data.pathname}
     <div
-      in:fly={{ y: -30, duration: 200, delay: 150 }}
-      out:fly={{ y: -30, duration: 200 }}>
+      in:fly={{ y: -60, duration: 300, delay: 300 }}
+      out:fly={{ y: -60, duration: 300 }}>
       <slot />
     </div>
   {/key}
