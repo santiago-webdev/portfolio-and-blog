@@ -225,7 +225,7 @@ input[type='radio']:checked + .shiny-select {
   text-align: left;
   /* width: min(100% - 1rem, var(--base)); */
   margin-right: auto;
-  color: var(--sc-95);
+  color: var(--sc-85);
   /* margin-inline: auto; */
   font-variation-settings: 'wght' 650;
 }
@@ -274,6 +274,7 @@ pre {
   overflow: auto;
   border-radius: 0.6rem;
   padding: 1rem;
+  margin: 1rem 0;
   font-size: clamp(0.8rem, 8vw, 1.2rem);
   font-family: var(--ff-mono);
 }

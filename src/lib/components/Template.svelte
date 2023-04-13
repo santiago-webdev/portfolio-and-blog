@@ -106,6 +106,8 @@
 <style>
   main {
     background-color: var(--sc-25);
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
   }
 
   article,
