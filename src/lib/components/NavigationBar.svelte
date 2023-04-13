@@ -11,8 +11,8 @@
     scrollY = 0,
     savedY = 0,
     innerHeight = 0,
-    hideElement: boolean = false,
-    header: HTMLElement
+    hideElement = false,
+    hideHeader = false
 
   const navItems = [
     { label: 'Blog', href: `${base}/blog` },
@@ -31,14 +31,10 @@
 
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-    const hideNav = () =>
-      (header.style.transform =
-        !expanded && hideElement && scrollY > savedY
-          ? 'translateY(-200%)'
-          : 'translateY(0)')
-
-    window.addEventListener('scroll', hideNav)
-    window.addEventListener('scroll', () => (savedY = scrollY))
+    window.addEventListener('scroll', () => {
+      hideHeader = !expanded && hideElement && scrollY > savedY
+      savedY = scrollY
+    })
 
     const main = document.querySelector('main')
 
@@ -58,10 +54,7 @@
 
 <svelte:window bind:scrollY bind:innerHeight />
 
-<header
-  style:border-bottom={expanded || scrollY ? '2px solid var(--sc-55)' : ''}
-  class:scrollY
-  bind:this={header}>
+<header class:expanded class:scrollY class:hideHeader>
   <nav aria-label="primary-navigation">
     <a
       href="{base}/"
@@ -127,6 +120,15 @@
       transform 300ms ease-in-out;
     z-index: 999;
     padding: 1.5rem 0;
+  }
+
+  header.hideHeader {
+    transform: translateY(-200%);
+  }
+
+  header.expanded,
+  header.scrollY {
+    border-bottom: 2px solid var(--sc-55);
   }
 
   header.scrollY {
