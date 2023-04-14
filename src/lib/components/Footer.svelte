@@ -49,15 +49,17 @@
       <nav aria-label="footer-navigation">
         <h3>Sitemap</h3>
         {#each $navigationItems as item}
-          <a
-            class="shiny-select {item.classes}"
-            aria-current={item.href === $page.url.pathname ||
-            ($page.url.pathname.startsWith(item.href || '') &&
-              `/` !== item.href)
-              ? 'page'
-              : undefined}
-            aria-label="Link to {item.label}"
-            href={item.href}>{item.label}</a>
+          {#if item.label !== 'Separator'}
+            <a
+              class="shiny-select {item.classes}"
+              aria-current={item.href === $page.url.pathname ||
+              ($page.url.pathname.startsWith(item.href || '') &&
+                `/` !== item.href)
+                ? 'page'
+                : undefined}
+              aria-label="Link to {item.label}"
+              href={item.href}>{item.label}</a>
+          {/if}
         {/each}
       </nav>
 

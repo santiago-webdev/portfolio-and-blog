@@ -55,7 +55,7 @@
         <br />
         <nav>
           {#each $navigationItems as item}
-            {#if item.label !== 'Contact'}
+            {#if item.label !== 'Separator' && item.label !== 'Contact'}
               <a
                 class="shiny-select"
                 aria-current={item.href === $page.url.pathname ||

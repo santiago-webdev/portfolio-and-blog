@@ -80,7 +80,9 @@
         <ThemeSwitch />
         <div role="separator" aria-orientation="vertical" />
         {#each $navigationItems as item}
-          {#if item.label !== 'Home'}
+          {#if item.label === 'Separator'}
+            <div role="separator" aria-orientation="vertical" />
+          {:else if item.label !== 'Home'}
             <a
               class={item.classes}
               aria-current={item.href === $page.url.pathname ||
