@@ -5,6 +5,7 @@
   import { onMount } from 'svelte'
   import ThemeSwitch from './ThemeSwitch.svelte'
   import WidgetModal from './Search/WidgetModal.svelte'
+    import { navigationItems } from './navigation/store'
 
   var expanded = false,
     onDesktop = false,
@@ -13,12 +14,6 @@
     innerHeight = 0,
     hideElement = false,
     hideHeader = false
-
-  const navItems = [
-    { label: 'Blog', href: `${base}/blog` },
-    { label: 'About', href: `${base}/about` },
-    { label: 'Contact', href: `${base}/contact`, classes: 'block' },
-  ]
 
   afterNavigate(() => (expanded = false))
   onMount(() => {
@@ -84,7 +79,7 @@
       {:else}
         <ThemeSwitch />
         <div role="separator" aria-orientation="vertical" />
-        {#each navItems as item}
+        {#each $navigationItems as item}
           <a
             class={item.classes}
             aria-current={item.href === $page.url.pathname ||
@@ -99,7 +94,7 @@
     </div>
     <section style:display={expanded ? 'flex' : 'none'}>
       <ThemeSwitch />
-      {#each navItems as item}
+      {#each $navigationItems as item}
         <hr />
         <a
           class="shiny-select"
