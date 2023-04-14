@@ -99,15 +99,18 @@
     <section style:display={expanded ? 'flex' : 'none'}>
       <ThemeSwitch />
       {#each $navigationItems as item}
-        <hr />
-        <a
-          class="shiny-select"
-          aria-current={item.href === $page.url.pathname ||
-          ($page.url.pathname.startsWith(item.href || '') && `/` !== item.href)
-            ? 'page'
-            : undefined}
-          aria-label="Link to {item.label}"
-          href={item.href}>{item.label}</a>
+        {#if item.label !== 'Separator'}
+          <hr />
+          <a
+            class="shiny-select"
+            aria-current={item.href === $page.url.pathname ||
+            ($page.url.pathname.startsWith(item.href || '') &&
+              `/` !== item.href)
+              ? 'page'
+              : undefined}
+            aria-label="Link to {item.label}"
+            href={item.href}>{item.label}</a>
+        {/if}
       {/each}
     </section>
   </nav>
