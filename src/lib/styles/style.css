@@ -181,14 +181,13 @@ input[type='radio']:checked + .shiny-select {
   border: 1px solid var(--border);
   box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
 
-  border-radius: 0.8rem;
   transition: background-color 50ms, border 80ms, box-shadow 300ms;
 
   display: flex;
   place-items: center;
   padding: 0.4rem 0.8rem;
   gap: 0.2rem;
-  border-radius: 999rem;
+  border-radius: 0.8rem;
 }
 
 @media (hover: hover) {

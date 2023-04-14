@@ -91,12 +91,14 @@
   }
 
   .wrapper-contact {
+    --border: var(--sc-40);
+    background-color: var(--sc-15);
+    border: 1px solid var(--border);
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 38rem), 1fr));
     padding: 3rem;
     gap: 2rem;
-    background-color: var(--sc-15);
     border-radius: 1.6rem;
   }
 

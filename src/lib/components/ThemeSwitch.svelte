@@ -73,13 +73,13 @@
 <style>
   button {
     /* cursor: pointer; */
-    border-radius: 0.8rem;
     overflow: hidden;
     /* height: 2.4rem; */
     /* width: 2.4rem; */
     display: flex;
     flex-flow: row;
     padding: 0.4rem 0.8rem;
+    border-radius: 0.8rem;
     gap: 0.4rem;
   }
 

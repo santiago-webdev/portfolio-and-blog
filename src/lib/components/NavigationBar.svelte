@@ -17,6 +17,7 @@
   const navItems = [
     { label: 'Blog', href: `${base}/blog` },
     { label: 'About', href: `${base}/about` },
+    { label: 'Contact', href: `${base}/contact`, classes: 'block' },
   ]
 
   afterNavigate(() => (expanded = false))
@@ -85,6 +86,7 @@
         <div role="separator" aria-orientation="vertical" />
         {#each navItems as item}
           <a
+            class={item.classes}
             aria-current={item.href === $page.url.pathname ||
             ($page.url.pathname.startsWith(item.href || '') &&
               `/` !== item.href)
@@ -117,8 +119,7 @@
     top: 0;
     position: sticky;
     transition: padding 300ms cubic-bezier(0.07, 0.95, 0, 1),
-      background-color 300ms ease-in-out,
-      transform 300ms ease-in-out ;
+      background-color 300ms ease-in-out, transform 300ms ease-in-out;
     z-index: 999;
     padding: 1.5rem 0;
     background-color: var(--sc-25);
