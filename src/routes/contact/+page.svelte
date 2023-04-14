@@ -82,7 +82,7 @@
   #layout-contact {
     display: flex;
     flex-direction: column;
-
+    place-items: center;
     place-content: center;
     margin-inline: auto;
 
@@ -91,8 +91,9 @@
   }
 
   .wrapper-contact {
+    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 30rem), 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 38rem), 1fr));
     padding: 3rem;
     gap: 2rem;
     background-color: var(--sc-15);
@@ -112,9 +113,10 @@
   }
 
   section:last-child {
+    width: 100%;
     display: grid;
     gap: 1rem;
-    margin-inline: auto;
+    /* margin-inline: auto; */
     grid-template-rows: auto 1fr auto;
     justify-content: space-between;
     background-color: var(--sc-25);
@@ -137,6 +139,7 @@
   section:last-child address {
     display: flex;
     flex-flow: column wrap;
+    grid-column: span 2;
   }
 
   section:last-child address a {
@@ -155,9 +158,10 @@
   }
 
   form button {
-    padding: clamp(1rem, 3vw, 2rem) clamp(2rem, 6vw, 3rem);
     max-width: max-content;
     margin-top: 1rem;
+    border-radius: 1rem;
+    padding: 0.6rem 1.2rem;
   }
 
   label {
@@ -172,6 +176,14 @@
     padding: 1rem;
     border-radius: 0.8rem;
     background-color: var(--sc-25);
+  }
+
+  footer {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    gap: 1.2rem;
   }
 
   nav a.shiny-select {
