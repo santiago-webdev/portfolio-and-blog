@@ -66,8 +66,10 @@ button {
   padding: 0;
 }
 
-ul {
+ul,
+ol {
   list-style-type: none;
+  padding: 0;
 }
 
 /* 9. Create a root stacking context */

@@ -87,6 +87,7 @@
     border-bottom-left-radius: 1rem;
     background-color: var(--sc-25);
     min-height: 40vh;
+    padding-bottom: 1rem;
   }
 
   h2 {
@@ -100,7 +101,6 @@
 
     width: min(100% - 1rem, var(--base));
     margin-inline: auto;
-    padding: 3rem 0;
   }
 
   section p {
