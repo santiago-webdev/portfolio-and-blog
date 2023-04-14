@@ -25,3 +25,5 @@ also add keyboard navigation with arrow keys.
 ## Fix intersiction observer for button to top and navigation
 
 It's not being updated to the current <main> after navigation, so it's ignored.
+
+## Fix slide classes not working
