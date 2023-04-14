@@ -171,7 +171,7 @@
 
   input,
   textarea {
-    /* width: 100%; */
+    width: 100%;
     border: none;
     padding: 1rem;
     border-radius: 0.8rem;
@@ -184,6 +184,11 @@
     flex-direction: column;
     place-items: center;
     gap: 1.2rem;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   nav a.shiny-select {
