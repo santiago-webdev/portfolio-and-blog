@@ -1,6 +1,6 @@
 <script lang="ts">
+  import BlogHeader from './BlogHeader.svelte'
   import SearchBar from '$lib/components/Search/SearchBar.svelte'
-  import BlogHeader from '$lib/components/BlogHeader.svelte'
   import FilteredPostsCards from '$lib/components/Search/FilteredPostsCards.svelte'
   import site from '$lib/site.json'
 </script>
