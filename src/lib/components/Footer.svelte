@@ -37,7 +37,7 @@
     { label: 'Blog', href: `${base}/blog` },
     { label: 'Projects', href: `${base}/` },
     { label: 'About', href: `${base}/about` },
-    { label: 'Contact', href: `${base}/` },
+    { label: 'Contact', href: `${base}/contact` },
   ]
 </script>
 
