@@ -27,7 +27,8 @@ a,
 button,
 input,
 form,
-li span {
+li,
+span {
   --range: var(--fz-2);
   font-size: var(--range);
   line-height: calc(1.2 * var(--range));

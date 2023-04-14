@@ -42,6 +42,7 @@
     width: min(100% - 1rem, var(--md));
     margin-inline: auto;
     gap: 2rem;
+    min-height: 40vh;
   }
 
   .introduction {
@@ -53,6 +54,10 @@
   .introduction p {
     --range: var(--fz-3);
     width: min(100% - 1rem, 40ch);
+  }
+
+  .introduction span {
+    --range: inherit;
   }
 
   section {

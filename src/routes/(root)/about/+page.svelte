@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { base } from '$app/paths'
+  import Forward from '$lib/components/Forward.svelte'
+
   const tools = [
     { name: 'HTML', icon: 'logos:html-5' },
     { name: 'CSS3', icon: 'logos:css-3' },
@@ -23,33 +26,43 @@
 </script>
 
 <main>
-  <button class="slide-backwards" on:click={() => history.back()}>
-    Go Back
-  </button>
   <section>
-    <h1 style="--range: var(--fz-4)">About</h1>
-
-    <h3 style="--range: var(--fz-3)">Hello again!</h3>
+    <button class="slide-backwards" on:click={() => history.back()}>
+      Go Back
+    </button>
+    <h1>About</h1>
+    <span style="--range: var(--fz-2)">Hello again!</span>
     <p>
-      I started learning backend tools like Java and Python but after October of
-      2022 I decided I wanted to be a frontend developer or more specifically a
-      web developer. In my work you'll see reflected every bit of my life
-      experiences applied.
+      I started learning backend tools like Java and Python, but after October
+      of 2022 I decided I wanted to be a front-end developer or more
+      specifically a web developer. In my work you'll see reflected every bit of
+      my life experiences applied.
     </p>
-    <br />
-    <h2 style="--range: var(--fz-4)">Technology I use</h2>
+
+    <p>All of my projects can be found here:</p>
+    <a class="shiny hover" href="{base}/" aria-label="Link to my projects"
+      >What I've built
+      <Forward />
+    </a>
+  </section>
+</main>
+<section>
+  <div class="worked-at">
+    <h2>Where I've worked</h2>
+  </div>
+  <div class="technologies">
+    <h2>Technology I use</h2>
     <p>
       These are some of the tools I had used in the past (but am not limited
       to):
     </p>
-  </section>
-
-  <div class="i-use">
-    {#each tools as tool}
-      <span><iconify-icon icon={tool.icon} />{tool.name}</span>
-    {/each}
+    <div class="tools-i-use">
+      {#each tools as tool}
+        <span><iconify-icon icon={tool.icon} />{tool.name}</span>
+      {/each}
+    </div>
   </div>
-</main>
+</section>
 
 <style>
   button {
@@ -58,12 +71,26 @@
     /* outline: 3px hotpink solid; */
   }
 
+  a {
+    margin-top: 1rem;
+    padding: clamp(1rem, 3vw, 2rem) clamp(2rem, 6vw, 3rem);
+    width: max-content;
+  }
+
   main {
     display: flex;
     flex-flow: column wrap;
     place-content: center;
     place-items: start;
-    background-color: var(--sc-15);
+    background-color: var(--sc-25);
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    background-color: var(--sc-25);
+    min-height: 40vh;
+  }
+
+  h2 {
+    --range: var(--fz-5);
   }
 
   section {
@@ -73,26 +100,33 @@
 
     width: min(100% - 1rem, var(--base));
     margin-inline: auto;
+    padding: 3rem 0;
   }
 
   section p {
     --range: var(--fz-3);
   }
 
-  .i-use {
+  .technologies {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
+    flex-direction: column;
+    gap: 1.2rem;
     width: min(100% - 1rem, var(--base));
   }
 
-  span {
+  .technologies span {
     --range: var(--fz-2);
     display: flex;
     place-items: center;
-    border: 1px solid var(--sc-95);
+    border: 2px solid var(--sc-95);
     border-radius: 1rem;
     padding: 0.6rem 1.2rem;
+    gap: 0.6rem;
+  }
+
+  .tools-i-use {
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.6rem;
   }
 </style>
