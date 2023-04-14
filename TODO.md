@@ -10,8 +10,7 @@ If the viewport is seeing let's say #projects for more than 5 seconds update the
 link to include that without modifying the view.
 
 ## Redo the navbar
-
-**Once again** redo the navbar, the code is unreadable.
+Add separators and create a svelte store for nav items
 
 ## For the scroll tracker
 
