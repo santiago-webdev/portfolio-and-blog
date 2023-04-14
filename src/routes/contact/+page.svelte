@@ -1,14 +1,7 @@
 <script lang="ts">
   import { base } from '$app/paths'
   import { page } from '$app/stores'
-
-  const browseItems = [
-    { label: 'Home', href: `${base}/` },
-    { label: 'Blog', href: `${base}/blog` },
-    { label: 'Projects', href: `${base}/` },
-    { label: 'About', href: `${base}/about` },
-    { label: 'Contact', href: `${base}/contact` },
-  ]
+  import { navigationItems } from '$lib/components/navigation/store'
 </script>
 
 <div id="layout-contact">
@@ -61,16 +54,18 @@
         <hr />
         <br />
         <nav>
-          {#each browseItems as item}
-            <a
-              class="shiny-select"
-              aria-current={item.href === $page.url.pathname ||
-              ($page.url.pathname.startsWith(item.href || '') &&
-                `/` !== item.href)
-                ? 'page'
-                : undefined}
-              aria-label="Link to {item.label}"
-              href={item.href}>{item.label}</a>
+          {#each $navigationItems as item}
+            {#if item.label !== 'Contact'}
+              <a
+                class="shiny-select"
+                aria-current={item.href === $page.url.pathname ||
+                ($page.url.pathname.startsWith(item.href || '') &&
+                  `/` !== item.href)
+                  ? 'page'
+                  : undefined}
+                aria-label="Link to {item.label}"
+                href={item.href}>{item.label}</a>
+            {/if}
           {/each}
         </nav>
       </footer>

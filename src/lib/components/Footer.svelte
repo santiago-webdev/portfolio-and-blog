@@ -2,6 +2,7 @@
   import { dev } from '$app/environment'
   import { base } from '$app/paths'
   import { page } from '$app/stores'
+  import { navigationItems } from './navigation/store'
 
   let ghStars = 0
 
@@ -31,14 +32,6 @@
       direction: '0x3f8347d947c5bbdd166013e01ec4b645883e0fbb',
     },
   ]
-
-  const browseItems = [
-    { label: 'Home', href: `${base}/` },
-    { label: 'Blog', href: `${base}/blog` },
-    { label: 'Projects', href: `${base}/` },
-    { label: 'About', href: `${base}/about` },
-    { label: 'Contact', href: `${base}/contact` },
-  ]
 </script>
 
 <footer>
@@ -55,9 +48,9 @@
 
       <nav aria-label="footer-navigation">
         <h3>Sitemap</h3>
-        {#each browseItems as item}
+        {#each $navigationItems as item}
           <a
-            class="shiny-select"
+            class="shiny-select {item.classes}"
             aria-current={item.href === $page.url.pathname ||
             ($page.url.pathname.startsWith(item.href || '') &&
               `/` !== item.href)

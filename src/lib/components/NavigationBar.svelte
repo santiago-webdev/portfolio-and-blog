@@ -5,7 +5,7 @@
   import { onMount } from 'svelte'
   import ThemeSwitch from './ThemeSwitch.svelte'
   import WidgetModal from './Search/WidgetModal.svelte'
-    import { navigationItems } from './navigation/store'
+  import { navigationItems } from './navigation/store'
 
   var expanded = false,
     onDesktop = false,
@@ -80,15 +80,17 @@
         <ThemeSwitch />
         <div role="separator" aria-orientation="vertical" />
         {#each $navigationItems as item}
-          <a
-            class={item.classes}
-            aria-current={item.href === $page.url.pathname ||
-            ($page.url.pathname.startsWith(item.href || '') &&
-              `/` !== item.href)
-              ? 'page'
-              : undefined}
-            aria-label="Link to {item.label}"
-            href={item.href}>{item.label}</a>
+          {#if item.label !== 'Home'}
+            <a
+              class={item.classes}
+              aria-current={item.href === $page.url.pathname ||
+              ($page.url.pathname.startsWith(item.href || '') &&
+                `/` !== item.href)
+                ? 'page'
+                : undefined}
+              aria-label="Link to {item.label}"
+              href={item.href}>{item.label}</a>
+          {/if}
         {/each}
       {/if}
     </div>
