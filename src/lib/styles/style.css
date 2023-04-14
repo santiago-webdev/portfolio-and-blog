@@ -214,7 +214,7 @@ input[type='radio']:checked + .shiny-select {
 }
 
 [aria-orientation='vertical'][role='separator']:empty {
-  border-left: 1px solid var(--sc-60);
+  border-left: 1px solid var(--sc-45);
   height: 2rem;
 }
 

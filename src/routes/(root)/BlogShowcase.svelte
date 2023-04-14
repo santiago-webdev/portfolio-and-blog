@@ -1,6 +1,5 @@
 <script>
   import { base } from '$app/paths'
-  import Forward from '$lib/components/Forward.svelte'
   import { Posts } from '$lib/components/Search/store'
   import { readableDate, relativeTime } from '$lib/utils/utils'
 </script>

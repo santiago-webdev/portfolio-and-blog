@@ -60,21 +60,6 @@ export const readableDate = (dateString: string): string => {
   return formatter.format(date)
 }
 
-let baseFontSize = 0
-
-function getBaseFontSize(): number {
-  if (
-    baseFontSize ||
-    typeof document === 'undefined' ||
-    !document.documentElement
-  )
-    return baseFontSize
-
-  const root = document.documentElement // Get the root element
-  baseFontSize = parseFloat(getComputedStyle(root).fontSize) // Get the computed font size in pixels and convert it to a number
-  return baseFontSize
-}
-
 export function getCookie(name: string): string {
   const cookies: string[] = document.cookie.split(';')
   for (let i = 0; i < cookies.length; i++) {

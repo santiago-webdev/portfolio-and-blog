@@ -1,24 +1,25 @@
 <script lang="ts">
   import { base } from '$app/paths'
   import { readableDate } from '$lib/utils/utils'
+  import { onMount } from 'svelte'
   import { FilteredPosts } from './store'
   import { fly } from 'svelte/transition'
 
   let fly_in = { y: 0, duration: 0 }
   let fly_out = { y: 0, duration: 0 }
 
-  function deferAddSettings(_params: HTMLLIElement) {
+  onMount(() =>
     setTimeout(() => {
       fly_in = { y: 50, duration: 200 }
       fly_out = { y: -50, duration: 200 }
     }, 100)
-  }
+  )
 </script>
 
 <section role="complementary">
   <ul>
     {#each $FilteredPosts as post}
-      <li use:deferAddSettings in:fly={fly_in} out:fly={fly_out}>
+      <li in:fly={fly_in} out:fly={fly_out}>
         <a href="{base}/blog{post.href}">
           <article class="shiny less attn">
             <h2>{post.title}</h2>

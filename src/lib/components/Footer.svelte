@@ -1,6 +1,5 @@
 <script lang="ts">
   import { dev } from '$app/environment'
-  import { base } from '$app/paths'
   import { page } from '$app/stores'
   import { navigationItems } from './navigation/store'
 
