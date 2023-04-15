@@ -57,9 +57,9 @@
       aria-label="Home"
       aria-current={`${base}/` === $page.url.pathname ? 'page' : undefined}>
       <img
+        class="logo-santigo-zero"
         style="width: 2rem"
         aria-hidden="true"
-        src="/logo.svg"
         alt="My personal logo"
         title="My personal logo" />
       <span class:scrollY>Santiago Gonzalez</span>

@@ -31,7 +31,7 @@
       </a>
     </div>
   </section>
-  <img class="hero" src="/logo.svg" title="My logo" alt="My logo" />
+  <img class="hero logo-santigo-zero" title="My logo" alt="My logo" />
 </div>
 
 <style>
@@ -77,12 +77,12 @@
     border-radius: 999rem;
   }
 
-  .hero {
+  img {
     display: none;
   }
 
   @media screen and (min-width: 48rem) {
-    .hero {
+    img {
       max-width: 25%;
       flex: 1;
       display: block;

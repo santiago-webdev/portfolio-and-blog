@@ -44,6 +44,16 @@ strong {
   font-variation-settings: 'wght' 660;
 }
 
+[data-theme='dark'] img.logo-santigo-zero,
+[data-theme='system'] img.logo-santigo-zero {
+  content: url('/logo.svg');
+}
+
+[data-theme='light'] img.logo-santigo-zero,
+[data-theme='system-light'] img.logo-santigo-zero {
+  content: url('/logo-light.svg');
+}
+
 h1 {
   --range: var(--fz-7);
   font-size: var(--range);

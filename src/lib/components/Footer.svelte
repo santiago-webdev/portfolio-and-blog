@@ -38,7 +38,10 @@
   <div class="footer-start">
     <section>
       <div class="aboutme">
-        <img src="/logo.svg" alt="My personal logo" title="My personal logo" />
+        <img
+          class="logo-santigo-zero"
+          alt="My personal logo"
+          title="My personal logo" />
         <h3>Santiago Gonzalez</h3>
         <p>
           I'm a web developer that can help you craft accessible website
