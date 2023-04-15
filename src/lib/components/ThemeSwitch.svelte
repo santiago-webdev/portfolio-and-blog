@@ -111,7 +111,7 @@
   }
 
   #system {
-    color: var(--txt-A);
+    color: var(--sc-100);
     transform: translateX(15rem);
   }
 

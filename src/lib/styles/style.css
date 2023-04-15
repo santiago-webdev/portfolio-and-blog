@@ -7,7 +7,7 @@ html {
   color-scheme: light dark;
   font-family: var(--ff-dflt);
   background-color: var(--sc-10);
-  color: var(--txt-A);
+  color: var(--sc-100);
 }
 
 var {
@@ -32,7 +32,7 @@ span {
   --range: var(--fz-2);
   font-size: var(--range);
   line-height: calc(1.2 * var(--range));
-  color: var(--txt-A);
+  color: var(--sc-100);
 }
 
 button[disabled] {
@@ -130,7 +130,7 @@ input[type='radio']:checked + .shiny-select:active,
 input[type='radio']:checked + .shiny-select {
   --background: var(--sc-15);
   --border: var(--bg-select-200);
-  --color: var(--txt-A);
+  --color: var(--sc-100);
   background-color: var(--background);
   border: 1px solid var(--border);
   font-variation-settings: 'wght' 500;
@@ -142,7 +142,7 @@ input[type='radio']:checked + .shiny-select {
   .shiny-select:hover {
     --background: var(--bg-select-100);
     --border: var(--bg-select-200);
-    --color: var(--txt-A);
+    --color: var(--sc-100);
     background-color: var(--background);
     border: 1px solid var(--background);
     border-left-color: var(--border);
@@ -152,8 +152,8 @@ input[type='radio']:checked + .shiny-select {
 }
 
 .reverse {
-  --background: var(--txt-A);
-  --border: var(--txt-C);
+  --background: var(--sc-100);
+  --border: var(--sc-200);
   --color: var(--sc-10);
 
   background-color: var(--background);

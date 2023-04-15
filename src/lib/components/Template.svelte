@@ -41,7 +41,7 @@
       <a class="slide-backwards" href="{base}/blog">Back to blog</a>
       {#if isHollow}
         <h1>
-          <Hollow color={'var(--txt-A)'}>{hollowPrefix}</Hollow>
+          <Hollow color={'var(--sc-100)'}>{hollowPrefix}</Hollow>
           {fillSuffix}
         </h1>
       {:else}

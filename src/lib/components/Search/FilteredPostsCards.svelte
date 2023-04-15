@@ -78,7 +78,7 @@
     transition: transform 100ms, color 100ms, background-color 500ms,
       border 100ms;
 
-    color: var(--txt-C);
+    color: var(--sc-200);
   }
 
   article:hover {

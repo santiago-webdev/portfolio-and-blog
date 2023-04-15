@@ -256,12 +256,12 @@
 
   h3 {
     --range: var(--fz-3);
-    color: var(--txt-A);
+    color: var(--sc-100);
   }
 
   p {
     --range: var(--fz-2);
-    color: var(--txt-A);
+    color: var(--sc-100);
   }
 
   a {
