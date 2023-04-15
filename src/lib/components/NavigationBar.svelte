@@ -143,7 +143,7 @@
   @media screen and (min-width: 90rem) {
     header.scrollY {
       backdrop-filter: blur(6px);
-      background-color: var(--bg-trp-400);
+      background-color: var(--sc-25-trp);
     }
   }
 

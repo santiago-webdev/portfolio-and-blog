@@ -1,6 +1,7 @@
 @import url('./design-system/typography.css');
 @import url('./design-system/breakpoints.css');
 @import url('./design-system/theme-dark.css');
+@import url('./design-system/theme-light.css');
 
 html {
   scroll-behavior: smooth;
