@@ -1,4 +1,4 @@
-[data-theme='system-ligth'],
+[data-theme='system-light'],
 [data-theme='light'] {
   color-scheme: light;
   --txt-hover: hsl(220 20% 70%);
