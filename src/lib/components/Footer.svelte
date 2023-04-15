@@ -2,6 +2,7 @@
   import { dev } from '$app/environment'
   import { page } from '$app/stores'
   import { navigationItems } from './navigation/store'
+  import site from '$lib/site.json'
 
   let ghStars = 0
 
@@ -9,7 +10,7 @@
     if (dev) return 0
     try {
       const response = await fetch(
-        'https://api.github.com/repos/santigo-zero/santigo-zero.github.io'
+        'https://api.github.com/repos/santigo-zero/portfolio-and-blog'
       )
       if (!response.ok) {
         throw new Error('Network response was not ok.')
@@ -147,7 +148,7 @@
 
       <a
         target="_blank"
-        href="https://github.com/santigo-zero/santigo-zero.github.io"
+        href={site.repo}
         aria-label="Link to git repository for this site at Github"
         title="Link to git repository for this site at Github">
         Repository <iconify-icon
