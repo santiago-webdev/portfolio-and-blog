@@ -50,9 +50,10 @@
       .addEventListener('change', (event: MediaQueryListEvent) => {
         prefers_light = !event.matches
 
-        if (!theme.startsWith('system')) return
-        event.matches ? (theme = 'system') : (theme = 'system-light')
-        doc.theme = theme
+        if (theme.startsWith('system')) {
+          event.matches ? (theme = 'system') : (theme = 'system-light')
+          doc.theme = theme
+        }
       })
   })
 </script>
