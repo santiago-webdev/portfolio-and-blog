@@ -54,7 +54,7 @@
         {#each $navigationItems as item}
           {#if item.label !== 'Separator'}
             <a
-              class="shiny-select {item.classes}"
+              class="shiny-select {item.classes ? item.classes : ''}"
               aria-current={item.href === $page.url.pathname ||
               ($page.url.pathname.startsWith(item.href || '') &&
                 `/` !== item.href)
