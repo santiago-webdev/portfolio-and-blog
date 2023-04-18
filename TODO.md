@@ -32,3 +32,5 @@ It's not being updated to the current <main> after navigation, so it's ignored.
 
 Blog cards should use role='presentation', and the hamburger menu should use
 aria-pressed
+
+## Make use of <base>

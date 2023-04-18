@@ -116,7 +116,6 @@
     display: grid;
     width: min(100% - 1rem, var(--base));
     margin-inline: auto;
-    place-content: center;
   }
 
   .wrapper-header {
