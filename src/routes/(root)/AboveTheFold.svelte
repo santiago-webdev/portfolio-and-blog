@@ -39,7 +39,7 @@
     display: flex;
     place-items: center;
     flex-flow: column;
-    width: min(100% - 1rem, var(--md));
+    width: min(92%, var(--md));
     margin-inline: auto;
     gap: 2rem;
     min-height: 40vh;
@@ -53,7 +53,7 @@
 
   .introduction p {
     --range: var(--fz-3);
-    width: min(100% - 1rem, 40ch);
+    width: min(100%, 40ch);
   }
 
   .introduction span {
@@ -81,11 +81,6 @@
       flex-flow: row-reverse;
       padding: 6rem 3rem;
       text-align: left;
-    }
-
-    p {
-      max-width: 80%;
-      margin-left: 0;
     }
   }
 </style>

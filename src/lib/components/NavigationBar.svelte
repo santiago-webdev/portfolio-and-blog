@@ -140,13 +140,6 @@
     padding: 0.2rem 0;
   }
 
-  @media screen and (min-width: 90rem) {
-    header.scrollY {
-      backdrop-filter: blur(6px);
-      background-color: var(--sc-25-trp);
-    }
-  }
-
   a,
   button {
     color: inherit;
@@ -160,7 +153,7 @@
     display: flex;
     place-items: center;
     margin-inline: auto;
-    width: min(100% - 1rem, var(--xl));
+    max-width: var(--xl);
     justify-content: space-between;
     flex-flow: row wrap;
   }
@@ -204,6 +197,17 @@
   @media (prefers-reduced-motion: reduce) {
     nav {
       transition: none;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    nav {
+      width: 90%;
+    }
+
+    header.scrollY {
+      backdrop-filter: blur(6px);
+      background-color: var(--sc-25-trp);
     }
   }
 </style>

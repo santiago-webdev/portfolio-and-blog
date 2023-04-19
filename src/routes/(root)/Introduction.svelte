@@ -36,7 +36,7 @@
 
 <style>
   .about-me {
-    width: min(100% - 1rem, var(--md));
+    width: min(92%, var(--base));
     display: flex;
     margin-inline: auto;
     flex-flow: row wrap-reverse;
@@ -52,12 +52,11 @@
 
   p {
     --range: var(--fz-3);
-    width: min(100% - 1rem, var(--sm));
   }
 
   section {
     display: flex;
-    width: min(100% - 1rem, var(--sm));
+    max-width: var(--sm);
     flex-flow: row wrap;
     gap: 1rem;
     margin-inline: auto;
@@ -83,7 +82,7 @@
 
   @media screen and (min-width: 48rem) {
     img {
-      max-width: 25%;
+      max-width: 15%;
       flex: 1;
       display: block;
       margin-inline: auto;

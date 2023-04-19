@@ -89,7 +89,7 @@
   section {
     padding: 3rem 0;
     margin-inline: auto;
-    width: min(100% - 2rem, var(--lg));
+    width: min(92%, var(--lg));
   }
 
   /* #blog { */
@@ -115,6 +115,7 @@
 
   .present a h2 {
     --range: var(--fz-5);
+    text-align: center;
   }
 
   h3 {
