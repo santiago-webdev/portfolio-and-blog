@@ -41,7 +41,7 @@
       <a class="slide-backwards" href="{base}/blog">Back to blog</a>
       {#if isHollow}
         <h1>
-          <Hollow color={'var(--sc-100)'}>{hollowPrefix}</Hollow>
+          <Hollow color={'var(--clr-100)'}>{hollowPrefix}</Hollow>
           {fillSuffix}
         </h1>
       {:else}
@@ -105,7 +105,7 @@
 
 <style>
   main {
-    background-color: var(--sc-25);
+    background-color: var(--clr-25);
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
   }

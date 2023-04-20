@@ -183,7 +183,7 @@
   footer {
     border-top-right-radius: 1rem;
     border-top-left-radius: 1rem;
-    background-color: var(--sc-25);
+    background-color: var(--clr-25);
     margin-top: 1rem;
   }
 
@@ -221,12 +221,12 @@
   .footer-start h3 {
     font-variation-settings: 'wght' 600;
     margin-inline: 0.6rem;
-    text-decoration: underline solid var(--sc-65) 2px;
+    text-decoration: underline solid var(--clr-65) 2px;
     text-underline-offset: 3px;
   }
 
   .footer-start p {
-    color: var(--sc-95);
+    color: var(--clr-95);
   }
 
   .footer-start img {
@@ -244,8 +244,8 @@
     padding: 2rem;
     border-radius: 1rem;
 
-    --background: var(--sc-30);
-    --border: var(--sc-35);
+    --background: var(--clr-30);
+    --border: var(--clr-35);
     background-color: var(--background);
     border: 1px solid var(--background);
     border-top-color: var(--border);
@@ -312,7 +312,7 @@
   .footer-end {
     display: flex;
     place-content: center;
-    background-color: var(--sc-35);
+    background-color: var(--clr-35);
   }
 
   .footer-end section {

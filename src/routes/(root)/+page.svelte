@@ -43,6 +43,6 @@
 
 <style>
   :global(header) {
-    background-color: var(--sc-25);
+    background-color: var(--clr-25);
   }
 </style>

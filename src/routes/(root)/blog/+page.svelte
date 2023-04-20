@@ -43,7 +43,7 @@
 
 <style>
   main {
-    background-color: var(--sc-25);
+    background-color: var(--clr-25);
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
     padding-bottom: 1rem;

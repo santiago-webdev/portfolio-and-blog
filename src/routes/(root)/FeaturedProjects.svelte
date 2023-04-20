@@ -13,7 +13,7 @@
       and most noteworthy work.
     </p>
   </div>
-  <hr style="border-color: var(--sc-55)" />
+  <hr style="border-color: var(--clr-55)" />
   <div class="projects-content">
     <div class="featured-projects-banner">
       <h3>Some things I've built</h3>
@@ -27,8 +27,8 @@
 
 <style>
   #featured-projects {
-    --background: var(--sc-30);
-    --border: var(--sc-45);
+    --background: var(--clr-30);
+    --border: var(--clr-45);
     background-color: var(--background);
     border: 1px solid var(--background);
     border-top-color: var(--border);
@@ -58,7 +58,7 @@
 
   .featured-projects-introduction a h2 {
     --range: var(--fz-5);
-    color: var(--sc-150);
+    color: var(--clr-150);
 
     font-variation-settings: 'wght' 800;
   }
@@ -68,7 +68,7 @@
 
     --range: var(--fz-4);
     font-variation-settings: 'wght' 250;
-    color: var(--sc-90);
+    color: var(--clr-90);
   }
 
   .featured-projects-banner {
@@ -79,7 +79,7 @@
 
   .featured-projects-banner h3 {
     --range: var(--fz-4);
-    color: var(--sc-100);
+    color: var(--clr-100);
 
     font-variation-settings: 'wght' 600;
   }

@@ -7,8 +7,8 @@ html {
   /* scroll-behavior: smooth; */ /* This causes problems with sveltekit navigation */
   color-scheme: light dark;
   font-family: var(--ff-dflt);
-  background-color: var(--sc-10);
-  color: var(--sc-100);
+  background-color: var(--clr-10);
+  color: var(--clr-100);
 }
 
 var {
@@ -33,11 +33,11 @@ span {
   --range: var(--fz-2);
   font-size: var(--range);
   line-height: calc(1.2 * var(--range));
-  color: var(--sc-100);
+  color: var(--clr-100);
 }
 
 button[disabled] {
-  color: var(--sc-65);
+  color: var(--clr-65);
 }
 
 strong {
@@ -93,8 +93,8 @@ small {
 }
 
 .shiny {
-  --background: var(--sc-40);
-  --border: var(--sc-45);
+  --background: var(--clr-40);
+  --border: var(--clr-45);
   background-color: var(--background);
   border: 1px solid var(--background);
   border-top-color: var(--border);
@@ -114,8 +114,8 @@ small {
 }
 
 .shiny.less {
-  --background: var(--sc-25);
-  --border: var(--sc-30);
+  --background: var(--clr-25);
+  --border: var(--clr-30);
 }
 
 .shiny.float {
@@ -124,8 +124,8 @@ small {
 
 @media (hover: hover) {
   .shiny.hover:hover {
-    --background: var(--sc-40);
-    --border: var(--sc-50);
+    --background: var(--clr-40);
+    --border: var(--clr-50);
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
   }
 }
@@ -134,14 +134,14 @@ small {
   border: 1px solid transparent;
   padding: 0.3rem 0.6rem;
   border-radius: 0.6rem;
-  color: var(--sc-95);
+  color: var(--clr-95);
 }
 
 input[type='radio']:checked + .shiny-select:active,
 input[type='radio']:checked + .shiny-select {
-  --background: var(--sc-15);
+  --background: var(--clr-15);
   --border: var(--bg-select-200);
-  --color: var(--sc-100);
+  --color: var(--clr-100);
   background-color: var(--background);
   border: 1px solid var(--border);
   font-variation-settings: 'wght' 500;
@@ -153,7 +153,7 @@ input[type='radio']:checked + .shiny-select {
   .shiny-select:hover {
     --background: var(--bg-select-100);
     --border: var(--bg-select-200);
-    --color: var(--sc-100);
+    --color: var(--clr-100);
     background-color: var(--background);
     border: 1px solid var(--background);
     border-left-color: var(--border);
@@ -163,9 +163,9 @@ input[type='radio']:checked + .shiny-select {
 }
 
 .reverse {
-  --background: var(--sc-100);
-  --border: var(--sc-200);
-  --color: var(--sc-10);
+  --background: var(--clr-100);
+  --border: var(--clr-200);
+  --color: var(--clr-10);
 
   background-color: var(--background);
   border: 1px solid var(--background);
@@ -187,8 +187,8 @@ input[type='radio']:checked + .shiny-select {
 }
 
 .block {
-  --background: var(--sc-10);
-  --border: var(--sc-40);
+  --background: var(--clr-10);
+  --border: var(--clr-40);
   background-color: var(--background);
   border: 1px solid var(--border);
   box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
@@ -204,8 +204,8 @@ input[type='radio']:checked + .shiny-select {
 
 @media (hover: hover) {
   .block.hover:hover {
-    --background: var(--sc-10);
-    --border: var(--sc-10);
+    --background: var(--clr-10);
+    --border: var(--clr-10);
 
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
   }
@@ -217,7 +217,7 @@ input[type='radio']:checked + .shiny-select {
 }
 
 .bordered:hover {
-  --border: var(--sc-65);
+  --border: var(--clr-65);
 }
 
 [aria-current='page'] {
@@ -225,7 +225,7 @@ input[type='radio']:checked + .shiny-select {
 }
 
 [aria-orientation='vertical'][role='separator']:empty {
-  border-left: 1px solid var(--sc-45);
+  border-left: 1px solid var(--clr-45);
   height: 2rem;
 }
 
@@ -235,7 +235,7 @@ input[type='radio']:checked + .shiny-select {
 
   text-align: left;
   /* width: min(100% - 1rem, var(--base)); */
-  color: var(--sc-85);
+  color: var(--clr-85);
   /* margin-inline: auto; */
   font-variation-settings: 'wght' 650;
 }
@@ -267,7 +267,7 @@ input[type='radio']:checked + .shiny-select {
 }
 
 small {
-  color: var(--sc-85);
+  color: var(--clr-85);
 }
 
 time {
@@ -278,7 +278,7 @@ time {
 hr {
   width: 100%;
   margin: 0;
-  border: 1px solid var(--sc-60);
+  border: 1px solid var(--clr-60);
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -286,7 +286,7 @@ hr {
 
 pre {
   width: min(100% - 1rem, var(--base));
-  background-color: var(--sc-25);
+  background-color: var(--clr-25);
   word-wrap: break-word;
   white-space: pre-wrap;
   overflow: auto;
@@ -302,7 +302,7 @@ kbd {
   padding-inline: 0.3rem;
 
   border-radius: 0.4rem;
-  background-color: var(--sc-60);
+  background-color: var(--clr-60);
   text-transform: uppercase;
   font-size: 90%;
   font-weight: bold;

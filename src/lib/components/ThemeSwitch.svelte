@@ -112,7 +112,7 @@
   }
 
   #system {
-    color: var(--sc-100);
+    color: var(--clr-100);
     transform: translateX(15rem);
   }
 

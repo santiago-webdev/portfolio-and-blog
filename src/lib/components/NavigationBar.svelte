@@ -124,7 +124,7 @@
       background-color 300ms ease-in-out, transform 300ms ease-in-out;
     z-index: 999;
     padding: 1.5rem 0;
-    background-color: var(--sc-25);
+    background-color: var(--clr-25);
   }
 
   header.hideHeader {
@@ -133,7 +133,7 @@
 
   header.expanded,
   header.scrollY {
-    border-bottom: 2px solid var(--sc-55);
+    border-bottom: 2px solid var(--clr-55);
   }
 
   header.scrollY {
@@ -207,7 +207,7 @@
 
     header.scrollY {
       backdrop-filter: blur(6px);
-      background-color: var(--sc-25-trp);
+      background-color: var(--clr-25-trp);
     }
   }
 </style>

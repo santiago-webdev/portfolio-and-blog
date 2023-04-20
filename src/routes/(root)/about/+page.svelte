@@ -67,7 +67,7 @@
 <style>
   button {
     display: flex;
-    color: var(--sc-95);
+    color: var(--clr-95);
     /* outline: 3px hotpink solid; */
   }
 
@@ -82,10 +82,10 @@
     flex-flow: column wrap;
     place-content: center;
     place-items: start;
-    background-color: var(--sc-25);
+    background-color: var(--clr-25);
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
-    background-color: var(--sc-25);
+    background-color: var(--clr-25);
     min-height: 40vh;
     padding-bottom: 1rem;
   }
@@ -118,7 +118,7 @@
     --range: var(--fz-2);
     display: flex;
     place-items: center;
-    border: 2px solid var(--sc-95);
+    border: 2px solid var(--clr-95);
     border-radius: 1rem;
     padding: 0.6rem 1.2rem;
     gap: 0.6rem;

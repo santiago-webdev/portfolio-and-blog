@@ -86,8 +86,8 @@
   }
 
   .wrapper-contact {
-    --border: var(--sc-40);
-    background-color: var(--sc-15);
+    --border: var(--clr-40);
+    background-color: var(--clr-15);
     border: 1px solid var(--border);
     width: 100%;
     display: grid;
@@ -106,7 +106,7 @@
 
   section:first-child p {
     --range: var(--fz-3);
-    color: var(--sc-95);
+    color: var(--clr-95);
   }
 
   section:last-child {
@@ -116,20 +116,20 @@
     /* margin-inline: auto; */
     grid-template-rows: auto 1fr auto;
     justify-content: space-between;
-    background-color: var(--sc-25);
+    background-color: var(--clr-25);
     padding: 3rem;
     border-radius: 1.2rem;
   }
 
   section:last-child p {
-    color: var(--sc-85);
+    color: var(--clr-85);
     --range: var(--fz-2);
     margin-inline: 0.6rem;
   }
 
   section:last-child a {
     --range: var(--fz-2);
-    color: var(--sc-100);
+    color: var(--clr-100);
     font-variation-settings: 'wght' 500;
   }
 
@@ -151,7 +151,7 @@
     /* padding: 3rem; */
     gap: 1rem;
     font-variation-settings: 'wght' 600;
-    color: var(--sc-150);
+    color: var(--clr-150);
   }
 
   form button {
@@ -172,7 +172,7 @@
     border: none;
     padding: 1rem;
     border-radius: 0.8rem;
-    background-color: var(--sc-25);
+    background-color: var(--clr-25);
   }
 
   footer {
@@ -189,10 +189,10 @@
   }
 
   nav a.shiny-select {
-    color: var(--sc-85);
+    color: var(--clr-85);
   }
 
   nav a.shiny-select:hover {
-    color: var(--sc-150);
+    color: var(--clr-150);
   }
 </style>

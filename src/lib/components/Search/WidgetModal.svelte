@@ -174,8 +174,8 @@
   }
 
   :modal {
-    --background: var(--sc-35);
-    --border: var(--sc-45);
+    --background: var(--clr-35);
+    --border: var(--clr-45);
     background-color: var(--background);
     border: 1px solid var(--background);
     border-top-color: var(--border);
@@ -256,12 +256,12 @@
 
   h3 {
     --range: var(--fz-3);
-    color: var(--sc-100);
+    color: var(--clr-100);
   }
 
   p {
     --range: var(--fz-2);
-    color: var(--sc-100);
+    color: var(--clr-100);
   }
 
   a {

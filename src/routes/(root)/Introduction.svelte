@@ -40,7 +40,7 @@
     display: flex;
     margin-inline: auto;
     flex-flow: row wrap-reverse;
-    background-color: var(--sc-25);
+    background-color: var(--clr-25);
     padding: 2rem;
     border-radius: 1rem;
     gap: 1rem;
