@@ -3,11 +3,13 @@
   import BlogShowcase from './BlogShowcase.svelte'
   import Introduction from './Introduction.svelte'
   import site from '$lib/site.json'
+  import FeaturedProjects from './FeaturedProjects.svelte'
 </script>
 
 <AboveTheFold />
 <br />
 <BlogShowcase />
+<FeaturedProjects />
 <Introduction />
 
 <svelte:head>

@@ -235,10 +235,17 @@ input[type='radio']:checked + .shiny-select {
 
   text-align: left;
   /* width: min(100% - 1rem, var(--base)); */
-  margin-right: auto;
   color: var(--sc-85);
   /* margin-inline: auto; */
   font-variation-settings: 'wght' 650;
+}
+
+.slide-backwards {
+  margin-right: auto;
+}
+
+.slide-fordwards {
+  margin-left: auto;
 }
 
 .slide-backwards:before {
@@ -271,10 +278,10 @@ time {
 hr {
   width: 100%;
   margin: 0;
+  border: 1px solid var(--sc-60);
   border-top: 0;
   border-left: 0;
   border-right: 0;
-  border: 1px solid var(--sc-60);
 }
 
 pre {
