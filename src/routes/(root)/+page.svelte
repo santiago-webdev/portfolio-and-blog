@@ -9,7 +9,7 @@
 <AboveTheFold />
 <br />
 <BlogShowcase />
-<FeaturedProjects />
+<!-- <FeaturedProjects /> -->
 <Introduction />
 
 <svelte:head>
