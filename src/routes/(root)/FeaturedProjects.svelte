@@ -3,18 +3,18 @@
 </script>
 
 <div id="featured-projects">
-  <div class="featured-projects-introduction">
-    <a href="#featured-projects">
-      <h2>Featured Projects</h2>
-    </a>
-    <p>
-      This is a selection of my
-      <em>best</em>
-      and most noteworthy work.
-    </p>
-  </div>
-  <hr style="border-color: var(--clr-55)" />
-  <div class="projects-content">
+  <div class="wrapper-fp">
+    <div class="featured-projects-introduction">
+      <a href="#featured-projects">
+        <h2>Featured Projects</h2>
+      </a>
+      <p>
+        This is a selection of my
+        <em>best</em>
+        and most noteworthy work.
+      </p>
+    </div>
+    <hr style="border-color: var(--clr-55)" />
     <div class="featured-projects-banner">
       <h3>Some things I've built</h3>
       <a
@@ -27,6 +27,13 @@
 
 <style>
   #featured-projects {
+    width: 92%;
+    max-width: var(--lg);
+    margin: 3rem auto;
+    display: flex;
+    place-content: center;
+    place-items: center;
+
     --background: var(--clr-30);
     --border: var(--clr-45);
     background-color: var(--background);
@@ -34,21 +41,24 @@
     border-top-color: var(--border);
     border-left-color: var(--border);
     box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
-
-    display: grid;
-    gap: 6rem;
-    width: min(92%, var(--lg));
-    margin: 3rem auto;
-    padding: 6rem;
     border-radius: 0.8rem;
+  }
 
-    /* max-width: var(--lg); */
+  .wrapper-fp {
+    display: grid;
+    gap: 3rem;
+    /* margin: 3rem auto; */
+    /* TODO(santigo-zero): This layout is not working */
+    padding: 2.4rem;
+
+    max-width: var(--md);
     /* margin-inline: auto; */
   }
 
   .featured-projects-introduction {
     display: flex;
-    gap: 3rem;
+    flex-flow: row wrap;
+    gap: 1.4rem;
     justify-content: space-between;
   }
 
@@ -73,6 +83,8 @@
 
   .featured-projects-banner {
     display: flex;
+    gap: 1.4rem;
+    flex-flow: row wrap;
     place-content: space-between;
     place-items: center;
   }
@@ -81,6 +93,6 @@
     --range: var(--fz-4);
     color: var(--clr-100);
 
-    font-variation-settings: 'wght' 600;
+    font-variation-settings: 'wght' 800;
   }
 </style>

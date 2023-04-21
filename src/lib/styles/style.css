@@ -62,9 +62,8 @@ h1 {
 }
 
 h2 {
-  --range: var(--fz-6);
-  font-size: var(--range);
-  line-height: calc(1.2 * var(--range));
+  font-size: var(--fs-fluid-base);
+  line-height: var(--lh-fluid-base);
   font-variation-settings: 'wght' 700;
 }
 
