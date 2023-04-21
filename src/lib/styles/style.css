@@ -58,6 +58,7 @@ h1 {
   font-size: var(--fs-fluid-lg);
   line-height: var(--lh-fluid-lg);
   font-variation-settings: 'wght' 800;
+  letter-spacing: -0.04em;
 }
 
 h2 {

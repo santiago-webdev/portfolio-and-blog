@@ -38,7 +38,6 @@
   h1 {
     font-size: var(--fs-fluid-xl);
     line-height: var(--lh-fluid-xl);
-    letter-spacing: var(--font-letterspacing-1);
   }
 
   p {

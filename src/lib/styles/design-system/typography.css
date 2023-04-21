@@ -13,14 +13,6 @@
   --fz-6: clamp(3rem, 10vw + 1rem, 4.5rem);
   --fz-7: clamp(3.3rem, 12vw + 1rem, 5.6rem);
 
-  --font-letterspacing-0: -0.046em;
-  --font-letterspacing-1: -0.023em;
-  --font-letterspacing-2: -0.012em;
-  --font-letterspacing-3: -0.006em;
-  --font-letterspacing-4: 0.025em;
-  --font-letterspacing-5: 0.05em;
-  --font-letterspacing-6: 0.075em;
-
   /* Fluid size */
   /* font-variation-settings: 'wght' var(--fw-regular); */
 
