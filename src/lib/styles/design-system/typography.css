@@ -12,4 +12,39 @@
   --fz-5: clamp(2rem, 8vw + 1rem, 3.5rem);
   --fz-6: clamp(3rem, 10vw + 1rem, 4.5rem);
   --fz-7: clamp(3.3rem, 12vw + 1rem, 5.6rem);
+
+  --font-letterspacing-0: -0.046em;
+  --font-letterspacing-1: -0.023em;
+  --font-letterspacing-2: -0.012em;
+  --font-letterspacing-3: -0.006em;
+  --font-letterspacing-4: 0.025em;
+  --font-letterspacing-5: 0.05em;
+  --font-letterspacing-6: 0.075em;
+
+  /* Fluid size */
+  /* font-variation-settings: 'wght' var(--fw-regular); */
+
+  /* XS */
+  --fs-fluid-xs: clamp(0.75rem, 2vw + 1rem, 1rem);
+  --lh-fluid-xs: calc(var(--fs-fluid-xs) * 1.15);
+
+  /* SM */
+  --fs-fluid-sm: clamp(1rem, 4vw + 1rem, 1.5rem);
+  --lh-fluid-sm: calc(var(--fs-fluid-sm) * 1.15);
+
+  /* Base */
+  --fs-fluid-base: clamp(1.5rem, 6vw + 1rem, 2.5rem);
+  --lh-fluid-base: calc(var(--fs-fluid-base) * 1.15);
+
+  /* MD */
+  --fs-fluid-md: clamp(2rem, 9vw + 1rem, 3.5rem);
+  --lh-fluid-md: calc(var(--fs-fluid-md) * 1.15);
+
+  /* LG */
+  --fs-fluid-lg: clamp(3.3rem, 12vw + 1rem, 5.6rem);
+  --lh-fluid-lg: calc(var(--fs-fluid-lg) * 1.15);
+
+  /* XL */
+  --fs-fluid-xl: clamp(3.6rem, 12vw + 1rem, 6.3rem);
+  --lh-fluid-xl: calc(var(--fs-fluid-xl) * 1.15);
 }

@@ -35,6 +35,17 @@
     padding: 3rem 0;
   }
 
+  h1 {
+    font-size: var(--fs-fluid-xl);
+    line-height: var(--lh-fluid-xl);
+    letter-spacing: var(--font-letterspacing-1);
+  }
+
+  p {
+    font-size: var(--fs-fluid-base);
+    line-height: var(--lh-fluid-base);
+  }
+
   main {
     display: flex;
     place-items: center;

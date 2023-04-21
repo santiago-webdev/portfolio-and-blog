@@ -1,10 +1,12 @@
-<h1>Blog</h1>
-<p>
-  In this blog you are going to find articles about <strong>Linux</strong>,
-  <strong>web technologies</strong>
-  and
-  <strong>frontend development</strong>.
-</p>
+<div class="wrapper-blog-header">
+  <h1>Blog</h1>
+  <p>
+    In this blog you are going to find articles about <strong>Linux</strong>,
+    <strong>web technologies</strong>
+    and
+    <strong>frontend development</strong>.
+  </p>
+</div>
 
 <style>
   h1,
@@ -17,5 +19,11 @@
     width: min(33ch, 100%);
     margin-inline: auto;
     text-align: center;
+  }
+
+  .wrapper-blog-header {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
   }
 </style>
