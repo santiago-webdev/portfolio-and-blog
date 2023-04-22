@@ -7,9 +7,9 @@
   <div class="wrapper-fp">
     <div class="featured-projects-introduction">
       <a href="#featured-projects">
-        <h2 class="font-7">Featured Projects</h2>
+        <h2 class="font-fluid-bs">Featured Projects</h2>
       </a>
-      <p class="font-6">
+      <p class="font-fluid-bs">
         This is a selection of my
         <em>best</em>
         and most noteworthy work.
@@ -17,8 +17,8 @@
     </div>
     <hr style="border-color: var(--clr-55)" />
     <section>
-      <h3>Some things I've built</h3>
-      <LinkUI orientation="right" classes="font-4" href="{base}/projects"
+      <h3 class="font-fluid-bs">Some things I've built</h3>
+      <LinkUI orientation="right" classes="font-5" href="{base}/projects"
         >See all projects</LinkUI>
       <article>
         <img
@@ -77,13 +77,13 @@
   .featured-projects-introduction a h2 {
     color: var(--clr-150);
 
-    font-variation-settings: 'wght' 800;
+    font-variation-settings: 'wght' 700;
   }
 
   .featured-projects-introduction p {
     flex: 1;
 
-    font-variation-settings: 'wght' 250;
+    font-variation-settings: 'wght' 400;
     color: var(--clr-90);
   }
 
