@@ -1,10 +1,12 @@
 <script lang="ts">
   export let orientation = 'right'
   export let href = '/'
-  export let classes = ''
+  export let classes = 'defaults'
 </script>
 
-<a class={`${orientation} ${classes || 'defaults'}`} {href}>
+<a
+  class={`${orientation} ${classes}`}
+  {href}>
   <slot />
 </a>
 
