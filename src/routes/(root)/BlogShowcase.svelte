@@ -14,7 +14,7 @@
     <p>
       Welcome! If you are curious you can search for blog articles by pressing
       <kbd aria-keyshortcuts="Control+K">Ctrl K</kbd> or
-      <LinkInText href="{base}/blog">here</LinkInText>.
+      <LinkInText href="{base}/blog">go to my blog</LinkInText> to check them all.
     </p>
   </div>
   <br />

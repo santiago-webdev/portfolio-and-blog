@@ -2,7 +2,7 @@
   export let href = '/'
 </script>
 
-<a {href}>
+<a {href} {...$$restProps}>
   <slot />
   <iconify-icon icon="lucide:external-link" />
 </a>

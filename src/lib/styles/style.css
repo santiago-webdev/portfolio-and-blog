@@ -193,7 +193,7 @@ input[type='radio']:checked + .shiny-select {
 }
 
 small {
-  color: var(--clr-85);
+  color: var(--clr-90);
 }
 
 time {
