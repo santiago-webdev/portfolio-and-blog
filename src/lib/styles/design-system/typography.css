@@ -55,6 +55,7 @@ pre,
 .font-3 {
   font-size: var(--fs-3);
   line-height: calc(var(--fs-3) * 1.15);
+  font-variation-settings: 'wght' 500;
 }
 
 .font-4 {

@@ -330,7 +330,7 @@
     place-content: center;
   }
 
-  @media screen and (min-width: 64rem) {
+  @media screen and (min-width: 80rem) {
     .footer-end section {
       flex-direction: row;
       padding: 1rem 0;
