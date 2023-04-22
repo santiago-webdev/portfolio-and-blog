@@ -1,7 +1,7 @@
 <script lang="ts">
   import ButtonToTheTop from '$lib/components/ButtonToTheTop.svelte'
   import Footer from '$lib/components/Footer.svelte'
-  import NavigationBar from '$lib/components/NavigationBar.svelte'
+  import NavigationBar from '$lib/components/navigation/NavigationBar.svelte'
   import { fly } from 'svelte/transition'
 
   export let data

@@ -3,9 +3,10 @@
   import { page } from '$app/stores'
   import { afterNavigate } from '$app/navigation'
   import { onMount } from 'svelte'
-  import ThemeSwitch from './ThemeSwitch.svelte'
-  import WidgetModal from './Search/WidgetModal.svelte'
-  import { navigationItems } from './navigation/store'
+
+  import ThemeSwitch from '$lib/components/ThemeSwitch.svelte'
+  import WidgetModal from '$lib/components/Search/WidgetModal.svelte'
+  import { navigationItems } from '$lib/components/navigation/store'
 
   var expanded = false,
     onDesktop = false,
