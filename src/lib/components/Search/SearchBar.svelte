@@ -34,11 +34,11 @@
 </script>
 
 <form
-  class="shiny"
+  class="shiny font-fluid-xs"
   class:form-modal={modal}
   on:submit|preventDefault={handleSubmit}>
   <button aria-label="Go to selected blog" type="submit">
-    <iconify-icon width="24" icon="lucide:search" />
+    <iconify-icon icon="lucide:search" />
   </button>
 
   <input
@@ -49,7 +49,6 @@
     on:focus|once={() => (placeholder = placeholderDefault)}
     type="search"
     id="search"
-    class="ff-sz-700"
     list="search-terms"
     autocomplete="off" />
   {#if !modal}
@@ -66,6 +65,11 @@
     position: relative;
     border-radius: 1rem;
     width: min(100% - 1rem, var(--sm));
+  }
+
+  form > *:not(kbd) {
+    font-size: inherit;
+    line-height: inherit;
   }
 
   .form-modal {
@@ -122,5 +126,6 @@
   kbd {
     position: absolute;
     right: 1.3rem;
+    font-size: 60%;
   }
 </style>
