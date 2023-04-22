@@ -231,7 +231,7 @@
   }
 
   .footer-start img {
-    width: 50%;
+    width: 25%;
     margin-inline: auto;
   }
 
@@ -295,20 +295,6 @@
     border-radius: 0;
   }
 
-  @media screen and (min-width: 64rem) {
-    .footer-start section {
-      flex-direction: row;
-    }
-
-    .footer-start img {
-      display: none;
-    }
-
-    .aboutme:after {
-      display: block;
-    }
-  }
-
   .footer-end {
     display: flex;
     place-content: center;
@@ -331,6 +317,18 @@
   }
 
   @media screen and (min-width: 80rem) {
+    .footer-start section {
+      flex-direction: row;
+    }
+
+    .footer-start img {
+      display: none;
+    }
+
+    .aboutme:after {
+      display: block;
+    }
+
     .footer-end section {
       flex-direction: row;
       padding: 1rem 0;
