@@ -4,7 +4,7 @@
   export let classes = 'defaults'
 </script>
 
-<a class={`${orientation} ${classes}`} {href}>
+<a class={`${orientation} ${classes}`} {href} {...$$restProps}>
   <slot />
 </a>
 

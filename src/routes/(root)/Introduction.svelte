@@ -22,7 +22,7 @@
 
     <div class="wrapper-introduction-links">
       <LinkRoundButton href="{base}/about" class="shiny">
-        More about me
+        Learn more about me
       </LinkRoundButton>
       <LinkRoundButton class="block" href="{base}/contact">
         Want to get in touch?
