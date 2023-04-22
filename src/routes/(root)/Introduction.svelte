@@ -29,7 +29,11 @@
       </LinkRoundButton>
     </div>
   </section>
-  <img class="hero logo-santigo-zero" title="My logo" alt="My logo" />
+  <img
+    loading="lazy"
+    class="hero logo-santigo-zero"
+    title="My logo"
+    alt="My logo" />
 </div>
 
 <style>

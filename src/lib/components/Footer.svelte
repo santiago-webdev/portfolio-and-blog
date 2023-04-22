@@ -39,6 +39,7 @@
     <section>
       <div class="aboutme">
         <img
+          loading="lazy"
           class="logo-santigo-zero"
           alt="My personal logo"
           title="My personal logo" />

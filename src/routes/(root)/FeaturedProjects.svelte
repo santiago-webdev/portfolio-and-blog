@@ -22,8 +22,8 @@
         >See all projects</LinkUI>
       <article>
         <img
-          src="/zapzsh.jpg"
           loading="lazy"
+          src="/zapzsh.jpg"
           title="Zap zsh plugin manager website screenshot"
           alt="Zap zsh plugin manager website screenshot" />
         <div class="description">
