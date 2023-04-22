@@ -60,15 +60,6 @@
     margin-right: auto;
   }
 
-  a {
-    display: flex;
-    place-items: center;
-    place-content: center;
-    padding: 2rem 3rem;
-    gap: 0.2rem;
-    border-radius: 999rem;
-  }
-
   @media screen and (min-width: 64rem) {
     main {
       flex-flow: row-reverse;

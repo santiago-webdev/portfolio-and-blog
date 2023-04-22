@@ -18,7 +18,8 @@
     <hr style="border-color: var(--clr-55)" />
     <div class="featured-projects-banner">
       <h3>Some things I've built</h3>
-      <LinkUI orientation="right" classes="font-4" href="{base}/projects">See all projects</LinkUI>
+      <LinkUI orientation="right" classes="font-4" href="{base}/projects"
+        >See all projects</LinkUI>
     </div>
   </div>
 </div>

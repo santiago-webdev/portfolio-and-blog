@@ -59,13 +59,6 @@
     margin-right: auto;
   }
 
-  .wrapper-introduction-links a {
-    border-radius: 1rem;
-    padding: clamp(1rem, 3vw, 2rem) clamp(2rem, 6vw, 3rem);
-    gap: 0.2rem;
-    border-radius: 999rem;
-  }
-
   img {
     display: none;
   }

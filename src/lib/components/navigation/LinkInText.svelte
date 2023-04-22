@@ -23,7 +23,8 @@
     transition: background-size 150ms ease-in-out;
   }
 
-  a:hover,a:focus {
+  a:hover,
+  a:focus {
     top: 10px;
     background-size: 100% 6px;
   }

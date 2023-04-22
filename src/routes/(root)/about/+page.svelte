@@ -1,6 +1,5 @@
 <script lang="ts">
   import { base } from '$app/paths'
-  import Forward from '$lib/components/Forward.svelte'
   import LinkRoundButton from '$lib/components/navigation/LinkRoundButton.svelte'
   import LinkUI from '$lib/components/navigation/LinkUI.svelte'
 
@@ -65,7 +64,6 @@
 </section>
 
 <style>
-
   main {
     display: flex;
     flex-flow: column wrap;

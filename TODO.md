@@ -36,5 +36,6 @@ aria-pressed
 ## Make use of <base>
 
 ## Maybe make use of LinkUI to redirect to search again
+
 If the user reaches the bottom of the screen don't just show the button to the
 top but also show a `LinkUI` to go to either Home or to search for another post.

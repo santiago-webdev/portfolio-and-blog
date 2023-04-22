@@ -39,7 +39,8 @@
 <section>
   <main>
     <div class="wrapper-header">
-      <LinkUI orientation="left" href="{base}/projects" classes="font-3">Back to blog</LinkUI>
+      <LinkUI orientation="left" href="{base}/projects" classes="font-3"
+        >Back to blog</LinkUI>
       {#if isHollow}
         <h1>
           <Hollow color={'var(--clr-100)'}>{hollowPrefix}</Hollow>
