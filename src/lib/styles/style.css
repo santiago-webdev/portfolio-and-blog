@@ -4,7 +4,7 @@
 @import url('./design-system/theme-light.css');
 
 html {
-  /* scroll-behavior: smooth; */ /* This causes problems with sveltekit navigation */
+  scroll-behavior: smooth; /* TODO(santigo-zero): Find a fix for bug in navigation */
   color-scheme: light dark;
   font-family: var(--ff-dflt);
   background-color: var(--clr-10);
