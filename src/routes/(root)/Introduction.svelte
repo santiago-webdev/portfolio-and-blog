@@ -3,7 +3,7 @@
   import LinkRoundButton from '$lib/components/navigation/LinkRoundButton.svelte'
 </script>
 
-<div id="introduction-about-me" class="about-me">
+<div id="introduction-about-me">
   <section>
     <div>
       <a href="#introduction-about-me">
@@ -31,15 +31,16 @@
   </section>
   <img
     loading="lazy"
-    class="hero logo-santigo-zero"
-    title="My logo"
-    alt="My logo" />
+    src="/alleged-photo-of-myself.jpg"
+    alt="TODO: This is supposed to be me"
+    title="TODO: This is supposed to be me" />
 </div>
 
 <style>
-  .about-me {
-    width: min(92%, var(--base));
-    display: flex;
+  #introduction-about-me {
+    width: min(92%, var(--md));
+    display: grid;
+    grid-template-columns: 1fr;
     margin-inline: auto;
     flex-flow: row wrap-reverse;
     background-color: var(--clr-25);
@@ -60,19 +61,25 @@
     display: flex;
     flex-flow: row wrap;
     gap: 1rem;
-    margin-right: auto;
+    margin-top: 3rem;
   }
 
   img {
-    display: none;
+    max-height: 75%;
+    max-width: 75%;
+    aspect-ratio: 1;
+    height: auto;
+    object-fit: cover;
+    display: flex;
+    place-self: center;
+    border: 12px var(--clr-55) solid;
+    margin-inline: auto;
+    border-radius: 100%;
   }
 
   @media screen and (min-width: 48rem) {
-    img {
-      max-width: 15%;
-      flex: 1;
-      display: block;
-      margin-inline: auto;
+    #introduction-about-me {
+      grid-template-columns: 2fr 1fr;
     }
   }
 </style>
