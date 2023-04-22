@@ -41,21 +41,13 @@
 
 <style>
   #featured-projects {
-    width: 92%;
-    max-width: var(--lg);
     margin: 3rem auto;
     display: flex;
     place-content: center;
     place-items: center;
 
-    --background: var(--clr-30);
-    --border: var(--clr-45);
-    background-color: var(--background);
-    border: 1px solid var(--background);
-    border-top-color: var(--border);
-    border-left-color: var(--border);
-    box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
-    border-radius: 0.8rem;
+    background-color: var(--clr-25);
+    border-top: 1px solid var(--clr-45);
   }
 
   .wrapper-fp {
@@ -65,6 +57,7 @@
     /* TODO(santigo-zero): This layout is not working */
     padding: 2.4rem;
 
+    width: 92%;
     max-width: var(--lg);
     /* outline: 3px solid hotpink; */
     /* margin-inline: auto; */
