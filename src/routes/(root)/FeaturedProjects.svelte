@@ -16,11 +16,26 @@
       </p>
     </div>
     <hr style="border-color: var(--clr-55)" />
-    <div class="featured-projects-banner">
+    <section>
       <h3>Some things I've built</h3>
       <LinkUI orientation="right" classes="font-4" href="{base}/projects"
         >See all projects</LinkUI>
-    </div>
+      <article>
+        <img
+          src="/zapzsh.jpg"
+          loading="lazy"
+          title="Zap zsh plugin manager website screenshot"
+          alt="Zap zsh plugin manager website screenshot" />
+        <div class="description">
+          <h4>Zap zsh website</h4>
+          <hr />
+          <p>
+            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+            cillum sint consectetur cupidatat.
+          </p>
+        </div>
+      </article>
+    </section>
   </div>
 </div>
 
@@ -79,7 +94,7 @@
     color: var(--clr-90);
   }
 
-  .featured-projects-banner {
+  section {
     display: flex;
     gap: 1.4rem;
     flex-flow: row wrap;
@@ -87,9 +102,31 @@
     place-items: center;
   }
 
-  .featured-projects-banner h3 {
+  h3 {
     color: var(--clr-100);
 
     font-variation-settings: 'wght' 800;
+  }
+
+  article {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    gap: 3rem;
+    background-color: var(--clr-40);
+    padding: 0.8rem;
+    border-radius: 1.2rem;
+  }
+
+  img {
+    grid-column: span 1;
+    object-fit: contain;
+    border-radius: 1rem;
+  }
+
+  .description {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
   }
 </style>

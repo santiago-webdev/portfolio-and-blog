@@ -96,7 +96,7 @@ h4,
 .font-fluid-sm {
   font-size: var(--fs-fl-sm);
   line-height: calc(var(--fs-fl-sm) * 1.15);
-  font-variation-settings: 'wght' 350;
+  font-variation-settings: 'wght' 450;
   letter-spacing: -0.015em;
 }
 

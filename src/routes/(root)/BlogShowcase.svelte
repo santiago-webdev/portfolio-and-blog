@@ -13,7 +13,7 @@
     </a>
     <p>
       Welcome! If you are curious you can search for
-      <LinkInText>articles here</LinkInText>
+      <LinkInText href="{base}/blog">articles here</LinkInText>
       or by pressing <kbd aria-keyshortcuts="Control+K">Ctrl K</kbd>.
     </p>
   </div>
