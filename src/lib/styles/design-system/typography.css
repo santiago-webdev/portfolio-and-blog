@@ -5,38 +5,125 @@
   --ff-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace,
     SF Mono, Monaco, Droid Sans Mono, Source Code Pro, monospace;
 
-  --fz-1: clamp(0.75rem, 2vw + 1rem, 1rem);
-  --fz-2: clamp(1rem, 3vw + 1rem, 1.2rem);
-  --fz-3: clamp(1.3rem, 4vw + 1rem, 1.6rem);
-  --fz-4: clamp(1.6rem, 5vw + 1rem, 2.6rem);
-  --fz-5: clamp(2rem, 8vw + 1rem, 3.5rem);
-  --fz-6: clamp(3rem, 10vw + 1rem, 4.5rem);
-  --fz-7: clamp(3.3rem, 12vw + 1rem, 5.6rem);
+  --fs-00: 0.5rem;
+  --fs-0: 0.75rem;
+  --fs-1: 1rem;
+  --fs-2: 1.1rem;
+  --fs-3: 1.25rem;
+  --fs-4: 1.5rem;
+  --fs-5: 1.75rem;
+  --fs-6: 2rem;
+  --fs-7: 2.5rem;
+  --fs-8: 3rem;
+  --fs-9: 3.5rem;
 
-  /* Fluid size */
-  /* font-variation-settings: 'wght' var(--fw-regular); */
+  --fs-fl-xs: clamp(0.75rem, 2vw + 1rem, 1.6rem);
+  --fs-fl-sm: clamp(1.2rem, 4vw + 1rem, 2.2rem);
+  --fs-fl-bs: clamp(1.8rem, 6vw + 1rem, 2.6rem);
+  --fs-fl-md: clamp(2rem, 9vw + 1rem, 3.5rem);
+  --fs-fl-lg: clamp(3.3rem, 12vw + 1rem, 5.6rem);
+  --fs-fl-xl: clamp(3.6rem, 12vw + 1rem, 6.3rem);
+}
 
-  /* XS */
-  --fs-fluid-xs: clamp(0.75rem, 2vw + 1rem, 1rem);
-  --lh-fluid-xs: calc(var(--fs-fluid-xs) * 1.15);
+/* Normal font and line height sizes */
+.font-00 {
+  font-size: var(--fs-00);
+  line-height: calc(var(--fs-00) * 1.15);
+}
 
-  /* SM */
-  --fs-fluid-sm: clamp(1rem, 4vw + 1rem, 1.5rem);
-  --lh-fluid-sm: calc(var(--fs-fluid-sm) * 1.15);
+.font-0 {
+  font-size: var(--fs-0);
+  line-height: calc(var(--fs-0) * 1.15);
+}
 
-  /* Base */
-  --fs-fluid-base: clamp(1.5rem, 6vw + 1rem, 2.5rem);
-  --lh-fluid-base: calc(var(--fs-fluid-base) * 1.15);
+.font-1 {
+  font-size: var(--fs-1);
+  line-height: calc(var(--fs-1) * 1.15);
+}
 
-  /* MD */
-  --fs-fluid-md: clamp(2rem, 9vw + 1rem, 3.5rem);
-  --lh-fluid-md: calc(var(--fs-fluid-md) * 1.15);
+a,
+button,
+li,
+small,
+.font-2 {
+  font-size: var(--fs-2);
+  line-height: calc(var(--fs-2) * 1.15);
+}
 
-  /* LG */
-  --fs-fluid-lg: clamp(3.3rem, 12vw + 1rem, 5.6rem);
-  --lh-fluid-lg: calc(var(--fs-fluid-lg) * 1.15);
+input,
+kbd,
+pre,
+.font-3 {
+  font-size: var(--fs-3);
+  line-height: calc(var(--fs-3) * 1.15);
+}
 
-  /* XL */
-  --fs-fluid-xl: clamp(3.6rem, 12vw + 1rem, 6.3rem);
-  --lh-fluid-xl: calc(var(--fs-fluid-xl) * 1.15);
+.font-4 {
+  font-size: var(--fs-4);
+  line-height: calc(var(--fs-4) * 1.15);
+}
+
+.font-5 {
+  font-size: var(--fs-5);
+  line-height: calc(var(--fs-5) * 1.15);
+  font-variation-settings: 'wght' 400;
+}
+
+.font-6 {
+  font-size: var(--fs-6);
+  line-height: calc(var(--fs-6) * 1.15);
+}
+
+.font-7 {
+  font-size: var(--fs-7);
+  line-height: calc(var(--fs-7) * 1.15);
+}
+
+.font-8 {
+  font-size: var(--fs-8);
+  line-height: calc(var(--fs-8) * 1.15);
+}
+
+/* Fluid font and line height sizes */
+h5,
+h6,
+p,
+.font-fluid-xs {
+  font-size: var(--fs-fl-xs);
+  line-height: calc(var(--fs-fl-xs) * 1.15);
+}
+
+h4,
+.font-fluid-sm {
+  font-size: var(--fs-fl-sm);
+  line-height: calc(var(--fs-fl-sm) * 1.15);
+  font-variation-settings: 'wght' 350;
+  letter-spacing: -0.015em;
+}
+
+h3,
+.font-fluid-bs {
+  font-size: var(--fs-fl-bs);
+  line-height: calc(var(--fs-fl-bs) * 1.15);
+}
+
+h2,
+.font-fluid-md {
+  font-size: var(--fs-fl-md);
+  line-height: calc(var(--fs-fl-md) * 1.15);
+}
+
+h1,
+.font-fluid-lg {
+  font-size: var(--fs-fl-lg);
+  line-height: calc(var(--fs-fl-lg) * 1.15);
+  font-variation-settings: 'wght' 800;
+  letter-spacing: -0.04em;
+}
+
+.font-fluid-xl {
+  font-size: var(--fs-fl-xl);
+  line-height: calc(var(--fs-fl-xl) * 1.1);
+  font-variation-settings: 'wght' 800;
+  letter-spacing: -0.04em;
 }

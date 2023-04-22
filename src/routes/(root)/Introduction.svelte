@@ -7,11 +7,11 @@
   <section>
     <div>
       <a href="#introduction-about-me">
-        <h2>About</h2>
+        <h2 class="font-fluid-md">About</h2>
       </a>
       <br />
-      <h3 style="--range: var(--fz-3)">Hello!</h3>
-      <p>
+      <h3 class="font-5">Hello!</h3>
+      <p class="font-5">
         I'm a web developer based in <em>Argentina</em>, with a passion for
         <strong>Free And Open Source</strong>,
         <strong>UI/UX</strong> and <strong>Linux</strong>. I believe that
@@ -44,14 +44,6 @@
     padding: 2rem;
     border-radius: 1rem;
     gap: 1rem;
-  }
-
-  h2 {
-    --range: var(--fz-5);
-  }
-
-  p {
-    --range: var(--fz-3);
   }
 
   section {

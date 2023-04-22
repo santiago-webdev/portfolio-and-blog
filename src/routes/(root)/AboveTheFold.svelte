@@ -6,7 +6,7 @@
 <div class="wrapper">
   <main>
     <div class="introduction">
-      <h1>
+      <h1 class="font-fluid-xl">
         Building the web <br />
         <span>&&</span> clean interfaces
       </h1>
@@ -15,7 +15,7 @@
           >web deve&shylopment</strong> and show you my projects while at it.
       </p>
       <section>
-        <a class="shiny hover" href="{base}/" aria-label="Link to my projects"
+        <a class="shiny hover" href="{base}/projects" aria-label="Link to my projects"
           >What I've built
           <Forward />
         </a>
@@ -35,39 +35,25 @@
     padding: 3rem 0;
   }
 
-  h1 {
-    font-size: var(--fs-fluid-xl);
-    line-height: var(--lh-fluid-xl);
-  }
-
-  p {
-    font-size: var(--fs-fluid-base);
-    line-height: var(--lh-fluid-base);
-  }
-
   main {
     display: flex;
+    gap: 2rem;
     place-items: center;
-    flex-flow: column;
+    flex-direction: column;
     width: min(92%, var(--md));
     margin-inline: auto;
-    gap: 2rem;
-    min-height: 40vh;
   }
 
   .introduction {
     display: flex;
     flex-flow: column wrap;
     gap: 2rem;
+    max-width: var(--md);
+    width: 100%;
   }
 
-  .introduction p {
-    --range: var(--fz-3);
-    width: min(100%, 40ch);
-  }
-
-  .introduction span {
-    --range: inherit;
+  p {
+    max-width: 40ch;
   }
 
   section {
@@ -81,7 +67,7 @@
     display: flex;
     place-items: center;
     place-content: center;
-    padding: clamp(1rem, 3vw, 2rem) clamp(2rem, 6vw, 3rem);
+    padding: 2rem 3rem;
     gap: 0.2rem;
     border-radius: 999rem;
   }

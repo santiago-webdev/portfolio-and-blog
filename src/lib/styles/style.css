@@ -30,9 +30,6 @@ input,
 form,
 li,
 span {
-  --range: var(--fz-2);
-  font-size: var(--range);
-  line-height: calc(1.2 * var(--range));
   color: var(--clr-100);
 }
 
@@ -52,39 +49,6 @@ strong {
 [data-theme='light'] img.logo-santigo-zero,
 [data-theme='system-light'] img.logo-santigo-zero {
   content: url('/logo-light.svg');
-}
-
-h1 {
-  font-size: var(--fs-fluid-lg);
-  line-height: var(--lh-fluid-lg);
-  font-variation-settings: 'wght' 800;
-  letter-spacing: -0.04em;
-}
-
-h2 {
-  font-size: var(--fs-fluid-base);
-  line-height: var(--lh-fluid-base);
-  font-variation-settings: 'wght' 700;
-}
-
-h3 {
-  --range: var(--fz-5);
-  font-size: var(--range);
-  line-height: calc(1.2 * var(--range));
-  font-variation-settings: 'wght' 500;
-}
-
-p {
-  --range: var(--fz-4);
-  font-size: var(--range);
-  line-height: calc(1.2 * var(--range));
-  font-variation-settings: 'wght' 400;
-}
-
-small {
-  --range: clamp(0.5rem, 2vw + 1.5rem, 1rem);
-  font-size: var(--range);
-  line-height: calc(1.2 * var(--range));
 }
 
 .trn-border {
@@ -292,7 +256,6 @@ pre {
   border-radius: 0.6rem;
   padding: 1rem;
   margin: 1rem 0;
-  font-size: clamp(0.8rem, 8vw, 1.2rem);
   font-family: var(--ff-mono);
 }
 

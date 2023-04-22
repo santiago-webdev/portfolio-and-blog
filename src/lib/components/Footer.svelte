@@ -42,15 +42,15 @@
           class="logo-santigo-zero"
           alt="My personal logo"
           title="My personal logo" />
-        <h3>Santiago Gonzalez</h3>
-        <p>
+        <h3 class="font-4">Santiago Gonzalez</h3>
+        <p class="font-3">
           I'm a web developer that can help you craft accessible website
           experiences without leaving the aesthetics aside.
         </p>
       </div>
 
       <nav aria-label="footer-navigation">
-        <h3>Sitemap</h3>
+        <h3 class="font-3">Sitemap</h3>
         {#each $navigationItems as item}
           {#if item.label !== 'Separator'}
             <a
@@ -67,7 +67,7 @@
       </nav>
 
       <div class="relevant-projects">
-        <h3>Projects</h3>
+        <h3 class="font-3">Projects</h3>
         <ul>
           <li>
             <a class="shiny-select" target="_blank" href="https://zapzsh.org"
@@ -77,7 +77,7 @@
       </div>
 
       <div class="donate">
-        <h3>Donate</h3>
+        <h3 class="font-3">Donate</h3>
         <ul>
           {#each donateItems as item}
             <li>
@@ -104,7 +104,7 @@
       </div>
 
       <div class="contact">
-        <h3>Contact</h3>
+        <h3 class="font-3">Contact</h3>
         <address>
           <a
             target="_blank"
@@ -138,11 +138,12 @@
   <div class="footer-end">
     <section>
       <a
+        class="font-3"
         target="_blank"
         href="https://github.com/santigo-zero"
         aria-label="Link to my GitHub profile"
         title="Link to my GitHub profile">
-        <small>
+        <small class="font-3">
           Designed & Built with <iconify-icon icon="lucide:heart" />
           by
         </small>
@@ -150,6 +151,7 @@
       </a>
 
       <a
+        class="font-3"
         target="_blank"
         href={site.repo}
         aria-label="Link to git repository for this site at Github"
@@ -168,7 +170,7 @@
         </var>
       </a>
 
-      <small class="copyright">
+      <small class="font-3 copyright">
         (c) {new Date().getFullYear()} -- present
         <div aria-orientation="vertical" role="separator">•</div>
         All rights reserved
@@ -196,7 +198,6 @@
     display: flex;
     place-items: center;
     gap: 0.5ch;
-    --range: var(--fz-2);
     color: inherit;
   }
 
@@ -268,7 +269,6 @@
   }
 
   .aboutme h3 {
-    --range: var(--fz-3);
     text-indent: 0;
     text-decoration: none;
   }

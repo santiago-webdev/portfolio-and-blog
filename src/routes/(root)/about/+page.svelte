@@ -31,7 +31,7 @@
       Go Back
     </button>
     <h1>About</h1>
-    <span style="--range: var(--fz-2)">Hello again!</span>
+    <span>Hello again!</span>
     <p>
       I started learning backend tools like Java and Python, but after October
       of 2022 I decided I wanted to be a front-end developer or more
@@ -90,10 +90,6 @@
     padding-bottom: 1rem;
   }
 
-  h2 {
-    --range: var(--fz-5);
-  }
-
   section {
     display: flex;
     flex-flow: column wrap;
@@ -101,10 +97,6 @@
 
     width: min(100% - 1rem, var(--base));
     margin-inline: auto;
-  }
-
-  section p {
-    --range: var(--fz-3);
   }
 
   .technologies {
@@ -115,7 +107,6 @@
   }
 
   .technologies span {
-    --range: var(--fz-2);
     display: flex;
     place-items: center;
     border: 2px solid var(--clr-95);

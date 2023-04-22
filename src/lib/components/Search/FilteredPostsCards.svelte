@@ -22,7 +22,7 @@
       <li in:fly={fly_in} out:fly={fly_out}>
         <a href="{base}/blog{post.href}">
           <article class="shiny less attn">
-            <h2>{post.title}</h2>
+            <h2 class="font-fluid-xs">{post.title}</h2>
             {#if post.description}
               <p>{post.description}</p>
             {:else}
@@ -92,10 +92,10 @@
   }
 
   h2 {
-    --range: var(--fz-3);
+    font-variation-settings: 'wght' 750;
   }
 
   p {
-    --range: var(--fz-3);
+    font-variation-settings: 'wght' 400;
   }
 </style>

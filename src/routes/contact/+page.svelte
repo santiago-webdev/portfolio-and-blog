@@ -105,7 +105,6 @@
   }
 
   section:first-child p {
-    --range: var(--fz-3);
     color: var(--clr-95);
   }
 
@@ -123,12 +122,10 @@
 
   section:last-child p {
     color: var(--clr-85);
-    --range: var(--fz-2);
     margin-inline: 0.6rem;
   }
 
   section:last-child a {
-    --range: var(--fz-2);
     color: var(--clr-100);
     font-variation-settings: 'wght' 500;
   }

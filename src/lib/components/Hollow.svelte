@@ -8,7 +8,6 @@
 
 <style>
   span {
-    --range: inherit;
     -webkit-text-stroke: 0.1rem var(--color);
     color: transparent;
   }

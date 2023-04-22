@@ -6,9 +6,9 @@
   <div class="wrapper-fp">
     <div class="featured-projects-introduction">
       <a href="#featured-projects">
-        <h2>Featured Projects</h2>
+        <h2 class="font-7">Featured Projects</h2>
       </a>
-      <p>
+      <p class="font-6">
         This is a selection of my
         <em>best</em>
         and most noteworthy work.
@@ -17,10 +17,7 @@
     <hr style="border-color: var(--clr-55)" />
     <div class="featured-projects-banner">
       <h3>Some things I've built</h3>
-      <a
-        style="--range:var(--fz-3)"
-        class="slide-forwards"
-        href="{base}/projects">See all projects</a>
+      <a class="font-4 slide-forwards" href="{base}/projects">See all projects</a>
     </div>
   </div>
 </div>
@@ -51,7 +48,8 @@
     /* TODO(santigo-zero): This layout is not working */
     padding: 2.4rem;
 
-    max-width: var(--md);
+    max-width: var(--lg);
+    /* outline: 3px solid hotpink; */
     /* margin-inline: auto; */
   }
 
@@ -67,7 +65,6 @@
   }
 
   .featured-projects-introduction a h2 {
-    --range: var(--fz-5);
     color: var(--clr-150);
 
     font-variation-settings: 'wght' 800;
@@ -76,7 +73,6 @@
   .featured-projects-introduction p {
     flex: 1;
 
-    --range: var(--fz-4);
     font-variation-settings: 'wght' 250;
     color: var(--clr-90);
   }
@@ -90,7 +86,6 @@
   }
 
   .featured-projects-banner h3 {
-    --range: var(--fz-4);
     color: var(--clr-100);
 
     font-variation-settings: 'wght' 800;

@@ -255,19 +255,16 @@
   }
 
   h3 {
-    --range: var(--fz-3);
     color: var(--clr-100);
   }
 
   p {
-    --range: var(--fz-2);
     color: var(--clr-100);
   }
 
   a {
     display: grid;
     place-items: start;
-    --range: var(--fz-3);
   }
 
   hr {

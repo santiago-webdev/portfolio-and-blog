@@ -15,7 +15,6 @@
   }
 
   p {
-    --range: var(--fz-3);
     width: min(33ch, 100%);
     margin-inline: auto;
     text-align: center;
