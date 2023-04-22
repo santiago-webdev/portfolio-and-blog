@@ -1,6 +1,7 @@
 <script>
   import { base } from '$app/paths'
   import { Posts } from '$lib/components/Search/store'
+  import LinkInText from '$lib/components/navigation/LinkInText.svelte'
   import { readableDate, relativeTime } from '$lib/utils/utils'
 </script>
 
@@ -8,11 +9,12 @@
   <div class="present">
     <a href="#blog-showcase" data-sveltekit-reload>
       <h2 class="font-fluid-md">Check out my blog</h2>
+      <br />
     </a>
     <p>
-      Welcome! If you are curious you can search for <a
-        href="{base}/blog">articles here</a>
-      or using the modal with <kbd aria-keyshortcuts="Control+K">Ctrl K</kbd>.
+      Welcome! If you are curious you can search for
+      <LinkInText>articles here</LinkInText>
+      or by pressing <kbd aria-keyshortcuts="Control+K">Ctrl K</kbd>.
     </p>
   </div>
   <br />
