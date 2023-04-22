@@ -19,7 +19,7 @@
     transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
 
     text-align: left;
-    color: var(--clr-85);
+    color: var(--clr-90);
     font-variation-settings: 'wght' 650;
   }
 
