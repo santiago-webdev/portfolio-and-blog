@@ -41,8 +41,6 @@
   line-height: calc(var(--fs-1) * 1.15);
 }
 
-a,
-button,
 li,
 small,
 .font-2 {
@@ -50,6 +48,8 @@ small,
   line-height: calc(var(--fs-2) * 1.15);
 }
 
+a,
+button,
 input,
 pre,
 .font-3 {
@@ -124,5 +124,5 @@ h1,
   font-size: var(--fs-fl-xl);
   line-height: calc(var(--fs-fl-xl) * 1.1);
   font-variation-settings: 'wght' 800;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.05em;
 }

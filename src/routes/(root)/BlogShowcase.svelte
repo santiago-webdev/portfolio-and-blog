@@ -12,9 +12,9 @@
       <br />
     </a>
     <p>
-      Welcome! If you are curious you can search for
-      <LinkInText href="{base}/blog">articles here</LinkInText>
-      or by pressing <kbd aria-keyshortcuts="Control+K">Ctrl K</kbd>.
+      Welcome! If you are curious you can search for blog articles by pressing
+      <kbd aria-keyshortcuts="Control+K">Ctrl K</kbd> or
+      <LinkInText href="{base}/blog">here</LinkInText>.
     </p>
   </div>
   <br />
