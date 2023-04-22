@@ -1,6 +1,7 @@
 <script lang="ts">
   import { base } from '$app/paths'
   import Forward from '$lib/components/Forward.svelte'
+  import LinkRoundButton from '$lib/components/navigation/LinkRoundButton.svelte'
   import LinkUI from '$lib/components/navigation/LinkUI.svelte'
 
   const tools = [
@@ -28,7 +29,8 @@
 
 <main>
   <section>
-    <LinkUI orientation="left" href="{base}/projects" classes="font-3">Home</LinkUI>
+    <LinkUI orientation="left" href="{base}/projects" classes="font-3"
+      >Home</LinkUI>
     <h1>About</h1>
     <span>Hello again!</span>
     <p>
@@ -39,10 +41,9 @@
     </p>
 
     <p>All of my projects can be found here:</p>
-    <a class="shiny hover" href="{base}/" aria-label="Link to my projects"
-      >What I've built
-      <Forward />
-    </a>
+    <LinkRoundButton href="{base}/projects" class="shiny hover">
+      What I've built
+    </LinkRoundButton>
   </section>
 </main>
 <section>
@@ -64,17 +65,6 @@
 </section>
 
 <style>
-  button {
-    display: flex;
-    color: var(--clr-95);
-    /* outline: 3px hotpink solid; */
-  }
-
-  a {
-    margin-top: 1rem;
-    padding: clamp(1rem, 3vw, 2rem) clamp(2rem, 6vw, 3rem);
-    width: max-content;
-  }
 
   main {
     display: flex;

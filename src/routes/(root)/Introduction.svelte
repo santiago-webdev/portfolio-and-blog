@@ -1,6 +1,6 @@
 <script>
   import { base } from '$app/paths'
-  import Forward from '$lib/components/Forward.svelte'
+  import LinkRoundButton from '$lib/components/navigation/LinkRoundButton.svelte'
 </script>
 
 <div id="introduction-about-me" class="about-me">
@@ -21,14 +21,12 @@
     </div>
 
     <div class="wrapper-introduction-links">
-      <a class="shiny" href="{base}/about">
+      <LinkRoundButton href="{base}/about" class="shiny">
         More about me
-        <Forward />
-      </a>
-      <a class="block" href="{base}/contact">
+      </LinkRoundButton>
+      <LinkRoundButton class="block" href="{base}/contact">
         Want to get in touch?
-        <Forward />
-      </a>
+      </LinkRoundButton>
     </div>
   </section>
   <img class="hero logo-santigo-zero" title="My logo" alt="My logo" />

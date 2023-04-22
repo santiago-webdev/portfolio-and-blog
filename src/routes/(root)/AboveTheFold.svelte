@@ -1,6 +1,6 @@
 <script lang="ts">
   import { base } from '$app/paths'
-  import Forward from '$lib/components/Forward.svelte'
+  import LinkRoundButton from '$lib/components/navigation/LinkRoundButton.svelte'
 </script>
 
 <div class="wrapper">
@@ -15,15 +15,12 @@
           >web deve&shylopment</strong> and show you my projects while at it.
       </p>
       <section>
-        <a class="shiny hover" href="{base}/projects" aria-label="Link to my projects"
-          >What I've built
-          <Forward />
-        </a>
-
-        <a class="reverse" href="{base}/blog" id="go-read-my-blog"
-          >Read my blog
-          <Forward />
-        </a>
+        <LinkRoundButton href="{base}/projects" class="shiny hover">
+          What I've built
+        </LinkRoundButton>
+        <LinkRoundButton href="{base}/blog" class="reverse">
+          Read my blog
+        </LinkRoundButton>
       </section>
     </div>
   </main>
