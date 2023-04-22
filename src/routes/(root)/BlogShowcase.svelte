@@ -11,7 +11,6 @@
     </a>
     <p>
       Welcome! If you are curious you can search for <a
-        class="slide-forwards"
         href="{base}/blog">articles here</a>
       or using the modal with <kbd aria-keyshortcuts="Control+K">Ctrl K</kbd>.
     </p>

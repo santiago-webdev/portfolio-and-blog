@@ -5,6 +5,7 @@
   import Hollow from './Hollow.svelte'
   import { readableDate, relativeTime } from '$lib/utils/utils'
   import { base } from '$app/paths'
+  import LinkUI from './navigation/LinkUI.svelte'
 
   export let title = ''
   export let datetime = ''
@@ -38,7 +39,7 @@
 <section>
   <main>
     <div class="wrapper-header">
-      <a class="slide-backwards" href="{base}/blog">Back to blog</a>
+      <LinkUI orientation="left" href="{base}/projects" classes="font-3">Back to blog</LinkUI>
       {#if isHollow}
         <h1>
           <Hollow color={'var(--clr-100)'}>{hollowPrefix}</Hollow>

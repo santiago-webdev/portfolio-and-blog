@@ -1,5 +1,6 @@
 <script lang="ts">
   import { base } from '$app/paths'
+  import LinkUI from '$lib/components/navigation/LinkUI.svelte'
 </script>
 
 <div id="featured-projects">
@@ -17,7 +18,7 @@
     <hr style="border-color: var(--clr-55)" />
     <div class="featured-projects-banner">
       <h3>Some things I've built</h3>
-      <a class="font-4 slide-forwards" href="{base}/projects">See all projects</a>
+      <LinkUI orientation="right" classes="font-4" href="{base}/projects">See all projects</LinkUI>
     </div>
   </div>
 </div>

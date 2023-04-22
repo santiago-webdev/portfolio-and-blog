@@ -1,6 +1,7 @@
 <script lang="ts">
   import { base } from '$app/paths'
   import Forward from '$lib/components/Forward.svelte'
+  import LinkUI from '$lib/components/navigation/LinkUI.svelte'
 
   const tools = [
     { name: 'HTML', icon: 'logos:html-5' },
@@ -27,9 +28,7 @@
 
 <main>
   <section>
-    <button class="slide-backwards" on:click={() => history.back()}>
-      Go Back
-    </button>
+    <LinkUI orientation="left" href="{base}/projects" classes="font-3">Home</LinkUI>
     <h1>About</h1>
     <span>Hello again!</span>
     <p>

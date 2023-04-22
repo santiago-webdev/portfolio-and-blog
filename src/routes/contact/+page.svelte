@@ -8,7 +8,7 @@
   <div class="wrapper-contact">
     <section>
       <div class="contact-introduction">
-        <a class="slide-backwards" href="{base}/">Home</a>
+        <a href="{base}/">Home</a>
         <h1>Contact me</h1>
         WIP: This currently does not work
         <p>
