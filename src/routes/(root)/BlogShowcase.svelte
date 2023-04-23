@@ -22,7 +22,7 @@
   <div class="latest-articles">
     <a href="{base}/blog{$Posts[0].href}">
       <article>
-        <h3 class="font-fluid-sm">{$Posts[0].title}</h3>
+        <h3 class="font-6">{$Posts[0].title}</h3>
         <hr />
         <p>
           {$Posts[0].description}
@@ -43,7 +43,7 @@
     </a>
     <a href="{base}/blog{$Posts[1].href}">
       <article>
-        <h3 class="font-fluid-sm">{$Posts[1].title}</h3>
+        <h3 class="font-6">{$Posts[1].title}</h3>
         <hr />
         <p>
           {$Posts[1].description}
@@ -64,7 +64,7 @@
     </a>
     <a href="{base}/blog{$Posts[2].href}">
       <article>
-        <h3 class="font-fluid-sm">{$Posts[2].title}</h3>
+        <h3 class="font-6">{$Posts[2].title}</h3>
         <hr />
         <p>
           {$Posts[2].description}
