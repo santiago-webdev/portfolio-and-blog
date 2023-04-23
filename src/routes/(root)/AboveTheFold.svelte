@@ -33,7 +33,7 @@
 <style>
   .wrapper {
     background-color: var(--clr-25);
-    padding: 3rem 0;
+    padding: 2rem 0;
   }
 
   main {
@@ -65,21 +65,19 @@
   section {
     display: flex;
     flex-flow: row wrap;
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 1.4rem;
+    margin-top: 1.4rem;
   }
 
   @media screen and (min-width: 80rem) {
     main {
-      /* flex-flow: row-reverse; */
       flex-flow: row;
-      padding: 6rem 3rem;
+      padding: 6rem 0;
       text-align: left;
     }
 
     .call-to-scroll {
       position: absolute;
-      /* width: 1ch; */
       inset: 75% 0 25% auto;
       transform: rotate(90deg);
     }

@@ -124,7 +124,7 @@
     transition: padding 300ms cubic-bezier(0.07, 0.95, 0, 1),
       background-color 300ms ease-in-out, transform 300ms ease-in-out;
     z-index: 999;
-    padding: 1.5rem 0;
+    padding: 0.6rem 0;
     background-color: var(--clr-25);
   }
 
@@ -138,7 +138,7 @@
   }
 
   header.scrollY {
-    padding: 0.2rem 0;
+    padding: 0.6rem 0;
   }
 
   a,
@@ -167,12 +167,7 @@
   }
 
   nav a:first-child span {
-    transition: opacity 150ms ease-in-out;
-    opacity: 1;
-  }
-
-  nav a:first-child span.scrollY {
-    opacity: 0;
+    display: none;
   }
 
   #contextual {
@@ -196,7 +191,8 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    nav {
+    nav,
+    header {
       transition: none;
     }
   }
@@ -209,6 +205,20 @@
     header.scrollY {
       backdrop-filter: blur(6px);
       background-color: var(--clr-25-trp);
+    }
+
+    header {
+      padding: 2rem 0;
+    }
+
+    nav a:first-child span {
+      display: block;
+      transition: opacity 150ms ease-in-out;
+      opacity: 1;
+    }
+
+    nav a:first-child span.scrollY {
+      opacity: 0;
     }
   }
 </style>

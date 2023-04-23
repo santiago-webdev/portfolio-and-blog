@@ -15,7 +15,7 @@
     place-items: center;
     place-content: center;
     max-width: max-content;
-    padding: 2rem 3rem;
+    padding: clamp(1.4rem, 3vw + 1rem, 2rem) clamp(2.4rem, 3vw + 1rem, 3rem);
     gap: 0.2rem;
     border-radius: 999rem;
   }
