@@ -127,10 +127,10 @@
           on:click={() => toggleModal()}
           href="{base}/blog{post.href}">
           <article>
-            <h3>
+            <h3 class="font-4">
               {post.title}
             </h3>
-            <p>{post.description}</p>
+            <p class="font-3">{post.description}</p>
             {#if post.datetime}
               <small>
                 <time datetime={post.datetime}>
