@@ -19,7 +19,7 @@
   afterNavigate(() => (expanded = false))
   onMount(() => {
     const checkForDesktop = () =>
-      window.matchMedia('(min-width: 64rem)').matches
+      window.matchMedia('(min-width: 1280px)').matches
         ? ((onDesktop = true), (expanded = false))
         : (onDesktop = false)
 
