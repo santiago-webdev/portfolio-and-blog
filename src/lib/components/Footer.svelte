@@ -270,7 +270,7 @@
   }
 
   .aboutme h3 {
-    text-indent: 0;
+    margin-inline: 0;
     text-decoration: none;
   }
 
