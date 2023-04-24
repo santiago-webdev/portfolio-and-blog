@@ -38,11 +38,6 @@
   <div class="footer-start">
     <section>
       <div class="aboutme">
-        <img
-          loading="lazy"
-          class="logo-santigo-zero"
-          alt="My personal logo"
-          title="My personal logo" />
         <h3 class="font-4">Santiago Gonzalez</h3>
         <p class="font-3">
           I'm a web developer that can help you craft accessible website
@@ -214,7 +209,7 @@
 
   .footer-start section {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     justify-content: space-between;
     padding: clamp(1rem, 3vw, 2rem) 0;
     gap: 1.6rem;
@@ -231,17 +226,13 @@
     color: var(--clr-95);
   }
 
-  .footer-start img {
-    width: 25%;
-    margin-inline: auto;
-  }
-
   .aboutme {
     display: flex;
     position: relative;
     place-content: center;
     flex-flow: column wrap;
-    flex: 2;
+    flex-basis: 23rem;
+    flex-grow: 1;
     gap: 1rem;
     padding: 2rem;
     border-radius: 1rem;
@@ -252,21 +243,34 @@
     border: 1px solid var(--background);
     border-top-color: var(--border);
     border-left-color: var(--border);
-    box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
+    box-shadow: 0 8px 16px 0 rgba(0 0 0 / 0.15);
   }
 
   .aboutme:after {
     content: '';
     position: absolute;
     pointer-events: none;
-    display: none;
     width: 100%;
     height: 100%;
-    opacity: 0.05;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background-position: center;
+    background-size: 100% 123%;
+  }
+
+  :global([data-theme='dark'] .aboutme:after),
+  :global([data-theme='system'] .aboutme:after) {
+    opacity: 0.06;
     background-image: url('/logo.svg');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 50% 75%;
+  }
+
+  :global([data-theme='light'] .aboutme:after),
+  :global([data-theme='system-light'] .aboutme:after) {
+    opacity: 0.15;
+    background-image: url('/logo-light.svg');
   }
 
   .aboutme h3 {
@@ -304,9 +308,8 @@
 
   .footer-end section {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    place-items: center;
+    flex-wrap: wrap;
+    place-content: center;
     gap: 1.6rem;
     padding: 2rem 0;
   }
@@ -317,22 +320,10 @@
     place-content: center;
   }
 
-  @media screen and (min-width: 80rem) {
-    .footer-start section {
-      flex-direction: row;
-    }
-
-    .footer-start img {
-      display: none;
-    }
-
-    .aboutme:after {
-      display: block;
-    }
-
-    .footer-end section {
-      flex-direction: row;
-      padding: 1rem 0;
-    }
-  }
+  /* @media screen and (min-width: 1040px) { */
+  /*   .footer-end section { */
+  /*     flex-direction: row; */
+  /*     padding: 1rem 0; */
+  /*   } */
+  /* } */
 </style>
