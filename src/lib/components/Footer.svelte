@@ -308,10 +308,10 @@
 
   .footer-end section {
     display: flex;
-    flex-wrap: wrap;
-    place-content: center;
-    gap: 1.6rem;
-    padding: 2rem 0;
+    flex-direction: column;
+    place-items: center;
+    gap: 2rem;
+    padding: 3rem 0;
   }
 
   .copyright {
@@ -320,10 +320,11 @@
     place-content: center;
   }
 
-  /* @media screen and (min-width: 1040px) { */
-  /*   .footer-end section { */
-  /*     flex-direction: row; */
-  /*     padding: 1rem 0; */
-  /*   } */
-  /* } */
+  @media screen and (min-width: 1280px) {
+    .footer-end section {
+      flex-flow: row wrap;
+      justify-content: space-between;
+      padding: 1rem 0;
+    }
+  }
 </style>
