@@ -31,7 +31,7 @@ It's not being updated to the current <main> after navigation, so it's ignored.
 ## Changes to layouts
 
 Blog cards should use role='presentation', and the hamburger menu should use
-aria-pressed
+aria-pressed and hide the expanded menu when clicking or scrolling.
 
 ## Make use of <base>
 
