@@ -3,48 +3,54 @@
 
   const jobs = [
     {
-      value: 'featured',
+      value: 0,
       label: 'Featured',
-      text: 'Featured projects',
+      name: 'Featured projects',
+      description:
+        "Here's a selection of the most relevant projects I have for you to explore",
     },
     {
-      value: 'opensource',
+      value: 1,
       label: 'Open Source',
-      text: 'Open Source projects',
+      name: 'Open Source contributions',
+      description: `As a Linux enthusiast, I'm a firm believer in FOSS, check
+      out the projects I'm being part of`,
     },
     {
-      value: 'fullstack',
+      value: 2,
       label: 'Full Stack',
-      text: 'Full stack projects',
+      name: 'Full Stack projects',
+      description: `This are some of the most 'complete' projects I have to date`,
     },
     {
-      value: 'frontend',
+      value: 3,
       label: 'Front End',
-      text: 'Front End projects',
+      name: 'Front End projects',
+      description: `In here you'll find rewrites with a focus on making the UI/UX of this
+pages accesible to everyone`,
     },
   ]
-  let value = jobs[0].value
+
+  let value = 0
 </script>
 
 <main>
   <div class="wrapper-projects">
     <div class="projects-presentation">
-      <h1 class="font-fluid-bs">Featured Projects - Here you'll find:</h1>
+      <h1 class="font-fluid-bs">
+        Projects Showcase - {jobs[value].name}
+      </h1>
       <p class="font-fluid-bs">
-        A selection of my most notorious {value} projects to explore.
+        {jobs[value].description}.
       </p>
     </div>
-    <form>
-      <label class="font-fluid-sm" for="projects-type">
+    <form class="font-fluid-xs">
+      <label class="font-fluid-sm" for="projects">
         Filter by type of project
       </label>
-      <select
-        bind:value
-        class="font-fluid-xs shiny"
-        name="projects-type"
-        id="projects-type">
-        {#each jobs as { value, label, text }}
-          <option {value} {label}>{text}</option>
+      <select bind:value class="shiny" name="projects" id="projects">
+        {#each jobs as { value, label }}
+          <option {value} {label} />
         {/each}
       </select>
     </form>
@@ -59,7 +65,7 @@
 </section>
 
 <svelte:head>
-  <title>Santiago's Projects</title>
+  <title>Santiago's Portfolio - {jobs[value].name}</title>
 
   <!-- TODO(santigo-zero): meta tags for dynamic routing -->
   <!-- HTML Meta Tags -->
@@ -101,11 +107,11 @@
     display: flex;
     flex-flow: row wrap;
 
-    width: min(92%, var(--md));
+    width: min(92%, var(--base));
     margin-inline: auto;
     padding: 3rem 0;
     place-content: center;
-    gap: 3rem;
+    gap: 1rem;
   }
 
   .projects-presentation {
@@ -127,16 +133,18 @@
     gap: 1rem;
   }
 
+  label {
+    margin-inline: 1.2rem;
+  }
+
   select {
     padding: 0.4rem 1.2rem;
     border-radius: 1rem;
     color: inherit;
-    /* outline: 3px greenyellow solid; */
   }
 
   section {
-    width: min(92%, var(--lg));
+    width: min(92%, var(--md));
     margin-inline: auto;
-    /* outline: 3px palevioletred solid; */
   }
 </style>
