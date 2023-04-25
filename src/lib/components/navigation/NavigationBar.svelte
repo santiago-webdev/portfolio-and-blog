@@ -137,6 +137,10 @@
     border-bottom: 2px solid var(--clr-55);
   }
 
+  header.expanded {
+    background-color: var(--clr-30);
+  }
+
   header.scrollY {
     padding: 0.6rem 0;
   }
