@@ -65,7 +65,7 @@ pages accesible to everyone`,
 </section>
 
 <svelte:head>
-  <title>Santiago's Portfolio</title>
+  <title>Santiago's Portfolio - {jobs[value].name}</title>
 
   <!-- TODO(santigo-zero): meta tags for dynamic routing -->
   <!-- HTML Meta Tags -->
