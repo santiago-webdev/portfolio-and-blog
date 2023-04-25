@@ -105,6 +105,7 @@ h3,
 .font-fluid-bs {
   font-size: var(--fs-fl-bs);
   line-height: calc(var(--fs-fl-bs) * 1.15);
+  font-variation-settings: 'wght' 700;
 }
 
 h2,
