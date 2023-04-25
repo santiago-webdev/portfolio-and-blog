@@ -73,44 +73,40 @@
           aria-expanded={expanded}
           on:click={() => (expanded = !expanded)}
           style:display={!onDesktop ? 'flex' : 'none'}>
-          <iconify-icon
-            width="24"
-            icon={expanded ? 'lucide:x' : 'lucide:align-justify'} />
+          <iconify-icon icon={expanded ? 'lucide:x' : 'lucide:align-justify'} />
         </button>
       {:else}
         <ThemeSwitch />
         <div role="separator" aria-orientation="vertical" />
-        {#each $navigationItems as item}
-          {#if item.label === 'Separator'}
+        {#each $navigationItems as { label, href, classes }}
+          {#if label === 'Separator'}
             <div role="separator" aria-orientation="vertical" />
-          {:else if item.label !== 'Home'}
+          {:else if label !== 'Home'}
             <a
-              class={item.classes}
-              aria-current={item.href === $page.url.pathname ||
-              ($page.url.pathname.startsWith(item.href || '') &&
-                `/` !== item.href)
+              class={classes}
+              aria-current={href === $page.url.pathname ||
+              ($page.url.pathname.startsWith(href || '') && `/` !== href)
                 ? 'page'
                 : undefined}
-              aria-label="Link to {item.label}"
-              href={item.href}>{item.label}</a>
+              aria-label="Link to {label}"
+              {href}>{label}</a>
           {/if}
         {/each}
       {/if}
     </div>
     <section style:display={expanded ? 'flex' : 'none'}>
       <ThemeSwitch />
-      {#each $navigationItems as item}
-        {#if item.label !== 'Separator'}
+      {#each $navigationItems as { label, href, classes }}
+        {#if label !== 'Separator'}
           <hr />
           <a
-            class="shiny-select"
-            aria-current={item.href === $page.url.pathname ||
-            ($page.url.pathname.startsWith(item.href || '') &&
-              `/` !== item.href)
+            class="shiny-select {classes}"
+            aria-current={href === $page.url.pathname ||
+            ($page.url.pathname.startsWith(href || '') && `/` !== href)
               ? 'page'
               : undefined}
-            aria-label="Link to {item.label}"
-            href={item.href}>{item.label}</a>
+            aria-label="Link to {label}"
+            {href}>{label}</a>
         {/if}
       {/each}
     </section>
