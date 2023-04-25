@@ -1,7 +1,7 @@
 <script lang="ts">
   import { onMount } from 'svelte'
+  import type { Theme } from '$lib/types'
 
-  type Theme = 'system' | 'system-light' | 'dark' | 'light'
   let theme: Theme = 'system',
     prefers_light = true
 

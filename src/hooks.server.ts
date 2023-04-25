@@ -1,6 +1,5 @@
 import type { Handle } from '@sveltejs/kit'
-
-type Theme = 'light' | 'dark' | 'system'
+import type { Theme } from '$lib/types'
 
 export const handle = (async ({ event, resolve }) => {
   const get_theme = event.cookies.get('theme')

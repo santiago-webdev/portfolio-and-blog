@@ -1,11 +1,6 @@
 import { base } from '$app/paths'
 import { writable } from 'svelte/store'
-
-type NavItem = {
-  label: string
-  href: string
-  classes?: string
-}
+import type { NavItem } from '$lib/types'
 
 const navItems: NavItem[] = [
   { label: 'Home', href: `${base}/` },
