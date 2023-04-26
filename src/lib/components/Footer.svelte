@@ -149,7 +149,7 @@
       <a
         class="font-3"
         target="_blank"
-        href={site.repo}
+        href={site.site.repo}
         aria-label="Link to git repository for this site at Github"
         title="Link to git repository for this site at Github">
         Repository <iconify-icon
