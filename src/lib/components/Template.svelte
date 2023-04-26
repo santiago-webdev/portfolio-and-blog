@@ -78,7 +78,7 @@
 </section>
 
 <svelte:head>
-  <title>{title}{site.title_blog_append}</title>
+  <title>{title} - {site.blog.title_append}</title>
 
   <!-- HTML Meta Tags -->
   <meta name="description" content={description} />
