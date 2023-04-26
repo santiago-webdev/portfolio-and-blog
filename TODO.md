@@ -1,17 +1,9 @@
 # TODOs
 
-## Make `Post` a global class
-
-I use `Post` everywhere, and I want to avoid importing it in every component.
-
 ## Update the link if it stays in a section for too long
 
 If the viewport is seeing let's say #projects for more than 5 seconds update the
 link to include that without modifying the view.
-
-## Redo the navbar
-
-Add separators and create a svelte store for nav items
 
 ## For the scroll tracker
 
