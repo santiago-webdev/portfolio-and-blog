@@ -59,7 +59,7 @@
       aria-current={`${base}/` === $page.url.pathname ? 'page' : undefined}>
       <img
         class="logo-santigo-zero"
-        style="width: 2rem"
+        style="width: 2rem; height: 2rem"
         aria-hidden="true"
         alt="My personal logo"
         title="My personal logo" />
