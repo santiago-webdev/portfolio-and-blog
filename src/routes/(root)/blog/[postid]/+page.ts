@@ -1,4 +1,4 @@
-import { Posts } from '$lib/components/Search/store'
+import { Posts } from '$lib/components/search/store'
 import { get } from 'svelte/store'
 import type { PageLoad } from './$types'
 

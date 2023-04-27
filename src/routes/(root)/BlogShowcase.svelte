@@ -1,6 +1,6 @@
 <script>
   import { base } from '$app/paths'
-  import { Posts } from '$lib/components/Search/store'
+  import { Posts } from '$lib/components/search/store'
   import LinkInText from '$lib/components/navigation/LinkInText.svelte'
   import { readableDate, relativeTime } from '$lib/utils/utils'
 </script>

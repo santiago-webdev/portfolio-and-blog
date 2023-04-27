@@ -5,7 +5,7 @@
   import { onMount } from 'svelte'
 
   import ThemeSwitch from '$lib/components/ThemeSwitch.svelte'
-  import WidgetModal from '$lib/components/Search/WidgetModal.svelte'
+  import WidgetModal from '$lib/components/search/WidgetModal.svelte'
   import { navigationItems } from '$lib/components/navigation/store'
 
   var expanded = false,
