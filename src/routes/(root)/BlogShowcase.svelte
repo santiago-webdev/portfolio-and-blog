@@ -17,89 +17,51 @@
       <LinkInText href="{base}/blog">go to my blog</LinkInText> to check them all.
     </p>
   </div>
-  <br />
-  <!-- TODO(santigo-zero): Put time at the end of the card -->
   <div class="latest-articles">
-    <a href="{base}/blog{$Posts[0].href}">
-      <article>
-        <h3 class="font-6">{$Posts[0].title}</h3>
-        <hr />
-        <p>
-          {$Posts[0].description}
-        </p>
-        {#if $Posts[0].datetime}
-          <small>
-            <time datetime={$Posts[0].datetime}>
-              <iconify-icon icon="lucide:calendar" />: {relativeTime(
-                new Date(),
-                new Date($Posts[0].datetime)
-              )}
-              <div aria-orientation="vertical" role="separator">•</div>
-              {readableDate($Posts[0].datetime)}
-            </time>
-          </small>
-        {/if}
-      </article>
-    </a>
-    <a href="{base}/blog{$Posts[1].href}">
-      <article>
-        <h3 class="font-6">{$Posts[1].title}</h3>
-        <hr />
-        <p>
-          {$Posts[1].description}
-        </p>
-        {#if $Posts[1].datetime}
-          <small>
-            <time datetime={$Posts[1].datetime}>
-              <iconify-icon icon="lucide:calendar" />: {relativeTime(
-                new Date(),
-                new Date($Posts[1].datetime)
-              )}
-              <div aria-orientation="vertical" role="separator">•</div>
-              {readableDate($Posts[1].datetime)}
-            </time>
-          </small>
-        {/if}
-      </article>
-    </a>
-    <a href="{base}/blog{$Posts[2].href}">
-      <article>
-        <h3 class="font-6">{$Posts[2].title}</h3>
-        <hr />
-        <p>
-          {$Posts[2].description}
-        </p>
-        {#if $Posts[2].datetime}
-          <small>
-            <time datetime={$Posts[2].datetime}>
-              <iconify-icon icon="lucide:calendar" />: {relativeTime(
-                new Date(),
-                new Date($Posts[2].datetime)
-              )}
-              <div aria-orientation="vertical" role="separator">•</div>
-              {readableDate($Posts[2].datetime)}
-            </time>
-          </small>
-        {/if}
-      </article>
-    </a>
+    {#each $Posts.slice(0, 3) as { href, title, description, datetime }}
+      <a href="{base}/blog{href}">
+        <article>
+          <img
+            src={Math.random() < 0.5
+              ? '/alleged-photo-of-myself.jpg'
+              : 'plant2.jpeg'}
+            alt="" />
+          <h3 class="font-6">{title}</h3>
+          <p>
+            {description}
+          </p>
+          {#if datetime}
+            <small>
+              <time {datetime}>
+                <iconify-icon icon="lucide:calendar" />: {relativeTime(
+                  new Date(),
+                  new Date(datetime)
+                )}
+                <div aria-orientation="vertical" role="separator">•</div>
+                {readableDate(datetime)}
+              </time>
+            </small>
+          {/if}
+        </article>
+      </a>
+    {/each}
   </div>
 </section>
 
 <style>
   section {
-    padding: 3rem 0;
     margin-inline: auto;
     width: min(92%, var(--lg));
+    padding: 3rem 0;
+    display: grid;
+    place-content: center;
   }
 
-  /* #blog { */
-  /*   display: grid; */
-  /*   grid-template-columns: repeat(auto-fill, minmax(min(25rem, 100%), 1fr)); */
-  /*   grid-auto-rows: minmax(100%, var(--xs)); */
-  /*   gap: 1rem; */
-  /*   padding: 2rem 0; */
-  /* } */
+  @media screen and (max-height: 70rem) {
+    section {
+      min-height: 100vh;
+    }
+  }
 
   .present {
     display: flex;
@@ -125,23 +87,33 @@
   .latest-articles {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, var(--xs)), 1fr));
-    gap: 1rem;
+    gap: 2.2rem 1rem;
+    margin-top: 3rem;
   }
 
   article {
-    padding: 1rem;
-    border-radius: 0.8rem;
+    position: relative;
     display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    flex-flow: column wrap;
+    gap: 0.6rem;
+    grid-template-rows: auto 1fr auto;
+
+    text-align: center;
+    padding: 14.8rem 1rem 1rem 1rem;
+    border-radius: 1.2rem;
     height: 100%;
-    overflow: hidden;
     background-color: var(--clr-20);
     border: 1px solid var(--clr-40);
   }
 
-  article hr {
-    margin: 0.6rem 0;
+  article img {
+    position: absolute;
+    object-fit: cover;
+    max-height: 15rem;
+    width: calc(100% - 2rem);
+    inset: -1.2rem 1rem;
+
+    border-radius: 1.2rem;
+    border: 1px solid var(--clr-50);
   }
 
   article:hover {
@@ -149,17 +121,11 @@
   }
 
   article h3 {
-    padding: var(--gap);
-    padding-inline: calc(var(--gap) * 1.5);
+    color: var(--clr-250);
   }
 
   article p {
-    display: grid;
-    grid-template-rows: 1fr 1fr auto;
-    gap: 1rem;
-    background-color: var(--clr-clr-15);
-    /* padding: 1.5rem; */
-    /* padding-top: 1rem; */
+    margin-bottom: 1.8rem;
   }
 
   article time {
