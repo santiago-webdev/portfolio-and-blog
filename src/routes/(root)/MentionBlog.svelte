@@ -5,7 +5,7 @@
   import { readableDate, relativeTime } from '$lib/utils/utils'
 
   function getPic(id: number) {
-    let pics = ['/alleged-photo-of-myself.jpg', '/plant.jpeg', '/plant2.jpeg']
+    let pics = ['/alleged-photo-of-myself.webp', '/plant.webp', '/plant2.webp']
     return pics[id]
   }
 </script>
