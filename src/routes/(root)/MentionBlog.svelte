@@ -61,7 +61,7 @@
 
 <style>
   #mention-blog {
-    padding: 3rem 0;
+    padding: 6rem 0;
     display: flex;
     min-height: 100vh;
     place-content: center;
@@ -77,7 +77,6 @@
   .wrapper {
     display: grid;
     gap: 3rem;
-    padding: 2.4rem;
 
     width: 92%;
     max-width: var(--lg);
