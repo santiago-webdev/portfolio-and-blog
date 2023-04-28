@@ -4,8 +4,6 @@
   import { base } from '$app/paths'
   import { goto, preloadData } from '$app/navigation'
 
-  export let modal = false
-
   $: if ($FilteredPosts.length === 1)
     preloadData(`${base}/blog${$FilteredPosts[0].href}`)
 
@@ -33,10 +31,7 @@
   })
 </script>
 
-<form
-  class="shiny font-fluid-xs"
-  class:form-modal={modal}
-  on:submit|preventDefault={handleSubmit}>
+<form class="shiny font-fluid-xs" on:submit|preventDefault={handleSubmit}>
   <button aria-label="Go to selected blog" type="submit">
     <iconify-icon icon="lucide:search" />
   </button>
@@ -51,9 +46,7 @@
     id="search"
     list="search-terms"
     autocomplete="off" />
-  {#if !modal}
-    <kbd>Ctrl K</kbd>
-  {/if}
+  <kbd>Ctrl K</kbd>
 </form>
 
 <style>
@@ -70,11 +63,6 @@
   form > *:not(kbd) {
     font-size: inherit;
     line-height: inherit;
-  }
-
-  .form-modal {
-    box-shadow: none;
-    border: none;
   }
 
   input:-moz-placeholder,
