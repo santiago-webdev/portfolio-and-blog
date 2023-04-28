@@ -20,7 +20,7 @@
 
     text-align: left;
     color: var(--clr-90);
-    font-variation-settings: 'wght' 650;
+    font-variation-settings: 'wght' 450;
   }
 
   .left {

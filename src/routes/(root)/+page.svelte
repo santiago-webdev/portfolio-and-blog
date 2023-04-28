@@ -1,15 +1,16 @@
 <script lang="ts">
   import AboveTheFold from './AboveTheFold.svelte'
-  import BlogShowcase from './BlogShowcase.svelte'
+  // import BlogShowcase from './BlogShowcase.svelte'
   import Introduction from './Introduction.svelte'
   import site from '$lib/site.json'
-  import FeaturedProjects from './FeaturedProjects.svelte'
+  // import FeaturedProjects from './FeaturedProjects.svelte'
+  import MentionBlog from './MentionBlog.svelte'
 </script>
 
 <AboveTheFold />
-<br />
-<BlogShowcase />
-<FeaturedProjects />
+<MentionBlog />
+<!-- <BlogShowcase /> -->
+<!-- <FeaturedProjects /> -->
 <Introduction />
 
 <svelte:head>

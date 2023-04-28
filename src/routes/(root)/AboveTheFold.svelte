@@ -25,7 +25,7 @@
       </section>
     </div>
     <div class="call-to-scroll">
-      <LinkUI classes="font-3" href="#blog-showcase">Learn More</LinkUI>
+      <LinkUI classes="font-3" href="#mention-blog">Learn more</LinkUI>
     </div>
   </main>
 </div>
