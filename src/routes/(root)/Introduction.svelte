@@ -31,7 +31,7 @@
   </section>
   <img
     loading="lazy"
-    src="/alleged-photo-of-myself.jpg"
+    src="/alleged-photo-of-myself.webp"
     alt="TODO: This is supposed to be me"
     title="TODO: This is supposed to be me" />
 </div>
