@@ -100,9 +100,9 @@
     color: transparent;
   }
 
-  input,
   form:focus-within button {
     color: inherit;
+    background-color: inherit;
   }
 
   button {
