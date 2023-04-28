@@ -46,6 +46,10 @@
                   {readableDate(datetime)}
                 </time>
               </small>
+            {:else}
+              <small aria-hidden="true" style:visibility="hidden">
+                No date provided
+              </small>
             {/if}
             <h3 style:color="var(--clr-250)" class="font-6">{title}</h3>
           </article>
