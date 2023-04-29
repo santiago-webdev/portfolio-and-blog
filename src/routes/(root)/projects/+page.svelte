@@ -1,56 +1,43 @@
 <script lang="ts">
+  import {
+    currentGroupOfProjects,
+    filterJobGroupSelector,
+    FilteredProjects,
+  } from '$lib/components/projects/store'
   import site from '$lib/site.json'
 
-  const jobs = [
-    {
-      value: 0,
-      label: 'Featured',
-      name: 'Featured projects',
-      description:
-        "Here's a selection of the most relevant projects I have for you to explore",
-    },
-    {
-      value: 1,
-      label: 'Open Source',
-      name: 'Open Source contributions',
-      description: `As a Linux enthusiast, I'm a firm believer in FOSS, check
-      out the projects I'm being part of`,
-    },
-    {
-      value: 2,
-      label: 'Full Stack',
-      name: 'Full Stack projects',
-      description: `This are some of the most 'complete' projects I have to date`,
-    },
-    {
-      value: 3,
-      label: 'Front End',
-      name: 'Front End projects',
-      description: `In here you'll find rewrites with a focus on making the UI/UX of this
-pages accesible to everyone`,
-    },
-  ]
-
-  let value = 0
+  const getCurrent = () => {
+    let currentItem = $filterJobGroupSelector.find(
+      p => p.category === $currentGroupOfProjects
+    )
+    return {
+      label: currentItem ? currentItem.label : 'nothing',
+      description: currentItem ? currentItem.description : 'nothing'
+    }
+  }
 </script>
 
 <main>
   <div class="wrapper-projects">
     <div class="projects-presentation">
       <h1 class="font-fluid-bs">
-        Projects Showcase - {jobs[value].name}
+        Projects Showcase - {getCurrent().label}
       </h1>
       <p class="font-fluid-bs">
-        {jobs[value].description}.
+        {getCurrent().description}.
       </p>
     </div>
     <form class="font-fluid-xs">
       <label class="font-fluid-sm" for="projects">
         Filter by type of project
       </label>
-      <select bind:value class="shiny" name="projects" id="projects">
-        {#each jobs as { value, label }}
-          <option {value} {label} />
+      <select
+        bind:value={$currentGroupOfProjects}
+        class="shiny"
+        name="projects"
+        id="projects">
+        {#each $filterJobGroupSelector as { category, label }}
+          <option value={category} {label} />
         {/each}
       </select>
     </form>
@@ -58,14 +45,11 @@ pages accesible to everyone`,
 </main>
 
 <section>
-  <article>project 1</article>
-  <article>project 2</article>
-  <article>project 3</article>
-  <article>project 4</article>
+  {JSON.stringify($FilteredProjects)}
 </section>
 
 <svelte:head>
-  <title>{site.portfolio.title} - {jobs[value].name}</title>
+  <title>{site.portfolio.title}</title>
 
   <!-- TODO(santigo-zero): meta tags for dynamic routing -->
   <!-- HTML Meta Tags -->
