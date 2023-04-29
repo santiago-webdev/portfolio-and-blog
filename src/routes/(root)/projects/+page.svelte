@@ -92,7 +92,7 @@
     display: flex;
     flex-flow: row wrap;
 
-    width: min(92%, var(--base));
+    width: min(92%, var(--md));
     margin-inline: auto;
     padding: 3rem 0;
     place-content: center;
