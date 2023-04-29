@@ -50,6 +50,13 @@ export const filterJobGroupSelector = readable<Array<ProjectsSelector>>([
     description: `In here you'll find rewrites with a focus on making the UI/UX of this
 pages accesible to everyone`,
   },
+  {
+    category: 'redesign/rewrite',
+    label: 'Redesign/Rewrite',
+    name: 'Redesigns or Rewrites',
+    description: `Rewriting a site to test my
+capabilities is fun, sometimes I do a complete revamp of the site`,
+  },
 ])
 
 export const AllProjects = readable<Array<Project>>([
@@ -74,6 +81,14 @@ export const AllProjects = readable<Array<Project>>([
     description:
       'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
     category: ['opensource'],
+    repo: new URL('https://google.com'),
+    link: new URL('https://google.com'),
+  },
+  {
+    name: 'example of redesign/rewrite',
+    description:
+      'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+    category: ['redesign/rewrite'],
     repo: new URL('https://google.com'),
     link: new URL('https://google.com'),
   },

@@ -6,13 +6,14 @@
   } from '$lib/components/projects/store'
   import site from '$lib/site.json'
 
-  const getCurrent = () => {
+  $: getCurrent = () => {
     let currentItem = $filterJobGroupSelector.find(
       p => p.category === $currentGroupOfProjects
     )
     return {
       label: currentItem ? currentItem.label : 'nothing',
-      description: currentItem ? currentItem.description : 'nothing'
+      description: currentItem ? currentItem.description : 'nothing',
+      name: currentItem ? currentItem.name : 'nothing'
     }
   }
 </script>
@@ -21,7 +22,7 @@
   <div class="wrapper-projects">
     <div class="projects-presentation">
       <h1 class="font-fluid-bs">
-        Projects Showcase - {getCurrent().label}
+        Projects Showcase - {getCurrent().name}
       </h1>
       <p class="font-fluid-bs">
         {getCurrent().description}.
