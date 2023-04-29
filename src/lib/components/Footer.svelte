@@ -3,6 +3,7 @@
   import { page } from '$app/stores'
   import { navigationItems } from './navigation/store'
   import site from '$lib/site.json'
+  import ButtonToTheTop from '$lib/components/ButtonToTheTop.svelte'
 
   let ghStars = 0
 
@@ -34,6 +35,7 @@
   ]
 </script>
 
+<ButtonToTheTop />
 <footer>
   <div class="footer-start">
     <section>
@@ -220,6 +222,7 @@
     margin-inline: 0.6rem;
     text-decoration: underline solid var(--clr-65) 2px;
     text-underline-offset: 3px;
+    margin-bottom: .4rem;
   }
 
   .footer-start p {
@@ -276,6 +279,7 @@
   .aboutme h3 {
     margin-inline: 0;
     text-decoration: none;
+    margin-bottom: 0;
   }
 
   nav,
