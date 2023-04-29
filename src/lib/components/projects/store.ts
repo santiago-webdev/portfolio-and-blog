@@ -94,8 +94,8 @@ export const AllProjects = readable<Array<Project>>([
   },
 ])
 
-export let FilteredProjects = writable(get(AllProjects))
-export let currentGroupOfProjects = writable<ProjectCategory>('featured')
+export const FilteredProjects = writable(get(AllProjects))
+export const currentGroupOfProjects = writable<ProjectCategory>('featured')
 
 currentGroupOfProjects.subscribe(selectionChange => {
   FilteredProjects.update(() =>

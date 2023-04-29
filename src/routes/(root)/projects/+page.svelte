@@ -13,7 +13,7 @@
     return {
       label: currentItem ? currentItem.label : 'nothing',
       description: currentItem ? currentItem.description : 'nothing',
-      name: currentItem ? currentItem.name : 'nothing'
+      name: currentItem ? currentItem.name : 'nothing',
     }
   }
 </script>
