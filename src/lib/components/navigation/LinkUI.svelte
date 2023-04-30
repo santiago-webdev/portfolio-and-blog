@@ -27,7 +27,12 @@
   a {
     display: flex;
     color: var(--clr-90);
-    font-variation-settings: 'wght' 500;
+    font-variation-settings: 'wght' 550;
+    transition: font-variation-settings 160ms ease-in-out;
+  }
+
+  a:hover {
+    font-variation-settings: 'wght' 720;
   }
 
   .defaults {
