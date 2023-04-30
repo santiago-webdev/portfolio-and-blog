@@ -14,9 +14,16 @@
     savedY = 0,
     innerHeight = 0,
     hideElement = false,
-    hideHeader = false
+    hideHeader = false,
+    transparent = false
 
-  afterNavigate(() => (expanded = false))
+  afterNavigate(() => {
+    expanded = false
+
+    if ($page.url.pathname === `${base}/about`) transparent = true
+    else transparent = false
+  })
+
   onMount(() => {
     const checkForDesktop = () =>
       window.matchMedia('(min-width: 1280px)').matches
@@ -46,19 +53,17 @@
 
       observer.observe(main)
     }
-  })
 
-  onMount(() =>
     setTimeout(
       () => $navigationItems.forEach(item => preloadCode(item.href)),
       3000
     )
-  )
+  })
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
 
-<header class:expanded class:scrollY class:hideHeader>
+<header class:transparent class:expanded class:scrollY class:hideHeader>
   <nav aria-label="primary-navigation">
     <a
       href="{base}/"
@@ -145,6 +150,10 @@
 
   header.scrollY {
     padding: 0.6rem 0;
+  }
+
+  header.transparent {
+    background-color: transparent;
   }
 
   a,
