@@ -48,7 +48,12 @@
     }
   })
 
-  onMount(() => $navigationItems.forEach(item => preloadCode(item.href)))
+  onMount(() =>
+    setTimeout(
+      () => $navigationItems.forEach(item => preloadCode(item.href)),
+      3000
+    )
+  )
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
