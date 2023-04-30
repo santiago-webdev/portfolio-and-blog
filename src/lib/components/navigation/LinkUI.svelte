@@ -33,6 +33,7 @@
 
   a:hover {
     font-variation-settings: 'wght' 720;
+    color: var(--clr-red-40);
   }
 
   .defaults {

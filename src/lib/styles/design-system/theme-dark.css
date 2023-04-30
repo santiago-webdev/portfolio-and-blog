@@ -1,8 +1,6 @@
 [data-theme='system'],
 [data-theme='dark'] {
   color-scheme: dark;
-  --txt-hover: hsl(220 20% 70%);
-  --txt-clicked: hsl(228 70% 80%);
 
   --clr-10: hsl(233 12% 14%);
   --clr-15: hsl(233 12% 16%);
@@ -42,4 +40,10 @@
   --bg-select-700: hsl(240 10% 60%);
   --bg-select-800: hsl(240 10% 65%);
   --bg-select-900: hsl(240 10% 70%);
+
+  --clr-blue-20: hsl(245 82% 78%);
+  --clr-purple-20: hsl(267 27% 63%);
+  --clr-purple-50: hsl(271 55% 50%);
+  --clr-red-40: hsl(346 77% 62%);
+  --clr-red-50: hsl(346 88% 62%);
 }

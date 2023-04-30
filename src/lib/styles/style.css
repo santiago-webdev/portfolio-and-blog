@@ -174,17 +174,12 @@ input[type='radio']:checked + .shiny-select {
   }
 }
 
-.bordered {
-  --border: var(--txt-hover);
-  border: 2px solid var(--border);
-}
-
 .bordered:hover {
   --border: var(--clr-65);
 }
 
 [aria-current='page'] {
-  text-decoration: underline solid var(--txt-hover) 3px;
+  text-decoration: underline solid var(--clr-purple-20) 3px;
 }
 
 [aria-orientation='vertical'][role='separator']:empty {

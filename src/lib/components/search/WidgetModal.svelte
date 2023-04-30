@@ -164,7 +164,7 @@
   }
 
   span {
-    text-decoration: underline solid crimson 0.15em;
+    text-decoration: underline solid var(--clr-blue-20) 0.15em;
     text-underline-offset: 0em;
   }
 

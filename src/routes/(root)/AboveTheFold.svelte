@@ -27,7 +27,7 @@
     </div>
     <div class="call-to-scroll">
       <LinkUI
-        class="font-3"
+        class="font-3 learn-more"
         data-sveltekit-reload
         rel="external"
         href="#mention-blog">Learn more</LinkUI>
