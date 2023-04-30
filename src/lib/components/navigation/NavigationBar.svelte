@@ -85,12 +85,11 @@
       {:else}
         <ThemeSwitch />
         <div role="separator" aria-orientation="vertical" />
-        {#each $navigationItems as { label, href, classes }}
+        {#each $navigationItems as { label, href }}
           {#if label === 'Separator'}
             <div role="separator" aria-orientation="vertical" />
           {:else if label !== 'Home'}
             <a
-              class={classes}
               aria-current={href === $page.url.pathname ||
               ($page.url.pathname.startsWith(href || '') && `/` !== href)
                 ? 'page'
@@ -103,11 +102,11 @@
     </div>
     <section style:display={expanded ? 'flex' : 'none'}>
       <ThemeSwitch />
-      {#each $navigationItems as { label, href, classes }}
+      {#each $navigationItems as { label, href }}
         {#if label !== 'Separator'}
           <hr />
           <a
-            class="shiny-select {classes}"
+            class="shiny-select"
             aria-current={href === $page.url.pathname ||
             ($page.url.pathname.startsWith(href || '') && `/` !== href)
               ? 'page'

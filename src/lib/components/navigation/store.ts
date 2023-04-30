@@ -8,7 +8,7 @@ const navItems: NavItem[] = [
   { label: 'Projects', href: `${base}/projects` },
   { label: 'Separator', href: `` },
   { label: 'About', href: `${base}/about` },
-  { label: 'Contact', href: `${base}/contact`, classes: 'block' },
+  { label: 'Contact', href: `${base}/contact` },
 ]
 
 export const navigationItems = writable<Array<NavItem>>(navItems)

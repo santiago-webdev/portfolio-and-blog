@@ -28,7 +28,7 @@
 
 <main>
   <section>
-    <LinkUI orientation="left" href="{base}/" classes="font-3">Home</LinkUI>
+    <LinkUI orientation="left" href="{base}/" class="font-3">Home</LinkUI>
     <h1>About</h1>
     <span>Hello again!</span>
     <p>
