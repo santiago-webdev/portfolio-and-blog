@@ -1,4 +1,4 @@
-<div class="wrapper-arrow" {...$$restProps}>
+<div class="wrapper-arrow" aria-hidden="true" {...$$restProps}>
   <iconify-icon class="arrow-tail" icon="lucide:minus" />
   <iconify-icon class="arrow-head-forward" icon="lucide:chevron-right" />
 </div>

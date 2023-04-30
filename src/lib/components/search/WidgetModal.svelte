@@ -73,7 +73,7 @@
   aria-keyshortcuts="Control+K"
   aria-label="Click to open the modal box to search for blogs"
   on:click={toggleModal}>
-  <iconify-icon icon="lucide:search" />
+  <iconify-icon aria-hidden="true" icon="lucide:search" />
   {#if complex}
     <span> &nbsp;&nbsp;&nbsp </span>
     <kbd>Ctrl K</kbd>
