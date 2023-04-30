@@ -31,15 +31,15 @@
   --clr-25-trp: hsl(236 13% 85% / 88%);
   --clr-35-trp: hsl(236 12% 89% / 94%);
 
-  --bg-select-100: hsl(240 10% 30%);
-  --bg-select-200: hsl(240 10% 35%);
-  --bg-select-300: hsl(240 10% 40%);
-  --bg-select-400: hsl(240 10% 45%);
-  --bg-select-500: hsl(240 10% 50%);
-  --bg-select-600: hsl(240 10% 55%);
-  --bg-select-700: hsl(240 10% 60%);
-  --bg-select-800: hsl(240 10% 65%);
-  --bg-select-900: hsl(240 10% 70%);
+  --bg-select-100: hsl(240 10% 60%);
+  --bg-select-200: hsl(240 10% 65%);
+  --bg-select-300: hsl(240 10% 70%);
+  --bg-select-400: hsl(240 10% 75%);
+  --bg-select-500: hsl(240 10% 80%);
+  --bg-select-600: hsl(240 10% 85%);
+  --bg-select-700: hsl(240 10% 90%);
+  --bg-select-800: hsl(240 10% 95%);
+  --bg-select-900: hsl(240 10% 100%);
 
   --clr-blue-20: hsl(245 82% 78%);
   --clr-purple-20: hsl(267 27% 63%);
