@@ -222,7 +222,7 @@
     margin-inline: 0.6rem;
     text-decoration: underline solid var(--clr-65) 2px;
     text-underline-offset: 3px;
-    margin-bottom: .4rem;
+    margin-bottom: 0.4rem;
   }
 
   .footer-start p {
