@@ -1,51 +1,37 @@
 <script lang="ts">
+  import Backward from '$lib/components/Backward.svelte'
+  import Forward from '$lib/components/Forward.svelte'
+
   export let orientation = 'right'
   export let href = '/'
-  export let classes = 'defaults'
+  export let defaults = false
 </script>
 
-<a class={`${orientation} ${classes}`} {href} {...$$restProps}>
-  <slot />
+<a
+  style:gap={orientation === 'left' ? '0.6ch' : '0.2ch'}
+  class:defaults
+  {href}
+  {...$$restProps}>
+  {#if orientation === 'left'}
+    <Backward />
+    <slot />
+  {:else if orientation === 'right'}
+    <slot />
+    <Forward />
+  {:else}
+    <slot />
+  {/if}
 </a>
 
 <style>
+  a {
+    display: flex;
+    color: var(--clr-90);
+    font-variation-settings: 'wght' 500;
+  }
+
   .defaults {
     font-size: inherit;
     line-height: inherit;
-  }
-
-  .left,
-  .right {
-    transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
-
-    text-align: left;
-    color: var(--clr-90);
-    font-variation-settings: 'wght' 450;
-  }
-
-  .left {
-    margin-right: auto;
-  }
-
-  .slide-fordwards {
-    margin-left: auto;
-  }
-
-  .left:before {
-    content: '<- ';
-    padding-left: 0.2ch;
-  }
-
-  .right:after {
-    content: ' ->';
-    padding-right: 0.2ch;
-  }
-
-  .right:hover {
-    transform: translateX(0.5ch);
-  }
-
-  .left:hover {
-    transform: translateX(-0.5ch);
   }
 </style>

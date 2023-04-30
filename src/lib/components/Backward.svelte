@@ -1,6 +1,6 @@
 <div class="wrapper-arrow" {...$$restProps}>
   <iconify-icon class="arrow-tail" icon="lucide:minus" />
-  <iconify-icon class="arrow-head-forward" icon="lucide:chevron-right" />
+  <iconify-icon class="arrow-head-backward" icon="lucide:chevron-left" />
 </div>
 
 <style>
@@ -21,8 +21,8 @@
     position: absolute;
   }
 
-  .arrow-head-forward {
-    transform: translateX(-3px);
+  .arrow-head-backward {
+    transform: translateX(3px);
   }
 
   .arrow-tail {
@@ -31,8 +31,8 @@
   }
 
   @media (hover: hover) {
-    :global(a:hover .arrow-head-forward) {
-      transform: translateX(4px);
+    :global(a:hover .arrow-head-backward) {
+      transform: translateX(-4px);
     }
 
     :global(a:hover .arrow-tail) {

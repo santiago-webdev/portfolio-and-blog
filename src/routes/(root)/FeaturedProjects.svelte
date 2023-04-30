@@ -18,7 +18,7 @@
     <hr style="border-color: var(--clr-55)" />
     <section>
       <h3 class="font-fluid-bs">Some things I've built</h3>
-      <LinkUI orientation="right" classes="font-5" href="{base}/projects"
+      <LinkUI orientation="right" class="font-5" href="{base}/projects"
         >See all projects</LinkUI>
       <article>
         <img
