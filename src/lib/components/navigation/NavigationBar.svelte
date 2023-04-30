@@ -1,7 +1,7 @@
 <script lang="ts">
   import { base } from '$app/paths'
   import { page } from '$app/stores'
-  import { afterNavigate } from '$app/navigation'
+  import { afterNavigate, preloadCode } from '$app/navigation'
   import { onMount } from 'svelte'
 
   import ThemeSwitch from '$lib/components/ThemeSwitch.svelte'
@@ -47,6 +47,8 @@
       observer.observe(main)
     }
   })
+
+  onMount(() => $navigationItems.forEach(item => preloadCode(item.href)))
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
