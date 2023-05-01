@@ -1,5 +1,6 @@
 <script lang="ts">
   import { base } from '$app/paths'
+  import LinkInText from '$lib/components/navigation/LinkInText.svelte'
   import LinkRoundButton from '$lib/components/navigation/LinkRoundButton.svelte'
   import LinkUI from '$lib/components/navigation/LinkUI.svelte'
 
@@ -50,7 +51,7 @@
   </div>
 </main>
 <section>
-  <div class="random">
+  <div class="aboutme-extension">
     <div class="random-intro">
       <h2 class="font-fluid-bs">
         Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
@@ -75,9 +76,11 @@
               stroke-width="1.2"
               d="m9 9l5 12l1.774-5.226L21 14L9 9zm7.071 7.071l4.243 4.243M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
           </svg>
-          <h3 class="font-6">Test</h3>
-          <p style="color: var(--clr-95)" class="font-4">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+          <h3 class="font-6">As a developer</h3>
+          <p class="font-4">
+            I enjoy crafting simple interfaces, focusing in
+            <em>maintainability</em>, <em>accessibility</em> and
+            <em>progressive enhancement</em>.
           </p>
         </li>
         <li class="shiny">
@@ -88,18 +91,20 @@
             viewBox="0 0 24 24">
             <g
               fill="none"
-              stroke="var(--clr-purple-20)"
+              stroke="var(--clr-green-50)"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="1.2">
-              <rect width="14" height="20" x="5" y="2" rx="2" ry="2" />
-              <path d="M12 18h.01" />
+              <path d="M7 20h10m-7 0c5.5-2.5.8-6.4 3-10" />
+              <path
+                d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7c-2 .4-3.5.4-4.8-.3c-1.2-.6-2.3-1.9-3-4.2c2.8-.5 4.4 0 5.5.8zM14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4c1-1 1.6-2.3 1.7-4.6c-2.7.1-4 1-4.9 2z" />
             </g>
           </svg>
-          <h3 class="font-6">Mobile First Design</h3>
-          <p style="color: var(--clr-95)" class="font-4">
-            I have gotten used to this desing approach, all my pages start this
-            way.
+          <h3 class="font-6">Lifetime learner</h3>
+          <p class="font-4">
+            You can check my journey in the <LinkInText href="{base}/blog">
+              blog
+            </LinkInText>, I try to pour all my knowledge there.
           </p>
         </li>
       </ul>
@@ -112,7 +117,7 @@
             viewBox="0 0 24 24">
             <g
               fill="none"
-              stroke="var(--clr-blue-20)"
+              stroke="var(--clr-purple-20)"
               stroke-linecap="round"
               stroke-linejoin="round"
               stroke-width="1.2">
@@ -122,8 +127,12 @@
             </g>
           </svg>
           <h3 class="font-6">For the web</h3>
-          <p style="color: var(--clr-95)" class="font-4">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+          <p class="font-4">
+            My set of skills is mostly to build the web, but I'm interested in
+            <strong>Linux</strong>
+            and
+            <strong>UI/UX</strong>
+            too.
           </p>
         </li>
         <li class="shiny">
@@ -132,22 +141,18 @@
             width="70"
             height="70"
             viewBox="0 0 24 24">
-            <g
+            <path
               fill="none"
-              stroke="var(--clr-red-40)"
+              stroke="var(--clr-blue-20)"
               stroke-linecap="round"
               stroke-linejoin="round"
-              stroke-width="1.2">
-              <path
-                d="M12 5a3 3 0 1 1 3 3m-3-3a3 3 0 1 0-3 3m3-3v1M9 8a3 3 0 1 0 3 3M9 8h1m5 0a3 3 0 1 1-3 3m3-3h-1m-2 3v-1" />
-              <circle cx="12" cy="8" r="2" />
-              <path
-                d="M12 10v12m0 0c4.2 0 7-1.667 7-5c-4.2 0-7 1.667-7 5Zm0 0c-4.2 0-7-1.667-7-5c4.2 0 7 1.667 7 5Z" />
-            </g>
+              stroke-width="1.2"
+              d="M4 7V4h16v3M9 20h6M12 4v16" />
           </svg>
-          <h3 class="font-6">Test</h3>
-          <p style="color: var(--clr-95)" class="font-4">
-            Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+          <h3 class="font-6">In the workplace</h3>
+          <p class="font-4">
+            I consider myself to be T-shaped, putting all of my energy to be an
+            all-rounder web developer.
           </p>
         </li>
       </ul>
@@ -237,10 +242,12 @@
     margin-inline: auto;
   }
 
-  .random {
+  .aboutme-extension {
     display: flex;
+    place-items: center;
     gap: 2rem;
     margin: 3rem 0;
+    min-height: 100vh;
     flex-flow: row wrap;
   }
 
@@ -274,6 +281,20 @@
     place-items: start;
     border-radius: 1.2rem;
     min-height: 20rem;
+  }
+
+  .random-cards ul li h3 {
+    color: var(--clr-200);
+  }
+
+  .random-cards ul li p strong {
+    color: var(--clr-150);
+    font-variation-settings: 'wght' 800;
+  }
+
+  .random-cards ul li p {
+    color: var(--clr-100);
+    font-variation-settings: 'wght' 450;
   }
 
   .random-cards ul:first-child {
