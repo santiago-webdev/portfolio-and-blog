@@ -33,7 +33,7 @@
 </div>
 <main>
   <div class="text-about">
-    <h1 class="font-fluid-md">About</h1>
+    <h1 class="font-fluid-md">Get to know me</h1>
     <span class="font-fluid-xs">Hello again!</span>
     <p class="font-fluid-sm">
       Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
@@ -49,7 +49,13 @@
     <img src="/alleged-photo-of-myself.webp" alt="" />
   </div>
 </main>
-<section class="aboutme-extension">
+<nav aria-label="about-me-navigation">
+  <ul>
+    <li><a href="#aboutme-extension">My skills</a></li>
+    <li><a href="#technologies-i-use">Technologies I use</a></li>
+  </ul>
+</nav>
+<section id="aboutme-extension" class="aboutme-extension">
   <div class="random-intro">
     <h2 class="font-fluid-bs">
       Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
@@ -156,10 +162,10 @@
     </ul>
   </div>
 </section>
-<div class="worked-at">
-  <h2>Where I've worked</h2>
-</div>
-<div class="technologies">
+<!-- <div class="worked-at"> -->
+<!--   <h2>Where I've worked</h2> -->
+<!-- </div> -->
+<div id="technologies-i-use" class="technologies">
   <h2>Technology I use</h2>
   <p>
     These are some of the tools I had used in the past (but am not limited to):
@@ -216,6 +222,11 @@
 
     width: min(92%, var(--md));
     margin-inline: auto;
+  }
+
+  nav {
+    top: 0;
+    position: sticky;
   }
 
   .text-about {
@@ -313,7 +324,11 @@
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    width: min(100% - 1rem, var(--base));
+    width: min(92%, var(--base));
+    margin-inline: auto;
+    background-color: var(--clr-25);
+    padding: 3rem;
+    border-radius: 1.2rem;
   }
 
   .technologies span {

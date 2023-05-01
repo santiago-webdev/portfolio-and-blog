@@ -15,13 +15,19 @@
     innerHeight = 0,
     hideElement = false,
     hideHeader = false,
-    transparent = false
+    transparent = false,
+    anchored = false
 
   afterNavigate(() => {
     expanded = false
 
-    if ($page.url.pathname === `${base}/about`) transparent = true
-    else transparent = false
+    if ($page.url.pathname === `${base}/about`) {
+      transparent = true
+      anchored = true
+    } else {
+      transparent = false
+      anchored = false
+    }
   })
 
   onMount(() => {
@@ -63,7 +69,12 @@
 
 <svelte:window bind:scrollY bind:innerHeight />
 
-<header class:transparent class:expanded class:scrollY class:hideHeader>
+<header
+  class:anchored
+  class:transparent
+  class:expanded
+  class:scrollY
+  class:hideHeader>
   <nav aria-label="primary-navigation">
     <a
       href="{base}/"
@@ -75,7 +86,7 @@
         aria-hidden="true"
         alt="My personal logo"
         title="My personal logo" />
-      <span class:scrollY>Santiago Gonzalez</span>
+      <span class:anchored class:scrollY>Santiago Gonzalez</span>
     </a>
     <div id="contextual">
       <WidgetModal />
@@ -133,6 +144,14 @@
     z-index: 999;
     padding: 0.6rem 0;
     background-color: var(--clr-25);
+  }
+
+  header.anchored {
+    top: unset !important;
+    padding: 2rem 0 !important;
+    transform: translateY(0%) !important;
+    background-color: transparent !important;
+    border-bottom: 2px transparent solid !important;
   }
 
   header.hideHeader {
@@ -238,6 +257,10 @@
 
     nav a:first-child span.scrollY {
       opacity: 0;
+    }
+
+    nav a:first-child span.scrollY.anchored {
+      opacity: 1 !important;
     }
   }
 </style>
