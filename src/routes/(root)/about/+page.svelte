@@ -49,130 +49,127 @@
     <img src="/alleged-photo-of-myself.webp" alt="" />
   </div>
 </main>
-<section>
-  <div class="aboutme-extension">
-    <div class="random-intro">
-      <h2 class="font-fluid-bs">
-        Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
-      </h2>
-      <p style="color: var(--clr-90)" class="font-fluid-bs">
-        Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
-      </p>
-    </div>
-    <div class="random-cards">
-      <ul>
-        <li class="shiny">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="70"
-            height="70"
-            viewBox="0 0 24 24">
-            <path
-              fill="none"
-              stroke="var(--clr-orange-50)"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.2"
-              d="m9 9l5 12l1.774-5.226L21 14L9 9zm7.071 7.071l4.243 4.243M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
-          </svg>
-          <h3 class="font-6">As a developer</h3>
-          <p class="font-4">
-            I enjoy crafting simple interfaces, focusing in
-            <em>maintainability</em>, <em>accessibility</em> and
-            <em>progressive enhancement</em>.
-          </p>
-        </li>
-        <li class="shiny">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="70"
-            height="70"
-            viewBox="0 0 24 24">
-            <g
-              fill="none"
-              stroke="var(--clr-green-50)"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.2">
-              <path d="M7 20h10m-7 0c5.5-2.5.8-6.4 3-10" />
-              <path
-                d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7c-2 .4-3.5.4-4.8-.3c-1.2-.6-2.3-1.9-3-4.2c2.8-.5 4.4 0 5.5.8zM14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4c1-1 1.6-2.3 1.7-4.6c-2.7.1-4 1-4.9 2z" />
-            </g>
-          </svg>
-          <h3 class="font-6">Lifetime learner</h3>
-          <p class="font-4">
-            You can check my journey in the <LinkInText href="{base}/blog">
-              blog
-            </LinkInText>, I try to pour all my knowledge there.
-          </p>
-        </li>
-      </ul>
-      <ul>
-        <li class="shiny">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="70"
-            height="70"
-            viewBox="0 0 24 24">
-            <g
-              fill="none"
-              stroke="var(--clr-purple-20)"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.2">
-              <path
-                d="M21.54 15H17a2 2 0 0 0-2 2v4.54M7 3.34V5a3 3 0 0 0 3 3v0a2 2 0 0 1 2 2v0c0 1.1.9 2 2 2v0a2 2 0 0 0 2-2v0c0-1.1.9-2 2-2h3.17M11 21.95V18a2 2 0 0 0-2-2v0a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05" />
-              <circle cx="12" cy="12" r="10" />
-            </g>
-          </svg>
-          <h3 class="font-6">For the web</h3>
-          <p class="font-4">
-            My set of skills is mostly to build the web, but I'm interested in
-            <strong>Linux</strong>
-            and
-            <strong>UI/UX</strong>
-            too.
-          </p>
-        </li>
-        <li class="shiny">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="70"
-            height="70"
-            viewBox="0 0 24 24">
-            <path
-              fill="none"
-              stroke="var(--clr-blue-20)"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="1.2"
-              d="M4 7V4h16v3M9 20h6M12 4v16" />
-          </svg>
-          <h3 class="font-6">In the workplace</h3>
-          <p class="font-4">
-            I consider myself to be T-shaped, putting all of my energy to be an
-            all-rounder web developer.
-          </p>
-        </li>
-      </ul>
-    </div>
-  </div>
-  <div class="worked-at">
-    <h2>Where I've worked</h2>
-  </div>
-  <div class="technologies">
-    <h2>Technology I use</h2>
-    <p>
-      These are some of the tools I had used in the past (but am not limited
-      to):
+<section class="aboutme-extension">
+  <div class="random-intro">
+    <h2 class="font-fluid-bs">
+      Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
+    </h2>
+    <p style="color: var(--clr-90)" class="font-fluid-bs">
+      Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit
     </p>
-    <div class="tools-i-use">
-      {#each tools as tool}
-        <span><iconify-icon icon={tool.icon} />{tool.name}</span>
-      {/each}
-    </div>
+  </div>
+  <div class="random-cards">
+    <ul>
+      <li class="shiny">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="70"
+          height="70"
+          viewBox="0 0 24 24">
+          <path
+            fill="none"
+            stroke="var(--clr-orange-50)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.2"
+            d="m9 9l5 12l1.774-5.226L21 14L9 9zm7.071 7.071l4.243 4.243M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+        </svg>
+        <h3 class="font-6">As a developer</h3>
+        <p class="font-4">
+          I enjoy crafting simple interfaces, focusing in
+          <em>maintainability</em>, <em>accessibility</em> and
+          <em>progressive enhancement</em>.
+        </p>
+      </li>
+      <li class="shiny">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="70"
+          height="70"
+          viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="var(--clr-green-50)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.2">
+            <path d="M7 20h10m-7 0c5.5-2.5.8-6.4 3-10" />
+            <path
+              d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7c-2 .4-3.5.4-4.8-.3c-1.2-.6-2.3-1.9-3-4.2c2.8-.5 4.4 0 5.5.8zM14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4c1-1 1.6-2.3 1.7-4.6c-2.7.1-4 1-4.9 2z" />
+          </g>
+        </svg>
+        <h3 class="font-6">Lifetime learner</h3>
+        <p class="font-4">
+          You can check my journey in the <LinkInText href="{base}/blog">
+            blog
+          </LinkInText>, I try to pour all my knowledge there.
+        </p>
+      </li>
+    </ul>
+    <ul>
+      <li class="shiny">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="70"
+          height="70"
+          viewBox="0 0 24 24">
+          <g
+            fill="none"
+            stroke="var(--clr-purple-20)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.2">
+            <path
+              d="M21.54 15H17a2 2 0 0 0-2 2v4.54M7 3.34V5a3 3 0 0 0 3 3v0a2 2 0 0 1 2 2v0c0 1.1.9 2 2 2v0a2 2 0 0 0 2-2v0c0-1.1.9-2 2-2h3.17M11 21.95V18a2 2 0 0 0-2-2v0a2 2 0 0 1-2-2v-1a2 2 0 0 0-2-2H2.05" />
+            <circle cx="12" cy="12" r="10" />
+          </g>
+        </svg>
+        <h3 class="font-6">For the web</h3>
+        <p class="font-4">
+          My set of skills is mostly to build the web, but I'm interested in
+          <strong>Linux</strong>
+          and
+          <strong>UI/UX</strong>
+          too.
+        </p>
+      </li>
+      <li class="shiny">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="70"
+          height="70"
+          viewBox="0 0 24 24">
+          <path
+            fill="none"
+            stroke="var(--clr-blue-20)"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="1.2"
+            d="M4 7V4h16v3M9 20h6M12 4v16" />
+        </svg>
+        <h3 class="font-6">In the workplace</h3>
+        <p class="font-4">
+          I consider myself to be T-shaped, putting all of my energy to be an
+          all-rounder web developer.
+        </p>
+      </li>
+    </ul>
   </div>
 </section>
+<div class="worked-at">
+  <h2>Where I've worked</h2>
+</div>
+<div class="technologies">
+  <h2>Technology I use</h2>
+  <p>
+    These are some of the tools I had used in the past (but am not limited to):
+  </p>
+  <div class="tools-i-use">
+    {#each tools as tool}
+      <span><iconify-icon icon={tool.icon} />{tool.name}</span>
+    {/each}
+  </div>
+</div>
 
 <svelte:head>
   <title>Santiago Gonzalez ∙ About Me</title>
@@ -217,19 +214,8 @@
     gap: 2rem 0;
     margin-bottom: 2rem;
 
-    /* place-items: center; */
-    /* place-content: center; */
-    /* place-self: center; */
-    /* justify-items: center; */
-    /* justify-content: center; */
-    /* justify-self: center; */
-    /* align-items: center; */
-    /* align-content: center; */
-    /* align-self: center; */
-
     width: min(92%, var(--md));
     margin-inline: auto;
-    /* outline: 3px hotpink solid; */
   }
 
   .text-about {
@@ -239,28 +225,14 @@
   }
 
   .img-wrapper {
-    /* outline: 3px crimson solid; */
-    width: 100%;
     grid-column: span 2;
-    margin-inline: auto;
     display: grid;
-
     place-items: center;
-    /* place-content: center; */
-    /* place-self: center; */
-    /* justify-items: center; */
-    /* justify-content: center; */
-    /* justify-self: center; */
-    /* align-items: center; */
-    /* align-content: center; */
-    /* align-self: center; */
   }
 
   img {
-    /* flex: 1; */
     border: 8px solid var(--clr-45);
     object-fit: cover;
-    aspect-ratio: 1;
     max-width: 20rem;
     max-height: 20rem;
     width: 100%;
@@ -271,19 +243,17 @@
   section {
     display: flex;
     flex-flow: column wrap;
-    gap: 1rem;
-
-    width: min(100% - 1rem, var(--lg));
+    gap: 2rem;
+    margin: 3rem auto;
+    width: min(92%, var(--lg));
     margin-inline: auto;
   }
 
   .aboutme-extension {
-    display: flex;
-    place-items: center;
-    gap: 2rem;
-    margin: 3rem 0;
-    min-height: 100vh;
     flex-flow: row wrap;
+    place-items: center;
+    width: min(92%, var(--xl));
+    min-height: 100vh;
   }
 
   @media screen and (min-height: 80rem) {
@@ -293,7 +263,6 @@
   }
 
   .random-intro {
-    /* background-color: crimson; */
     flex: 4;
     display: flex;
     flex-flow: row wrap;
