@@ -26,23 +26,28 @@
   ]
 </script>
 
+<div
+  style="width: min(92%, var(--md)); margin-inline: auto"
+  class="wrapper-back-navigation-button">
+  <LinkUI orientation="left" href="{base}/" class="font-3">Home</LinkUI>
+</div>
 <main>
-  <section>
-    <LinkUI orientation="left" href="{base}/" class="font-3">Home</LinkUI>
-    <h1>About</h1>
-    <span>Hello again!</span>
-    <p>
-      I started learning backend tools like Java and Python, but after October
-      of 2022 I decided I wanted to be a front-end developer or more
-      specifically a web developer. In my work you'll see reflected every bit of
-      my life experiences applied.
+  <div class="text-about">
+    <h1 class="font-fluid-md">About</h1>
+    <span class="font-fluid-xs">Hello again!</span>
+    <p class="font-fluid-sm">
+      Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+      labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
     </p>
 
     <p>All of my projects can be found here:</p>
     <LinkRoundButton href="{base}/projects" class="shiny hover">
       What I've built
     </LinkRoundButton>
-  </section>
+  </div>
+  <div class="img-wrapper">
+    <img src="/alleged-photo-of-myself.webp" alt="" />
+  </div>
 </main>
 <section>
   <div class="random">
@@ -167,16 +172,60 @@
 
 <style>
   main {
-    display: flex;
-    flex-flow: column wrap;
-    place-content: center;
-    place-items: start;
-    background-color: var(--clr-25);
-    border-bottom-right-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-    background-color: var(--clr-25);
-    min-height: 40vh;
-    padding: 3rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+    gap: 2rem 0;
+    margin: 2rem 0;
+
+    /* place-items: center; */
+    /* place-content: center; */
+    /* place-self: center; */
+    /* justify-items: center; */
+    /* justify-content: center; */
+    /* justify-self: center; */
+    /* align-items: center; */
+    /* align-content: center; */
+    /* align-self: center; */
+
+    width: min(92%, var(--md));
+    margin-inline: auto;
+    /* outline: 3px hotpink solid; */
+  }
+
+  .text-about {
+    display: grid;
+    gap: 1rem;
+    grid-column: span 4;
+  }
+
+  .img-wrapper {
+    /* outline: 3px crimson solid; */
+    width: 100%;
+    grid-column: span 2;
+    margin-inline: auto;
+    display: grid;
+
+    place-items: center;
+    /* place-content: center; */
+    /* place-self: center; */
+    /* justify-items: center; */
+    /* justify-content: center; */
+    /* justify-self: center; */
+    /* align-items: center; */
+    /* align-content: center; */
+    /* align-self: center; */
+  }
+
+  img {
+    /* flex: 1; */
+    border: 8px solid var(--clr-45);
+    object-fit: cover;
+    aspect-ratio: 1;
+    max-width: 20rem;
+    max-height: 20rem;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
   }
 
   section {
