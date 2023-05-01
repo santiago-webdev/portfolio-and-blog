@@ -1,4 +1,5 @@
 <script lang="ts">
+  import LinkInText from '$lib/components/navigation/LinkInText.svelte'
   import {
     currentGroupOfProjects,
     filterJobGroupSelector,
@@ -44,9 +45,31 @@
     </form>
   </div>
 </main>
-
 <section>
-  {JSON.stringify($FilteredProjects)}
+  {#each $FilteredProjects as { name, description, category, img, repo, link }}
+    <article id="portfolio-{name}">
+      <div class="img-wrapper">
+        <img src={img} alt="" />
+      </div>
+      <div id="describe-{name}">
+        <LinkInText
+          class="font-fluid-xs"
+          target="_blank"
+          href={link.toString()}>
+          {link.hostname.replace(/^www\./i, '')}
+        </LinkInText>
+        <h2 class="font-fluid-sm">{name}</h2>
+        <p class="font-fluid-xs">{description}</p>
+        <ul>
+          {#each category as tags}
+            <li class="shiny">{tags}</li>
+          {/each}
+        </ul>
+        <a target="_blank" href={repo.toString()}>Repo</a>
+        <a target="_blank" href={link.toString()}>Link Live</a>
+      </div>
+    </article>
+  {/each}
 </section>
 
 <svelte:head>
@@ -129,7 +152,53 @@
   }
 
   section {
-    width: min(92%, var(--md));
+    padding: 3rem 0;
     margin-inline: auto;
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  article {
+    background-color: var(--clr-25);
+    border-radius: 0.8rem;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 2rem;
+    margin-inline: auto;
+    padding: 2rem;
+    place-items: center;
+    width: min(92%, var(--md));
+  }
+
+  article [id^='describe-'] {
+    flex: 6;
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  article [id^='describe-'] ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6ch;
+  }
+
+  article [id^='describe-'] ul li {
+    border-radius: 0.8rem;
+    padding: 0.6rem 1.2rem;
+  }
+
+  article .img-wrapper {
+    min-width: 12rem;
+    max-height: 23rem;
+    flex: 3;
+    height: auto;
+    overflow-y: scroll;
+    border: 3px dashed var(--clr-50);
+  }
+
+  article .img-wrapper img {
+    max-inline-size: 100%;
+    block-size: auto;
   }
 </style>

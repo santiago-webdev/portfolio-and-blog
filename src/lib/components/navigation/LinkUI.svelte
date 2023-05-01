@@ -29,6 +29,7 @@
     color: var(--clr-90);
     font-variation-settings: 'wght' 550;
     transition: font-variation-settings 160ms ease-in-out;
+    max-width: max-content;
   }
 
   a:hover {
