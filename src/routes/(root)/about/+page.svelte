@@ -27,9 +27,7 @@
   ]
 </script>
 
-<div
-  style="width: min(92%, var(--md)); margin-inline: auto"
-  class="wrapper-back-navigation-button">
+<div class="wrapper-back-navigation-button">
   <LinkUI orientation="left" href="{base}/" class="font-3">Home</LinkUI>
 </div>
 <main>
@@ -176,11 +174,18 @@
 </section>
 
 <style>
+  .wrapper-back-navigation-button {
+    width: min(92%, var(--md));
+    margin-inline: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
   main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
     gap: 2rem 0;
-    margin: 2rem 0;
+    margin-bottom: 2rem;
 
     /* place-items: center; */
     /* place-content: center; */
