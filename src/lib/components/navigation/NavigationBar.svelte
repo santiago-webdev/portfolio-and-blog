@@ -156,6 +156,10 @@
     background-color: transparent;
   }
 
+  header.transparent.scrollY {
+    background-color: var(--clr-25);
+  }
+
   a,
   button {
     color: inherit;
