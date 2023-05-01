@@ -240,18 +240,12 @@
     border-radius: 50%;
   }
 
-  section {
+  .aboutme-extension {
     display: flex;
-    flex-flow: column wrap;
+    place-items: center;
+    flex-flow: row wrap;
     gap: 2rem;
     margin: 3rem auto;
-    width: min(92%, var(--lg));
-    margin-inline: auto;
-  }
-
-  .aboutme-extension {
-    flex-flow: row wrap;
-    place-items: center;
     width: min(92%, var(--xl));
     min-height: 100vh;
   }
