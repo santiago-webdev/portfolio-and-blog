@@ -3,6 +3,7 @@
   import LinkInText from '$lib/components/navigation/LinkInText.svelte'
   import LinkRoundButton from '$lib/components/navigation/LinkRoundButton.svelte'
   import LinkUI from '$lib/components/navigation/LinkUI.svelte'
+  import site from '$lib/site.json'
 
   const tools = [
     { name: 'HTML', icon: 'logos:html-5' },
@@ -173,6 +174,35 @@
   </div>
 </section>
 
+<svelte:head>
+  <title>Santiago Gonzalez ∙ About Me</title>
+
+  <!-- TODO(santigo-zero): meta tags for dynamic routing -->
+  <!-- HTML Meta Tags -->
+  <meta name="description" content={site.site.description} />
+
+  <!-- Google / Search Engine Tags -->
+  <meta itemprop="name" content={site.portfolio.title} />
+  <meta itemprop="description" content={site.site.description} />
+  <meta itemprop="image" content="" />
+  <!-- TODO(santigo-zero): Add image -->
+
+  <!-- Facebook Meta Tags -->
+  <meta property="og:url" content={site.portfolio.url} />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content={site.portfolio.title} />
+  <meta property="og:description" content={site.site.description} />
+  <meta property="og:image" content="" />
+  <!-- TODO(santigo-zero): Add image -->
+
+  <!-- Twitter Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={site.portfolio.title} />
+  <meta name="twitter:description" content={site.site.description} />
+  <meta name="twitter:image" content="" />
+  <!-- TODO(santigo-zero): Add image -->
+</svelte:head>
+
 <style>
   .wrapper-back-navigation-button {
     width: min(92%, var(--md));
@@ -254,6 +284,12 @@
     margin: 3rem 0;
     min-height: 100vh;
     flex-flow: row wrap;
+  }
+
+  @media screen and (min-height: 80rem) {
+    .aboutme-extension {
+      min-height: 0;
+    }
   }
 
   .random-intro {
