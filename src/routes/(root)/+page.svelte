@@ -1,13 +1,16 @@
 <script lang="ts">
-  import AboveTheFold from './AboveTheFold.svelte'
-  // import BlogShowcase from './BlogShowcase.svelte'
-  import Introduction from './Introduction.svelte'
   import site from '$lib/site.json'
-  // import FeaturedProjects from './FeaturedProjects.svelte'
+  import AboveTheFold from './AboveTheFold.svelte'
+  import MentionPortfolio from './MentionPortfolio.svelte'
   import MentionBlog from './MentionBlog.svelte'
+  import Introduction from './Introduction.svelte'
+
+  // import BlogShowcase from './BlogShowcase.svelte'
+  // import FeaturedProjects from './FeaturedProjects.svelte'
 </script>
 
 <AboveTheFold />
+<MentionPortfolio />
 <MentionBlog />
 <!-- <BlogShowcase /> -->
 <!-- <FeaturedProjects /> -->
