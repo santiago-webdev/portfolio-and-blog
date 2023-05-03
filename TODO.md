@@ -29,3 +29,7 @@ aria-pressed and hide the expanded menu when clicking or scrolling.
 
 If the user reaches the bottom of the screen don't just show the button to the
 top but also show a `LinkUI` to go to either Home or to search for another post.
+
+## Change the "Read my blog" link and
+
+Swap the link for a direct link to my Resume/CV
