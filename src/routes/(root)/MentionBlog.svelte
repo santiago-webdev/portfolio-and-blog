@@ -34,7 +34,7 @@
       {#each $Posts.slice(0, 3) as { href, title, datetime }, id}
         <a href="{base}/blog{href}">
           <article>
-            <img src={getPic(id)} alt="" />
+            <img loading="lazy" src={getPic(id)} alt="" />
             {#if datetime}
               <small>
                 <time {datetime}>
