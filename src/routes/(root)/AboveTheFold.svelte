@@ -46,7 +46,7 @@
     gap: 2rem;
     place-items: start;
     flex-direction: column;
-    width: min(92%, var(--lg));
+    width: min(92%, var(--md));
     margin-inline: auto;
     position: relative;
   }
