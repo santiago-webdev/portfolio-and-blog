@@ -64,24 +64,69 @@
   aria-label="Theme switcher, current theme is {theme}"
   title="Theme switcher: Switch between a dark or light theme, or leave it to the system to decide">
   <div class="theme-wrapper" aria-hidden="true">
-    <iconify-icon id="sun" icon="lucide:sun" />
-    <iconify-icon id="moon" icon="lucide:moon" />
-    <iconify-icon id="system" icon="mdi:circle-half-full" />
+    <svg
+      id="sun"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      ><g
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        ><circle cx="12" cy="12" r="4" /><path
+          d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41" /></g
+      ></svg>
+
+    <svg
+      id="moon"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      ><path
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+        d="M12 3a6.364 6.364 0 0 0 9 9a9 9 0 1 1-9-9Z" /></svg>
+
+    <svg
+      id="system"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24">
+      <path
+        fill="currentColor"
+        d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 2a8 8 0 0 1 8 8a8 8 0 0 1-8 8V4Z" />
+    </svg>
   </div>
-  Theme
+  <span>Theme</span>
 </button>
 
 <style>
   button {
-    /* cursor: pointer; */
     overflow: hidden;
-    /* height: 2.4rem; */
-    /* width: 2.4rem; */
     display: flex;
     flex-flow: row;
     padding: 0.4rem 0.8rem;
     border-radius: 0.8rem;
     gap: 0.4rem;
+  }
+
+  @media screen and (min-width: 1280px) {
+    span {
+      display: none;
+    }
+
+    button {
+      padding: 0.4rem;
+      border-radius: 100%;
+    }
   }
 
   .theme-wrapper {
@@ -96,15 +141,15 @@
     place-items: center;
   }
 
-  iconify-icon:first-child {
+  svg:first-child {
     position: absolute;
   }
 
-  iconify-icon:nth-child(2) {
+  svg:nth-child(2) {
     position: absolute;
   }
 
-  iconify-icon {
+  svg {
     pointer-events: none;
     /* margin-inline: auto; */
     display: flex;
