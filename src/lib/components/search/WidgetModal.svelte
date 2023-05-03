@@ -73,7 +73,22 @@
   aria-keyshortcuts="Control+K"
   aria-label="Click to open the modal box to search for blogs"
   on:click={toggleModal}>
-  <iconify-icon aria-hidden="true" icon="lucide:search" />
+  <svg
+    aria-hidden="true"
+    xmlns="http://www.w3.org/2000/svg"
+    width="22"
+    height="22"
+    viewBox="0 0 24 24">
+    <g
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2">
+      <circle cx="11" cy="11" r="8" />
+      <path d="m21 21l-4.35-4.35" />
+    </g>
+  </svg>
   {#if complex}
     <span> &nbsp;&nbsp;&nbsp </span>
     <kbd>Ctrl K</kbd>
