@@ -32,4 +32,8 @@ top but also show a `LinkUI` to go to either Home or to search for another post.
 
 ## Change the "Read my blog" link and
 
-Swap the link for a direct link to my Resume/CV
+Swap the link for a direct link to my Resume/CV.
+
+## Try other fonts
+
+Some more bolder fonts, and check how the look with all uppercase titles.
