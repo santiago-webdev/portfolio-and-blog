@@ -10,7 +10,7 @@
 </script>
 
 <AboveTheFold />
-<MentionPortfolio />
+<!-- <MentionPortfolio /> -->
 <MentionBlog />
 <!-- <BlogShowcase /> -->
 <!-- <FeaturedProjects /> -->

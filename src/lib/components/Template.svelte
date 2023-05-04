@@ -40,7 +40,7 @@
   <main>
     <div class="wrapper-header">
       <LinkUI orientation="left" href="{base}/blog" class="font-3">
-        Back to blog
+        Back to Blog
       </LinkUI>
       {#if isHollow}
         <h1>

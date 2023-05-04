@@ -96,7 +96,8 @@
   }
 
   .goto-blog {
-    display: grid;
+    display: flex;
+    flex-direction: column;
   }
 
   section {

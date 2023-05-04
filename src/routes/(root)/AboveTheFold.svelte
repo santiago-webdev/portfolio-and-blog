@@ -2,14 +2,21 @@
   import { base } from '$app/paths'
   import LinkRoundButton from '$lib/components/navigation/LinkRoundButton.svelte'
   import LinkUI from '$lib/components/navigation/LinkUI.svelte'
+
+  const wrapInSpans = (text: string): string =>
+    text
+      .split('')
+      .map(char => (char === ' ' ? char : `<span class='expand-on-hover'>${char}</span>`))
+      .join('')
 </script>
 
 <div class="wrapper">
   <main>
     <div class="introduction">
       <h1 class="font-fluid-xl">
-        Building the web <br />
-        <span>&&</span> clean interfaces
+        {@html wrapInSpans('Building the web')}
+        <br />
+        {@html wrapInSpans('&& clean interfaces')}
       </h1>
       <p style="max-width: 40ch">
         I'm a web developer and here we'll discuss about
@@ -30,7 +37,7 @@
         class="font-3 learn-more"
         data-sveltekit-reload
         rel="external"
-        href="#mention-blog">Learn more</LinkUI>
+        href="#portfolio">Learn more</LinkUI>
     </div>
   </main>
 </div>
@@ -55,6 +62,14 @@
     display: flex;
     flex-flow: column wrap;
     gap: 1rem;
+  }
+
+  :global(.expand-on-hover) {
+    transition: font-variation-settings 150ms ease-in-out;
+  }
+
+  :global(.expand-on-hover:hover) {
+    font-variation-settings: 'wght' 900, 'wdth' 125;
   }
 
   section {
