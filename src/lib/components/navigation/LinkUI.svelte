@@ -27,14 +27,18 @@
   a {
     display: flex;
     color: var(--clr-90);
-    font-variation-settings: 'wght' 550;
-    transition: font-variation-settings 160ms ease-in-out;
+    transition: all 150ms ease-in-out;
     max-width: max-content;
+    font-variation-settings: 'wght' 500, 'wdth' 98;
+    letter-spacing: 0.005em;
+    font-family: 'Mona Sans';
   }
 
-  a:hover {
-    font-variation-settings: 'wght' 720;
-    color: var(--clr-red-40);
+  @media (hover: hover) {
+    a:hover {
+      font-variation-settings: 'wght' 900, 'wdth' 125;
+      color: var(--clr-red-40);
+    }
   }
 
   .defaults {
