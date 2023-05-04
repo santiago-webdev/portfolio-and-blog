@@ -6,7 +6,9 @@
   const wrapInSpans = (text: string): string =>
     text
       .split('')
-      .map(char => (char === ' ' ? char : `<span class='expand-on-hover'>${char}</span>`))
+      .map(char =>
+        char === ' ' ? char : `<span class='expand-on-hover'>${char}</span>`
+      )
       .join('')
 </script>
 
