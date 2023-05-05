@@ -142,13 +142,14 @@
     transition: padding 300ms cubic-bezier(0.07, 0.95, 0, 1),
       background-color 300ms ease-in-out, transform 300ms ease-in-out;
     z-index: 999;
-    padding: 0.6rem 0;
+    padding: 1rem 0;
+    /* padding: 0.6rem 0; */
     background-color: var(--clr-25);
   }
 
   header.anchored {
     top: unset !important;
-    padding: 2rem 0 !important;
+    /* padding: 2rem 0 !important; */
     transform: translateY(0%) !important;
     background-color: transparent !important;
     border-bottom: 2px transparent solid !important;
@@ -167,9 +168,9 @@
     background-color: var(--clr-30);
   }
 
-  header.scrollY {
-    padding: 0.6rem 0;
-  }
+  /* header.scrollY { */
+  /*   padding: 0.6rem 0; */
+  /* } */
 
   header.transparent {
     background-color: transparent;
@@ -245,9 +246,9 @@
       background-color: var(--clr-25-trp);
     }
 
-    header {
-      padding: 2rem 0;
-    }
+    /* header { */
+    /*   padding: 2rem 0; */
+    /* } */
 
     nav a:first-child span {
       display: block;
