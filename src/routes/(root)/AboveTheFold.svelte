@@ -1,6 +1,7 @@
 <script lang="ts">
   import { base } from '$app/paths'
   import LinkRoundButton from '$lib/components/navigation/LinkRoundButton.svelte'
+    import LinkSquareButton from '$lib/components/navigation/LinkSquareButton.svelte'
   import LinkUI from '$lib/components/navigation/LinkUI.svelte'
 
   const wrapInSpans = (text: string): string =>
@@ -24,6 +25,7 @@
         I'm a web developer and here we'll discuss about
         <strong>web deve&shylopment</strong>
         and show you my projects while at it.
+        <LinkSquareButton href="/test">Test</LinkSquareButton>
       </p>
       <section>
         <LinkRoundButton href="{base}/projects" class="shiny hover">
