@@ -31,9 +31,23 @@
   })
 </script>
 
-<form class="shiny font-fluid-xs" on:submit|preventDefault={handleSubmit}>
+<form class="font-fluid-xs" on:submit|preventDefault={handleSubmit}>
   <button aria-label="Go to selected blog" type="submit">
-    <iconify-icon icon="lucide:search" />
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24">
+      <g
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2">
+        <circle cx="11" cy="11" r="8" />
+        <path d="m21 21l-4.35-4.35" />
+      </g>
+    </svg>
   </button>
 
   <input
@@ -51,13 +65,24 @@
 
 <style>
   form {
-    display: grid;
-    grid-template-columns: auto 1fr;
+    display: flex;
+    place-items: center;
     overflow: hidden;
     margin-inline: auto;
     position: relative;
-    border-radius: 1rem;
     width: min(100% - 1rem, var(--sm));
+
+    background-color: var(--clr-40);
+    border: 1px solid var(--clr-40);
+    border-top-color: var(--clr-45);
+    border-left-color: var(--clr-45);
+    box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
+
+    transition: background-color 50ms, border 80ms, box-shadow 300ms;
+
+    padding: 0.4rem 0.8rem;
+    gap: 0.2rem;
+    border-radius: 1rem;
   }
 
   form > *:not(kbd) {
@@ -88,7 +113,7 @@
     border: none;
     outline: none;
     width: 100%;
-    padding: 0.3rem 0;
+    padding: 0.2rem 0;
   }
 
   input::placeholder,

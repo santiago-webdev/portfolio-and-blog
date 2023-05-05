@@ -35,7 +35,7 @@
       </label>
       <select
         bind:value={$currentGroupOfProjects}
-        class="shiny"
+        class="font-fluid-xs"
         name="projects"
         id="projects">
         {#each $filterJobGroupSelector as { category, label }}
@@ -142,13 +142,21 @@
   }
 
   label {
-    margin-inline: 1.2rem;
+    margin-inline: 1.6rem;
   }
 
   select {
-    padding: 0.4rem 1.2rem;
+    padding: 0.7rem 1.6rem;
     border-radius: 1rem;
-    color: inherit;
+    color: var(--clr-85);
+
+    background-color: var(--clr-40);
+    border: 1px solid var(--clr-40);
+    border-top-color: var(--clr-45);
+    border-left-color: var(--clr-45);
+    box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
+
+    transition: background-color 50ms, border 80ms, box-shadow 300ms;
   }
 
   section {
