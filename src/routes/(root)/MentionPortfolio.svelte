@@ -1,66 +1,89 @@
 <script lang="ts">
-  // <script context="module" lang="ts">
+  import LinkSquareButton from '$lib/components/navigation/LinkSquareButton.svelte'
 </script>
 
-<div id="portfolio" class="mention-portfolio">
-  <div class="describe-featured">
-    <h2>Featured Project</h2>
-    <p>
-      Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum
-      sint consectetur cupidatat.
-    </p>
-  </div>
-  <div class="img-wrapper">
-    <img src="/portfolio/zap-website.webp" alt="" />
+<div class="wrapper-portfolio">
+  <div id="portfolio" class="portfolio">
+    <section>
+      <small style="display: flex; gap: 0.4rem">
+        Featured Project
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24">
+          <path
+            fill="currentColor"
+            d="M4.5 12.75a.75.75 0 0 1 .75-.75h13.5a.75.75 0 0 1 0 1.5H5.25a.75.75 0 0 1-.75-.75Z" />
+        </svg></small>
+      <a href="#portfolio">
+        <h2 class="font-fluid-md">Featured Project</h2>
+      </a>
+      <p>
+        Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+        cillum sint consectetur cupidatat.
+
+        <LinkSquareButton href="/test">Test</LinkSquareButton>
+      </p>
+    </section>
+    <div class="img-wrapper">
+      <img loading="lazy" src="/portfolio/zap-website.webp" alt="" />
+    </div>
   </div>
 </div>
 
 <style>
-  .mention-portfolio {
-    display: flex;
-    place-items: center;
-    flex-flow: row wrap;
-    min-height: 100vh;
-    width: min(92%, var(--md));
-    margin-inline: auto;
-    gap: 3rem;
+  .wrapper-portfolio {
+    background-color: var(--clr-05);
+    color: var(--clr-200);
   }
 
-  .describe-featured {
-    flex: 3;
-    display: grid;
-    gap: 1rem;
+  .portfolio {
+    display: flex;
+    width: min(92%, var(--md));
+    min-height: 100vh;
+    margin-inline: auto;
+    padding: 3rem 0;
+    gap: 3rem;
+    place-items: center;
+  }
+
+  small {
+    font-weight: 500;
   }
 
   .img-wrapper {
-    flex: 2;
+    flex: 1;
     max-height: 40rem;
     overflow: hidden;
-    padding: 2rem;
-    border-radius: 2rem;
-    border: 2px solid var(--clr-30);
-
-    background-size: 100% 100%;
-    background-position: 0px 0px, 0px 0px, 0px 0px, 0px 0px, 0px 0px;
-    background-image: radial-gradient(
-        49% 81% at 45% 47%,
-        #ffe20345 0%,
-        #073aff00 100%
-      ),
-      radial-gradient(113% 91% at 17% -2%, #e85376 17%, #ffc965 94%),
-      radial-gradient(142% 91% at 83% 7%, #ffdb00ff 1%, #ff000000 99%),
-      radial-gradient(142% 91% at -6% 74%, #ff0049ff 1%, #ff000000 99%),
-      radial-gradient(142% 91% at 111% 84%, #ff7000ff 0%, #ff0000ff 100%);
+    border-radius: 1rem;
+    border: 1px solid var(--clr-25);
   }
 
   img {
     max-inline-size: 100%;
-    border-radius: 2rem;
     overflow: hidden;
   }
 
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin: 2rem;
+  }
+
+  a {
+    all: unset;
+    cursor: pointer;
+  }
+
+  p {
+    color: var(--clr-80);
+    max-width: 38ch;
+  }
+
   @media screen and (min-height: 80rem) {
-    .mention-portfolio {
+    .portfolio {
       min-height: 0;
     }
   }

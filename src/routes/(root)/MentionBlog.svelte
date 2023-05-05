@@ -66,6 +66,7 @@
     min-height: 100vh;
     place-content: center;
     place-items: center;
+    border-top: 1px solid var(--clr-15)
   }
 
   @media screen and (min-height: 80rem) {

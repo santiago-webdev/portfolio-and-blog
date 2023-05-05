@@ -2,6 +2,9 @@
   --ff-dflt: 'Mona Sans', system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol';
+  --ff-text: 'Basier Circle', system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
   --ff-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace,
     SF Mono, Monaco, Droid Sans Mono, Source Code Pro, monospace;
 
@@ -20,7 +23,7 @@
   --fs-fl-xs: clamp(0.75rem, 2vw + 1rem, 1.6rem);
   --fs-fl-sm: clamp(1.2rem, 4vw + 1rem, 2.2rem);
   --fs-fl-bs: clamp(1.8rem, 6vw + 1rem, 2.6rem);
-  --fs-fl-md: clamp(2rem, 8vw + 1rem, 3.5rem);
+  --fs-fl-md: clamp(2rem, 8vw + 1rem, 3rem);
   --fs-fl-lg: clamp(3rem, 10vw + 1rem, 5.6rem);
   --fs-fl-xl: clamp(3rem, 10vw + 1rem, 6.3rem);
 }
@@ -112,7 +115,7 @@ h2,
 .font-fluid-md {
   font-size: var(--fs-fl-md);
   line-height: calc(var(--fs-fl-md) * 1.15);
-  font-variation-settings: 'wght' 700;
+  font-variation-settings: 'wght' 800, 'wdth' 105;
 }
 
 h1,

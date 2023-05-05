@@ -1,7 +1,6 @@
 <script lang="ts">
   import { base } from '$app/paths'
   import LinkRoundButton from '$lib/components/navigation/LinkRoundButton.svelte'
-    import LinkSquareButton from '$lib/components/navigation/LinkSquareButton.svelte'
   import LinkUI from '$lib/components/navigation/LinkUI.svelte'
 
   const wrapInSpans = (text: string): string =>
@@ -21,19 +20,17 @@
         <br />
         {@html wrapInSpans('&& clean interfaces')}
       </h1>
-      <p style="max-width: 40ch">
-        I'm a web developer and here we'll discuss about
+      <p>
+        I'm a frontend developer and here we'll discuss about
         <strong>web deve&shylopment</strong>
         and show you my projects while at it.
-        <LinkSquareButton href="/test">Test</LinkSquareButton>
       </p>
       <section>
         <LinkRoundButton href="{base}/projects" class="shiny hover">
           What I've built
         </LinkRoundButton>
-        <LinkRoundButton href="{base}/blog" class="reverse">
-          Read my blog
-        </LinkRoundButton>
+        <LinkRoundButton href="#todo" rel="external" class="reverse"
+          >Resume</LinkRoundButton>
       </section>
     </div>
     <div class="call-to-scroll">
@@ -68,6 +65,15 @@
     gap: 1rem;
   }
 
+  :global(h1 .expand-on-hover) {
+    color: var(--clr-150);
+  }
+
+  p {
+    color: var(--clr-150);
+    max-width: 38ch;
+  }
+
   :global(.expand-on-hover) {
     transition: font-variation-settings 150ms ease-in-out;
   }
@@ -83,7 +89,7 @@
     margin-top: 1.4rem;
   }
 
-  @media screen and (min-width: 80rem) {
+  @media screen and (min-width: 1280px) {
     main {
       flex-flow: row;
       padding: 6rem 0;
