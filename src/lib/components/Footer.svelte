@@ -185,6 +185,7 @@
     border-top-left-radius: 1rem;
     background-color: var(--clr-25);
     margin-top: 1rem;
+    font-family: var(--ff-text);
   }
 
   small,
@@ -218,7 +219,7 @@
   }
 
   .footer-start h3 {
-    font-variation-settings: 'wght' 600;
+    font-weight: 500;
     margin-inline: 0.6rem;
     text-decoration: underline solid var(--clr-65) 2px;
     text-underline-offset: 3px;
