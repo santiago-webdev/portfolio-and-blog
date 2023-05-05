@@ -1,7 +1,7 @@
 <script lang="ts">
   import { base } from '$app/paths'
-  import LinkRoundButton from '$lib/components/navigation/LinkRoundButton.svelte'
   import LinkUI from '$lib/components/navigation/LinkUI.svelte'
+  import ShapeButton from '$lib/components/navigation/ShapeButton.svelte'
 
   const wrapInSpans = (text: string): string =>
     text
@@ -26,11 +26,15 @@
         and show you my projects while at it.
       </p>
       <section>
-        <LinkRoundButton href="{base}/projects" class="shiny hover">
-          What I've built
-        </LinkRoundButton>
-        <LinkRoundButton href="#todo" rel="external" class="reverse"
-          >Resume</LinkRoundButton>
+        <ShapeButton
+          href="{base}/projects"
+          class="bttn-big-round reverse hover">
+          What I've built</ShapeButton>
+        <ShapeButton
+          href="#todo"
+          rel="external"
+          class="bttn-big-round shiny hover">
+          Resume</ShapeButton>
       </section>
     </div>
     <div class="call-to-scroll">
@@ -84,9 +88,9 @@
 
   section {
     display: flex;
-    flex-flow: row wrap;
-    gap: 1.4rem;
-    margin-top: 1.4rem;
+    flex-flow: row wrap-reverse;
+    gap: 2rem;
+    margin-top: 2rem;
   }
 
   @media screen and (min-width: 1280px) {

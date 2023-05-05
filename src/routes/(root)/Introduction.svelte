@@ -1,8 +1,3 @@
-<script>
-  import { base } from '$app/paths'
-  import LinkRoundButton from '$lib/components/navigation/LinkRoundButton.svelte'
-</script>
-
 <div id="introduction-about-me">
   <section>
     <div>
@@ -20,14 +15,7 @@
       </p>
     </div>
 
-    <div class="wrapper-introduction-links">
-      <LinkRoundButton href="{base}/about" class="shiny">
-        Learn more about me
-      </LinkRoundButton>
-      <LinkRoundButton class="block" href="{base}/contact">
-        Want to get in touch?
-      </LinkRoundButton>
-    </div>
+    <div class="wrapper-introduction-links">TODO</div>
   </section>
   <img
     loading="lazy"

@@ -1,7 +1,6 @@
 <script lang="ts">
   import { base } from '$app/paths'
   import LinkInText from '$lib/components/navigation/LinkInText.svelte'
-  import LinkRoundButton from '$lib/components/navigation/LinkRoundButton.svelte'
   import LinkUI from '$lib/components/navigation/LinkUI.svelte'
   import site from '$lib/site.json'
 
@@ -40,10 +39,7 @@
       labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet.
     </p>
 
-    <p>All of my projects can be found here:</p>
-    <LinkRoundButton href="{base}/projects" class="shiny hover">
-      What I've built
-    </LinkRoundButton>
+    <p>All of my projects can be found here: TODO</p>
   </div>
   <div class="img-wrapper">
     <img src="/alleged-photo-of-myself.webp" alt="" />

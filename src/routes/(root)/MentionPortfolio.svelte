@@ -1,5 +1,5 @@
 <script lang="ts">
-  import LinkSquareButton from '$lib/components/navigation/LinkSquareButton.svelte'
+  // import LinkSquareButton from '$lib/components/navigation/LinkSquareButton.svelte'
 </script>
 
 <div class="wrapper-portfolio">
@@ -23,7 +23,7 @@
         Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
         cillum sint consectetur cupidatat.
 
-        <LinkSquareButton href="/test">Test</LinkSquareButton>
+        <!-- <LinkSquareButton href="/test">Test</LinkSquareButton> -->
       </p>
     </section>
     <div class="img-wrapper">
