@@ -1,10 +1,13 @@
+<script lang="ts">
+  import { Posts } from '$lib/components/search/store'
+</script>
+
 <div class="wrapper-blog-header">
   <h1>Blog</h1>
   <p>
-    In this blog you are going to find articles about <strong>Linux</strong>,
-    <strong>web technologies</strong>
-    and
-    <strong>frontend development</strong>.
+    In this {$Posts.length} blog posts you are going to find articles related to
+    <strong>Linux</strong>, <strong>web technologies</strong> and
+    <strong>front end development</strong>.
   </p>
 </div>
 
