@@ -34,7 +34,9 @@
       {#each $Posts.slice(0, 3) as { href, title, datetime }, id}
         <a href="{base}/blog{href}">
           <article>
-            <img loading="lazy" src={getPic(id)} alt="" />
+            <div class="img-wrapper">
+              <img loading="lazy" src={getPic(id)} alt="" />
+            </div>
             {#if datetime}
               <small>
                 <time {datetime}>
@@ -61,18 +63,12 @@
 
 <style>
   #mention-blog {
-    padding: 6rem 0;
+    padding: 3rem 0;
     display: flex;
-    min-height: 100vh;
     place-content: center;
     place-items: center;
     border-top: 1px solid var(--clr-15);
-  }
-
-  @media screen and (min-height: 80rem) {
-    #mention-blog {
-      min-height: 0;
-    }
+    margin-bottom: 3rem;
   }
 
   .wrapper {
@@ -109,19 +105,25 @@
 
   article {
     position: relative;
-    display: grid;
+    display: flex;
+    flex-flow: column wrap;
     gap: 1rem;
-    grid-template-rows: auto 1fr auto;
-    border-radius: 1.2rem;
-    height: 100%;
   }
 
-  article img {
-    object-fit: cover;
-    border-radius: 0.6rem;
+  .img-wrapper {
+    max-height: 36rem;
+    overflow: hidden;
+    border-radius: 0.8rem;
   }
 
-  article time {
+  img {
+    max-inline-size: 100%;
+    block-size: auto;
+    object-fit: scale-down;
+    object-position: center center;
+  }
+
+  time {
     display: flex;
     flex-flow: row wrap;
 
@@ -132,7 +134,7 @@
     display: none;
   }
 
-  @media screen and (min-width: 80rem) {
+  @media screen and (min-width: 1280px) {
     section a:nth-child(3) {
       display: initial;
     }
