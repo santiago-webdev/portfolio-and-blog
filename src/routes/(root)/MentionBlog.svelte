@@ -139,6 +139,7 @@
     flex-flow: row wrap;
 
     font-variation-settings: 'wght' 500;
+    font-weight: 400;
   }
 
   section a:nth-child(3) {

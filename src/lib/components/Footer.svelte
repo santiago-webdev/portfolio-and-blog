@@ -41,7 +41,7 @@
     <section>
       <div class="aboutme">
         <h3 class="font-4">Santiago Gonzalez</h3>
-        <p class="font-3">
+        <p class="font-20">
           I'm a web developer that can help you craft accessible website
           experiences without leaving the aesthetics aside.
         </p>
@@ -260,6 +260,7 @@
     place-items: center;
     gap: 0.5ch;
     color: inherit;
+    font-weight: 400;
   }
 
   section {

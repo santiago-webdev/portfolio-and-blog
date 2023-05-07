@@ -26,6 +26,13 @@
   --fs-fl-md: clamp(2rem, 8vw + 1rem, 3rem);
   --fs-fl-lg: clamp(3rem, 10vw + 1rem, 5.6rem);
   --fs-fl-xl: clamp(3rem, 10vw + 1rem, 6.3rem);
+
+  --fs-10: clamp(0.618rem, 2vw + 1rem, 1.0135rem);
+  --fs-20: clamp(1.2135rem, 2vw + 1rem, 1.418rem);
+  --fs-30: 2.618rem;
+  --fs-40: 4.236rem;
+  --fs-50: 6.854rem;
+  --fs-60: 11.089rem;
 }
 
 /* Normal font and line height sizes */
@@ -133,8 +140,6 @@ h1,
   /* letter-spacing: -0.05em; */
 }
 
-p,
-small,
 a,
 input,
 select,
@@ -142,4 +147,25 @@ button {
   font-family: 'Basier Circle';
   font-weight: 400;
   letter-spacing: -0.02em;
+}
+
+small,
+.font-10 {
+  font-size: var(--fs-10);
+  line-height: calc(var(--fs-10) * 1.3);
+  font-variation-settings: 'wght' 500, 'wdth' 100;
+  letter-spacing: -0.006em;
+  font-weight: 500;
+  font-family: var(--ff-text);
+}
+
+p,
+.font-20 {
+  font-size: var(--fs-20);
+  line-height: calc(var(--fs-20) * 1.3);
+  font-family: var(--ff-text);
+
+  font-variation-settings: 'wght' 500, 'wdth' 100;
+  font-weight: 400;
+  letter-spacing: -0.006em;
 }
