@@ -231,7 +231,7 @@
             <path d="M15 9.354a4 4 0 1 0 0 5.292" />
           </g>
         </svg>
-        2023 — present
+        2023 &mdash; present
         <div aria-orientation="vertical" role="separator">•</div>
         All rights reserved
         <div aria-orientation="vertical" role="separator">•</div>
