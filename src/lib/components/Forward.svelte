@@ -39,7 +39,7 @@
     display: flex;
     place-items: center;
     position: relative;
-    inset: auto auto 1px 0.2ch;
+    inset: 1px auto auto 0.2ch;
   }
 
   svg:first-child {
