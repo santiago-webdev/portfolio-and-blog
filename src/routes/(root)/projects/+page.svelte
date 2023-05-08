@@ -22,10 +22,10 @@
 <main>
   <div class="wrapper-projects">
     <div class="projects-presentation">
-      <h1 class="font-55">
+      <h1 class="font-50">
         Projects Showcase - {getCurrent().name}
       </h1>
-      <p class="font-55">
+      <p class="font-50">
         {getCurrent().description}.
       </p>
     </div>
