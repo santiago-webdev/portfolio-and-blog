@@ -5,9 +5,9 @@
 <div class="wrapper-blog-header">
   <h1>Blog</h1>
   <p>
-    In this {$Posts.length} blog posts you are going to find articles related to
-    <strong>Linux</strong>, <strong>web technologies</strong> and
-    <strong>front end development</strong>.
+    {$Posts.length} articles about <strong>Linux</strong>,
+    <strong>web technologies</strong>, and <strong>development</strong>. Follow
+    my journey to become a front-end developer.
   </p>
 </div>
 
@@ -27,5 +27,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.8rem;
+    width: min(92%, var(--base));
+    margin-inline: auto;
   }
 </style>
