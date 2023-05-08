@@ -16,9 +16,7 @@
             fill="currentColor"
             d="M4.5 12.75a.75.75 0 0 1 .75-.75h13.5a.75.75 0 0 1 0 1.5H5.25a.75.75 0 0 1-.75-.75Z" />
         </svg></small>
-      <a href="#portfolio">
-        <h2 class="font-fluid-md">Featured Project</h2>
-      </a>
+      <h2>Featured Project</h2>
       <p>
         Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
         cillum sint consectetur cupidatat.
@@ -26,9 +24,9 @@
         <!-- <LinkSquareButton href="/test">Test</LinkSquareButton> -->
       </p>
     </section>
-    <div class="img-wrapper">
-      <img loading="lazy" src="/portfolio/zap-website.webp" alt="" />
-    </div>
+    <!-- <div class="img-wrapper"> -->
+    <!--   <img loading="lazy" src="/portfolio/zap-website.webp" alt="" /> -->
+    <!-- </div> -->
   </div>
 </div>
 
@@ -70,11 +68,6 @@
     flex-direction: column;
     gap: 0.6rem;
     margin: 2rem;
-  }
-
-  a {
-    all: unset;
-    cursor: pointer;
   }
 
   p {

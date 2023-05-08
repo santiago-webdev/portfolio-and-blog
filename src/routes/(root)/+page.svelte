@@ -3,11 +3,13 @@
   import AboveTheFold from './AboveTheFold.svelte'
   import MentionPortfolio from './MentionPortfolio.svelte'
   import MentionBlog from './MentionBlog.svelte'
+    import Introduction from './Introduction.svelte'
 </script>
 
 <AboveTheFold />
 <MentionPortfolio />
 <MentionBlog />
+<Introduction />
 
 <svelte:head>
   <title>{site.site.title}</title>

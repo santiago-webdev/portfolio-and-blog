@@ -31,7 +31,7 @@
   })
 </script>
 
-<form class="font-fluid-xs" on:submit|preventDefault={handleSubmit}>
+<form class="font-30" on:submit|preventDefault={handleSubmit}>
   <button aria-label="Go to selected blog" type="submit">
     <svg
       xmlns="http://www.w3.org/2000/svg"

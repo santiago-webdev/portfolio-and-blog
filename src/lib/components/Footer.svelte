@@ -37,10 +37,10 @@
 
 <ButtonToTheTop />
 <footer>
-  <div class="footer-start">
+  <div class="font-20 footer-start">
     <section>
       <div class="aboutme">
-        <h3 class="font-4">Santiago Gonzalez</h3>
+        <h3 class="font-30">Santiago Gonzalez</h3>
         <p class="font-20">
           I'm a web developer that can help you craft accessible website
           experiences without leaving the aesthetics aside.
@@ -48,7 +48,7 @@
       </div>
 
       <nav aria-label="footer-navigation">
-        <h3 class="font-3">Sitemap</h3>
+        <h3 class="font-20">Sitemap</h3>
         {#each $navigationItems as item}
           {#if item.label !== 'Separator'}
             <a
@@ -65,7 +65,7 @@
       </nav>
 
       <div class="relevant-projects">
-        <h3 class="font-3">Projects</h3>
+        <h3 class="font-20">Projects</h3>
         <ul>
           <li>
             <a class="shiny-select" target="_blank" href="https://zapzsh.org"
@@ -75,7 +75,7 @@
       </div>
 
       <div class="donate">
-        <h3 class="font-3">Donate</h3>
+        <h3 class="font-20">Donate</h3>
         <ul>
           {#each donateItems as item}
             <li>
@@ -119,7 +119,7 @@
       </div>
 
       <div class="contact">
-        <h3 class="font-3">Contact</h3>
+        <h3 class="font-20">Contact</h3>
         <address>
           <a
             target="_blank"
@@ -150,15 +150,14 @@
       </div>
     </section>
   </div>
-  <div class="footer-end">
+  <div class="font-20 footer-end">
     <section>
       <a
-        class="font-3"
         target="_blank"
         href="https://github.com/santigo-zero"
         aria-label="Link to my GitHub profile"
         title="Link to my GitHub profile">
-        <small class="font-3">
+        <small>
           Designed & Built with <svg
             xmlns="http://www.w3.org/2000/svg"
             width="21"
@@ -178,7 +177,6 @@
       </a>
 
       <a
-        class="font-3"
         target="_blank"
         href={site.site.repo}
         aria-label="Link to git repository for this site at Github"
@@ -215,7 +213,7 @@
         </var>
       </a>
 
-      <small class="font-3 copyright">
+      <small class="copyright">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="21"
@@ -231,7 +229,7 @@
             <path d="M15 9.354a4 4 0 1 0 0 5.292" />
           </g>
         </svg>
-        2023 &mdash; present
+        2023 - present
         <div aria-orientation="vertical" role="separator">•</div>
         All rights reserved
         <div aria-orientation="vertical" role="separator">•</div>
@@ -342,8 +340,8 @@
 
   .aboutme h3 {
     margin-inline: 0;
-    text-decoration: none;
     margin-bottom: 0;
+    text-decoration: none;
   }
 
   nav,
@@ -394,5 +392,12 @@
       justify-content: space-between;
       padding: 1rem 0;
     }
+  }
+
+  address,
+  a,
+  small,
+  button {
+    font-size: inherit;
   }
 </style>

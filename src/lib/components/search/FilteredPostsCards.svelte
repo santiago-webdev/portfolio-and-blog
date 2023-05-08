@@ -22,7 +22,7 @@
       <li in:fly={fly_in} out:fly={fly_out}>
         <a href="{base}/blog{post.href}">
           <article class="shiny less attn">
-            <h2 class="font-fluid-xs">{post.title}</h2>
+            <h2 style='font-family: var(--ff-text); font-weight: 500' class="font-40">{post.title}</h2>
             {#if post.description}
               <p>{post.description}</p>
             {:else}
@@ -44,7 +44,6 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(min(23rem, 100%), 1fr));
-    /* grid-auto-rows: minmax(11.5rem, 1fr); */
     margin-inline: auto;
     width: min(100% - 1rem, var(--md));
   }

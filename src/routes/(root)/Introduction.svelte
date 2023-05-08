@@ -2,11 +2,11 @@
   <section>
     <div>
       <a href="#introduction-about-me">
-        <h2 class="font-fluid-md">About</h2>
+        <h2>About</h2>
       </a>
       <br />
-      <h3 class="font-5">Hello!</h3>
-      <p class="font-5">
+      <h3 class="font-30">Hello!</h3>
+      <p>
         I'm a web developer based in <em>Argentina</em>, with a passion for
         <strong>Free And Open Source</strong>,
         <strong>UI/UX</strong> and <strong>Linux</strong>. I believe that

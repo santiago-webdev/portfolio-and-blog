@@ -220,11 +220,9 @@ pre {
 
 kbd {
   pointer-events: none;
-  padding-inline: 0.3rem;
-
-  border-radius: 0.4rem;
+  padding-inline: 0.6rem;
+  border-radius: 0.5rem;
   background-color: var(--clr-60);
-  text-transform: uppercase;
-  font-size: 90%;
+  font-size: 60%;
   font-weight: bold;
 }

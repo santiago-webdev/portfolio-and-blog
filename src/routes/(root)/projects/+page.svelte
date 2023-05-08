@@ -22,20 +22,17 @@
 <main>
   <div class="wrapper-projects">
     <div class="projects-presentation">
-      <h1 class="font-fluid-bs">
+      <h1 class="font-55">
         Projects Showcase - {getCurrent().name}
       </h1>
-      <p class="font-fluid-bs">
+      <p class="font-55">
         {getCurrent().description}.
       </p>
     </div>
-    <form class="font-fluid-xs">
-      <label class="font-fluid-sm" for="projects">
-        Filter by type of project
-      </label>
+    <form class="font-30">
+      <label for="projects"> Filter by type of project </label>
       <select
         bind:value={$currentGroupOfProjects}
-        class="font-fluid-xs"
         name="projects"
         id="projects">
         {#each $filterJobGroupSelector as { category, label }}
@@ -53,13 +50,12 @@
       </div>
       <div id="describe-{name}">
         <LinkInText
-          class="font-fluid-xs"
           target="_blank"
           href={link.toString()}>
           {link.hostname.replace(/^www\./i, '')}
         </LinkInText>
-        <h2 class="font-fluid-sm">{name}</h2>
-        <p class="font-fluid-xs">{description}</p>
+        <h2>{name}</h2>
+        <p>{description}</p>
         <ul>
           {#each category as tags}
             <li class="shiny">{tags}</li>
@@ -115,7 +111,7 @@
     display: flex;
     flex-flow: row wrap;
 
-    width: min(92%, var(--md));
+    width: min(92%, var(--base));
     margin-inline: auto;
     padding: 3rem 0;
     place-content: center;

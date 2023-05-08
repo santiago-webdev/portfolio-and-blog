@@ -15,7 +15,7 @@
 <div class="wrapper">
   <main>
     <div class="introduction">
-      <h1 class="font-fluid-xl">
+      <h1 class="font-80">
         {@html wrapInSpans('Building the web')}
         <br />
         {@html wrapInSpans('&& clean interfaces')}
@@ -39,7 +39,7 @@
     </div>
     <div class="call-to-scroll">
       <LinkUI
-        class="font-3 learn-more"
+        class="learn-more"
         data-sveltekit-reload
         rel="external"
         href="#portfolio">Learn more</LinkUI>
@@ -74,7 +74,6 @@
   }
 
   p {
-    color: var(--clr-150);
     max-width: 38ch;
   }
 

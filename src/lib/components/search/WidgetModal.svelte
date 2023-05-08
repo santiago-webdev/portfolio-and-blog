@@ -90,8 +90,8 @@
     </g>
   </svg>
   {#if complex}
-    <span> &nbsp;&nbsp;&nbsp </span>
-    <kbd>Ctrl K</kbd>
+    <span class="font-20"> &nbsp;&nbsp;&nbsp </span>
+    <kbd class="font-20">Ctrl K</kbd>
   {/if}
 </button>
 
@@ -109,6 +109,7 @@
         <iconify-icon width="24" icon="lucide:search" />
       </button>
       <input
+        class="font-30"
         placeholder="Search for articles"
         bind:value
         bind:this={input}
@@ -142,10 +143,10 @@
           on:click={() => toggleModal()}
           href="{base}/blog{post.href}">
           <article>
-            <h3 class="font-4">
+            <h3 class="font-30" style="font-weight: 499;">
               {post.title}
             </h3>
-            <p class="font-3">{post.description}</p>
+            <p class="font-20">{post.description}</p>
             {#if post.datetime}
               <small>
                 <time datetime={post.datetime}>
@@ -181,6 +182,13 @@
   span {
     text-decoration: underline solid var(--clr-blue-20) 0.15em;
     text-underline-offset: 0em;
+  }
+
+  kbd {
+    font-size: 60%;
+    font-weight: bold;
+    font-family: var(--ff-mono);
+    border-radius: 0.4rem;
   }
 
   :modal > * {

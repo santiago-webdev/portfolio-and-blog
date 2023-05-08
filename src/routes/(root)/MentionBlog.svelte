@@ -14,18 +14,16 @@
   <div class="wrapper">
     <div class="intro">
       <a href="#mention-blog">
-        <h2 style:color="var(--clr-250)" class="font-fluid-bs">
-          Blog articles
-        </h2>
-        <p style:color="var(--clr-95)" class="font-fluid-bs">
+        <h2 style:color="var(--clr-200)">Blog articles</h2>
+        <p style:color="var(--clr-95)" class="font-60">
           Some of my latests posts.
         </p>
       </a>
-      <div class="font-3 goto-blog">
-        <p class="font-3">
+      <div class="goto-blog">
+        <p>
           Press <kbd aria-keyshortcuts="Control+K">Ctrl K</kbd> or
         </p>
-        <LinkUI orientation="right" href="{base}/blog">
+        <LinkUI class="font-30" orientation="right" href="{base}/blog">
           See the full blog
         </LinkUI>
       </div>
@@ -38,7 +36,7 @@
               <img loading="lazy" src={getPic(id)} alt="" />
             </div>
             {#if datetime}
-              <time class="font-10" {datetime}>
+              <time class="font-20" {datetime}>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="20"
@@ -64,7 +62,7 @@
                 No date provided
               </small>
             {/if}
-            <h3 style:color="var(--clr-250)" class="font-6">{title}</h3>
+            <h3 style:color="var(--clr-250)">{title}</h3>
           </article>
         </a>
       {/each}
@@ -98,14 +96,14 @@
     place-items: flex-start;
   }
 
-  .intro a[href='#mention-blog'] p,
-  .intro a[href='#mention-blog'] h2 {
-    font-variation-settings: 'wght' 500;
-  }
-
   .goto-blog {
     display: flex;
     flex-direction: column;
+  }
+
+  kbd {
+    font-size: inherit;
+    font-weight: normal;
   }
 
   section {
@@ -137,9 +135,11 @@
   time {
     display: flex;
     flex-flow: row wrap;
+    place-items: center;
 
-    font-variation-settings: 'wght' 500;
-    font-weight: 400;
+    /* font-variation-settings: 'wght' 450; */
+    /* font-weight: 400; */
+    color: var(--clr-90);
   }
 
   section a:nth-child(3) {
