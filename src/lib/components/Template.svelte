@@ -21,7 +21,7 @@
   let hollowPrefix = ''
   let fillSuffix = ''
 
-  const keywords = ['How ', 'How to ', 'How to: ']
+  const keywords = ['How', 'How to', 'How to:', 'How To']
 
   onMount(() => {
     if (title) {
@@ -38,12 +38,12 @@
 
 <section>
   <main>
+    <div class="back-button">
+      <LinkUI orientation="left" href="{base}/blog">Back to Blog</LinkUI>
+    </div>
     <div class="wrapper-header">
-      <LinkUI orientation="left" href="{base}/blog" class="font-3">
-        Back to Blog
-      </LinkUI>
       {#if isHollow}
-        <h1>
+        <h1 class="font-80">
           <Hollow color={'var(--clr-100)'}>{hollowPrefix}</Hollow>
           {fillSuffix}
         </h1>
@@ -51,24 +51,22 @@
         <h1>{title}</h1>
       {/if}
       <p>{description}</p>
+      {#if datetime}
+        <time
+          style="font-weight: 500; color: var(--clr-95)"
+          class="font-10"
+          {datetime}>
+          <iconify-icon icon="lucide:calendar" />: {dateRelative}
+          <div aria-orientation="vertical" role="separator">&nbsp;•&nbsp;</div>
+          {dateReadable}
+        </time>
+      {/if}
       {#if !finished}
         <div class="wip">
           <small>🏗 Construction site, keep out 🚧</small>
           <small>🚧 Authorized personnel only 🏗️</small>
           <small>🏗️ This article is not finished 🏗</small>
         </div>
-      {/if}
-      {#if datetime}
-        <hr
-          style="width: 50%; margin-inline: auto"
-          aria-orientation="horizontal" />
-        <small>
-          <time {datetime}>
-            <iconify-icon icon="lucide:calendar" />: {dateRelative}
-            <div aria-orientation="vertical" role="separator">•</div>
-            {dateReadable}
-          </time>
-        </small>
       {/if}
       <br />
     </div>
@@ -111,13 +109,27 @@
     background-color: var(--clr-25);
     border-bottom-right-radius: 1rem;
     border-bottom-left-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    place-items: start;
+    padding-bottom: 1rem;
   }
 
-  article,
+  .back-button {
+    margin-inline: auto;
+    width: min(92%, var(--base));
+    margin-bottom: 0.4rem;
+  }
+
   .wrapper-header,
   .wip {
     display: grid;
-    width: min(100% - 1rem, var(--base));
+    width: min(92%, var(--xl));
+    margin-inline: auto;
+  }
+
+  article {
+    width: min(92%, var(--base));
     margin-inline: auto;
   }
 
@@ -133,6 +145,10 @@
 
   .wip {
     place-items: center;
+  }
+
+  small {
+    font-weight: 500;
   }
 
   time {
