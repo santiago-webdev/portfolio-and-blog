@@ -98,8 +98,8 @@
 <style>
   main {
     background-color: var(--clr-25);
-    border-bottom-right-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1.6rem;
+    border-bottom-left-radius: 1.6rem;
     padding-bottom: 1rem;
     display: grid;
     place-items: center;

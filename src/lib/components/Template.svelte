@@ -56,16 +56,30 @@
           style="font-weight: 500; color: var(--clr-95)"
           class="font-10"
           {datetime}>
-          <iconify-icon icon="lucide:calendar" />: {dateRelative}
+          <svg
+            aria-label="Published: "
+            xmlns="http://www.w3.org/2000/svg"
+            width="22"
+            height="22"
+            viewBox="0 0 24 24">
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2">
+              <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+              <path d="M16 2v4M8 2v4m-5 4h18" />
+            </g>
+          </svg>&nbsp;{dateRelative}
           <div aria-orientation="vertical" role="separator">&nbsp;•&nbsp;</div>
           {dateReadable}
         </time>
       {/if}
       {#if !finished}
         <div class="wip">
-          <small>🏗 Construction site, keep out 🚧</small>
-          <small>🚧 Authorized personnel only 🏗️</small>
-          <small>🏗️ This article is not finished 🏗</small>
+          <small>🏗Construction site, keep out🏗</small>
+          <small>🚧This article is not finished🚧</small>
         </div>
       {/if}
       <br />
@@ -107,8 +121,8 @@
 <style>
   main {
     background-color: var(--clr-25);
-    border-bottom-right-radius: 1rem;
-    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1.6rem;
+    border-bottom-left-radius: 1.6rem;
     display: flex;
     flex-direction: column;
     place-items: start;
