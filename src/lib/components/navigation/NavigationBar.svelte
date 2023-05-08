@@ -142,8 +142,7 @@
     transition: padding 300ms cubic-bezier(0.07, 0.95, 0, 1),
       background-color 300ms ease-in-out, transform 300ms ease-in-out;
     z-index: 999;
-    padding: 1rem 0;
-    /* padding: 0.6rem 0; */
+    padding: 0.6rem 0;
     background-color: var(--clr-25);
   }
 
