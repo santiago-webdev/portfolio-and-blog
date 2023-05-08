@@ -49,7 +49,7 @@
     gap: 1rem;
     grid-template-columns: repeat(auto-fill, minmax(min(23rem, 100%), 1fr));
     margin-inline: auto;
-    width: min(100% - 1rem, var(--md));
+    width: min(92%, var(--md));
   }
 
   li {
@@ -84,13 +84,9 @@
     color: var(--clr-200);
   }
 
-  article:hover {
-    transform: scale(1.02);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
+  @media screen and (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
     article:hover {
-      transform: scale(1);
+      transform: scale(1.02);
     }
   }
 
