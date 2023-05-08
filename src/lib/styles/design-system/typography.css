@@ -61,6 +61,7 @@ button,
   font-family: var(--ff-text);
   font-variation-settings: 'wght' 400, 'wdth' 100;
   font-weight: 400;
+  letter-spacing: -0.03em;
 }
 
 h4,
