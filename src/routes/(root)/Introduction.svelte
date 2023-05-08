@@ -31,7 +31,6 @@
     grid-template-columns: 1fr;
     margin-inline: auto;
     flex-flow: row wrap-reverse;
-    background-color: var(--clr-25);
     padding: 2rem;
     border-radius: 1rem;
     gap: 1rem;

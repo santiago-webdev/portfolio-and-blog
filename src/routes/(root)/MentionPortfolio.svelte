@@ -20,13 +20,12 @@
       <p>
         Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
         cillum sint consectetur cupidatat.
-
         <!-- <LinkSquareButton href="/test">Test</LinkSquareButton> -->
       </p>
     </section>
-    <!-- <div class="img-wrapper"> -->
-    <!--   <img loading="lazy" src="/portfolio/zap-website.webp" alt="" /> -->
-    <!-- </div> -->
+    <div class="img-wrapper">
+      <img loading="lazy" src="/portfolio/zap-website.webp" alt="" />
+    </div>
   </div>
 </div>
 

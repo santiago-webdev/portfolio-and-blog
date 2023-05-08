@@ -13,12 +13,7 @@
 <div id="mention-blog">
   <div class="wrapper">
     <div class="intro">
-      <a href="#mention-blog">
-        <h2 style:color="var(--clr-200)">Blog articles</h2>
-        <p style:color="var(--clr-95)" class="font-60">
-          Some of my latests posts.
-        </p>
-      </a>
+      <h2 style:color="var(--clr-200)">Blog articles</h2>
       <div class="goto-blog">
         <p>
           Press <kbd aria-keyshortcuts="Control+K">Ctrl K</kbd> or
@@ -86,6 +81,9 @@
 
     width: 92%;
     max-width: var(--lg);
+    background-color: var(--clr-20);
+    padding: 2rem;
+    border-radius: 0.8rem;
   }
 
   .intro {
@@ -136,10 +134,7 @@
     display: flex;
     flex-flow: row wrap;
     place-items: center;
-
-    /* font-variation-settings: 'wght' 450; */
-    /* font-weight: 400; */
-    color: var(--clr-90);
+    color: var(--clr-100);
   }
 
   section a:nth-child(3) {

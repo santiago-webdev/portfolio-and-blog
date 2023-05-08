@@ -49,9 +49,7 @@
         <img src={img} alt="" />
       </div>
       <div id="describe-{name}">
-        <LinkInText
-          target="_blank"
-          href={link.toString()}>
+        <LinkInText target="_blank" href={link.toString()}>
           {link.hostname.replace(/^www\./i, '')}
         </LinkInText>
         <h2>{name}</h2>
