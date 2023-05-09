@@ -56,11 +56,11 @@
   }
 
   .bttn-big-round {
-    padding: clamp(1.2rem, 3vw + 1rem, 1.6rem) clamp(2.2rem, 3vw + 1rem, 2.6rem);
+    padding: clamp(1rem, 2vw + 1rem, 1.25rem) clamp(2rem, 2vw + 1rem, 2.25rem);
     border-radius: 999rem;
     transition: gap 300ms cubic-bezier(0.4, 0.4, 0, 1);
 
-    gap: clamp(0.4rem, 3vw + 1rem, 1.8rem);
+    gap: clamp(1rem, 3vw + 1rem, 3rem);
   }
 
   .bttn-small-square {
@@ -70,7 +70,7 @@
 
   @media (hover: hover) {
     .bttn-big-round:hover {
-      gap: clamp(1.4rem, 3vw + 1rem, 2.6rem);
+      gap: clamp(3rem, 3vw + 1rem, 5rem);
     }
   }
 </style>

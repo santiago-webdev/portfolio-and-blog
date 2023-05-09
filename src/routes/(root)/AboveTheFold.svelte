@@ -2,23 +2,13 @@
   import { base } from '$app/paths'
   import LinkUI from '$lib/components/navigation/LinkUI.svelte'
   import ShapeButton from '$lib/components/navigation/ShapeButton.svelte'
-
-  const wrapInSpans = (text: string): string =>
-    text
-      .split('')
-      .map(char =>
-        char === ' ' ? char : `<span class='expand-on-hover'>${char}</span>`
-      )
-      .join('')
 </script>
 
 <div class="wrapper">
   <main>
     <div class="introduction">
       <h1 class="font-80">
-        {@html wrapInSpans('Building the web')}
-        <br />
-        {@html wrapInSpans('&& clean interfaces')}
+        Building the web<br /> && clean interfaces
       </h1>
       <p>
         I'm a frontend developer and here we'll discuss about
@@ -69,20 +59,12 @@
     gap: 1rem;
   }
 
-  :global(h1 .expand-on-hover) {
+  h1 {
     color: var(--clr-150);
   }
 
   p {
     max-width: 38ch;
-  }
-
-  :global(.expand-on-hover) {
-    transition: font-variation-settings 150ms ease-in-out;
-  }
-
-  :global(.expand-on-hover:hover) {
-    font-variation-settings: 'wght' 900, 'wdth' 125;
   }
 
   section {
