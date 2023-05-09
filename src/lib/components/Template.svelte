@@ -52,10 +52,7 @@
       {/if}
       <p>{description}</p>
       {#if datetime}
-        <time
-          style="font-weight: 500; color: var(--clr-95)"
-          class="font-10"
-          {datetime}>
+        <time {datetime}>
           <svg
             aria-label="Published: "
             xmlns="http://www.w3.org/2000/svg"
@@ -78,8 +75,8 @@
       {/if}
       {#if !finished}
         <div class="wip">
-          <small>🏗Construction site, keep out🏗</small>
-          <small>🚧This article is not finished🚧</small>
+          <small>🏗 Construction site, keep out 🏗</small>
+          <small>🚧 This article is not finished 🚧</small>
         </div>
       {/if}
       <br />
