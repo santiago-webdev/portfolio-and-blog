@@ -64,6 +64,36 @@
       </div>
     </article>
   {/each}
+  <article id="portfolio-new">
+    <button>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="shiny"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24">
+        <path
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M12 5v14m-7-7h14" />
+      </svg>
+    </button>
+    <div id="describe-new">
+      <LinkInText target="_blank">newdomain.com</LinkInText>
+      <h2>New Project</h2>
+      <p>
+        Take Away Interview? Try Me! As a junior developer with a passion for
+        turning ideas into reality, I'm excited to work with you on your new
+        project.
+      </p>
+      <ul>
+        <li class="shiny">New</li>
+      </ul>
+    </div>
+  </article>
 </section>
 
 <svelte:head>
@@ -191,8 +221,9 @@
   }
 
   article .img-wrapper {
-    min-width: 12rem;
-    max-height: 23rem;
+    min-width: var(--xs);
+    /* max-height: 23rem; */
+    aspect-ratio: 1;
     flex: 3;
     height: auto;
     overflow-y: scroll;
@@ -202,5 +233,31 @@
   article .img-wrapper img {
     max-inline-size: 100%;
     block-size: auto;
+  }
+
+  article button {
+    min-width: var(--xs);
+    cursor: pointer;
+    flex: 3;
+    aspect-ratio: 1;
+    border: 3px dashed var(--clr-50);
+    display: flex;
+    place-items: center;
+    place-content: center;
+  }
+
+  article button:hover {
+    border: 3px dashed var(--clr-55);
+    background-color: var(--clr-30);
+  }
+
+  article button:hover svg {
+    background-color: var(--clr-45);
+  }
+
+  svg {
+    width: max-content;
+    height: max-content;
+    border-radius: 1rem;
   }
 </style>
