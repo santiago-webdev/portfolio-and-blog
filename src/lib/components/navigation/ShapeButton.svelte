@@ -70,7 +70,7 @@
 
   @media (hover: hover) {
     .bttn-big-round:hover {
-      gap: clamp(3rem, 3vw + 1rem, 5rem);
+      gap: 5rem;
     }
   }
 </style>
