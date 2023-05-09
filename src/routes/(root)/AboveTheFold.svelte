@@ -45,7 +45,7 @@
 
   main {
     display: flex;
-    gap: 2rem;
+    gap: 1.6rem;
     place-items: start;
     flex-direction: column;
     width: min(92%, var(--md));
@@ -56,7 +56,7 @@
   .introduction {
     display: flex;
     flex-flow: column wrap;
-    gap: 1rem;
+    gap: 0.8rem;
   }
 
   h1 {
@@ -70,8 +70,8 @@
   section {
     display: flex;
     flex-flow: row wrap-reverse;
-    gap: 2rem;
-    margin-top: 2rem;
+    gap: 0.8rem;
+    margin-top: 1.2rem;
   }
 
   @media screen and (min-width: 1280px) {
