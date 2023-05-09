@@ -31,7 +31,7 @@ interface Project {
   accent?: string
 }
 
-export const filterJobGroupSelector = readable<Array<ProjectsSelector>>([
+export const jobSelector = readable<Array<ProjectsSelector>>([
   {
     category: 'featured',
     label: 'Featured',

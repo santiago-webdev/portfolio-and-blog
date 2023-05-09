@@ -1,13 +1,13 @@
 <script lang="ts">
   import {
     currentGroupOfProjects,
-    filterJobGroupSelector,
+    jobSelector,
     FilteredProjects,
   } from '$lib/components/projects/store'
   import site from '$lib/site.json'
 
   $: getCurrent = () => {
-    let currentItem = $filterJobGroupSelector.find(
+    let currentItem = $jobSelector.find(
       p => p.category === $currentGroupOfProjects
     )
     return {
@@ -34,7 +34,7 @@
         bind:value={$currentGroupOfProjects}
         name="projects"
         id="projects">
-        {#each $filterJobGroupSelector as { category, label }}
+        {#each $jobSelector as { category, label }}
           <option value={category} {label} />
         {/each}
       </select>
@@ -69,9 +69,11 @@
         <p class="font-20">{description}</p>
 
         <ul class="inline-items">
-          {#each stack.frontend as tags}
-            <li class="shiny font-20">{tags}</li>
-          {/each}
+          {#if stack.frontend}
+            {#each stack.frontend as tags}
+              <li class="shiny font-20">{tags}</li>
+            {/each}
+          {/if}
         </ul>
         <a target="_blank" href={repo.toString()}>Source code</a>
         <a target="_blank" href={link.toString()}>Visit site</a>
