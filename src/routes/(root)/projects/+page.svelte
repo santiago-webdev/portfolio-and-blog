@@ -42,7 +42,7 @@
   </div>
 </main>
 <section>
-  {#each $FilteredProjects as { name, description, category, img, repo, link, accent }}
+  {#each $FilteredProjects as { name, description, category, stack, img, repo, link, accent }}
     <article>
       <div class="img-wrapper">
         <img
@@ -67,6 +67,12 @@
           </div>
         </div>
         <p class="font-20">{description}</p>
+
+        <ul class="inline-items">
+          {#each stack.frontend as tags}
+            <li class="shiny font-20">{tags}</li>
+          {/each}
+        </ul>
         <a target="_blank" href={repo.toString()}>Source code</a>
         <a target="_blank" href={link.toString()}>Visit site</a>
       </div>

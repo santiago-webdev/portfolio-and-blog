@@ -14,12 +14,19 @@ interface ProjectsSelector {
   label: string
 }
 
+type Stack = {
+  frontend?: string[]
+  api?: string[]
+  backend?: string[]
+}
+
 interface Project {
   name: string
   description: string
   category: ProjectCategory[]
   repo: URL
   link: URL
+  stack: Stack
   img?: string
   accent?: string
 }
@@ -67,6 +74,9 @@ export const AllProjects = readable<Array<Project>>([
     description:
       "I helped creating the landing page for zap, an open-source plugin manager for zsh. It's one of my first steps into the web dev world.",
     category: ['featured', 'frontend', 'opensource'],
+    stack: {
+      frontend: ['JavaScript'],
+    },
     img: '/portfolio/zap-website.webp',
     repo: new URL('https://github.com/zap-zsh/zapzsh.org/'),
     link: new URL('https://www.zapzsh.org/'),
@@ -77,6 +87,9 @@ export const AllProjects = readable<Array<Project>>([
     description:
       'This is my personal blog and portfolio, check the case study below',
     category: ['featured', 'frontend', 'opensource'],
+    stack: {
+      frontend: ['SvelteKit', 'TypeScript'],
+    },
     img: '/portfolio/portfolio-and-blog-website.webp',
     repo: new URL('https://github.com/santigo-zero/portfolio-and-blog'),
     link: new URL('https://www.santiagogonzalez.dev'),
@@ -85,6 +98,7 @@ export const AllProjects = readable<Array<Project>>([
     name: 'example of fullstack',
     description:
       'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+    stack: {},
     category: ['fullstack'],
     repo: new URL('https://google.com'),
     link: new URL('https://google.com'),
@@ -93,6 +107,7 @@ export const AllProjects = readable<Array<Project>>([
     name: 'example of opensource',
     description:
       'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+    stack: {},
     category: ['opensource'],
     repo: new URL('https://google.com'),
     link: new URL('https://google.com'),
@@ -101,6 +116,7 @@ export const AllProjects = readable<Array<Project>>([
     name: 'example of redesign/rewrite',
     description:
       'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+    stack: {},
     category: ['redesign/rewrite'],
     repo: new URL('https://google.com'),
     link: new URL('https://google.com'),
