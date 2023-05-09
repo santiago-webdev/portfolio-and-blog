@@ -5,7 +5,7 @@
 <div class="wrapper-portfolio">
   <div id="portfolio" class="portfolio">
     <section>
-      <small style="display: flex; gap: 0.4rem">
+      <span class="font-10">
         Featured Project
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@
           <path
             fill="currentColor"
             d="M4.5 12.75a.75.75 0 0 1 .75-.75h13.5a.75.75 0 0 1 0 1.5H5.25a.75.75 0 0 1-.75-.75Z" />
-        </svg></small>
+        </svg></span>
       <h2>Featured Project</h2>
       <p>
         Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
@@ -45,8 +45,11 @@
     place-items: center;
   }
 
-  small {
-    font-weight: 500;
+  span {
+    display: flex;
+    gap: 0.4rem;
+    color: var(--clr-95);
+    font-variation-settings: 'wght' 800;
   }
 
   .img-wrapper {

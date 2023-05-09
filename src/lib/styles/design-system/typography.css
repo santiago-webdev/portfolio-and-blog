@@ -23,13 +23,13 @@
 }
 
 time {
+  color: var(--clr-95);
   font-family: var(--ff-dflt);
   font-size: var(--fs-10);
   font-variation-settings: 'wght' 600;
   font-weight: 500;
-  letter-spacing: -0.006em;
+  letter-spacing: -0.003em;
   line-height: calc(var(--fs-10) * 1.3);
-  color: var(--clr-95);
 }
 
 small,
