@@ -46,6 +46,6 @@
     background-color: var(--clr-25);
     border-bottom-right-radius: 1.6rem;
     border-bottom-left-radius: 1.6rem;
-    padding-bottom: 1rem;
+    padding-bottom: 1.6rem;
   }
 </style>

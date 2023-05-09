@@ -241,8 +241,8 @@
 
 <style>
   footer {
-    border-top-right-radius: 1rem;
-    border-top-left-radius: 1rem;
+    border-top-right-radius: 1.6rem;
+    border-top-left-radius: 1.6rem;
     background-color: var(--clr-25);
     margin-top: 1rem;
     font-family: var(--ff-text);
