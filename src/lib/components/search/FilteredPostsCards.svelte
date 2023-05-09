@@ -22,9 +22,7 @@
       <li in:fly={fly_in} out:fly={fly_out}>
         <a href="{base}/blog{post.href}">
           <article class="shiny less attn">
-            <h2
-              style="font-family: var(--ff-text); font-weight: 500"
-              class="font-40">
+            <h2 style="font-family: var(--ff-text)" class="font-40">
               {post.title}
             </h2>
             {#if post.description}

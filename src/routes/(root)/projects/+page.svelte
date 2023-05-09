@@ -1,5 +1,4 @@
 <script lang="ts">
-  import LinkInText from '$lib/components/navigation/LinkInText.svelte'
   import {
     currentGroupOfProjects,
     filterJobGroupSelector,
@@ -43,24 +42,33 @@
   </div>
 </main>
 <section>
-  {#each $FilteredProjects as { name, description, category, img, repo, link }}
-    <article id="portfolio-{name}">
+  {#each $FilteredProjects as { name, description, category, img, repo, link, accent }}
+    <article>
       <div class="img-wrapper">
-        <img src={img} alt="" />
+        <img
+          src={img}
+          alt="Screenshot of {name}"
+          title="Screenshot of {name}" />
       </div>
       <div id="describe-{name}">
-        <LinkInText target="_blank" href={link.toString()}>
-          {link.hostname.replace(/^www\./i, '')}
-        </LinkInText>
-        <h2>{name}</h2>
-        <p>{description}</p>
-        <ul>
-          {#each category as tags}
-            <li class="shiny">{tags}</li>
-          {/each}
-        </ul>
-        <a target="_blank" href={repo.toString()}>Repo</a>
-        <a target="_blank" href={link.toString()}>Link Live</a>
+        <div class="describe-project-banner">
+          <a
+            href={link.toString()}
+            target="_blank"
+            style:color="var({accent})"
+            class="font-40">{link.hostname.replace(/^www\./i, '')}</a>
+          <div style:gap="2ch" class="inline-items">
+            <h2 class="font-30">{name}</h2>
+            <ul class="inline-items">
+              {#each category as tags}
+                <li class="shiny font-20">{tags}</li>
+              {/each}
+            </ul>
+          </div>
+        </div>
+        <p class="font-20">{description}</p>
+        <a target="_blank" href={repo.toString()}>Source code</a>
+        <a target="_blank" href={link.toString()}>Visit site</a>
       </div>
     </article>
   {/each}
@@ -82,7 +90,7 @@
       </svg>
     </button>
     <div id="describe-new">
-      <LinkInText target="_blank">newdomain.com</LinkInText>
+      <div>newdomain.com</div>
       <h2>New Project</h2>
       <p>
         Take Away Interview? Try Me! As a junior developer with a passion for
@@ -184,10 +192,11 @@
   }
 
   section {
-    padding: 3rem 0;
+    padding-top: 3rem;
     margin-inline: auto;
+    width: min(92%, var(--lg));
     display: grid;
-    gap: 1.5rem;
+    gap: 1.6rem;
   }
 
   article {
@@ -196,62 +205,59 @@
     display: flex;
     flex-flow: row wrap;
     gap: 2rem;
-    margin-inline: auto;
-    padding: 2rem;
-    place-items: center;
-    width: min(92%, var(--md));
+    padding: 1.6rem;
   }
 
-  article [id^='describe-'] {
+  [id^='describe-'] {
     flex: 6;
     gap: 1rem;
     display: flex;
     flex-direction: column;
   }
 
-  article [id^='describe-'] ul {
+  .describe-project-banner {
     display: flex;
-    flex-wrap: wrap;
-    gap: 0.6ch;
+    flex-direction: column;
+    gap: 1ch;
   }
 
-  article [id^='describe-'] ul li {
-    border-radius: 0.8rem;
-    padding: 0.6rem 1.2rem;
+  li {
+    border-radius: 0.6rem;
+    padding: 0.4rem 0.8rem;
   }
 
-  article .img-wrapper {
-    min-width: var(--xs);
+  .img-wrapper {
+    min-width: min(100%, var(--xs));
     /* max-height: 23rem; */
-    aspect-ratio: 1;
+    aspect-ratio: 16/10;
     flex: 3;
     height: auto;
     overflow-y: scroll;
     border: 3px dashed var(--clr-50);
   }
 
-  article .img-wrapper img {
+  img {
     max-inline-size: 100%;
     block-size: auto;
   }
 
-  article button {
-    min-width: var(--xs);
+  button {
+    min-width: min(100%, var(--xs));
     cursor: pointer;
     flex: 3;
-    aspect-ratio: 1;
+    aspect-ratio: 16/10;
     border: 3px dashed var(--clr-50);
     display: flex;
     place-items: center;
     place-content: center;
   }
 
-  article button:hover {
+  button:hover {
     border: 3px dashed var(--clr-55);
     background-color: var(--clr-30);
   }
 
-  article button:hover svg {
+  button:hover svg {
     background-color: var(--clr-45);
   }
 

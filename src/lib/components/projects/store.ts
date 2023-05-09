@@ -21,6 +21,7 @@ interface Project {
   repo: URL
   link: URL
   img?: string
+  accent?: string
 }
 
 export const filterJobGroupSelector = readable<Array<ProjectsSelector>>([
@@ -64,11 +65,21 @@ export const AllProjects = readable<Array<Project>>([
   {
     name: 'Website for zap',
     description:
-      'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
+      "I helped creating the landing page for zap, an open-source plugin manager for zsh. It's one of my first steps into the web dev world.",
     category: ['featured', 'frontend', 'opensource'],
     img: '/portfolio/zap-website.webp',
     repo: new URL('https://github.com/zap-zsh/zapzsh.org/'),
     link: new URL('https://www.zapzsh.org/'),
+    accent: '--clr-orange-50',
+  },
+  {
+    name: 'Personal Portfolio and Blog',
+    description:
+      'This is my personal blog and portfolio, check the case study below',
+    category: ['featured', 'frontend', 'opensource'],
+    img: '/portfolio/portfolio-and-blog-website.webp',
+    repo: new URL('https://github.com/santigo-zero/portfolio-and-blog'),
+    link: new URL('https://www.santiagogonzalez.dev'),
   },
   {
     name: 'example of fullstack',

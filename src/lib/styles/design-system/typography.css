@@ -70,8 +70,8 @@ h4,
 .font-40 {
   font-family: var(--ff-dflt);
   font-size: var(--fs-40);
-  font-variation-settings: 'wght' 400;
-  font-weight: 400;
+  font-variation-settings: 'wght' 500;
+  font-weight: 500;
   line-height: calc(var(--fs-40) * 1.3);
 }
 
