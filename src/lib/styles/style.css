@@ -6,7 +6,7 @@
 html {
   scroll-behavior: smooth; /* TODO(santigo-zero): Find a fix for bug in navigation */
   color-scheme: light dark;
-  font-family: var(--ff-dflt);
+  font-family: var(--ff-text);
   background-color: var(--clr-10);
   color: var(--clr-100);
 }

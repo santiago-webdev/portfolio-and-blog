@@ -1,7 +1,7 @@
 :root {
-  --ff-dflt: 'Mona Sans', system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol';
+  --ff-dflt: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol';
   --ff-text: 'Basier Circle', system-ui, -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -18,14 +18,15 @@
   --fs-60: clamp(1.618rem, 6vw + 1rem, 3.236rem);
   --fs-70: clamp(2.427rem, 8vw + 1rem, 4.854rem);
   --fs-80: clamp(3.236rem, 8vw + 1rem, 6.472rem);
-  --fs-90: clamp(4.045rem, 10vw + 1rem, 8.09rem);
+  --fs-85: clamp(4.55rem, 10vw + 1rem, 7.281rem);
+  --fs-90: clamp(5.05rem, 10vw + 1rem, 8.09rem);
 }
 
 a,
 input,
 select,
 button {
-  font-family: 'Basier Circle';
+  font-family: var(--ff-text);
   font-weight: 400;
   letter-spacing: -0.02em;
 }
@@ -34,9 +35,9 @@ small,
 .font-10 {
   font-size: var(--fs-10);
   line-height: calc(var(--fs-10) * 1.3);
+  font-weight: 400;
   font-variation-settings: 'wght' 400, 'wdth' 100;
   letter-spacing: -0.006em;
-  font-weight: 400;
   font-family: var(--ff-text);
 }
 
@@ -47,8 +48,8 @@ a,
   font-size: var(--fs-20);
   line-height: calc(var(--fs-20) * 1.3);
   font-family: var(--ff-text);
-  font-variation-settings: 'wght' 400, 'wdth' 100;
   font-weight: 400;
+  font-variation-settings: 'wght' 400, 'wdth' 100;
   letter-spacing: -0.006em;
 }
 
@@ -59,8 +60,8 @@ button,
   font-size: var(--fs-30);
   line-height: calc(var(--fs-30) * 1.3);
   font-family: var(--ff-text);
-  font-variation-settings: 'wght' 400, 'wdth' 100;
   font-weight: 400;
+  font-variation-settings: 'wght' 400, 'wdth' 100;
   letter-spacing: -0.03em;
 }
 
@@ -69,8 +70,8 @@ h4,
   font-size: var(--fs-40);
   line-height: calc(var(--fs-40) * 1.3);
   font-family: var(--ff-dflt);
-  font-variation-settings: 'wght' 400, 'wdth' 100;
   font-weight: 400;
+  font-variation-settings: 'wght' 400, 'wdth' 100;
 }
 
 h3,
@@ -80,6 +81,7 @@ h3,
   font-family: var(--ff-dflt);
   font-weight: 700;
   font-variation-settings: 'wght' 660, 'wdth' 100;
+  letter-spacing: -0.03em;
 }
 
 h2,
@@ -97,25 +99,34 @@ h1,
   font-size: var(--fs-70);
   line-height: calc(var(--fs-70) * 1.3);
   font-family: var(--ff-dflt);
-  font-weight: 900;
-  font-variation-settings: 'wght' 900, 'wdth' 100;
+  font-weight: 800;
+  font-variation-settings: 'wght' 800, 'wdth' 100;
   letter-spacing: -0.01em;
 }
 
 .font-80 {
   font-size: var(--fs-80);
-  line-height: calc(var(--fs-80) * 1.3);
+  line-height: calc(var(--fs-80) * 1.2);
   font-family: var(--ff-dflt);
-  font-weight: 900;
-  font-variation-settings: 'wght' 900, 'wdth' 100;
+  font-weight: 800;
+  font-variation-settings: 'wght' 800, 'wdth' 100;
+  letter-spacing: -0.01em;
+}
+
+.font-85 {
+  font-size: var(--fs-85);
+  line-height: calc(var(--fs-85) * 1.2);
+  font-family: var(--ff-dflt);
+  font-weight: 800;
+  font-variation-settings: 'wght' 800, 'wdth' 100;
   letter-spacing: -0.01em;
 }
 
 .font-90 {
   font-size: var(--fs-90);
-  line-height: calc(var(--fs-90) * 1.3);
+  line-height: calc(var(--fs-90) * 1.2);
   font-family: var(--ff-dflt);
-  font-weight: 900;
-  font-variation-settings: 'wght' 900, 'wdth' 100;
+  font-weight: 800;
+  font-variation-settings: 'wght' 800, 'wdth' 100;
   letter-spacing: -0.01em;
 }
