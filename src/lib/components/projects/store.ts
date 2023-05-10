@@ -1,18 +1,50 @@
 import { get, readable, writable } from 'svelte/store'
 
-type ProjectCategory =
+type Category =
   | 'featured'
-  | 'redesign/rewrite'
-  | 'opensource'
-  | 'fullstack'
   | 'frontend'
+  | 'fullstack'
+  | 'opensource'
+  | 'redesign_rewrite'
 
-interface ProjectsSelector {
-  name: string
-  description: string
-  category: ProjectCategory
-  label: string
+type Categories = Record<Category, [label: string, description: string]>
+
+export const jobSelector: Categories = {
+  featured: [
+    'Featured',
+    `Here's a selection of the most relevant projects I have for you to explore`,
+  ],
+  frontend: [
+    'Front End',
+    `In here you'll find rewrites with a focus on making the UI/UX of this
+pages accesible to everyone`,
+  ],
+  fullstack: [
+    'Full Stack',
+    `This are some of the most 'complete' projects I have to date`,
+  ],
+  opensource: [
+    'Open Source',
+    `As a Linux enthusiast, I'm a firm believer in FOSS, check
+      out the projects I'm being part of`,
+  ],
+  redesign_rewrite: [
+    'Redesign or Rewrite',
+    `Rewriting a site to test my
+capabilities is fun, sometimes I do a complete revamp of the site`,
+  ],
 }
+
+export const getCategoryInfo = (category: string) => ({
+  label: jobSelector[category as Category][0],
+  description: jobSelector[category as Category][1],
+})
+
+// interface ProjectsSelector {
+//   name: string
+//   description: string
+//   category: Category
+// }
 
 type Stack = {
   frontend?: string[]
@@ -23,50 +55,13 @@ type Stack = {
 interface Project {
   name: string
   description: string
-  category: ProjectCategory[]
+  category: Category[]
   repo: URL
   link: URL
   stack: Stack
   img?: string
   accent?: string
 }
-
-export const jobSelector = readable<Array<ProjectsSelector>>([
-  {
-    category: 'featured',
-    label: 'Featured',
-    name: 'Featured projects',
-    description:
-      "Here's a selection of the most relevant projects I have for you to explore",
-  },
-  {
-    category: 'opensource',
-    label: 'Open Source',
-    name: 'Open Source contributions',
-    description: `As a Linux enthusiast, I'm a firm believer in FOSS, check
-      out the projects I'm being part of`,
-  },
-  {
-    category: 'fullstack',
-    label: 'Full Stack',
-    name: 'Full Stack projects',
-    description: `This are some of the most 'complete' projects I have to date`,
-  },
-  {
-    category: 'frontend',
-    label: 'Front End',
-    name: 'Front End projects',
-    description: `In here you'll find rewrites with a focus on making the UI/UX of this
-pages accesible to everyone`,
-  },
-  {
-    category: 'redesign/rewrite',
-    label: 'Redesign/Rewrite',
-    name: 'Redesigns or Rewrites',
-    description: `Rewriting a site to test my
-capabilities is fun, sometimes I do a complete revamp of the site`,
-  },
-])
 
 export const AllProjects = readable<Array<Project>>([
   {
@@ -117,14 +112,14 @@ export const AllProjects = readable<Array<Project>>([
     description:
       'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
     stack: {},
-    category: ['redesign/rewrite'],
+    category: ['redesign_rewrite'],
     repo: new URL('https://google.com'),
     link: new URL('https://google.com'),
   },
 ])
 
 export const FilteredProjects = writable(get(AllProjects))
-export const currentGroupOfProjects = writable<ProjectCategory>('featured')
+export const currentGroupOfProjects = writable<Category>('featured')
 
 currentGroupOfProjects.subscribe(selectionChange => {
   FilteredProjects.update(() =>

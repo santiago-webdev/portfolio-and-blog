@@ -2,39 +2,34 @@
   import {
     currentGroupOfProjects,
     jobSelector,
+    getCategoryInfo,
     FilteredProjects,
   } from '$lib/components/projects/store'
   import site from '$lib/site.json'
-
-  $: getCurrent = () => {
-    let currentItem = $jobSelector.find(
-      p => p.category === $currentGroupOfProjects
-    )
-    return {
-      label: currentItem ? currentItem.label : 'nothing',
-      description: currentItem ? currentItem.description : 'nothing',
-      name: currentItem ? currentItem.name : 'nothing',
-    }
-  }
 </script>
 
 <main>
   <div class="wrapper-projects">
     <div class="projects-presentation">
       <h1 class="font-50">
-        Projects Showcase - {getCurrent().name}
+        Projects Showcase - {getCategoryInfo($currentGroupOfProjects).label}
       </h1>
       <p class="font-50">
-        {getCurrent().description}.
+        {getCategoryInfo($currentGroupOfProjects).description}
       </p>
     </div>
     <form class="font-30">
-      <label for="projects"> Filter by type of project </label>
+      <label style="display: flex; flex-wrap: wrap" for="projects">
+        Filter by type of project
+        <noscript>
+          <small>Sorry Folks! This requires JavaScript to work!</small>
+        </noscript>
+      </label>
       <select
         bind:value={$currentGroupOfProjects}
         name="projects"
         id="projects">
-        {#each $jobSelector as { category, label }}
+        {#each Object.entries(jobSelector) as [category, [label]]}
           <option value={category} {label} />
         {/each}
       </select>
@@ -186,6 +181,7 @@
   }
 
   select {
+    width: 100%;
     padding: 0.7rem 1.6rem;
     border-radius: 1rem;
     color: var(--clr-85);
