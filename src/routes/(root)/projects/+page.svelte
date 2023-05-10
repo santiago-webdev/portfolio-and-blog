@@ -9,7 +9,7 @@
 </script>
 
 <main>
-  <div class="wrapper-projects">
+  <div class="container-projects">
     <div class="projects-presentation">
       <h1 class="font-50">
         Projects Showcase - {getCategoryInfo($currentGroupOfProjects).label}
@@ -29,8 +29,8 @@
         bind:value={$currentGroupOfProjects}
         name="projects"
         id="projects">
-        {#each Object.entries(jobSelector) as [category, [label]]}
-          <option value={category} {label} />
+        {#each Object.entries(jobSelector) as [value, [label]]}
+          <option {value} {label} />
         {/each}
       </select>
     </form>
@@ -146,7 +146,7 @@
     place-items: center;
   }
 
-  .wrapper-projects {
+  .container-projects {
     display: flex;
     flex-flow: row wrap;
 
@@ -154,7 +154,7 @@
     margin-inline: auto;
     padding: 3rem 0;
     place-content: center;
-    gap: 1rem;
+    gap: 1.6rem;
   }
 
   .projects-presentation {
@@ -174,6 +174,7 @@
     flex-flow: column wrap;
     place-content: center;
     gap: 1rem;
+    min-width: var(--xs);
   }
 
   label {
@@ -184,7 +185,7 @@
     width: 100%;
     padding: 0.7rem 1.6rem;
     border-radius: 1rem;
-    color: var(--clr-85);
+    color: var(--clr-150);
 
     background-color: var(--clr-40);
     border: 1px solid var(--clr-40);
