@@ -1,51 +1,5 @@
 import { get, readable, writable } from 'svelte/store'
 
-type Category =
-  | 'featured'
-  | 'frontend'
-  | 'fullstack'
-  | 'opensource'
-  | 'redesign_rewrite'
-
-type Categories = Record<Category, [label: string, description: string]>
-
-export const jobSelector: Categories = {
-  featured: [
-    'Featured',
-    `Here's a selection of the most relevant projects I have for you to explore`,
-  ],
-  frontend: [
-    'Front End',
-    `In here you'll find rewrites with a focus on making the UI/UX of this
-pages accesible to everyone`,
-  ],
-  fullstack: [
-    'Full Stack',
-    `This are some of the most 'complete' projects I have to date`,
-  ],
-  opensource: [
-    'Open Source',
-    `As a Linux enthusiast, I'm a firm believer in FOSS, check
-      out the projects I'm being part of`,
-  ],
-  redesign_rewrite: [
-    'Redesign or Rewrite',
-    `Rewriting a site to test my
-capabilities is fun, sometimes I do a complete revamp of the site`,
-  ],
-}
-
-export const getCategoryInfo = (category: string) => ({
-  label: jobSelector[category as Category][0],
-  description: jobSelector[category as Category][1],
-})
-
-// interface ProjectsSelector {
-//   name: string
-//   description: string
-//   category: Category
-// }
-
 type Stack = {
   frontend?: string[]
   api?: string[]
@@ -119,6 +73,47 @@ export const AllProjects = readable<Array<Project>>([
 ])
 
 export const FilteredProjects = writable(get(AllProjects))
+
+type Category =
+  | 'featured'
+  | 'frontend'
+  | 'fullstack'
+  | 'opensource'
+  | 'redesign_rewrite'
+
+type Categories = Record<Category, [label: string, description: string]>
+
+export const jobSelector: Categories = {
+  featured: [
+    'Featured',
+    `Here's a selection of the most relevant projects I have for you to explore`,
+  ],
+  frontend: [
+    'Front End',
+    `In here you'll find rewrites with a focus on making the UI/UX of this
+pages accesible to everyone`,
+  ],
+  fullstack: [
+    'Full Stack',
+    `This are some of the most 'complete' projects I have to date`,
+  ],
+  opensource: [
+    'Open Source',
+    `As a Linux enthusiast, I'm a firm believer in FOSS, check
+      out the projects I'm being part of`,
+  ],
+  redesign_rewrite: [
+    'Redesign or Rewrite',
+    `Rewriting a site to test my
+capabilities is fun, sometimes I do a complete revamp of the site`,
+  ],
+}
+
+export const getCategoryInfo = (category: string) => ({
+  label: jobSelector[category as Category][0],
+  description: jobSelector[category as Category][1],
+})
+
 export const currentGroupOfProjects = writable<Category>('featured')
 
 currentGroupOfProjects.subscribe(selectionChange => {
