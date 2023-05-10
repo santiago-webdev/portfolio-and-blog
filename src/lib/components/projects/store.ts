@@ -74,7 +74,7 @@ export const AllProjects = readable<Array<Project>>([
 
 export const FilteredProjects = writable(get(AllProjects))
 
-type Category =
+export type Category =
   | 'featured'
   | 'frontend'
   | 'fullstack'
@@ -109,9 +109,9 @@ capabilities is fun, sometimes I do a complete revamp of the site`,
   ],
 }
 
-export const getCategoryInfo = (category: string) => ({
-  label: jobSelector[category as Category][0],
-  description: jobSelector[category as Category][1],
+export const getCategoryInfo = (category: Category) => ({
+  label: jobSelector[category][0],
+  description: jobSelector[category][1],
 })
 
 export const currentGroupOfProjects = writable<Category>('featured')

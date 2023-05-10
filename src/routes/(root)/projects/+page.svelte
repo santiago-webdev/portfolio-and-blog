@@ -50,7 +50,7 @@
           <a
             href={link.toString()}
             target="_blank"
-            style:color="var({accent})"
+            style:color="var({accent ? accent : '--clr-200'})"
             class="font-40">{link.hostname.replace(/^www\./i, '')}</a>
           <div style:gap="2ch" class="inline-items">
             <h2 class="font-30">{name}</h2>
