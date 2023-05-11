@@ -65,11 +65,13 @@
       transition-delay: -50ms;
     }
 
-    :global(a:hover .arrow-head-backward) {
+    :global(a:hover .arrow-head-backward),
+    :global(a:focus .arrow-head-backward) {
       transform: translateX(-4px);
     }
 
-    :global(a:hover .arrow-tail) {
+    :global(a:hover .arrow-tail),
+    :global(a:focus .arrow-tail) {
       opacity: 1;
       transition-delay: 50ms;
     }

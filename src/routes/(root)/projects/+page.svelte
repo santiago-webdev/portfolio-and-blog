@@ -97,10 +97,10 @@
         </div>
 
         <div class="list-project-backend inline-items">
-          {#if stack.api}
+          {#if stack.backend}
             <h4 class="font-10">Backend:</h4>
             <ul class="inline-items font-10">
-              {#each stack.api as tags}
+              {#each stack.backend as tags}
                 <li class="shiny">{tags}</li>
               {/each}
             </ul>

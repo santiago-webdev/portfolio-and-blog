@@ -74,7 +74,8 @@
   }
 
   @media (hover: hover) {
-    .bttn-big-round:hover {
+    .bttn-big-round:hover,
+    .bttn-big-round:focus {
       gap: 5rem;
     }
   }

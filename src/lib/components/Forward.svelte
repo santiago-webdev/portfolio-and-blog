@@ -47,20 +47,31 @@
   }
 
   .arrow-head-forward {
-    transform: translateX(-3px);
+    transform: translateX(3px);
   }
 
   .arrow-tail {
-    opacity: 0;
-    transition-delay: -50ms;
+    opacity: 1;
+    transition-delay: 50ms;
   }
 
   @media (hover: hover) {
-    :global(a:hover .arrow-head-forward) {
+    .arrow-head-forward {
+      transform: translateX(-3px);
+    }
+
+    .arrow-tail {
+      opacity: 0;
+      transition-delay: -50ms;
+    }
+
+    :global(a:hover .arrow-head-forward),
+    :global(a:focus .arrow-head-forward) {
       transform: translateX(4px);
     }
 
-    :global(a:hover .arrow-tail) {
+    :global(a:hover .arrow-tail),
+    :global(a:focus .arrow-tail) {
       opacity: 1;
       transition-delay: 50ms;
     }
