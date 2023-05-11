@@ -37,3 +37,5 @@ Swap the link for a direct link to my Resume/CV.
 ## Try other fonts
 
 Some more bolder fonts, and check how the look with all uppercase titles.
+
+## Finish the form/card in /projects
