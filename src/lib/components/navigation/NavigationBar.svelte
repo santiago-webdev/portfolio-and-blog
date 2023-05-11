@@ -18,24 +18,22 @@
     transparent = false,
     anchored = false
 
+  const checkForDesktop = () =>
+    window.matchMedia('(min-width: 1280px)').matches
+      ? ((onDesktop = true), (expanded = false))
+      : (onDesktop = false)
+
   afterNavigate(() => {
     expanded = false
-
-    if ($page.url.pathname === `${base}/about`) {
-      transparent = true
-      anchored = true
-    } else {
-      transparent = false
-      anchored = false
-    }
   })
 
-  onMount(() => {
-    const checkForDesktop = () =>
-      window.matchMedia('(min-width: 1280px)').matches
-        ? ((onDesktop = true), (expanded = false))
-        : (onDesktop = false)
+  afterNavigate(() =>
+    $page.url.pathname === `${base}/about`
+      ? ((transparent = true), (anchored = true))
+      : ((transparent = false), (anchored = false))
+  )
 
+  onMount(() => {
     checkForDesktop()
     window.addEventListener('resize', checkForDesktop)
 
@@ -57,11 +55,6 @@
 
       observer.observe(main)
     }
-
-    setTimeout(
-      () => $navigationItems.forEach(item => preloadCode(item.href)),
-      3000
-    )
   })
 
   $: display = expanded ? 'flex' : 'none'
@@ -79,6 +72,7 @@
     <a
       href="{base}/"
       aria-label="Home"
+      data-sveltekit-preload-code='eager'
       aria-current={`${base}/` === $page.url.pathname ? 'page' : undefined}>
       <img
         class="logo-santigo-zero"
@@ -104,6 +98,7 @@
             <div role="separator" aria-orientation="vertical" />
           {:else if label !== 'Home'}
             <a
+              data-sveltekit-preload-code='eager'
               aria-current={$page.url.pathname.startsWith(href) && `/` !== href
                 ? 'page'
                 : undefined}
@@ -117,6 +112,7 @@
       {#each $navigationItems as { label, href }}
         {#if label !== 'Separator'}
           <a
+            data-sveltekit-preload-code='eager'
             class="shiny-select"
             aria-current={$page.url.pathname.startsWith(href) && `/` !== href
               ? 'page'
