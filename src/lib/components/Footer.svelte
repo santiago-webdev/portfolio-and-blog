@@ -336,11 +336,7 @@
     background-image: url('/logo-light.svg');
   }
 
-  nav,
-  .aboutme,
-  .relevant-projects,
-  .donate,
-  .contact {
+  .footer-start section > * {
     display: flex;
     flex-direction: column;
     min-width: calc(var(--xs) / 2);
