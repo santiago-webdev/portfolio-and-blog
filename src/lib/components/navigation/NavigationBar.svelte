@@ -39,8 +39,6 @@
     checkForDesktop()
     window.addEventListener('resize', checkForDesktop)
 
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
-
     window.addEventListener('scroll', () => {
       hideHeader = !expanded && hideElement && scrollY > savedY
       savedY = scrollY
