@@ -24,7 +24,8 @@ export const AllProjects = readable<Array<Project>>([
       "I helped creating the landing page for zap, an open-source plugin manager for zsh. It's one of my first steps into the web dev world.",
     category: ['featured', 'frontend', 'opensource'],
     stack: {
-      frontend: ['JavaScript'],
+      frontend: ['JavaScript', 'HTML', 'CSS'],
+      api: ['GitHub REST API'],
     },
     img: '/portfolio/zap-website.webp',
     repo: new URL('https://github.com/zap-zsh/zapzsh.org/'),

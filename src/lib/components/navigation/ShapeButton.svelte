@@ -3,12 +3,16 @@
 
   export let href = '/'
   export let rel = ''
+  export let target = ''
+  export let custom_symbol = ''
 </script>
 
 {#if href}
-  <a {href} {rel} {...$$restProps}>
+  <a {href} {target} {rel} {...$$restProps}>
     <slot />
-    {#if rel === 'external'}
+    {#if custom_symbol}
+      {@html custom_symbol}
+    {:else if rel === 'external' || (target === '_blank' && !custom_symbol)}
       <!-- Box with diagonal arrow(Link) -->
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -66,6 +70,7 @@
   .bttn-small-square {
     border-radius: 1rem;
     padding: 0.6rem 1.8rem;
+    gap: 1ch;
   }
 
   @media (hover: hover) {
