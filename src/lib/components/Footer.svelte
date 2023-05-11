@@ -1,7 +1,7 @@
 <script lang="ts">
   import { dev } from '$app/environment'
   import { page } from '$app/stores'
-  import { navigationItems } from './navigation/store'
+  import { navigationItems } from '$lib/components/navigation/store'
   import site from '$lib/site.json'
   import ButtonToTheTop from '$lib/components/ButtonToTheTop.svelte'
 
@@ -150,7 +150,7 @@
       </div>
     </section>
   </div>
-  <div class="font-20 footer-end">
+  <div class="footer-end font-20">
     <section>
       <a
         target="_blank"
@@ -279,12 +279,14 @@
     gap: 1.6rem;
   }
 
-  .footer-start h3 {
+  h3 {
     font-weight: 500;
-    margin-inline: 0.6rem;
+  }
+
+  h3:not(.aboutme h3) {
     text-decoration: underline solid var(--clr-65) 2px;
     text-underline-offset: 3px;
-    margin-bottom: 0.4rem;
+    margin: 0 0.6rem 0.4rem;
   }
 
   .footer-start p {
@@ -296,8 +298,7 @@
     position: relative;
     place-content: center;
     flex-flow: column wrap;
-    flex-basis: 23rem;
-    flex-grow: 1;
+    flex: 1 23rem;
     gap: 1rem;
     padding: 2rem;
     border-radius: 1rem;
@@ -313,14 +314,11 @@
 
   .aboutme:after {
     content: '';
-    position: absolute;
     pointer-events: none;
-    width: 100%;
-    height: 100%;
 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    position: absolute;
+    inset: 0;
+    margin: auto;
 
     background-position: center;
     background-size: 100% 123%;
@@ -338,12 +336,6 @@
     background-image: url('/logo-light.svg');
   }
 
-  .aboutme h3 {
-    margin-inline: 0;
-    margin-bottom: 0;
-    text-decoration: none;
-  }
-
   nav,
   .aboutme,
   .relevant-projects,
@@ -354,7 +346,7 @@
     min-width: calc(var(--xs) / 2);
   }
 
-  ul li a {
+  li a {
     width: 100%;
   }
 
@@ -370,6 +362,10 @@
     display: flex;
     place-content: center;
     background-color: var(--clr-35);
+  }
+
+  .footer-end a:hover {
+    color: var(--clr-85);
   }
 
   .footer-end section {
@@ -390,7 +386,7 @@
     .footer-end section {
       flex-flow: row wrap;
       justify-content: space-between;
-      padding: 1rem 0;
+      padding: 0.6rem 0;
     }
   }
 
