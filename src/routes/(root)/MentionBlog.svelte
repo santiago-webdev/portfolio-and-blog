@@ -79,8 +79,7 @@
     display: grid;
     gap: 3rem;
 
-    width: 92%;
-    max-width: var(--lg);
+    width: min(92%, var(--lg));
     background-color: var(--clr-20);
     padding: 2rem;
     border-radius: 0.8rem;

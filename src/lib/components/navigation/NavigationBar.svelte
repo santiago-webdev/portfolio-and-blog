@@ -65,6 +65,8 @@
       3000
     )
   })
+
+  $: display = expanded ? 'flex' : 'none'
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
@@ -82,20 +84,18 @@
       aria-current={`${base}/` === $page.url.pathname ? 'page' : undefined}>
       <img
         class="logo-santigo-zero"
-        style="width: 2rem; height: 2rem"
         aria-hidden="true"
         alt="My personal logo"
         title="My personal logo" />
-      <span class:anchored class:scrollY>Santiago Gonzalez</span>
+      <span>Santiago Gonzalez</span>
     </a>
-    <div id="contextual">
+    <div class="navigation-items">
       <WidgetModal />
       {#if !onDesktop}
         <button
           aria-label="Click to expand navigation menu"
           aria-expanded={expanded}
-          on:click={() => (expanded = !expanded)}
-          style:display={!onDesktop ? 'flex' : 'none'}>
+          on:click={() => (expanded = !expanded)}>
           <iconify-icon icon={expanded ? 'lucide:x' : 'lucide:align-justify'} />
         </button>
       {:else}
@@ -106,8 +106,7 @@
             <div role="separator" aria-orientation="vertical" />
           {:else if label !== 'Home'}
             <a
-              aria-current={href === $page.url.pathname ||
-              ($page.url.pathname.startsWith(href || '') && `/` !== href)
+              aria-current={$page.url.pathname.startsWith(href) && `/` !== href
                 ? 'page'
                 : undefined}
               aria-label="Link to {label}"
@@ -116,31 +115,29 @@
         {/each}
       {/if}
     </div>
-    <section style:display={expanded ? 'flex' : 'none'}>
-      <ThemeSwitch />
+    <section style:display>
       {#each $navigationItems as { label, href }}
         {#if label !== 'Separator'}
-          <hr />
           <a
             class="shiny-select"
-            aria-current={href === $page.url.pathname ||
-            ($page.url.pathname.startsWith(href || '') && `/` !== href)
+            aria-current={$page.url.pathname.startsWith(href) && `/` !== href
               ? 'page'
               : undefined}
             aria-label="Link to {label}"
             {href}>{label}</a>
+          <hr />
         {/if}
       {/each}
+      <ThemeSwitch />
     </section>
   </nav>
 </header>
 
 <style>
   header {
-    top: 0;
     position: sticky;
-    transition: padding 300ms cubic-bezier(0.07, 0.95, 0, 1),
-      background-color 300ms ease-in-out, transform 300ms ease-in-out;
+    top: 0;
+    transition: background-color, transform 300ms ease-in-out;
     z-index: 999;
     padding: 0.6rem 0;
     background-color: var(--clr-25);
@@ -148,10 +145,10 @@
 
   header.anchored {
     top: unset !important;
-    /* padding: 2rem 0 !important; */
-    transform: translateY(0%) !important;
+    transform: none !important;
     background-color: transparent !important;
-    border-bottom: 2px transparent solid !important;
+    border-color: transparent !important;
+    border-width: 0 !important;
   }
 
   header.hideHeader {
@@ -167,10 +164,6 @@
     background-color: var(--clr-30);
   }
 
-  /* header.scrollY { */
-  /*   padding: 0.6rem 0; */
-  /* } */
-
   header.transparent {
     background-color: transparent;
   }
@@ -181,20 +174,19 @@
 
   a,
   button {
-    color: inherit;
     padding: 0.4rem 0.8rem;
     display: flex;
     place-items: center;
-    /* outline: 1px paleturquoise solid; */
   }
 
   nav {
     display: flex;
+    flex-wrap: wrap;
     place-items: center;
-    margin-inline: auto;
-    max-width: var(--xl);
     justify-content: space-between;
-    flex-flow: row wrap;
+
+    width: min(92%, var(--xl));
+    margin-inline: auto;
   }
 
   nav a:first-child {
@@ -204,63 +196,49 @@
     font-variation-settings: 'wght' 660;
   }
 
-  nav a:first-child span {
-    display: none;
+  img {
+    width: 2rem;
+    height: 2rem;
   }
 
-  #contextual {
+  header.scrollY nav a:first-child span,
+  header nav a:first-child span {
+    opacity: 0;
+  }
+
+  .navigation-items {
     display: flex;
-    flex-flow: row wrap;
-    place-items: center;
     gap: 0.8rem;
   }
 
   section {
-    flex-flow: column wrap;
-    place-items: center;
-    gap: 0.5rem 0;
-    padding-top: 1rem;
-    width: min(100%, var(--base));
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 2rem;
+    width: min(92%, var(--sm));
     margin-inline: auto;
   }
 
-  section a {
-    width: 100%;
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    nav,
-    header {
-      transition: none;
-    }
-  }
-
   @media screen and (min-width: 768px) {
-    nav {
-      width: 90%;
-    }
-
     header.scrollY {
       backdrop-filter: blur(6px);
       background-color: var(--clr-25-trp);
     }
 
-    /* header { */
-    /*   padding: 2rem 0; */
-    /* } */
-
-    nav a:first-child span {
-      display: block;
-      transition: opacity 150ms ease-in-out;
+    header.anchored nav a:first-child span,
+    header nav a:first-child span {
       opacity: 1;
+      transition: opacity 150ms ease-in-out;
     }
+  }
 
-    nav a:first-child span.scrollY {
-      opacity: 0;
-    }
-
-    nav a:first-child span.scrollY.anchored {
-      opacity: 1 !important;
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      transition-property: none;
+      transition: none;
+      animation: none;
     }
   }
 </style>
