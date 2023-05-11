@@ -23,7 +23,12 @@ export class Post {
   }
 }
 
-export const relativeTime = (now: Date, postDate: Date): string => {
+export const relativeTime = (
+  now: Date,
+  postDate: Date,
+  includeMonths = true,
+  includeYears = true
+): string => {
   const difference = now.getTime() - postDate.getTime()
   const formatter = new Intl.RelativeTimeFormat('en', { style: 'long' })
   let value: number
@@ -40,9 +45,15 @@ export const relativeTime = (now: Date, postDate: Date): string => {
   } else if (difference < 86400000) {
     value = Math.floor(difference / 3600000)
     unit = 'hour'
-  } else {
+  } else if (includeMonths && difference < 2592000000) {
     value = Math.floor(difference / 86400000)
     unit = 'day'
+  } else if (includeYears && difference < 31536000000) {
+    value = Math.floor(difference / 2592000000)
+    unit = 'month'
+  } else {
+    value = Math.floor(difference / 31536000000)
+    unit = 'year'
   }
 
   return formatter.format(-value, unit as Intl.RelativeTimeFormatUnit)
