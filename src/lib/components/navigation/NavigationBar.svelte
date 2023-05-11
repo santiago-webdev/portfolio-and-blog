@@ -1,7 +1,7 @@
 <script lang="ts">
   import { base } from '$app/paths'
   import { page } from '$app/stores'
-  import { afterNavigate, preloadCode } from '$app/navigation'
+  import { afterNavigate } from '$app/navigation'
   import { onMount } from 'svelte'
 
   import ThemeSwitch from '$lib/components/ThemeSwitch.svelte'
@@ -72,7 +72,7 @@
     <a
       href="{base}/"
       aria-label="Home"
-      data-sveltekit-preload-code='eager'
+      data-sveltekit-preload-code="eager"
       aria-current={`${base}/` === $page.url.pathname ? 'page' : undefined}>
       <img
         class="logo-santigo-zero"
@@ -98,7 +98,7 @@
             <div role="separator" aria-orientation="vertical" />
           {:else if label !== 'Home'}
             <a
-              data-sveltekit-preload-code='eager'
+              data-sveltekit-preload-code="eager"
               aria-current={$page.url.pathname.startsWith(href) && `/` !== href
                 ? 'page'
                 : undefined}
@@ -112,7 +112,7 @@
       {#each $navigationItems as { label, href }}
         {#if label !== 'Separator'}
           <a
-            data-sveltekit-preload-code='eager'
+            data-sveltekit-preload-code="eager"
             class="shiny-select"
             aria-current={$page.url.pathname.startsWith(href) && `/` !== href
               ? 'page'
