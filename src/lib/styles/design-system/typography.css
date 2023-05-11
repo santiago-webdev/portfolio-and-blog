@@ -22,6 +22,21 @@
   --fs-90: clamp(5.05rem, 10vw + 1rem, 8.09rem);
 }
 
+pre {
+  background-color: var(--clr-20);
+  border-radius: 0.6rem;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-20);
+  line-height: calc(var(--fs-20) * 1.3);
+  margin: 1rem 0;
+  overflow: auto;
+  padding: 1rem;
+  white-space: break-spaces;
+  white-space: pre-line;
+  width: min(100%, var(--base));
+  word-wrap: break-all;
+}
+
 time {
   color: var(--clr-95);
   font-family: var(--ff-dflt);

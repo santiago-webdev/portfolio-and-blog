@@ -206,18 +206,6 @@ hr {
   border-right: 0;
 }
 
-pre {
-  width: min(100% - 1rem, var(--base));
-  background-color: var(--clr-25);
-  word-wrap: break-word;
-  white-space: pre-wrap;
-  overflow: auto;
-  border-radius: 0.6rem;
-  padding: 1rem;
-  margin: 1rem 0;
-  font-family: var(--ff-mono);
-}
-
 kbd {
   pointer-events: none;
   padding-inline: 0.6rem;

@@ -145,7 +145,7 @@
   }
 
   :global(article p) {
-    width: min(92%, 60ch);
+    width: min(100%, 60ch);
   }
 
   .wrapper-header {
