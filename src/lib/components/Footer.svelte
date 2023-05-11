@@ -391,5 +391,6 @@
   small,
   button {
     font-size: inherit;
+    font-family: inherit;
   }
 </style>

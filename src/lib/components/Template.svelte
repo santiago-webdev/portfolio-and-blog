@@ -144,6 +144,10 @@
     margin-inline: auto;
   }
 
+  :global(article p) {
+    width: min(92%, 60ch);
+  }
+
   .wrapper-header {
     gap: 1rem;
     text-align: center;
