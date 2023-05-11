@@ -23,17 +23,15 @@
 
   const keywords = ['How', 'How to', 'How to:', 'How To']
 
-  onMount(() => {
-    if (title) {
-      keywords.some(keyword => {
-        if (title.startsWith(keyword)) {
-          hollowPrefix = keyword
-          fillSuffix = title.replace(keyword, '')
-          isHollow = true
-        }
-      })
-    }
-  })
+  if (title) {
+    keywords.some(keyword => {
+      if (title.startsWith(keyword)) {
+        hollowPrefix = keyword
+        fillSuffix = title.replace(keyword, '')
+        isHollow = true
+      }
+    })
+  }
 </script>
 
 <section>
@@ -48,7 +46,7 @@
           {fillSuffix}
         </h1>
       {:else}
-        <h1>{title}</h1>
+        <h1 class="font-80">{title}</h1>
       {/if}
       <p>{description}</p>
       {#if datetime}
