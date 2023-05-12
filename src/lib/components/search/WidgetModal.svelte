@@ -3,78 +3,49 @@
 	import { base } from '$app/paths';
 	import { goto } from '$app/navigation';
 	import { readableDate, relativeTime } from '$lib/utils/utils';
-	import { onMount } from 'svelte';
 	import { searchHandler } from '$lib/components/search/utils';
 
 	var modal: HTMLDialogElement,
 		input: HTMLInputElement,
-		value = '',
-		onDesktop = true,
-		outerWidth = 0,
-		complex = true,
-		touchSupport = false;
+		value = '';
+
+	function keydown(event: KeyboardEvent) {
+		if (event.repeat) return;
+
+		switch (event.key) {
+			case 'k':
+				if (event.ctrlKey) {
+					event.preventDefault();
+					return toggleModal();
+				}
+		}
+	}
 
 	const toggleModal = () =>
 		modal.open
 			? (modal.close(), (document.body.style.overflow = ''), (value = ''))
 			: (modal.showModal(), (document.body.style.overflow = 'hidden'), input.focus());
 
-	function keydown(event: KeyboardEvent) {
-		let { key, ctrlKey, repeat } = event;
-		if (repeat) return;
-
-		switch (key) {
-			case 'k':
-				if (ctrlKey) {
-					event.preventDefault();
-					toggleModal();
-					break;
-				}
-		}
-	}
-
 	async function handleSubmit() {
-		toggleModal();
 		await goto(`${base}/blog${$FilteredPosts[0].href}`);
+		toggleModal();
 	}
 
-	onMount(async () => {
-		touchSupport = 'ontouchstart' in window ? true : false;
-
+	const clickOutside = (modal: HTMLDialogElement) =>
 		modal.addEventListener('click', (event) => {
-			if (event.target === modal) {
-				modal.close();
-				document.body.style.overflow = '';
-			}
+			if (event.target === modal) toggleModal();
 		});
-
-		onDesktop = window.matchMedia('(min-width: 48rem)').matches;
-		window.matchMedia('(min-width: 48rem)').addEventListener('change', (event) => {
-			onDesktop = event.matches;
-		});
-	});
-
-	// onMount(() => {
-	//   toggleModal()
-	//   value = 'h'
-	// })
-
-	$: complex = onDesktop || !touchSupport;
 </script>
 
-<svelte:window bind:outerWidth on:keydown={keydown} />
+<svelte:window on:keydown={keydown} />
 
-<button
-	class={complex ? 'shiny hover complex' : ''}
-	aria-keyshortcuts="Control+K"
-	aria-label="Click to open the modal box to search for blogs"
-	on:click={toggleModal}
->
+<button aria-keyshortcuts="Control+K" aria-label="Click to open and search" on:click={toggleModal}>
+	<span class="font-20">&nbsp;&nbsp</span>
 	<svg
 		aria-hidden="true"
 		xmlns="http://www.w3.org/2000/svg"
-		width="23"
-		height="23"
+		width="22"
+		height="22"
 		viewBox="0 0 24 24"
 	>
 		<g
@@ -88,13 +59,14 @@
 			<path d="m21 21l-4.35-4.35" />
 		</g>
 	</svg>
-	{#if complex}
-		<span class="font-20"> &nbsp;&nbsp;&nbsp </span>
-		<kbd class="font-20">Ctrl K</kbd>
-	{/if}
+	<kbd class="font-20">Ctrl K</kbd>
 </button>
-
-<dialog on:close={() => (value = '')} on:cancel={() => (value = '')} bind:this={modal}>
+<dialog
+	use:clickOutside
+	on:close={() => (value = '')}
+	on:cancel={() => (value = '')}
+	bind:this={modal}
+>
 	<form on:submit|preventDefault={handleSubmit}>
 		<label
 			aria-label="Search and find a blog post using a search bar"
@@ -167,14 +139,34 @@
 <style>
 	button {
 		display: flex;
-		place-items: center;
 		gap: 0.4rem;
-
-		border-radius: 0.8rem;
+		place-items: center;
+		border-radius: 0.75rem;
 	}
 
-	.complex {
-		padding: 0.4rem 0.8rem;
+	button span,
+	button kbd {
+		display: none;
+	}
+
+	@media (hover: hover) {
+		button:not(dialog button) {
+			--background: var(--clr-40);
+			--border: var(--clr-45);
+			background-color: var(--background);
+			border: 1px solid var(--background);
+			border-top-color: var(--border);
+			border-left-color: var(--border);
+			box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
+
+			display: flex;
+			padding: 0.4rem 0.8rem;
+		}
+
+		button span,
+		button kbd {
+			display: block;
+		}
 	}
 
 	span {

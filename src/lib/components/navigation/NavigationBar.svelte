@@ -80,15 +80,38 @@
 		</a>
 		<div class="navigation-items">
 			<WidgetModal />
-			{#if !onDesktop}
-				<button
-					aria-label="Click to expand navigation menu"
-					aria-expanded={expanded}
-					on:click={() => (expanded = !expanded)}
-				>
-					<iconify-icon icon={expanded ? 'lucide:x' : 'lucide:align-justify'} />
-				</button>
-			{:else}
+
+			<button
+				aria-label="Click to expand navigation menu"
+				aria-expanded={expanded}
+				on:click={() => (expanded = !expanded)}
+			>
+				{#if expanded}
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+						<path
+							fill="none"
+							stroke="currentColor"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M18 6L6 18M6 6l12 12"
+						/>
+					</svg>
+				{:else}
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+						<path
+							fill="none"
+							stroke="currentColor"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M3 6h18M3 12h18M3 18h18"
+						/>
+					</svg>
+				{/if}
+			</button>
+
+			<div class="list-items">
 				<ThemeSwitch />
 				<div role="separator" aria-orientation="vertical" />
 				{#each $navigationItems as { label, href }}
@@ -105,7 +128,7 @@
 						>
 					{/if}
 				{/each}
-			{/if}
+			</div>
 		</div>
 		<section style:display>
 			{#each $navigationItems as { label, href }}
@@ -174,6 +197,21 @@
 		padding: 0.4rem 0.8rem;
 		display: flex;
 		place-items: center;
+	}
+
+	.list-items {
+		display: none;
+		gap: 0.8rem;
+	}
+
+	@media screen and (min-width: 1280px) {
+		button {
+			display: none;
+		}
+
+		.list-items {
+			display: flex;
+		}
 	}
 
 	nav {
