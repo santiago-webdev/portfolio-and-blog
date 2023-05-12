@@ -8,6 +8,7 @@ finished: false
 # Let's get started
 
 Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.
+![A plant](/plant.webp)
 
 ## Here I'll explain how I built this blog using Sveltekit
 

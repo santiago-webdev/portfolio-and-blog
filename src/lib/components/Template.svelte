@@ -1,7 +1,11 @@
+<script context="module">
+  import { img } from '$lib/mdsvex_components/index'
+  export { img }
+</script>
+
 <script lang="ts">
   import site from '$lib/site.json'
   import { page } from '$app/stores'
-  import { onMount } from 'svelte'
   import Hollow from './Hollow.svelte'
   import { readableDate, relativeTime } from '$lib/utils/utils'
   import { base } from '$app/paths'
@@ -35,7 +39,7 @@
 </script>
 
 <section>
-  <main>
+  <div role="banner">
     <div class="back-button">
       <LinkUI orientation="left" href="{base}/blog">Back to Blog</LinkUI>
     </div>
@@ -79,10 +83,10 @@
       {/if}
       <br />
     </div>
-  </main>
-  <article>
+  </div>
+  <main>
     <slot />
-  </article>
+  </main>
 </section>
 
 <svelte:head>
@@ -114,7 +118,7 @@
 </svelte:head>
 
 <style>
-  main {
+  [role='banner'] {
     background-color: var(--clr-25);
     border-bottom-right-radius: 1.6rem;
     border-bottom-left-radius: 1.6rem;
@@ -137,12 +141,13 @@
     margin-inline: auto;
   }
 
-  article {
+  main {
     width: min(92%, var(--base));
     margin-inline: auto;
+    padding-top: 1rem;
   }
 
-  :global(article p) {
+  :global(main p) {
     width: min(100%, 60ch);
   }
 
@@ -169,5 +174,9 @@
     place-items: center;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  :global(#table-of-contents) {
+    background-color: blue;
   }
 </style>
