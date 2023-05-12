@@ -9,7 +9,6 @@
 	import { navigationItems } from '$lib/components/navigation/store';
 
 	var expanded = false,
-		onDesktop = false,
 		scrollY = 0,
 		savedY = 0,
 		innerHeight = 0,
@@ -17,11 +16,6 @@
 		hideHeader = false,
 		transparent = false,
 		anchored = false;
-
-	const checkForDesktop = () =>
-		window.matchMedia('(min-width: 1280px)').matches
-			? ((onDesktop = true), (expanded = false))
-			: (onDesktop = false);
 
 	afterNavigate(() => {
 		expanded = false;
@@ -34,8 +28,9 @@
 	);
 
 	onMount(() => {
-		checkForDesktop();
-		window.addEventListener('resize', checkForDesktop);
+		window.addEventListener('resize', () =>
+			window.matchMedia('(min-width: 1280px)').matches ? (expanded = false) : undefined
+		);
 
 		window.addEventListener('scroll', () => {
 			hideHeader = !expanded && hideElement && scrollY > savedY;
@@ -45,13 +40,11 @@
 		const main = document.querySelector('main');
 
 		if (main) {
-			const observer = new IntersectionObserver((entries) => {
+			const observer = new IntersectionObserver((entries) =>
 				entries.forEach((entry) => {
-					if (entry.target === main) {
-						hideElement = !entry.isIntersecting;
-					}
-				});
-			});
+					if (entry.target === main) hideElement = !entry.isIntersecting;
+				})
+			);
 
 			observer.observe(main);
 		}
@@ -70,24 +63,25 @@
 			data-sveltekit-preload-code="eager"
 			aria-current={`${base}/` === $page.url.pathname ? 'page' : undefined}
 		>
-			<img
-				class="logo-santigo-zero"
-				aria-hidden="true"
-				alt="My personal logo"
-				title="My personal logo"
-			/>
-			<span>Santiago Gonzalez</span>
+			<img aria-labelledby="authors-name" class="logo-santigo-zero" alt="My personal logo" />
+			<span id="authors-name">Santiago Gonzalez</span>
 		</a>
 		<div class="navigation-items">
 			<WidgetModal />
 
 			<button
-				aria-label="Click to expand navigation menu"
+				aria-label="Click or tap to {expanded ? 'close' : 'open'} the menu"
 				aria-expanded={expanded}
 				on:click={() => (expanded = !expanded)}
 			>
 				{#if expanded}
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+					<svg
+						aria-hidden="true"
+						xmlns="http://www.w3.org/2000/svg"
+						width="22"
+						height="22"
+						viewBox="0 0 24 24"
+					>
 						<path
 							fill="none"
 							stroke="currentColor"
@@ -98,7 +92,13 @@
 						/>
 					</svg>
 				{:else}
-					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+					<svg
+						aria-hidden="true"
+						xmlns="http://www.w3.org/2000/svg"
+						width="22"
+						height="22"
+						viewBox="0 0 24 24"
+					>
 						<path
 							fill="none"
 							stroke="currentColor"
