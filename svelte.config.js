@@ -11,7 +11,7 @@ const config = {
     mdsvex({
       extensions: ['.md'],
       layout: './src/lib/components/Template.svelte',
-      rehypePlugins: [rehypeSlug, [ toc, {position: 'beforeend'} ]],
+      rehypePlugins: [rehypeSlug, [toc, { position: 'beforeend' }]],
     }),
     vitePreprocess(),
   ],
