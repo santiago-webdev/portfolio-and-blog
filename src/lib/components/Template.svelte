@@ -3,7 +3,7 @@
 	export { img };
 </script>
 
-<script lang="ts">
+<script>
 	import site from '$lib/site.json';
 	import { page } from '$app/stores';
 	import Hollow from './Hollow.svelte';
@@ -15,7 +15,8 @@
 	export let datetime = '';
 	export let description = '';
 	export let finished = false;
-	export let tags = [''];
+	/** @type {string[]} */
+	export let tags = [];
 
 	const dateRelative = !datetime ? datetime : relativeTime(new Date(), new Date(datetime));
 	const dateReadable = !datetime ? datetime : readableDate(datetime);
@@ -52,7 +53,7 @@
 				<h1 class="font-80">{title}</h1>
 			{/if}
 			<p>{description}</p>
-			{#if tags[0] !== ''}
+			{#if tags}
 				<ul class="tags inline-items">
 					{#each tags as tag}
 						<li class="shiny">{tag}</li>
