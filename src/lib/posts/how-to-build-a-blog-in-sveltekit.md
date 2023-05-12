@@ -26,6 +26,6 @@ yarn create svelte .
 ### More tests
 
 ```typescript
-let hello: string = 'world'
-const printHello = () => console.log(hello)
+let hello: string = 'world';
+const printHello = () => console.log(hello);
 ```

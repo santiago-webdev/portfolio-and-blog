@@ -1,60 +1,60 @@
 <script lang="ts">
-  import { afterUpdate } from 'svelte'
+	import { afterUpdate } from 'svelte';
 
-  let scrollY = 0,
-    isNotNecessary = false
+	let scrollY = 0,
+		isNotNecessary = false;
 
-  const startObserving = () => {
-    const main = document.querySelector('main')
+	const startObserving = () => {
+		const main = document.querySelector('main');
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.target === main) {
-          isNotNecessary = entry.isIntersecting
-        }
-      })
-    })
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach((entry) => {
+				if (entry.target === main) {
+					isNotNecessary = entry.isIntersecting;
+				}
+			});
+		});
 
-    if (main) {
-      observer.observe(main)
-    }
+		if (main) {
+			observer.observe(main);
+		}
 
-    return observer.disconnect
-  }
+		return observer.disconnect;
+	};
 
-  afterUpdate(() => startObserving())
+	afterUpdate(() => startObserving());
 </script>
 
 <svelte:window bind:scrollY />
 
 <section class:isNotNecessary>
-  <a
-    on:click|preventDefault={() =>
-      window.scrollTo({ top: 0, behavior: 'smooth' })}
-    data-sveltekit-replacestate
-    class="reverse"
-    href="#body">
-    <iconify-icon icon="lucide:arrow-up" />
-    Go to top
-  </a>
+	<a
+		on:click|preventDefault={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+		data-sveltekit-replacestate
+		class="reverse"
+		href="#body"
+	>
+		<iconify-icon icon="lucide:arrow-up" />
+		Go to top
+	</a>
 </section>
 
 <style>
-  section {
-    position: sticky;
-    bottom: 1rem;
-    margin-top: 1rem;
-    width: min(100% - 1rem, var(--xl));
-    justify-content: flex-end;
-    display: flex;
-  }
+	section {
+		position: sticky;
+		bottom: 1rem;
+		margin-top: 1rem;
+		width: min(100% - 1rem, var(--xl));
+		justify-content: flex-end;
+		display: flex;
+	}
 
-  .isNotNecessary {
-    display: none;
-  }
+	.isNotNecessary {
+		display: none;
+	}
 
-  a {
-    border-radius: 1rem;
-    padding: 0.6rem 1.2rem;
-  }
+	a {
+		border-radius: 1rem;
+		padding: 0.6rem 1.2rem;
+	}
 </style>

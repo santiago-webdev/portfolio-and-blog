@@ -1,21 +1,21 @@
 {
-  "site": {
-    "title": "Santiago's Portfolio and Blog",
-    "description": "Personal blog and portfolio, I talk about web development and show you my projects while at it.",
-    "url": "https://santiagogonzalez.dev",
-    "repo": "https://github.com/santigo-zero/portfolio-and-blog",
-    "author_fullname": "Santiago Gonzalez",
-    "author_name": "Santiago"
-  },
-  "blog": {
-    "title": "Santiago's Blog",
-    "title_append": "Santiago Gonzalez Blog",
-    "description": "In this blog you are going to find articles about Linux, web technologies and frontend development",
-    "url": "https://santiagogonzalez.dev/blog"
-  },
-  "portfolio": {
-    "title": "Santiago's Portfolio",
-    "description": "Showcasing all of my projects; Come take a look!",
-    "url": "https://santiagogonzalez.dev/project"
-  }
+	"site": {
+		"title": "Santiago's Portfolio and Blog",
+		"description": "Personal blog and portfolio, I talk about web development and show you my projects while at it.",
+		"url": "https://santiagogonzalez.dev",
+		"repo": "https://github.com/santigo-zero/portfolio-and-blog",
+		"author_fullname": "Santiago Gonzalez",
+		"author_name": "Santiago"
+	},
+	"blog": {
+		"title": "Santiago's Blog",
+		"title_append": "Santiago Gonzalez Blog",
+		"description": "In this blog you are going to find articles about Linux, web technologies and frontend development",
+		"url": "https://santiagogonzalez.dev/blog"
+	},
+	"portfolio": {
+		"title": "Santiago's Portfolio",
+		"description": "Showcasing all of my projects; Come take a look!",
+		"url": "https://santiagogonzalez.dev/project"
+	}
 }

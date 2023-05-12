@@ -1,6 +1,6 @@
-export declare type Theme = 'system' | 'system-light' | 'dark' | 'light'
+export declare type Theme = 'system' | 'system-light' | 'dark' | 'light';
 
 export type NavItem = {
-  label: string
-  href: string
-}
+	label: string;
+	href: string;
+};

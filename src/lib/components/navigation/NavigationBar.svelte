@@ -1,242 +1,240 @@
 <script lang="ts">
-  import { base } from '$app/paths'
-  import { page } from '$app/stores'
-  import { afterNavigate } from '$app/navigation'
-  import { onMount } from 'svelte'
+	import { base } from '$app/paths';
+	import { page } from '$app/stores';
+	import { afterNavigate } from '$app/navigation';
+	import { onMount } from 'svelte';
 
-  import ThemeSwitch from '$lib/components/ThemeSwitch.svelte'
-  import WidgetModal from '$lib/components/search/WidgetModal.svelte'
-  import { navigationItems } from '$lib/components/navigation/store'
+	import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
+	import WidgetModal from '$lib/components/search/WidgetModal.svelte';
+	import { navigationItems } from '$lib/components/navigation/store';
 
-  var expanded = false,
-    onDesktop = false,
-    scrollY = 0,
-    savedY = 0,
-    innerHeight = 0,
-    hideElement = false,
-    hideHeader = false,
-    transparent = false,
-    anchored = false
+	var expanded = false,
+		onDesktop = false,
+		scrollY = 0,
+		savedY = 0,
+		innerHeight = 0,
+		hideElement = false,
+		hideHeader = false,
+		transparent = false,
+		anchored = false;
 
-  const checkForDesktop = () =>
-    window.matchMedia('(min-width: 1280px)').matches
-      ? ((onDesktop = true), (expanded = false))
-      : (onDesktop = false)
+	const checkForDesktop = () =>
+		window.matchMedia('(min-width: 1280px)').matches
+			? ((onDesktop = true), (expanded = false))
+			: (onDesktop = false);
 
-  afterNavigate(() => {
-    expanded = false
-  })
+	afterNavigate(() => {
+		expanded = false;
+	});
 
-  afterNavigate(() =>
-    $page.url.pathname === `${base}/about`
-      ? ((transparent = true), (anchored = true))
-      : ((transparent = false), (anchored = false))
-  )
+	afterNavigate(() =>
+		$page.url.pathname === `${base}/about`
+			? ((transparent = true), (anchored = true))
+			: ((transparent = false), (anchored = false))
+	);
 
-  onMount(() => {
-    checkForDesktop()
-    window.addEventListener('resize', checkForDesktop)
+	onMount(() => {
+		checkForDesktop();
+		window.addEventListener('resize', checkForDesktop);
 
-    window.addEventListener('scroll', () => {
-      hideHeader = !expanded && hideElement && scrollY > savedY
-      savedY = scrollY
-    })
+		window.addEventListener('scroll', () => {
+			hideHeader = !expanded && hideElement && scrollY > savedY;
+			savedY = scrollY;
+		});
 
-    const main = document.querySelector('main')
+		const main = document.querySelector('main');
 
-    if (main) {
-      const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (entry.target === main) {
-            hideElement = !entry.isIntersecting
-          }
-        })
-      })
+		if (main) {
+			const observer = new IntersectionObserver((entries) => {
+				entries.forEach((entry) => {
+					if (entry.target === main) {
+						hideElement = !entry.isIntersecting;
+					}
+				});
+			});
 
-      observer.observe(main)
-    }
-  })
+			observer.observe(main);
+		}
+	});
 
-  $: display = expanded ? 'flex' : 'none'
+	$: display = expanded ? 'flex' : 'none';
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
 
-<header
-  class:anchored
-  class:transparent
-  class:expanded
-  class:scrollY
-  class:hideHeader>
-  <nav aria-label="primary-navigation">
-    <a
-      href="{base}/"
-      aria-label="Home"
-      data-sveltekit-preload-code="eager"
-      aria-current={`${base}/` === $page.url.pathname ? 'page' : undefined}>
-      <img
-        class="logo-santigo-zero"
-        aria-hidden="true"
-        alt="My personal logo"
-        title="My personal logo" />
-      <span>Santiago Gonzalez</span>
-    </a>
-    <div class="navigation-items">
-      <WidgetModal />
-      {#if !onDesktop}
-        <button
-          aria-label="Click to expand navigation menu"
-          aria-expanded={expanded}
-          on:click={() => (expanded = !expanded)}>
-          <iconify-icon icon={expanded ? 'lucide:x' : 'lucide:align-justify'} />
-        </button>
-      {:else}
-        <ThemeSwitch />
-        <div role="separator" aria-orientation="vertical" />
-        {#each $navigationItems as { label, href }}
-          {#if label === 'Separator'}
-            <div role="separator" aria-orientation="vertical" />
-          {:else if label !== 'Home'}
-            <a
-              data-sveltekit-preload-code="eager"
-              aria-current={$page.url.pathname.startsWith(href) && `/` !== href
-                ? 'page'
-                : undefined}
-              aria-label="Link to {label}"
-              {href}>{label}</a>
-          {/if}
-        {/each}
-      {/if}
-    </div>
-    <section style:display>
-      {#each $navigationItems as { label, href }}
-        {#if label !== 'Separator'}
-          <a
-            data-sveltekit-preload-code="eager"
-            class="shiny-select"
-            aria-current={$page.url.pathname.startsWith(href) && `/` !== href
-              ? 'page'
-              : undefined}
-            aria-label="Link to {label}"
-            {href}>{label}</a>
-          <hr />
-        {/if}
-      {/each}
-      <ThemeSwitch />
-    </section>
-  </nav>
+<header class:anchored class:transparent class:expanded class:scrollY class:hideHeader>
+	<nav aria-label="primary-navigation">
+		<a
+			href="{base}/"
+			aria-label="Home"
+			data-sveltekit-preload-code="eager"
+			aria-current={`${base}/` === $page.url.pathname ? 'page' : undefined}
+		>
+			<img
+				class="logo-santigo-zero"
+				aria-hidden="true"
+				alt="My personal logo"
+				title="My personal logo"
+			/>
+			<span>Santiago Gonzalez</span>
+		</a>
+		<div class="navigation-items">
+			<WidgetModal />
+			{#if !onDesktop}
+				<button
+					aria-label="Click to expand navigation menu"
+					aria-expanded={expanded}
+					on:click={() => (expanded = !expanded)}
+				>
+					<iconify-icon icon={expanded ? 'lucide:x' : 'lucide:align-justify'} />
+				</button>
+			{:else}
+				<ThemeSwitch />
+				<div role="separator" aria-orientation="vertical" />
+				{#each $navigationItems as { label, href }}
+					{#if label === 'Separator'}
+						<div role="separator" aria-orientation="vertical" />
+					{:else if label !== 'Home'}
+						<a
+							data-sveltekit-preload-code="eager"
+							aria-current={$page.url.pathname.startsWith(href) && `/` !== href
+								? 'page'
+								: undefined}
+							aria-label="Link to {label}"
+							{href}>{label}</a
+						>
+					{/if}
+				{/each}
+			{/if}
+		</div>
+		<section style:display>
+			{#each $navigationItems as { label, href }}
+				{#if label !== 'Separator'}
+					<a
+						data-sveltekit-preload-code="eager"
+						class="shiny-select"
+						aria-current={$page.url.pathname.startsWith(href) && `/` !== href ? 'page' : undefined}
+						aria-label="Link to {label}"
+						{href}>{label}</a
+					>
+					<hr />
+				{/if}
+			{/each}
+			<ThemeSwitch />
+		</section>
+	</nav>
 </header>
 
 <style>
-  header {
-    position: sticky;
-    top: 0;
-    transition: background-color, transform 300ms ease-in-out;
-    z-index: 999;
-    padding: 0.2rem 0;
-    background-color: var(--clr-25);
-  }
+	header {
+		position: sticky;
+		top: 0;
+		transition: background-color, transform 300ms ease-in-out;
+		z-index: 999;
+		padding: 0.2rem 0;
+		background-color: var(--clr-25);
+	}
 
-  header.anchored {
-    top: unset !important;
-    transform: none !important;
-    background-color: transparent !important;
-    border-color: transparent !important;
-    border-width: 0 !important;
-  }
+	header.anchored {
+		top: unset !important;
+		transform: none !important;
+		background-color: transparent !important;
+		border-color: transparent !important;
+		border-width: 0 !important;
+	}
 
-  header.hideHeader {
-    transform: translateY(-200%);
-  }
+	header.hideHeader {
+		transform: translateY(-200%);
+	}
 
-  header.expanded,
-  header.scrollY {
-    border-bottom: 2px solid var(--clr-55);
-  }
+	header.expanded,
+	header.scrollY {
+		border-bottom: 2px solid var(--clr-55);
+	}
 
-  header.scrollY {
-    backdrop-filter: blur(6px);
-    background-color: var(--clr-25-trp);
-  }
+	header.scrollY {
+		backdrop-filter: blur(6px);
+		background-color: var(--clr-25-trp);
+	}
 
-  header.expanded {
-    background-color: var(--clr-30);
-  }
+	header.expanded {
+		background-color: var(--clr-30);
+	}
 
-  header.transparent {
-    background-color: transparent;
-  }
+	header.transparent {
+		background-color: transparent;
+	}
 
-  header.transparent.scrollY {
-    background-color: var(--clr-25);
-  }
+	header.transparent.scrollY {
+		background-color: var(--clr-25);
+	}
 
-  a,
-  button {
-    padding: 0.4rem 0.8rem;
-    display: flex;
-    place-items: center;
-  }
+	a,
+	button {
+		padding: 0.4rem 0.8rem;
+		display: flex;
+		place-items: center;
+	}
 
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    place-items: center;
-    justify-content: space-between;
+	nav {
+		display: flex;
+		flex-wrap: wrap;
+		place-items: center;
+		justify-content: space-between;
 
-    width: min(92%, var(--xl));
-    margin-inline: auto;
-  }
+		width: min(92%, var(--xl));
+		margin-inline: auto;
+	}
 
-  nav a:first-child {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 0.8rem;
-    font-variation-settings: 'wght' 660;
-  }
+	nav a:first-child {
+		display: flex;
+		flex-flow: row wrap;
+		gap: 0.8rem;
+		font-variation-settings: 'wght' 660;
+	}
 
-  img {
-    width: 2rem;
-    height: 2rem;
-  }
+	img {
+		width: 2rem;
+		height: 2rem;
+	}
 
-  header.scrollY nav a:first-child span,
-  header nav a:first-child span {
-    opacity: 0;
-  }
+	header.scrollY nav a:first-child span,
+	header nav a:first-child span {
+		opacity: 0;
+	}
 
-  .navigation-items {
-    display: flex;
-    gap: 0.8rem;
-  }
+	.navigation-items {
+		display: flex;
+		gap: 0.8rem;
+	}
 
-  section {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding-top: 2rem;
-    width: min(92%, var(--sm));
-    margin-inline: auto;
-  }
+	section {
+		flex-direction: column;
+		gap: 0.5rem;
+		padding-top: 2rem;
+		width: min(92%, var(--sm));
+		margin-inline: auto;
+	}
 
-  @media screen and (min-width: 768px) {
-    header {
-      padding: 0.6rem 0;
-    }
+	@media screen and (min-width: 768px) {
+		header {
+			padding: 0.6rem 0;
+		}
 
-    header.anchored nav a:first-child span,
-    header nav a:first-child span {
-      opacity: 1;
-      transition: opacity 150ms ease-in-out;
-    }
-  }
+		header.anchored nav a:first-child span,
+		header nav a:first-child span {
+			opacity: 1;
+			transition: opacity 150ms ease-in-out;
+		}
+	}
 
-  @media (prefers-reduced-motion: reduce) {
-    *,
-    *::before,
-    *::after {
-      transition-property: none;
-      transition: none;
-      animation: none;
-    }
-  }
+	@media (prefers-reduced-motion: reduce) {
+		*,
+		*::before,
+		*::after {
+			transition-property: none;
+			transition: none;
+			animation: none;
+		}
+	}
 </style>

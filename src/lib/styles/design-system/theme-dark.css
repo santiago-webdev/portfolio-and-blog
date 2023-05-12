@@ -1,52 +1,52 @@
 [data-theme='system'],
 [data-theme='dark'] {
-  color-scheme: dark;
+	color-scheme: dark;
 
-  --clr-05: hsl(233 12% 10%);
-  --clr-10: hsl(233 12% 14%);
-  --clr-15: hsl(233 12% 16%);
-  --clr-20: hsl(233 12% 18%);
-  --clr-25: hsl(233 12% 19%);
-  --clr-30: hsl(233 12% 21%);
-  --clr-35: hsl(233 12% 23%);
-  --clr-40: hsl(233 12% 24%);
-  --clr-45: hsl(233 12% 26%);
-  --clr-50: hsl(233 12% 28%);
-  --clr-55: hsl(233 12% 30%);
+	--clr-05: hsl(233 12% 10%);
+	--clr-10: hsl(233 12% 14%);
+	--clr-15: hsl(233 12% 16%);
+	--clr-20: hsl(233 12% 18%);
+	--clr-25: hsl(233 12% 19%);
+	--clr-30: hsl(233 12% 21%);
+	--clr-35: hsl(233 12% 23%);
+	--clr-40: hsl(233 12% 24%);
+	--clr-45: hsl(233 12% 26%);
+	--clr-50: hsl(233 12% 28%);
+	--clr-55: hsl(233 12% 30%);
 
-  --clr-60: hsl(236 13% 35%);
-  --clr-65: hsl(236 13% 40%);
-  --clr-70: hsl(236 13% 45%);
-  --clr-75: hsl(236 13% 50%);
-  --clr-80: hsl(236 13% 55%);
-  --clr-85: hsl(236 13% 60%);
-  --clr-90: hsl(236 13% 65%);
-  --clr-95: hsl(236 13% 70%);
+	--clr-60: hsl(236 13% 35%);
+	--clr-65: hsl(236 13% 40%);
+	--clr-70: hsl(236 13% 45%);
+	--clr-75: hsl(236 13% 50%);
+	--clr-80: hsl(236 13% 55%);
+	--clr-85: hsl(236 13% 60%);
+	--clr-90: hsl(236 13% 65%);
+	--clr-95: hsl(236 13% 70%);
 
-  --clr-100: hsl(239 56% 84%);
-  --clr-150: hsl(239 54% 86%);
-  --clr-200: hsl(239 52% 90%);
-  --clr-250: hsl(239 50% 94%);
-  --clr-300: hsl(239 48% 96%);
+	--clr-100: hsl(239 56% 84%);
+	--clr-150: hsl(239 54% 86%);
+	--clr-200: hsl(239 52% 90%);
+	--clr-250: hsl(239 50% 94%);
+	--clr-300: hsl(239 48% 96%);
 
-  --clr-25-trp: hsl(236 13% 19% / 88%);
-  --clr-35-trp: hsl(236 12% 23% / 94%);
+	--clr-25-trp: hsl(236 13% 19% / 88%);
+	--clr-35-trp: hsl(236 12% 23% / 94%);
 
-  --bg-select-100: hsl(240 10% 30%);
-  --bg-select-200: hsl(240 10% 35%);
-  --bg-select-300: hsl(240 10% 40%);
-  --bg-select-400: hsl(240 10% 45%);
-  --bg-select-500: hsl(240 10% 50%);
-  --bg-select-600: hsl(240 10% 55%);
-  --bg-select-700: hsl(240 10% 60%);
-  --bg-select-800: hsl(240 10% 65%);
-  --bg-select-900: hsl(240 10% 70%);
+	--bg-select-100: hsl(240 10% 30%);
+	--bg-select-200: hsl(240 10% 35%);
+	--bg-select-300: hsl(240 10% 40%);
+	--bg-select-400: hsl(240 10% 45%);
+	--bg-select-500: hsl(240 10% 50%);
+	--bg-select-600: hsl(240 10% 55%);
+	--bg-select-700: hsl(240 10% 60%);
+	--bg-select-800: hsl(240 10% 65%);
+	--bg-select-900: hsl(240 10% 70%);
 
-  --clr-blue-20: hsl(245 82% 78%);
-  --clr-purple-20: hsl(267 27% 63%);
-  --clr-purple-50: hsl(271 55% 50%);
-  --clr-red-40: hsl(346 77% 62%);
-  --clr-red-50: hsl(346 88% 62%);
-  --clr-orange-50: hsl(39 100% 70%);
-  --clr-green-50: #9ece6a;
+	--clr-blue-20: hsl(245 82% 78%);
+	--clr-purple-20: hsl(267 27% 63%);
+	--clr-purple-50: hsl(271 55% 50%);
+	--clr-red-40: hsl(346 77% 62%);
+	--clr-red-50: hsl(346 88% 62%);
+	--clr-orange-50: hsl(39 100% 70%);
+	--clr-green-50: #9ece6a;
 }
