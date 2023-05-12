@@ -133,7 +133,7 @@
     top: 0;
     transition: background-color, transform 300ms ease-in-out;
     z-index: 999;
-    padding: 0.6rem 0;
+    padding: 0.2rem 0;
     background-color: var(--clr-25);
   }
 
@@ -152,6 +152,11 @@
   header.expanded,
   header.scrollY {
     border-bottom: 2px solid var(--clr-55);
+  }
+
+  header.scrollY {
+    backdrop-filter: blur(6px);
+    background-color: var(--clr-25-trp);
   }
 
   header.expanded {
@@ -214,9 +219,8 @@
   }
 
   @media screen and (min-width: 768px) {
-    header.scrollY {
-      backdrop-filter: blur(6px);
-      background-color: var(--clr-25-trp);
+    header {
+      padding: 0.6rem 0;
     }
 
     header.anchored nav a:first-child span,
