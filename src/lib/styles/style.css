@@ -38,10 +38,6 @@ button[disabled] {
 	color: var(--clr-65);
 }
 
-strong {
-	font-variation-settings: 'wght' 660;
-}
-
 [data-theme='dark'] img.logo-santigo-zero,
 [data-theme='system'] img.logo-santigo-zero {
 	content: url('/logo.svg');

@@ -20,6 +20,11 @@
 	--fs-90: clamp(5.05rem, 10vw + 1rem, 8.09rem);
 }
 
+strong {
+	font-variation-settings: 'wght' 600;
+	font-weight: 600;
+}
+
 pre {
 	background-color: var(--clr-20);
 	border-radius: 0.6rem;

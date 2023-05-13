@@ -28,13 +28,17 @@
 <svelte:window bind:scrollY />
 
 <section class:isNotNecessary>
-	<a
-		on:click|preventDefault={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-		data-sveltekit-replacestate
-		class="reverse"
-		href="#body"
-	>
-		<iconify-icon icon="lucide:arrow-up" />
+	<a class="reverse" href="#body">
+		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+			<path
+				fill="none"
+				stroke="currentColor"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				d="M12 19V5m-7 7l7-7l7 7"
+			/>
+		</svg>
 		Go to top
 	</a>
 </section>
