@@ -51,7 +51,7 @@
 	}
 
 	.arrow-head-forward {
-		transform: translateX(3px);
+		transform: translateX(4px);
 	}
 
 	.arrow-tail {
