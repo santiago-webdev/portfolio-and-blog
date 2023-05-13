@@ -65,7 +65,7 @@
 	{#each $FilteredProjects as { name, description, category, stack, img, repo, link, accent }}
 		<article>
 			<div class="img-wrapper">
-				<img src={img} alt="Screenshot of {name}" title="Screenshot of {name}" />
+				<img loading="lazy" src={img} alt="Screenshot of {name}" title="Screenshot of {name}" />
 			</div>
 			<div id="describe-{name}">
 				<div class="describe-project-banner">
