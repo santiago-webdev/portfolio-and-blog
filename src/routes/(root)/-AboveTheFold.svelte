@@ -7,7 +7,7 @@
 <div class="wrapper">
 	<main>
 		<div class="introduction">
-			<h1 class="font-80">
+			<h1 class="font-85">
 				Building the web<br /> && clean interfaces
 			</h1>
 			<p>

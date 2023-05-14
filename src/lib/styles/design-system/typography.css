@@ -109,7 +109,7 @@ h2,
 	font-size: var(--fs-60);
 	font-variation-settings: 'wght' 840;
 	font-weight: 840;
-	letter-spacing: -0.01em;
+	letter-spacing: -0.02em;
 	line-height: calc(var(--fs-60) * 1.3);
 }
 
@@ -119,7 +119,7 @@ h1,
 	font-size: var(--fs-70);
 	font-variation-settings: 'wght' 800;
 	font-weight: 800;
-	letter-spacing: -0.01em;
+	letter-spacing: -0.02em;
 	line-height: calc(var(--fs-70) * 1.3);
 }
 
@@ -128,7 +128,7 @@ h1,
 	font-size: var(--fs-80);
 	font-variation-settings: 'wght' 800;
 	font-weight: 800;
-	letter-spacing: -0.01em;
+	letter-spacing: -0.02em;
 	line-height: calc(var(--fs-80) * 1.2);
 }
 
@@ -137,7 +137,7 @@ h1,
 	font-size: var(--fs-85);
 	font-variation-settings: 'wght' 800;
 	font-weight: 800;
-	letter-spacing: -0.01em;
+	letter-spacing: -0.02em;
 	line-height: calc(var(--fs-85) * 1.2);
 }
 
@@ -146,6 +146,6 @@ h1,
 	font-size: var(--fs-90);
 	font-variation-settings: 'wght' 800;
 	font-weight: 800;
-	letter-spacing: -0.01em;
+	letter-spacing: -0.02em;
 	line-height: calc(var(--fs-90) * 1.2);
 }
