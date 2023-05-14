@@ -40,7 +40,7 @@
 			</p>
 		</div>
 		<form class="font-30">
-			<label style="display: flex; flex-wrap: wrap" for="projects">
+			<label for="projects">
 				Filter by type of project
 				<noscript>
 					<small>Sorry Folks! This requires JavaScript to work!</small>
@@ -54,26 +54,23 @@
 		</form>
 	</div>
 </main>
+
 <section>
 	{#each $FilteredProjects as { name, description, category, stack, img, repo, link, accent }}
 		<article>
+			<!-- screenshot of the landing page of the website here -->
 			<div class="img-wrapper">
 				<img loading="lazy" src={img} alt="Screenshot of {name}" title="Screenshot of {name}" />
 			</div>
 			<div id="describe-{name}">
 				<div class="describe-project-banner">
-					<a
-						href={link.toString()}
-						target="_blank"
-						style="display: flex; place-items: center; gap: 0.5ch"
-						class="font-40"
-					>
-						<span
-							style:font-variation-settings="'wght' 500"
-							style:color="var({accent ? accent : '--clr-200'})"
+					<!-- domain -->
+					<a href={link.toString()} target="_blank" class="font-40">
+						<span style:color="var({accent ? accent : '--clr-200'})"
 							>{link.hostname.replace(/^www\./i, '')}</span
 						>
 					</a>
+					<!-- name and categories -->
 					<div style:gap="2ch" class="inline-items">
 						<h2 class="font-30">{name}</h2>
 						<ul class="inline-items">
@@ -83,14 +80,16 @@
 						</ul>
 					</div>
 				</div>
+				<!-- description -->
 				<p class="font-20">{description}</p>
-
+				<!-- tech  -->
 				<h3
 					class="font-10"
 					style="margin-top: 0.8rem; color: var(--clr-150); font-variation-settings: 'wght' 700;"
 				>
 					Tech Stack:
 				</h3>
+				<!-- frontend -->
 				<div class="list-project-frontend inline-items">
 					{#if stack.frontend}
 						<h4 class="font-10">Frontend:</h4>
@@ -104,7 +103,7 @@
 						</ul>
 					{/if}
 				</div>
-
+				<!-- api -->
 				<div class="list-project-api inline-items">
 					{#if stack.api}
 						<h4 class="font-10">API:</h4>
@@ -118,7 +117,7 @@
 						</ul>
 					{/if}
 				</div>
-
+				<!-- backend -->
 				<div class="list-project-backend inline-items">
 					{#if stack.backend}
 						<h4 class="font-10">Backend:</h4>
@@ -132,7 +131,7 @@
 						</ul>
 					{/if}
 				</div>
-
+				<!-- links to source code and case study -->
 				<div class="container-project-links">
 					<ShapeButton
 						class="bttn-big-round shiny hover"
@@ -149,16 +148,19 @@
 			</div>
 		</article>
 	{/each}
+
 	<article id="portfolio-new">
 		<button>
 			<iconify-icon width="30" height="30" icon="lucide:plus" />
 		</button>
 		<div id="describe-new">
-			<div>newdomain.com</div>
-			<h2>New Project</h2>
+			<a href="#todo" target="_blank" class="font-40">
+				<span style:color="var(--clr-200)">newdomain.com</span>
+			</a>
+			<h2 class="font-30">Takeaway Interview?</h2>
 			<p>
-				Take Away Interview? Try Me! As a junior developer with a passion for turning ideas into
-				reality, I'm excited to work with you on your new project.
+				Try Me! As a junior developer with a passion for turning ideas into reality, I'm excited to
+				work with you on your new project.
 			</p>
 			<ul>
 				<li class="shiny">New</li>
@@ -239,6 +241,8 @@
 
 	label {
 		margin-inline: 1.6rem;
+		display: flex;
+		flex-wrap: wrap;
 	}
 
 	select {
@@ -271,6 +275,11 @@
 		flex-flow: row wrap;
 		gap: 2rem;
 		padding: 1.6rem;
+	}
+
+	a {
+		max-width: max-content;
+		/* outline: 3px crimson solid; */
 	}
 
 	[id^='describe-'] {
@@ -319,6 +328,10 @@
 	img {
 		max-inline-size: 100%;
 		block-size: auto;
+	}
+
+	span {
+		font-variation-settings: 'wght' 500;
 	}
 
 	button {
