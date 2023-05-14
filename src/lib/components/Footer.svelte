@@ -159,7 +159,7 @@
 			</a>
 
 			<small class="copyright">
-        <iconify-icon icon="lucide:copyright"></iconify-icon>
+				<iconify-icon icon="lucide:copyright" />
 				2023 - present
 				<div aria-orientation="vertical" role="separator">•</div>
 				All rights reserved
