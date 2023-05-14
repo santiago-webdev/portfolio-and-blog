@@ -3,27 +3,26 @@
 	import LinkInText from '$lib/components/navigation/LinkInText.svelte';
 	import LinkUI from '$lib/components/navigation/LinkUI.svelte';
 	import site from '$lib/site.json';
+	import { retrieve_icon } from '$lib/utils/utils';
+
+	const databases = ['MySQL', 'SQLite', 'PostgreSQL'];
+
+	const metaframeworks = ['NextJS', 'SvelteKit'];
 
 	const tools = [
-		{ name: 'HTML', icon: 'logos:html-5' },
-		{ name: 'CSS3', icon: 'logos:css-3' },
-		{ name: 'Javascript', icon: 'logos:javascript' },
-		{ name: 'Typescript', icon: 'logos:typescript-icon' },
-		{ name: 'CSS Modules', icon: 'simple-icons:cssmodules' },
-		{ name: 'Git', icon: 'mdi:git' },
-		{ name: 'Figma', icon: 'ph:figma-logo' },
-		{ name: 'React', icon: 'logos:react' },
-		{ name: 'NextJS', icon: 'logos:nextjs' },
-		{ name: 'Svelte', icon: 'logos:svelte' },
-		{ name: 'SvelteKit', icon: 'logos:svelte-kit' },
-		{ name: 'Podman', icon: 'simple-icons:podman' },
-		{ name: 'Docker', icon: 'logos:docker' },
-		{ name: 'Java', icon: 'logos:java' },
-		{ name: 'Python', icon: 'logos:python' },
-		{ name: 'MySQL', icon: 'logos:mysql' },
-		{ name: 'SQLite', icon: 'vscode-icons:file-type-sqlite' },
-		{ name: 'PostgreSQL', icon: 'logos:postgresql' },
-		{ name: 'Systemd', icon: 'vscode-icons:file-type-systemd' }
+		'HTML5',
+		'CSS3',
+		'JavaScript',
+		'TypeScript',
+		'CSS Modules',
+		'Git',
+		'Figma',
+		'React',
+		'Svelte',
+		'Podman',
+		'Docker',
+		'Java',
+		'Python'
 	];
 </script>
 
@@ -152,9 +151,42 @@
 	<h2>Technology I use</h2>
 	<p>These are some of the tools I had used in the past (but am not limited to):</p>
 	<div class="tools-i-use">
-		{#each tools as tool}
-			<span><iconify-icon icon={tool.icon} />{tool.name}</span>
-		{/each}
+		<div class="wrapper-metaframeworks">
+			<h3 class="font-40">Meta Frameworks:</h3>
+			<ul class="metaframeworks">
+				{#each metaframeworks as metaframework}
+					<li class="shiny font-20">
+						<iconify-icon
+							width="26"
+							height="26"
+							icon={retrieve_icon(metaframework)}
+						/>{metaframework}
+					</li>
+				{/each}
+			</ul>
+		</div>
+
+		<div class="wrapper-databases">
+			<h3 class="font-40">Databases:</h3>
+			<ul class="metaframeworks">
+				{#each databases as database}
+					<li class="shiny font-20">
+						<iconify-icon width="26" height="26" icon={retrieve_icon(database)} />{database}
+					</li>
+				{/each}
+			</ul>
+		</div>
+
+		<div class="wrapper-others">
+			<h3 class="font-40">Other tools:</h3>
+			<ul class="others">
+				{#each tools as tool}
+					<li class="shiny font-20">
+						<iconify-icon width="26" height="26" icon={retrieve_icon(tool)} />{tool}
+					</li>
+				{/each}
+			</ul>
+		</div>
 	</div>
 </div>
 
@@ -304,26 +336,35 @@
 	.technologies {
 		display: flex;
 		flex-direction: column;
-		gap: 1.2rem;
 		width: min(92%, var(--base));
 		margin-inline: auto;
-		background-color: var(--clr-25);
-		padding: 3rem;
-		border-radius: 1.2rem;
 	}
 
-	.technologies span {
-		display: flex;
-		place-items: center;
-		border: 2px solid var(--clr-95);
-		border-radius: 1rem;
-		padding: 0.6rem 1.2rem;
-		gap: 0.6rem;
+	.technologies p {
+		margin-top: 0.8rem;
 	}
 
 	.tools-i-use {
+		margin-top: 1.8rem;
+		display: grid;
+		gap: 2rem;
+	}
+
+	ul {
 		display: flex;
 		flex-wrap: wrap;
 		gap: 0.6rem;
+	}
+
+	.tools-i-use li {
+		display: flex;
+		gap: 0.5ch;
+		border-radius: 1rem;
+		padding: 0.6rem 1.2rem;
+	}
+
+	[class^='wrapper'] {
+		display: grid;
+		gap: 0.4rem;
 	}
 </style>

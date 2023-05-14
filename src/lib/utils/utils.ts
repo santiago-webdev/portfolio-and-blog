@@ -81,3 +81,49 @@ export function getCookie(name: string): string {
 	}
 	return 'system';
 }
+
+export function retrieve_icon(symbol: string): string | undefined {
+	switch (symbol.toLowerCase()) {
+		case 'javascript':
+			return 'devicon-plain:javascript';
+		case 'typescript':
+			return 'devicon-plain:typescript';
+		case 'sveltekit':
+		case 'svelte':
+			return 'devicon-plain:svelte';
+		case 'html':
+		case 'html5':
+			return 'devicon-plain:html5';
+		case 'css':
+		case 'css3':
+			return 'devicon-plain:css3';
+		case 'css modules':
+			return 'simple-icons:cssmodules';
+		case 'git':
+			return 'mdi:git';
+		case 'figma':
+			return 'ph:figma-logo';
+		case 'react':
+			return 'mdi:react';
+		case 'nextjs':
+			return 'simple-icons:nextdotjs';
+		case 'podman':
+			return 'devicon-plain:podman';
+		case 'docker':
+			return 'devicon-plain:docker';
+		case 'java':
+			return 'devicon-plain:java';
+		case 'python':
+			return 'devicon-plain:python';
+		case 'mysql':
+			return 'devicon-plain:mysql';
+		case 'sqlite':
+			return 'devicon-plain:sqlite';
+		case 'postgresql':
+			return 'devicon-plain:postgresql';
+		case 'github rest api':
+			return 'mdi:github';
+		default:
+			return '';
+	}
+}

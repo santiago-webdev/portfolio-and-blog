@@ -7,7 +7,7 @@
 	import site from '$lib/site.json';
 	import { page } from '$app/stores';
 	import Hollow from './Hollow.svelte';
-	import { readableDate, relativeTime } from '$lib/utils/utils';
+	import { readableDate, relativeTime, retrieve_icon } from '$lib/utils/utils';
 	import { base } from '$app/paths';
 	import LinkUI from './navigation/LinkUI.svelte';
 
@@ -56,7 +56,10 @@
 			{#if tags}
 				<ul class="tags inline-items">
 					{#each tags as tag}
-						<li class="shiny">{tag}</li>
+						<li class="shiny">
+							<iconify-icon width="22" height="22" icon={retrieve_icon(tag)} />
+							{tag}
+						</li>
 					{/each}
 				</ul>
 			{/if}

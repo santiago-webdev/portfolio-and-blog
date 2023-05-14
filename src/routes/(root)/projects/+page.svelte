@@ -7,26 +7,7 @@
 		FilteredProjects
 	} from '$lib/components/projects/store';
 	import site from '$lib/site.json';
-
-	function retrieve_icon(symbol: string): string | undefined {
-		switch (symbol.toLowerCase()) {
-			case 'javascript':
-				return 'devicon-plain:javascript';
-			case 'typescript':
-				return 'devicon-plain:typescript';
-			case 'sveltekit':
-			case 'svelte':
-				return 'devicon-plain:svelte';
-			case 'html':
-				return 'devicon-plain:html5';
-			case 'css':
-				return 'devicon-plain:css3';
-			case 'github rest api':
-				return 'mdi:github';
-			default:
-				return '';
-		}
-	}
+	import { retrieve_icon } from '$lib/utils/utils';
 </script>
 
 <main>
