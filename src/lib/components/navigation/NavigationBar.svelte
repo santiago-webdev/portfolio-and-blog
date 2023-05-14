@@ -74,41 +74,7 @@
 				aria-expanded={expanded}
 				on:click={() => (expanded = !expanded)}
 			>
-				{#if expanded}
-					<svg
-						aria-hidden="true"
-						xmlns="http://www.w3.org/2000/svg"
-						width="22"
-						height="22"
-						viewBox="0 0 24 24"
-					>
-						<path
-							fill="none"
-							stroke="currentColor"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M18 6L6 18M6 6l12 12"
-						/>
-					</svg>
-				{:else}
-					<svg
-						aria-hidden="true"
-						xmlns="http://www.w3.org/2000/svg"
-						width="22"
-						height="22"
-						viewBox="0 0 24 24"
-					>
-						<path
-							fill="none"
-							stroke="currentColor"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-							stroke-width="2"
-							d="M3 6h18M3 12h18M3 18h18"
-						/>
-					</svg>
-				{/if}
+				<iconify-icon icon="lucide:{expanded ? 'x' : 'align-justify'}" />
 			</button>
 
 			<div class="list-items">

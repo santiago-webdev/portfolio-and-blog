@@ -10,32 +10,14 @@
 {#if href}
 	<a {href} {target} {rel} {...$$restProps}>
 		<slot />
-		{#if custom_symbol}
-			{@html custom_symbol}
-		{:else if rel === 'external' || (target === '_blank' && !custom_symbol)}
-			<!-- Box with diagonal arrow(Link) -->
-			<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-				<path
-					fill="none"
-					stroke="currentColor"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6m4-3h6v6m-11 5L21 3"
-				/>
-			</svg>
+		{#if rel === 'external' || (target === '_blank' && !custom_symbol)}
+			<iconify-icon width="20" height="20" icon="lucide:external-link" />
 		{:else}
-			<!-- Horizontal arrow(Internal Link) -->
-			<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24">
-				<path
-					fill="none"
-					stroke="currentColor"
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					d="M5 12h14m-7-7l7 7l-7 7"
-				/>
-			</svg>
+			<iconify-icon
+				width={custom_symbol === 'mdi:github' ? '23' : 20}
+				height={custom_symbol === 'mdi:github' ? '23' : 20}
+				icon={custom_symbol ? custom_symbol : 'lucide:arrow-right'}
+			/>
 		{/if}
 	</a>
 {:else}

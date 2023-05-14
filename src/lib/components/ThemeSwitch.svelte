@@ -65,36 +65,9 @@
 	title="Theme switcher: Switch between a dark or light theme, or leave it to the system to decide"
 >
 	<div class="theme-wrapper" aria-hidden="true">
-		<svg id="sun" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
-			><g
-				fill="none"
-				stroke="currentColor"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				><circle cx="12" cy="12" r="4" /><path
-					d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32l1.41 1.41M2 12h2m16 0h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"
-				/></g
-			></svg
-		>
-
-		<svg id="moon" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"
-			><path
-				fill="none"
-				stroke="currentColor"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				stroke-width="2"
-				d="M12 3a6.364 6.364 0 0 0 9 9a9 9 0 1 1-9-9Z"
-			/></svg
-		>
-
-		<svg id="system" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24">
-			<path
-				fill="currentColor"
-				d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 2a8 8 0 0 1 8 8a8 8 0 0 1-8 8V4Z"
-			/>
-		</svg>
+		<iconify-icon icon="lucide:sun" />
+		<iconify-icon icon="lucide:moon" />
+		<iconify-icon icon="mdi:circle-half-full" />
 	</div>
 	<span>Theme</span>
 </button>
@@ -132,48 +105,48 @@
 		place-items: center;
 	}
 
-	svg:first-child {
+	iconify-icon:first-child {
 		position: absolute;
 	}
 
-	svg:nth-child(2) {
+	iconify-icon:nth-child(2) {
 		position: absolute;
 	}
 
-	svg {
+	iconify-icon {
 		pointer-events: none;
 		/* margin-inline: auto; */
 		display: flex;
 		transition: all 300ms cubic-bezier(0.3, 0, 0.3, 1);
 	}
 
-	#system {
+	[icon='mdi:circle-half-full'] {
 		color: var(--clr-100);
 		transform: translateX(15rem);
 	}
 
-	:global([data-theme='system'] #system),
-	:global([data-theme='system-light'] #system) {
+	:global([data-theme='system'] [icon='mdi:circle-half-full']),
+	:global([data-theme='system-light'] [icon='mdi:circle-half-full']) {
 		transform: translateX(0);
 	}
 
-	#sun {
+	[icon='lucide:sun'] {
 		color: orangered;
 		transform: rotate(90deg);
 		transform-origin: 50% 6rem;
 	}
 
-	:global([data-theme='light'] #sun) {
+	:global([data-theme='light'] [icon='lucide:sun']) {
 		transform: rotate(0deg);
 	}
 
-	#moon {
+	[icon='lucide:moon'] {
 		color: orange;
 		transform: rotate(-90deg);
 		transform-origin: -50% -6rem;
 	}
 
-	:global([data-theme='dark'] #moon) {
+	:global([data-theme='dark'] [icon='lucide:moon']) {
 		transform: rotate(0deg);
 	}
 </style>
