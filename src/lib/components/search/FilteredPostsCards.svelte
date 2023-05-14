@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import { readableDate } from '$lib/utils/utils';
+	import { readableDate, relativeTime } from '$lib/utils/utils';
 	import { onMount } from 'svelte';
 	import { FilteredPosts } from './store';
 	import { fly } from 'svelte/transition';
@@ -31,7 +31,12 @@
 							<p>No description was given.</p>
 						{/if}
 						{#if post.datetime}
-							<small>Published: {readableDate(post.datetime)}</small>
+							<time datetime={post.datetime}>
+								<iconify-icon width="21" heigh="21" icon="lucide:calendar" />
+								&nbsp;{relativeTime(new Date(), new Date(post.datetime))}
+								<div aria-orientation="vertical" role="separator">&nbsp;&mdash;&nbsp;</div>
+								{readableDate(post.datetime)}
+							</time>
 						{/if}
 					</article>
 				</a>
