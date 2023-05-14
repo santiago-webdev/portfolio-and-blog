@@ -216,6 +216,7 @@
 		flex-direction: column;
 		gap: 0.5rem;
 		padding-top: 2rem;
+		padding-bottom: 2rem;
 		width: min(92%, var(--sm));
 		margin-inline: auto;
 	}
