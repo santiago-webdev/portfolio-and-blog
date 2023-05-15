@@ -55,7 +55,7 @@
 	}
 
 	h1 {
-		color: var(--clr-150);
+		max-width: 15ch;
 	}
 
 	p {

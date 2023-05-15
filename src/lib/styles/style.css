@@ -123,7 +123,7 @@ input[type='radio']:checked + .shiny-select {
 }
 
 .reverse {
-	--background: var(--clr-100);
+	--background: var(--clr-200);
 	--border: var(--clr-200);
 	--color: var(--clr-10);
 
