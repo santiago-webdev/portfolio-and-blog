@@ -100,7 +100,7 @@ button[disabled] {
 input[type='radio']:checked + .shiny-select:active,
 input[type='radio']:checked + .shiny-select {
 	--background: var(--clr-15);
-	--border: var(--bg-select-200);
+	--border: var(--clr-60);
 	--color: var(--clr-100);
 	background-color: var(--background);
 	border: 1px solid var(--border);
@@ -111,8 +111,8 @@ input[type='radio']:checked + .shiny-select {
 @media (hover: hover) {
 	input[type='radio']:hover + .shiny-select,
 	.shiny-select:hover {
-		--background: var(--bg-select-100);
-		--border: var(--bg-select-200);
+		--background: var(--clr-55);
+		--border: var(--clr-60);
 		--color: var(--clr-100);
 		background-color: var(--background);
 		border: 1px solid var(--background);
