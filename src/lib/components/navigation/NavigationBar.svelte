@@ -83,6 +83,16 @@
 				{#each $navigationItems as { label, href }}
 					{#if label === 'Separator'}
 						<div role="separator" aria-orientation="vertical" />
+					{:else if label === 'Contact'}
+						<a
+							data-sveltekit-preload-code="eager"
+							aria-label="Contact me here"
+							class="bordered"
+							aria-current={$page.url.pathname.startsWith(href) && `/` !== href
+								? 'page'
+								: undefined}
+							{href}>{label}</a
+						>
 					{:else if label !== 'Home'}
 						<a
 							data-sveltekit-preload-code="eager"
@@ -99,13 +109,27 @@
 		<section style:display>
 			{#each $navigationItems as { label, href }}
 				{#if label !== 'Separator'}
-					<a
-						data-sveltekit-preload-code="eager"
-						class="shiny-select"
-						aria-current={$page.url.pathname.startsWith(href) && `/` !== href ? 'page' : undefined}
-						aria-label="Link to {label}"
-						{href}>{label}</a
-					>
+					{#if label === 'Contact'}
+						<a
+							data-sveltekit-preload-code="eager"
+							aria-label="Contact me here"
+							class="bordered"
+							aria-current={$page.url.pathname.startsWith(href) && `/` !== href
+								? 'page'
+								: undefined}
+							{href}>{label}</a
+						>
+					{:else}
+						<a
+							data-sveltekit-preload-code="eager"
+							class="shiny-select"
+							aria-current={$page.url.pathname.startsWith(href) && `/` !== href
+								? 'page'
+								: undefined}
+							aria-label="Link to {label}"
+							{href}>{label}</a
+						>
+					{/if}
 					<hr />
 				{/if}
 			{/each}
@@ -122,6 +146,10 @@
 		z-index: 999;
 		padding: 0.2rem 0;
 		background-color: var(--clr-25);
+	}
+
+	a {
+		color: inherit;
 	}
 
 	header.anchored {

@@ -8,7 +8,7 @@ html {
 	color-scheme: light dark;
 	font-family: var(--ff-text);
 	background-color: var(--clr-10);
-	color: var(--clr-100);
+	color: var(--clr-150);
 }
 
 var {
@@ -50,6 +50,11 @@ button[disabled] {
 
 .trn-border {
 	border: 1px solid transparent;
+}
+
+.bordered {
+	border: 2px var(--clr-60) solid;
+	border-radius: 1rem;
 }
 
 .shiny {

@@ -65,9 +65,9 @@
 	title="Theme switcher: Switch between a dark or light theme, or leave it to the system to decide"
 >
 	<div class="theme-wrapper" aria-hidden="true">
-		<iconify-icon icon="lucide:sun" />
-		<iconify-icon icon="lucide:moon" />
-		<iconify-icon icon="mdi:circle-half-full" />
+		<iconify-icon width="28" height="28" icon="lucide:sun" />
+		<iconify-icon width="28" height="28" icon="lucide:moon" />
+		<iconify-icon width="28" height="28" icon="mdi:circle-half-full" />
 	</div>
 	<span>Theme</span>
 </button>

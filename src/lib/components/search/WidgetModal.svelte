@@ -124,7 +124,7 @@
 		display: flex;
 		gap: 0.4rem;
 		place-items: center;
-		border-radius: 0.75rem;
+		border-radius: 1rem;
 	}
 
 	button span,

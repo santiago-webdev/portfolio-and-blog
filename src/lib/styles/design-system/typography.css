@@ -75,6 +75,7 @@ a,
 button,
 h6,
 .font-20 {
+	color: inherit;
 	font-family: var(--ff-text);
 	font-size: var(--fs-20);
 	font-variation-settings: 'wght' 400;
