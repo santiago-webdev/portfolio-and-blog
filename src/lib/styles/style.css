@@ -190,6 +190,7 @@ small {
 
 time {
 	display: flex;
+  flex-wrap: wrap;
 	place-items: center;
 }
 
