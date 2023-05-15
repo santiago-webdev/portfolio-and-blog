@@ -204,7 +204,7 @@
 
 	header.scrollY nav a:first-child span,
 	header nav a:first-child span {
-		opacity: 0;
+		display: none;
 	}
 
 	.navigation-items {
@@ -228,8 +228,7 @@
 
 		header.anchored nav a:first-child span,
 		header nav a:first-child span {
-			opacity: 1;
-			transition: opacity 150ms ease-in-out;
+			display: flex;
 		}
 	}
 
