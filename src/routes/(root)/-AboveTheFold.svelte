@@ -75,6 +75,12 @@
 		}
 	}
 
+	@media screen and (min-height: 1280px) {
+		main {
+			padding: 3rem 0;
+		}
+	}
+
 	@media screen and (min-width: 1280px) {
 		main {
 			flex-flow: row;
