@@ -1,10 +1,12 @@
 :root {
-	--ff-dflt: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
-		Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-	--ff-text: 'Basier Circle', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-		Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
-	--ff-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco,
-		Droid Sans Mono, Source Code Pro, monospace;
+	--ff-dflt: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+		'Segoe UI Symbol';
+	--ff-text: 'Basier Circle', system-ui, -apple-system, BlinkMacSystemFont,
+		'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+		'Segoe UI Emoji', 'Segoe UI Symbol';
+	--ff-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace,
+		SF Mono, Monaco, Droid Sans Mono, Source Code Pro, monospace;
 
 	/* Scale in multiples of 16px which is the base font most of the times. */
 	--fs-10: clamp(0.5rem, 2vw + 1rem, 1rem);
@@ -143,7 +145,7 @@ h1,
 	font-size: var(--fs-80);
 	font-variation-settings: 'wght' 700;
 	font-weight: 700;
-	letter-spacing: -0.05em;
+	letter-spacing: -0.12rem;
 	line-height: calc(var(--fs-80) * 1.1);
 	color: var(--clr-200);
 }
@@ -153,7 +155,7 @@ h1,
 	font-size: var(--fs-85);
 	font-variation-settings: 'wght' 700;
 	font-weight: 700;
-	letter-spacing: -0.05em;
+	letter-spacing: -0.12rem;
 	line-height: calc(var(--fs-85) * 1.1);
 	color: var(--clr-200);
 }
@@ -161,7 +163,7 @@ h1,
 .font-90 {
 	font-family: var(--ff-dflt);
 	font-size: var(--fs-90);
-	font-variation-settings: 'wght' 700;
+	font-variation-settings: 'wght' 800;
 	font-weight: 800;
 	letter-spacing: -0.05em;
 	line-height: calc(var(--fs-90) * 1.1);

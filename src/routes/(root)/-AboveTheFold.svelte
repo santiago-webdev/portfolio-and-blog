@@ -7,7 +7,7 @@
 <div class="wrapper">
 	<main>
 		<div class="introduction">
-			<h1 class="font-85">
+			<h1 class="font-80">
 				Building the web<br /> && clean interfaces
 			</h1>
 			<p>
@@ -60,6 +60,7 @@
 
 	p {
 		max-width: 38ch;
+		color: var(--clr-200);
 	}
 
 	section {
@@ -71,7 +72,8 @@
 
 	@media screen and (min-width: 768px) {
 		section {
-			flex-flow: row wrap-reverse;
+			flex-direction: row;
+			gap: 1.2rem;
 		}
 	}
 

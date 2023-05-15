@@ -100,7 +100,7 @@
 		font-variation-settings: 'wght' 400;
 	}
 
-  time {
-    place-content: center;
-  }
+	time {
+		place-content: center;
+	}
 </style>
