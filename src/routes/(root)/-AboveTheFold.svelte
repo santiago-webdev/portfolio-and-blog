@@ -64,9 +64,15 @@
 
 	section {
 		display: flex;
-		flex-flow: row wrap-reverse;
+		flex-direction: column;
 		gap: 0.8rem;
 		margin-top: 1.2rem;
+	}
+
+	@media screen and (min-width: 768px) {
+		section {
+			flex-flow: row wrap-reverse;
+		}
 	}
 
 	@media screen and (min-width: 1280px) {
