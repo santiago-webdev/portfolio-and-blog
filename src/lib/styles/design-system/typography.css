@@ -1,12 +1,10 @@
 :root {
-	--ff-dflt: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-		Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-		'Segoe UI Symbol';
-	--ff-text: 'Basier Circle', system-ui, -apple-system, BlinkMacSystemFont,
-		'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-		'Segoe UI Emoji', 'Segoe UI Symbol';
-	--ff-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace,
-		SF Mono, Monaco, Droid Sans Mono, Source Code Pro, monospace;
+	--ff-dflt: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+		Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	--ff-text: 'Basier Circle', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+		Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	--ff-mono: Dank Mono, Operator Mono, Inconsolata, Fira Mono, ui-monospace, SF Mono, Monaco,
+		Droid Sans Mono, Source Code Pro, monospace;
 
 	/* Scale in multiples of 16px which is the base font most of the times. */
 	--fs-10: clamp(0.5rem, 2vw + 1rem, 1rem);
