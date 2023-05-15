@@ -9,7 +9,9 @@
 
 {#if href}
 	<a {href} {target} {rel} {...$$restProps}>
-		<slot />
+		<span>
+			<slot />
+		</span>
 		{#if rel === 'external' || (target === '_blank' && !custom_symbol)}
 			<iconify-icon width="20" height="20" icon="lucide:external-link" />
 		{:else}
@@ -37,6 +39,11 @@
 		font-size: var(--fs-15);
 		line-height: var(--fs-15);
 		font-variation-settings: 'wght' 700;
+	}
+
+	span {
+		color: inherit;
+		min-width: 11ch;
 	}
 
 	.bttn-big-round {

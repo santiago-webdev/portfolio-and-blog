@@ -285,8 +285,14 @@
 	.container-project-links {
 		margin-top: 1.6rem;
 		display: flex;
-		flex-wrap: wrap;
+		flex-direction: column;
 		gap: 1rem;
+	}
+
+	@media screen and (min-width: 768px) {
+		.container-project-links {
+			flex-flow: row wrap;
+		}
 	}
 
 	li {
