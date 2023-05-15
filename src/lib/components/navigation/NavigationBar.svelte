@@ -205,6 +205,7 @@
 
 		.list-items {
 			display: flex;
+			place-items: center;
 		}
 	}
 
