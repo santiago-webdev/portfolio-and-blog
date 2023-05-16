@@ -11,38 +11,25 @@
 	var expanded = false,
 		scrollY = 0,
 		savedY = 0,
-		innerHeight = 0,
-		hideElement = false,
-		hideHeader = false,
+		outerWidth = 0,
+		in_viewport = true,
+		transform = '',
 		transparent = false,
 		anchored = false;
 
 	afterNavigate(() => {
 		expanded = false;
+		transparent = $page.url.pathname === `${base}/about`;
+		anchored = transparent;
 	});
 
-	afterNavigate(() =>
-		$page.url.pathname === `${base}/about`
-			? ((transparent = true), (anchored = true))
-			: ((transparent = false), (anchored = false))
-	);
-
 	onMount(() => {
-		window.addEventListener('resize', () =>
-			window.matchMedia('(min-width: 1280px)').matches ? (expanded = false) : undefined
-		);
-
-		window.addEventListener('scroll', () => {
-			hideHeader = !expanded && hideElement && scrollY > savedY;
-			savedY = scrollY;
-		});
-
 		const main = document.querySelector('main');
 
 		if (main) {
 			const observer = new IntersectionObserver((entries) =>
 				entries.forEach((entry) => {
-					if (entry.target === main) hideElement = !entry.isIntersecting;
+					if (entry.target === main) in_viewport = entry.isIntersecting;
 				})
 			);
 
@@ -50,12 +37,18 @@
 		}
 	});
 
+	$: {
+		transform = !expanded && !in_viewport && scrollY > savedY ? 'translateY(-200%)' : '';
+		savedY = scrollY;
+	}
+
+	$: if (outerWidth > 1280) expanded = false;
 	$: display = expanded ? 'flex' : 'none';
 </script>
 
-<svelte:window bind:scrollY bind:innerHeight />
+<svelte:window bind:scrollY bind:outerWidth />
 
-<header class:anchored class:transparent class:expanded class:scrollY class:hideHeader>
+<header style:transform class:anchored class:transparent class:expanded class:scrollY>
 	<nav aria-label="primary-navigation">
 		<a
 			href="{base}/"
@@ -142,7 +135,7 @@
 	header {
 		position: sticky;
 		top: 0;
-		transition: background-color, transform 300ms ease-in-out;
+		transition: background-color, transform 200ms cubic-bezier(0.5, 0.95, 0, 1);
 		z-index: 999;
 		padding: 0.2rem 0;
 		background-color: var(--clr-25);
@@ -158,10 +151,6 @@
 		background-color: transparent !important;
 		border-color: transparent !important;
 		border-width: 0 !important;
-	}
-
-	header.hideHeader {
-		transform: translateY(-200%);
 	}
 
 	header.expanded,
