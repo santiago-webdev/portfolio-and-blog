@@ -45,6 +45,7 @@
 	<kbd class="font-20">Ctrl K</kbd>
 </button>
 <dialog
+	aria-modal
 	use:clickOutside
 	on:close={() => (value = '')}
 	on:cancel={() => (value = '')}

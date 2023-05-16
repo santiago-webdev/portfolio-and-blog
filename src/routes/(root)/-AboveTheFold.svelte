@@ -19,9 +19,12 @@
 				<ShapeButton href="{base}/projects" class="bttn-big-round reverse hover">
 					What I've built</ShapeButton
 				>
-				<ShapeButton href="#todo" rel="external" class="bttn-big-round shiny hover">
-					Resume</ShapeButton
-				>
+				<div class="container">
+					<ShapeButton href="#todo" rel="external" class="bttn-big-round shiny hover">
+						Resume</ShapeButton
+					>
+					<small>Hit Ctrl+P to print</small>
+				</div>
 			</section>
 		</div>
 		<div class="call-to-scroll">
@@ -54,6 +57,10 @@
 		gap: 0.8rem;
 	}
 
+	small {
+		display: none;
+	}
+
 	h1 {
 		max-width: 15ch;
 	}
@@ -73,7 +80,14 @@
 	@media screen and (min-width: 768px) {
 		section {
 			flex-direction: row;
+			place-items: self-start;
 			gap: 1.2rem;
+		}
+
+		small {
+			padding-inline: 1.8rem;
+			display: block;
+			margin-top: 1ch;
 		}
 	}
 
