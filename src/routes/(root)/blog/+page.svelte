@@ -4,8 +4,8 @@
 	import site from '$lib/site.json';
 	import { Posts } from '$lib/components/search/store';
 
-	let base = `${$Posts.length} articles about Linux, web development, and
-tooling. Follow my journey to become a front-end developer.`;
+	let base = `${$Posts.length} ${site.blog.description}`;
+	const description = base;
 	const boldWords = ['Linux', 'web development', 'tooling'];
 
 	boldWords.forEach((word: string) => {
@@ -29,11 +29,11 @@ tooling. Follow my journey to become a front-end developer.`;
 
 	<!-- TODO(santigo-zero): meta tags for dynamic routing -->
 	<!-- HTML Meta Tags -->
-	<meta name="description" content={site.blog.description} />
+	<meta name="description" content={description} />
 
 	<!-- Google / Search Engine Tags -->
 	<meta itemprop="name" content={site.blog.title} />
-	<meta itemprop="description" content={site.blog.description} />
+	<meta itemprop="description" content={description} />
 	<meta itemprop="image" content="" />
 	<!-- TODO(santigo-zero): Add image -->
 
@@ -41,14 +41,14 @@ tooling. Follow my journey to become a front-end developer.`;
 	<meta property="og:url" content={site.blog.url} />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content={site.blog.title} />
-	<meta property="og:description" content={site.blog.description} />
+	<meta property="og:description" content={description} />
 	<meta property="og:image" content="" />
 	<!-- TODO(santigo-zero): Add image -->
 
 	<!-- Twitter Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content={site.blog.title} />
-	<meta name="twitter:description" content={site.blog.description} />
+	<meta name="twitter:description" content={description} />
 	<meta name="twitter:image" content="" />
 	<!-- TODO(santigo-zero): Add image -->
 </svelte:head>

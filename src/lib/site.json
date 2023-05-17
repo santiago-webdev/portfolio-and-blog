@@ -10,7 +10,7 @@
 	"blog": {
 		"title": "Santiago's Blog",
 		"title_append": "Santiago Gonzalez Blog",
-		"description": "In this blog you are going to find articles about Linux, web technologies and frontend development",
+		"description": "articles about Linux, web development, and tooling. Follow my journey to become a front-end developer.",
 		"url": "https://santiagogonzalez.dev/blog"
 	},
 	"portfolio": {
