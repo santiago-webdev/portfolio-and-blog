@@ -106,7 +106,7 @@
 
 		.call-to-scroll {
 			position: absolute;
-			inset: 75% 0 25% auto;
+			inset: 70% 0 auto auto;
 			transform: rotate(90deg);
 		}
 	}
