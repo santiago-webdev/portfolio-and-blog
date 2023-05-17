@@ -4,20 +4,25 @@
 	import site from '$lib/site.json';
 	import { Posts } from '$lib/components/search/store';
 
-	let base = `${$Posts.length} articles about Linux, web development, and
+	const base = `${$Posts.length} articles about Linux, web development, and
 tooling. Follow my journey to become a front-end developer.`;
-	const boldWords = ['Linux', 'web development', 'tooling'];
+	const boldWords = ['Linux', 'web technologies', 'development'];
 
+	let intro: string = base;
 	boldWords.forEach((word: string) => {
-		base = base.replace(new RegExp(word, 'g'), `<strong>${word}</strong>`);
+		intro = intro.replace(new RegExp(word, 'g'), `<strong>${word}</strong>`);
 	});
+
+	console.log(intro);
 </script>
 
 <main>
 	<hgroup>
 		<h1>Blog</h1>
-		<!-- eslint-disable -->
-		<p>{@html base}</p>
+		<p>
+			<!-- eslint-disable -->
+			{@html intro}
+		</p>
 	</hgroup>
 	<br />
 	<SearchBar />

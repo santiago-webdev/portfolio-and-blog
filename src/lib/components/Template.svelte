@@ -44,15 +44,17 @@
 			<LinkUI orientation="left" href="{base}/blog">Back to Blog</LinkUI>
 		</div>
 		<div class="wrapper-header">
-			{#if isHollow}
-				<h1 class="font-80">
-					<Hollow color={'var(--clr-100)'}>{hollowPrefix}</Hollow>
-					{fillSuffix}
-				</h1>
-			{:else}
-				<h1 class="font-80">{title}</h1>
-			{/if}
-			<p>{description}</p>
+			<hgroup>
+				{#if isHollow}
+					<h1 class="font-80">
+						<Hollow color={'var(--clr-100)'}>{hollowPrefix}</Hollow>
+						{fillSuffix}
+					</h1>
+				{:else}
+					<h1 class="font-80">{title}</h1>
+				{/if}
+				<p>{description}</p>
+			</hgroup>
 			{#if tags}
 				<ul class="tags inline-items">
 					{#each tags as tag}
@@ -146,12 +148,18 @@
 		padding-top: 1rem;
 	}
 
+	hgroup {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
 	:global(main p) {
 		width: min(100%, 60ch);
 	}
 
 	.wrapper-header {
-		gap: 1rem;
+		gap: 1.2rem;
 		text-align: center;
 	}
 
