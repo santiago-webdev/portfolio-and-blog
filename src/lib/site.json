@@ -17,5 +17,8 @@
 		"title": "Santiago's Portfolio",
 		"description": "Showcasing all of my projects; Come take a look!",
 		"url": "https://santiagogonzalez.dev/project"
+	},
+	"resume": {
+		"url": "https://resume.santiagogonzalez.dev"
 	}
 }

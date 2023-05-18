@@ -2,13 +2,14 @@
 	import { base } from '$app/paths';
 	import LinkUI from '$lib/components/navigation/LinkUI.svelte';
 	import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
+	import site from '$lib/site.json';
 </script>
 
 <div class="wrapper">
 	<main>
 		<div class="introduction">
 			<h1 class="font-80">
-				Building the web<br /> && clean interfaces
+				Building the web<br /> with clean interfaces
 			</h1>
 			<p>
 				I'm a frontend developer and here we'll discuss about
@@ -20,7 +21,12 @@
 					What I've built</ShapeButton
 				>
 				<div class="container">
-					<ShapeButton href="#todo" rel="external" class="bttn-big-round shiny hover">
+					<ShapeButton
+						href={site.resume.url}
+						target="_blank"
+						rel="external"
+						class="bttn-big-round shiny hover"
+					>
 						Resume</ShapeButton
 					>
 					<small>Hit Ctrl+P to print</small>
