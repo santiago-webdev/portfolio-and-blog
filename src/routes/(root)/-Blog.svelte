@@ -58,10 +58,9 @@
 
 	.wrapper {
 		display: grid;
-		gap: 3rem;
+		gap: 4rem;
 
-		width: min(92%, var(--lg));
-		background-color: var(--clr-20);
+		width: min(100%, var(--lg));
 		padding: 2rem;
 		border-radius: 0.8rem;
 	}
@@ -86,8 +85,8 @@
 
 	section {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(min(100%, 23rem), 1fr));
-		gap: 1.6rem;
+		grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+		gap: 4rem 1.6rem;
 	}
 
 	article {
@@ -100,7 +99,7 @@
 	.img-wrapper {
 		max-height: 36rem;
 		overflow: hidden;
-		border-radius: 0.8rem;
+		border-radius: 0.6rem;
 	}
 
 	img {
