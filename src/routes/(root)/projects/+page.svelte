@@ -205,6 +205,7 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
+		min-width: min(100%, var(--xs));
 	}
 
 	.projects-presentation p {
@@ -217,7 +218,7 @@
 		flex-flow: column wrap;
 		place-content: center;
 		gap: 1rem;
-		min-width: var(--xs);
+		min-width: min(100%, var(--xs));
 	}
 
 	label {
