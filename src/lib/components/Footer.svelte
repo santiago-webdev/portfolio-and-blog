@@ -35,97 +35,99 @@
 
 <ButtonToTheTop />
 <footer>
-	<div class="font-20 footer-start">
-		<section>
-			<div class="aboutme">
-				<h3 class="font-30">Santiago Gonzalez</h3>
-				<p class="font-20">
-					I'm a web developer that can help you craft accessible website experiences without leaving
-					the aesthetics aside.
-				</p>
-			</div>
+	<header>
+		<div class="aboutme">
+			<h3 class="font-30">Santiago Gonzalez</h3>
+			<p class="font-30">
+				Crafting accessible web experiences without leaving the aesthetics aside.
+			</p>
+		</div>
 
-			<nav aria-label="footer-navigation">
-				<h3 class="font-20">Sitemap</h3>
+		<nav aria-label="footer-navigation">
+			<h3 class="font-20">Sitemap</h3>
+			<ul class="shiny-select">
 				{#each $navigationItems as item}
 					{#if item.label !== 'Separator'}
-						<a
-							class="shiny-select"
-							aria-current={item.href === $page.url.pathname ||
-							($page.url.pathname.startsWith(item.href || '') && `/` !== item.href)
-								? 'page'
-								: undefined}
-							aria-label="Link to {item.label}"
-							href={item.href}>{item.label}</a
-						>
-					{/if}
-				{/each}
-			</nav>
-
-			<div class="relevant-projects">
-				<h3 class="font-20">Projects</h3>
-				<ul>
-					<li>
-						<a class="shiny-select" target="_blank" href="https://zapzsh.org">Zap website</a>
-					</li>
-				</ul>
-			</div>
-
-			<div class="donate">
-				<h3 class="font-20">Donate</h3>
-				<ul>
-					{#each donateItems as item}
 						<li>
-							<a class="shiny-select" href="bitcoin:{item.direction}">
-								<address>
-									<iconify-icon icon="simple-icons:{item.logo}" />
-									{item.name}
-								</address>
-							</a>
-							<button
-								class="shiny-select"
-								aria-label="Copy the direction of the wallet"
-								title="Copy the direction of the wallet"
-								on:click={() =>
-									navigator.clipboard
-										.writeText(item.direction)
-										.then(() => console.log('Text copied to clipboard'))
-										.catch((error) => console.error('Could not copy text: ', error))}
-								><iconify-icon height="22" weight="22" icon="lucide:clipboard-copy" /></button
+							<a
+								aria-current={item.href === $page.url.pathname ||
+								($page.url.pathname.startsWith(item.href || '') && `/` !== item.href)
+									? 'page'
+									: undefined}
+								aria-label="Link to {item.label}"
+								href={item.href}>{item.label}</a
 							>
 						</li>
-					{/each}
-				</ul>
-			</div>
+					{/if}
+				{/each}
+			</ul>
+		</nav>
 
-			<div class="contact">
-				<h3 class="font-20">Contact</h3>
-				<address>
-					<a target="_blank" class="shiny-select" href="mailto:santiagogonzalezbogado@gmail.com">
-						<iconify-icon icon="lucide:mail" />
-						Email me</a
-					>
-				</address>
-				<address>
-					<a target="_blank" class="shiny-select" href="https://github.com/santigo-zero/">
-						<iconify-icon aria-label="GitHub icon" role="img" icon="simple-icons:github" />
-						GitHub profile</a
-					>
-				</address>
-				<address>
-					<a
-						target="_blank"
-						class="shiny-select"
-						href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/"
-					>
-						<iconify-icon icon="simple-icons:linkedin" />LinkedIn profile
-					</a>
-				</address>
-			</div>
-		</section>
-	</div>
-	<div class="footer-end font-20">
-		<section>
+		<div class="projects">
+			<h3 class="font-20">Projects</h3>
+			<ul class="shiny-select">
+				<li>
+					<a target="_blank" href="https://zapzsh.org">Zap website</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://zapzsh.org">Lorem website</a>
+				</li>
+				<li>
+					<a target="_blank" href="https://zapzsh.org">Another website</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="donate">
+			<h3 class="font-20">Donate</h3>
+			<ul class="shiny-select">
+				{#each donateItems as item}
+					<li>
+						<address>
+							<a href="bitcoin:{item.direction}">
+								<iconify-icon icon="simple-icons:{item.logo}" />
+								{item.name}
+							</a>
+						</address>
+						<!-- <button -->
+						<!-- 	aria-label="Copy the direction of the wallet" -->
+						<!-- 	title="Copy the direction of the wallet" -->
+						<!-- 	on:click={() => -->
+						<!-- 		navigator.clipboard -->
+						<!-- 			.writeText(item.direction) -->
+						<!-- 			.then(() => console.log('Text copied to clipboard')) -->
+						<!-- 			.catch((error) => console.error('Could not copy text: ', error))} -->
+						<!-- 	><iconify-icon height="22" weight="22" icon="lucide:clipboard-copy" /></button -->
+						<!-- > -->
+					</li>
+				{/each}
+			</ul>
+		</div>
+
+		<div class="contact">
+			<h3 class="font-20">Contact</h3>
+			<address class="shiny-select">
+				<a target="_blank" href="mailto:santiagogonzalezbogado@gmail.com">
+					<iconify-icon icon="lucide:mail" />
+					Email me</a
+				>
+			</address>
+			<address class="shiny-select">
+				<a target="_blank" href="https://github.com/santigo-zero/">
+					<iconify-icon icon="simple-icons:github" />
+					GitHub</a
+				>
+			</address>
+			<address class="shiny-select">
+				<a target="_blank" href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/">
+					<iconify-icon icon="simple-icons:linkedin" />
+					LinkedIn
+				</a>
+			</address>
+		</div>
+	</header>
+	<section>
+		<div class="font-20 container-bottom">
 			<a
 				target="_blank"
 				href="https://github.com/santigo-zero"
@@ -159,69 +161,53 @@
 			</a>
 
 			<small class="copyright">
-				<iconify-icon icon="lucide:copyright" />
-				2023 - present
-				<div aria-orientation="vertical" role="separator">•</div>
-				All rights reserved
-				<div aria-orientation="vertical" role="separator">•</div>
+				All rights reserved <iconify-icon icon="lucide:copyright" />
+				{new Date().getFullYear()}
+				<div aria-orientation="vertical" role="separator">&mdash;</div>
 				GPL-3.0
 			</small>
-		</section>
-	</div>
+		</div>
+	</section>
 </footer>
 
 <style>
 	footer {
-		border-top-right-radius: 1.6rem;
-		border-top-left-radius: 1.6rem;
+		display: flex;
+		place-content: center;
+		flex-direction: column;
 		background-color: var(--clr-25);
 		margin-top: 1rem;
-		font-family: var(--ff-text);
+		border-top-right-radius: 1.6rem;
+		border-top-left-radius: 1.6rem;
 	}
 
-	small,
-	button,
-	li,
-	p,
-	h3,
-	a {
+	footer :is(a, small) {
 		display: flex;
+		gap: 0.4ch;
 		place-items: center;
-		gap: 0.5ch;
-		color: inherit;
-		font-weight: 400;
 	}
 
-	section {
-		display: flex;
-		margin-inline: auto;
-		width: min(100% - clamp(1rem, 2vw + 1.5rem, 3rem), var(--md));
-	}
-
-	.footer-start * {
-		gap: 0.1rem;
-	}
-
-	.footer-start section {
-		display: flex;
+	header {
+		display: grid;
 		flex-flow: row wrap;
 		justify-content: space-between;
 		padding: clamp(1rem, 3vw, 2rem) 0;
-		gap: 1.6rem;
+		gap: 1rem;
+		width: min(92%, var(--md));
+		margin-inline: auto;
+		font-family: var(--ff-text);
 	}
 
-	h3 {
+	header > * {
+		display: flex;
+		flex-direction: column;
+	}
+
+	header h3:not(.aboutme h3) {
 		font-weight: 500;
-	}
-
-	h3:not(.aboutme h3) {
 		text-decoration: underline solid var(--clr-65) 2px;
 		text-underline-offset: 3px;
 		margin: 0 0.6rem 0.4rem;
-	}
-
-	.footer-start p {
-		color: var(--clr-95);
 	}
 
 	.aboutme {
@@ -232,7 +218,7 @@
 		flex: 1 23rem;
 		gap: 1rem;
 		padding: 2rem;
-		border-radius: 1rem;
+		border-radius: 1.2rem;
 
 		--background: var(--clr-30);
 		--border: var(--clr-35);
@@ -241,6 +227,10 @@
 		border-top-color: var(--border);
 		border-left-color: var(--border);
 		box-shadow: 0 8px 16px 0 rgba(0 0 0 / 0.15);
+	}
+
+	.aboutme p {
+		color: var(--clr-90);
 	}
 
 	.aboutme:after {
@@ -257,50 +247,63 @@
 
 	:global([data-theme='dark'] .aboutme:after),
 	:global([data-theme='system'] .aboutme:after) {
-		opacity: 0.06;
+		opacity: 0.03;
 		background-image: url('/logo.svg');
 	}
 
 	:global([data-theme='light'] .aboutme:after),
 	:global([data-theme='system-light'] .aboutme:after) {
-		opacity: 0.15;
+		opacity: 0.1;
 		background-image: url('/logo-light.svg');
 	}
 
-	.footer-start section > * {
-		display: flex;
-		flex-direction: column;
-		min-width: calc(var(--xs) / 2);
+	header {
+		grid-template-columns: repeat(8, 1fr);
 	}
 
-	li a {
-		width: 100%;
+	.aboutme {
+		grid-column: span 8;
 	}
 
-	.donate address {
-		display: flex;
-		place-items: center;
-		gap: 0.5ch;
-		padding: 0;
-		border-radius: 0;
+	nav,
+	.projects,
+	.donate,
+	.contact {
+		grid-column: span 4;
 	}
 
-	.footer-end {
+	nav {
+		grid-row: span 3;
+	}
+
+	section {
 		display: flex;
 		place-content: center;
-		background-color: var(--clr-35);
+		background-color: var(--clr-40);
 	}
 
-	.footer-end a:hover {
-		color: var(--clr-85);
+	section :is(small, a) {
+		color: var(--clr-300);
+		font-variation-settings: 'wght' 530;
+		font-family: var(--ff-dflt);
+		font-size: inherit;
 	}
 
-	.footer-end section {
+	@media (hover: hover) {
+		.container-bottom a:hover,
+		.container-bottom a:hover > * {
+			color: var(--clr-red-40);
+		}
+	}
+
+	.container-bottom {
 		display: flex;
 		flex-direction: column;
 		place-items: center;
-		gap: 2rem;
-		padding: 3rem 0;
+		gap: 1.2rem;
+		padding: 2rem 0;
+		width: min(92%, var(--md));
+		margin-inline: auto;
 	}
 
 	.copyright {
@@ -309,19 +312,11 @@
 		place-content: center;
 	}
 
-	@media screen and (min-width: 1280px) {
-		.footer-end section {
+	@media screen and (min-width: 1200px) {
+		.container-bottom {
 			flex-flow: row wrap;
 			justify-content: space-between;
 			padding: 0.6rem 0;
 		}
-	}
-
-	address,
-	a,
-	small,
-	button {
-		font-size: inherit;
-		font-family: inherit;
 	}
 </style>
