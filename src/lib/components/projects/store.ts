@@ -25,6 +25,7 @@ export const AllProjects = readable<Array<Project>>([
 		category: ['featured', 'frontend', 'opensource'],
 		stack: {
 			frontend: ['JavaScript', 'HTML', 'CSS'],
+			backend: ['JavaScript', 'HTML', 'CSS'],
 			api: ['GitHub REST API']
 		},
 		img: '/portfolio/zap-website.webp',

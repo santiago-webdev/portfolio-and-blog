@@ -12,14 +12,14 @@
 
 <main>
 	<div class="container-projects">
-		<div class="projects-presentation">
+		<header>
 			<h1 class="font-50">
 				Projects Showcase - {getCategoryInfo($currentGroupOfProjects).label}
 			</h1>
 			<p class="font-50">
 				{getCategoryInfo($currentGroupOfProjects).description}
 			</p>
-		</div>
+		</header>
 		<form class="font-30">
 			<label for="projects">
 				Filter by type of project
@@ -35,23 +35,19 @@
 		</form>
 	</div>
 </main>
-
 <section>
 	{#each $FilteredProjects as { name, description, category, stack, img, repo, link, accent }}
 		<article>
-			<!-- screenshot of the landing page of the website here -->
 			<div class="img-wrapper">
 				<img loading="lazy" src={img} alt="Screenshot of {name}" title="Screenshot of {name}" />
 			</div>
 			<div id="describe-{name}">
-				<div class="describe-project-banner">
-					<!-- domain -->
+				<header>
 					<a href={link.toString()} target="_blank" class="font-40">
 						<span style:color="var({accent ? accent : '--clr-200'})"
 							>{link.hostname.replace(/^www\./i, '')}</span
 						>
 					</a>
-					<!-- name and categories -->
 					<div style:gap="2ch" class="inline-items">
 						<h2 class="font-30">{name}</h2>
 						<ul class="inline-items">
@@ -60,18 +56,11 @@
 							{/each}
 						</ul>
 					</div>
-				</div>
-				<!-- description -->
+				</header>
 				<p class="font-20">{description}</p>
-				<!-- tech  -->
-				<h3
-					class="font-10"
-					style="margin-top: 0.8rem; color: var(--clr-150); font-variation-settings: 'wght' 700;"
-				>
-					Tech Stack:
-				</h3>
-				<!-- frontend -->
-				<div class="list-project-frontend inline-items">
+
+				<h3 class="font-10">Tech Stack:</h3>
+				<div class="list-project-frontend">
 					{#if stack.frontend}
 						<h4 class="font-10">Frontend:</h4>
 						<ul class="inline-items font-10">
@@ -84,8 +73,7 @@
 						</ul>
 					{/if}
 				</div>
-				<!-- api -->
-				<div class="list-project-api inline-items">
+				<div class="list-project-api">
 					{#if stack.api}
 						<h4 class="font-10">API:</h4>
 						<ul class="inline-items font-10">
@@ -98,8 +86,7 @@
 						</ul>
 					{/if}
 				</div>
-				<!-- backend -->
-				<div class="list-project-backend inline-items">
+				<div class="list-project-backend">
 					{#if stack.backend}
 						<h4 class="font-10">Backend:</h4>
 						<ul class="inline-items font-10">
@@ -112,7 +99,7 @@
 						</ul>
 					{/if}
 				</div>
-				<!-- links to source code and case study -->
+
 				<div class="container-project-links">
 					<ShapeButton
 						class="bttn-big-round shiny hover"
@@ -129,23 +116,24 @@
 			</div>
 		</article>
 	{/each}
-
-	<article id="portfolio-new">
+	<article>
 		<button>
 			<iconify-icon width="30" height="30" icon="lucide:plus" />
 		</button>
-		<div id="describe-new">
-			<a href="#todo" target="_blank" class="font-40">
-				<span style:color="var(--clr-200)">newdomain.com</span>
-			</a>
-			<h2 class="font-30">Takeaway Interview?</h2>
-			<p>
-				Try Me! As a junior developer with a passion for turning ideas into reality, I'm excited to
-				work with you on your new project.
-			</p>
-			<ul>
-				<li class="shiny">New</li>
-			</ul>
+		<div id="describe-new-project">
+			<header>
+				<a href="#todo" target="_blank" class="font-40">
+					<span style:color="var(--clr-200)">newdomain.com</span>
+				</a>
+				<h2 class="font-30">Takeaway Interview?</h2>
+				<p>
+					Try Me! As a junior developer with a passion for turning ideas into reality, I'm excited
+					to work with you on your new project.
+				</p>
+				<ul>
+					<li class="shiny">New</li>
+				</ul>
+			</header>
 		</div>
 	</article>
 </section>
@@ -200,7 +188,7 @@
 		gap: 1.6rem;
 	}
 
-	.projects-presentation {
+	main header {
 		flex: 3;
 		display: flex;
 		flex-direction: column;
@@ -208,7 +196,7 @@
 		min-width: min(100%, var(--xs));
 	}
 
-	.projects-presentation p {
+	main header p {
 		color: var(--clr-90);
 	}
 
@@ -254,7 +242,7 @@
 		background-color: var(--clr-25);
 		border-radius: 1.2rem;
 		display: flex;
-		flex-flow: row wrap;
+		flex-flow: column wrap;
 		gap: 2rem;
 		padding: 1.6rem;
 	}
@@ -271,7 +259,19 @@
 		flex-direction: column;
 	}
 
-	.describe-project-banner {
+	h3 {
+		margin-top: 0.8rem;
+		color: var(--clr-150);
+		font-variation-settings: 'wght' 700;
+	}
+
+	article header {
+		display: flex;
+		flex-direction: column;
+		gap: 1ch;
+	}
+
+	[class^='list-project'] {
 		display: flex;
 		flex-direction: column;
 		gap: 1ch;
@@ -286,13 +286,24 @@
 	.container-project-links {
 		margin-top: 1.6rem;
 		display: flex;
-		flex-direction: column;
+		flex-flow: column nowrap;
 		gap: 1rem;
 	}
 
-	@media screen and (min-width: 768px) {
+	@media screen and (min-width: 896px) {
+		article {
+			flex-direction: row;
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
 		.container-project-links {
 			flex-flow: row wrap;
+		}
+
+		[class^='list-project'] {
+			flex-direction: row;
+			place-items: center;
 		}
 	}
 
@@ -304,10 +315,9 @@
 	}
 
 	.img-wrapper {
-		min-width: min(100%, var(--xs));
-		aspect-ratio: 16/10;
-		flex: 3;
 		height: auto;
+		aspect-ratio: 16/10;
+		flex: 5;
 		overflow-y: scroll;
 		border: 3px solid var(--clr-50);
 		border-radius: 0.8rem;
@@ -326,7 +336,7 @@
 		min-width: min(100%, var(--xs));
 		height: auto;
 		cursor: pointer;
-		flex: 3;
+		flex: 5;
 		aspect-ratio: 16/10;
 		border: 3px dashed var(--clr-50);
 		display: flex;
