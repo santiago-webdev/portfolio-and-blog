@@ -192,7 +192,7 @@
 		flex-flow: row wrap;
 		justify-content: space-between;
 		padding: clamp(1rem, 3vw, 2rem) 0;
-		gap: 1rem;
+		gap: 2rem 1rem;
 		width: min(92%, var(--md));
 		margin-inline: auto;
 		font-family: var(--ff-text);
@@ -274,6 +274,18 @@
 
 	nav {
 		grid-row: span 3;
+	}
+
+	@media screen and (min-width: 768px) {
+		nav {
+			grid-row: auto;
+		}
+	}
+
+	@media screen and (min-width: 1200px) {
+		header {
+			grid-template-columns: repeat(24, 1fr);
+		}
 	}
 
 	section {
