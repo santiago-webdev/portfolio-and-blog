@@ -304,7 +304,6 @@
 
 	@media screen and (min-width: 1200px) {
 		header {
-			outline: 3px hotpink solid;
 			grid-template-columns: repeat(24, 1fr);
 		}
 	}
