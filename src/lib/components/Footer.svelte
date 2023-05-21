@@ -216,6 +216,7 @@
 		place-content: center;
 		flex-flow: column wrap;
 		flex: 1 23rem;
+		min-height: 15rem;
 		gap: 1rem;
 		padding: 2rem;
 		border-radius: 1.2rem;
