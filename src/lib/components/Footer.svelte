@@ -282,8 +282,29 @@
 		}
 	}
 
+	@media screen and (min-width: 1024px) {
+		.donate,
+		.projects,
+		nav {
+			order: 2;
+		}
+
+		.contact {
+			order: 1;
+		}
+
+		.aboutme {
+			order: 0;
+		}
+
+		header {
+			grid-template-columns: repeat(12, 1fr);
+		}
+	}
+
 	@media screen and (min-width: 1200px) {
 		header {
+			outline: 3px hotpink solid;
 			grid-template-columns: repeat(24, 1fr);
 		}
 	}
