@@ -223,4 +223,5 @@ kbd {
 	flex-wrap: wrap;
 	gap: 1ch;
 	place-items: center;
+	place-content: center;
 }
