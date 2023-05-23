@@ -1,0 +1,6 @@
+{
+	"rewrites": [
+		{ "source": "/blog/:path*", "destination": "https://blog.santiagogonzalez.dev/:path*" },
+		{ "source": "/blog", "destination": "https://blog.santiagogonzalez.dev" }
+	]
+}
