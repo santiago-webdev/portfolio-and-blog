@@ -182,6 +182,7 @@
 	}
 
 	footer :is(a, small) {
+		color: var(--clr-200);
 		display: flex;
 		gap: 0.4ch;
 		place-items: center;
@@ -231,7 +232,7 @@
 	}
 
 	.aboutme p {
-		color: var(--clr-90);
+		color: var(--clr-100);
 	}
 
 	.aboutme:after {

@@ -80,6 +80,7 @@
 		padding: 0.4rem 0.8rem;
 		border-radius: 0.8rem;
 		gap: 0.4rem;
+		color: inherit;
 	}
 
 	@media screen and (min-width: 1280px) {
@@ -94,13 +95,9 @@
 	}
 
 	.theme-wrapper {
-		/* height: 100%; */
-		/* width: 100%; */
-		/* margin-inline: auto; */
+		color: inherit;
 		position: relative;
-
 		display: flex;
-
 		place-content: center;
 		place-items: center;
 	}
@@ -115,13 +112,12 @@
 
 	iconify-icon {
 		pointer-events: none;
-		/* margin-inline: auto; */
 		display: flex;
 		transition: all 300ms cubic-bezier(0.3, 0, 0.3, 1);
 	}
 
 	[icon='mdi:circle-half-full'] {
-		color: var(--clr-100);
+		color: inherit;
 		transform: translateX(15rem);
 	}
 

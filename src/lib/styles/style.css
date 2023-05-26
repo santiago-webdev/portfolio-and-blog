@@ -8,7 +8,7 @@ html {
 	color-scheme: light dark;
 	font-family: var(--ff-text);
 	background-color: var(--clr-10);
-	color: var(--clr-150);
+	color: var(--clr-250);
 }
 
 address {
@@ -19,18 +19,8 @@ ul {
 	padding: 0;
 }
 
-a,
-button,
-input,
-select,
-form,
-li,
-span {
-	color: var(--clr-100);
-}
-
 button[disabled] {
-	color: var(--clr-65);
+	color: var(--clr-100);
 }
 
 [data-theme='dark'] img.logo-santigo-zero,
@@ -60,6 +50,7 @@ button[disabled] {
 	border-top-color: var(--border);
 	border-left-color: var(--border);
 	box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
+	color: var(--clr-200);
 
 	border-radius: var(--radius);
 	transition: background-color 50ms, border 80ms, box-shadow 300ms;
@@ -124,8 +115,8 @@ input[type='radio']:checked + .shiny-select {
 }
 
 .reverse {
-	--background: var(--clr-200);
-	--border: var(--clr-200);
+	--background: var(--clr-250);
+	--border: var(--clr-250);
 	--color: var(--clr-10);
 
 	background-color: var(--background);

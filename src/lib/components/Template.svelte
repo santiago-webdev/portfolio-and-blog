@@ -47,7 +47,7 @@
 			<hgroup>
 				{#if isHollow}
 					<h1 class="font-80">
-						<Hollow color={'var(--clr-100)'}>{hollowPrefix}</Hollow>
+						<Hollow color={'var(--clr-250)'}>{hollowPrefix}</Hollow>
 						{fillSuffix}
 					</h1>
 				{:else}
