@@ -23,19 +23,9 @@ It's not being updated to the current <main> after navigation, so it's ignored.
 Blog cards should use role='presentation', and the hamburger menu should use
 aria-pressed and hide the expanded menu when clicking or scrolling.
 
-## Make use of <base>
-
 ## Maybe make use of LinkUI to redirect to search again
 
 If the user reaches the bottom of the screen don't just show the button to the
 top but also show a `LinkUI` to go to either Home or to search for another post.
-
-## Change the "Read my blog" link and
-
-Swap the link for a direct link to my Resume/CV.
-
-## Try other fonts
-
-Some more bolder fonts, and check how the look with all uppercase titles.
 
 ## Finish the form/card in /projects
