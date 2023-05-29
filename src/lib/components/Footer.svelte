@@ -206,8 +206,6 @@
 
 	header h3:not(.aboutme h3) {
 		font-weight: 500;
-		text-decoration: underline solid var(--clr-65) 2px;
-		text-underline-offset: 3px;
 		margin: 0 0.6rem 0.4rem;
 	}
 
@@ -314,6 +312,10 @@
 		display: flex;
 		place-content: center;
 		background-color: var(--clr-40);
+	}
+
+	h3 {
+		color: var(--clr-250);
 	}
 
 	section :is(small, a) {
