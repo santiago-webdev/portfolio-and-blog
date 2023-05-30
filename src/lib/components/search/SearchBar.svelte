@@ -56,7 +56,7 @@
 		overflow: hidden;
 		margin-inline: auto;
 		position: relative;
-		width: min(100% - 1rem, var(--sm));
+		width: min(92%, var(--sm));
 
 		background-color: var(--clr-40);
 		border: 1px solid var(--clr-40);
