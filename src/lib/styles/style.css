@@ -106,7 +106,7 @@ input[type='radio']:checked + .shiny-select {
 	.shiny-select:not(ul.shiny-select):hover {
 		--background: var(--clr-55);
 		--border: var(--clr-60);
-		color: var(--clr-100);
+		color: var(--clr-200);
 		background-color: var(--background);
 		border: 1px solid var(--background);
 		border-left-color: var(--border);
