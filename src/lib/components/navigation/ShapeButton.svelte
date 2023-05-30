@@ -38,6 +38,7 @@
 		font-family: var(--ff-dflt);
 		font-size: var(--fs-15);
 		line-height: var(--fs-15);
+		font-weight: 700;
 		font-variation-settings: 'wght' 700;
 	}
 
