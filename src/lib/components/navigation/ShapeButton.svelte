@@ -36,10 +36,10 @@
 		place-content: center;
 
 		font-family: var(--ff-dflt);
-		font-size: var(--fs-15);
-		line-height: var(--fs-15);
+		font-size: var(--fs-10);
+		line-height: var(--fs-10);
 		font-weight: 700;
-		font-variation-settings: 'wght' 700;
+		font-variation-settings: 'wght' 730;
 	}
 
 	span {
@@ -48,7 +48,7 @@
 	}
 
 	.bttn-big-round {
-		padding: 1.2rem 1.8rem;
+		padding: 1rem 2rem;
 		border-radius: 999rem;
 		transition: gap 300ms cubic-bezier(0.4, 0.4, 0, 1);
 
