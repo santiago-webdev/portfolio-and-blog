@@ -1,14 +1,14 @@
 <script lang="ts">
 	import site from '$lib/site.json';
 	import AboveTheFold from './-AboveTheFold.svelte';
-	import MentionPortfolio from './-Portfolio.svelte';
-	import MentionBlog from './-Blog.svelte';
+	import Portfolio from './-Portfolio.svelte';
+	import Blog from './-Blog.svelte';
 	import Introduction from './-Introduction.svelte';
 </script>
 
 <AboveTheFold />
-<MentionPortfolio />
-<MentionBlog />
+<Portfolio />
+<Blog />
 <Introduction />
 
 <svelte:head>

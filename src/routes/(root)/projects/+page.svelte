@@ -11,132 +11,132 @@
 </script>
 
 <main>
-	<div class="container-projects">
+	<div class="wrapper-header">
 		<header>
-			<h1 class="font-50">
-				Projects Showcase - {getCategoryInfo($currentGroupOfProjects).label}
-			</h1>
-			<p class="font-50">
-				{getCategoryInfo($currentGroupOfProjects).description}
-			</p>
+			<hgroup>
+				<span class="font-10">Portfolio Showcase &mdash;</span>
+				<h1 class="font-60">{getCategoryInfo($currentGroupOfProjects).label} Projects</h1>
+				<p>
+					{getCategoryInfo($currentGroupOfProjects).description}
+				</p>
+			</hgroup>
+			<form class="font-30">
+				<label for="projects">
+					Filter by type of project
+					<noscript>
+						<small>Sorry Folks! This requires JavaScript to work!</small>
+					</noscript>
+				</label>
+				<select bind:value={$currentGroupOfProjects} name="projects" id="projects">
+					{#each Object.entries(jobSelector) as [value, [label]]}
+						<option {value} {label} />
+					{/each}
+				</select>
+			</form>
 		</header>
-		<form class="font-30">
-			<label for="projects">
-				Filter by type of project
-				<noscript>
-					<small>Sorry Folks! This requires JavaScript to work!</small>
-				</noscript>
-			</label>
-			<select bind:value={$currentGroupOfProjects} name="projects" id="projects">
-				{#each Object.entries(jobSelector) as [value, [label]]}
-					<option {value} {label} />
-				{/each}
-			</select>
-		</form>
 	</div>
-</main>
-<section>
-	{#each $FilteredProjects as { name, description, category, stack, img, repo, link, accent }}
-		<article>
-			<div class="img-wrapper">
-				<img loading="lazy" src={img} alt="Screenshot of {name}" title="Screenshot of {name}" />
-			</div>
-			<div id="describe-{name}">
-				<header>
-					<a href={link.toString()} target="_blank" class="font-40">
-						<span style:color="var({accent ? accent : '--clr-200'})"
-							>{link.hostname.replace(/^www\./i, '')}</span
-						>
-					</a>
-					<div style:gap="2ch" class="inline-items">
-						<h2 class="font-30">{name}</h2>
-						<ul class="inline-items">
-							{#each category as tags}
-								<li class="shiny font-20">{getCategoryInfo(tags).label}</li>
-							{/each}
-						</ul>
-					</div>
-				</header>
-				<p class="font-20">{description}</p>
+	<section>
+		{#each $FilteredProjects as { name, description, category, stack, img, repo, link, accent }}
+			<article>
+				<div class="img-wrapper">
+					<img loading="lazy" src={img} alt="Screenshot of {name}" title="Screenshot of {name}" />
+				</div>
+				<div id="describe-{name}">
+					<header>
+						<div style:gap="2ch" class="inline-items">
+							<a href={link.toString()} target="_blank" class="font-40">
+								<span style:color="var({accent ? accent : '--clr-200'})"
+									>{link.hostname.replace(/^www\./i, '')}</span
+								>
+							</a>
+							<ul class="inline-items">
+								{#each category as tags}
+									<li class="shiny font-20">{getCategoryInfo(tags).label}</li>
+								{/each}
+							</ul>
+						</div>
+					</header>
+					<p class="font-20">{description}</p>
 
-				<h3 class="font-10">Tech Stack:</h3>
-				<div class="list-project-frontend">
+					<h3 class="font-10">Tech Stack:</h3>
 					{#if stack.frontend}
-						<h4 class="font-10">Frontend:</h4>
-						<ul class="inline-items font-10">
-							{#each stack.frontend as tags}
-								<li class="shiny">
-									<iconify-icon width="22" icon={retrieve_icon(tags)} />
-									{tags}
-								</li>
-							{/each}
-						</ul>
+						<div class="list-project-frontend">
+							<h4 class="font-10">Frontend:</h4>
+							<ul class="inline-items font-10">
+								{#each stack.frontend as tags}
+									<li class="shiny">
+										<iconify-icon width="22" icon={retrieve_icon(tags)} />
+										{tags}
+									</li>
+								{/each}
+							</ul>
+						</div>
 					{/if}
-				</div>
-				<div class="list-project-api">
 					{#if stack.api}
-						<h4 class="font-10">API:</h4>
-						<ul class="inline-items font-10">
-							{#each stack.api as tags}
-								<li class="shiny">
-									<iconify-icon width="22" icon={retrieve_icon(tags)} />
-									{tags}
-								</li>
-							{/each}
-						</ul>
+						<div class="list-project-api">
+							<h4 class="font-10">API:</h4>
+							<ul class="inline-items font-10">
+								{#each stack.api as tags}
+									<li class="shiny">
+										<iconify-icon width="22" icon={retrieve_icon(tags)} />
+										{tags}
+									</li>
+								{/each}
+							</ul>
+						</div>
 					{/if}
-				</div>
-				<div class="list-project-backend">
 					{#if stack.backend}
-						<h4 class="font-10">Backend:</h4>
-						<ul class="inline-items font-10">
-							{#each stack.backend as tags}
-								<li class="shiny">
-									<iconify-icon width="22" icon={retrieve_icon(tags)} />
-									{tags}
-								</li>
-							{/each}
-						</ul>
+						<div class="list-project-backend">
+							<h4 class="font-10">Backend:</h4>
+							<ul class="inline-items font-10">
+								{#each stack.backend as tags}
+									<li class="shiny">
+										<iconify-icon width="22" icon={retrieve_icon(tags)} />
+										{tags}
+									</li>
+								{/each}
+							</ul>
+						</div>
 					{/if}
-				</div>
 
-				<div class="container-project-links">
-					<ShapeButton
-						class="bttn-big-round shiny hover"
-						target="_blank"
-						custom_symbol="mdi:github"
-						href={repo.toString()}
-					>
-						Source Code
-					</ShapeButton>
-					<ShapeButton class="bttn-big-round reverse hover" href={link.toString()}>
-						Case Study</ShapeButton
-					>
+					<div class="container-project-links">
+						<ShapeButton
+							class="bttn-big-round shiny hover"
+							target="_blank"
+							custom_symbol="mdi:github"
+							href={repo.toString()}
+						>
+							Source Code
+						</ShapeButton>
+						<ShapeButton class="bttn-big-round reverse hover" href={link.toString()}>
+							Case Study</ShapeButton
+						>
+					</div>
 				</div>
+			</article>
+		{/each}
+		<article>
+			<button>
+				<iconify-icon width="30" height="30" icon="lucide:plus" />
+			</button>
+			<div id="describe-new-project">
+				<header>
+					<a href="#todo" target="_blank" class="font-40">
+						<span style:color="var(--clr-200)">newdomain.com</span>
+					</a>
+					<h2 class="font-30">Takeaway Interview?</h2>
+					<p>
+						Try Me! As a junior developer with a passion for turning ideas into reality, I'm excited
+						to work with you on your new project.
+					</p>
+					<ul>
+						<li class="shiny">New</li>
+					</ul>
+				</header>
 			</div>
 		</article>
-	{/each}
-	<article>
-		<button>
-			<iconify-icon width="30" height="30" icon="lucide:plus" />
-		</button>
-		<div id="describe-new-project">
-			<header>
-				<a href="#todo" target="_blank" class="font-40">
-					<span style:color="var(--clr-200)">newdomain.com</span>
-				</a>
-				<h2 class="font-30">Takeaway Interview?</h2>
-				<p>
-					Try Me! As a junior developer with a passion for turning ideas into reality, I'm excited
-					to work with you on your new project.
-				</p>
-				<ul>
-					<li class="shiny">New</li>
-				</ul>
-			</header>
-		</div>
-	</article>
-</section>
+	</section>
+</main>
 
 <svelte:head>
 	<title>{site.portfolio.title}</title>
@@ -168,45 +168,51 @@
 </svelte:head>
 
 <style>
-	main {
-		background-color: var(--clr-25);
+	.wrapper-header {
 		border-bottom-right-radius: 1.6rem;
 		border-bottom-left-radius: 1.6rem;
-		padding-bottom: 1rem;
-		display: grid;
+		padding-bottom: 1.4rem;
+		padding-top: 1.8rem;
+		background-color: var(--clr-25);
+		display: flex;
 		place-items: center;
 	}
 
-	.container-projects {
-		display: flex;
-		flex-flow: row wrap;
-
-		width: min(92%, var(--base));
-		margin-inline: auto;
-		padding: 3rem 0;
-		place-content: center;
-		gap: 1.6rem;
-	}
-
-	main header {
-		flex: 3;
+	.wrapper-header header {
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
-		min-width: min(100%, var(--xs));
+		width: min(92%, var(--base));
+		margin-inline: auto;
+		place-content: center;
+		gap: 2.6rem;
 	}
 
-	main header p {
-		color: var(--clr-90);
+	hgroup {
+		flex: 6;
+		display: grid;
+		gap: 1rem;
+	}
+
+	hgroup h1 {
+		color: var(--clr-300);
+	}
+
+	hgroup span {
+		font-weight: 800;
+		font-variation-settings: 'wght' 800;
+		color: var(--clr-150);
+	}
+
+	hgroup p {
+		color: var(--clr-200);
 	}
 
 	form {
-		flex: 2;
+		flex: 4;
 		display: flex;
 		flex-flow: column wrap;
 		place-content: center;
 		gap: 1rem;
-		min-width: min(100%, var(--xs));
 	}
 
 	label {
@@ -231,9 +237,9 @@
 	}
 
 	section {
-		padding-top: 3rem;
+		padding-top: 2.8rem;
 		margin-inline: auto;
-		width: min(92%, var(--lg));
+		width: min(96%, var(--lg));
 		display: grid;
 		gap: 1.6rem;
 	}
@@ -249,7 +255,6 @@
 
 	a {
 		max-width: max-content;
-		/* outline: 3px crimson solid; */
 	}
 
 	[id^='describe-'] {
@@ -267,8 +272,8 @@
 
 	article header {
 		display: flex;
-		flex-direction: column;
-		gap: 1ch;
+		flex-wrap: wrap;
+		gap: 0.6rem;
 	}
 
 	[class^='list-project'] {
@@ -291,6 +296,11 @@
 	}
 
 	@media screen and (min-width: 896px) {
+		.wrapper-header header {
+			flex-direction: row;
+			padding: 6rem 0;
+		}
+
 		article {
 			flex-direction: row;
 		}
