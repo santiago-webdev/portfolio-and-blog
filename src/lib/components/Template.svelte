@@ -181,6 +181,7 @@
 		/* width: min(100%, var(--sm)); */
 		max-width: var(--sm);
 		margin-inline: auto;
+		place-content: center;
 	}
 
 	.tags li {
