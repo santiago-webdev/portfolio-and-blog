@@ -1,6 +1,7 @@
 <script lang="ts">
-	import Footer from '$lib/components/Footer.svelte';
 	import NavigationBar from '$lib/components/navigation/NavigationBar.svelte';
+	import ButtonToTheTop from '$lib/components/ButtonToTheTop.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 	import { fly } from 'svelte/transition';
 
 	export let data;
@@ -13,6 +14,7 @@
 			<slot />
 		</div>
 	{/key}
+	<ButtonToTheTop />
 	<Footer />
 </div>
 

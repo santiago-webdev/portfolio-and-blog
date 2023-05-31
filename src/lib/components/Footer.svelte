@@ -3,7 +3,6 @@
 	import { page } from '$app/stores';
 	import { navigationItems } from '$lib/components/navigation/store';
 	import site from '$lib/site.json';
-	import ButtonToTheTop from '$lib/components/ButtonToTheTop.svelte';
 
 	let ghStars = 0;
 
@@ -33,7 +32,6 @@
 	];
 </script>
 
-<ButtonToTheTop />
 <footer>
 	<header>
 		<div class="aboutme">
