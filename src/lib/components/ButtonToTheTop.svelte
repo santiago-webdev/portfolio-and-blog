@@ -28,8 +28,8 @@
 <svelte:window bind:scrollY />
 
 <section class:isNotNecessary>
-	<a class="reverse" href="#body">
-		<iconify-icon icon="lucide:arrow-up" />Go to top
+	<a aria-label="Go to the top of the page" class="reverse" href="#body">
+		<iconify-icon icon="lucide:arrow-up" />
 	</a>
 </section>
 
@@ -48,7 +48,7 @@
 	}
 
 	a {
-		border-radius: 1rem;
-		padding: 0.6rem 1.2rem;
+		border-radius: 999rem;
+		padding: 0.8rem;
 	}
 </style>
