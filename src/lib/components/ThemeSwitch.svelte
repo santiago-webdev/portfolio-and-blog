@@ -113,12 +113,12 @@
 	iconify-icon {
 		pointer-events: none;
 		display: flex;
-		transition: all 300ms cubic-bezier(0.3, 0, 0.3, 1);
+		transition: all 800ms cubic-bezier(0.3, 0, 0.3, 1);
 	}
 
 	[icon='mdi:circle-half-full'] {
 		color: inherit;
-		transform: translateX(15rem);
+		transform: translateX(-3rem);
 	}
 
 	:global([data-theme='system'] [icon='mdi:circle-half-full']),
@@ -128,8 +128,8 @@
 
 	[icon='lucide:sun'] {
 		color: orangered;
-		transform: rotate(90deg);
-		transform-origin: 50% 6rem;
+		transform: rotate(180deg);
+		transform-origin: 50% 3rem;
 	}
 
 	:global([data-theme='light'] [icon='lucide:sun']) {
@@ -138,8 +138,8 @@
 
 	[icon='lucide:moon'] {
 		color: orange;
-		transform: rotate(-90deg);
-		transform-origin: -50% -6rem;
+		transform: rotate(90deg);
+		transform-origin: 50% -3rem;
 	}
 
 	:global([data-theme='dark'] [icon='lucide:moon']) {
