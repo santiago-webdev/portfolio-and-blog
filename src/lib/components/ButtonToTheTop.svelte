@@ -1,34 +1,25 @@
 <script lang="ts">
-	import { afterUpdate } from 'svelte';
+	import { debounce } from '$lib/utils/utils';
+	import { onMount } from 'svelte';
 
 	let scrollY = 0,
-		isNotNecessary = false;
+		innerHeight = 0,
+		visibility = 'hidden';
 
-	const startObserving = () => {
-		const main = document.querySelector('main');
-
-		const observer = new IntersectionObserver((entries) => {
-			entries.forEach((entry) => {
-				if (entry.target === main) {
-					isNotNecessary = entry.isIntersecting;
-				}
-			});
-		});
-
-		if (main) {
-			observer.observe(main);
-		}
-
-		return observer.disconnect;
-	};
-
-	afterUpdate(() => startObserving());
+	const toggleComponent = () =>
+		(visibility = window.scrollY > window.innerHeight ? 'visible' : 'hidden');
+	onMount(() =>
+		window.addEventListener('scroll', debounce(toggleComponent, 30), {
+			passive: true,
+			capture: true
+		})
+	);
 </script>
 
-<svelte:window bind:scrollY />
+<svelte:window bind:scrollY bind:innerHeight />
 
-<section class:isNotNecessary>
-	<a aria-label="Go to the top of the page" class="reverse" href="#body">
+<section>
+	<a style:visibility aria-label="Go to the top of the page" class="reverse" href="#body">
 		<iconify-icon icon="lucide:arrow-up" />
 	</a>
 </section>
@@ -38,13 +29,9 @@
 		position: sticky;
 		bottom: 1rem;
 		margin-top: 1rem;
-		width: min(100% - 1rem, var(--xl));
+		width: min(92%, var(--xl));
 		justify-content: flex-end;
 		display: flex;
-	}
-
-	.isNotNecessary {
-		display: none;
 	}
 
 	a {
