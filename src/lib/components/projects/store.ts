@@ -9,6 +9,7 @@ type Stack = {
 interface Project {
 	name: string;
 	description: string;
+	short_description?: string;
 	category: Category[];
 	repo: URL;
 	link: URL;
@@ -21,7 +22,9 @@ export const AllProjects = readable<Array<Project>>([
 	{
 		name: 'Website for zap',
 		description:
-			"I helped creating the landing page for zap, an open-source plugin manager for zsh. It's one of my first steps into the web dev world.",
+			"I helped creating the landing page for Zap, an open-source plugin manager for zsh. It's one of my first steps into the web dev world.",
+		short_description:
+			'I helped with the landing page for Zap, an open-source plugin manager for zsh.',
 		category: ['featured', 'frontend', 'opensource'],
 		stack: {
 			frontend: ['JavaScript', 'HTML', 'CSS'],

@@ -1,13 +1,23 @@
 <script>
 	import LinkUI from '$lib/components/navigation/LinkUI.svelte';
 	import { base } from '$app/paths';
+	import { FilteredProjects } from '$lib/components/projects/store';
 </script>
 
 <div class="wrapper-portfolio">
 	<div id="portfolio" class="portfolio">
 		<ol>
 			<li>
-				<a href="/">
+				<a href={$FilteredProjects[0].link.toString()} target="_blank" rel="external">
+					<h3 class="font-40">
+						{$FilteredProjects[0].name}
+						<iconify-icon icon="lucide:external-link" />
+					</h3>
+					<p class="font-20">{$FilteredProjects[0].short_description}</p>
+				</a>
+			</li>
+			<li>
+				<a href="/" target="_blank" rel="external">
 					<h3 class="font-40">
 						Project
 						<iconify-icon icon="lucide:external-link" />
@@ -16,16 +26,7 @@
 				</a>
 			</li>
 			<li>
-				<a href="/">
-					<h3 class="font-40">
-						Project
-						<iconify-icon icon="lucide:external-link" />
-					</h3>
-					<p class="font-20">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-				</a>
-			</li>
-			<li>
-				<a href="/">
+				<a href="/" target="_blank" rel="external">
 					<h3 class="font-40">
 						Project
 						<iconify-icon icon="lucide:external-link" />
