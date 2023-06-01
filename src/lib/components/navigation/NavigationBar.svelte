@@ -14,13 +14,11 @@
 		outerWidth = 0,
 		in_viewport = true,
 		transform = '',
-		transparent = false,
 		anchored = false;
 
 	afterNavigate(() => {
 		expanded = false;
-		transparent = $page.url.pathname === `${base}/about`;
-		anchored = transparent;
+		anchored = $page.url.pathname === `${base}/about`;
 	});
 
 	onMount(() => {
@@ -48,7 +46,7 @@
 
 <svelte:window bind:scrollY bind:outerWidth />
 
-<header style:transform class:anchored class:transparent class:expanded class:scrollY>
+<header style:transform class:anchored class:expanded class:scrollY>
 	<nav aria-label="primary-navigation">
 		<a
 			href="{base}/"
@@ -148,7 +146,7 @@
 	header.anchored {
 		top: unset !important;
 		transform: none !important;
-		background-color: transparent !important;
+		/* background-color: transparent !important; */
 		border-color: transparent !important;
 		border-width: 0 !important;
 	}
@@ -165,14 +163,6 @@
 
 	header.expanded {
 		background-color: var(--clr-30);
-	}
-
-	header.transparent {
-		background-color: transparent;
-	}
-
-	header.transparent.scrollY {
-		background-color: var(--clr-25);
 	}
 
 	a,

@@ -14,6 +14,11 @@
 				<em>Free And Open Source</em>,
 				<em>UI/UX</em> and <em>Linux</em>. I'm fluent in English and Spanish.
 			</p>
+			<p class="font-20">
+				I enjoy crafting simple interfaces, focusing in
+				<em>maintainability</em>, <em>accessibility</em> and
+				<em>progressive enhancement</em>.
+			</p>
 		</section>
 		<div class="familiar-stack">
 			<span class="font-20">Technologies I've been working with recently:</span>
@@ -72,6 +77,7 @@
 	.familiar-stack {
 		grid-column: span 8;
 		display: grid;
+		place-content: center;
 		gap: 1rem;
 	}
 
