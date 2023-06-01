@@ -60,8 +60,7 @@
 		display: grid;
 		gap: 4rem;
 
-		width: min(100%, var(--lg));
-		padding: 2rem;
+		width: min(92%, var(--lg));
 		border-radius: 0.8rem;
 	}
 

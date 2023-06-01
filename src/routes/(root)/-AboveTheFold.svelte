@@ -50,7 +50,7 @@
 	main {
 		display: flex;
 		gap: 1.6rem;
-		place-items: start;
+		place-items: center;
 		flex-direction: column;
 		width: min(92%, var(--md));
 		margin-inline: auto;
@@ -83,6 +83,10 @@
 		margin-top: 1.2rem;
 	}
 
+	.call-to-scroll {
+		place-self: start;
+	}
+
 	@media screen and (min-width: 768px) {
 		section {
 			flex-direction: row;
@@ -108,6 +112,8 @@
 			flex-flow: row;
 			padding: 6rem 0;
 			text-align: left;
+			min-height: 80vh;
+			min-height: 80dvh;
 		}
 
 		.call-to-scroll {

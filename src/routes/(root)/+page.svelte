@@ -1,13 +1,13 @@
 <script lang="ts">
 	import site from '$lib/site.json';
 	import AboveTheFold from './-AboveTheFold.svelte';
-	import Portfolio from './-Portfolio.svelte';
+	// import Portfolio from './-Portfolio.svelte';
 	import Blog from './-Blog.svelte';
 	import Introduction from './-Introduction.svelte';
 </script>
 
 <AboveTheFold />
-<Portfolio />
+<!-- <Portfolio /> -->
 <Blog />
 <Introduction />
 
