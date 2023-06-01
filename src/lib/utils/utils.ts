@@ -105,6 +105,8 @@ export function retrieve_icon(symbol: string): string | undefined {
 			return 'ph:figma-logo';
 		case 'react':
 			return 'mdi:react';
+		case 'astro':
+			return 'devicon-plain:astro';
 		case 'nextjs':
 			return 'simple-icons:nextdotjs';
 		case 'podman':
@@ -119,6 +121,8 @@ export function retrieve_icon(symbol: string): string | undefined {
 			return 'devicon-plain:mysql';
 		case 'sqlite':
 			return 'devicon-plain:sqlite';
+		case 'mariadb':
+			return 'simple-icons:mariadb';
 		case 'postgresql':
 			return 'devicon-plain:postgresql';
 		case 'github rest api':
