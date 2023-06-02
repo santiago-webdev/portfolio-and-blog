@@ -34,9 +34,7 @@
 			</section>
 		</div>
 		<div class="call-to-scroll">
-			<LinkArrow class="learn-more" data-sveltekit-reload rel="external" href="#portfolio"
-				>Learn more</LinkArrow
-			>
+			<LinkArrow href="#portfolio">Learn more</LinkArrow>
 		</div>
 	</main>
 </div>
