@@ -35,11 +35,14 @@
 			<h1>Get to know me</h1>
 			<p style="font-weight: 500">{greeting}</p>
 			<p>
-				Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim labore culpa sint
-				ad nisi Lorem pariatur mollit ex esse exercitation amet.
+				I enjoy crafting simple interfaces, focusing in maintainability, accessibility and
+				progressive enhancement. My set of skills is mostly dedicated to the web, but I'm also
+				interested in Linux and CS too.
 			</p>
-
-			<p>All of my projects can be found here: TODO</p>
+			<p>
+				You can check my journey in my blog, where I'm trying to compile all of my knowledge to
+				become an all-rounder web developer.
+			</p>
 		</div>
 		<div class="img-wrapper">
 			<img src="/alleged-photo-of-myself.webp" alt="" />
@@ -115,7 +118,7 @@
 <style>
 	.wrapper-about {
 		background-color: var(--clr-25);
-		padding-top: 2rem;
+		padding: 1rem 0;
 	}
 
 	.wrapper-back-navigation-button {
@@ -141,8 +144,12 @@
 
 	.text-about {
 		display: grid;
-		gap: 1rem;
+		/* gap: 1rem; */
 		grid-column: span 4;
+	}
+
+	.text-about > * + * {
+		margin-block-start: 1em;
 	}
 
 	.img-wrapper {
