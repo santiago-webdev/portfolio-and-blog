@@ -1,6 +1,6 @@
 import { Posts } from '$lib/components/search/store';
 import { get } from 'svelte/store';
-import type { PageLoad } from './$types';
+import type { LayoutLoad } from './$types';
 
 export const load = (async ({ params }) => {
 	const [localPost] = get(Posts).filter((obj) => {
@@ -15,4 +15,4 @@ export const load = (async ({ params }) => {
 	return {
 		content
 	};
-}) satisfies PageLoad;
+}) satisfies LayoutLoad;

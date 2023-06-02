@@ -1,9 +1,9 @@
 <script lang="ts">
-	import type { PageData } from './$types';
+	import { page } from '$app/stores';
 
-	export let data: PageData;
-	// console.log(data);
-	$: component = data.content;
+	console.log($page.data.content);
+
+	$: component = $page.data.content;
 </script>
 
 <svelte:component this={component} />
