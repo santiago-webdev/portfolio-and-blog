@@ -9,7 +9,7 @@
 	import Hollow from './Hollow.svelte';
 	import { readableDate, relativeTime, retrieve_icon } from '$lib/utils/utils';
 	import { base } from '$app/paths';
-	import LinkUI from './navigation/LinkUI.svelte';
+	import LinkArrow from './navigation/LinkArrow.svelte';
 
 	export let title = '';
 	export let datetime = '';
@@ -41,7 +41,7 @@
 <section>
 	<div role="banner">
 		<div class="back-button">
-			<LinkUI orientation="left" href="{base}/blog">Back to Blog</LinkUI>
+			<LinkArrow orientation="left" href="{base}/blog">Back to Blog</LinkArrow>
 		</div>
 		<div class="wrapper-header">
 			<hgroup>

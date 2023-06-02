@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import LinkUI from '$lib/components/navigation/LinkUI.svelte';
+	import LinkArrow from '$lib/components/navigation/LinkArrow.svelte';
 	import { Posts } from '$lib/components/search/store';
 	import { readableDate, relativeTime } from '$lib/utils/utils';
 
@@ -18,7 +18,7 @@
 				<p>
 					Press <kbd aria-keyshortcuts="Control+K">Ctrl K</kbd> or
 				</p>
-				<LinkUI class="font-30" orientation="right" href="{base}/blog">See the full blog</LinkUI>
+				<LinkArrow class="font-30" orientation="right" href="{base}/blog">See the full blog</LinkArrow>
 			</div>
 		</div>
 		<section>

@@ -1,5 +1,5 @@
 <script>
-	import LinkUI from '$lib/components/navigation/LinkUI.svelte';
+	import LinkArrow from '$lib/components/navigation/LinkArrow.svelte';
 	import { base } from '$app/paths';
 	import { FilteredProjects } from '$lib/components/projects/store';
 </script>
@@ -39,9 +39,9 @@
 			<h2>Latest projects</h2>
 			<p>I've contributed to FOSS as well as created some projects of my own</p>
 			<p>
-				More projects with details can be tracked <LinkUI
+				More projects with details can be tracked <LinkArrow
 					style="display: inline-flex; font-size: inherit; line-height: inherit;"
-					href="{base}/portfolio">in the dedicated page</LinkUI
+					href="{base}/portfolio">in the dedicated page</LinkArrow
 				>
 			</p>
 		</section>

@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	import LinkUI from '$lib/components/navigation/LinkUI.svelte';
+	import LinkArrow from '$lib/components/navigation/LinkArrow.svelte';
 	import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
 	import site from '$lib/site.json';
 </script>
@@ -34,8 +34,8 @@
 			</section>
 		</div>
 		<div class="call-to-scroll">
-			<LinkUI class="learn-more" data-sveltekit-reload rel="external" href="#portfolio"
-				>Learn more</LinkUI
+			<LinkArrow class="learn-more" data-sveltekit-reload rel="external" href="#portfolio"
+				>Learn more</LinkArrow
 			>
 		</div>
 	</main>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	// import LinkInText from '$lib/components/navigation/LinkInText.svelte';
-	import LinkUI from '$lib/components/navigation/LinkUI.svelte';
+	import LinkArrow from '$lib/components/navigation/LinkArrow.svelte';
 	import site from '$lib/site.json';
 	import { retrieve_icon } from '$lib/utils/utils';
 
@@ -28,7 +28,7 @@
 
 <div class="wrapper-about">
 	<div class="wrapper-back-navigation-button">
-		<LinkUI orientation="left" href="{base}/">Home</LinkUI>
+		<LinkArrow orientation="left" href="{base}/">Home</LinkArrow>
 	</div>
 	<main>
 		<div class="text-about">
