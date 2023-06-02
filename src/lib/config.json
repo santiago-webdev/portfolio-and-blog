@@ -1,6 +1,6 @@
 {
 	"landingpage": {
-		"title": "Me on the Web - Santiago Gonzalez",
+		"title": "Santiago Gonzalez",
 		"description": "Personal blog and portfolio, I talk about web development and show you my projects while at it.",
 		"url": "https://www.santiagogonzalez.dev",
 		"repo": "https://github.com/santigo-zero/portfolio-and-blog"
@@ -11,13 +11,14 @@
 		"url": "https://www.santiagogonzalez.dev/blog"
 	},
 	"portfolio": {
-		"title": "Potfolio - Santiago Gonzalez",
+		"title": "Portfolio - Santiago Gonzalez",
 		"description": "Showcasing all of my projects; Come take a look!",
 		"url": "https://www.santiagogonzalez.dev/portfolio"
 	},
-	"resume": {
-		"title": "Resume",
-		"description": "My resume",
-		"url": "https://resume.santiagogonzalez.dev"
+	"about": {
+		"title": "About - Santiago Gonzalez",
+		"description": "Who is this?",
+		"url": "https://www.santiagogonzalez.dev/about",
+		"portfolio": "https://resume.santiagogonzalez.dev"
 	}
 }

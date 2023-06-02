@@ -7,6 +7,9 @@
 	import Hollow from './Hollow.svelte';
 	import { readableDate, relativeTime, retrieve_icon } from '$lib/utils/utils';
 	import { base } from '$app/paths';
+	import Seo from '$lib/seo.svelte';
+	import { page } from '$app/stores';
+
 	import LinkArrow from './navigation/LinkArrow.svelte';
 
 	export let title = '';
@@ -86,6 +89,7 @@
 		<slot />
 	</main>
 </section>
+<Seo url={$page.url} data={{ title: `${title} - Santiago's Blog`, description: description }} />
 
 <style>
 	[role='banner'] {

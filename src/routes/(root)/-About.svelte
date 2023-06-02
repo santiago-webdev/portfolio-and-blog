@@ -36,7 +36,7 @@
 		<ShapeButton href="{base}/about" class="bttn-big-round reverse">More About me</ShapeButton>
 		<div class="container">
 			<ShapeButton
-				href={config.resume.url}
+				href={config.about.url}
 				target="_blank"
 				rel="external"
 				class="bttn-big-round shiny hover"
