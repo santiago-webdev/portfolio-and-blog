@@ -17,7 +17,7 @@
 				and show you my projects while at it.
 			</p>
 			<section>
-				<ShapeButton href="{base}/projects" class="bttn-big-round reverse hover">
+				<ShapeButton href="{base}/portfolio" class="bttn-big-round reverse hover">
 					What I've built</ShapeButton
 				>
 				<div class="container">
