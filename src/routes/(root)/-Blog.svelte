@@ -18,7 +18,9 @@
 				<p>
 					Press <kbd aria-keyshortcuts="Control+K">Ctrl K</kbd> or
 				</p>
-				<LinkArrow class="font-30" orientation="right" href="{base}/blog">See the full blog</LinkArrow>
+				<LinkArrow class="font-30" orientation="right" href="{base}/blog"
+					>See the full blog</LinkArrow
+				>
 			</div>
 		</div>
 		<section>
