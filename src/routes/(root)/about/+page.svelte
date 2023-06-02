@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
-	import LinkArrow from '$lib/components/navigation/LinkArrow.svelte';
 	import site from '$lib/site.json';
 	import { retrieve_icon } from '$lib/utils/utils';
 
@@ -25,12 +23,9 @@
 	];
 </script>
 
-<div class="wrapper-about">
-	<div class="wrapper-back-navigation-button">
-		<LinkArrow orientation="left" href="{base}/">Home</LinkArrow>
-	</div>
-	<main>
-		<div class="text-about">
+<main>
+	<header>
+		<hgroup>
 			<h1>Get to know me</h1>
 			<p style="font-weight: 500">{greeting}</p>
 			<p>
@@ -42,12 +37,12 @@
 				You can check my journey in my blog, where I'm trying to compile all of my knowledge to
 				become an all-rounder web developer.
 			</p>
-		</div>
+		</hgroup>
 		<div class="img-wrapper">
 			<img src="/alleged-photo-of-myself.webp" alt="" />
 		</div>
-	</main>
-</div>
+	</header>
+</main>
 <div id="technologies">
 	<h2 class="font-50">Technology I use &mdash;</h2>
 	<p>These are some of the tools I had used in the past (but am not limited to):</p>
@@ -115,18 +110,11 @@
 </svelte:head>
 
 <style>
-	.wrapper-about {
-		background-color: var(--clr-25);
-		padding: 1rem 0;
-	}
-
-	.wrapper-back-navigation-button {
-		width: min(92%, var(--md));
-		margin-inline: auto;
-		margin-bottom: 1rem;
-	}
-
 	main {
+		background-color: var(--clr-25);
+	}
+
+	header {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
 		gap: 2rem 0;
@@ -134,20 +122,16 @@
 
 		width: min(92%, var(--md));
 		margin-inline: auto;
+		padding: 3rem 0;
 	}
 
-	/* nav { */
-	/* 	top: 0; */
-	/* 	position: sticky; */
-	/* } */
-
-	.text-about {
+	hgroup {
 		display: grid;
 		/* gap: 1rem; */
 		grid-column: span 4;
 	}
 
-	.text-about > * + * {
+	hgroup > * + * {
 		margin-block-start: 1em;
 	}
 
