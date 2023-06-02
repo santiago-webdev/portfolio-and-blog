@@ -34,9 +34,9 @@
 			<h1>Get to know me</h1>
 			<p style="font-weight: 500">{greeting}</p>
 			<p>
-				I enjoy crafting simple interfaces, focusing in maintainability, accessibility and
-				progressive enhancement. My set of skills is mostly dedicated to the web, but I'm also
-				interested in Linux and CS too.
+				I enjoy crafting simple interfaces, focusing in <em>maintainability</em>,
+				<em>accessibility</em> and <em>progressive enhancement</em>. My set of skills is mostly
+				dedicated to the web, but I'm also interested in Linux and CS in general.
 			</p>
 			<p>
 				You can check my journey in my blog, where I'm trying to compile all of my knowledge to
