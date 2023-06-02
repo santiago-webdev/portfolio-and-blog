@@ -5,7 +5,6 @@
 	import { Posts } from '$lib/components/search/store';
 
 	let base = `${$Posts.length} ${config.blog.description}`;
-	const description = base;
 	const boldWords = ['Linux', 'web development', 'tooling'];
 
 	boldWords.forEach((word: string) => {
