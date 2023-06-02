@@ -24,14 +24,11 @@ button[disabled] {
 }
 
 a.link {
-	transition: none;
 	font-size: inherit;
 	line-height: inherit;
 
 	color: var(--clr-blue-40);
-	text-decoration-color: var(--clr-60);
-	text-decoration: underline;
-	text-decoration-thickness: 2px;
+	text-decoration: underline var(--clr-60) 2px;
 }
 
 @media (hover: hover) {
