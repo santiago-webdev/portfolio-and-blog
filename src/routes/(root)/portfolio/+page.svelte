@@ -6,7 +6,6 @@
 		getCategoryInfo,
 		FilteredProjects
 	} from '$lib/components/projects/store';
-	import site from '$lib/site.json';
 	import { retrieve_icon } from '$lib/utils/utils';
 </script>
 

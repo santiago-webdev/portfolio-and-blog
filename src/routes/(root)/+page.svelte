@@ -1,5 +1,4 @@
 <script lang="ts">
-	import site from '$lib/site.json';
 	import AboveTheFold from './-AboveTheFold.svelte';
 	import Portfolio from './-Portfolio.svelte';
 	import Blog from './-Blog.svelte';

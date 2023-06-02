@@ -1,6 +1,6 @@
 <script>
 	import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
-	import site from '$lib/site.json';
+	import config from '$lib/config.json';
 	import { base } from '$app/paths';
 </script>
 
@@ -36,7 +36,7 @@
 		<ShapeButton href="{base}/about" class="bttn-big-round reverse">More About me</ShapeButton>
 		<div class="container">
 			<ShapeButton
-				href={site.resume.url}
+				href={config.resume.url}
 				target="_blank"
 				rel="external"
 				class="bttn-big-round shiny hover"

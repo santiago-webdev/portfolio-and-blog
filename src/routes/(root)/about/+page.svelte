@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { retrieve_icon } from '$lib/utils/utils';
-	import site from '$lib/site.json';
 
 	import { base } from '$app/paths';
 

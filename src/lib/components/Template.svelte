@@ -4,8 +4,6 @@
 </script>
 
 <script>
-	import site from '$lib/site.json';
-	import { page } from '$app/stores';
 	import Hollow from './Hollow.svelte';
 	import { readableDate, relativeTime, retrieve_icon } from '$lib/utils/utils';
 	import { base } from '$app/paths';

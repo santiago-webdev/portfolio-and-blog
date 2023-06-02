@@ -2,7 +2,7 @@
 	import { dev } from '$app/environment';
 	import { page } from '$app/stores';
 	import { navigationItems } from '$lib/components/navigation/store';
-	import site from '$lib/site.json';
+	import config from '$lib/config.json';
 
 	let ghStars = 0;
 
@@ -141,7 +141,7 @@
 
 			<a
 				target="_blank"
-				href={site.site.repo}
+				href={config.landingpage.repo}
 				aria-label="Link to git repository for this site at Github"
 				title="Link to git repository for this site at Github"
 			>

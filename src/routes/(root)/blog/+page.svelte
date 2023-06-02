@@ -1,10 +1,10 @@
 <script lang="ts">
 	import SearchBar from '$lib/components/search/SearchBar.svelte';
 	import FilteredPostsCards from '$lib/components/search/FilteredPostsCards.svelte';
-	import site from '$lib/site.json';
+	import config from '$lib/config.json';
 	import { Posts } from '$lib/components/search/store';
 
-	let base = `${$Posts.length} ${site.blog.description}`;
+	let base = `${$Posts.length} ${config.blog.description}`;
 	const description = base;
 	const boldWords = ['Linux', 'web development', 'tooling'];
 
