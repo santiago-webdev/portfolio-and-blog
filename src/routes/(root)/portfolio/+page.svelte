@@ -138,35 +138,6 @@
 	</section>
 </main>
 
-<svelte:head>
-	<title>{site.portfolio.title}</title>
-
-	<!-- TODO(santigo-zero): meta tags for dynamic routing -->
-	<!-- HTML Meta Tags -->
-	<meta name="description" content={site.portfolio.description} />
-
-	<!-- Google / Search Engine Tags -->
-	<meta itemprop="name" content={site.portfolio.title} />
-	<meta itemprop="description" content={site.portfolio.description} />
-	<meta itemprop="image" content="" />
-	<!-- TODO(santigo-zero): Add image -->
-
-	<!-- Facebook Meta Tags -->
-	<meta property="og:url" content={site.portfolio.url} />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content={site.portfolio.title} />
-	<meta property="og:description" content={site.portfolio.description} />
-	<meta property="og:image" content="" />
-	<!-- TODO(santigo-zero): Add image -->
-
-	<!-- Twitter Meta Tags -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta name="twitter:title" content={site.portfolio.title} />
-	<meta name="twitter:description" content={site.portfolio.description} />
-	<meta name="twitter:image" content="" />
-	<!-- TODO(santigo-zero): Add image -->
-</svelte:head>
-
 <style>
 	.wrapper-header {
 		border-bottom-right-radius: 1.6rem;
