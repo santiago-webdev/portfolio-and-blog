@@ -29,14 +29,14 @@
 		font-weight: 400;
 	}
 
+	.defaults {
+		font-size: inherit;
+		line-height: inherit;
+	}
+
 	@media (hover: hover) {
 		a:hover {
 			color: var(--clr-red-40);
 		}
-	}
-
-	.defaults {
-		font-size: inherit;
-		line-height: inherit;
 	}
 </style>
