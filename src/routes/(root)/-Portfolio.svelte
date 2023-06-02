@@ -40,7 +40,7 @@
 			<p>I've contributed to FOSS as well as created some projects of my own</p>
 			<p>
 				More projects with details can be tracked <LinkArrow
-					style="display: inline-flex; font-size: inherit; line-height: inherit;"
+					style="font-size: inherit; line-height: inherit;"
 					href="{base}/portfolio">in the dedicated page</LinkArrow
 				>
 			</p>

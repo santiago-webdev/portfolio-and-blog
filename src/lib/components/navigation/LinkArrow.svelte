@@ -21,7 +21,7 @@
 
 <style>
 	a {
-		display: flex;
+		display: inline-flex;
 		color: var(--clr-90);
 		transition: all 150ms ease-in-out;
 		max-width: max-content;

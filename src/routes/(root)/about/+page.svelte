@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { base } from '$app/paths';
-	// import LinkInText from '$lib/components/navigation/LinkInText.svelte';
 	import LinkArrow from '$lib/components/navigation/LinkArrow.svelte';
 	import site from '$lib/site.json';
 	import { retrieve_icon } from '$lib/utils/utils';
