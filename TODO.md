@@ -28,4 +28,7 @@ aria-pressed and hide the expanded menu when clicking or scrolling.
 If the user reaches the bottom of the screen don't just show the button to the
 top but also show a `LinkArrow` to go to either Home or to search for another post.
 
-## Finish the form/card in /projects
+## TODO for /blog
+
+Add "Created" and "Modified" states for the blogs
+Approximately find time to read a blog
