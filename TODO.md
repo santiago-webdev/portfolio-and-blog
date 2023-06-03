@@ -32,3 +32,7 @@ top but also show a `LinkArrow` to go to either Home or to search for another po
 
 Add "Created" and "Modified" states for the blogs
 Approximately find time to read a blog
+
+## Add a /uses route
+
+Plain list of two columns
