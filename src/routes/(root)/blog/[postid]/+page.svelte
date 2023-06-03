@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { page } from '$app/stores';
-
-	$: component = $page.data.content;
+	export let data;
 </script>
 
-<svelte:component this={component} />
+<svelte:component this={data.content} />
