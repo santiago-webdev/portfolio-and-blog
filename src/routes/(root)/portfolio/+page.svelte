@@ -26,11 +26,13 @@
 						<small>Sorry Folks! This requires JavaScript to work!</small>
 					</noscript>
 				</label>
-				<select bind:value={$currentGroupOfProjects} name="projects" id="projects">
-					{#each Object.entries(jobSelector) as [value, [label]]}
-						<option {value} {label} />
-					{/each}
-				</select>
+				<div class="wrapper-select">
+					<select bind:value={$currentGroupOfProjects} name="projects" id="projects">
+						{#each Object.entries(jobSelector) as [value, [label]]}
+							<option {value} {label} />
+						{/each}
+					</select>
+				</div>
 			</form>
 		</header>
 	</div>
@@ -191,19 +193,21 @@
 		flex-wrap: wrap;
 	}
 
-	select {
-		width: 100%;
-		padding: 0.7rem 1.6rem;
-		border-radius: 1rem;
-		color: var(--clr-150);
-
+	.wrapper-select {
 		background-color: var(--clr-40);
 		border: 1px solid var(--clr-40);
 		border-top-color: var(--clr-45);
 		border-left-color: var(--clr-45);
 		box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
+		padding: 0.6rem 1.6rem;
+		border-radius: 1rem;
+	}
 
-		transition: background-color 50ms, border 80ms, box-shadow 300ms;
+	select {
+		width: 100%;
+		color: var(--clr-150);
+		background-color: inherit;
+		border: none;
 	}
 
 	section {
