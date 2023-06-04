@@ -36,3 +36,5 @@ Approximately find time to read a blog
 ## Add a /uses route
 
 Plain list of two columns
+
+## Fix lists and tables in mdsvex
