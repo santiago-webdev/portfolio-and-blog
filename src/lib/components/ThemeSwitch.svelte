@@ -65,9 +65,42 @@
 	title="Theme switcher: Switch between a dark or light theme, or leave it to the system to decide"
 >
 	<div class="theme-wrapper" aria-hidden="true">
-		<iconify-icon width="28" height="28" icon="lucide:sun" />
-		<iconify-icon width="28" height="28" icon="lucide:moon" />
-		<iconify-icon width="28" height="28" icon="mdi:circle-half-full" />
+		<svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+			<g
+				fill="none"
+				stroke="currentColor"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+			>
+				<circle cx="12" cy="12" r="4" />
+				<path
+					d="M12 3v1m0 16v1m-9-9h1m16 0h1m-2.636-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707"
+				/>
+			</g>
+		</svg>
+		<svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+			<path
+				fill="none"
+				stroke="currentColor"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				d="M12 3a6 6 0 0 0 9 9a9 9 0 1 1-9-9Z"
+			/>
+		</svg>
+		<svg
+			class="system"
+			xmlns="http://www.w3.org/2000/svg"
+			width="24"
+			height="24"
+			viewBox="0 0 24 24"
+		>
+			<path
+				fill="currentColor"
+				d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 2a8 8 0 0 1 8 8a8 8 0 0 1-8 8V4Z"
+			/>
+		</svg>
 	</div>
 	<span>Theme</span>
 </button>
@@ -81,6 +114,17 @@
 		border-radius: 0.8rem;
 		gap: 0.4rem;
 		color: inherit;
+
+		box-shadow: 3px 6px 12px 4px rgba(0, 0, 0, 0.1);
+		--background: var(--clr-45);
+		--border: var(--clr-50);
+		background-color: var(--background);
+		border-bottom-color: var(--background);
+		border-right-color: var(--background);
+		border-top-color: var(--border);
+		border-left-color: var(--border);
+		border-style: solid;
+		border-width: 1px 2px;
 	}
 
 	@media screen and (min-width: 1280px) {
@@ -89,7 +133,7 @@
 		}
 
 		button {
-			padding: 0.4rem;
+			padding: 0.36rem;
 			border-radius: 100%;
 		}
 	}
@@ -102,47 +146,47 @@
 		place-items: center;
 	}
 
-	iconify-icon:first-child {
+	svg:first-child {
 		position: absolute;
 	}
 
-	iconify-icon:nth-child(2) {
+	svg:nth-child(2) {
 		position: absolute;
 	}
 
-	iconify-icon {
+	svg {
 		pointer-events: none;
 		display: flex;
-		transition: all 800ms cubic-bezier(0.3, 0, 0.3, 1);
+		transition: transform 800ms cubic-bezier(0.3, 0, 0.3, 1);
 	}
 
-	[icon='mdi:circle-half-full'] {
+	.system {
 		color: inherit;
 		transform: translateX(-3rem);
 	}
 
-	:global([data-theme='system'] [icon='mdi:circle-half-full']),
-	:global([data-theme='system-light'] [icon='mdi:circle-half-full']) {
+	:global([data-theme='system'] .system),
+	:global([data-theme='system-light'] .system) {
 		transform: translateX(0);
 	}
 
-	[icon='lucide:sun'] {
+	.sun {
 		color: orangered;
 		transform: rotate(180deg);
 		transform-origin: 50% 3rem;
 	}
 
-	:global([data-theme='light'] [icon='lucide:sun']) {
+	:global([data-theme='light'] .sun) {
 		transform: rotate(0deg);
 	}
 
-	[icon='lucide:moon'] {
+	.moon {
 		color: orange;
 		transform: rotate(90deg);
 		transform-origin: 50% -3rem;
 	}
 
-	:global([data-theme='dark'] [icon='lucide:moon']) {
+	:global([data-theme='dark'] .moon) {
 		transform: rotate(0deg);
 	}
 </style>
