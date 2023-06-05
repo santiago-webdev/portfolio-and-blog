@@ -17,16 +17,9 @@
 				and show you my projects while at it.
 			</p>
 			<section>
-				<ShapeButton href="{base}/portfolio" class="bttn-big-round reverse hover">
-					What I've built</ShapeButton
-				>
+				<ShapeButton href="{base}/portfolio" class="reverse">What I've built</ShapeButton>
 				<div class="container">
-					<ShapeButton
-						href={config.about.url}
-						target="_blank"
-						rel="external"
-						class="bttn-big-round shiny hover"
-					>
+					<ShapeButton href={config.about.resume} target="_blank" rel="external">
 						Resume</ShapeButton
 					>
 					<small>Hit Ctrl+P to print</small>
@@ -88,7 +81,7 @@
 	@media screen and (min-width: 768px) {
 		section {
 			flex-direction: row;
-			place-items: self-start;
+			place-items: start;
 			gap: 1.2rem;
 		}
 

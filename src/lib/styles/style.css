@@ -128,29 +128,29 @@ input[type='radio']:checked + .shiny-select {
 	}
 }
 
-.reverse {
-	--background: var(--clr-250);
-	--border: var(--clr-250);
-	--color: var(--clr-10);
-
-	background-color: var(--background);
-	border: 1px solid var(--background);
-	border-top-color: var(--border);
-	border-left-color: var(--border);
-	box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.2);
-
-	border-radius: 0.4rem;
-	transition: background-color 50ms, border 80ms, box-shadow 300ms;
-	color: var(--color);
-
-	display: flex;
-	place-items: center;
-	padding: 0.4rem 0.8rem;
-	gap: 0.2rem;
-	border-radius: 999rem;
-
-	font-variation-settings: 'wght' 550;
-}
+/* .reverse { */
+/* 	--background: var(--clr-250); */
+/* 	--border: var(--clr-250); */
+/* 	--color: var(--clr-10); */
+/**/
+/* 	background-color: var(--background); */
+/* 	border: 1px solid var(--background); */
+/* 	border-top-color: var(--border); */
+/* 	border-left-color: var(--border); */
+/* 	box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.2); */
+/**/
+/* 	border-radius: 0.4rem; */
+/* 	transition: background-color 50ms, border 80ms, box-shadow 300ms; */
+/* 	color: var(--color); */
+/**/
+/* 	display: flex; */
+/* 	place-items: center; */
+/* 	padding: 0.4rem 0.8rem; */
+/* 	gap: 0.2rem; */
+/* 	border-radius: 999rem; */
+/**/
+/* 	font-variation-settings: 'wght' 550; */
+/* } */
 
 .block {
 	--background: var(--clr-10);

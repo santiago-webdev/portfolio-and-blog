@@ -1,51 +1,77 @@
 <div class="wrapper-arrow" aria-hidden="true" {...$$restProps}>
-	<iconify-icon icon="lucide:minus" />
-	<iconify-icon icon="lucide:chevron-right" />
+	<svg class="tail" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+		<path
+			fill="none"
+			stroke="currentColor"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="2"
+			d="M5 12h14"
+		/>
+	</svg>
+	<svg
+		class="chevron"
+		xmlns="http://www.w3.org/2000/svg"
+		width="20"
+		height="20"
+		viewBox="0 0 24 24"
+	>
+		<path
+			fill="none"
+			stroke="currentColor"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="2"
+			d="m9 18l6-6l-6-6"
+		/>
+	</svg>
 </div>
 
 <style>
 	* {
 		transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1),
-			opacity 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+			opacity 150ms cubic-bezier(0.4, 0.4, 0, 1);
 	}
 
 	.wrapper-arrow {
 		display: flex;
 		place-items: center;
+		place-content: center;
+
 		position: relative;
-		inset: 1px auto auto 0.2ch;
+		inset: auto auto auto 0.2ch;
 	}
 
-	[icon='lucide:minus'] {
+	.tail {
 		position: absolute;
 	}
 
-	[icon='lucide:chevron-right'] {
+	.chevron {
 		transform: translateX(4px);
 	}
 
-	[icon='lucide:minus'] {
+	.tail {
 		opacity: 1;
 		transition-delay: 50ms;
 	}
 
 	@media (hover: hover) {
-		[icon='lucide:chevron-right'] {
+		.chevron {
 			transform: translateX(-3px);
 		}
 
-		[icon='lucide:minus'] {
+		.tail {
 			opacity: 0;
 			transition-delay: -50ms;
 		}
 
-		:global(a:hover [icon='lucide:chevron-right']),
-		:global(a:focus [icon='lucide:chevron-right']) {
+		:global(a:hover .chevron),
+		:global(a:focus .chevron) {
 			transform: translateX(4px);
 		}
 
-		:global(a:hover [icon='lucide:minus']),
-		:global(a:focus [icon='lucide:minus']) {
+		:global(a:hover .tail),
+		:global(a:focus .tail) {
 			opacity: 1;
 			transition-delay: 50ms;
 		}

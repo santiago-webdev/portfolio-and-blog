@@ -16,7 +16,7 @@ load() function. More information here: [mentioned here](https://kit.svelte.dev/
 | hooks.server.js | Runs logic on the server each time they receive a request                                   |
 | hooks.client.js | Runs when the application starts in the client                                              |
 | +server.js      | Standalone API endpoint                                                                     |
-| +error.js       | Used to display errors when your application crashes 😝 |
+| +error.js       | Used to display errors when your application crashes 😝                                     |
 
 | Layout files      | What does it do?                                             |
 | ----------------- | ------------------------------------------------------------ |

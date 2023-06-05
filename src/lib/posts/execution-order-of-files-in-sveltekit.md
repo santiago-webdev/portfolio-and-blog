@@ -6,6 +6,7 @@ finished: false
 ---
 
 ## Order of execution
+
 1. +hooks.server.ts
 2. +layout.server.ts
 3. +page.server.ts
