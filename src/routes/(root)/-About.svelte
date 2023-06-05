@@ -33,15 +33,9 @@
 		</div>
 	</div>
 	<div class="links-about">
-		<ShapeButton href="{base}/about" class="bttn-big-round reverse">More About me</ShapeButton>
+		<ShapeButton href="{base}/about" class="reverse">More About me</ShapeButton>
 		<div class="container">
-			<ShapeButton
-				href={config.about.url}
-				target="_blank"
-				rel="external"
-				class="bttn-big-round shiny hover"
-				>Resume
-			</ShapeButton>
+			<ShapeButton href={config.about.url} target="_blank" rel="external">Resume</ShapeButton>
 			<small>Hit Ctrl+P to print</small>
 		</div>
 	</div>

@@ -101,17 +101,10 @@
 					{/if}
 
 					<div class="container-project-links">
-						<ShapeButton
-							class="bttn-big-round shiny hover"
-							target="_blank"
-							custom_symbol="mdi:github"
-							href={repo.toString()}
-						>
+						<ShapeButton target="_blank" custom_symbol="mdi:github" href={repo.toString()}>
 							Source Code
 						</ShapeButton>
-						<ShapeButton class="bttn-big-round reverse hover" href={link.toString()}>
-							Case Study</ShapeButton
-						>
+						<ShapeButton class="reverse" href={link.toString()}>Case Study</ShapeButton>
 					</div>
 				</div>
 			</article>
