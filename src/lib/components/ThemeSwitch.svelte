@@ -110,6 +110,7 @@
 		overflow: hidden;
 		display: flex;
 		flex-flow: row;
+		place-content: center;
 		padding: 0.4rem 0.8rem;
 		border-radius: 0.8rem;
 		gap: 0.4rem;
@@ -162,7 +163,7 @@
 
 	.system {
 		color: inherit;
-		transform: translateX(-3rem);
+		transform: translateY(3rem);
 	}
 
 	:global([data-theme='system'] .system),
