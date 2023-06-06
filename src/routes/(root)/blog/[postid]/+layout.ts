@@ -11,8 +11,12 @@ export const load = (async ({ params }) => {
 
 	const module = await import(`../../../../lib/posts/${params.postid}.${localPost.extension}`);
 	const content = module.default;
+	const title = module.metadata.title;
+	const description = module.metadata.description;
 
 	return {
-		content
+		content,
+		title,
+		description
 	};
 }) satisfies LayoutLoad;

@@ -3,6 +3,8 @@
 	import ButtonToTheTop from '$lib/components/ButtonToTheTop.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	import { fly } from 'svelte/transition';
+	import Seo from '$lib/seo.svelte';
+	import { page } from '$app/stores';
 
 	export let data;
 </script>
@@ -17,6 +19,10 @@
 	<ButtonToTheTop />
 	<Footer />
 </div>
+<Seo
+	url={$page.data.pathname}
+	data={{ title: $page.data.title, description: $page.data.description }}
+/>
 
 <style>
 	#layout {
