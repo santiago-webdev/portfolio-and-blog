@@ -196,13 +196,13 @@
 	}
 
 	button {
-		background-color: hsla(230, 11%, 57%, 0.15);
+		background-color: var(--clr-40);
 		border-radius: 999rem;
 		min-width: 3.5ch;
 	}
 
 	button[aria-expanded='true'] {
-		background-color: hsla(230, 11%, 57%, 0.4);
+		background-color: var(--clr-60);
 	}
 
 	.list-items {
