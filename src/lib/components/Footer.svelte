@@ -27,7 +27,7 @@
 		{
 			name: 'Bitcoin(BEP20)',
 			logo: 'bitcoin',
-			direction: '0x3f8347d947c5bbdd166013e01ec4b645883e0fbb'
+			direction: 'todo'
 		}
 	];
 </script>
@@ -82,7 +82,7 @@
 				{#each donateItems as item}
 					<li>
 						<address>
-							<a href="bitcoin:{item.direction}">
+							<a href="#todo">
 								<iconify-icon icon="simple-icons:{item.logo}" />
 								{item.name}
 							</a>
