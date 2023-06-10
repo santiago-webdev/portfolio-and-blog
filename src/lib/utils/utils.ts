@@ -3,7 +3,6 @@ export class Post {
 	description: string;
 	datetime: string;
 	href: string;
-	extension: string;
 	metadata?: Array<Post>;
 
 	constructor(
@@ -11,14 +10,12 @@ export class Post {
 		title: string,
 		description: string,
 		datetime: string,
-		extension: string,
 		metadata?: Array<Post>
 	) {
 		this.href = href;
 		this.title = title;
 		this.description = description;
 		this.datetime = datetime;
-		this.extension = extension;
 		this.metadata = metadata;
 	}
 }

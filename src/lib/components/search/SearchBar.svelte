@@ -1,18 +1,16 @@
 <script lang="ts">
-	import { FilteredPosts, FilterValue } from './store';
+	import { FilteredPosts } from './store';
 	import { searchHandler } from './utils';
 	import { base } from '$app/paths';
 	import { goto, preloadData } from '$app/navigation';
 
-	$: if ($FilteredPosts.length === 1) preloadData(`${base}/blog${$FilteredPosts[0].href}`);
+	export let placeholder = `TODO: Make this search better`;
 
 	const placeholderDefault = 'Search';
 	const placeholderNoInput = "You haven't searched for any post yet";
-
-	export let placeholder = placeholderDefault;
 	let value = '';
 
-	async function handleSubmit() {
+	function handleSubmit() {
 		if (value.length === 0) {
 			placeholder = placeholderNoInput;
 
@@ -22,28 +20,35 @@
 			return;
 		}
 
-		await goto(`${base}/blog${$FilteredPosts[0].href}`);
+		goto(`${base}/blog${$FilteredPosts[0].href}`);
 	}
 
-	FilterValue.subscribe(() => {
-		value = $FilterValue;
-	});
+	$: if ($FilteredPosts.length === 1) preloadData(`${base}/blog${$FilteredPosts[0].href}`);
 </script>
 
 <form class="font-30" on:submit|preventDefault={handleSubmit}>
 	<button aria-label="Go to selected blog" type="submit">
-		<iconify-icon icon="lucide:search" />
+		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+			<g
+				fill="none"
+				stroke="currentColor"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+			>
+				<circle cx="11" cy="11" r="8" />
+				<path d="m21 21l-4.3-4.3" />
+			</g>
+		</svg>
 	</button>
 
 	<input
 		{placeholder}
 		aria-keyshortcuts="Control+K"
 		bind:value
-		on:input={() => FilterValue.set(searchHandler(value))}
+		on:input={() => searchHandler(value)}
 		on:focus|once={() => (placeholder = placeholderDefault)}
 		type="search"
-		id="search"
-		list="search-terms"
 		autocomplete="off"
 	/>
 	<kbd>Ctrl K</kbd>
