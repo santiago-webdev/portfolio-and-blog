@@ -15,18 +15,18 @@
 		counter-reset: ol-counter;
 	}
 
-	:global(ol li::before) {
+	:global(ol .post-li::before) {
 		content: counter(ol-counter) '.';
 		counter-increment: ol-counter;
 		padding-right: 10px;
 	}
 
-	:global(ol li) {
+	:global(ol .post-li) {
 		padding: 0.4rem;
 		border-radius: 8px;
 	}
 
-	:global(ol li:nth-child(odd)) {
+	:global(ol .post-li:nth-child(odd)) {
 		background-color: var(--clr-25);
 	}
 </style>
