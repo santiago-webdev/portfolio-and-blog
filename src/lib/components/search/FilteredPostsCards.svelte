@@ -1,19 +1,11 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { readableDate, relativeTime } from '$lib/utils/utils';
-	import { onMount } from 'svelte';
 	import { FilteredPosts } from './store';
 	import { fly } from 'svelte/transition';
 
-	let fly_in = { y: 0, duration: 0 };
-	let fly_out = { y: 0, duration: 0 };
-
-	onMount(() =>
-		setTimeout(() => {
-			fly_in = { y: 50, duration: 200 };
-			fly_out = { y: -50, duration: 200 };
-		}, 100)
-	);
+	var fly_in = { y: 50, duration: 200 };
+	var fly_out = { y: -50, duration: 200 };
 </script>
 
 <section role="complementary">
@@ -21,18 +13,29 @@
 		{#each $FilteredPosts as post}
 			<li in:fly={fly_in} out:fly={fly_out}>
 				<a href="{base}/blog{post.href}">
-					<article class="shiny less attn">
-						<h2 style="font-family: var(--ff-text)" class="font-40">
+					<article class="shiny less">
+						<h2 class="font-30">
 							{post.title}
 						</h2>
 						{#if post.description}
-							<p>{post.description}</p>
+							<p class="font-20">{post.description}</p>
 						{:else}
-							<p>No description was given.</p>
+							<p class="font-20">No description was given.</p>
 						{/if}
 						{#if post.datetime}
 							<time datetime={post.datetime}>
-								<iconify-icon width="21" heigh="21" icon="lucide:calendar" />
+								<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+									<g
+										fill="none"
+										stroke="currentColor"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+									>
+										<rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
+										<path d="M16 2v4M8 2v4m-5 4h18" />
+									</g>
+								</svg>
 								&nbsp;{relativeTime(new Date(), new Date(post.datetime))}
 								<div aria-orientation="vertical" role="separator">&nbsp;&mdash;&nbsp;</div>
 								{readableDate(post.datetime)}
@@ -75,7 +78,7 @@
 
 	article {
 		display: grid;
-		gap: 0.5rem;
+		place-items: start;
 		grid-template-rows: auto 1fr auto;
 
 		padding: 1rem;
@@ -86,6 +89,10 @@
 		color: var(--clr-200);
 	}
 
+	article > * + * {
+		margin-block-start: 0.8em;
+	}
+
 	@media screen and (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
 		article:hover {
 			transform: scale(1.02);
@@ -93,11 +100,14 @@
 	}
 
 	h2 {
+		font-family: var(--ff-dflt);
 		font-variation-settings: 'wght' 750;
+		font-weight: 500;
 	}
 
 	p {
 		font-variation-settings: 'wght' 400;
+		font-weight: 400;
 	}
 
 	time {
