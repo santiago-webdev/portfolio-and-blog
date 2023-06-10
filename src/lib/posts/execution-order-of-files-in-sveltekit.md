@@ -7,8 +7,9 @@ finished: false
 
 ## Order of execution
 
-1. +hooks.server.ts
-2. +layout.server.ts
-3. +page.server.ts
-4. +layout.ts
-5. +page.ts
+1. +hooks.server.js
+2. +layout.server.js
+3. +page.server.js
+4. +hooks.client.js
+5. +layout.js
+6. +page.js
