@@ -81,7 +81,7 @@
 			<ul class="shiny-select">
 				{#each donateItems as item}
 					<li>
-						<address>
+						<address id='todo'>
 							<a href="#todo">
 								<iconify-icon icon="simple-icons:{item.logo}" />
 								{item.name}
