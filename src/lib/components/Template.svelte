@@ -94,7 +94,7 @@
 			<br />
 		</div>
 	</div>
-	<main>
+	<main class="blog-post">
 		<slot />
 	</main>
 </section>
@@ -128,6 +128,10 @@
 		width: min(92%, var(--base));
 		margin-inline: auto;
 		padding-top: 1rem;
+	}
+
+	:global(.blog-post > * + *) {
+		margin-block-start: 1.4em;
 	}
 
 	hgroup {

@@ -2,7 +2,7 @@
 	// <script context="module" lang="ts">
 </script>
 
-<div class="wrapper-table">
+<div class="wrapper-table font-20">
 	<table>
 		<slot />
 	</table>
