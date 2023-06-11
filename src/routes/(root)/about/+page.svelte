@@ -35,8 +35,8 @@
 				dedicated to the web, but I'm also interested in Linux and CS in general.
 			</p>
 			<p>
-				You can follow my journey from <a class="link" href="{base}/blog">the blog</a>, where I'm
-				trying to compile all of my knowledge to become an all-rounder web developer.
+				You can follow my journey from <a class="internal-link" href="{base}/blog">the blog</a>,
+				where I'm trying to compile all of my knowledge to become an all-rounder web developer.
 			</p>
 		</hgroup>
 		<div class="img-wrapper">

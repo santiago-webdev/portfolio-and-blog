@@ -3,7 +3,7 @@
 </script>
 
 <a
-	class="link"
+	class={href.startsWith('/') ? 'internal-link' : 'link'}
 	{href}
 	rel={href.startsWith('/') ? '' : 'external'}
 	target={href.startsWith('/') ? '' : '_blank'}

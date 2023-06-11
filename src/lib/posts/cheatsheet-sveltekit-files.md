@@ -1,5 +1,5 @@
 ---
-title: SvelteKit files
+title: Sveltekit files cheat sheet
 datetime: 2023-06-03 22:25
 description: Cheatsheet with all of the files sveltekit related to routing
 finished: false
@@ -9,12 +9,15 @@ finished: false
 import { base } from '$app/paths';
 </script>
 
-## Cheatsheet
+# The files
 
 To pass data to either +layout.svelte or +page.svelte you do it through the
 load() function. Read the [docs](https://kit.svelte.dev/docs/load#page-data) for
 more information.
-[internal]({base}/)
+
+Note that this is not in order of execution, it's just a general view, if you
+want to see the order you can check
+[the order here]({base}/blog/execution-order-of-files-in-sveltekit).
 
 | Dedicated files | What does it do?                                                                            |
 | --------------- | ------------------------------------------------------------------------------------------- |
