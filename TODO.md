@@ -38,3 +38,7 @@ Approximately find time to read a blog
 Plain list of two columns
 
 ## Fix lists and tables in mdsvex
+
+## Add browser-like window wrapping projects images
+
+In projects make the images look like a browser, using <figure> and <figcaption>
