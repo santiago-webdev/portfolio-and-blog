@@ -7,8 +7,9 @@ finished: false
 
 ## Basic Principles
 
-1. Every page is made up of rows, and each row is a separate idea.
-   This is a pretty simple step to take
+- Every page is made up of rows, and each row is a separate idea.
+  This is a pretty simple step to take
+- test
 
 ## Designing out sections
 

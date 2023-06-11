@@ -1,6 +1,6 @@
 <script context="module">
-	import { img, ol, li, table, a } from '$lib/mdsvex_components/index';
-	export { img, ol, li, table, a };
+	import { img, ol, ul, li, table, a } from '$lib/mdsvex_components/index';
+	export { img, ol, ul, li, table, a };
 </script>
 
 <script>
