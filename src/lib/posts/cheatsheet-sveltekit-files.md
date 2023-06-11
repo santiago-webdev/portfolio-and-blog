@@ -17,7 +17,7 @@ more information.
 
 Note that this is not in order of execution, it's just a general view, if you
 want to see the order you can check
-[the order here]({base}/blog/execution-order-of-files-in-sveltekit).
+[the order in this other post]({base}/blog/execution-order-of-files-in-sveltekit).
 
 | Dedicated files | What does it do?                                                                            |
 | --------------- | ------------------------------------------------------------------------------------------- |

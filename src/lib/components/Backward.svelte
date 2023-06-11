@@ -1,6 +1,30 @@
 <div class="wrapper-arrow" aria-hidden="true" {...$$restProps}>
-	<iconify-icon icon="lucide:minus" />
-	<iconify-icon icon="lucide:chevron-left" />
+	<svg class="tail" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+		<path
+			fill="none"
+			stroke="currentColor"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="2"
+			d="M5 12h14"
+		/>
+	</svg>
+	<svg
+		class="chevron-back"
+		xmlns="http://www.w3.org/2000/svg"
+		width="21"
+		height="21"
+		viewBox="0 0 24 24"
+	>
+		<path
+			fill="none"
+			stroke="currentColor"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="2"
+			d="m15 18l-6-6l6-6"
+		/>
+	</svg>
 </div>
 
 <style>
@@ -16,36 +40,36 @@
 		inset: auto auto auto 0.2ch;
 	}
 
-	iconify-icon:first-child {
+	svg:first-child {
 		position: absolute;
 	}
 
-	[icon='lucide:chevron-left'] {
+	.chevron-back {
 		transform: translateX(-4px);
 	}
 
-	[icon='lucide:minus'] {
+	.tail {
 		opacity: 1;
 		transition-delay: 50ms;
 	}
 
 	@media (hover: hover) {
-		[icon='lucide:chevron-left'] {
+		.chevron-back {
 			transform: translateX(3px);
 		}
 
-		[icon='lucide:minus'] {
+		.tail {
 			opacity: 0;
 			transition-delay: -50ms;
 		}
 
-		:global(a:hover [icon='lucide:chevron-left']),
-		:global(a:focus [icon='lucide:chevron-left']) {
+		:global(a:hover .chevron-back),
+		:global(a:focus .chevron-back) {
 			transform: translateX(-4px);
 		}
 
-		:global(a:hover [icon='lucide:minus']),
-		:global(a:focus [icon='lucide:minus']) {
+		:global(a:hover .tail),
+		:global(a:focus .tail) {
 			opacity: 1;
 			transition-delay: 50ms;
 		}
