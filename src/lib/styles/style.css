@@ -229,3 +229,46 @@ kbd {
 	gap: 1ch;
 	place-items: center;
 }
+
+thead {
+	background: var(--clr-40);
+}
+
+thead {
+	border-collapse: separate;
+}
+
+tr:nth-of-type(2n) {
+	background-color: var(--clr-25);
+}
+
+/* th { */
+/*   border: 1px red solid; */
+/* } */
+
+th,
+td {
+	padding: 1rem;
+}
+
+th {
+	text-align: left;
+}
+
+@media (max-width: 64rem) {
+	thead {
+		display: none;
+	}
+
+	tr > *:not(:last-child) {
+		border-bottom: 2px var(--clr-25) solid;
+	}
+
+	tr:nth-of-type(2n) > *:not(:last-child) {
+		border-bottom: 2px var(--clr-40) solid;
+	}
+
+	td {
+		display: block;
+	}
+}
