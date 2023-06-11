@@ -115,11 +115,11 @@
 						{#if post.datetime}
 							<small>
 								<time datetime={post.datetime}>
-									<iconify-icon icon="lucide:calendar" />: {relativeTime(
+									<iconify-icon icon="lucide:calendar" />&nbsp;{relativeTime(
 										new Date(),
 										new Date(post.datetime)
 									)}
-									<div aria-orientation="vertical" role="separator">•</div>
+									<div aria-orientation="vertical" role="separator">&mdash;</div>
 									{readableDate(post.datetime)}
 								</time>
 							</small>
@@ -249,6 +249,11 @@
 		width: 100%;
 	}
 
+	input,
+	form {
+		color: var(--clr-250);
+	}
+
 	ul:empty {
 		padding: 0;
 	}
@@ -263,11 +268,15 @@
 	}
 
 	h3 {
-		color: var(--clr-100);
+		color: var(--clr-250);
 	}
 
 	p {
-		color: var(--clr-100);
+		color: var(--clr-200);
+	}
+
+	time {
+		color: var(--clr-150);
 	}
 
 	a {
