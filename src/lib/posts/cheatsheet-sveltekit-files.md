@@ -5,10 +5,16 @@ description: Cheatsheet with all of the files sveltekit related to routing
 finished: false
 ---
 
+<script>
+import { base } from '$app/paths';
+</script>
+
 ## Cheatsheet
 
 To pass data to either +layout.svelte or +page.svelte you do it through the
-load() function. More information here: [mentioned here](https://kit.svelte.dev/docs/load#page-data) .
+load() function. Read the [docs](https://kit.svelte.dev/docs/load#page-data) for
+more information.
+[internal]({base}/)
 
 | Dedicated files | What does it do?                                                                            |
 | --------------- | ------------------------------------------------------------------------------------------- |

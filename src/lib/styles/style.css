@@ -24,6 +24,8 @@ button[disabled] {
 }
 
 a.link {
+	display: inline-flex;
+
 	font-size: inherit;
 	line-height: inherit;
 
