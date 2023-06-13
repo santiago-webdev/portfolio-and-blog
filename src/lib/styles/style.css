@@ -144,29 +144,47 @@ input[type='radio']:checked + .shiny-select {
 	}
 }
 
-/* .reverse { */
-/* 	--background: var(--clr-250); */
-/* 	--border: var(--clr-250); */
-/* 	--color: var(--clr-10); */
-/**/
-/* 	background-color: var(--background); */
-/* 	border: 1px solid var(--background); */
-/* 	border-top-color: var(--border); */
-/* 	border-left-color: var(--border); */
-/* 	box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.2); */
-/**/
-/* 	border-radius: 0.4rem; */
-/* 	transition: background-color 50ms, border 80ms, box-shadow 300ms; */
-/* 	color: var(--color); */
-/**/
-/* 	display: flex; */
-/* 	place-items: center; */
-/* 	padding: 0.4rem 0.8rem; */
-/* 	gap: 0.2rem; */
-/* 	border-radius: 999rem; */
-/**/
-/* 	font-variation-settings: 'wght' 550; */
-/* } */
+.tpl {
+	--bg: transparent;
+	--brd: transparent;
+	background: var(--bg);
+	border-top: 2px var(--brd) solid;
+	border-left: 1px var(--brd) solid;
+	border-radius: 16px;
+	box-shadow: 3px 6px 12px 3px hsl(0 0% 0% / 0.1);
+}
+
+/* PICK */
+:is(ol, ul).pick li a {
+	--bg: transparent;
+	--brd: transparent;
+	background: var(--bg);
+	border-top: 2px var(--brd) solid;
+	border-left: 1px var(--brd) solid;
+	border-radius: 12px;
+	color: var(--clr-300);
+}
+
+@media (hover: hover) {
+	:is(ol, ul).pick li a:is(:focus-visible, :hover) {
+		--bg: var(--clr-60);
+		--brd: var(--clr-65);
+		box-shadow: 3px 6px 12px 3px hsl(0 0% 0% / 0.1);
+	}
+}
+
+:is(ol, ul).pick li a:focus {
+  --bg: var(--clr-10);
+  --brd: var(--bg);
+  box-shadow: none;
+}
+
+:is(ol, ul).pick li a[aria-selected] {
+	--bg: var(--clr-45);
+	--brd: var(--clr-50);
+	box-shadow: 3px 6px 12px 3px hsl(0 0% 0% / 0.1);
+}
+/* PICK */
 
 .block {
 	--background: var(--clr-10);

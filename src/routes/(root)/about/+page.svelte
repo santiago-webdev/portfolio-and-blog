@@ -1,14 +1,12 @@
 <script lang="ts">
 	import { retrieve_icon } from '$lib/utils/utils';
-
 	import { base } from '$app/paths';
+	import Experience from './-Experience.svelte';
 
 	export let greeting = 'Hello, my name is Santiago.';
 
 	const databases = ['MySQL', 'MariaDB', 'SQLite', 'PostgreSQL'];
-
 	const frameworks = ['React', 'NextJS', 'Svelte', 'SvelteKit', 'Astro'];
-
 	const tools = [
 		'HTML5',
 		'CSS3',
@@ -44,6 +42,9 @@
 		</div>
 	</header>
 </main>
+<div id="experience">
+	<!-- <Experience /> -->
+</div>
 <div id="technologies">
 	<h2 class="font-50">Technology I use &mdash;</h2>
 	<p>These are some of the tools I had used in the past (but am not limited to):</p>
@@ -90,8 +91,6 @@
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
 		gap: 2rem 0;
-		margin-bottom: 2rem;
-
 		width: min(92%, var(--md));
 		margin-inline: auto;
 		padding: 3rem 0;
@@ -121,6 +120,11 @@
 		width: 100%;
 		height: 100%;
 		border-radius: 50%;
+	}
+
+	#experience {
+		background-color: var(--clr-05);
+		padding: 3rem 0;
 	}
 
 	#technologies {
