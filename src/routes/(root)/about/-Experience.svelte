@@ -70,59 +70,36 @@
 			panel.hidden = true;
 		});
 
-		// Initially activate the first tab and reveal the first tab panel
-		if (tabs.length > 0) {
-			tabs[0].removeAttribute('tabindex');
-			panels[0].hidden = false;
+		// Initially activate the second tab and reveal the corresponding tab panel
+		if (tabs.length > 1) {
+			tabs[1].removeAttribute('tabindex');
+			panels[1].hidden = false;
 		}
 	});
 </script>
 
 <div class="wrapper-experience tpl">
-	<h2 class="font-50">Experience</h2>
+	<h2 class="font-60">What I'm up to today</h2>
 	<div bind:this={tabbed} class="tabbed">
 		<ol class="pick" bind:this={tablist} role="tablist">
-			<li><a aria-selected="true" role="tab" href="#section1">Job 1</a></li>
-			<li><a role="tab" href="#section2">Job 2</a></li>
-			<li><a role="tab" href="#section3">Job 3</a></li>
-			<li><a role="tab" href="#section4">Job 4</a></li>
+			<li><a role="tab" href="#section1">Add job <span>+</span></a></li>
+			<li><a aria-selected="true" role="tab" href="#section2">Unemployed</a></li>
 		</ol>
 		<div class="wrapper-content">
 			<section role="tabpanel" id="section1">
-				<h3>Latest job</h3>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam euismod, tortor nec pharetra
-					ultricies, ante erat imperdiet velit, nec laoreet enim lacus a velit. Nam luctus, enim in
-					interdum condimentum, nisl diam iaculis lorem, vel volutpat mi leo sit amet lectus.
-					Praesent non odio bibendum magna bibendum accumsan.
-				</p>
+				<h3>New job</h3>
+				<p>You can add a new job by contacting me!</p>
 			</section>
 			<section role="tabpanel" id="section2">
-				<h2>Section 2</h2>
+				<div style="display: flex; gap: 0.5ch" class="position">
+					<h3>And still learning</h3>
+				</div>
+				<div style="display: flex; gap: 0.5ch" class="timeframe font-50">
+					<time datetime="2022">2022 &mdash; present</time>
+				</div>
 				<p>
-					Nullam at diam nec arcu suscipit auctor non a erat. Sed et magna semper, eleifend magna
-					non, facilisis nisl. Proin et est et lorem dictum finibus ut nec turpis. Aenean nisi
-					tortor, euismod a mauris a, mattis scelerisque tortor. Sed dolor risus, varius a nibh id,
-					condimentum lacinia est. In lacinia cursus odio a aliquam. Curabitur tortor magna, laoreet
-					ut rhoncus at, sodales consequat tellus.
-				</p>
-			</section>
-			<section role="tabpanel" id="section3">
-				<h2>Section 3</h2>
-				<p>
-					Phasellus ac tristique orci. Nulla maximus justo nec dignissim consequat. Sed vehicula
-					diam sit amet mi efficitur vehicula in in nisl. Aliquam erat volutpat. Suspendisse lorem
-					turpis, accumsan consequat consectetur gravida, pellentesque ac ante. Aliquam in commodo
-					ligula, sit amet mollis neque. Vestibulum at facilisis massa.
-				</p>
-			</section>
-			<section role="tabpanel" id="section4">
-				<h2>Section 4</h2>
-				<p>
-					Nam luctus, enim in interdum condimentum, nisl diam iaculis lorem, vel volutpat mi leo sit
-					amet lectus. Praesent non odio bibendum magna bibendum accumsan. Lorem ipsum dolor sit
-					amet, consectetur adipiscing elit. Nam euismod, tortor nec pharetra ultricies, ante erat
-					imperdiet velit, nec laoreet enim lacus a velit.
+					Since 2022 I've been learning on my own. I'm currently doing web development, testing new
+					technologies.
 				</p>
 			</section>
 		</div>
@@ -134,16 +111,16 @@
 		--bg: var(--clr-20);
 		--brd: var(--clr-25);
 
-		width: min(92%, var(--base));
+		width: min(96%, var(--base));
 		margin-inline: auto;
-		padding: 2rem;
+		padding: 1.6rem;
 		display: grid;
 		gap: 2rem;
 	}
 
 	.tabbed {
 		display: flex;
-		gap: 1rem;
+		gap: 2rem;
 	}
 
 	ol {
@@ -158,8 +135,10 @@
 		display: block;
 	}
 
-	ol a {
-		padding: 1rem;
+	a {
+		display: flex;
+		padding: 0.6rem 1.8rem;
+		justify-content: space-between;
 	}
 
 	.wrapper-content {
@@ -168,23 +147,20 @@
 
 	section {
 		max-width: var(--base);
-		margin-block-start: 1em;
-		margin-inline: auto;
-		padding: 1rem;
 	}
 
 	section > * + * {
-		margin-block-start: 1em;
+		margin-block-start: 0.6em;
 	}
 
 	@media (max-width: 64rem) {
+		.tabbed {
+			flex-direction: column;
+		}
+
 		li,
 		a {
 			display: block;
-		}
-
-		ol [aria-selected]::after {
-			content: '\0020⬅';
 		}
 	}
 </style>

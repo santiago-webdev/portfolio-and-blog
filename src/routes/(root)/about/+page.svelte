@@ -43,10 +43,10 @@
 	</header>
 </main>
 <div id="experience">
-	<!-- <Experience /> -->
+	<Experience />
 </div>
 <div id="technologies">
-	<h2 class="font-50">Technology I use &mdash;</h2>
+	<h2 class="font-60">Technology I use &mdash;</h2>
 	<p>These are some of the tools I had used in the past (but am not limited to):</p>
 	<div class="wrapper-frameworks">
 		<h3 class="font-30">Frameworks and metaframeworks:</h3>
@@ -130,6 +130,7 @@
 	#technologies {
 		width: min(92%, var(--base));
 		margin-inline: auto;
+		padding: 3rem 0;
 	}
 
 	#technologies p {
