@@ -62,7 +62,7 @@
 		display: grid;
 		gap: 4rem;
 
-		width: min(92%, var(--lg));
+		width: min(100% - 2.2rem, var(--lg));
 		border-radius: 0.8rem;
 	}
 

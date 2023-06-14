@@ -24,7 +24,7 @@ export const AllProjects = readable<Array<Project>>([
 		description:
 			"I helped creating the landing page for Zap, an open-source plugin manager for zsh. It's one of my first steps into the web dev world.",
 		short_description:
-			'I helped with the landing page for Zap, an open-source plugin manager for zsh.',
+			'One of my first steps into the web dev world, I helped creating the landing page',
 		category: ['featured', 'frontend', 'opensource'],
 		stack: {
 			frontend: ['JavaScript', 'HTML', 'CSS'],

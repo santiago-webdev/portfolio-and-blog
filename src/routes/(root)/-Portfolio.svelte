@@ -9,7 +9,7 @@
 		<ol>
 			<li class="tpl">
 				<a href={$FilteredProjects[0].link.toString()} target="_blank" rel="external">
-					<h3 class="font-40">
+					<h3 class="font-30">
 						{$FilteredProjects[0].name}
 						<iconify-icon icon="lucide:external-link" />
 					</h3>
@@ -18,7 +18,7 @@
 			</li>
 			<li class="tpl">
 				<a href="/" target="_blank" rel="external">
-					<h3 class="font-40">
+					<h3 class="font-30">
 						Project
 						<iconify-icon icon="lucide:external-link" />
 					</h3>
@@ -27,7 +27,7 @@
 			</li>
 			<li class="tpl">
 				<a href="/" target="_blank" rel="external">
-					<h3 class="font-40">
+					<h3 class="font-30">
 						Project
 						<iconify-icon icon="lucide:external-link" />
 					</h3>
@@ -36,13 +36,12 @@
 			</li>
 		</ol>
 		<section>
-			<h2>Latest projects</h2>
-			<p>I've contributed to FOSS as well as created some projects of my own</p>
+			<h2 class="font-40">My work</h2>
 			<p>
-				More projects with details can be tracked <LinkArrow
-					style="font-size: inherit; line-height: inherit;"
-					href="{base}/portfolio">in the dedicated page</LinkArrow
-				>
+				I've contributed to FOSS as well as created some projects of my own. More projects can be
+				tracked <LinkArrow style="font-size: inherit; line-height: inherit;" href="{base}/portfolio"
+					>in my portfolio
+				</LinkArrow>
 			</p>
 		</section>
 	</div>
@@ -56,7 +55,7 @@
 	.portfolio {
 		display: flex;
 		flex-wrap: wrap-reverse;
-		width: min(92%, var(--md));
+		width: min(100% - 2.2rem, var(--md));
 		min-height: 100vh;
 		min-height: 100svh;
 		margin-inline: auto;
@@ -67,20 +66,30 @@
 	}
 
 	section {
+		max-width: min(100% - 2rem);
 		display: flex;
 		flex-direction: column;
-		gap: 0.6rem;
 		flex: 1;
+		min-width: var(--xs);
 	}
 
 	section > * + * {
-		margin-block-start: 0.8em;
+		margin-block-start: 0.6em;
 	}
 
 	section p {
 		color: var(--clr-80);
 		max-width: 38ch;
 	}
+
+	h2 {
+		font-weight: 700;
+		font-variation-settings: 'wght' 700;
+	}
+
+	/* h3 { */
+	/* 	font-weight: 500; */
+	/* } */
 
 	ol {
 		flex: 1;
@@ -96,8 +105,11 @@
 
 	li a {
 		display: grid;
-		gap: 0.4rem;
-		padding: 0.8rem;
+		padding: 1rem;
+	}
+
+	li a > * + * {
+		margin-block-start: 0.4em;
 	}
 
 	h3 {
@@ -116,7 +128,6 @@
 
 	@media screen and (min-width: 1024px) {
 		li a {
-			gap: 0.8rem;
 			padding: 1.6rem;
 		}
 	}

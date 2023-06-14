@@ -5,7 +5,7 @@
 </script>
 
 <div class="wrapper-about">
-	<h2 class="font-80">About</h2>
+	<h2 class="font-70">About</h2>
 	<div class="aboutme">
 		<section>
 			<p style="font-weight: 500">Hello, my name is Santiago.</p>
@@ -21,10 +21,11 @@
 			</p>
 		</section>
 		<div class="familiar-stack">
-			<span class="font-20">Technologies I've been working with recently:</span>
+			<span style="font-weight: 500" class="font-30"
+				>And this is the stack I'm most comfortable with</span
+			>
 			<ul class="font-20">
 				<li>JavaScript(ES6+)</li>
-				<li>TypeScript</li>
 				<li>React</li>
 				<li>Node.js</li>
 				<li>SQL</li>
@@ -51,7 +52,7 @@
 		display: grid;
 		grid-template-columns: repeat(8, 1fr);
 		gap: 3rem;
-		width: min(92%, var(--md));
+		width: min(100% - 2.2rem, var(--md));
 		margin-inline: auto;
 	}
 
@@ -71,7 +72,7 @@
 	.familiar-stack {
 		grid-column: span 8;
 		display: grid;
-		place-content: center;
+		place-content: start;
 		gap: 1rem;
 	}
 
@@ -80,7 +81,7 @@
 		flex-direction: column;
 
 		margin-top: clamp(2rem, 2vw + 1rem, 6rem);
-		width: min(92%, var(--md));
+		width: min(100% - 2.2rem, var(--md));
 		margin-inline: auto;
 		place-content: center;
 		gap: 1rem;
