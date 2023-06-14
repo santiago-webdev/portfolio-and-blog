@@ -329,6 +329,7 @@
 	}
 
 	.artifact-link {
+		overflow-x: auto;
 		padding: 0.2rem 1rem;
 		width: 100%;
 		background: var(--clr-50);
