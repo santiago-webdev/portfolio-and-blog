@@ -40,6 +40,21 @@
 		{#each $FilteredProjects as { name, description, category, stack, img, repo, link, accent }}
 			<article class="tpl">
 				<div class="img-wrapper">
+					<div class="artifact-browser">
+						<div class="artifact-buttons">
+							{#each [1, 2, 3] as _}
+								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+									<path
+										fill="var(--clr-30)"
+										d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"
+									/>
+								</svg>
+							{/each}
+						</div>
+						<div class="artifact-link">
+							<a href={link.toString()} target="_blank" rel="external">{link}</a>
+						</div>
+					</div>
 					<img loading="lazy" src={img} alt="Screenshot of {name}" title="Screenshot of {name}" />
 				</div>
 				<div id="describe-{name}">
@@ -298,6 +313,27 @@
 		overflow-y: scroll;
 		border: 3px solid var(--clr-50);
 		border-radius: 0.8rem;
+	}
+
+	.artifact-browser {
+		display: flex;
+		place-items: center;
+		padding: 0.2rem;
+		padding-right: 0.8rem;
+		background: var(--clr-60);
+	}
+
+	.artifact-buttons {
+		display: flex;
+		padding: 0.4rem;
+	}
+
+	.artifact-link {
+		padding: 0.2rem 1rem;
+		width: 100%;
+		background: var(--clr-50);
+		border-radius: 6px;
+		display: grid;
 	}
 
 	img {
