@@ -43,7 +43,7 @@
 					<div class="artifact-browser">
 						<div class="artifact-buttons">
 							{#each [1, 2, 3] as _}
-								<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+								<svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">
 									<path
 										fill="var(--clr-30)"
 										d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"
@@ -52,7 +52,7 @@
 							{/each}
 						</div>
 						<div class="artifact-link">
-							<a href={link.toString()} target="_blank" rel="external">{link}</a>
+							<a class="font-10" href={link.toString()} target="_blank" rel="external">{link}</a>
 						</div>
 					</div>
 					<img loading="lazy" src={img} alt="Screenshot of {name}" title="Screenshot of {name}" />
