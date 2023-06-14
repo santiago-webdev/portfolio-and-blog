@@ -19,8 +19,17 @@
 <svelte:window bind:scrollY bind:innerHeight />
 
 <section>
-	<a style:visibility aria-label="Go to the top of the page" class="reverse" href="#body">
-		<iconify-icon icon="lucide:arrow-up" />
+	<a style:visibility aria-label="Go to the top of the page" class="tpl reverse" href="#body">
+		<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+			<path
+				fill="none"
+				stroke="currentColor"
+				stroke-linecap="round"
+				stroke-linejoin="round"
+				stroke-width="2"
+				d="M12 19V5m-7 7l7-7l7 7"
+			/>
+		</svg>
 	</a>
 </section>
 
@@ -36,6 +45,7 @@
 
 	a {
 		border-radius: 999rem;
-		padding: 0.8rem;
+		padding: 1rem;
+		border-width: 1px;
 	}
 </style>

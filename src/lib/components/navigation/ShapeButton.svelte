@@ -3,7 +3,7 @@
 	export let href = '/';
 </script>
 
-<a {href} class={`defaults ${$$props.class}`} {...$$restProps}>
+<a {href} {...$$restProps} class={`tpl defaults ${$$props.class}`}>
 	<span>
 		<slot />
 		{#if $$props.rel}
@@ -39,6 +39,7 @@
 
 		--pad-height: 16px;
 		--pad-width: 32px;
+		padding: var(--pad-height) var(--pad-width);
 	}
 
 	span {
@@ -49,42 +50,4 @@
 		gap: 0.5ch;
 		min-width: min(14ch, 100%);
 	}
-
-	/* Types of buttons */
-	.defaults {
-		padding: var(--pad-height) var(--pad-width);
-		box-shadow: 3px 6px 12px 4px rgba(0, 0, 0, 0.1);
-		--background: var(--clr-45);
-		--border: var(--clr-50);
-		background-color: var(--background);
-		border-bottom-color: var(--background);
-		border-right-color: var(--background);
-		border-top-color: var(--border);
-		border-left-color: var(--border);
-		border-style: solid;
-		border-width: 1px 2px;
-		color: inherit;
-	}
-
-	.reverse {
-		padding: var(--pad-height) var(--pad-width);
-		box-shadow: 3px 6px 8px 4px rgba(0, 0, 0, 0.1);
-		--background: var(--clr-250);
-		--border: var(--clr-300);
-		background-color: var(--background);
-		border-color: var(--border) var(--background) var(--background) var(--border);
-		border-style: solid;
-		border-width: 1px 2px;
-		color: var(--clr-10);
-	}
-
-	.transparent {
-		padding: var(--pad-height) 0;
-		background-color: transparent;
-		border: transparent solid;
-		border-width: 1px 0 0 1px;
-		color: var(--clr-90);
-	}
-
-	/* EOL Types of buttons */
 </style>

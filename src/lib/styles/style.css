@@ -94,11 +94,6 @@ a.internal-link {
 	font-variation-settings: 'wght' 550;
 }
 
-.shiny.less {
-	--background: var(--clr-25);
-	--border: var(--clr-30);
-}
-
 .shiny.float {
 	box-shadow: 8px 8px 32px 0 rgba(0, 0, 0, 0.4);
 }
@@ -144,25 +139,56 @@ input[type='radio']:checked + .shiny-select {
 	}
 }
 
+/* TEMPLATE */
 .tpl {
 	--bg: transparent;
 	--brd: transparent;
 	background: var(--bg);
-	border-top: 2px var(--brd) solid;
-	border-left: 1px var(--brd) solid;
+	border-color: var(--brd) var(--bg) var(--bg) var(--brd);
+	border-width: 2px 1px;
+	border-style: solid;
 	border-radius: 16px;
 	box-shadow: 3px 6px 12px 3px hsl(0 0% 0% / 0.1);
 }
+
+.defaults {
+	--bg: var(--clr-45);
+	--brd: var(--clr-50);
+}
+
+.reverse {
+	--bg: var(--clr-250);
+	--brd: var(--clr-300);
+	color: var(--clr-10);
+}
+
+@media (hover: hover) {
+	.defaults:hover {
+		--bg: var(--clr-55);
+		--brd: var(--clr-60);
+	}
+
+	.reverse:hover {
+		--bg: var(--clr-200);
+		--brd: var(--clr-250);
+	}
+}
+
+.transparent {
+	--bg: transparent;
+	--brd: transparent;
+}
+/* TEMPLATE */
 
 /* PICK */
 :is(ol, ul).pick li a {
 	--bg: transparent;
 	--brd: transparent;
 	background: var(--bg);
-	border-top: 2px var(--brd) solid;
-	border-left: 1px var(--brd) solid;
+	border-color: var(--brd) var(--bg) var(--bg) var(--brd);
+	border-width: 2px 1px;
+	border-style: solid;
 	border-radius: 12px;
-	color: var(--clr-300);
 }
 
 @media (hover: hover) {
@@ -174,9 +200,9 @@ input[type='radio']:checked + .shiny-select {
 }
 
 :is(ol, ul).pick li a:focus {
-  --bg: var(--clr-10);
-  --brd: var(--bg);
-  box-shadow: none;
+	--bg: var(--clr-10);
+	--brd: var(--bg);
+	box-shadow: none;
 }
 
 :is(ol, ul).pick li a[aria-selected] {

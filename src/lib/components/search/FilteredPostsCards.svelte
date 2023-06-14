@@ -13,7 +13,7 @@
 		{#each $FilteredPosts as post}
 			<li in:fly={fly_in} out:fly={fly_out}>
 				<a href="{base}/blog{post.href}">
-					<article class="shiny less">
+					<article class="tpl">
 						<h2 class="font-30">
 							{post.title}
 						</h2>
@@ -77,6 +77,8 @@
 	}
 
 	article {
+		--bg: var(--clr-25);
+		--brd: var(--clr-30);
 		display: grid;
 		place-items: start;
 		grid-template-rows: auto 1fr auto;

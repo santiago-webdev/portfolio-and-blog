@@ -26,7 +26,7 @@
 	$: if ($FilteredPosts.length === 1) preloadData(`${base}/blog${$FilteredPosts[0].href}`);
 </script>
 
-<form class="font-30" on:submit|preventDefault={handleSubmit}>
+<form class="font-30 tpl" on:submit|preventDefault={handleSubmit}>
 	<button aria-label="Go to selected blog" type="submit">
 		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 			<g
@@ -56,18 +56,19 @@
 
 <style>
 	form {
+		--bg: var(--clr-40);
+		--brd: var(--clr-45);
 		display: flex;
 		place-items: center;
-		overflow: hidden;
 		margin-inline: auto;
 		position: relative;
 		width: min(92%, var(--sm));
 
-		background-color: var(--clr-40);
-		border: 1px solid var(--clr-40);
-		border-top-color: var(--clr-45);
-		border-left-color: var(--clr-45);
-		box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
+		/* background-color: var(--clr-40); */
+		/* border: 1px solid var(--clr-40); */
+		/* border-top-color: var(--clr-45); */
+		/* border-left-color: var(--clr-45); */
+		/* box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1); */
 
 		transition: background-color 50ms, border 80ms, box-shadow 300ms;
 

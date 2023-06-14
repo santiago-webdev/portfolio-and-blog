@@ -57,7 +57,7 @@
 			{#if tags}
 				<ul class="tags inline-items">
 					{#each tags as tag}
-						<li class="shiny">
+						<li class="tpl">
 							<iconify-icon width="22" height="22" icon={retrieve_icon(tag)} />
 							{tag}
 						</li>
@@ -171,6 +171,8 @@
 	}
 
 	.tags li {
+		--bg: var(--clr-40);
+		--brd: var(--clr-45);
 		margin-top: 0.6rem;
 		display: flex;
 		gap: 0.5ch;

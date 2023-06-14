@@ -7,7 +7,7 @@
 <div class="wrapper-portfolio">
 	<div id="portfolio" class="portfolio">
 		<ol>
-			<li>
+			<li class="tpl">
 				<a href={$FilteredProjects[0].link.toString()} target="_blank" rel="external">
 					<h3 class="font-40">
 						{$FilteredProjects[0].name}
@@ -16,7 +16,7 @@
 					<p class="font-20">{$FilteredProjects[0].short_description}</p>
 				</a>
 			</li>
-			<li>
+			<li class="tpl">
 				<a href="/" target="_blank" rel="external">
 					<h3 class="font-40">
 						Project
@@ -25,7 +25,7 @@
 					<p class="font-20">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
 				</a>
 			</li>
-			<li>
+			<li class="tpl">
 				<a href="/" target="_blank" rel="external">
 					<h3 class="font-40">
 						Project
@@ -121,9 +121,9 @@
 		}
 	}
 
-	/* Gradient styles for each list items. */
 	li:first-child {
-		background-color: var(--clr-35);
+		--bg: var(--clr-25);
+		--brd: var(--clr-30);
 	}
 
 	li:first-child h3 {
@@ -135,7 +135,8 @@
 	}
 
 	li:nth-child(2) {
-		background-color: var(--clr-25);
+		--bg: var(--clr-20);
+		--brd: var(--clr-25);
 	}
 
 	li:nth-child(2) h3 {
@@ -147,7 +148,8 @@
 	}
 
 	li:last-child {
-		background-color: var(--clr-15);
+		--bg: var(--clr-15);
+		--brd: var(--clr-20);
 	}
 
 	li:last-child h3 {
@@ -156,5 +158,22 @@
 
 	li:last-child p {
 		color: var(--clr-150);
+	}
+
+	@media (hover: hover) {
+		li:first-child:hover {
+			--bg: var(--clr-35);
+			--brd: var(--clr-40);
+		}
+
+		li:nth-child(2):hover {
+			--bg: var(--clr-30);
+			--brd: var(--clr-35);
+		}
+
+		li:last-child:hover {
+			--bg: var(--clr-25);
+			--brd: var(--clr-30);
+		}
 	}
 </style>

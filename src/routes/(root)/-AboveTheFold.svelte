@@ -17,7 +17,7 @@
 				and show you my projects while at it.
 			</p>
 			<section>
-				<ShapeButton href="{base}/portfolio" class="reverse">What I've built</ShapeButton>
+				<ShapeButton class="reverse" href="{base}/portfolio">What I've built</ShapeButton>
 				<div class="container">
 					<ShapeButton href={config.about.resume} target="_blank" rel="external">
 						Resume</ShapeButton

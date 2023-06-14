@@ -34,7 +34,7 @@
 
 <footer>
 	<header>
-		<div class="aboutme">
+		<div class="aboutme tpl">
 			<h3 class="font-30">Santiago Gonzalez</h3>
 			<p class="font-30">
 				Crafting accessible web experiences without leaving the aesthetics aside.
@@ -208,6 +208,9 @@
 	}
 
 	.aboutme {
+		--bg: var(--clr-30);
+		--brd: var(--clr-35);
+
 		display: flex;
 		position: relative;
 		place-content: center;
@@ -217,14 +220,6 @@
 		gap: 1rem;
 		padding: 2rem;
 		border-radius: 1.2rem;
-
-		--background: var(--clr-30);
-		--border: var(--clr-35);
-		background-color: var(--background);
-		border: 1px solid var(--background);
-		border-top-color: var(--border);
-		border-left-color: var(--border);
-		box-shadow: 0 8px 16px 0 rgba(0 0 0 / 0.15);
 	}
 
 	.aboutme p {
@@ -317,7 +312,7 @@
 	}
 
 	section :is(small, a) {
-		color: var(--clr-300);
+		color: var(--clr-250);
 		font-variation-settings: 'wght' 530;
 		font-family: var(--ff-dflt);
 		font-size: inherit;

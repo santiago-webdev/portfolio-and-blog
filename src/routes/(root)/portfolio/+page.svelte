@@ -26,7 +26,7 @@
 						<small>Sorry Folks! This requires JavaScript to work!</small>
 					</noscript>
 				</label>
-				<div class="wrapper-select">
+				<div class="wrapper-select tpl">
 					<select bind:value={$currentGroupOfProjects} name="projects" id="projects">
 						{#each Object.entries(jobSelector) as [value, [label]]}
 							<option {value} {label} />
@@ -38,7 +38,7 @@
 	</div>
 	<section>
 		{#each $FilteredProjects as { name, description, category, stack, img, repo, link, accent }}
-			<article>
+			<article class="tpl">
 				<div class="img-wrapper">
 					<img loading="lazy" src={img} alt="Screenshot of {name}" title="Screenshot of {name}" />
 				</div>
@@ -52,7 +52,7 @@
 							</a>
 							<ul class="inline-items">
 								{#each category as tags}
-									<li class="shiny font-20">{getCategoryInfo(tags).label}</li>
+									<li class="tpl font-20">{getCategoryInfo(tags).label}</li>
 								{/each}
 							</ul>
 						</div>
@@ -65,7 +65,7 @@
 							<h4 class="font-10">Frontend:</h4>
 							<ul class="inline-items font-10">
 								{#each stack.frontend as tags}
-									<li class="shiny">
+									<li class="tpl">
 										<iconify-icon width="22" icon={retrieve_icon(tags)} />
 										{tags}
 									</li>
@@ -78,7 +78,7 @@
 							<h4 class="font-10">API:</h4>
 							<ul class="inline-items font-10">
 								{#each stack.api as tags}
-									<li class="shiny">
+									<li class="tpl">
 										<iconify-icon width="22" icon={retrieve_icon(tags)} />
 										{tags}
 									</li>
@@ -91,7 +91,7 @@
 							<h4 class="font-10">Backend:</h4>
 							<ul class="inline-items font-10">
 								{#each stack.backend as tags}
-									<li class="shiny">
+									<li class="tpl">
 										<iconify-icon width="22" icon={retrieve_icon(tags)} />
 										{tags}
 									</li>
@@ -109,7 +109,7 @@
 				</div>
 			</article>
 		{/each}
-		<article>
+		<article class="tpl">
 			<button>
 				<iconify-icon width="30" height="30" icon="lucide:plus" />
 			</button>
@@ -124,7 +124,7 @@
 						to work with you on your new project.
 					</p>
 					<ul>
-						<li class="shiny">New</li>
+						<li class="tpl">New</li>
 					</ul>
 				</header>
 			</div>
@@ -187,11 +187,8 @@
 	}
 
 	.wrapper-select {
-		background-color: var(--clr-40);
-		border: 1px solid var(--clr-40);
-		border-top-color: var(--clr-45);
-		border-left-color: var(--clr-45);
-		box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
+		--bg: var(--clr-40);
+		--brd: var(--clr-45);
 		padding: 0.6rem 1.6rem;
 		border-radius: 1rem;
 	}
@@ -212,7 +209,8 @@
 	}
 
 	article {
-		background-color: var(--clr-25);
+		--bg: var(--clr-25);
+		--brd: var(--clr-30);
 		border-radius: 1.2rem;
 		display: flex;
 		flex-flow: column wrap;
@@ -285,6 +283,8 @@
 	}
 
 	li {
+		--bg: var(--clr-40);
+		--brd: var(--clr-45);
 		border-radius: 0.6rem;
 		padding: 0.3rem 0.9rem;
 		display: flex;
