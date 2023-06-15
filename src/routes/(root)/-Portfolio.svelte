@@ -16,12 +16,12 @@
 				</a>
 			</li>
 			<li class="tpl">
-				<a href="/" target="_blank" rel="external">
+				<a href={$FilteredProjects[1].link.toString()} target="_blank" rel="external">
 					<h3 class="font-30">
-						Project
+						{$FilteredProjects[1].name}
 						<iconify-icon icon="lucide:external-link" />
 					</h3>
-					<p class="font-20">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+					<p class="font-20">{$FilteredProjects[1].short_description}</p>
 				</a>
 			</li>
 			<li class="tpl">

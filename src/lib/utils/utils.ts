@@ -122,6 +122,9 @@ export function retrieve_icon(symbol: string): string | undefined {
 			return 'simple-icons:mariadb';
 		case 'postgresql':
 			return 'devicon-plain:postgresql';
+		case 'linkedin':
+			return 'devicon-plain:linkedin';
+		case 'github':
 		case 'github rest api':
 			return 'mdi:github';
 		default:

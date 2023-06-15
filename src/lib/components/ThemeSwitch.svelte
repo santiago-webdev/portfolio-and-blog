@@ -112,7 +112,7 @@
 		flex-flow: row;
 		place-content: center;
 		padding: 0.4rem 0.8rem;
-		border-radius: 0.8rem;
+		border-radius: 1rem;
 		gap: 0.4rem;
 		color: inherit;
 

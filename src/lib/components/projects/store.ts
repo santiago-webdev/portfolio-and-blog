@@ -20,7 +20,7 @@ interface Project {
 
 export const AllProjects = readable<Array<Project>>([
 	{
-		name: 'Website for zap',
+		name: 'Zap zsh',
 		description:
 			"I helped creating the landing page for Zap, an open-source plugin manager for zsh. It's one of my first steps into the web dev world.",
 		short_description:
@@ -37,8 +37,9 @@ export const AllProjects = readable<Array<Project>>([
 		accent: '--clr-orange-50'
 	},
 	{
-		name: 'Personal Portfolio and Blog',
+		name: 'Personal site',
 		description: 'This is my personal blog and portfolio, check the case study below',
+		short_description: 'This same site, here you can find more about me',
 		category: ['featured', 'frontend', 'opensource'],
 		stack: {
 			frontend: ['SvelteKit', 'TypeScript']
