@@ -196,13 +196,12 @@
 	}
 
 	button {
-		background-color: var(--clr-40);
 		border-radius: 999rem;
 		min-width: 3.5ch;
 	}
 
 	button[aria-expanded='true'] {
-		background-color: var(--clr-60);
+		background-color: var(--clr-55);
 	}
 
 	.list-items {
