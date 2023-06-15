@@ -272,13 +272,15 @@
 		}
 	}
 
-	@media (prefers-reduced-motion: reduce) {
-		*,
-		*::before,
-		*::after {
-			transition-property: none;
+	@media (max-width: 1024px) {
+		header {
 			transition: none;
-			animation: none;
+		}
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		header {
+			transition: none;
 		}
 	}
 </style>

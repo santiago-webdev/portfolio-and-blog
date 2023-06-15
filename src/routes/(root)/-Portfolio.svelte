@@ -85,10 +85,6 @@
 		font-variation-settings: 'wght' 700;
 	}
 
-	/* h3 { */
-	/* 	font-weight: 500; */
-	/* } */
-
 	ol {
 		flex: 1;
 		display: grid;

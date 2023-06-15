@@ -18,7 +18,6 @@
 		<!-- eslint-disable -->
 		<p>{@html base}</p>
 	</hgroup>
-	<br />
 	<SearchBar />
 </main>
 <FilteredPostsCards />
@@ -29,17 +28,21 @@
 		border-bottom-right-radius: 1.6rem;
 		border-bottom-left-radius: 1.6rem;
 		padding-bottom: 1.4rem;
+		display: grid;
+		gap: 2.4rem;
 	}
 
 	h1,
 	p {
 		text-align: center;
-		width: min(92%, 33ch);
+		width: min(100% - 1.4rem, 33ch);
 	}
 
 	hgroup {
 		display: grid;
 		place-items: center;
-		gap: 1rem;
+		gap: 1.6rem;
+		width: min(100% - 2.2rem, var(--md));
+		margin-inline: auto;
 	}
 </style>
