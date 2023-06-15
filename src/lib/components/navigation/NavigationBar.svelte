@@ -14,26 +14,26 @@
 		outerWidth = 0,
 		in_viewport = true,
 		transform = '',
-		anchored = false;
+		anchored = true;
 
 	afterNavigate(() => {
 		expanded = false;
-		anchored = $page.url.pathname === `${base}/about`;
+		// anchored = $page.url.pathname === `${base}/about`;
 	});
 
-	onMount(() => {
-		const main = document.querySelector('main');
-
-		if (main) {
-			const observer = new IntersectionObserver((entries) =>
-				entries.forEach((entry) => {
-					if (entry.target === main) in_viewport = entry.isIntersecting;
-				})
-			);
-
-			observer.observe(main);
-		}
-	});
+	// onMount(() => {
+	// 	const main = document.querySelector('main');
+	//
+	// 	if (main) {
+	// 		const observer = new IntersectionObserver((entries) =>
+	// 			entries.forEach((entry) => {
+	// 				if (entry.target === main) in_viewport = entry.isIntersecting;
+	// 			})
+	// 		);
+	//
+	// 		observer.observe(main);
+	// 	}
+	// });
 
 	$: {
 		transform = !expanded && !in_viewport && scrollY > savedY ? 'translateY(-200%)' : '';
@@ -154,7 +154,8 @@
 <style>
 	header {
 		position: sticky;
-		top: 0;
+		/* TODO(santigo-zero): Fix this */
+		/* top: 0; */
 		transition: background-color, transform 200ms cubic-bezier(0.5, 0.95, 0, 1);
 		z-index: 999;
 		padding: 0.2rem 0;

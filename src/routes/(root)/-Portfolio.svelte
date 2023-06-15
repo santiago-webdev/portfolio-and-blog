@@ -35,7 +35,7 @@
 			</li>
 		</ol>
 		<section>
-			<h2 class="font-40">My work</h2>
+			<h2 class="font-50">My work</h2>
 			<p>
 				I've contributed to FOSS as well as created some projects of my own. You can find all of my
 				projects
@@ -80,11 +80,6 @@
 		max-width: 38ch;
 	}
 
-	h2 {
-		font-weight: 700;
-		font-variation-settings: 'wght' 700;
-	}
-
 	ol {
 		flex: 1;
 		display: grid;
@@ -110,8 +105,6 @@
 		display: flex;
 		place-items: center;
 		gap: 1ch;
-		/* font-weight: 500; */
-		font-variation-settings: 'wght' 700;
 	}
 
 	@media screen and (min-height: 80rem) {

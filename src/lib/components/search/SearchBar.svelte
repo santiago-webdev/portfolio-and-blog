@@ -4,7 +4,8 @@
 	import { base } from '$app/paths';
 	import { goto, preloadData } from '$app/navigation';
 
-	export let placeholder = `TODO: Make this search better`;
+	// export let placeholder = `TODO: Make this search better`;
+	export let placeholder = `Search`;
 
 	const placeholderDefault = 'Search';
 	const placeholderNoInput = "You haven't searched for any post yet";

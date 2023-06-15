@@ -3,7 +3,7 @@
 	export let href = '/';
 </script>
 
-<a {href} {...$$restProps} class={`tpl defaults ${$$props.class}`}>
+<a {href} {...$$restProps} class={`tpl defaults font-10 ${$$props.class}`}>
 	<span>
 		<slot />
 		{#if $$props.rel}
@@ -30,9 +30,6 @@
 		place-items: center;
 		text-transform: uppercase;
 
-		font-family: var(--ff-dflt);
-		font-size: var(--fs-10);
-		line-height: var(--fs-10);
 		font-weight: 600;
 		font-variation-settings: 'wght' 730;
 		border-radius: 999rem;

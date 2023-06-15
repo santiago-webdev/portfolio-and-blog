@@ -8,10 +8,10 @@
 <div class="wrapper">
 	<main>
 		<div class="introduction">
-			<h1 class="font-80">
+			<h1 class="font-90">
 				Building the web<br /> with clean interfaces
 			</h1>
-			<p>
+			<p class="font-40">
 				I'm a frontend developer and here we'll discuss about
 				<strong>web deve&shylopment</strong>
 				and show you my projects while at it.
@@ -34,7 +34,7 @@
 
 <style>
 	.wrapper {
-		background-color: var(--clr-25);
+		background: var(--clr-25);
 		padding: 2rem 0;
 	}
 
@@ -64,7 +64,7 @@
 
 	p {
 		max-width: 38ch;
-		color: var(--clr-200);
+		color: var(--clr-250);
 	}
 
 	section {

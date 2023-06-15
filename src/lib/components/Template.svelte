@@ -45,12 +45,12 @@
 		<div class="wrapper-header">
 			<hgroup>
 				{#if isHollow}
-					<h1 class="font-80">
+					<h1 class="font-90">
 						<Hollow color={'var(--clr-250)'}>{hollowPrefix}</Hollow>
 						{fillSuffix}
 					</h1>
 				{:else}
-					<h1 class="font-80">{title}</h1>
+					<h1 class="font-90">{title}</h1>
 				{/if}
 				<p>{description}</p>
 			</hgroup>

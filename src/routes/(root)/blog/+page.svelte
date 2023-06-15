@@ -14,7 +14,7 @@
 
 <main>
 	<hgroup>
-		<h1>Blog</h1>
+		<h1 class="font-80">Blog</h1>
 		<!-- eslint-disable -->
 		<p>{@html base}</p>
 	</hgroup>
