@@ -20,7 +20,7 @@ Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint 
 Let's get started
 
 ```bash
-yarn create svelte .
+yarn create svelte .  yarn create svelte .  yarn create svelte .  yarn create svelte .  yarn create svelte .
 ```
 
 ### More tests

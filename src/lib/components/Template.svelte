@@ -137,7 +137,10 @@
 	hgroup {
 		display: flex;
 		flex-direction: column;
-		gap: 1rem;
+	}
+
+	hgroup > * + * {
+		margin-block-start: 1em;
 	}
 
 	.wrapper-header {
