@@ -72,6 +72,10 @@ ol {
 	padding: 0;
 }
 
+ol {
+	list-style: none;
+}
+
 /* 9. Create a root stacking context */
 #root,
 #__next {
