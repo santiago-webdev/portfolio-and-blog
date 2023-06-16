@@ -1,4 +1,6 @@
 <script lang="ts">
+	import config from '$lib/config.json';
+
 	export let url = new URL('/');
 	export let data = {
 		title: '',
@@ -14,7 +16,7 @@
 
 <svelte:head>
 	<title>{data.title}</title>
-	<link rel="canonical" href={url.toString()} />
+	<link rel="canonical" href={config.landingpage.url.concat(url.toString())} />
 	<meta name="description" content={data.description} />
 
 	<meta itemprop="name" content={data.title} />
