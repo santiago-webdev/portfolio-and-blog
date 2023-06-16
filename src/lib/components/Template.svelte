@@ -1,6 +1,6 @@
 <script context="module">
-	import { img, ol, ul, li, table, a } from '$lib/mdsvex_components/index';
-	export { img, ol, ul, li, table, a };
+	import { img, ol, ul, li, table, a, p } from '$lib/mdsvex_components/index';
+	export { img, ol, ul, li, table, a, p };
 </script>
 
 <script>
@@ -52,7 +52,7 @@
 				{:else}
 					<h1 class="font-90">{title}</h1>
 				{/if}
-				<p>{description}</p>
+				<p class="font-30">{description}</p>
 			</hgroup>
 			{#if tags}
 				<ul class="tags inline-items">
@@ -112,7 +112,7 @@
 
 	.back-button {
 		margin-inline: auto;
-		width: min(92%, var(--base));
+		width: min(100% - 2.2rem, var(--base));
 		margin-top: 0.8rem;
 		margin-bottom: 0.4rem;
 	}
@@ -120,12 +120,12 @@
 	.wrapper-header,
 	.wip {
 		display: grid;
-		width: min(92%, var(--xl));
+		width: min(100% - 2.2rem, var(--xl));
 		margin-inline: auto;
 	}
 
 	main {
-		width: min(92%, var(--base));
+		width: min(100% - 2.2rem, var(--base));
 		margin-inline: auto;
 		padding-top: 1rem;
 	}
@@ -138,10 +138,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 1rem;
-	}
-
-	:global(main p) {
-		width: min(100%, 60ch);
 	}
 
 	.wrapper-header {
