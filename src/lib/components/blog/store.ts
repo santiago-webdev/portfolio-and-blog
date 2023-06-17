@@ -6,7 +6,7 @@ interface Metadata {
 		href: string;
 		title: string;
 		description: string;
-		datetime: string;
+		datetime?: string;
 		tags?: string[];
 	};
 }
