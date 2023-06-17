@@ -2,7 +2,7 @@
 	import SearchBar from '$lib/components/search/SearchBar.svelte';
 	import FilteredPostsCards from '$lib/components/search/FilteredPostsCards.svelte';
 	import config from '$lib/config.json';
-	import { Posts } from '$lib/components/search/store';
+	import { Posts } from '$lib/components/blog/store';
 
 	let base = `${$Posts.length} ${config.blog.description}`;
 	const boldWords = ['Linux', 'web development', 'tooling'];

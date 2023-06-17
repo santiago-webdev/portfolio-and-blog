@@ -1,5 +1,5 @@
 <!-- <script lang="ts"> -->
-<!-- 	import { Posts } from '$lib/components/search/store'; -->
+<!-- 	import { Posts } from '$lib/components/blog/store'; -->
 <!-- </script> -->
 <!---->
 <!-- <main> -->

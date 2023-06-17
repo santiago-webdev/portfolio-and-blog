@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import LinkArrow from '$lib/components/navigation/LinkArrow.svelte';
-	import { Posts } from '$lib/components/search/store';
+	import { Posts } from '$lib/components/blog/store';
 	import { readableDate, relativeTime } from '$lib/utils/utils';
 
 	function getPic(id: number) {

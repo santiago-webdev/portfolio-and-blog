@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { readableDate, relativeTime } from '$lib/utils/utils';
-	import { FilteredPosts } from './store';
+	import { FilteredPosts } from '$lib/components/blog/store';
 	import { fly } from 'svelte/transition';
 
 	var fly_in = { y: 50, duration: 200 };

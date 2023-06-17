@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { FilteredPosts } from './store';
+	import { FilteredPosts } from '$lib/components/blog/store';
 	import { searchHandler } from './utils';
 	import { base } from '$app/paths';
 	import { goto, preloadData } from '$app/navigation';
