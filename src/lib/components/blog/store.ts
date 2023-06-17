@@ -35,3 +35,12 @@ const getPosts = () => {
 export const Posts = readable<Array<Post>>(getPosts());
 
 export const FilteredPosts = writable<Array<Post>>(get(Posts));
+
+export const searchHandler = (filterPosts: string) => {
+	const filtered = get(Posts).filter((post) => {
+		const searchTerms = `${post.description} ${post.title}`.toLowerCase();
+		return searchTerms.toLowerCase().includes(filterPosts.toLowerCase());
+	});
+	FilteredPosts.set(filtered);
+	return filterPosts;
+};

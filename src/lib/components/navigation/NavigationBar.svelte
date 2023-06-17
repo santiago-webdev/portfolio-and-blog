@@ -2,10 +2,9 @@
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
 	import { afterNavigate } from '$app/navigation';
-	import { onMount } from 'svelte';
 
 	import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
-	import WidgetModal from '$lib/components/search/WidgetModal.svelte';
+	import WidgetModal from '$lib/components/navigation/WidgetModal.svelte';
 	import { navigationItems } from '$lib/components/navigation/store';
 
 	var expanded = false,
