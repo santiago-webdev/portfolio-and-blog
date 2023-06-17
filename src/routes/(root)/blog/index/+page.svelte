@@ -1,9 +1,14 @@
 <script lang="ts">
+	import { base } from '$app/paths';
 	import { Posts } from '$lib/components/blog/store';
+	import LinkArrow from '$lib/components/navigation/LinkArrow.svelte';
 </script>
 
 <main>
 	<header>
+		<div class="back-button">
+			<LinkArrow orientation="left" href="{base}/blog">Back to Blog</LinkArrow>
+		</div>
 		<hgroup>
 			<h1 class="font-90">Index</h1>
 			<p>This is the full list of all the blog posts I've written.</p>
@@ -44,5 +49,12 @@
 		border: 1px var(--clr-65) solid;
 		border-radius: 12px;
 		padding: 1rem;
+	}
+
+	.back-button {
+		margin-inline: auto;
+		width: min(100% - 2.2rem, var(--base));
+		padding-top: 0.8rem;
+		margin-bottom: 0.4rem;
 	}
 </style>

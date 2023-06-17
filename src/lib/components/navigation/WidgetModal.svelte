@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { FilteredPosts } from '$lib/components/blog/store';
 	import { searchHandler } from '$lib/components/blog/store';
-	import { base } from '$app/paths';
 	import { goto } from '$app/navigation';
 	import { readableDate, relativeTime } from '$lib/utils/utils';
 
