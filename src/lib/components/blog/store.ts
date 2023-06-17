@@ -22,7 +22,7 @@ export class Post {
 	}
 }
 
-const getPosts = () => {
+const retrievePosts = () => {
 	const tmpPost: Array<Post> = [];
 
 	const modules = import.meta.glob('../../posts/*.md', { eager: true });
@@ -53,7 +53,7 @@ const getPosts = () => {
 	return tmpPost;
 };
 
-export const Posts = readable<Array<Post>>(getPosts());
+export const Posts = readable<Array<Post>>(retrievePosts());
 
 export const FilteredPosts = writable<Array<Post>>(get(Posts));
 
