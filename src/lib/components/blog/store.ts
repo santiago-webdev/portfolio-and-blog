@@ -3,24 +3,33 @@ import { get, readable, writable } from 'svelte/store';
 
 interface Metadata {
 	metadata: {
+		href: string;
 		title: string;
 		description: string;
 		datetime: string;
-		href: string;
+		tags?: string[];
 	};
 }
 
 class Post {
+	href: string;
 	title: string;
 	description: string;
 	datetime: string;
-	href: string;
+	tags?: string[];
 
-	constructor(href: string, title: string, description: string, datetime: string) {
+	constructor(
+		href: string,
+		title: string,
+		description: string,
+		datetime: string,
+		tags?: Array<string>
+	) {
 		this.href = href;
 		this.title = title;
 		this.description = description;
 		this.datetime = datetime;
+		this.tags = tags;
 	}
 }
 
@@ -38,7 +47,8 @@ const retrievePosts = () => {
 				`${base}/blog${href}`,
 				post.metadata.title,
 				post.metadata.description,
-				post.metadata.datetime
+				post.metadata.datetime,
+				post.metadata.tags
 			)
 		);
 	}
