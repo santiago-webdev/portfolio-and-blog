@@ -4,11 +4,11 @@
 	import config from '$lib/config.json';
 	import { Posts } from '$lib/components/blog/store';
 
-	let base = `${$Posts.length} ${config.blog.description}`;
+	let description = `${$Posts.length} ${config.blog.description}`;
 	const boldWords = ['Linux', 'web development', 'tooling'];
 
 	boldWords.forEach((word: string) => {
-		base = base.replace(new RegExp(word, 'g'), `<strong>${word}</strong>`);
+		description = description.replace(new RegExp(word, 'g'), `<strong>${word}</strong>`);
 	});
 </script>
 
@@ -16,7 +16,7 @@
 	<hgroup>
 		<h1 class="font-80">Blog</h1>
 		<!-- eslint-disable -->
-		<p>{@html base}</p>
+		<p>{@html description}</p>
 	</hgroup>
 	<SearchBar />
 </main>
