@@ -1,25 +1,26 @@
 import { base } from '$app/paths';
 import { get, readable, writable } from 'svelte/store';
 
-export class Post {
+interface Metadata {
+	metadata: {
+		title: string;
+		description: string;
+		datetime: string;
+		href: string;
+	};
+}
+
+class Post {
 	title: string;
 	description: string;
 	datetime: string;
 	href: string;
-	metadata?: Array<Post>;
 
-	constructor(
-		href: string,
-		title: string,
-		description: string,
-		datetime: string,
-		metadata?: Array<Post>
-	) {
+	constructor(href: string, title: string, description: string, datetime: string) {
 		this.href = href;
 		this.title = title;
 		this.description = description;
 		this.datetime = datetime;
-		this.metadata = metadata;
 	}
 }
 
@@ -29,10 +30,17 @@ const retrievePosts = () => {
 	const modules = import.meta.glob('../../posts/*.md', { eager: true });
 
 	for (const path in modules) {
-		const postData: Post = modules[path] as Post;
+		const postData = modules[path] as Metadata;
 		const href = path.replace('../../posts', '').replace('.md', '');
-		const post: Post = postData.metadata as unknown as Post;
-		tmpPosts.unshift(new Post(`${base}/blog${href}`, post.title, post.description, post.datetime));
+		const post: Metadata = postData as unknown as Metadata;
+		tmpPosts.unshift(
+			new Post(
+				`${base}/blog${href}`,
+				post.metadata.title,
+				post.metadata.description,
+				post.metadata.datetime
+			)
+		);
 	}
 
 	tmpPosts.sort((a, b) => {
