@@ -25,7 +25,7 @@
 		</div>
 		<section>
 			{#each $Posts.slice(0, 3) as { href, title, datetime }, id}
-				<a href="{base}/blog{href}">
+				<a {href}>
 					<article>
 						<div class="img-wrapper">
 							<img loading="lazy" src={getPic(id)} alt="" />

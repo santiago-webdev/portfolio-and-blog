@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { base } from '$app/paths';
 	import { readableDate, relativeTime } from '$lib/utils/utils';
 	import { FilteredPosts } from '$lib/components/blog/store';
 	import { fly } from 'svelte/transition';
@@ -12,7 +11,7 @@
 	<ul>
 		{#each $FilteredPosts as post}
 			<li in:fly={fly_in} out:fly={fly_out}>
-				<a href="{base}/blog{post.href}">
+				<a href={post.href}>
 					<article class="tpl">
 						<h2 class="font-30">
 							{post.title}

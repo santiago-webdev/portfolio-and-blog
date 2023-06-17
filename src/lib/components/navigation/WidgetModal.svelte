@@ -27,7 +27,7 @@
 			: (modal.showModal(), (document.body.style.overflow = 'hidden'), input.focus());
 
 	async function handleSubmit() {
-		await goto(`${base}/blog${$FilteredPosts[0].href}`);
+		await goto(`${$FilteredPosts[0].href}`);
 		toggleModal();
 	}
 
@@ -106,7 +106,7 @@
 		{#each $FilteredPosts.slice(0, 4) as post}
 			<hr aria-orientation="horizontal" />
 			<li>
-				<a class="shiny-select" on:click={() => toggleModal()} href="{base}/blog{post.href}">
+				<a class="shiny-select" on:click={() => toggleModal()} href={post.href}>
 					<article>
 						<h3 class="font-30" style="font-weight: 499;">
 							{post.title}

@@ -1,3 +1,4 @@
+import { base } from '$app/paths';
 import { get, readable, writable } from 'svelte/store';
 
 export class Post {
@@ -23,19 +24,18 @@ export class Post {
 }
 
 const retrievePosts = () => {
-	const tmpPost: Array<Post> = [];
+	const tmpPosts: Array<Post> = [];
 
 	const modules = import.meta.glob('../../posts/*.md', { eager: true });
 
 	for (const path in modules) {
 		const postData: Post = modules[path] as Post;
 		const href = path.replace('../../posts', '').replace('.md', '');
-
 		const post: Post = postData.metadata as unknown as Post;
-		tmpPost.unshift(new Post(href, post.title, post.description, post.datetime));
+		tmpPosts.unshift(new Post(`${base}/blog${href}`, post.title, post.description, post.datetime));
 	}
 
-	tmpPost.sort((a, b) => {
+	tmpPosts.sort((a, b) => {
 		if (!a.datetime && !b.datetime) {
 			return 0;
 		}
@@ -50,7 +50,7 @@ const retrievePosts = () => {
 		return dateB - dateA; // Compare dateB with dateA instead of dateA with dateB
 	});
 
-	return tmpPost;
+	return tmpPosts;
 };
 
 export const Posts = readable<Array<Post>>(retrievePosts());
