@@ -15,14 +15,14 @@ class Post {
 	href: string;
 	title: string;
 	description: string;
-	datetime: string;
+	datetime?: string;
 	tags?: string[];
 
 	constructor(
 		href: string,
 		title: string,
 		description: string,
-		datetime: string,
+		datetime?: string,
 		tags?: Array<string>
 	) {
 		this.href = href;
@@ -63,9 +63,18 @@ const retrievePosts = () => {
 		if (!a.datetime && b.datetime) {
 			return 1;
 		}
-		const dateA = Date.parse(a.datetime);
-		const dateB = Date.parse(b.datetime);
-		return dateB - dateA; // Compare dateB with dateA instead of dateA with dateB
+		const dateA = a.datetime ? Date.parse(a.datetime) : NaN;
+		const dateB = b.datetime ? Date.parse(b.datetime) : NaN;
+		if (isNaN(dateA) && isNaN(dateB)) {
+			return 0;
+		}
+		if (isNaN(dateA)) {
+			return -1;
+		}
+		if (isNaN(dateB)) {
+			return 1;
+		}
+		return dateB - dateA;
 	});
 
 	return tmpPosts;
