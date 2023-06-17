@@ -1,6 +1,6 @@
 <script lang="ts">
-	import SearchBar from '$lib/components/search/SearchBar.svelte';
-	import FilteredPostsCards from '$lib/components/search/FilteredPostsCards.svelte';
+	import SearchBar from './-SearchBar.svelte';
+	import FilteredPostsCards from './-FilteredPostsCards.svelte';
 	import config from '$lib/config.json';
 	import { Posts } from '$lib/components/blog/store';
 
