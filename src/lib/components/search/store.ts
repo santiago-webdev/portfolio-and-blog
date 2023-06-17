@@ -35,4 +35,3 @@ const getPosts = () => {
 export const Posts = readable<Array<Post>>(getPosts());
 
 export const FilteredPosts = writable<Array<Post>>(get(Posts));
-export const FilterValue = writable<string>('');
