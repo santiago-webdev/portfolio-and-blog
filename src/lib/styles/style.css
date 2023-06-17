@@ -31,6 +31,7 @@ a.link {
 
 	color: var(--clr-blue-40);
 	text-decoration: underline var(--clr-60) 2px;
+	text-underline-offset: 3px;
 }
 
 a.internal-link {
@@ -41,6 +42,7 @@ a.internal-link {
 
 	color: var(--clr-red-40);
 	text-decoration: underline var(--clr-60) 2px;
+	text-underline-offset: 3px;
 }
 
 @media (hover: hover) {
