@@ -1,5 +1,26 @@
-import { Post } from '$lib/utils/utils';
 import { get, readable, writable } from 'svelte/store';
+
+export class Post {
+	title: string;
+	description: string;
+	datetime: string;
+	href: string;
+	metadata?: Array<Post>;
+
+	constructor(
+		href: string,
+		title: string,
+		description: string,
+		datetime: string,
+		metadata?: Array<Post>
+	) {
+		this.href = href;
+		this.title = title;
+		this.description = description;
+		this.datetime = datetime;
+		this.metadata = metadata;
+	}
+}
 
 const getPosts = () => {
 	const tmpPost: Array<Post> = [];
