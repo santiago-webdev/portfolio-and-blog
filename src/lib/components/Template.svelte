@@ -174,6 +174,7 @@
 		--brd: var(--clr-45);
 		margin-top: 0.6rem;
 		display: flex;
+		place-items: center;
 		gap: 0.5ch;
 		padding: 0.4rem 0.8rem;
 		border-radius: 0.75rem;

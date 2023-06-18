@@ -146,6 +146,7 @@
 		color: var(--clr-200);
 
 		display: flex;
+		place-items: center;
 		padding: 0.3rem 0.8rem;
 		/* margin-top: 0.6rem; */
 		gap: 0.5ch;
