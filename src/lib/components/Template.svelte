@@ -131,7 +131,8 @@
 		padding-top: 1rem;
 	}
 
-	:global(.blog-post > * + *) {
+	:global(.blog-post p *),
+  :global(.blog-post > * + *) {
 		margin-block-start: 1.4em;
 	}
 
