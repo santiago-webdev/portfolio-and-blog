@@ -1,32 +1,40 @@
 <script lang="ts">
 	import { base } from '$app/paths';
 	import { page } from '$app/stores';
+	import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
+	import config from '$lib/config.json';
 </script>
 
-<section>
-	<h1>404 - {$page.error?.message}</h1>
-	<p>Something has gone wrong</p>
-	<a class="shiny hover" href="{base}/">Home</a>
-</section>
+<main>
+	<h1>{$page.status}: {$page.error?.message}</h1>
+	<p>
+		Something has gone wrong, if you'd like to report it, please
+		<a href="{config.landingpage.repo}/issues" class="link">open an issue</a>.
+	</p>
+	<section>
+		<ShapeButton href="{base}/">Back to Home</ShapeButton>
+	</section>
+</main>
 
 <style>
-	section {
+	main {
+		min-height: 100dvh;
 		min-height: 100vh;
 		display: flex;
-		flex-flow: column wrap;
+		flex-direction: column;
+		width: min(100% - 2.2rem, var(--sm));
+		margin-inline: auto;
 		place-content: center;
 		place-items: center;
-		margin-inline: auto;
-		gap: 2rem;
-		width: min(100% - 1rem, var(--base));
+		text-align: center;
 	}
 
-	a {
+	main > * + * {
+		margin-block-start: 1em;
+	}
+
+	section {
 		display: flex;
-		place-items: center;
-		place-content: center;
-		padding: clamp(1rem, 1.5vw, 2rem) clamp(2rem, 3vw, 3rem);
-		gap: 0.2rem;
-		border-radius: 999rem;
+		flex-direction: column;
 	}
 </style>
