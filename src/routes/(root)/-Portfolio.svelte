@@ -52,7 +52,7 @@
 
 	.portfolio {
 		display: flex;
-		flex-wrap: wrap-reverse;
+		flex-wrap: wrap;
 		width: min(100% - 2.2rem, var(--md));
 		min-height: 100vh;
 		min-height: 100svh;

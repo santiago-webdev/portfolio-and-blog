@@ -13,7 +13,16 @@
 
 	table {
 		width: 100%;
-		border-collapse: collapse;
 		background-color: var(--clr-20);
+		display: grid;
+	}
+
+	:global(thead) {
+		display: grid;
+	}
+
+	:global(thead th:first-child),
+	:global(tbody td:first-child) {
+		min-width: 14ch;
 	}
 </style>

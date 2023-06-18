@@ -94,6 +94,7 @@
 			<br />
 		</div>
 	</div>
+
 	<main class="blog-post">
 		<slot />
 	</main>
