@@ -244,7 +244,8 @@ input[type='radio']:checked + .shiny-select {
 }
 
 [aria-current='page'] {
-	text-decoration: underline solid var(--clr-purple-20) 3px;
+	text-decoration: underline var(--clr-purple-20) 2px;
+	text-underline-offset: 3px;
 }
 
 [aria-orientation='vertical'][role='separator'] {
