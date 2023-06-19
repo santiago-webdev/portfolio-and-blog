@@ -1,57 +1,57 @@
 .token.function {
-	color: #9d86b9;
-	font-weight: 500;
+  color: #9d86b9;
+  font-weight: 500;
 }
 
 .token.function-variable {
-	color: #b094de;
-	font-weight: 600;
+  color: #b094de;
+  font-weight: 600;
 }
 
 .token.constant {
-	color: #eb6f92;
+  color: #eb6f92;
 }
 
 .token.keyword {
-	font-weight: 600;
+  font-weight: 600;
 }
 
 .token.selector {
-	font-weight: 500;
+  font-weight: 500;
 }
 
 .token.rule {
-	color: #f6c177;
-	font-weight: 600;
+  color: #f6c177;
+  font-weight: 600;
 }
 
 .token.attr-name,
 .token.property {
-	color: #f38fa9;
-	font-weight: 500;
+  color: #f38fa9;
+  font-weight: 500;
 }
 
 .token.namespace {
-	font-weight: 700;
+  font-weight: 700;
 }
 
 .token.tag > .tag {
-	font-weight: 500;
+  font-weight: 500;
 }
 
 .token.tag > .punctuation {
-	font-weight: 400;
+  font-weight: 400;
 }
 
 .token.string {
-	color: var(--clr-text-muted);
+  color: var(--clr-text-muted);
 }
 
 .token.punctuation,
 .token.operator {
-	opacity: 0.75;
+  opacity: 0.75;
 }
 
 .token.comment {
-	opacity: 0.5;
+  opacity: 0.5;
 }

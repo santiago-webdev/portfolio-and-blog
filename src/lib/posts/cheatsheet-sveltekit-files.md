@@ -7,7 +7,7 @@ tags: ['SvelteKit']
 ---
 
 <script>
-import { base } from '$app/paths';
+  import { base } from '$app/paths';
 </script>
 
 # The files

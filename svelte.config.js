@@ -5,19 +5,19 @@ import rehypeSlug from 'rehype-slug';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extensions: ['.svelte', '.md', '.svx'],
-	preprocess: [
-		mdsvex({
-			layout: './src/lib/components/Template.svelte',
-			extensions: ['.md'],
-			rehypePlugins: [rehypeSlug]
-		}),
-		vitePreprocess()
-	],
+  extensions: ['.svelte', '.md'],
+  preprocess: [
+    mdsvex({
+      layout: './src/lib/components/Template.svelte',
+      extensions: ['.md'],
+      rehypePlugins: [rehypeSlug]
+    }),
+    vitePreprocess()
+  ],
 
-	kit: {
-		adapter: adapter()
-	}
+  kit: {
+    adapter: adapter()
+  }
 };
 
 export default config;

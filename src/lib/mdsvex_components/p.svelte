@@ -1,9 +1,9 @@
 <p class="font-20">
-	<slot />
+  <slot />
 </p>
 
 <style>
-	p {
-		width: min(100%, 70ch);
-	}
+  p {
+    width: min(100%, 70ch);
+  }
 </style>

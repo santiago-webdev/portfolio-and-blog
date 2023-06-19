@@ -1,24 +1,24 @@
 {
-	"landingpage": {
-		"title": "Santiago Gonzalez",
-		"description": "Personal blog and portfolio, I talk about web development and show you my projects while at it.",
-		"url": "https://www.santiagogonzalez.dev",
-		"repo": "https://github.com/santigo-zero/portfolio-and-blog"
-	},
-	"blog": {
-		"title": "Blog - Santiago Gonzalez",
-		"description": "articles about Linux, web development, and tooling. Follow my journey to become a front-end developer.",
-		"url": "https://www.santiagogonzalez.dev/blog"
-	},
-	"portfolio": {
-		"title": "Portfolio - Santiago Gonzalez",
-		"description": "Showcasing all of my projects; Come take a look!",
-		"url": "https://www.santiagogonzalez.dev/portfolio"
-	},
-	"about": {
-		"title": "About - Santiago Gonzalez",
-		"description": "Who is this?",
-		"url": "https://www.santiagogonzalez.dev/about",
-		"resume": "https://resume.santiagogonzalez.dev"
-	}
+  "landingpage": {
+    "title": "Santiago Gonzalez",
+    "description": "Personal blog and portfolio, I talk about web development and show you my projects while at it.",
+    "url": "https://www.santiagogonzalez.dev",
+    "repo": "https://github.com/santigo-zero/portfolio-and-blog"
+  },
+  "blog": {
+    "title": "Blog - Santiago Gonzalez",
+    "description": "articles about Linux, web development, and tooling. Follow my journey to become a front-end developer.",
+    "url": "https://www.santiagogonzalez.dev/blog"
+  },
+  "portfolio": {
+    "title": "Portfolio - Santiago Gonzalez",
+    "description": "Showcasing all of my projects; Come take a look!",
+    "url": "https://www.santiagogonzalez.dev/portfolio"
+  },
+  "about": {
+    "title": "About - Santiago Gonzalez",
+    "description": "Who is this?",
+    "url": "https://www.santiagogonzalez.dev/about",
+    "resume": "https://resume.santiagogonzalez.dev"
+  }
 }

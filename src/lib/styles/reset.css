@@ -2,12 +2,12 @@
 *,
 ::before,
 ::after {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* 2. Remove default margin */
 * {
-	margin: 0;
+  margin: 0;
 }
 
 /*
@@ -16,8 +16,8 @@
   5. Improve text rendering
 */
 body {
-	line-height: 1.5;
-	-webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 /* 6. Improve media defaults */
@@ -26,8 +26,8 @@ picture,
 video,
 canvas,
 svg {
-	display: block;
-	max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
 /* 7. Remove built-in form typography styles */
@@ -35,7 +35,7 @@ input,
 button,
 textarea,
 select {
-	font: inherit;
+  font: inherit;
 }
 
 /* 8. Avoid text overflows */
@@ -46,47 +46,47 @@ h3,
 h4,
 h5,
 h6 {
-	overflow-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Remove unnecessary anchor styles */
 a {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 /* Remove unnecessary button styles */
 button {
-	background-color: transparent;
-	border-width: 0;
-	font-family: inherit;
-	font-size: inherit;
-	font-style: inherit;
-	font-weight: inherit;
-	line-height: inherit;
-	padding: 0;
+  background-color: transparent;
+  border-width: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  padding: 0;
 }
 
 ul,
 ol {
-	list-style-type: none;
-	padding: 0;
+  list-style-type: none;
+  padding: 0;
 }
 
 ol {
-	list-style: none;
+  list-style: none;
 }
 
 /* 9. Create a root stacking context */
 #root,
 #__next {
-	isolation: isolate;
+  isolation: isolate;
 }
 
 @media (prefers-reduced-motion: reduce) {
-	* {
-		animation-duration: 0.01ms !important;
-		animation-iteration-count: 1 !important;
-		transition-duration: 0.01ms !important;
-		animation-delay: 0.01ms !important;
-	}
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    animation-delay: 0.01ms !important;
+  }
 }

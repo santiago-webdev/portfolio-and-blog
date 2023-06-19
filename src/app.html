@@ -1,46 +1,50 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="system">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="%sveltekit.assets%/logo-light.svg" />
-		<link
-			rel="icon"
-			ype="image/svg+xml"
-			href="%sveltekit.assets%/logo.svg"
-			media="(prefers-color-scheme: dark)"
-		/>
-		<link
-			rel="preload"
-			href="%sveltekit.assets%/fonts/Manrope[wght].woff2"
-			as="font"
-			type="font/woff2"
-			crossorigin
-		/>
-		<script>
-			const doc = document.documentElement;
-			const storedTheme = localStorage.getItem('theme');
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="%sveltekit.assets%/logo-light.svg"
+    />
+    <link
+      rel="icon"
+      ype="image/svg+xml"
+      href="%sveltekit.assets%/logo.svg"
+      media="(prefers-color-scheme: dark)"
+    />
+    <link
+      rel="preload"
+      href="%sveltekit.assets%/fonts/Manrope[wght].woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <script>
+      const doc = document.documentElement;
+      const storedTheme = localStorage.getItem('theme');
 
-			if (storedTheme) doc.setAttribute('data-theme', storedTheme);
-			else
-				doc.setAttribute(
-					'data-theme',
-					window.matchMedia('(prefers-color-scheme: dark)').matches
-						? 'system' // Same as [data-theme='dark'] in +layout.svelte
-						: 'system-light' // Same as [data-theme='light'] in +layout.svelte
-				);
+      if (storedTheme) doc.setAttribute('data-theme', storedTheme);
+      else
+        doc.setAttribute(
+          'data-theme',
+          window.matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'system' // Same as [data-theme='dark'] in +layout.svelte
+            : 'system-light' // Same as [data-theme='light'] in +layout.svelte
+        );
 
-			window.addEventListener('load', () => {
-				const storedData = localStorage.getItem('myData');
-				if (storedData) {
-					doc.setAttribute('data-theme', storedTheme);
-				}
-				// Code to set the theme based on localStorage data goes here
-			});
-		</script>
-		%sveltekit.head%
-	</head>
-	<body id="body" data-sveltekit-preload-data="hover">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+      window.addEventListener('load', () => {
+        const storedData = localStorage.getItem('myData');
+        if (storedData) {
+          doc.setAttribute('data-theme', storedTheme);
+        }
+        // Code to set the theme based on localStorage data goes here
+      });
+    </script>
+    %sveltekit.head%
+  </head>
+  <body id="body" data-sveltekit-preload-data="hover">
+    <div style="display: contents">%sveltekit.body%</div>
+  </body>
 </html>
