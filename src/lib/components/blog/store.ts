@@ -8,6 +8,7 @@ interface Metadata {
     description: string;
     datetime?: string;
     tags?: string[];
+    summary?: string;
   };
 }
 
@@ -17,19 +18,22 @@ class Post {
   description: string;
   datetime?: string;
   tags?: string[];
+  summary?: string;
 
   constructor(
     href: string,
     title: string,
     description: string,
     datetime?: string,
-    tags?: Array<string>
+    tags?: Array<string>,
+    summary?: string
   ) {
     this.href = href;
     this.title = title;
     this.description = description;
     this.datetime = datetime;
     this.tags = tags;
+    this.summary = summary;
   }
 }
 
@@ -48,7 +52,8 @@ const retrievePosts = () => {
         post.metadata.title,
         post.metadata.description,
         post.metadata.datetime,
-        post.metadata.tags
+        post.metadata.tags,
+        post.metadata.summary
       )
     );
   }
@@ -86,7 +91,8 @@ export const FilteredPosts = writable<Array<Post>>(get(Posts));
 
 export const searchHandler = (filterPosts: string) => {
   const filtered = get(Posts).filter((post) => {
-    const searchTerms = `${post.description} ${post.title}`.toLowerCase();
+    const searchTerms =
+      `${post.description} ${post.title} ${post.summary}`.toLowerCase();
     return searchTerms.toLowerCase().includes(filterPosts.toLowerCase());
   });
   FilteredPosts.set(filtered);

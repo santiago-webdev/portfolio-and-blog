@@ -16,6 +16,7 @@
   export let finished = false;
   /** @type {string[]} */
   export let tags = [];
+  export let summary = '';
 
   const dateRelative = !datetime
     ? datetime
@@ -92,6 +93,13 @@
         </time>
       {/if}
 
+      {#if summary}
+        <details class="tpl font-20">
+          <summary class="font-10">Summary</summary>
+          {summary}
+        </details>
+      {/if}
+
       {#if !finished}
         <div class="wip">
           <small>🏗 Construction site, keep out 🏗</small>
@@ -115,7 +123,6 @@
     display: flex;
     flex-direction: column;
     place-items: start;
-    padding-bottom: 1rem;
   }
 
   .back-button {
@@ -194,5 +201,21 @@
     place-items: center;
     justify-content: center;
     flex-wrap: wrap;
+  }
+
+  details {
+    --bg: var(--clr-40);
+    --brd: var(--clr-45);
+    font-family: var(--ff-text);
+    display: flex;
+    gap: 2rem;
+    /* width: min(100% - 2.2rem, var(--base)); */
+    margin-inline: auto;
+    padding: 0.4rem 0.8rem;
+  }
+
+  summary {
+    padding: 0.2rem 0.4rem;
+    color: var(--clr-red-40);
   }
 </style>
