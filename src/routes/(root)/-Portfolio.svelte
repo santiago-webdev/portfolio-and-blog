@@ -6,7 +6,7 @@
 <div class="wrapper-portfolio">
   <div id="portfolio" class="portfolio">
     <section>
-      <h2 class="font-50">My work</h2>
+      <h2 class="font-60">My work</h2>
       <p>
         I've contributed to FOSS as well as created some projects of my own. You
         can find all of my projects
