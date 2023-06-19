@@ -60,7 +60,7 @@ li code {
   background: var(--clr-35);
   border: 1px var(--clr-50) solid;
   color: var(--clr-300);
-  padding: 0.1rem 0.4rem;
+  padding: 0.05rem 0.1rem;
   border-radius: 6px;
 
   font-size: inherit;

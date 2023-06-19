@@ -42,3 +42,7 @@ Plain list of two columns
 ## Add browser-like window wrapping projects images
 
 In projects make the images look like a browser, using <figure> and <figcaption>
+
+## Add "SIDE NOTE:" component for blog posts
+
+## Add quotes component for blog posts

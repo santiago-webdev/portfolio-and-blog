@@ -133,7 +133,7 @@
   }
 
   main {
-    width: min(100% - 2.2rem, var(--base));
+    width: min(100% - 2.2rem, var(--sm));
     margin-inline: auto;
     padding-top: 1rem;
   }
