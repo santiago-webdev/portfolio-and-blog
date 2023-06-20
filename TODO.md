@@ -46,3 +46,5 @@ In projects make the images look like a browser, using <figure> and <figcaption>
 ## Add "SIDE NOTE:" component for blog posts
 
 ## Add quotes component for blog posts
+
+## Optimize placeholder images for mobile for blog section in /
