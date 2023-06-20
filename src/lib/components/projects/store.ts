@@ -1,21 +1,21 @@
-import { get, readable, writable } from 'svelte/store'
+import { get, readable, writable } from 'svelte/store';
 
 type Stack = {
-  frontend?: string[]
-  api?: string[]
-  backend?: string[]
-}
+  frontend?: string[];
+  api?: string[];
+  backend?: string[];
+};
 
 interface Project {
-  name: string
-  description: string
-  short_description?: string
-  category: Category[]
-  repo: URL
-  link: URL
-  stack: Stack
-  img?: string
-  accent?: string
+  name: string;
+  description: string;
+  short_description?: string;
+  category: Category[];
+  repo: URL;
+  link: URL;
+  stack: Stack;
+  img?: string;
+  accent?: string;
 }
 
 export const AllProjects = readable<Array<Project>>([
@@ -76,18 +76,18 @@ export const AllProjects = readable<Array<Project>>([
     repo: new URL('https://google.com'),
     link: new URL('https://google.com')
   }
-])
+]);
 
-export const FilteredProjects = writable(get(AllProjects))
+export const FilteredProjects = writable(get(AllProjects));
 
 export type Category =
   | 'featured'
   | 'frontend'
   | 'fullstack'
   | 'opensource'
-  | 'redesign_rewrite'
+  | 'redesign_rewrite';
 
-type Categories = Record<Category, [label: string, description: string]>
+type Categories = Record<Category, [label: string, description: string]>;
 
 export const jobSelector: Categories = {
   featured: [
@@ -113,19 +113,19 @@ pages accesible to everyone`
     `Rewriting a site to test my
 capabilities is fun, sometimes I do a complete revamp of the site`
   ]
-}
+};
 
 export const getCategoryInfo = (category: Category) => ({
   label: jobSelector[category][0],
   description: jobSelector[category][1]
-})
+});
 
-export const currentGroupOfProjects = writable<Category>('featured')
+export const currentGroupOfProjects = writable<Category>('featured');
 
 currentGroupOfProjects.subscribe((selectionChange) => {
   FilteredProjects.update(() =>
     get(AllProjects).filter((currentProject) =>
       currentProject.category.includes(selectionChange)
     )
-  )
-})
+  );
+});
