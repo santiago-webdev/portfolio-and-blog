@@ -9,10 +9,10 @@
     <div class="back-button">
       <LinkArrow orientation="left" href="{base}/blog">Back to Blog</LinkArrow>
     </div>
-    <hgroup>
+    <div class="wrapper-index">
       <h1 class="font-90">Index</h1>
       <p>This is the full list of all the blog posts I've written.</p>
-    </hgroup>
+    </div>
   </header>
   <ul class="generic">
     {#each $Posts as post}
@@ -32,23 +32,19 @@
     background: var(--clr-25);
   }
 
-  hgroup {
+  .wrapper-index {
     width: min(100% - 2.2rem, var(--base));
     text-align: center;
     margin-inline: auto;
   }
 
-  hgroup > * + * {
+  .wrapper-index > * + * {
     margin-block-start: 1em;
   }
 
   ul {
     width: min(100% - 2.2rem, var(--base));
     margin-inline: auto;
-    background-color: var(--clr-35);
-    border: 1px var(--clr-65) solid;
-    border-radius: 12px;
-    padding: 1rem;
   }
 
   .back-button {

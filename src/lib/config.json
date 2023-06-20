@@ -20,5 +20,10 @@
     "description": "Who is this?",
     "url": "https://santiagogonzalez.dev/about",
     "resume": "https://resume.santiagogonzalez.dev"
+  },
+  "index": {
+    "title": "Blog Index - Santiago Gonzalez",
+    "description": "The full list of all the articles I've published",
+    "url": "https://santiagogonzalez.dev/blog/index"
   }
 }
