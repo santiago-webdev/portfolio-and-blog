@@ -209,13 +209,15 @@
     font-family: var(--ff-text);
     display: flex;
     gap: 2rem;
-    /* width: min(100% - 2.2rem, var(--base)); */
+    max-width: var(--base);
     margin-inline: auto;
     padding: 0.4rem 0.8rem;
+    text-align: left;
   }
 
   summary {
-    padding: 0.2rem 0.4rem;
+    padding: 0.4rem 0.8rem;
     color: var(--clr-red-40);
+    text-align: center;
   }
 </style>

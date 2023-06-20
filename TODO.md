@@ -48,3 +48,5 @@ In projects make the images look like a browser, using <figure> and <figcaption>
 ## Add quotes component for blog posts
 
 ## Optimize placeholder images for mobile for blog section in /
+
+## Skip to content anchor when hitting tab
