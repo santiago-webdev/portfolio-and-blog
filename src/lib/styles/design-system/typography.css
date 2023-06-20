@@ -173,6 +173,8 @@ h1,
 
   font-variation-settings: 'wght' 700;
   font-weight: 700;
+
+  text-wrap: balance;
 }
 
 .font-80 {

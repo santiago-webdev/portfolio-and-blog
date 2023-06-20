@@ -1,3 +1,3 @@
-<ol class="generic-ol font-20">
+<ol class="generic font-20">
   <slot />
 </ol>

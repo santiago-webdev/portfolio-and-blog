@@ -14,9 +14,9 @@
       <p>This is the full list of all the blog posts I've written.</p>
     </hgroup>
   </header>
-  <ul>
+  <ul class="generic">
     {#each $Posts as post}
-      <li class="generic-li font-20">
+      <li class="generic font-20">
         <a class="internal-link" href={post.href}>{post.title}</a>
       </li>
     {/each}

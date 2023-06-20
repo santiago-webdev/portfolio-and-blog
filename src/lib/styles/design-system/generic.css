@@ -1,5 +1,5 @@
 /* Ordered lists */
-ol.generic-ol {
+ol.generic {
   display: grid;
   gap: 0.2rem;
   background-color: var(--clr-35);
@@ -11,21 +11,29 @@ ol.generic-ol {
   list-style-position: inside;
 }
 
-ol.generic-ol .generic-li::before {
+ol.generic li.generic::before {
   content: counter(ol-counter) '.';
   counter-increment: ol-counter;
   padding-right: 10px;
 }
+/* Ordered lists */
 
-:is(ol, ul) .generic-li {
+/* Unordered lists */
+ul.generic {
+  list-style: disc inside;
+}
+/* Unordered lists */
+
+/* List items */
+:is(ol, ul) li.generic {
   padding: 0.4rem;
   border-radius: 8px;
 }
 
-:is(ol, ul) .generic-li:nth-child(odd) {
+:is(ol) li.generic:nth-child(odd) {
   background-color: var(--clr-25);
 }
-/* Ordered lists */
+/* List items */
 
 /* Links */
 a.link {

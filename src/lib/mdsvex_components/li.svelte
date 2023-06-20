@@ -1,3 +1,3 @@
-<li class="generic-li">
+<li class="generic">
   <slot />
 </li>
