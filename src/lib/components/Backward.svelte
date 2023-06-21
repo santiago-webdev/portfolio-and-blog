@@ -42,21 +42,19 @@
   .wrapper-arrow {
     display: flex;
     place-items: center;
+
     position: relative;
     inset: auto auto auto 0.2ch;
   }
 
-  svg:first-child {
+  .tail {
     position: absolute;
+    opacity: 1;
+    transition-delay: 50ms;
   }
 
   .chevron-back {
     transform: translateX(-4px);
-  }
-
-  .tail {
-    opacity: 1;
-    transition-delay: 50ms;
   }
 
   @media (hover: hover) {

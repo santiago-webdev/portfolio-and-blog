@@ -42,7 +42,6 @@
   .wrapper-arrow {
     display: flex;
     place-items: center;
-    place-content: center;
 
     position: relative;
     inset: auto auto auto 0.2ch;
@@ -50,15 +49,12 @@
 
   .tail {
     position: absolute;
+    opacity: 1;
+    transition-delay: 50ms;
   }
 
   .chevron {
     transform: translateX(4px);
-  }
-
-  .tail {
-    opacity: 1;
-    transition-delay: 50ms;
   }
 
   @media (hover: hover) {
