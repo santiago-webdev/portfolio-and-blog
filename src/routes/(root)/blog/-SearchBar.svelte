@@ -5,6 +5,7 @@
   import { goto, preloadData } from '$app/navigation';
 
   // export let placeholder = `TODO: Make this search better`;
+  // TODO(santigo-zero): Explain first time users how to search tags
   export let placeholder = `Search`;
 
   const placeholderDefault = 'Search';
@@ -12,16 +13,12 @@
   let value = '';
 
   function handleSubmit() {
-    if (value.length === 0) {
-      placeholder = placeholderNoInput;
+    if (value.length !== 0) goto($FilteredPosts[0].href);
 
-      setTimeout(() => {
-        placeholder = placeholderDefault;
-      }, 1000);
-      return;
-    }
-
-    goto(`${base}/blog${$FilteredPosts[0].href}`);
+    placeholder = placeholderNoInput;
+    setTimeout(() => {
+      placeholder = placeholderDefault;
+    }, 1000);
   }
 
   $: if ($FilteredPosts.length === 1)

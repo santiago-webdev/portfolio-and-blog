@@ -7,46 +7,27 @@
   import WidgetModal from '$lib/components/navigation/WidgetModal.svelte';
   import { navigationItems } from '$lib/components/navigation/store';
 
+  type Transform = '' | 'translateY(-200%)';
+
   var expanded = false,
     scrollY = 0,
     savedY = 0,
     outerWidth = 0,
-    in_viewport = true,
-    transform = '',
-    anchored = true;
+    transform: Transform = '';
 
-  afterNavigate(() => {
-    expanded = false;
-    // anchored = $page.url.pathname === `${base}/about`;
-  });
-
-  // onMount(() => {
-  // 	const main = document.querySelector('main');
-  //
-  // 	if (main) {
-  // 		const observer = new IntersectionObserver((entries) =>
-  // 			entries.forEach((entry) => {
-  // 				if (entry.target === main) in_viewport = entry.isIntersecting;
-  // 			})
-  // 		);
-  //
-  // 		observer.observe(main);
-  // 	}
-  // });
+  afterNavigate(() => (expanded = false));
+  $: if (outerWidth > 768) expanded = false;
 
   $: {
     transform =
-      !expanded && !in_viewport && scrollY > savedY ? 'translateY(-200%)' : '';
+      !expanded && scrollY > 300 && scrollY > savedY ? 'translateY(-200%)' : '';
     savedY = scrollY;
   }
-
-  $: if (outerWidth > 1280) expanded = false;
-  $: display = expanded ? 'flex' : 'none';
 </script>
 
 <svelte:window bind:scrollY bind:outerWidth />
 
-<header style:transform class:anchored class:expanded class:scrollY>
+<header style:transform class:expanded class:scrollY>
   <nav aria-label="primary-navigation">
     <a
       href="{base}/"
@@ -133,7 +114,7 @@
         {/each}
       </div>
     </div>
-    <section style:display>
+    <section style:display={expanded ? 'flex' : 'none'}>
       {#each $navigationItems as { label, href }}
         {#if label !== 'Separator'}
           {#if label === 'Contact'}
@@ -168,38 +149,26 @@
 <style>
   header {
     position: sticky;
-    /* TODO(santigo-zero): Fix this */
-    /* top: 0; */
+    top: 0;
     transition: background-color, transform 200ms cubic-bezier(0.5, 0.95, 0, 1);
     z-index: 999;
     padding: 0.2rem 0;
-    background-color: var(--clr-25);
+    background: var(--clr-25);
+    border-bottom: 1px solid transparent;
   }
 
   a {
     color: inherit;
   }
 
-  header.anchored {
-    top: unset !important;
-    transform: none !important;
-    /* background-color: transparent !important; */
-    border-color: transparent !important;
-    border-width: 0 !important;
-  }
-
-  header.expanded,
-  header.scrollY {
-    border-bottom: 2px solid var(--clr-55);
-  }
-
-  header.scrollY {
-    backdrop-filter: blur(6px);
-    background-color: var(--clr-25-trp);
-  }
-
   header.expanded {
+    border-bottom: 2px solid var(--clr-55);
     background-color: var(--clr-30);
+  }
+
+  header.scrollY {
+    background: var(--clr-35-trp);
+    border-bottom-color: var(--clr-65);
   }
 
   a,
@@ -224,24 +193,13 @@
     gap: 0.8rem;
   }
 
-  @media screen and (min-width: 1280px) {
-    button {
-      display: none;
-    }
-
-    .list-items {
-      display: flex;
-      place-items: center;
-    }
-  }
-
   nav {
     display: flex;
     flex-wrap: wrap;
     place-items: center;
     justify-content: space-between;
 
-    width: min(92%, var(--xl));
+    width: min(100% - 2.2rem, var(--xl));
     margin-inline: auto;
   }
 
@@ -253,12 +211,12 @@
   }
 
   img {
-    width: 2rem;
-    height: 2rem;
+    width: 1.8rem;
+    height: 1.8rem;
   }
 
-  header.scrollY nav a:first-child span,
-  header nav a:first-child span {
+  header.scrollY span,
+  header span {
     display: none;
   }
 
@@ -272,7 +230,7 @@
     gap: 0.5rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
-    width: min(92%, var(--sm));
+    width: min(100% - 2.2rem, var(--sm));
     margin-inline: auto;
   }
 
@@ -281,15 +239,21 @@
       padding: 0.6rem 0;
     }
 
-    header.anchored nav a:first-child span,
-    header nav a:first-child span {
+    header span {
       display: flex;
     }
-  }
 
-  @media (max-width: 1024px) {
-    header {
-      transition: none;
+    header.scrollY {
+      backdrop-filter: blur(10px);
+    }
+
+    button {
+      display: none;
+    }
+
+    .list-items {
+      display: flex;
+      place-items: center;
     }
   }
 
