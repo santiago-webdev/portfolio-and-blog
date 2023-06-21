@@ -150,7 +150,7 @@
   header {
     position: sticky;
     top: 0;
-    transition: background-color, transform 200ms cubic-bezier(0.5, 0.95, 0, 1);
+    transition: background, transform 200ms cubic-bezier(0.5, 0.95, 0, 1);
     z-index: 999;
     padding: 0.2rem 0;
     background: var(--clr-25);
@@ -163,7 +163,7 @@
 
   header.expanded {
     border-bottom: 2px solid var(--clr-55);
-    background-color: var(--clr-30);
+    background: var(--clr-30);
   }
 
   header.scrollY {
@@ -185,7 +185,7 @@
   }
 
   button[aria-expanded='true'] {
-    background-color: var(--clr-55);
+    background: var(--clr-55);
   }
 
   .list-items {
