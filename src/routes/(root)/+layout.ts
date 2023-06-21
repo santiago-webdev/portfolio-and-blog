@@ -29,6 +29,9 @@ export const load = ({
         title = typedConfig[key].title;
         description = typedConfig[key].description;
         break;
+      } else if (pathname === '/blog/index') {
+        title = typedConfig.index.title;
+        description = typedConfig.index.description;
       }
     }
   }
