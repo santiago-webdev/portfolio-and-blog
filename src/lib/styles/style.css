@@ -26,6 +26,15 @@ button[disabled] {
 
 p code,
 li code {
+  display: inline-flex;
+  flex-wrap: wrap;
+
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-all;
+  overflow-wrap: break-word;
+  word-break: break-word; /*word-wrap: break-word;*/
+
   background: var(--clr-35);
   border: 1px var(--clr-50) solid;
   color: var(--clr-300);

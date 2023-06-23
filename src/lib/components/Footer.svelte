@@ -27,7 +27,7 @@ getGithubStars().then((stars) => (ghStars = stars));
 
 const donateItems = [
   {
-    name: 'Bitcoin(BEP20)',
+    name: 'Bitcoin',
     logo: 'bitcoin',
     direction: 'todo'
   }
