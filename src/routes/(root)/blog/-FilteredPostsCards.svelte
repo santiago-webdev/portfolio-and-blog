@@ -64,6 +64,10 @@ import { FilteredPosts } from '$lib/components/blog/store';
                 {readableDate(post.datetime)}
               </time>
             {/if}
+
+            {#if !post.finished}
+              <small class="tpl">🚧 In the works 🚧</small>
+            {/if}
           </article>
         </a>
       </li>
@@ -139,6 +143,14 @@ p {
 
 time {
   place-content: center;
+}
+
+small {
+  --bg: var(--clr-15);
+  --brd: var(--clr-15);
+  color: var(--clr-200);
+  padding: 0.4rem;
+  border-radius: 8px;
 }
 
 .tags {

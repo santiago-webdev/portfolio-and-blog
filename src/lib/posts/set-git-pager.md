@@ -3,6 +3,7 @@ title: A better git pager
 description: Setup a custom git pager instead of the default "more"
 datetime: 2023-06-23 10:46
 tags: ['Git']
+finished: true
 ---
 
 # My preference

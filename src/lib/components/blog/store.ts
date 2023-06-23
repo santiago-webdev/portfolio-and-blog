@@ -9,6 +9,7 @@ interface Metadata {
     datetime?: string;
     tags?: string[];
     summary?: string;
+    finished?: boolean;
   };
 }
 
@@ -19,6 +20,7 @@ class Post {
   datetime?: string;
   tags?: string[];
   summary?: string;
+  finished: boolean;
 
   constructor(
     href: string,
@@ -26,7 +28,8 @@ class Post {
     description: string,
     datetime?: string,
     tags?: Array<string>,
-    summary?: string
+    summary?: string,
+    finished = false
   ) {
     this.href = href;
     this.title = title;
@@ -34,6 +37,7 @@ class Post {
     this.datetime = datetime;
     this.tags = tags;
     this.summary = summary;
+    this.finished = finished;
   }
 }
 
@@ -55,7 +59,8 @@ const retrievePosts = () => {
         post.metadata.description,
         post.metadata.datetime,
         post.metadata.tags,
-        post.metadata.summary
+        post.metadata.summary,
+        post.metadata.finished
       )
     );
   }

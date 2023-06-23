@@ -2,7 +2,7 @@
 title: Sveltekit files cheat sheet
 datetime: 2023-06-03 22:25
 description: Cheatsheet with all of the files sveltekit related to routing
-finished: false
+finished: true
 tags: ['SvelteKit']
 ---
 
