@@ -9,7 +9,7 @@ import { navigationItems } from '$lib/components/navigation/store';
 
 type Transform = '' | 'translateY(-200%)';
 
-var expanded = false,
+let expanded = false,
   scrollY = 0,
   savedY = 0,
   outerWidth = 0,

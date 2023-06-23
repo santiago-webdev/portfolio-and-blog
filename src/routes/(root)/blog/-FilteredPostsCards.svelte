@@ -3,8 +3,8 @@ import { readableDate, relativeTime, retrieve_icon } from '$lib/utils/utils';
 import { FilteredPosts } from '$lib/components/blog/store';
 // import { fly } from 'svelte/transition';
 //
-// var fly_in = { y: 50, duration: 200 };
-// var fly_out = { y: -50, duration: 200 };
+// let fly_in = { y: 50, duration: 200 };
+// let fly_out = { y: -50, duration: 200 };
 </script>
 
 <section role="complementary">

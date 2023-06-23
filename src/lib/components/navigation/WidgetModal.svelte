@@ -4,7 +4,7 @@ import { searchHandler } from '$lib/components/blog/store';
 import { goto } from '$app/navigation';
 import { readableDate, relativeTime } from '$lib/utils/utils';
 
-var modal: HTMLDialogElement,
+let modal: HTMLDialogElement,
   input: HTMLInputElement,
   value = '';
 
