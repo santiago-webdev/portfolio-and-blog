@@ -107,6 +107,10 @@ export function retrieve_icon(symbol: string): string | undefined {
     case 'github':
     case 'github rest api':
       return 'mdi:github';
+    case 'linux':
+      return 'simple-icons:linux';
+    case 'tooling':
+      return 'lucide:wrench';
     default:
       return '';
   }
