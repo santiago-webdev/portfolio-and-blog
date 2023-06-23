@@ -98,9 +98,11 @@ export const FilteredPosts = writable<Array<Post>>(get(Posts));
 
 export const searchHandler = (filterPosts: string) => {
   const filtered = get(Posts).filter((post) => {
-    const searchTerms =
-      `${post.description} ${post.title} ${post.summary}`.toLowerCase();
-    return searchTerms.toLowerCase().includes(filterPosts.toLowerCase());
+    const url_words = post.href.replace(/-/g, ' ');
+
+    return `${url_words} ${post.title} ${post.description} ${post.summary}`
+      .toLowerCase()
+      .includes(filterPosts.toLowerCase());
   });
   FilteredPosts.set(filtered);
   return filterPosts;
