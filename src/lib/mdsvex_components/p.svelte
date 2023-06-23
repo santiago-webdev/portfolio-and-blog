@@ -3,7 +3,7 @@
 </p>
 
 <style>
-  p {
-    width: min(100%, 70ch);
-  }
+p {
+  width: min(100%, 70ch);
+}
 </style>

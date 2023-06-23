@@ -1,13 +1,13 @@
 <script lang="ts">
-  import config from '$lib/config.json';
+import config from '$lib/config.json';
 
-  export let url = new URL('/');
-  export let data = {
-    title: '',
-    description: ''
-  };
+export let url = new URL('/');
+export let data = {
+  title: '',
+  description: ''
+};
 
-  let canonical = config.landingpage.url.concat(url.toString());
+let canonical = config.landingpage.url.concat(url.toString());
 </script>
 
 <svelte:head>

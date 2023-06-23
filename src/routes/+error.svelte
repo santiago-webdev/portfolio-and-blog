@@ -1,8 +1,8 @@
 <script lang="ts">
-  import { base } from '$app/paths';
-  import { page } from '$app/stores';
-  import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
-  import config from '$lib/config.json';
+import { base } from '$app/paths';
+import { page } from '$app/stores';
+import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
+import config from '$lib/config.json';
 </script>
 
 <main>
@@ -17,24 +17,24 @@
 </main>
 
 <style>
-  main {
-    min-height: 100dvh;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    width: min(100% - 2.2rem, var(--sm));
-    margin-inline: auto;
-    place-content: center;
-    place-items: center;
-    text-align: center;
-  }
+main {
+  min-height: 100dvh;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  width: min(100% - 2.2rem, var(--sm));
+  margin-inline: auto;
+  place-content: center;
+  place-items: center;
+  text-align: center;
+}
 
-  main > * + * {
-    margin-block-start: 1em;
-  }
+main > * + * {
+  margin-block-start: 1em;
+}
 
-  section {
-    display: flex;
-    flex-direction: column;
-  }
+section {
+  display: flex;
+  flex-direction: column;
+}
 </style>

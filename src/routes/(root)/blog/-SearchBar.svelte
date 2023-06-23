@@ -1,28 +1,28 @@
 <script lang="ts">
-  import { FilteredPosts } from '$lib/components/blog/store';
-  import { searchHandler } from '$lib/components/blog/store';
-  import { base } from '$app/paths';
-  import { goto, preloadData } from '$app/navigation';
+import { FilteredPosts } from '$lib/components/blog/store';
+import { searchHandler } from '$lib/components/blog/store';
+import { base } from '$app/paths';
+import { goto, preloadData } from '$app/navigation';
 
-  // export let placeholder = `TODO: Make this search better`;
-  // TODO(santigo-zero): Explain first time users how to search tags
-  export let placeholder = `Search`;
+// export let placeholder = `TODO: Make this search better`;
+// TODO(santigo-zero): Explain first time users how to search tags
+export let placeholder = `Search`;
 
-  const placeholderDefault = 'Search';
-  const placeholderNoInput = "You haven't searched for any post yet";
-  let value = '';
+const placeholderDefault = 'Search';
+const placeholderNoInput = "You haven't searched for any post yet";
+let value = '';
 
-  function handleSubmit() {
-    if (value.length !== 0) goto($FilteredPosts[0].href);
+function handleSubmit() {
+  if (value.length !== 0) goto($FilteredPosts[0].href);
 
-    placeholder = placeholderNoInput;
-    setTimeout(() => {
-      placeholder = placeholderDefault;
-    }, 1000);
-  }
+  placeholder = placeholderNoInput;
+  setTimeout(() => {
+    placeholder = placeholderDefault;
+  }, 1000);
+}
 
-  $: if ($FilteredPosts.length === 1)
-    preloadData(`${base}/blog${$FilteredPosts[0].href}`);
+$: if ($FilteredPosts.length === 1)
+  preloadData(`${base}/blog${$FilteredPosts[0].href}`);
 </script>
 
 <form class="font-30 tpl" on:submit|preventDefault={handleSubmit}>
@@ -59,82 +59,82 @@
 </form>
 
 <style>
-  form {
-    --bg: var(--clr-40);
-    --brd: var(--clr-45);
-    display: flex;
-    place-items: center;
-    margin-inline: auto;
-    position: relative;
-    width: min(92%, var(--sm));
+form {
+  --bg: var(--clr-40);
+  --brd: var(--clr-45);
+  display: flex;
+  place-items: center;
+  margin-inline: auto;
+  position: relative;
+  width: min(92%, var(--sm));
 
-    /* background-color: var(--clr-40); */
-    /* border: 1px solid var(--clr-40); */
-    /* border-top-color: var(--clr-45); */
-    /* border-left-color: var(--clr-45); */
-    /* box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1); */
+  /* background-color: var(--clr-40); */
+  /* border: 1px solid var(--clr-40); */
+  /* border-top-color: var(--clr-45); */
+  /* border-left-color: var(--clr-45); */
+  /* box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1); */
 
-    transition: background-color 50ms, border 80ms, box-shadow 300ms;
+  transition: background-color 50ms, border 80ms, box-shadow 300ms;
 
-    padding: 0.4rem 0.8rem;
-    gap: 0.2rem;
-    border-radius: 1rem;
-  }
+  padding: 0.4rem 0.8rem;
+  gap: 0.2rem;
+  border-radius: 1rem;
+}
 
-  form > *:not(kbd) {
-    font-size: inherit;
-    line-height: inherit;
-  }
+form > *:not(kbd) {
+  font-size: inherit;
+  line-height: inherit;
+}
 
-  input:-moz-placeholder,
-  input::-moz-placeholder {
-    opacity: 1;
-  }
+input:-moz-placeholder,
+input::-moz-placeholder {
+  opacity: 1;
+}
 
-  input[type='search']::-ms-clear {
-    display: none;
-  }
+input[type='search']::-ms-clear {
+  display: none;
+}
 
-  input[type='search']::-webkit-search-cancel-button {
-    display: none;
-  }
+input[type='search']::-webkit-search-cancel-button {
+  display: none;
+}
 
-  input,
-  input::placeholder,
-  button {
-    background-color: inherit;
-  }
+input,
+input::placeholder,
+button {
+  background-color: inherit;
+}
 
-  input {
-    border: none;
-    outline: none;
-    width: 100%;
-    padding: 0.2rem 0;
-  }
+input {
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 0.2rem 0;
+}
 
-  input::placeholder,
-  form button {
-    color: var(--clr-85);
-  }
+input::placeholder,
+form button {
+  color: var(--clr-85);
+}
 
-  input:focus::placeholder {
-    color: transparent;
-  }
+input:focus::placeholder {
+  color: transparent;
+}
 
-  form:focus-within button {
-    color: inherit;
-    background-color: inherit;
-  }
+form:focus-within button {
+  color: inherit;
+  background-color: inherit;
+}
 
-  button {
-    display: grid;
-    place-items: center;
-    padding-inline: 0.8rem;
-  }
+button {
+  display: grid;
+  place-items: center;
+  padding-inline: 0.8rem;
+}
 
-  kbd {
-    position: absolute;
-    right: 1.3rem;
-    font-size: 60%;
-  }
+kbd {
+  position: absolute;
+  right: 1.3rem;
+  font-size: 60%;
+}
 </style>

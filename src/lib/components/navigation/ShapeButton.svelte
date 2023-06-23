@@ -1,6 +1,6 @@
 <script lang="ts">
-  import Forward from '../Forward.svelte';
-  export let href = '/';
+import Forward from '../Forward.svelte';
+export let href = '/';
 </script>
 
 <a {href} {...$$restProps} class={`tpl defaults font-10 ${$$props.class}`}>
@@ -29,27 +29,27 @@
 </a>
 
 <style>
-  a {
-    display: flex;
-    place-content: center;
-    place-items: center;
-    text-transform: uppercase;
+a {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  text-transform: uppercase;
 
-    font-weight: 600;
-    font-variation-settings: 'wght' 730;
-    border-radius: 999rem;
+  font-weight: 600;
+  font-variation-settings: 'wght' 730;
+  border-radius: 999rem;
 
-    --pad-height: 16px;
-    --pad-width: 32px;
-    padding: var(--pad-height) var(--pad-width);
-  }
+  --pad-height: 16px;
+  --pad-width: 32px;
+  padding: var(--pad-height) var(--pad-width);
+}
 
-  span {
-    display: flex;
-    place-content: center;
-    place-items: center;
-    justify-content: space-between;
-    gap: 0.5ch;
-    min-width: min(14ch, 100%);
-  }
+span {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  justify-content: space-between;
+  gap: 0.5ch;
+  min-width: min(14ch, 100%);
+}
 </style>

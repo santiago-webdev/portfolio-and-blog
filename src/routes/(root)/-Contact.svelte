@@ -1,5 +1,5 @@
 <script lang="ts">
-  // <script context="module" lang="ts">
+// <script context="module" lang="ts">
 </script>
 
 <section id="contact">

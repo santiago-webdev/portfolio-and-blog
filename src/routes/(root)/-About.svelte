@@ -1,7 +1,7 @@
 <script>
-  import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
-  import config from '$lib/config.json';
-  import { base } from '$app/paths';
+import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
+import config from '$lib/config.json';
+import { base } from '$app/paths';
 </script>
 
 <div class="wrapper-about">
@@ -45,86 +45,86 @@
 </div>
 
 <style>
-  .wrapper-about {
-    background-color: var(--clr-20);
-    padding: 1rem 0;
-  }
+.wrapper-about {
+  background-color: var(--clr-20);
+  padding: 1rem 0;
+}
 
-  .aboutme {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 3rem;
-    width: min(100% - 2.2rem, var(--md));
-    margin-inline: auto;
-  }
+.aboutme {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 3rem;
+  width: min(100% - 2.2rem, var(--md));
+  margin-inline: auto;
+}
 
-  h2 {
-    text-align: center;
-    margin-bottom: clamp(2rem, 2vw + 1rem, 6rem);
+h2 {
+  text-align: center;
+  margin-bottom: clamp(2rem, 2vw + 1rem, 6rem);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  min-width: min(100%, var(--xs));
+  grid-column: span 8;
+  gap: 1.4rem;
+}
+
+.familiar-stack {
+  grid-column: span 8;
+  display: grid;
+  place-content: start;
+  gap: 1rem;
+}
+
+.links-about {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: clamp(2rem, 2vw + 1rem, 6rem);
+  width: min(100% - 2.2rem, var(--md));
+  margin-inline: auto;
+  place-content: center;
+  gap: 1rem;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+  gap: 1rem;
+
+  list-style: disc inside;
+}
+
+li {
+  margin-right: 2ch;
+}
+
+small {
+  visibility: hidden;
+  display: block;
+  margin-top: 1ch;
+  padding-inline: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  small {
+    visibility: visible;
   }
 
   section {
-    display: flex;
-    flex-direction: column;
-    min-width: min(100%, var(--xs));
-    grid-column: span 8;
-    gap: 1.4rem;
+    grid-column: span 4;
   }
 
   .familiar-stack {
-    grid-column: span 8;
-    display: grid;
-    place-content: start;
-    gap: 1rem;
+    grid-column: span 4;
   }
 
   .links-about {
-    display: flex;
-    flex-direction: column;
-
-    margin-top: clamp(2rem, 2vw + 1rem, 6rem);
-    width: min(100% - 2.2rem, var(--md));
-    margin-inline: auto;
-    place-content: center;
-    gap: 1rem;
+    flex-direction: revert;
+    place-items: self-start;
+    grid-column: span 8;
   }
-
-  ul {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
-    gap: 1rem;
-
-    list-style: disc inside;
-  }
-
-  li {
-    margin-right: 2ch;
-  }
-
-  small {
-    visibility: hidden;
-    display: block;
-    margin-top: 1ch;
-    padding-inline: 2rem;
-  }
-
-  @media screen and (min-width: 768px) {
-    small {
-      visibility: visible;
-    }
-
-    section {
-      grid-column: span 4;
-    }
-
-    .familiar-stack {
-      grid-column: span 4;
-    }
-
-    .links-about {
-      flex-direction: revert;
-      place-items: self-start;
-      grid-column: span 8;
-    }
-  }
+}
 </style>

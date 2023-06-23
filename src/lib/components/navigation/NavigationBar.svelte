@@ -1,28 +1,28 @@
 <script lang="ts">
-  import { base } from '$app/paths';
-  import { page } from '$app/stores';
-  import { afterNavigate } from '$app/navigation';
+import { base } from '$app/paths';
+import { page } from '$app/stores';
+import { afterNavigate } from '$app/navigation';
 
-  import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
-  import WidgetModal from '$lib/components/navigation/WidgetModal.svelte';
-  import { navigationItems } from '$lib/components/navigation/store';
+import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
+import WidgetModal from '$lib/components/navigation/WidgetModal.svelte';
+import { navigationItems } from '$lib/components/navigation/store';
 
-  type Transform = '' | 'translateY(-200%)';
+type Transform = '' | 'translateY(-200%)';
 
-  var expanded = false,
-    scrollY = 0,
-    savedY = 0,
-    outerWidth = 0,
-    transform: Transform = '';
+var expanded = false,
+  scrollY = 0,
+  savedY = 0,
+  outerWidth = 0,
+  transform: Transform = '';
 
-  afterNavigate(() => (expanded = false));
-  $: if (outerWidth > 768) expanded = false;
+afterNavigate(() => (expanded = false));
+$: if (outerWidth > 768) expanded = false;
 
-  $: {
-    transform =
-      !expanded && scrollY > 300 && scrollY > savedY ? 'translateY(-200%)' : '';
-    savedY = scrollY;
-  }
+$: {
+  transform =
+    !expanded && scrollY > 300 && scrollY > savedY ? 'translateY(-200%)' : '';
+  savedY = scrollY;
+}
 </script>
 
 <svelte:window bind:scrollY bind:outerWidth />
@@ -147,119 +147,119 @@
 </header>
 
 <style>
+header {
+  position: sticky;
+  top: 0;
+  transition: background, transform 200ms cubic-bezier(0.5, 0.95, 0, 1);
+  z-index: 999;
+  padding: 0.2rem 0;
+  background: var(--clr-25);
+  border-bottom: 1px solid transparent;
+}
+
+a {
+  color: inherit;
+}
+
+header.expanded {
+  border-bottom: 2px solid var(--clr-55);
+  background: var(--clr-30);
+}
+
+header.scrollY {
+  background: var(--clr-35-trp);
+  border-bottom-color: var(--clr-65);
+}
+
+a,
+button {
+  padding: 0.4rem 0.8rem;
+  display: flex;
+  place-items: center;
+  place-content: center;
+}
+
+button {
+  border-radius: 999rem;
+  min-width: 3.5ch;
+}
+
+button[aria-expanded='true'] {
+  background: var(--clr-55);
+}
+
+.list-items {
+  display: none;
+  gap: 0.8rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
+  justify-content: space-between;
+
+  width: min(100% - 2.2rem, var(--xl));
+  margin-inline: auto;
+}
+
+nav a:first-child {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 0.8rem;
+  font-variation-settings: 'wght' 660;
+}
+
+img {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+header.scrollY span,
+header span {
+  display: none;
+}
+
+.navigation-items {
+  display: flex;
+  gap: 0.8rem;
+}
+
+section {
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: min(100% - 2.2rem, var(--sm));
+  margin-inline: auto;
+}
+
+@media screen and (min-width: 768px) {
   header {
-    position: sticky;
-    top: 0;
-    transition: background, transform 200ms cubic-bezier(0.5, 0.95, 0, 1);
-    z-index: 999;
-    padding: 0.2rem 0;
-    background: var(--clr-25);
-    border-bottom: 1px solid transparent;
+    padding: 0.6rem 0;
   }
 
-  a {
-    color: inherit;
-  }
-
-  header.expanded {
-    border-bottom: 2px solid var(--clr-55);
-    background: var(--clr-30);
+  header span {
+    display: flex;
   }
 
   header.scrollY {
-    background: var(--clr-35-trp);
-    border-bottom-color: var(--clr-65);
-  }
-
-  a,
-  button {
-    padding: 0.4rem 0.8rem;
-    display: flex;
-    place-items: center;
-    place-content: center;
+    backdrop-filter: blur(10px);
   }
 
   button {
-    border-radius: 999rem;
-    min-width: 3.5ch;
-  }
-
-  button[aria-expanded='true'] {
-    background: var(--clr-55);
+    display: none;
   }
 
   .list-items {
-    display: none;
-    gap: 0.8rem;
-  }
-
-  nav {
     display: flex;
-    flex-wrap: wrap;
     place-items: center;
-    justify-content: space-between;
-
-    width: min(100% - 2.2rem, var(--xl));
-    margin-inline: auto;
   }
+}
 
-  nav a:first-child {
-    display: flex;
-    flex-flow: row wrap;
-    gap: 0.8rem;
-    font-variation-settings: 'wght' 660;
+@media (prefers-reduced-motion: reduce) {
+  header {
+    transition: none;
   }
-
-  img {
-    width: 1.8rem;
-    height: 1.8rem;
-  }
-
-  header.scrollY span,
-  header span {
-    display: none;
-  }
-
-  .navigation-items {
-    display: flex;
-    gap: 0.8rem;
-  }
-
-  section {
-    flex-direction: column;
-    gap: 0.5rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    width: min(100% - 2.2rem, var(--sm));
-    margin-inline: auto;
-  }
-
-  @media screen and (min-width: 768px) {
-    header {
-      padding: 0.6rem 0;
-    }
-
-    header span {
-      display: flex;
-    }
-
-    header.scrollY {
-      backdrop-filter: blur(10px);
-    }
-
-    button {
-      display: none;
-    }
-
-    .list-items {
-      display: flex;
-      place-items: center;
-    }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    header {
-      transition: none;
-    }
-  }
+}
 </style>

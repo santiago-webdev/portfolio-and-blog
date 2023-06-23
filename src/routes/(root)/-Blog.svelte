@@ -1,13 +1,13 @@
 <script lang="ts">
-  import { base } from '$app/paths';
-  import LinkArrow from '$lib/components/navigation/LinkArrow.svelte';
-  import { Posts } from '$lib/components/blog/store';
-  import { readableDate, relativeTime } from '$lib/utils/utils';
+import { base } from '$app/paths';
+import LinkArrow from '$lib/components/navigation/LinkArrow.svelte';
+import { Posts } from '$lib/components/blog/store';
+import { readableDate, relativeTime } from '$lib/utils/utils';
 
-  function getPic(id: number) {
-    let pics = ['/alleged-photo-of-myself.webp', '/plant.webp', '/plant2.webp'];
-    return pics[id];
-  }
+function getPic(id: number) {
+  let pics = ['/alleged-photo-of-myself.webp', '/plant.webp', '/plant2.webp'];
+  return pics[id];
+}
 </script>
 
 <div id="mention-blog">
@@ -53,81 +53,81 @@
 </div>
 
 <style>
-  #mention-blog {
-    padding: 3rem 0;
-    display: flex;
-    place-content: center;
-    place-items: center;
-    border-top: 1px solid var(--clr-15);
-    margin-bottom: 3rem;
-  }
+#mention-blog {
+  padding: 3rem 0;
+  display: flex;
+  place-content: center;
+  place-items: center;
+  border-top: 1px solid var(--clr-15);
+  margin-bottom: 3rem;
+}
 
-  .wrapper {
-    display: grid;
-    gap: 4rem;
+.wrapper {
+  display: grid;
+  gap: 4rem;
 
-    width: min(100% - 2.2rem, var(--lg));
-    border-radius: 0.8rem;
-  }
+  width: min(100% - 2.2rem, var(--lg));
+  border-radius: 0.8rem;
+}
 
-  .intro {
-    display: flex;
-    flex-flow: row wrap-reverse;
-    gap: 1.4rem;
-    justify-content: space-between;
-    place-items: flex-start;
-  }
+.intro {
+  display: flex;
+  flex-flow: row wrap-reverse;
+  gap: 1.4rem;
+  justify-content: space-between;
+  place-items: flex-start;
+}
 
-  .goto-blog {
-    display: flex;
-    flex-direction: column;
-  }
+.goto-blog {
+  display: flex;
+  flex-direction: column;
+}
 
-  kbd {
-    font-size: inherit;
-    font-weight: normal;
-  }
+kbd {
+  font-size: inherit;
+  font-weight: normal;
+}
 
-  section {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
-    gap: 4rem 1.6rem;
-  }
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 4rem 1.6rem;
+}
 
-  article {
-    position: relative;
-    display: flex;
-    flex-flow: column wrap;
-    gap: 1rem;
-  }
+article {
+  position: relative;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1rem;
+}
 
-  .img-wrapper {
-    max-height: 36rem;
-    overflow: hidden;
-    border-radius: 0.6rem;
-  }
+.img-wrapper {
+  max-height: 36rem;
+  overflow: hidden;
+  border-radius: 0.6rem;
+}
 
-  img {
-    max-inline-size: 100%;
-    block-size: auto;
-    object-fit: scale-down;
-    object-position: center center;
-  }
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+  object-fit: scale-down;
+  object-position: center center;
+}
 
-  time {
-    display: flex;
-    flex-flow: row wrap;
-    place-items: center;
-    color: var(--clr-100);
-  }
+time {
+  display: flex;
+  flex-flow: row wrap;
+  place-items: center;
+  color: var(--clr-100);
+}
 
+section a:nth-child(3) {
+  display: none;
+}
+
+@media screen and (min-width: 1280px) {
   section a:nth-child(3) {
-    display: none;
+    display: initial;
   }
-
-  @media screen and (min-width: 1280px) {
-    section a:nth-child(3) {
-      display: initial;
-    }
-  }
+}
 </style>

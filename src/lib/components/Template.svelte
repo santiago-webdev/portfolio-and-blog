@@ -1,43 +1,43 @@
 <script context="module">
-  import { img, ol, ul, li, table, a, p } from '$lib/mdsvex_components/index';
-  export { img, ol, ul, li, table, a, p };
+import { img, ol, ul, li, table, a, p } from '$lib/mdsvex_components/index';
+export { img, ol, ul, li, table, a, p };
 </script>
 
 <script>
-  import Hollow from './Hollow.svelte';
-  import { readableDate, relativeTime, retrieve_icon } from '$lib/utils/utils';
-  import { base } from '$app/paths';
+import Hollow from './Hollow.svelte';
+import { readableDate, relativeTime, retrieve_icon } from '$lib/utils/utils';
+import { base } from '$app/paths';
 
-  import LinkArrow from './navigation/LinkArrow.svelte';
+import LinkArrow from './navigation/LinkArrow.svelte';
 
-  export let title = '';
-  export let datetime = '';
-  export let description = '';
-  export let finished = false;
-  /** @type {string[]} */
-  export let tags = [];
-  export let summary = '';
+export let title = '';
+export let datetime = '';
+export let description = '';
+export let finished = false;
+/** @type {string[]} */
+export let tags = [];
+export let summary = '';
 
-  const dateRelative = !datetime
-    ? datetime
-    : relativeTime(new Date(), new Date(datetime));
-  const dateReadable = !datetime ? datetime : readableDate(datetime);
+const dateRelative = !datetime
+  ? datetime
+  : relativeTime(new Date(), new Date(datetime));
+const dateReadable = !datetime ? datetime : readableDate(datetime);
 
-  let isHollow = false;
-  let hollowPrefix = '';
-  let fillSuffix = '';
+let isHollow = false;
+let hollowPrefix = '';
+let fillSuffix = '';
 
-  const keywords = ['How', 'How to', 'How to:', 'How To'];
+const keywords = ['How', 'How to', 'How to:', 'How To'];
 
-  if (title) {
-    keywords.some((keyword) => {
-      if (title.startsWith(keyword)) {
-        hollowPrefix = keyword;
-        fillSuffix = title.replace(keyword, '');
-        isHollow = true;
-      }
-    });
-  }
+if (title) {
+  keywords.some((keyword) => {
+    if (title.startsWith(keyword)) {
+      hollowPrefix = keyword;
+      fillSuffix = title.replace(keyword, '');
+      isHollow = true;
+    }
+  });
+}
 </script>
 
 <section>
@@ -116,108 +116,108 @@
 </section>
 
 <style>
-  [role='banner'] {
-    background-color: var(--clr-25);
-    border-bottom-right-radius: 1.6rem;
-    border-bottom-left-radius: 1.6rem;
-    display: flex;
-    flex-direction: column;
-    place-items: start;
-  }
+[role='banner'] {
+  background-color: var(--clr-25);
+  border-bottom-right-radius: 1.6rem;
+  border-bottom-left-radius: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  place-items: start;
+}
 
-  .back-button {
-    margin-inline: auto;
-    width: min(100% - 2.2rem, var(--base));
-    margin-top: 0.8rem;
-    margin-bottom: 0.4rem;
-  }
+.back-button {
+  margin-inline: auto;
+  width: min(100% - 2.2rem, var(--base));
+  margin-top: 0.8rem;
+  margin-bottom: 0.4rem;
+}
 
-  .wrapper-header,
-  .wip {
-    display: grid;
-    width: min(100% - 2.2rem, var(--xl));
-    margin-inline: auto;
-  }
+.wrapper-header,
+.wip {
+  display: grid;
+  width: min(100% - 2.2rem, var(--xl));
+  margin-inline: auto;
+}
 
-  main {
-    width: min(100% - 2.2rem, var(--sm));
-    margin-inline: auto;
-    padding-top: 1rem;
-  }
+main {
+  width: min(100% - 2.2rem, var(--sm));
+  margin-inline: auto;
+  padding-top: 1rem;
+}
 
-  :global(.blog-post p img),
-  :global(.blog-post > * + *) {
-    margin-block-start: 1em;
-  }
+:global(.blog-post p img),
+:global(.blog-post > * + *) {
+  margin-block-start: 1em;
+}
 
-  hgroup {
-    display: flex;
-    flex-direction: column;
-  }
+hgroup {
+  display: flex;
+  flex-direction: column;
+}
 
-  hgroup > * + * {
-    margin-block-start: 1em;
-  }
+hgroup > * + * {
+  margin-block-start: 1em;
+}
 
-  .wrapper-header {
-    gap: 1.2rem;
-    text-align: center;
-  }
+.wrapper-header {
+  gap: 1.2rem;
+  text-align: center;
+}
 
-  .wrapper-header p {
-    max-width: 44ch;
-    margin-inline: auto;
-  }
+.wrapper-header p {
+  max-width: 44ch;
+  margin-inline: auto;
+}
 
-  .wip {
-    place-items: center;
-    margin-top: 0.6rem;
-  }
+.wip {
+  place-items: center;
+  margin-top: 0.6rem;
+}
 
-  small {
-    font-weight: 500;
-  }
+small {
+  font-weight: 500;
+}
 
-  .tags {
-    /* width: min(100%, var(--sm)); */
-    max-width: var(--sm);
-    margin-inline: auto;
-    place-content: center;
-  }
+.tags {
+  /* width: min(100%, var(--sm)); */
+  max-width: var(--sm);
+  margin-inline: auto;
+  place-content: center;
+}
 
-  .tags li {
-    --bg: var(--clr-40);
-    --brd: var(--clr-45);
-    margin-top: 0.6rem;
-    display: flex;
-    place-items: center;
-    gap: 0.5ch;
-    padding: 0.4rem 0.8rem;
-    border-radius: 0.75rem;
-  }
+.tags li {
+  --bg: var(--clr-40);
+  --brd: var(--clr-45);
+  margin-top: 0.6rem;
+  display: flex;
+  place-items: center;
+  gap: 0.5ch;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.75rem;
+}
 
-  time {
-    display: flex;
-    place-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-  }
+time {
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
 
-  details {
-    --bg: var(--clr-40);
-    --brd: var(--clr-45);
-    font-family: var(--ff-text);
-    display: flex;
-    gap: 2rem;
-    max-width: var(--base);
-    margin-inline: auto;
-    padding: 0.4rem 0.8rem;
-    text-align: left;
-  }
+details {
+  --bg: var(--clr-40);
+  --brd: var(--clr-45);
+  font-family: var(--ff-text);
+  display: flex;
+  gap: 2rem;
+  max-width: var(--base);
+  margin-inline: auto;
+  padding: 0.4rem 0.8rem;
+  text-align: left;
+}
 
-  summary {
-    padding: 0.4rem 0.8rem;
-    color: var(--clr-red-40);
-    text-align: center;
-  }
+summary {
+  padding: 0.4rem 0.8rem;
+  color: var(--clr-red-40);
+  text-align: center;
+}
 </style>

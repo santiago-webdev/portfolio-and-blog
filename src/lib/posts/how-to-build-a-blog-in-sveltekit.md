@@ -222,7 +222,7 @@ every blog post file.
 
 ```svelte
 <script context="module">
-  export let title = '';
-  export let description = '';
+export let title = '';
+export let description = '';
 </script>
 ```

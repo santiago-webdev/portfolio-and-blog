@@ -40,7 +40,9 @@ class Post {
 const retrievePosts = () => {
   const tmpPosts: Array<Post> = [];
 
-  const modules = import.meta.glob('../../posts/*.md', { eager: true });
+  const modules = import.meta.glob('../../posts/*.md', {
+    eager: true
+  });
 
   for (const path in modules) {
     const postData = modules[path] as Metadata;

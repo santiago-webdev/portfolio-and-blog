@@ -34,48 +34,48 @@
 </div>
 
 <style>
-  * {
-    transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1),
-      opacity 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
+* {
+  transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1),
+    opacity 150ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
 
-  .wrapper-arrow {
-    display: flex;
-    place-items: center;
+.wrapper-arrow {
+  display: flex;
+  place-items: center;
 
-    position: relative;
-    inset: auto auto auto 0.2ch;
+  position: relative;
+  inset: auto auto auto 0.2ch;
+}
+
+.tail {
+  position: absolute;
+  opacity: 1;
+  transition-delay: 50ms;
+}
+
+.chevron-back {
+  transform: translateX(-4px);
+}
+
+@media (hover: hover) {
+  .chevron-back {
+    transform: translateX(3px);
   }
 
   .tail {
-    position: absolute;
-    opacity: 1;
-    transition-delay: 50ms;
+    opacity: 0;
+    transition-delay: -50ms;
   }
 
-  .chevron-back {
+  :global(a:hover .chevron-back),
+  :global(a:focus .chevron-back) {
     transform: translateX(-4px);
   }
 
-  @media (hover: hover) {
-    .chevron-back {
-      transform: translateX(3px);
-    }
-
-    .tail {
-      opacity: 0;
-      transition-delay: -50ms;
-    }
-
-    :global(a:hover .chevron-back),
-    :global(a:focus .chevron-back) {
-      transform: translateX(-4px);
-    }
-
-    :global(a:hover .tail),
-    :global(a:focus .tail) {
-      opacity: 1;
-      transition-delay: 50ms;
-    }
+  :global(a:hover .tail),
+  :global(a:focus .tail) {
+    opacity: 1;
+    transition-delay: 50ms;
   }
+}
 </style>

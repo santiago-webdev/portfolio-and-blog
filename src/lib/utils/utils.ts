@@ -5,7 +5,9 @@ export const relativeTime = (
   includeYears = true
 ): string => {
   const difference = now.getTime() - postDate.getTime();
-  const formatter = new Intl.RelativeTimeFormat('en', { style: 'long' });
+  const formatter = new Intl.RelativeTimeFormat('en', {
+    style: 'long'
+  });
   let value: number;
   let unit: string;
 

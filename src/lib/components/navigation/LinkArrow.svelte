@@ -1,10 +1,10 @@
 <script lang="ts">
-  import Backward from '$lib/components/Backward.svelte';
-  import Forward from '$lib/components/Forward.svelte';
+import Backward from '$lib/components/Backward.svelte';
+import Forward from '$lib/components/Forward.svelte';
 
-  export let orientation = 'right';
-  export let href = '/';
-  export let defaults = false;
+export let orientation = 'right';
+export let href = '/';
+export let defaults = false;
 </script>
 
 <a
@@ -25,23 +25,23 @@
 </a>
 
 <style>
-  a {
-    display: inline-flex;
-    color: var(--clr-90);
-    transition: all 150ms ease-in-out;
-    max-width: max-content;
-    letter-spacing: -0.03em;
-    font-weight: 400;
-  }
+a {
+  display: inline-flex;
+  color: var(--clr-90);
+  transition: all 150ms ease-in-out;
+  max-width: max-content;
+  letter-spacing: -0.03em;
+  font-weight: 400;
+}
 
-  .defaults {
-    font-size: inherit;
-    line-height: inherit;
-  }
+.defaults {
+  font-size: inherit;
+  line-height: inherit;
+}
 
-  @media (hover: hover) {
-    a:hover {
-      color: var(--clr-red-40);
-    }
+@media (hover: hover) {
+  a:hover {
+    color: var(--clr-red-40);
   }
+}
 </style>

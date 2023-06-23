@@ -1,61 +1,61 @@
 <script lang="ts">
-  import { onMount } from 'svelte';
-  import type { Theme } from '$lib/types';
+import { onMount } from 'svelte';
+import type { Theme } from '$lib/types';
 
-  let theme: Theme = 'system',
-    prefers_light = true;
+let theme: Theme = 'system',
+  prefers_light = true;
 
-  function toggleTheme() {
-    switch (theme) {
-      case 'system':
-      case 'system-light':
-        theme = 'dark';
-        break;
-      case 'dark':
-        theme = 'light';
-        break;
-      case 'light':
-        if (prefers_light) theme = 'system-light';
-        else theme = 'system';
-        break;
-      default:
-        return (prefers_light && 'system-light') || 'system';
-    }
+function toggleTheme() {
+  switch (theme) {
+    case 'system':
+    case 'system-light':
+      theme = 'dark';
+      break;
+    case 'dark':
+      theme = 'light';
+      break;
+    case 'light':
+      if (prefers_light) theme = 'system-light';
+      else theme = 'system';
+      break;
+    default:
+      return (prefers_light && 'system-light') || 'system';
   }
+}
 
-  function setThemeCookie() {
-    const ONE_YEAR_IN_MS = 31_536_000_000; // number of milliseconds in one year
-    const expireDate = new Date(Date.now() + ONE_YEAR_IN_MS); // set expiration date to one year from now
-    document.cookie = `theme=${theme}; expires=${expireDate.toUTCString()}; path=/; SameSite=None; secure=true;`;
-  }
+function setThemeCookie() {
+  const ONE_YEAR_IN_MS = 31_536_000_000; // number of milliseconds in one year
+  const expireDate = new Date(Date.now() + ONE_YEAR_IN_MS); // set expiration date to one year from now
+  document.cookie = `theme=${theme}; expires=${expireDate.toUTCString()}; path=/; SameSite=None; secure=true;`;
+}
 
-  function setThemeLocalStorage() {
-    localStorage.setItem('theme', theme);
-  }
+function setThemeLocalStorage() {
+  localStorage.setItem('theme', theme);
+}
 
-  function click() {
-    toggleTheme();
-    document.documentElement.dataset.theme = theme;
-    setThemeCookie();
-    setThemeLocalStorage();
-  }
+function click() {
+  toggleTheme();
+  document.documentElement.dataset.theme = theme;
+  setThemeCookie();
+  setThemeLocalStorage();
+}
 
-  onMount(() => {
-    let doc = document.documentElement.dataset;
-    theme = doc.theme as Theme;
+onMount(() => {
+  let doc = document.documentElement.dataset;
+  theme = doc.theme as Theme;
 
-    prefers_light = !window.matchMedia('(prefers-color-scheme: dark)').matches;
-    window
-      .matchMedia('(prefers-color-scheme: dark)')
-      .addEventListener('change', (event: MediaQueryListEvent) => {
-        prefers_light = !event.matches;
+  prefers_light = !window.matchMedia('(prefers-color-scheme: dark)').matches;
+  window
+    .matchMedia('(prefers-color-scheme: dark)')
+    .addEventListener('change', (event: MediaQueryListEvent) => {
+      prefers_light = !event.matches;
 
-        if (theme.startsWith('system')) {
-          event.matches ? (theme = 'system') : (theme = 'system-light');
-          doc.theme = theme;
-        }
-      });
-  });
+      if (theme.startsWith('system')) {
+        event.matches ? (theme = 'system') : (theme = 'system-light');
+        doc.theme = theme;
+      }
+    });
+});
 </script>
 
 <button
@@ -118,88 +118,88 @@
 </button>
 
 <style>
+button {
+  overflow: hidden;
+  display: flex;
+  flex-flow: row;
+  place-content: center;
+  padding: 0.4rem 0.8rem;
+  border-radius: 1rem;
+  gap: 0.4rem;
+  color: inherit;
+
+  box-shadow: 3px 6px 12px 4px rgba(0, 0, 0, 0.1);
+  --background: var(--clr-45);
+  --border: var(--clr-50);
+  background-color: var(--background);
+  border-bottom-color: var(--background);
+  border-right-color: var(--background);
+  border-top-color: var(--border);
+  border-left-color: var(--border);
+  border-style: solid;
+  border-width: 1px 2px;
+}
+
+@media screen and (min-width: 1280px) {
+  span {
+    display: none;
+  }
+
   button {
-    overflow: hidden;
-    display: flex;
-    flex-flow: row;
-    place-content: center;
-    padding: 0.4rem 0.8rem;
-    border-radius: 1rem;
-    gap: 0.4rem;
-    color: inherit;
-
-    box-shadow: 3px 6px 12px 4px rgba(0, 0, 0, 0.1);
-    --background: var(--clr-45);
-    --border: var(--clr-50);
-    background-color: var(--background);
-    border-bottom-color: var(--background);
-    border-right-color: var(--background);
-    border-top-color: var(--border);
-    border-left-color: var(--border);
-    border-style: solid;
-    border-width: 1px 2px;
+    padding: 0.36rem;
+    border-radius: 100%;
   }
+}
 
-  @media screen and (min-width: 1280px) {
-    span {
-      display: none;
-    }
+.theme-wrapper {
+  color: inherit;
+  position: relative;
+  display: flex;
+  place-content: center;
+  place-items: center;
+}
 
-    button {
-      padding: 0.36rem;
-      border-radius: 100%;
-    }
-  }
+svg:first-child {
+  position: absolute;
+}
 
-  .theme-wrapper {
-    color: inherit;
-    position: relative;
-    display: flex;
-    place-content: center;
-    place-items: center;
-  }
+svg:nth-child(2) {
+  position: absolute;
+}
 
-  svg:first-child {
-    position: absolute;
-  }
+svg {
+  pointer-events: none;
+  display: flex;
+  transition: transform 800ms cubic-bezier(0.3, 0, 0.3, 1);
+}
 
-  svg:nth-child(2) {
-    position: absolute;
-  }
+.system {
+  color: inherit;
+  transform: translateY(3rem);
+}
 
-  svg {
-    pointer-events: none;
-    display: flex;
-    transition: transform 800ms cubic-bezier(0.3, 0, 0.3, 1);
-  }
+:global([data-theme='system'] .system),
+:global([data-theme='system-light'] .system) {
+  transform: translateX(0);
+}
 
-  .system {
-    color: inherit;
-    transform: translateY(3rem);
-  }
+.sun {
+  color: orangered;
+  transform: rotate(180deg);
+  transform-origin: 50% 3rem;
+}
 
-  :global([data-theme='system'] .system),
-  :global([data-theme='system-light'] .system) {
-    transform: translateX(0);
-  }
+:global([data-theme='light'] .sun) {
+  transform: rotate(0deg);
+}
 
-  .sun {
-    color: orangered;
-    transform: rotate(180deg);
-    transform-origin: 50% 3rem;
-  }
+.moon {
+  color: orange;
+  transform: rotate(90deg);
+  transform-origin: 50% -3rem;
+}
 
-  :global([data-theme='light'] .sun) {
-    transform: rotate(0deg);
-  }
-
-  .moon {
-    color: orange;
-    transform: rotate(90deg);
-    transform-origin: 50% -3rem;
-  }
-
-  :global([data-theme='dark'] .moon) {
-    transform: rotate(0deg);
-  }
+:global([data-theme='dark'] .moon) {
+  transform: rotate(0deg);
+}
 </style>

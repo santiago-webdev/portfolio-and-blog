@@ -1,12 +1,12 @@
 <script lang="ts">
-  import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
-  import {
-    currentGroupOfProjects,
-    jobSelector,
-    getCategoryInfo,
-    FilteredProjects
-  } from '$lib/components/projects/store';
-  import { retrieve_icon } from '$lib/utils/utils';
+import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
+import {
+  currentGroupOfProjects,
+  jobSelector,
+  getCategoryInfo,
+  FilteredProjects
+} from '$lib/components/projects/store';
+import { retrieve_icon } from '$lib/utils/utils';
 </script>
 
 <main>
@@ -88,7 +88,9 @@
               </a>
               <ul class="inline-items">
                 {#each category as tags}
-                  <li class="tpl font-20">{getCategoryInfo(tags).label}</li>
+                  <li class="tpl font-20">
+                    {getCategoryInfo(tags).label}
+                  </li>
                 {/each}
               </ul>
             </div>
@@ -140,10 +142,8 @@
             <ShapeButton
               target="_blank"
               custom_symbol="mdi:github"
-              href={repo.toString()}
+              href={repo.toString()}>Source Code</ShapeButton
             >
-              Source Code
-            </ShapeButton>
             <ShapeButton class="reverse" href={link.toString()}
               >Case Study</ShapeButton
             >
@@ -175,226 +175,226 @@
 </main>
 
 <style>
-  .wrapper-header {
-    border-bottom-right-radius: 1.6rem;
-    border-bottom-left-radius: 1.6rem;
-    padding-bottom: 1.4rem;
-    padding-top: 1.8rem;
-    background-color: var(--clr-25);
-    display: flex;
-    place-items: center;
-  }
+.wrapper-header {
+  border-bottom-right-radius: 1.6rem;
+  border-bottom-left-radius: 1.6rem;
+  padding-bottom: 1.4rem;
+  padding-top: 1.8rem;
+  background-color: var(--clr-25);
+  display: flex;
+  place-items: center;
+}
 
+.wrapper-header header {
+  display: flex;
+  flex-direction: column;
+  width: min(92%, var(--base));
+  margin-inline: auto;
+  place-content: center;
+  gap: 2.6rem;
+}
+
+hgroup {
+  flex: 6;
+  display: grid;
+  gap: 1rem;
+}
+
+hgroup h1 {
+  color: var(--clr-300);
+}
+
+hgroup span {
+  font-weight: 800;
+  font-variation-settings: 'wght' 800;
+  color: var(--clr-150);
+}
+
+hgroup p {
+  color: var(--clr-200);
+}
+
+form {
+  flex: 4;
+  display: flex;
+  flex-flow: column wrap;
+  place-content: center;
+  gap: 1rem;
+}
+
+label {
+  margin-inline: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper-select {
+  --bg: var(--clr-40);
+  --brd: var(--clr-45);
+  padding: 0.6rem 1.6rem;
+  border-radius: 1rem;
+}
+
+select {
+  width: 100%;
+  color: var(--clr-150);
+  background-color: inherit;
+  border: none;
+}
+
+section {
+  padding-top: 2.8rem;
+  margin-inline: auto;
+  width: min(96%, var(--lg));
+  display: grid;
+  gap: 1.6rem;
+}
+
+article {
+  --bg: var(--clr-25);
+  --brd: var(--clr-30);
+  border-radius: 1.2rem;
+  display: flex;
+  flex-flow: column wrap;
+  gap: 2rem;
+  padding: 1.6rem;
+}
+
+a {
+  max-width: max-content;
+}
+
+[id^='describe-'] {
+  flex: 6;
+  gap: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  margin-top: 0.8rem;
+  color: var(--clr-150);
+  font-variation-settings: 'wght' 700;
+}
+
+article header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+[class^='list-project'] {
+  display: flex;
+  flex-direction: column;
+  gap: 1ch;
+}
+
+h4 {
+  color: var(--clr-90);
+  font-variation-settings: 'wght' 700;
+  min-width: 8ch;
+}
+
+.container-project-links {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+}
+
+@media screen and (min-width: 896px) {
   .wrapper-header header {
-    display: flex;
-    flex-direction: column;
-    width: min(92%, var(--base));
-    margin-inline: auto;
-    place-content: center;
-    gap: 2.6rem;
-  }
-
-  hgroup {
-    flex: 6;
-    display: grid;
-    gap: 1rem;
-  }
-
-  hgroup h1 {
-    color: var(--clr-300);
-  }
-
-  hgroup span {
-    font-weight: 800;
-    font-variation-settings: 'wght' 800;
-    color: var(--clr-150);
-  }
-
-  hgroup p {
-    color: var(--clr-200);
-  }
-
-  form {
-    flex: 4;
-    display: flex;
-    flex-flow: column wrap;
-    place-content: center;
-    gap: 1rem;
-  }
-
-  label {
-    margin-inline: 1.6rem;
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .wrapper-select {
-    --bg: var(--clr-40);
-    --brd: var(--clr-45);
-    padding: 0.6rem 1.6rem;
-    border-radius: 1rem;
-  }
-
-  select {
-    width: 100%;
-    color: var(--clr-150);
-    background-color: inherit;
-    border: none;
-  }
-
-  section {
-    padding-top: 2.8rem;
-    margin-inline: auto;
-    width: min(96%, var(--lg));
-    display: grid;
-    gap: 1.6rem;
+    flex-direction: row;
+    padding: 6rem 0;
   }
 
   article {
-    --bg: var(--clr-25);
-    --brd: var(--clr-30);
-    border-radius: 1.2rem;
-    display: flex;
-    flex-flow: column wrap;
-    gap: 2rem;
-    padding: 1.6rem;
+    flex-direction: row;
   }
+}
 
-  a {
-    max-width: max-content;
-  }
-
-  [id^='describe-'] {
-    flex: 6;
-    gap: 1rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  h3 {
-    margin-top: 0.8rem;
-    color: var(--clr-150);
-    font-variation-settings: 'wght' 700;
-  }
-
-  article header {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
+@media screen and (min-width: 1200px) {
+  .container-project-links {
+    flex-flow: row wrap;
   }
 
   [class^='list-project'] {
-    display: flex;
-    flex-direction: column;
-    gap: 1ch;
-  }
-
-  h4 {
-    color: var(--clr-90);
-    font-variation-settings: 'wght' 700;
-    min-width: 8ch;
-  }
-
-  .container-project-links {
-    margin-top: 1.6rem;
-    display: flex;
-    flex-flow: column nowrap;
-    gap: 1rem;
-  }
-
-  @media screen and (min-width: 896px) {
-    .wrapper-header header {
-      flex-direction: row;
-      padding: 6rem 0;
-    }
-
-    article {
-      flex-direction: row;
-    }
-  }
-
-  @media screen and (min-width: 1200px) {
-    .container-project-links {
-      flex-flow: row wrap;
-    }
-
-    [class^='list-project'] {
-      flex-direction: row;
-      place-items: center;
-    }
-  }
-
-  li {
-    --bg: var(--clr-40);
-    --brd: var(--clr-45);
-    border-radius: 0.6rem;
-    padding: 0.3rem 0.9rem;
-    display: flex;
-    gap: 1ch;
-  }
-
-  .img-wrapper {
-    height: auto;
-    aspect-ratio: 16/10;
-    flex: 5;
-    overflow-y: scroll;
-    border: 3px solid var(--clr-50);
-    border-radius: 0.8rem;
-  }
-
-  .artifact-browser {
-    display: flex;
+    flex-direction: row;
     place-items: center;
-    padding: 0.2rem;
-    padding-right: 0.8rem;
-    background: var(--clr-60);
   }
+}
 
-  .artifact-buttons {
-    display: flex;
-    padding: 0.4rem;
-  }
+li {
+  --bg: var(--clr-40);
+  --brd: var(--clr-45);
+  border-radius: 0.6rem;
+  padding: 0.3rem 0.9rem;
+  display: flex;
+  gap: 1ch;
+}
 
-  .artifact-link {
-    overflow-x: auto;
-    padding: 0.2rem 1rem;
-    width: 100%;
-    background: var(--clr-50);
-    border-radius: 6px;
-    display: grid;
-  }
+.img-wrapper {
+  height: auto;
+  aspect-ratio: 16/10;
+  flex: 5;
+  overflow-y: scroll;
+  border: 3px solid var(--clr-50);
+  border-radius: 0.8rem;
+}
 
-  img {
-    max-inline-size: 100%;
-    block-size: auto;
-  }
+.artifact-browser {
+  display: flex;
+  place-items: center;
+  padding: 0.2rem;
+  padding-right: 0.8rem;
+  background: var(--clr-60);
+}
 
-  span {
-    font-variation-settings: 'wght' 500;
-  }
+.artifact-buttons {
+  display: flex;
+  padding: 0.4rem;
+}
 
-  button {
-    min-width: min(100%, var(--xs));
-    height: auto;
-    cursor: pointer;
-    flex: 5;
-    aspect-ratio: 16/10;
-    border: 3px dashed var(--clr-50);
-    display: flex;
-    place-items: center;
-    place-content: center;
-  }
+.artifact-link {
+  overflow-x: auto;
+  padding: 0.2rem 1rem;
+  width: 100%;
+  background: var(--clr-50);
+  border-radius: 6px;
+  display: grid;
+}
 
-  button:hover {
-    border: 3px dashed var(--clr-55);
-    background-color: var(--clr-30);
-  }
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+}
 
-  [icon='lucide:plus'] {
-    color: var(--clr-95);
-  }
+span {
+  font-variation-settings: 'wght' 500;
+}
 
-  button:hover [icon='lucide:plus'] {
-    color: var(--clr-200);
-  }
+button {
+  min-width: min(100%, var(--xs));
+  height: auto;
+  cursor: pointer;
+  flex: 5;
+  aspect-ratio: 16/10;
+  border: 3px dashed var(--clr-50);
+  display: flex;
+  place-items: center;
+  place-content: center;
+}
+
+button:hover {
+  border: 3px dashed var(--clr-55);
+  background-color: var(--clr-30);
+}
+
+[icon='lucide:plus'] {
+  color: var(--clr-95);
+}
+
+button:hover [icon='lucide:plus'] {
+  color: var(--clr-200);
+}
 </style>

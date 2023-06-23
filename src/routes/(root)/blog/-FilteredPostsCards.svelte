@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { readableDate, relativeTime, retrieve_icon } from '$lib/utils/utils';
-  import { FilteredPosts } from '$lib/components/blog/store';
-  // import { fly } from 'svelte/transition';
-  //
-  // var fly_in = { y: 50, duration: 200 };
-  // var fly_out = { y: -50, duration: 200 };
+import { readableDate, relativeTime, retrieve_icon } from '$lib/utils/utils';
+import { FilteredPosts } from '$lib/components/blog/store';
+// import { fly } from 'svelte/transition';
+//
+// var fly_in = { y: 50, duration: 200 };
+// var fly_out = { y: -50, duration: 200 };
 </script>
 
 <section role="complementary">
@@ -72,98 +72,97 @@
 </section>
 
 <style>
+ul {
+  padding: 2rem 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(23rem, 100%), 1fr));
+  margin-inline: auto;
+  width: min(92%, var(--md));
+}
+
+li {
+  transition: opacity 0.3s;
+}
+
+ul:hover > li {
+  opacity: 0.8;
+}
+
+ul:hover > li:hover {
+  opacity: 1;
+}
+
+@supports (grid-template-rows: masonry) {
   ul {
-    padding: 2rem 0;
-    display: grid;
-    gap: 1rem;
-    grid-template-columns: repeat(auto-fill, minmax(min(23rem, 100%), 1fr));
-    margin-inline: auto;
-    width: min(92%, var(--md));
+    grid-template-rows: masonry;
   }
+}
 
-  li {
-    transition: opacity 0.3s;
+article {
+  --bg: var(--clr-25);
+  --brd: var(--clr-30);
+  display: grid;
+  place-items: start;
+  grid-template-rows: auto 1fr auto auto;
+
+  padding: 1rem;
+  border-radius: 1.1rem;
+  height: 100%;
+  transition: transform 100ms, color 100ms, background-color 500ms, border 100ms;
+}
+
+article p {
+  color: var(--clr-200);
+}
+
+article > * + * {
+  margin-block-start: 1em;
+}
+
+@media screen and (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  article:hover {
+    transform: scale(1.02);
   }
+}
 
-  ul:hover > li {
-    opacity: 0.8;
-  }
+h2 {
+  font-family: var(--ff-dflt);
+  font-variation-settings: 'wght' 750;
+  font-weight: 500;
+}
 
-  ul:hover > li:hover {
-    opacity: 1;
-  }
+p {
+  font-variation-settings: 'wght' 400;
+  font-weight: 400;
+}
 
-  @supports (grid-template-rows: masonry) {
-    ul {
-      grid-template-rows: masonry;
-    }
-  }
+time {
+  place-content: center;
+}
 
-  article {
-    --bg: var(--clr-25);
-    --brd: var(--clr-30);
-    display: grid;
-    place-items: start;
-    grid-template-rows: auto 1fr auto auto;
+.tags {
+  --bg: var(--clr-35);
+  --brd: var(--clr-40);
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 2rem;
+}
 
-    padding: 1rem;
-    border-radius: 1.1rem;
-    height: 100%;
-    transition: transform 100ms, color 100ms, background-color 500ms,
-      border 100ms;
-  }
+.tags li {
+  --bg: var(--clr-40);
+  --brd: var(--clr-45);
+  color: var(--clr-200);
 
-  article p {
-    color: var(--clr-200);
-  }
-
-  article > * + * {
-    margin-block-start: 1em;
-  }
-
-  @media screen and (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
-    article:hover {
-      transform: scale(1.02);
-    }
-  }
-
-  h2 {
-    font-family: var(--ff-dflt);
-    font-variation-settings: 'wght' 750;
-    font-weight: 500;
-  }
-
-  p {
-    font-variation-settings: 'wght' 400;
-    font-weight: 400;
-  }
-
-  time {
-    place-content: center;
-  }
-
-  .tags {
-    --bg: var(--clr-35);
-    --brd: var(--clr-40);
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-    margin-top: 2rem;
-  }
-
-  .tags li {
-    --bg: var(--clr-40);
-    --brd: var(--clr-45);
-    color: var(--clr-200);
-
-    display: flex;
-    place-items: center;
-    padding: 0.3rem 0.8rem;
-    /* margin-top: 0.6rem; */
-    gap: 0.5ch;
-    /* padding: 0.4rem 0.8rem; */
-    border-radius: 0.75rem;
-  }
+  display: flex;
+  place-items: center;
+  padding: 0.3rem 0.8rem;
+  /* margin-top: 0.6rem; */
+  gap: 0.5ch;
+  /* padding: 0.4rem 0.8rem; */
+  border-radius: 0.75rem;
+}
 </style>

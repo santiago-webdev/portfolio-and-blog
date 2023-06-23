@@ -1,19 +1,19 @@
 <script lang="ts">
-  import { debounce } from '$lib/utils/utils';
-  import { onMount } from 'svelte';
+import { debounce } from '$lib/utils/utils';
+import { onMount } from 'svelte';
 
-  let scrollY = 0,
-    innerHeight = 0,
-    visibility = 'hidden';
+let scrollY = 0,
+  innerHeight = 0,
+  visibility = 'hidden';
 
-  const toggleComponent = () =>
-    (visibility = window.scrollY > window.innerHeight ? 'visible' : 'hidden');
-  onMount(() =>
-    window.addEventListener('scroll', debounce(toggleComponent, 30), {
-      passive: true,
-      capture: true
-    })
-  );
+const toggleComponent = () =>
+  (visibility = window.scrollY > window.innerHeight ? 'visible' : 'hidden');
+onMount(() =>
+  window.addEventListener('scroll', debounce(toggleComponent, 30), {
+    passive: true,
+    capture: true
+  })
+);
 </script>
 
 <svelte:window bind:scrollY bind:innerHeight />
@@ -46,18 +46,18 @@
 </section>
 
 <style>
-  section {
-    position: sticky;
-    bottom: 1rem;
-    margin-top: 1rem;
-    width: min(92%, var(--xl));
-    justify-content: flex-end;
-    display: flex;
-  }
+section {
+  position: sticky;
+  bottom: 1rem;
+  margin-top: 1rem;
+  width: min(92%, var(--xl));
+  justify-content: flex-end;
+  display: flex;
+}
 
-  a {
-    border-radius: 999rem;
-    padding: 1rem;
-    border-width: 1px;
-  }
+a {
+  border-radius: 999rem;
+  padding: 1rem;
+  border-width: 1px;
+}
 </style>

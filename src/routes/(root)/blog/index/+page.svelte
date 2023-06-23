@@ -1,7 +1,7 @@
 <script lang="ts">
-  import { base } from '$app/paths';
-  import { Posts } from '$lib/components/blog/store';
-  import LinkArrow from '$lib/components/navigation/LinkArrow.svelte';
+import { base } from '$app/paths';
+import { Posts } from '$lib/components/blog/store';
+import LinkArrow from '$lib/components/navigation/LinkArrow.svelte';
 </script>
 
 <main>
@@ -24,33 +24,33 @@
 </main>
 
 <style>
-  header {
-    border-bottom-right-radius: 1.6rem;
-    border-bottom-left-radius: 1.6rem;
-    padding-bottom: 1.4rem;
-    margin-bottom: 1.4rem;
-    background: var(--clr-25);
-  }
+header {
+  border-bottom-right-radius: 1.6rem;
+  border-bottom-left-radius: 1.6rem;
+  padding-bottom: 1.4rem;
+  margin-bottom: 1.4rem;
+  background: var(--clr-25);
+}
 
-  .wrapper-index {
-    width: min(100% - 2.2rem, var(--base));
-    text-align: center;
-    margin-inline: auto;
-  }
+.wrapper-index {
+  width: min(100% - 2.2rem, var(--base));
+  text-align: center;
+  margin-inline: auto;
+}
 
-  .wrapper-index > * + * {
-    margin-block-start: 1em;
-  }
+.wrapper-index > * + * {
+  margin-block-start: 1em;
+}
 
-  ul {
-    width: min(100% - 2.2rem, var(--base));
-    margin-inline: auto;
-  }
+ul {
+  width: min(100% - 2.2rem, var(--base));
+  margin-inline: auto;
+}
 
-  .back-button {
-    margin-inline: auto;
-    width: min(100% - 2.2rem, var(--base));
-    padding-top: 0.8rem;
-    margin-bottom: 0.4rem;
-  }
+.back-button {
+  margin-inline: auto;
+  width: min(100% - 2.2rem, var(--base));
+  padding-top: 0.8rem;
+  margin-bottom: 0.4rem;
+}
 </style>

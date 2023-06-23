@@ -11,7 +11,11 @@ export const load = ({
   url
 }: {
   url: URL;
-}): { pathname: string; title: string; description: string } => {
+}): {
+  pathname: string;
+  title: string;
+  description: string;
+} => {
   const { pathname } = url;
 
   let title = '';
