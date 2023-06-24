@@ -222,6 +222,7 @@ header span {
 
 .navigation-items {
   display: flex;
+  place-items: center;
   gap: 0.8rem;
 }
 

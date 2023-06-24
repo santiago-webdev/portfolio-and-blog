@@ -44,6 +44,7 @@ const clickOutside = (modal: HTMLDialogElement) =>
   aria-keyshortcuts="Control+K"
   aria-label="Click to open and search"
   on:click={toggleModal}
+  class="tpl"
 >
   <span class="font-20">&nbsp;&nbsp</span>
   <svg
@@ -66,10 +67,11 @@ const clickOutside = (modal: HTMLDialogElement) =>
   <kbd class="font-20">Ctrl K</kbd>
 </button>
 <dialog
+  class="tpl"
   aria-modal
   use:clickOutside
-  on:close={() => (value = '')}
-  on:cancel={() => (value = '')}
+  on:close={() => ((value = ''), (document.body.style.overflow = ''))}
+  on:cancel={() => ((value = ''), (document.body.style.overflow = ''))}
   bind:this={modal}
 >
   <form on:submit|preventDefault={handleSubmit}>
@@ -148,7 +150,7 @@ button {
   display: flex;
   gap: 0.4rem;
   place-items: center;
-  border-radius: 1rem;
+  border-radius: 999rem;
 }
 
 button span,
@@ -158,16 +160,11 @@ button kbd {
 
 @media (hover: hover) {
   button:not(dialog button) {
-    --background: var(--clr-40);
-    --border: var(--clr-45);
-    background-color: var(--background);
-    border: 1px solid var(--background);
-    border-top-color: var(--border);
-    border-left-color: var(--border);
-    box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
+    --bg: var(--clr-40);
+    --brd: var(--clr-45);
 
     display: flex;
-    padding: 0.4rem 0.8rem;
+    padding: 0.3rem 0.8rem;
   }
 
   button span,
@@ -190,16 +187,12 @@ kbd {
 
 :modal > * {
   font-size: inherit;
-  padding: 1rem;
+  padding: 0.8rem;
 }
 
 :modal {
-  --background: var(--clr-35);
-  --border: var(--clr-45);
-  background-color: var(--background);
-  border: 1px solid var(--background);
-  border-top-color: var(--border);
-  border-left-color: var(--border);
+  --bg: var(--clr-35);
+  --brd: var(--clr-45);
 
   padding: 0;
   margin: 0;
@@ -221,7 +214,7 @@ kbd {
     min-height: 0;
     width: min(100% - 1rem, var(--sm));
     margin-inline: auto;
-    border-radius: 0.8rem;
+    border-radius: 1.2rem;
   }
 
   :modal::backdrop {
@@ -263,7 +256,7 @@ input {
 
 input,
 form {
-  color: var(--clr-250);
+  color: var(--clr-200);
 }
 
 ul:empty {
