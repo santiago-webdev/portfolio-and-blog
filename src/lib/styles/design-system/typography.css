@@ -140,7 +140,6 @@ h4 {
 a,
 button,
 h6,
-p,
 table,
 tbody,
 td,
@@ -148,6 +147,10 @@ th,
 thead,
 tr {
   color: inherit;
+}
+
+p {
+  color: var(--clr-inv-800);
 }
 
 h1,
@@ -164,8 +167,8 @@ h2,
 h4,
 .font-40 {
   font-size: var(--fs-400);
-  font-variation-settings: 'wght' 500;
-  font-weight: 500;
+  font-variation-settings: 'wght' 400;
+  font-weight: 400;
   line-height: calc(var(--fs-400) * 1.3);
 }
 
