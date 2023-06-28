@@ -256,7 +256,7 @@ input {
 
 input,
 form {
-  color: var(--clr-200);
+  color: var(--clr-inv-200);
 }
 
 ul:empty {
@@ -273,15 +273,15 @@ article {
 }
 
 h3 {
-  color: var(--clr-250);
+  color: var(--clr-inv-300);
 }
 
 p {
-  color: var(--clr-200);
+  color: var(--clr-inv-200);
 }
 
 time {
-  color: var(--clr-150);
+  color: var(--clr-inv-150);
 }
 
 a {

@@ -116,10 +116,6 @@ article {
   transition: transform 100ms, color 100ms, background-color 500ms, border 100ms;
 }
 
-article p {
-  color: var(--clr-200);
-}
-
 article > * + * {
   margin-block-start: 1em;
 }
@@ -148,7 +144,7 @@ time {
 small {
   --bg: var(--clr-15);
   --brd: var(--clr-15);
-  color: var(--clr-200);
+  color: var(--clr-inv-700);
   padding: 0.4rem;
   border-radius: 8px;
 }
@@ -167,7 +163,6 @@ small {
 .tags li {
   --bg: var(--clr-40);
   --brd: var(--clr-45);
-  color: var(--clr-200);
 
   display: flex;
   place-items: center;

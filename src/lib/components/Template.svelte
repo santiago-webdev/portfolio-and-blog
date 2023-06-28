@@ -49,7 +49,7 @@ if (title) {
       <hgroup>
         {#if isHollow}
           <h1 class="font-90">
-            <Hollow color={'var(--clr-250)'}>{hollowPrefix}</Hollow>
+            <Hollow color={'var(--clr-inv-800)'}>{hollowPrefix}</Hollow>
             {fillSuffix}
           </h1>
         {:else}

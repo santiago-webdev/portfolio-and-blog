@@ -9,7 +9,7 @@ html {
   color-scheme: light dark;
   font-family: var(--ff-text);
   background-color: var(--clr-10);
-  color: var(--clr-250);
+  color: var(--clr-inv-700);
 }
 
 address {
@@ -21,7 +21,7 @@ ul {
 }
 
 button[disabled] {
-  color: var(--clr-100);
+  color: var(--clr-inv-300);
 }
 
 p code,
@@ -37,7 +37,7 @@ li code {
 
   background: var(--clr-35);
   border: 1px var(--clr-50) solid;
-  color: var(--clr-300);
+  color: var(--clr-inv-800);
   padding: 0.05rem 0.1rem;
   border-radius: 6px;
 
@@ -72,7 +72,7 @@ li code {
   border-top-color: var(--border);
   border-left-color: var(--border);
   box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
-  color: var(--clr-200);
+  color: var(--clr-inv-200);
 
   border-radius: var(--radius);
   transition: background-color 50ms, border 80ms, box-shadow 300ms;
@@ -110,7 +110,7 @@ input[type='radio']:checked + .shiny-select:active,
 input[type='radio']:checked + .shiny-select {
   --background: var(--clr-15);
   --border: var(--clr-60);
-  --color: var(--clr-100);
+  --color: var(--clr-inv-100);
   background-color: var(--background);
   border: 1px solid var(--border);
   font-variation-settings: 'wght' 500;
@@ -123,7 +123,7 @@ input[type='radio']:checked + .shiny-select {
   .shiny-select:not(ul.shiny-select):hover {
     --background: var(--clr-55);
     --border: var(--clr-60);
-    color: var(--clr-200);
+    color: var(--clr-inv-200);
     background-color: var(--background);
     border: 1px solid var(--background);
     border-left-color: var(--border);
@@ -149,20 +149,23 @@ input[type='radio']:checked + .shiny-select {
 }
 
 .reverse {
-  --bg: var(--clr-250);
-  --brd: var(--clr-300);
-  color: var(--clr-10);
+  --bg: var(--clr-inv-800);
+  --brd: var(--clr-inv-900);
+  color: black;
 }
 
 @media (hover: hover) {
+  .defaults:focus-within,
   .defaults:hover {
     --bg: var(--clr-55);
     --brd: var(--clr-60);
   }
 
+  .reverse:focus-within,
   .reverse:hover {
-    --bg: var(--clr-200);
-    --brd: var(--clr-250);
+    --bg: var(--clr-80);
+    --brd: var(--clr-90);
+    color: var(--clr-inv-900);
   }
 }
 

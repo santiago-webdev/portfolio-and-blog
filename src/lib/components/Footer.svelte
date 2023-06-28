@@ -187,7 +187,7 @@ footer {
 }
 
 footer :is(a, small) {
-  color: var(--clr-200);
+  /* color: var(--clr-200); */
   display: flex;
   gap: 0.4ch;
   place-items: center;
@@ -230,7 +230,7 @@ header h3:not(.aboutme h3) {
 }
 
 .aboutme p {
-  color: var(--clr-100);
+  color: var(--clr-inv-500);
 }
 
 .aboutme:after {
@@ -311,15 +311,11 @@ nav {
 section {
   display: flex;
   place-content: center;
-  background-color: var(--clr-40);
-}
-
-h3 {
-  color: var(--clr-250);
+  background: var(--clr-40);
 }
 
 section :is(small, a) {
-  color: var(--clr-250);
+  color: var(--clr-inv-800);
   font-variation-settings: 'wght' 530;
   font-family: var(--ff-dflt);
   font-size: inherit;

@@ -153,7 +153,7 @@ img {
 }
 
 #technologies p {
-  color: var(--clr-200);
+  color: var(--clr-inv-200);
 }
 
 #technologies > * + * {
@@ -172,7 +172,7 @@ li {
   border-top-color: var(--border);
   border-left-color: var(--border);
   box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.15);
-  color: var(--clr-200);
+  color: var(--clr-inv-200);
 
   display: flex;
   gap: 0.6ch;

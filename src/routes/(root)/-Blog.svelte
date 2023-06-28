@@ -13,7 +13,7 @@ function getPic(id: number) {
 <div id="mention-blog">
   <div class="wrapper">
     <div class="intro">
-      <h2 style:color="var(--clr-200)">Blog articles</h2>
+      <h2>Blog articles</h2>
       <div class="goto-blog">
         <p>
           Press <kbd aria-keyshortcuts="Control+K">Ctrl K</kbd> or
@@ -44,7 +44,7 @@ function getPic(id: number) {
                 No date provided
               </small>
             {/if}
-            <h3 style:color="var(--clr-250)">{title}</h3>
+            <h3>{title}</h3>
           </article>
         </a>
       {/each}
@@ -118,7 +118,6 @@ time {
   display: flex;
   flex-flow: row wrap;
   place-items: center;
-  color: var(--clr-100);
 }
 
 section a:nth-child(3) {

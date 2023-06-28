@@ -6,7 +6,7 @@ import { FilteredProjects } from '$lib/components/projects/store';
 <div class="wrapper-portfolio">
   <div id="portfolio" class="portfolio">
     <section>
-      <h2 class="font-60">My work</h2>
+      <h2>My work</h2>
       <p>
         I've contributed to FOSS as well as created some projects of my own. You
         can find all of my projects
@@ -61,7 +61,7 @@ import { FilteredProjects } from '$lib/components/projects/store';
 
 <style>
 .wrapper-portfolio {
-  background-color: var(--clr-05);
+  background: var(--clr-05);
 }
 
 .portfolio {
@@ -90,7 +90,7 @@ section > * + * {
 }
 
 section p {
-  color: var(--clr-80);
+  color: var(--clr-inv-500);
   max-width: 38ch;
 }
 
@@ -139,11 +139,11 @@ li:first-child {
 }
 
 li:first-child h3 {
-  color: var(--clr-300);
+  color: white;
 }
 
 li:first-child p {
-  color: var(--clr-200);
+  color: var(--clr-inv-800);
 }
 
 li:nth-child(2) {
@@ -152,11 +152,11 @@ li:nth-child(2) {
 }
 
 li:nth-child(2) h3 {
-  color: var(--clr-250);
+  color: var(--clr-inv-900);
 }
 
 li:nth-child(2) p {
-  color: var(--clr-200);
+  color: var(--clr-inv-700);
 }
 
 li:last-child {
@@ -165,11 +165,11 @@ li:last-child {
 }
 
 li:last-child h3 {
-  color: var(--clr-250);
+  color: var(--clr-inv-800);
 }
 
 li:last-child p {
-  color: var(--clr-150);
+  color: var(--clr-inv-600);
 }
 
 @media (hover: hover) {
