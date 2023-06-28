@@ -158,7 +158,7 @@ header {
 }
 
 a {
-  color: inherit;
+  color: var(--clr-inv-800);
 }
 
 header.expanded {

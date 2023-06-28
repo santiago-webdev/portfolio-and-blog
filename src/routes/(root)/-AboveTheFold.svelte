@@ -66,7 +66,6 @@ h1 {
 
 p {
   max-width: 38ch;
-  color: var(--clr-inv-700);
 }
 
 section {
