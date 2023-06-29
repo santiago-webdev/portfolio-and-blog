@@ -60,7 +60,7 @@ onMount(() => {
 
 <button
   on:click={click}
-  class="shiny"
+  class="tpl"
   aria-label="Theme switcher, current theme is {theme}"
   title="Theme switcher: Switch between a dark or light theme, or leave it to the system to decide"
 >
@@ -119,25 +119,16 @@ onMount(() => {
 
 <style>
 button {
+  --bg: var(--clr-40);
+  --brd: var(--clr-45);
   overflow: hidden;
   display: flex;
   flex-flow: row;
   place-content: center;
-  padding: 0.4rem 0.8rem;
-  border-radius: 1rem;
+  padding: 0.2rem 0.8rem;
+  border-radius: 9999rem;
   gap: 0.4rem;
   color: inherit;
-
-  box-shadow: 3px 6px 12px 4px rgba(0, 0, 0, 0.1);
-  --background: var(--clr-45);
-  --border: var(--clr-50);
-  background-color: var(--background);
-  border-bottom-color: var(--background);
-  border-right-color: var(--background);
-  border-top-color: var(--border);
-  border-left-color: var(--border);
-  border-style: solid;
-  border-width: 1px 2px;
 }
 
 @media screen and (min-width: 1280px) {
@@ -146,8 +137,7 @@ button {
   }
 
   button {
-    padding: 0.36rem;
-    border-radius: 100%;
+    padding: 0.42rem;
   }
 }
 

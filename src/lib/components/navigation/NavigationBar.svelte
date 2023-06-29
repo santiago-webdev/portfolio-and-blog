@@ -48,6 +48,7 @@ $: {
       <button
         aria-label="Click or tap to {expanded ? 'close' : 'open'} the menu"
         aria-expanded={expanded}
+        class="tpl"
         on:click={() => (expanded = !expanded)}
       >
         {#if expanded}
@@ -130,7 +131,7 @@ $: {
           {:else}
             <a
               data-sveltekit-preload-code="eager"
-              class="shiny-select"
+              class="selection"
               aria-current={$page.url.pathname.startsWith(href) && `/` !== href
                 ? 'page'
                 : undefined}
@@ -179,13 +180,25 @@ button {
   place-content: center;
 }
 
+a.bordered {
+  border: 2px var(--clr-60) solid;
+  border-radius: 1rem;
+}
+
+a.bordered:hover {
+  border-color: var(--clr-65);
+}
+
 button {
+  box-shadow: none;
   border-radius: 999rem;
   min-width: 3.5ch;
 }
 
 button[aria-expanded='true'] {
-  background: var(--clr-55);
+  --bg: var(--clr-50);
+  --brd: var(--clr-55);
+  box-shadow: var(--shadow);
 }
 
 .list-items {

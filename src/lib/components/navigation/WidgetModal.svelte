@@ -118,7 +118,7 @@ const clickOutside = (modal: HTMLDialogElement) =>
     {#each $FilteredPosts.slice(0, 4) as post}
       <hr aria-orientation="horizontal" />
       <li>
-        <a class="shiny-select" on:click={() => toggleModal()} href={post.href}>
+        <a class="selection" on:click={() => toggleModal()} href={post.href}>
           <article>
             <h3 class="font-30" style="font-weight: 499;">
               {post.title}
@@ -151,6 +151,7 @@ button {
   gap: 0.4rem;
   place-items: center;
   border-radius: 999rem;
+  box-shadow: none;
 }
 
 button span,
@@ -162,6 +163,7 @@ button kbd {
   button:not(dialog button) {
     --bg: var(--clr-40);
     --brd: var(--clr-45);
+    box-shadow: var(--shadow);
 
     display: flex;
     padding: 0.3rem 0.8rem;

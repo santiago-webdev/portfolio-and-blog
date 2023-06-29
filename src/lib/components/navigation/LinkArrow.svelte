@@ -27,7 +27,7 @@ export let defaults = false;
 <style>
 a {
   display: inline-flex;
-  color: var(--clr-90);
+  color: var(--clr-inv-600);
   transition: all 150ms ease-in-out;
   max-width: max-content;
   letter-spacing: -0.03em;

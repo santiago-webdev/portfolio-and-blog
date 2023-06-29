@@ -46,11 +46,12 @@ const donateItems = [
 
     <nav aria-label="footer-navigation">
       <h3 class="font-20">Sitemap</h3>
-      <ul class="shiny-select">
+      <ul>
         {#each $navigationItems as item}
           {#if item.label !== 'Separator'}
             <li>
               <a
+                class="selection"
                 aria-current={item.href === $page.url.pathname ||
                 ($page.url.pathname.startsWith(item.href || '') &&
                   `/` !== item.href)
@@ -67,26 +68,32 @@ const donateItems = [
 
     <div class="projects">
       <h3 class="font-20">Projects</h3>
-      <ul class="shiny-select">
+      <ul>
         <li>
-          <a target="_blank" href="https://zapzsh.org">Zap website</a>
+          <a class="selection" target="_blank" href="https://zapzsh.org"
+            >Zap website</a
+          >
         </li>
         <li>
-          <a target="_blank" href="https://zapzsh.org">Lorem website</a>
+          <a class="selection" target="_blank" href="https://zapzsh.org"
+            >Lorem website</a
+          >
         </li>
         <li>
-          <a target="_blank" href="https://zapzsh.org">Another website</a>
+          <a class="selection" target="_blank" href="https://zapzsh.org"
+            >Another website</a
+          >
         </li>
       </ul>
     </div>
 
     <div class="donate">
       <h3 class="font-20">Donate</h3>
-      <ul class="shiny-select">
+      <ul>
         {#each donateItems as item}
           <li>
             <address id="todo">
-              <a href="#todo">
+              <a href="#todo" class="selection">
                 <iconify-icon icon="simple-icons:{item.logo}" />
                 {item.name}
               </a>
@@ -108,20 +115,29 @@ const donateItems = [
 
     <div class="contact">
       <h3 class="font-20">Contact</h3>
-      <address class="shiny-select">
-        <a target="_blank" href="mailto:santiagogonzalezbogado@gmail.com">
+      <address>
+        <a
+          class="selection"
+          target="_blank"
+          href="mailto:santiagogonzalezbogado@gmail.com"
+        >
           <iconify-icon icon="lucide:mail" />
           Email me</a
         >
       </address>
-      <address class="shiny-select">
-        <a target="_blank" href="https://github.com/santigo-zero/">
+      <address>
+        <a
+          class="selection"
+          target="_blank"
+          href="https://github.com/santigo-zero/"
+        >
           <iconify-icon icon="simple-icons:github" />
           GitHub</a
         >
       </address>
-      <address class="shiny-select">
+      <address>
         <a
+          class="selection"
           target="_blank"
           href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/"
         >

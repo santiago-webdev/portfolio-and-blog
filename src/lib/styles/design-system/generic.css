@@ -35,6 +35,28 @@ ul.generic {
 }
 /* List items */
 
+a.selection {
+  --bg: transparent;
+  --brd: transparent;
+  background: var(--bg);
+  border-color: var(--brd) var(--bg) var(--bg) var(--brd);
+  border-width: 2px 1px;
+  border-style: solid;
+  border-radius: 16px;
+
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.6rem;
+}
+
+@media (hover: hover) {
+  a.selection:focus-visible,
+  a.selection:hover {
+    --bg: var(--clr-50);
+    --brd: var(--clr-55);
+    box-shadow: 3px 6px 12px 3px hsl(0 0% 0% / 0.1);
+  }
+}
+
 /* Links */
 a.link {
   display: inline-flex;

@@ -5,7 +5,8 @@
 @import url('./design-system/theme-light.css');
 
 html {
-  scroll-behavior: smooth; /* TODO(santigo-zero): Find a fix for bug in navigation */
+  /* TODO(santigo-zero): Find a fix for bug in navigation */
+  scroll-behavior: smooth;
   color-scheme: light dark;
   font-family: var(--ff-text);
   background-color: var(--clr-10);
@@ -14,10 +15,6 @@ html {
 
 address {
   font-style: normal;
-}
-
-ul {
-  padding: 0;
 }
 
 button[disabled] {
@@ -55,92 +52,16 @@ li code {
   content: url('/logo-light.svg');
 }
 
-.trn-border {
-  border: 1px solid transparent;
-}
-
-.bordered {
-  border: 2px var(--clr-60) solid;
-  border-radius: 1rem;
-}
-
-.shiny {
-  --background: var(--clr-40);
-  --border: var(--clr-45);
-  background-color: var(--background);
-  border: 1px solid var(--background);
-  border-top-color: var(--border);
-  border-left-color: var(--border);
-  box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
-  color: var(--clr-inv-200);
-
-  border-radius: var(--radius);
-  transition: background-color 50ms, border 80ms, box-shadow 300ms;
-
-  display: flex;
-  place-items: center;
-  padding: 0.4rem 0.8rem;
-  gap: 0.2rem;
-  border-radius: 999rem;
-
-  font-variation-settings: 'wght' 550;
-}
-
-.shiny.float {
-  box-shadow: 8px 8px 32px 0 rgba(0, 0, 0, 0.4);
-}
-
-@media (hover: hover) {
-  .shiny.hover:hover {
-    --background: var(--clr-40);
-    --border: var(--clr-50);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
-  }
-}
-
-ul.shiny-select li,
-.shiny-select:not(ul.shiny-select) {
-  border: 1px solid transparent;
-  padding: 0.3rem 0.6rem;
-  border-radius: 0.6rem;
-  color: var(--clr-95);
-}
-
-input[type='radio']:checked + .shiny-select:active,
-input[type='radio']:checked + .shiny-select {
-  --background: var(--clr-15);
-  --border: var(--clr-60);
-  --color: var(--clr-inv-100);
-  background-color: var(--background);
-  border: 1px solid var(--border);
-  font-variation-settings: 'wght' 500;
-  color: var(--color);
-}
-
-@media (hover: hover) {
-  input[type='radio']:hover + .shiny-select,
-  ul.shiny-select li:hover,
-  .shiny-select:not(ul.shiny-select):hover {
-    --background: var(--clr-55);
-    --border: var(--clr-60);
-    color: var(--clr-inv-200);
-    background-color: var(--background);
-    border: 1px solid var(--background);
-    border-left-color: var(--border);
-    border-top-color: var(--border);
-  }
-}
-
-/* TEMPLATE */
 .tpl {
   --bg: transparent;
   --brd: transparent;
+  --shadow: 3px 6px 12px 3px hsl(0 0% 0% / 0.1);
   background: var(--bg);
   border-color: var(--brd) var(--bg) var(--bg) var(--brd);
   border-width: 2px 1px;
   border-style: solid;
   border-radius: 16px;
-  box-shadow: 3px 6px 12px 3px hsl(0 0% 0% / 0.1);
+  box-shadow: var(--shadow);
 }
 
 .defaults {
@@ -169,13 +90,6 @@ input[type='radio']:checked + .shiny-select {
   }
 }
 
-.transparent {
-  --bg: transparent;
-  --brd: transparent;
-}
-/* TEMPLATE */
-
-/* PICK */
 :is(ol, ul).pick li a {
   --bg: transparent;
   --brd: transparent;
@@ -205,36 +119,6 @@ input[type='radio']:checked + .shiny-select {
   --brd: var(--clr-50);
   box-shadow: 3px 6px 12px 3px hsl(0 0% 0% / 0.1);
 }
-/* PICK */
-
-.block {
-  --background: var(--clr-10);
-  --border: var(--clr-40);
-  background-color: var(--background);
-  border: 1px solid var(--border);
-  box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1);
-
-  transition: background-color 50ms, border 80ms, box-shadow 300ms;
-
-  display: flex;
-  place-items: center;
-  padding: 0.4rem 0.8rem;
-  gap: 0.2rem;
-  border-radius: 0.8rem;
-}
-
-@media (hover: hover) {
-  .block.hover:hover {
-    --background: var(--clr-10);
-    --border: var(--clr-10);
-
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.25);
-  }
-}
-
-.bordered:hover {
-  --border: var(--clr-65);
-}
 
 [aria-current='page'] {
   text-decoration: underline var(--clr-purple-20) 2px;
@@ -247,7 +131,7 @@ input[type='radio']:checked + .shiny-select {
 }
 
 [aria-orientation='vertical'][role='separator']:empty {
-  border-left: 1px solid var(--clr-45);
+  border-left: 1px solid var(--clr-inv-100);
   height: 2rem;
 }
 
