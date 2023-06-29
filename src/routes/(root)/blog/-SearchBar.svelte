@@ -66,13 +66,7 @@ form {
   place-items: center;
   margin-inline: auto;
   position: relative;
-  width: min(92%, var(--sm));
-
-  /* background-color: var(--clr-40); */
-  /* border: 1px solid var(--clr-40); */
-  /* border-top-color: var(--clr-45); */
-  /* border-left-color: var(--clr-45); */
-  /* box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.1); */
+  width: min(100% - 2.2rem, var(--sm));
 
   transition: background-color 50ms, border 80ms, box-shadow 300ms;
 
@@ -114,13 +108,14 @@ input {
 
 input::placeholder,
 form button {
-  color: var(--clr-85);
+  color: var(--clr-inv-600);
 }
 
 input:focus::placeholder {
   color: transparent;
 }
 
+input,
 form:focus-within button {
   color: inherit;
   background-color: inherit;

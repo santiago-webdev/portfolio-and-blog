@@ -201,10 +201,13 @@ kbd {
 
   transition: background-color 50ms, border 80ms, box-shadow 300ms;
   font-variation-settings: 'wght' 500;
+
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
 }
 
 :modal::backdrop {
-  background-color: none;
+  background-color: unset;
 }
 
 @media screen and (min-width: 48rem) {
@@ -256,7 +259,7 @@ input {
 
 input,
 form {
-  color: var(--clr-inv-200);
+  color: var(--clr-inv-700);
 }
 
 ul:empty {
@@ -270,18 +273,6 @@ li {
 article {
   display: grid;
   gap: 0.4rem;
-}
-
-h3 {
-  color: var(--clr-inv-300);
-}
-
-p {
-  color: var(--clr-inv-200);
-}
-
-time {
-  color: var(--clr-inv-150);
 }
 
 a {
