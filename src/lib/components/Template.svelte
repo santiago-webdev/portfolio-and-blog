@@ -209,7 +209,7 @@ details {
   font-family: var(--ff-text);
   display: flex;
   gap: 2rem;
-  max-width: var(--base);
+  max-width: var(--sm);
   margin-inline: auto;
   padding: 0.4rem 0.8rem;
   text-align: left;
