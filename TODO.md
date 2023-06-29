@@ -14,10 +14,6 @@ Make it smooth and put it in the sidebar in the desktop
 For the search modal box, close it when using the back arrow in the browser. And
 also add keyboard navigation with arrow keys.
 
-## Fix intersiction observer for button to top and navigation
-
-It's not being updated to the current <main> after navigation, so it's ignored.
-
 ## Changes to layouts
 
 Blog cards should use role='presentation', and the hamburger menu should use
@@ -36,8 +32,6 @@ Approximately find time to read a blog
 ## Add a /uses route
 
 Plain list of two columns
-
-## Fix lists and tables in mdsvex
 
 ## Add browser-like window wrapping projects images
 

@@ -45,8 +45,8 @@ import { retrieve_icon } from '$lib/utils/utils';
   <section>
     {#each $FilteredProjects as { name, description, category, stack, img, repo, link, accent }}
       <article class="tpl">
-        <div class="img-wrapper">
-          <div class="artifact-browser">
+        <figure>
+          <figcaption>
             <div class="artifact-buttons">
               {#each [1, 2, 3] as _}
                 <svg
@@ -70,14 +70,14 @@ import { retrieve_icon } from '$lib/utils/utils';
                 rel="external">{link}</a
               >
             </div>
-          </div>
+          </figcaption>
           <img
             loading="lazy"
             src={img}
             alt="Screenshot of {name}"
             title="Screenshot of {name}"
           />
-        </div>
+        </figure>
         <div id="describe-{name}">
           <header>
             <div style:gap="2ch" class="inline-items">
@@ -329,7 +329,7 @@ li {
   gap: 1ch;
 }
 
-.img-wrapper {
+figure {
   height: auto;
   aspect-ratio: 16/10;
   flex: 5;
@@ -338,7 +338,7 @@ li {
   border-radius: 0.8rem;
 }
 
-.artifact-browser {
+figcaption {
   display: flex;
   place-items: center;
   padding: 0.2rem;
