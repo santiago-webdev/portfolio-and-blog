@@ -51,7 +51,7 @@ const tools = [
   <Experience />
 </div>
 <div id="technologies">
-  <h2 class="font-60">Technology I use &mdash;</h2>
+  <h2 class="font-60">Technology I use</h2>
   <p>
     These are some of the tools I had used in the past (but am not limited to):
   </p>
@@ -59,7 +59,7 @@ const tools = [
     <h3 class="font-30">Frameworks and metaframeworks:</h3>
     <ul class="inline-items">
       {#each frameworks as framework}
-        <li class="font-20">
+        <li class="font-20 tpl">
           <iconify-icon
             width="26"
             height="26"
@@ -74,7 +74,7 @@ const tools = [
     <h3 class="font-30">Databases:</h3>
     <ul class="inline-items">
       {#each databases as database}
-        <li class="font-20">
+        <li class="font-20 tpl">
           <iconify-icon
             width="26"
             height="26"
@@ -89,7 +89,7 @@ const tools = [
     <h3 class="font-30">Other tools:</h3>
     <ul class="inline-items">
       {#each tools as tool}
-        <li class="font-20">
+        <li class="font-20 tpl">
           <iconify-icon
             width="26"
             height="26"
@@ -152,12 +152,12 @@ img {
   padding: 3rem 0;
 }
 
-#technologies p {
-  color: var(--clr-inv-200);
-}
-
 #technologies > * + * {
   margin-block-start: 1.2em;
+}
+
+#technologies > :not(:first-child):not(:nth-child(2)) {
+  margin-block-start: 2em;
 }
 
 ul {
@@ -165,19 +165,12 @@ ul {
 }
 
 li {
-  --background: var(--clr-20);
-  --border: var(--clr-25);
-  background-color: var(--background);
-  border: 1px solid var(--background);
-  border-top-color: var(--border);
-  border-left-color: var(--border);
-  box-shadow: 0 4px 16px 0 rgba(0 0 0 / 0.15);
-  color: var(--clr-inv-200);
+  --bg: var(--clr-20);
+  --brd: var(--clr-25);
 
   display: flex;
-  gap: 0.6ch;
-  border-radius: 1.2rem;
-  padding: 0.7rem 1.2rem;
+  gap: 0.5ch;
+  padding: 0.6rem 1.2rem;
   place-content: center;
   place-items: center;
   bottom: 2px;

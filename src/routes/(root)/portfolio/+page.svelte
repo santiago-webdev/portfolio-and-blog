@@ -82,7 +82,7 @@ import { retrieve_icon } from '$lib/utils/utils';
           <header>
             <div style:gap="2ch" class="inline-items">
               <a href={link.toString()} target="_blank" class="font-40">
-                <span style:color="var({accent ? accent : '--clr-inv-200'})"
+                <span style:color="var({accent ? accent : '--clr-inv-600'})"
                   >{link.hostname.replace(/^www\./i, '')}</span
                 >
               </a>
@@ -158,7 +158,7 @@ import { retrieve_icon } from '$lib/utils/utils';
       <div id="describe-new-project">
         <header>
           <a href="#todo" target="_blank" class="font-40">
-            <span style:color="var(--clr-inv-200)">newdomain.com</span>
+            <span style:color="var(--clr-inv-700)">newdomain.com</span>
           </a>
           <h2 class="font-30">Takeaway Interview?</h2>
           <p>
@@ -200,18 +200,14 @@ hgroup {
   gap: 1rem;
 }
 
-hgroup h1 {
-  color: var(--clr-inv-300);
-}
-
 hgroup span {
   font-weight: 800;
   font-variation-settings: 'wght' 800;
-  color: var(--clr-inv-150);
+  color: var(--clr-inv-700);
 }
 
 hgroup p {
-  color: var(--clr-inv-200);
+  color: var(--clr-inv-600);
 }
 
 form {
@@ -237,7 +233,7 @@ label {
 
 select {
   width: 100%;
-  color: var(--clr-inv-150);
+  color: var(--clr-inv-700);
   background-color: inherit;
   border: none;
 }
