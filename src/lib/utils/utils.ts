@@ -111,6 +111,14 @@ export function retrieve_icon(symbol: string): string | undefined {
       return 'simple-icons:linux';
     case 'tooling':
       return 'lucide:wrench';
+    case 'life':
+      return 'lucide:leaf';
+    case 'language':
+      return 'lucide:languages';
+    case 'train':
+      return 'lucide:train';
+    case 'vault':
+      return 'fluent:vault-24-regular';
     default:
       return '';
   }

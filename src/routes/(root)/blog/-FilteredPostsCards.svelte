@@ -1,17 +1,16 @@
 <script lang="ts">
 import { readableDate, relativeTime, retrieve_icon } from '$lib/utils/utils';
 import { FilteredPosts } from '$lib/components/blog/store';
-// import { fly } from 'svelte/transition';
-//
-// let fly_in = { y: 50, duration: 200 };
-// let fly_out = { y: -50, duration: 200 };
+import { fly } from 'svelte/transition';
+
+let fly_in = { y: 50, duration: 200 };
+let fly_out = { y: -50, duration: 200 };
 </script>
 
 <section role="complementary">
   <ul>
     {#each $FilteredPosts as post}
-      <!-- <li in:fly={fly_in} out:fly={fly_out}> -->
-      <li>
+      <li in:fly={fly_in} out:fly={fly_out}>
         <a href={post.href}>
           <article class="tpl">
             <h2 class="font-30">
@@ -26,7 +25,18 @@ import { FilteredPosts } from '$lib/components/blog/store';
             {#if post.tags}
               <ul class="tags">
                 {#each post.tags as tag}
-                  <li class="tpl font-10">
+                  <li
+                    style:color={tag.toLowerCase() === 'vault'
+                      ? 'black'
+                      : 'inherit'}
+                    style:--bg={tag.toLowerCase() === 'vault'
+                      ? 'var(--clr-inv-800)'
+                      : 'var(--clr-40)'}
+                    style:--brd={tag.toLowerCase() === 'vault'
+                      ? 'var(--clr-inv-900)'
+                      : 'var(--clr-45)'}
+                    class="tpl defaults font-10"
+                  >
                     <iconify-icon
                       width="20"
                       height="20"
@@ -161,9 +171,6 @@ small {
 }
 
 .tags li {
-  --bg: var(--clr-40);
-  --brd: var(--clr-45);
-
   display: flex;
   place-items: center;
   padding: 0.3rem 0.8rem;

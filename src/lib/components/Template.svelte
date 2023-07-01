@@ -60,7 +60,16 @@ if (title) {
       {#if tags}
         <ul class="tags inline-items font-10">
           {#each tags as tag}
-            <li class="tpl">
+            <li
+              style:color={tag.toLowerCase() === 'vault' ? 'black' : 'inherit'}
+              style:--bg={tag.toLowerCase() === 'vault'
+                ? 'var(--clr-inv-800)'
+                : 'var(--clr-40)'}
+              style:--brd={tag.toLowerCase() === 'vault'
+                ? 'var(--clr-inv-900)'
+                : 'var(--clr-45)'}
+              class="tpl"
+            >
               <iconify-icon width="22" height="22" icon={retrieve_icon(tag)} />
               {tag}
             </li>
@@ -186,8 +195,6 @@ small {
 }
 
 .tags li {
-  --bg: var(--clr-40);
-  --brd: var(--clr-45);
   margin-top: 0.6rem;
   display: flex;
   place-items: center;
