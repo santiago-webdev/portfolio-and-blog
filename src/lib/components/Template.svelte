@@ -1,6 +1,15 @@
 <script context="module">
-import { img, ol, ul, li, table, a, p } from '$lib/mdsvex_components/index';
-export { img, ol, ul, li, table, a, p };
+import {
+  img,
+  ol,
+  ul,
+  li,
+  table,
+  a,
+  p,
+  blockquote
+} from '$lib/mdsvex_components/index';
+export { img, ol, ul, li, table, a, p, blockquote };
 </script>
 
 <script>
