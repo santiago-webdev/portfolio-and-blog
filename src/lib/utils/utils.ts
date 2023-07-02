@@ -109,6 +109,9 @@ export function retrieve_icon(symbol: string): string | undefined {
       return 'mdi:github';
     case 'linux':
       return 'simple-icons:linux';
+    case 'tailwind':
+    case 'tailwindcss':
+      return 'mdi:tailwind';
     case 'tooling':
     case 'tools':
       return 'lucide:wrench';
