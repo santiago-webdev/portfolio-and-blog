@@ -2,6 +2,7 @@
 import { retrieve_icon } from '$lib/utils/utils';
 import { base } from '$app/paths';
 import Experience from './-Experience.svelte';
+import ShapeAnchor from '$lib/components/navigation/ShapeAnchor.svelte';
 
 export let greeting = 'Hello, my name is Santiago.';
 
@@ -35,9 +36,8 @@ const tools = [
         to the web, but I'm also interested in Linux and CS in general.
       </p>
       <p>
-        You can follow my journey from <a
-          class="internal-link"
-          href="{base}/blog">the blog</a
+        You can follow my journey from <ShapeAnchor href="{base}/blog"
+          >the blog</ShapeAnchor
         >, where I'm trying to compile all of my knowledge to become an
         all-rounder web developer.
       </p>

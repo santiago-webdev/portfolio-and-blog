@@ -1,5 +1,6 @@
 <script>
 import { base } from '$app/paths';
+import ShapeAnchor from '$lib/components/navigation/ShapeAnchor.svelte';
 import { FilteredProjects } from '$lib/components/projects/store';
 </script>
 
@@ -10,7 +11,7 @@ import { FilteredProjects } from '$lib/components/projects/store';
       <p>
         I've contributed to FOSS as well as created some projects of my own. You
         can find all of my projects
-        <a class="internal-link" href="{base}/portfolio">tracked here</a>.
+        <ShapeAnchor href="{base}/portfolio">tracked here</ShapeAnchor>.
       </p>
     </section>
     <ol>

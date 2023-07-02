@@ -1,14 +1,7 @@
-<script lang="ts">
-export let href = '/';
+<script>
+import ShapeAnchor from '$lib/components/navigation/ShapeAnchor.svelte';
 </script>
 
-<a
-  class={href.startsWith('/') || href.startsWith('#')
-    ? 'internal-link'
-    : 'link'}
-  {href}
-  rel={href.startsWith('/') || href.startsWith('#') ? '' : 'external'}
-  target={href.startsWith('/') || href.startsWith('#') ? '' : '_blank'}
->
+<ShapeAnchor {...$$restProps}>
   <slot />
-</a>
+</ShapeAnchor>
