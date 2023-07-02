@@ -110,6 +110,7 @@ export function retrieve_icon(symbol: string): string | undefined {
     case 'linux':
       return 'simple-icons:linux';
     case 'tooling':
+    case 'tools':
       return 'lucide:wrench';
     case 'life':
       return 'lucide:leaf';
@@ -119,6 +120,9 @@ export function retrieve_icon(symbol: string): string | undefined {
       return 'lucide:train';
     case 'vault':
       return 'fluent:vault-24-regular';
+    case 'think':
+    case 'thinking':
+      return 'lucide:brain-circuit';
     default:
       return '';
   }
