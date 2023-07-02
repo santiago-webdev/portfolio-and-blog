@@ -19,7 +19,7 @@ ol.generic li.generic::before {
 /* Ordered lists */
 
 /* Unordered lists */
-ul.generic {
+ul.generic:not(:has(li input[type='checkbox'])) {
   list-style: disc inside;
 }
 /* Unordered lists */
