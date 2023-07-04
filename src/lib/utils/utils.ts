@@ -126,6 +126,8 @@ export function retrieve_icon(symbol: string): string | undefined {
     case 'think':
     case 'thinking':
       return 'lucide:brain-circuit';
+    case 'publish':
+      return 'lucide:newspaper';
     default:
       return '';
   }
