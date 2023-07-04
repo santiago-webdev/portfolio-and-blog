@@ -9,7 +9,7 @@ summary:
   format to Btrfs, mount to /mnt, and create the needed subvolumes
 ---
 
-# Introduction
+# How I use external drives
 
 Living in a third world country sometimes includes "loosing" your external
 drives, and I don't think anybody likes to have an anonymous source looking

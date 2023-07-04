@@ -2,7 +2,7 @@
 title: How this blog was built with SvelteKit
 datetime: 2023-06-18 14:20
 description: Learn the basis of dynamic routing in SvelteKit and MDsveX.
-tags: ['Publish', 'SvelteKit', 'TypeScript', 'CSS']
+tags: [Publish, SvelteKit, TypeScript, CSS]
 summary:
   We'll be using sveltekit to manage the frontend and mdsvex (or not) to write
   the blogs in markdown (plain text), we'll learn how to make use of dynamic
@@ -11,7 +11,6 @@ finished: true
 ---
 
 <script>
-  import { base } from '$app/paths';
   import config from '$lib/config';
 </script>
 
@@ -94,10 +93,10 @@ You need to define in your root `svelte.config.js`
 or see the example below:
 
 ```javascript
-import adapter from '@sveltejs/adapter-auto'
-import { vitePreprocess } from '@sveltejs/kit/vite'
-import { mdsvex } from 'mdsvex'
-import rehypeSlug from 'rehype-slug'
+import adapter from '@sveltejs/adapter-auto';
+import { vitePreprocess } from '@sveltejs/kit/vite';
+import { mdsvex } from 'mdsvex';
+import rehypeSlug from 'rehype-slug';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
@@ -106,15 +105,15 @@ const config = {
     mdsvex({
       layout: './src/lib/components/Template.svelte',
       extensions: ['.md'],
-      rehypePlugins: [rehypeSlug],
+      rehypePlugins: [rehypeSlug]
     }),
-    vitePreprocess(),
+    vitePreprocess()
   ],
 
-  kit: { adapter: adapter() },
-}
+  kit: { adapter: adapter() }
+};
 
-export default config
+export default config;
 ```
 
 The template could be as simple [as
@@ -181,25 +180,25 @@ function but it's just that you are pointing it to the wrong directory.
 
 ```typescript
 // +layout.ts
-import type { LayoutLoad } from './$types' // Remove this if not using TS
+import type { LayoutLoad } from './$types'; // Remove this if not using TS
 // import type { PageLoad } from './$types'; // In case of +page.ts
 
 export const load = (async ({ params }) => {
   // This relative path is going to be different for everyone since the
   // structure is going to be different depending on your choice for the blog
   // post directory and route to display the posts.
-  const module = await import(`../../../../lib/posts/${params.postid}.md`)
+  const module = await import(`../../../../lib/posts/${params.postid}.md`);
 
-  const content = module.default
-  const title = module.metadata.title
-  const description = module.metadata.description
+  const content = module.default;
+  const title = module.metadata.title;
+  const description = module.metadata.description;
 
   return {
     content,
     title,
-    description,
-  }
-}) satisfies LayoutLoad // And this if not using TS
+    description
+  };
+}) satisfies LayoutLoad; // And this if not using TS
 // }) satisfies PageLoad;
 ```
 

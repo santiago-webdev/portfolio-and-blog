@@ -1,7 +1,7 @@
 ---
 title: Execution order of files in SvelteKit
 datetime: 2023-06-03 23:29
-description: 'Understanding the execution order of files in SvelteKit'
+description: Understanding the execution order of files in SvelteKit
 finished: true
 tags: [Publish, SvelteKit]
 ---
