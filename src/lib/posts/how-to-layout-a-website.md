@@ -2,6 +2,7 @@
 title: How to layout a website
 datetime: 2023-03-15 15:09
 description: This is how I layout a website each time I start a new project.
+tags: [Publish, Web]
 finished: false
 ---
 
