@@ -3,6 +3,8 @@ import { readableDate, relativeTime, retrieve_icon } from '$lib/utils/utils';
 import { FilteredPosts } from '$lib/components/blog/store';
 import { fly } from 'svelte/transition';
 
+const isLocalhost = import.meta.env.DEV;
+
 let fly_in = { y: 50, duration: 200 };
 let fly_out = { y: -50, duration: 200 };
 </script>
@@ -25,25 +27,25 @@ let fly_out = { y: -50, duration: 200 };
             {#if post.tags}
               <ul class="tags">
                 {#each post.tags as tag}
-                  <li
-                    style:color={tag.toLowerCase() === 'vault'
-                      ? 'black'
-                      : 'inherit'}
-                    style:--bg={tag.toLowerCase() === 'vault'
-                      ? 'var(--clr-inv-800)'
-                      : 'var(--clr-40)'}
-                    style:--brd={tag.toLowerCase() === 'vault'
-                      ? 'var(--clr-inv-900)'
-                      : 'var(--clr-45)'}
-                    class="tpl defaults font-10"
-                  >
-                    <iconify-icon
-                      width="20"
-                      height="20"
-                      icon={retrieve_icon(tag)}
-                    />
-                    {tag}
-                  </li>
+                  {#if (tag === 'Publish' && isLocalhost) || (tag === 'Vault' && isLocalhost)}
+                    <li class="tpl reverse font-10">
+                      <iconify-icon
+                        width="20"
+                        height="20"
+                        icon={retrieve_icon(tag)}
+                      />
+                      {tag}
+                    </li>
+                  {:else}
+                    <li class="tpl defaults font-10">
+                      <iconify-icon
+                        width="20"
+                        height="20"
+                        icon={retrieve_icon(tag)}
+                      />
+                      {tag}
+                    </li>
+                  {/if}
                 {/each}
               </ul>
             {/if}

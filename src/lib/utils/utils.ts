@@ -128,6 +128,8 @@ export function retrieve_icon(symbol: string): string | undefined {
       return 'lucide:brain-circuit';
     case 'publish':
       return 'lucide:newspaper';
+    case 'web':
+      return 'lucide:globe-2';
     default:
       return '';
   }
