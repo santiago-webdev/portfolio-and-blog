@@ -305,5 +305,7 @@ If your user can't write to the mounting points you defined in the `/etc/fstab`.
 
 ```bash
 # Logged as your user so that $USER is set correctly
-sudo chown $USER:$USER /<mount-point> -R
+sudo chown $USER:users /<mount-point> -R
+# If that doesn't work you could try with the wheel group
+sudo chown $USER:wheel /<mount-point> -R
 ```
