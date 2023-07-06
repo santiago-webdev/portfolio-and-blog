@@ -1,7 +1,7 @@
 ---
 title: How to sync two directories with rsync
 description: Description
-tags: [Publish, Vault]
+tags: [Publish]
 finished: true
 id: '000000'
 datetime: 2023-07-06 09:46
