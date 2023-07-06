@@ -1,6 +1,6 @@
 ---
 title: How to sync two directories with rsync
-description: Description
+description: Keep two directories with the same contents using rsync
 tags: [Publish]
 finished: true
 id: '000000'
