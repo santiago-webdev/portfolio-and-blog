@@ -1,9 +1,9 @@
 ---
 title: Sveltekit files cheat sheet
 datetime: 2023-06-03 22:25
+tags: [Publish, SvelteKit]
 description: Cheatsheet with all of the files sveltekit related to routing
 finished: true
-tags: [Publish, SvelteKit]
 ---
 
 <script>

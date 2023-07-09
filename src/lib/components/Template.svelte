@@ -35,6 +35,7 @@ const dateReadable = !datetime ? datetime : readableDate(datetime);
 let isHollow = false;
 let hollowPrefix = '';
 let fillSuffix = '';
+const isLocal = import.meta.env.DEV;
 
 const keywords = ['How', 'How to', 'How to:', 'How To'];
 
@@ -69,10 +70,25 @@ if (title) {
       {#if tags}
         <ul class="tags inline-items font-10">
           {#each tags as tag}
-            <li class="tpl">
-              <iconify-icon width="22" height="22" icon={retrieve_icon(tag)} />
-              {tag}
-            </li>
+            {#if tag === 'Publish' && isLocal}
+              <li class="tpl default">
+                <iconify-icon
+                  width="22"
+                  height="22"
+                  icon={retrieve_icon(tag)}
+                />
+                {tag}
+              </li>
+            {:else}
+              <li class="tpl">
+                <iconify-icon
+                  width="22"
+                  height="22"
+                  icon={retrieve_icon(tag)}
+                />
+                {tag}
+              </li>
+            {/if}
           {/each}
         </ul>
       {/if}
@@ -195,6 +211,8 @@ small {
 }
 
 .tags li {
+  --bg: var(--clr-40);
+  --brd: var(--clr-45);
   margin-top: 0.6rem;
   display: flex;
   place-items: center;
