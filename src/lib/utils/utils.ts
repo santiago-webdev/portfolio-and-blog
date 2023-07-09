@@ -130,8 +130,15 @@ export function retrieve_icon(symbol: string): string | undefined {
       return 'lucide:newspaper';
     case 'web':
       return 'lucide:globe-2';
+    case 'books':
+      return 'lucide:library';
     case 'book':
       return 'lucide:book-marked';
+    case 'programming':
+      return 'lucide:bug';
+    case 'idea':
+    case 'ideas':
+      return 'lucide:lightbulb';
     default:
       return '';
   }

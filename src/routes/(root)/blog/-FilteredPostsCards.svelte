@@ -3,7 +3,7 @@ import { readableDate, relativeTime, retrieve_icon } from '$lib/utils/utils';
 import { FilteredPosts } from '$lib/components/blog/store';
 import { fly } from 'svelte/transition';
 
-const isLocalhost = import.meta.env.DEV;
+const isLocal = import.meta.env.DEV;
 
 let fly_in = { y: 50, duration: 200 };
 let fly_out = { y: -50, duration: 200 };
@@ -27,7 +27,7 @@ let fly_out = { y: -50, duration: 200 };
             {#if post.tags}
               <ul class="tags">
                 {#each post.tags as tag}
-                  {#if (tag === 'Publish' && isLocalhost) || (tag === 'Vault' && isLocalhost)}
+                  {#if isLocal && tag === 'Publish'}
                     <li class="tpl reverse font-10">
                       <iconify-icon
                         width="20"
