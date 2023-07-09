@@ -27,25 +27,19 @@ let fly_out = { y: -50, duration: 200 };
             {#if post.tags}
               <ul class="tags">
                 {#each post.tags as tag}
-                  {#if isLocal && tag === 'Publish'}
-                    <li class="tpl reverse font-10">
-                      <iconify-icon
-                        width="20"
-                        height="20"
-                        icon={retrieve_icon(tag)}
-                      />
-                      {tag}
-                    </li>
-                  {:else}
-                    <li class="tpl defaults font-10">
-                      <iconify-icon
-                        width="20"
-                        height="20"
-                        icon={retrieve_icon(tag)}
-                      />
-                      {tag}
-                    </li>
-                  {/if}
+                  <li
+                    style:display={!isLocal && tag === 'Publish' ? 'none' : ''}
+                    class="tpl font-10 {tag === 'Publish'
+                      ? 'reverse'
+                      : 'default'}"
+                  >
+                    <iconify-icon
+                      width="20"
+                      height="20"
+                      icon={retrieve_icon(tag)}
+                    />
+                    {tag}
+                  </li>
                 {/each}
               </ul>
             {/if}
@@ -180,5 +174,10 @@ small {
   gap: 0.5ch;
   /* padding: 0.4rem 0.8rem; */
   border-radius: 0.75rem;
+}
+
+.tags li.default {
+  --bg: var(--clr-40);
+  --brd: var(--clr-45);
 }
 </style>

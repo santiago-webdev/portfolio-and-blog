@@ -70,25 +70,13 @@ if (title) {
       {#if tags}
         <ul class="tags inline-items font-10">
           {#each tags as tag}
-            {#if tag === 'Publish' && isLocal}
-              <li class="tpl default">
-                <iconify-icon
-                  width="22"
-                  height="22"
-                  icon={retrieve_icon(tag)}
-                />
-                {tag}
-              </li>
-            {:else}
-              <li class="tpl">
-                <iconify-icon
-                  width="22"
-                  height="22"
-                  icon={retrieve_icon(tag)}
-                />
-                {tag}
-              </li>
-            {/if}
+            <li
+              style:display={!isLocal && tag === 'Publish' ? 'none' : ''}
+              class="tpl default"
+            >
+              <iconify-icon width="22" height="22" icon={retrieve_icon(tag)} />
+              {tag}
+            </li>
           {/each}
         </ul>
       {/if}
