@@ -9,8 +9,6 @@ summary:
   format to Btrfs, mount to /mnt, and create the needed subvolumes
 ---
 
-# How I use external drives
-
 Living in a third world country sometimes includes "loosing" your external
 drives or laptops, and I don't think anybody likes to have an anonymous source looking
 through your files, that's why I always encrypt all of my installations.

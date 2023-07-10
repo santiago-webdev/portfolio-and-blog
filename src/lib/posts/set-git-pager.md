@@ -6,8 +6,6 @@ tags: [Publish, Git]
 finished: true
 ---
 
-# My preference
-
 If you are already using [bat](https://github.com/sharkdp/bat) you'll enjoy
 using it:
 

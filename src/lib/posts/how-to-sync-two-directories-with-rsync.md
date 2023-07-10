@@ -7,8 +7,6 @@ id: '000000'
 datetime: 2023-07-06 09:46
 ---
 
-# How to sync two directories with rsync
-
 If you have a `source_dir` and want a `target_dir` to have
 _the same contents_ as your source you **need the
 trailing slash** at `./source_dir/`

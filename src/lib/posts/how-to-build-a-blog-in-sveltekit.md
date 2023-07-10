@@ -14,8 +14,6 @@ finished: true
   import config from '$lib/config';
 </script>
 
-# Let's get started
-
 As a disclaimer, this is one of the first websites I jumped on creating from
 scratch, **however** this article will only focus on making you understand
 basic concepts of the mdsvex markdown preprocessor and sveltekit routing, so

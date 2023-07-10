@@ -10,8 +10,6 @@ finished: true
   import { base } from '$app/paths';
 </script>
 
-# The files
-
 To pass data to either +layout.svelte or +page.svelte you do it through the
 load() function. Read the [docs](https://kit.svelte.dev/docs/load#page-data) for
 more information.
