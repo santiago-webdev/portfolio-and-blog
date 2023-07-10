@@ -124,8 +124,6 @@ export function retrieve_icon(symbol: string): string | undefined {
     case 'vault':
       return 'fluent:vault-24-regular';
     case 'think':
-    case 'thinking':
-      return 'lucide:brain-circuit';
     case 'publish':
       return 'lucide:newspaper';
     case 'web':
@@ -136,9 +134,25 @@ export function retrieve_icon(symbol: string): string | undefined {
       return 'lucide:book-marked';
     case 'programming':
       return 'lucide:bug';
+    case 'thoughts':
     case 'idea':
     case 'ideas':
       return 'lucide:lightbulb';
+    case 'explain':
+      return 'mdi:teach';
+    case 'probability':
+    case 'statistics':
+      return 'lucide:area-chart';
+    case symbol.toLowerCase().endsWith('system') ||
+    symbol.toLowerCase().endsWith('systems') ||
+    symbol.toLowerCase().startsWith('system')
+      ? symbol.toLowerCase()
+      : '':
+      return 'gis:coord-system';
+    case 'rant':
+      return 'lucide:air-vent';
+    case 'hub':
+      return 'nimbus:ecosystem';
     default:
       return '';
   }
