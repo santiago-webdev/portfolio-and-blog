@@ -65,7 +65,9 @@ if (title) {
         {:else}
           <h1 class="font-90">{title}</h1>
         {/if}
-        <p class="font-30">{description}</p>
+        {#if description}
+          <p class="font-30">{description}</p>
+        {/if}
       </hgroup>
       {#if tags}
         <ul class="tags inline-items font-10">

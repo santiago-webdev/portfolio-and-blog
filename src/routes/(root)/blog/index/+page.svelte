@@ -17,7 +17,7 @@ import LinkArrow from '$lib/components/navigation/LinkArrow.svelte';
   <ul class="generic">
     {#each $Posts as post}
       <li class="generic font-20">
-        <a class="internal-link" href={post.href}>{post.title}</a>
+        <a class="link" href={post.href}>{post.title}</a>
       </li>
     {/each}
   </ul>

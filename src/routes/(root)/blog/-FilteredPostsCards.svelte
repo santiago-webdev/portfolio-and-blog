@@ -20,8 +20,6 @@ let fly_out = { y: -50, duration: 200 };
             </h2>
             {#if post.description}
               <p class="font-20">{post.description}</p>
-            {:else}
-              <p class="font-20">No description was given.</p>
             {/if}
 
             {#if post.tags}
