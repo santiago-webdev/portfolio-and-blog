@@ -118,7 +118,7 @@ time {
 hr {
   width: 100%;
   margin: 0;
-  border: 1px solid var(--clr-60);
+  border: 1px solid var(--clr-inv-200);
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -128,7 +128,7 @@ kbd {
   pointer-events: none;
   padding-inline: 0.6rem;
   border-radius: 0.5rem;
-  background-color: var(--clr-60);
+  background-color: var(--clr-55);
   font-size: 60%;
   font-weight: bold;
 }

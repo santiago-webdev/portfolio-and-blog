@@ -47,7 +47,7 @@ pre {
   font-size: var(--fs-100);
   line-height: calc(var(--fs-100) * 1.5);
 
-  background: var(--clr-20);
+  background: var(--clr-25);
   border-radius: 0.6rem;
   padding: 1rem;
 
