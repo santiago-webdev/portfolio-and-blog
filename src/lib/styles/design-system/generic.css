@@ -3,8 +3,8 @@ ol.generic {
   display: grid;
   gap: 0.2rem;
   background-color: var(--clr-35);
-  border: 1px var(--clr-65) solid;
-  border-radius: 12px;
+  border: 1px var(--clr-inv-200) solid;
+  border-radius: 16px;
   padding: 1rem;
   counter-reset: ol-counter;
 

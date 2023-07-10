@@ -169,7 +169,7 @@ header.expanded {
 
 header.scrollY {
   background: var(--clr-35-trp);
-  border-bottom-color: var(--clr-65);
+  border-bottom-color: var(--clr-inv-200);
 }
 
 a,
@@ -181,12 +181,12 @@ button {
 }
 
 a.bordered {
-  border: 2px var(--clr-60) solid;
+  border: 2px var(--clr-inv-200) solid;
   border-radius: 1rem;
 }
 
 a.bordered:hover {
-  border-color: var(--clr-65);
+  border-color: var(--clr-inv-300);
 }
 
 button {

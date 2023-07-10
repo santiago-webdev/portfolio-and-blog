@@ -85,7 +85,8 @@ onMount(() => {
 <div class="wrapper-experience tpl">
   <h2 class="font-60">What I'm up to today</h2>
   <div bind:this={tabbed} class="tabbed">
-    <ol class="pick" bind:this={tablist} role="tablist">
+    <!-- TODO(santigo-zero): I have to redo styles for this -->
+    <ol bind:this={tablist} role="tablist">
       <li>
         <a role="tab" href="#section1">Add job <span>+</span></a>
       </li>
