@@ -84,8 +84,8 @@ li code {
 
   .reverse:focus-within,
   .reverse:hover {
-    --bg: var(--clr-80);
-    --brd: var(--clr-90);
+    --bg: var(--clr-inv-400);
+    --brd: var(--clr-inv-500);
     color: var(--clr-inv-900);
   }
 }
@@ -136,7 +136,7 @@ li code {
 }
 
 small {
-  color: var(--clr-90);
+  color: var(--clr-inv-600);
 }
 
 time {

@@ -286,7 +286,7 @@ article header {
 }
 
 h4 {
-  color: var(--clr-90);
+  color: var(--clr-inv-700);
   font-variation-settings: 'wght' 700;
   min-width: 8ch;
 }
@@ -387,7 +387,7 @@ button:hover {
 }
 
 [icon='lucide:plus'] {
-  color: var(--clr-95);
+  color: var(--clr-inv-600);
 }
 
 button:hover [icon='lucide:plus'] {
