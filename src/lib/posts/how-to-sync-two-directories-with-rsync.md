@@ -3,7 +3,6 @@ title: How to sync two directories with rsync
 description: Keep two directories with the same contents using rsync
 tags: [Publish, Tooling, Linux]
 finished: true
-id: '000000'
 datetime: 2023-07-06 09:46
 ---
 
