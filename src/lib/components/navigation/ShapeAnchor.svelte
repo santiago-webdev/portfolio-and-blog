@@ -1,6 +1,7 @@
 <script lang="ts">
 export let href = '/';
-const isInternal = () => href.startsWith('/') || href.startsWith('#');
+const isInternal = () =>
+  href.startsWith('/') || href.startsWith('#') || href.startsWith('./');
 </script>
 
 <a

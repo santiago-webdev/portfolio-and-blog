@@ -153,6 +153,9 @@ export function retrieve_icon(symbol: string): string | undefined {
       return 'lucide:air-vent';
     case 'hub':
       return 'nimbus:ecosystem';
+    case 'project':
+    case 'projects':
+      return 'lucide:ship';
     default:
       return '';
   }

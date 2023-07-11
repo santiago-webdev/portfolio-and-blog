@@ -5,6 +5,5 @@ import li from './li.svelte';
 import table from './table.svelte';
 import a from './a.svelte';
 import p from './p.svelte';
-import blockquote from './blockquote.svelte';
 
-export { img, ol, ul, li, table, a, p, blockquote };
+export { img, ol, ul, li, table, a, p };
