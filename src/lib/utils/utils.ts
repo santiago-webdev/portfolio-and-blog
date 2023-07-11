@@ -156,6 +156,8 @@ export function retrieve_icon(symbol: string): string | undefined {
     case 'project':
     case 'projects':
       return 'lucide:ship';
+    case 'case study':
+      return 'lucide:presentation';
     default:
       return '';
   }
