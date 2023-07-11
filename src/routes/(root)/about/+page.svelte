@@ -1,8 +1,6 @@
 <script lang="ts">
 import { retrieve_icon } from '$lib/utils/utils';
-import { base } from '$app/paths';
 import Experience from './-Experience.svelte';
-import ShapeAnchor from '$lib/components/navigation/ShapeAnchor.svelte';
 import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
 
 export let greeting = 'Hello, my name is Santiago.';

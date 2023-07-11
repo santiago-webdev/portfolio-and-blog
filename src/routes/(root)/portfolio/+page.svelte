@@ -44,7 +44,7 @@ import { retrieve_icon } from '$lib/utils/utils';
     </header>
   </div>
   <section>
-    {#each $FilteredProjects as { name, description, category, stack, img, repo, link, case_study, accent }}
+    {#each $FilteredProjects as { name, description, category, stack, img, repo, link, case_study }}
       <article class="tpl">
         <figure>
           <figcaption>
@@ -83,9 +83,7 @@ import { retrieve_icon } from '$lib/utils/utils';
           <header>
             <div style:gap="2ch" class="inline-items">
               <a href={link.toString()} target="_blank" class="font-40">
-                <span style:color="var({accent ? accent : '--clr-inv-600'})"
-                  >{link.hostname.replace(/^www\./i, '')}</span
-                >
+                {link.hostname.replace(/^www\./i, '')}
               </a>
               <ul class="inline-items">
                 {#each category as tags}
@@ -140,10 +138,8 @@ import { retrieve_icon } from '$lib/utils/utils';
           {/if}
 
           <div class="container-project-links">
-            <ShapeButton
-              target="_blank"
-              icon="github"
-              href={repo.toString()}>Source Code</ShapeButton
+            <ShapeButton target="_blank" icon="github" href={repo.toString()}
+              >Source Code</ShapeButton
             >
             <ShapeButton class="reverse" href="{base}/blog/{case_study}"
               >Case Study</ShapeButton

@@ -13,10 +13,9 @@ interface Project {
   category: Category[];
   repo: URL;
   link: URL;
-  case_study: str;
+  case_study: string;
   stack: Stack;
   img?: string;
-  accent?: string;
 }
 
 export const AllProjects = readable<Array<Project>>([
@@ -35,8 +34,7 @@ export const AllProjects = readable<Array<Project>>([
     img: '/portfolio/zap-website.webp',
     repo: new URL('https://github.com/zap-zsh/zapzsh.org/'),
     link: new URL('https://www.zapzsh.org/'),
-    case_study: 'hello-world',
-    accent: '--clr-orange-50'
+    case_study: 'hello-world'
   },
   {
     name: 'Personal site',

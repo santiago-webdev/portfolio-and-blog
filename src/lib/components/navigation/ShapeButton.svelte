@@ -9,7 +9,7 @@ export let icon = '';
   <span>
     <slot />
     {#if icon}
-      <iconify-icon width='22' height='22' icon={retrieve_icon(icon)} />
+      <iconify-icon width="22" height="22" icon={retrieve_icon(icon)} />
     {:else if $$props.rel}
       <svg
         xmlns="http://www.w3.org/2000/svg"
