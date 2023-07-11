@@ -1,12 +1,16 @@
 <script lang="ts">
+import { retrieve_icon } from '$lib/utils/utils';
 import Forward from '../Forward.svelte';
 export let href = '/';
+export let icon = '';
 </script>
 
 <a {href} {...$$restProps} class={`tpl defaults font-10 ${$$props.class}`}>
   <span>
     <slot />
-    {#if $$props.rel}
+    {#if icon}
+      <iconify-icon width='22' height='22' icon={retrieve_icon(icon)} />
+    {:else if $$props.rel}
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="20"

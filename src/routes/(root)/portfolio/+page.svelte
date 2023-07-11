@@ -1,4 +1,5 @@
 <script lang="ts">
+import { base } from '$app/paths';
 import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
 import {
   currentGroupOfProjects,
@@ -43,7 +44,7 @@ import { retrieve_icon } from '$lib/utils/utils';
     </header>
   </div>
   <section>
-    {#each $FilteredProjects as { name, description, category, stack, img, repo, link, accent }}
+    {#each $FilteredProjects as { name, description, category, stack, img, repo, link, case_study, accent }}
       <article class="tpl">
         <figure>
           <figcaption>
@@ -141,10 +142,10 @@ import { retrieve_icon } from '$lib/utils/utils';
           <div class="container-project-links">
             <ShapeButton
               target="_blank"
-              custom_symbol="mdi:github"
+              icon="github"
               href={repo.toString()}>Source Code</ShapeButton
             >
-            <ShapeButton class="reverse" href={link.toString()}
+            <ShapeButton class="reverse" href="{base}/blog/{case_study}"
               >Case Study</ShapeButton
             >
           </div>

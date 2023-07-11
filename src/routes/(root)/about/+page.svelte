@@ -3,6 +3,7 @@ import { retrieve_icon } from '$lib/utils/utils';
 import { base } from '$app/paths';
 import Experience from './-Experience.svelte';
 import ShapeAnchor from '$lib/components/navigation/ShapeAnchor.svelte';
+import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
 
 export let greeting = 'Hello, my name is Santiago.';
 
@@ -35,12 +36,17 @@ const tools = [
         <em>progressive enhancement</em>. My set of skills is mostly dedicated
         to the web, but I'm also interested in Linux and CS in general.
       </p>
-      <p>
-        You can follow my journey from <ShapeAnchor href="{base}/blog"
-          >the blog</ShapeAnchor
-        >, where I'm trying to compile all of my knowledge to become an
-        all-rounder web developer.
-      </p>
+      <p>You can find me in this platforms:</p>
+      <section>
+        <ShapeButton
+          href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/"
+          class="reverse"
+          icon="github"
+        >
+          GitHub</ShapeButton
+        >
+        <ShapeButton icon="linkedin">LinkedIn</ShapeButton>
+      </section>
     </hgroup>
     <div class="img-wrapper">
       <img src="/alleged-photo-of-myself.webp" alt="" />
@@ -174,5 +180,20 @@ li {
   place-content: center;
   place-items: center;
   bottom: 2px;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    flex-direction: row;
+    place-items: start;
+    gap: 1.2rem;
+  }
 }
 </style>

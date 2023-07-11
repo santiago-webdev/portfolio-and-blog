@@ -13,6 +13,7 @@ interface Project {
   category: Category[];
   repo: URL;
   link: URL;
+  case_study: str;
   stack: Stack;
   img?: string;
   accent?: string;
@@ -34,6 +35,7 @@ export const AllProjects = readable<Array<Project>>([
     img: '/portfolio/zap-website.webp',
     repo: new URL('https://github.com/zap-zsh/zapzsh.org/'),
     link: new URL('https://www.zapzsh.org/'),
+    case_study: 'hello-world',
     accent: '--clr-orange-50'
   },
   {
@@ -47,7 +49,8 @@ export const AllProjects = readable<Array<Project>>([
     },
     img: '/portfolio/portfolio-and-blog-website.webp',
     repo: new URL('https://github.com/santigo-zero/portfolio-and-blog'),
-    link: new URL('https://santiagogonzalez.dev')
+    link: new URL('https://santiagogonzalez.dev'),
+    case_study: 'hello-world'
   },
   {
     name: 'example of fullstack',
@@ -56,7 +59,8 @@ export const AllProjects = readable<Array<Project>>([
     stack: {},
     category: ['fullstack'],
     repo: new URL('https://google.com'),
-    link: new URL('https://google.com')
+    link: new URL('https://google.com'),
+    case_study: 'hello-world'
   },
   {
     name: 'example of opensource',
@@ -65,7 +69,8 @@ export const AllProjects = readable<Array<Project>>([
     stack: {},
     category: ['opensource'],
     repo: new URL('https://google.com'),
-    link: new URL('https://google.com')
+    link: new URL('https://google.com'),
+    case_study: 'hello-world'
   },
   {
     name: 'example of redesign/rewrite',
@@ -74,7 +79,8 @@ export const AllProjects = readable<Array<Project>>([
     stack: {},
     category: ['redesign_rewrite'],
     repo: new URL('https://google.com'),
-    link: new URL('https://google.com')
+    link: new URL('https://google.com'),
+    case_study: 'hello-world'
   }
 ]);
 
