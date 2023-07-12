@@ -1,6 +1,6 @@
 ---
-title: What is this site about?
-description: Just a quick note about me and this site
+title: Hello world
+description: Small case study about me and this website
 tags: [Publish, Case Study, Project]
 datetime: 2023-01-14 06:02
 ---
