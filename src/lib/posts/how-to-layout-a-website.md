@@ -10,7 +10,6 @@ finished: false
 
 - Every page is made up of rows, and each row is a separate idea.
   This is a pretty simple step to take
-- test
 
 ## Designing out sections
 

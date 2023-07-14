@@ -20,7 +20,7 @@ ol.generic li.generic::before {
 
 /* Unordered lists */
 ul.generic:not(:has(li input[type='checkbox'])) {
-  list-style: disc;
+  list-style: disc inside;
 }
 /* Unordered lists */
 
@@ -28,6 +28,10 @@ ul.generic:not(:has(li input[type='checkbox'])) {
 :is(ol, ul) li.generic {
   padding: 0.4rem;
   border-radius: 8px;
+}
+
+ul > li.generic li.generic {
+  padding-left: 2rem;
 }
 
 :is(ol) li.generic:nth-child(odd) {

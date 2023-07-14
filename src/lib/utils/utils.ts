@@ -158,6 +158,8 @@ export function retrieve_icon(symbol: string): string | undefined {
       return 'lucide:ship';
     case 'case study':
       return 'lucide:presentation';
+    case 'template':
+      return 'lucide:book-template';
     default:
       return '';
   }
