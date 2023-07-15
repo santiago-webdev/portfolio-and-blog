@@ -8,7 +8,7 @@ import { FilteredProjects } from '$lib/components/projects/store';
   <div id="portfolio" class="portfolio">
     <section>
       <h2>My work</h2>
-      <p>
+      <p class="font-50">
         I've contributed to FOSS as well as created some projects of my own. You
         can find all of my projects
         <ShapeAnchor href="{base}/portfolio">tracked here</ShapeAnchor>.
@@ -21,11 +21,11 @@ import { FilteredProjects } from '$lib/components/projects/store';
           target="_blank"
           rel="external"
         >
-          <h3 class="font-30">
+          <h3>
             {$FilteredProjects[0].name}
             <iconify-icon icon="lucide:external-link" />
           </h3>
-          <p class="font-20">
+          <p class="font-40">
             {$FilteredProjects[0].short_description}
           </p>
         </a>
@@ -36,22 +36,22 @@ import { FilteredProjects } from '$lib/components/projects/store';
           target="_blank"
           rel="external"
         >
-          <h3 class="font-30">
+          <h3>
             {$FilteredProjects[1].name}
             <iconify-icon icon="lucide:external-link" />
           </h3>
-          <p class="font-20">
+          <p class="font-40">
             {$FilteredProjects[1].short_description}
           </p>
         </a>
       </li>
       <li class="tpl">
         <a href="/" target="_blank" rel="external">
-          <h3 class="font-30">
+          <h3>
             Project
             <iconify-icon icon="lucide:external-link" />
           </h3>
-          <p class="font-20">
+          <p class="font-40">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit.
           </p>
         </a>
@@ -99,7 +99,6 @@ ol {
   flex: 1;
   display: grid;
   gap: 1rem;
-  font-family: var(--ff-dflt);
 }
 
 li {

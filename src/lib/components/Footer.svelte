@@ -37,15 +37,15 @@ const donateItems = [
 <footer>
   <header>
     <div class="aboutme tpl">
-      <h3 class="font-30">Santiago Gonzalez</h3>
-      <p class="font-30">
+      <h3 class="font-50">Santiago Gonzalez</h3>
+      <p class="font-40">
         Crafting accessible web experiences without leaving the aesthetics
         aside.
       </p>
     </div>
 
     <nav aria-label="footer-navigation">
-      <h3 class="font-20">Sitemap</h3>
+      <h3 class="font-40">Sitemap</h3>
       <ul>
         {#each $navigationItems as item}
           {#if item.label !== 'Separator'}
@@ -67,7 +67,7 @@ const donateItems = [
     </nav>
 
     <div class="projects">
-      <h3 class="font-20">Projects</h3>
+      <h3 class="font-40">Projects</h3>
       <ul>
         <li>
           <a class="selection" target="_blank" href="https://zapzsh.org"
@@ -88,7 +88,7 @@ const donateItems = [
     </div>
 
     <div class="donate">
-      <h3 class="font-20">Donate</h3>
+      <h3 class="font-40">Donate</h3>
       <ul>
         {#each donateItems as item}
           <li>
@@ -114,7 +114,7 @@ const donateItems = [
     </div>
 
     <div class="contact">
-      <h3 class="font-20">Contact</h3>
+      <h3 class="font-40">Contact</h3>
       <address>
         <a
           class="selection"
@@ -148,7 +148,7 @@ const donateItems = [
     </div>
   </header>
   <section>
-    <div class="font-20 container-bottom">
+    <div class="font-30 container-bottom">
       <a
         target="_blank"
         href="https://github.com/santigo-zero"
@@ -173,7 +173,6 @@ const donateItems = [
         <div aria-orientation="vertical" role="separator">-</div>
         <iconify-icon icon="lucide:star" />
         <var
-          style="margin-top: 1px"
           aria-label="Amount of stars in the GitHub repository"
           title="Amount of stars in the GitHub repository"
         >
@@ -225,9 +224,15 @@ header > * {
   flex-direction: column;
 }
 
+.aboutme h3 {
+  font-variation-settings: 'wght' 600;
+  font-weight: 600;
+}
+
 header h3:not(.aboutme h3) {
   font-weight: 500;
   margin: 0 0.6rem 0.4rem;
+  font-family: var(--ff-text);
 }
 
 .aboutme {

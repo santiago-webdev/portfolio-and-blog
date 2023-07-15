@@ -11,7 +11,7 @@ import config from '$lib/config.json';
       <h1 class="font-90">
         Building the web<br /> with clean interfaces
       </h1>
-      <p class="font-40">
+      <p class="font-50">
         I'm a frontend developer and here we'll discuss about
         <strong>web deve&shylopment</strong>
         and show you my projects while at it.
@@ -53,7 +53,6 @@ main {
 .introduction {
   display: flex;
   flex-flow: column wrap;
-  gap: 0.8rem;
 }
 
 small {
@@ -65,6 +64,7 @@ h1 {
 }
 
 p {
+  margin-top: 1rem;
   max-width: 38ch;
 }
 
@@ -72,7 +72,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  margin-top: 1.2rem;
+  margin-top: 2rem;
 }
 
 .call-to-scroll {
@@ -89,7 +89,7 @@ section {
   small {
     padding-inline: 1.8rem;
     display: block;
-    margin-top: 1ch;
+    margin-top: 0.5rem;
   }
 }
 

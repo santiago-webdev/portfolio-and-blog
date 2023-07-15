@@ -14,15 +14,15 @@ import { retrieve_icon } from '$lib/utils/utils';
   <div class="wrapper-header">
     <header>
       <hgroup>
-        <span class="font-10">Portfolio Showcase &mdash;</span>
+        <span class="font-20">Portfolio Showcase &mdash;</span>
         <h1 class="font-60">
           {getCategoryInfo($currentGroupOfProjects).label} Projects
         </h1>
-        <p>
+        <p class="font-50">
           {getCategoryInfo($currentGroupOfProjects).description}
         </p>
       </hgroup>
-      <form class="font-30">
+      <form class="font-50">
         <label for="projects">
           Filter by type of project
           <noscript>
@@ -65,7 +65,7 @@ import { retrieve_icon } from '$lib/utils/utils';
             </div>
             <div class="artifact-link">
               <a
-                class="font-10"
+                class="font-30"
                 href={link.toString()}
                 target="_blank"
                 rel="external">{link}</a
@@ -87,22 +87,22 @@ import { retrieve_icon } from '$lib/utils/utils';
               </a>
               <ul class="inline-items">
                 {#each category as tags}
-                  <li class="tpl font-20">
+                  <li class="tpl">
                     {getCategoryInfo(tags).label}
                   </li>
                 {/each}
               </ul>
             </div>
           </header>
-          <p class="font-20">{description}</p>
+          <p>{description}</p>
 
-          <h3 class="font-10">Tech Stack:</h3>
+          <h3 class="font-30">Tech Stack:</h3>
           {#if stack.frontend}
             <div class="list-project-frontend">
-              <h4 class="font-10">Frontend:</h4>
-              <ul class="inline-items font-10">
+              <h4 class="font-30">Frontend:</h4>
+              <ul class="inline-items">
                 {#each stack.frontend as tags}
-                  <li class="tpl">
+                  <li class="tpl font-20">
                     <iconify-icon width="22" icon={retrieve_icon(tags)} />
                     {tags}
                   </li>
@@ -112,10 +112,10 @@ import { retrieve_icon } from '$lib/utils/utils';
           {/if}
           {#if stack.api}
             <div class="list-project-api">
-              <h4 class="font-10">API:</h4>
-              <ul class="inline-items font-10">
+              <h4 class="font-30">API:</h4>
+              <ul class="inline-items">
                 {#each stack.api as tags}
-                  <li class="tpl">
+                  <li class="tpl font-20">
                     <iconify-icon width="22" icon={retrieve_icon(tags)} />
                     {tags}
                   </li>
@@ -125,10 +125,10 @@ import { retrieve_icon } from '$lib/utils/utils';
           {/if}
           {#if stack.backend}
             <div class="list-project-backend">
-              <h4 class="font-10">Backend:</h4>
-              <ul class="inline-items font-10">
+              <h4 class="font-30">Backend:</h4>
+              <ul class="inline-items">
                 {#each stack.backend as tags}
-                  <li class="tpl">
+                  <li class="tpl font-20">
                     <iconify-icon width="22" icon={retrieve_icon(tags)} />
                     {tags}
                   </li>
@@ -267,7 +267,7 @@ a {
 h3 {
   margin-top: 0.8rem;
   color: var(--clr-inv-150);
-  font-variation-settings: 'wght' 700;
+  font-weight: 500;
 }
 
 article header {
@@ -285,6 +285,7 @@ article header {
 h4 {
   color: var(--clr-inv-700);
   font-variation-settings: 'wght' 700;
+  font-weight: 500;
   min-width: 8ch;
 }
 
@@ -321,9 +322,12 @@ li {
   --bg: var(--clr-40);
   --brd: var(--clr-45);
   border-radius: 0.6rem;
-  padding: 0.3rem 0.9rem;
+  padding: 0.4rem 0.8rem;
+  font-family: var(--ff-dflt);
+  font-variation-settings: 'wght' 600;
   display: flex;
-  gap: 1ch;
+  gap: 0.5ch;
+  place-items: center;
 }
 
 figure {

@@ -26,7 +26,11 @@ const tools = [
   <header>
     <hgroup>
       <h1>Get to know me</h1>
-      <p style="font-weight: 500">{greeting}</p>
+      <p>
+        <strong>
+          {greeting}
+        </strong>
+      </p>
       <p>
         I enjoy crafting simple interfaces, focusing in <em>maintainability</em
         >,
@@ -37,13 +41,18 @@ const tools = [
       <p>You can find me in this platforms:</p>
       <section>
         <ShapeButton
-          href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/"
+          href="https://github.com/santigo-zero/"
           class="reverse"
           icon="github"
         >
           GitHub</ShapeButton
         >
-        <ShapeButton icon="linkedin">LinkedIn</ShapeButton>
+        <ShapeButton
+          href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/"
+          icon="github"
+        >
+          LinkedIn</ShapeButton
+        >
       </section>
     </hgroup>
     <div class="img-wrapper">
@@ -55,15 +64,15 @@ const tools = [
   <Experience />
 </div>
 <div id="technologies">
-  <h2 class="font-60">Technology I use</h2>
+  <h2>Technology I use</h2>
   <p>
     These are some of the tools I had used in the past (but am not limited to):
   </p>
   <div class="wrapper-frameworks">
-    <h3 class="font-30">Frameworks and metaframeworks:</h3>
+    <h3>Frameworks and metaframeworks:</h3>
     <ul class="inline-items">
       {#each frameworks as framework}
-        <li class="font-20 tpl">
+        <li class="tpl">
           <iconify-icon
             width="26"
             height="26"
@@ -75,10 +84,10 @@ const tools = [
   </div>
 
   <div class="wrapper-databases">
-    <h3 class="font-30">Databases:</h3>
+    <h3>Databases:</h3>
     <ul class="inline-items">
       {#each databases as database}
-        <li class="font-20 tpl">
+        <li class="tpl">
           <iconify-icon
             width="26"
             height="26"
@@ -90,10 +99,10 @@ const tools = [
   </div>
 
   <div class="wrapper-others">
-    <h3 class="font-30">Other tools:</h3>
+    <h3>Other tools:</h3>
     <ul class="inline-items">
       {#each tools as tool}
-        <li class="font-20 tpl">
+        <li class="tpl">
           <iconify-icon
             width="26"
             height="26"
@@ -184,7 +193,7 @@ section {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
-  margin-top: 1.2rem;
+  margin-top: 2rem;
 }
 
 @media screen and (min-width: 768px) {

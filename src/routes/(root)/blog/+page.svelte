@@ -25,7 +25,7 @@ boldWords.forEach((word: string) => {
     <hgroup>
       <h1 class="font-90">Blog</h1>
       <!-- eslint-disable -->
-      <p>{@html description}</p>
+      <p class="font-50">{@html description}</p>
     </hgroup>
   </header>
   <SearchBar />

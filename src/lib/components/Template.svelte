@@ -57,15 +57,15 @@ if (title) {
           <h1 class="font-90">{title}</h1>
         {/if}
         {#if description}
-          <p class="font-30">{description}</p>
+          <p class="font-50">{description}</p>
         {/if}
       </hgroup>
       {#if tags}
-        <ul class="tags inline-items font-10">
+        <ul class="tags inline-items">
           {#each tags as tag}
             <li
               style:display={!isLocal && tag === 'Publish' ? 'none' : ''}
-              class="tpl default"
+              class="tpl default font-20"
             >
               <iconify-icon width="22" height="22" icon={retrieve_icon(tag)} />
               {tag}
@@ -99,20 +99,19 @@ if (title) {
         </time>
       {/if}
 
-      {#if summary}
-        <details class="tpl font-20">
-          <summary class="font-10">Summary</summary>
-          {summary}
-        </details>
-      {/if}
-
       {#if !finished}
         <div class="wip">
           <small>🏗 Construction site, keep out 🏗</small>
           <small>🚧 This article is not finished 🚧</small>
         </div>
       {/if}
-      <br />
+
+      {#if summary}
+        <details class="tpl font-40">
+          <summary>Summary</summary>
+          {summary}
+        </details>
+      {/if}
     </div>
   </div>
 
@@ -168,6 +167,7 @@ hgroup > * + * {
 .wrapper-header {
   gap: 1.2rem;
   text-align: center;
+  padding-bottom: clamp(1rem, 2vw + 1rem, 6rem);
 }
 
 .wrapper-header p {
@@ -194,10 +194,12 @@ small {
 .tags li {
   --bg: var(--clr-40);
   --brd: var(--clr-45);
-  margin-top: 0.6rem;
+  margin-top: 1rem;
   display: flex;
   place-items: center;
   gap: 0.5ch;
+  font-variation-settings: 'wght' 550;
+  font-family: var(--ff-dflt);
   padding: 0.4rem 0.8rem;
   border-radius: 0.75rem;
 }
@@ -214,7 +216,6 @@ details {
   --brd: var(--clr-45);
   font-family: var(--ff-text);
   display: flex;
-  gap: 2rem;
   max-width: var(--sm);
   margin-inline: auto;
   padding: 0.4rem 0.8rem;
@@ -222,7 +223,7 @@ details {
 }
 
 summary {
-  padding: 0.4rem 0.8rem;
+  padding: 0 0.4rem;
   color: var(--clr-red-40);
   text-align: center;
 }

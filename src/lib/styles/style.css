@@ -72,17 +72,17 @@ li code {
 .reverse {
   --bg: var(--clr-inv-800);
   --brd: var(--clr-inv-900);
-  color: black;
+  color: var(--clr-10);
 }
 
 @media (hover: hover) {
-  .defaults:focus-within,
+  .defaults:focus-visible,
   .defaults:hover {
     --bg: var(--clr-55);
     --brd: var(--clr-60);
   }
 
-  .reverse:focus-within,
+  .reverse:focus-visible,
   .reverse:hover {
     --bg: var(--clr-inv-400);
     --brd: var(--clr-inv-500);

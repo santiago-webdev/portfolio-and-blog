@@ -15,11 +15,11 @@ let fly_out = { y: -50, duration: 200 };
       <li in:fly={fly_in} out:fly={fly_out}>
         <a href={post.href}>
           <article class="tpl">
-            <h2 class="font-30">
+            <h2 class="font-50">
               {post.title}
             </h2>
             {#if post.description}
-              <p class="font-20">{post.description}</p>
+              <p>{post.description}</p>
             {/if}
 
             {#if post.tags}
@@ -27,7 +27,7 @@ let fly_out = { y: -50, duration: 200 };
                 {#each post.tags as tag}
                   <li
                     style:display={!isLocal && tag === 'Publish' ? 'none' : ''}
-                    class="tpl font-10 {tag === 'Publish'
+                    class="tpl font-30 {tag === 'Publish'
                       ? 'reverse'
                       : 'default'}"
                   >
@@ -131,14 +131,11 @@ article > * + * {
 }
 
 h2 {
-  font-family: var(--ff-dflt);
-  font-variation-settings: 'wght' 750;
-  font-weight: 500;
+  font-variation-settings: 'wght' 600;
 }
 
 p {
-  font-variation-settings: 'wght' 400;
-  font-weight: 400;
+  color: var(--clr-inv-700);
 }
 
 time {

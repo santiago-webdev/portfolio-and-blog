@@ -1,4 +1,4 @@
-<p class="font-20">
+<p>
   <slot />
 </p>
 

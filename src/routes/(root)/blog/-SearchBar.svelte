@@ -25,7 +25,7 @@ $: if ($FilteredPosts.length === 1)
   preloadData(`${base}/blog${$FilteredPosts[0].href}`);
 </script>
 
-<form class="font-30 tpl" on:submit|preventDefault={handleSubmit}>
+<form class="font-50 tpl" on:submit|preventDefault={handleSubmit}>
   <button aria-label="Go to selected blog" type="submit">
     <svg
       xmlns="http://www.w3.org/2000/svg"
