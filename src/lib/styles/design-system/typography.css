@@ -38,6 +38,14 @@ var {
   line-height: inherit;
 }
 
+/* I have to use important here because normally you put kbd inside buttons so
+ * they inherit this styles
+ * */
+kbd {
+  font-weight: 600 !important;
+  font-family: var(--ff-mono) !important;
+}
+
 pre {
   font-family: var(--ff-mono);
 

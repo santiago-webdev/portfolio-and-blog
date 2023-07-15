@@ -64,7 +64,7 @@ const clickOutside = (modal: HTMLDialogElement) =>
       <path d="m21 21l-4.35-4.35" />
     </g>
   </svg>
-  <kbd class="font-40">Ctrl K</kbd>
+  <kbd class="font-20">Ctrl K</kbd>
 </button>
 <dialog
   class="tpl"
@@ -110,7 +110,7 @@ const clickOutside = (modal: HTMLDialogElement) =>
         on:click={toggleModal}
         type="button"
       >
-        <kbd>Esc</kbd></button
+        <kbd class="font-40">Esc</kbd></button
       >
     </div>
   </form>
@@ -181,9 +181,6 @@ span {
 }
 
 kbd {
-  font-size: 60%;
-  font-weight: bold;
-  font-family: var(--ff-mono);
   border-radius: 0.4rem;
 }
 

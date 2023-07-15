@@ -55,7 +55,7 @@ $: if ($FilteredPosts.length === 1)
     type="search"
     autocomplete="off"
   />
-  <kbd>Ctrl K</kbd>
+  <kbd class="font-30">Ctrl K</kbd>
 </form>
 
 <style>
@@ -130,6 +130,5 @@ button {
 kbd {
   position: absolute;
   right: 1.3rem;
-  font-size: 60%;
 }
 </style>
