@@ -28,14 +28,16 @@
   --clr-inv-800: #d0d5dc;
   --clr-inv-900: #eceef1;
 
-  --clr-blue-20: hsl(245 82% 78%);
-  --clr-purple-20: hsl(267 27% 63%);
-  --clr-purple-50: hsl(271 55% 50%);
   --clr-red-40: hsl(346 77% 62%);
-  --clr-red-50: hsl(346 88% 62%);
-  --clr-orange-50: hsl(39 100% 70%);
+  --clr-red-50: hsl(343, 77%, 75%);
+  --clr-red-old: hsl(358, 61%, 64%);
+  --clr-purple-40: #b79bc3;
+  --clr-purple-50: #a17fad;
+  --clr-purple-mauve: #a9798b;
+  --clr-orange-50: #FF9E64;
+  --clr-orange-70: #FAB387;
+  --clr-yellow-50: #F6C177;
   --clr-green-50: #9ece6a;
-
   --clr-goaway-green: #8bc4c4;
   --clr-teal: #63b1b1;
   --clr-azure: #3e8fb0;

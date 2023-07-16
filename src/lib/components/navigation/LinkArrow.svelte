@@ -42,7 +42,7 @@ a {
 
 @media (hover: hover) {
   a:hover {
-    color: var(--clr-red-40);
+    color: var(--clr-red-old);
   }
 }
 </style>

@@ -91,7 +91,7 @@ li code {
 }
 
 [aria-current='page'] {
-  text-decoration: underline var(--clr-purple-20) 2px;
+  text-decoration: underline var(--clr-purple-mauve) 2px;
   text-underline-offset: 3px;
 }
 

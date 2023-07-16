@@ -16,7 +16,7 @@ import LinkArrow from '$lib/components/navigation/LinkArrow.svelte';
   </header>
   <ul class="generic">
     {#each $Posts as post}
-      <li class="generic font-20">
+      <li class="generic">
         <a class="link" href={post.href}>{post.title}</a>
       </li>
     {/each}
