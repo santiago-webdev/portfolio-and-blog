@@ -176,7 +176,7 @@ button kbd {
 }
 
 span {
-  text-decoration: underline solid var(--clr-blue-20) 0.15em;
+  text-decoration: underline solid currentColor 0.15em;
   text-underline-offset: 0em;
 }
 

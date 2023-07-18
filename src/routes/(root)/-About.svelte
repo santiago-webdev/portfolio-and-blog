@@ -8,23 +8,23 @@ import { base } from '$app/paths';
   <h2 class="font-70">About</h2>
   <div class="aboutme">
     <section>
-      <p style="font-weight: 500">Hello, my name is Santiago.</p>
-      <p class="font-20">
+      <p>
+        <strong> Hello, my name is Santiago. </strong>
+      </p>
+      <p>
         I'm a web developer based in <em>Argentina</em> with a passion for
         <em>Free And Open Source</em>,
         <em>UI/UX</em> and <em>Linux</em>. I'm fluent in English and Spanish.
       </p>
-      <p class="font-20">
+      <p>
         I enjoy crafting simple interfaces, focusing in
         <em>maintainability</em>, <em>accessibility</em> and
         <em>progressive enhancement</em>.
       </p>
     </section>
     <div class="familiar-stack">
-      <span style="font-weight: 500" class="font-30"
-        >And this is the stack I'm most comfortable with</span
-      >
-      <ul class="font-20">
+      <p>And this is the stack I'm most comfortable with</p>
+      <ul class="generic">
         <li>JavaScript(ES6+)</li>
         <li>React</li>
         <li>Node.js</li>
@@ -93,8 +93,6 @@ ul {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
   gap: 1rem;
-
-  list-style: disc inside;
 }
 
 li {
