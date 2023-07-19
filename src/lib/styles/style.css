@@ -145,17 +145,17 @@ kbd {
   display: flex;
   place-items: center;
   flex-wrap: wrap;
-  gap: 1ch;
+  gap: 0.5rem;
 }
 
 li.tags {
   --bg: var(--clr-40);
   --brd: var(--clr-45);
   border-radius: 0.8rem;
-  padding: 0.4rem 0.8rem;
+  padding: 0.3rem 0.6rem;
   display: flex;
   place-items: center;
-  gap: 0.5ch;
+  gap: 0.1ch;
 }
 
 thead {

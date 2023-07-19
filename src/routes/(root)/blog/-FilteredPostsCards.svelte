@@ -15,10 +15,7 @@ let fly_out = { y: -50, duration: 200 };
       <li in:fly={fly_in} out:fly={fly_out}>
         <a href={post.href}>
           <article class="tpl">
-            <h2>
-              {post.title}
-            </h2>
-
+            <h2>{post.title}</h2>
             {#if post.tags}
               <ul class="inline-items">
                 {#each post.tags as tag}
@@ -65,7 +62,6 @@ let fly_out = { y: -50, duration: 200 };
                 {readableDate(post.datetime)}
               </time>
             {/if}
-
             {#if !post.finished}
               <small class="tpl">🚧 In the works 🚧</small>
             {/if}
@@ -117,9 +113,24 @@ article {
   transition: transform 100ms, color 100ms, background-color 500ms, border 100ms;
 }
 
-article > * + * {
-  margin-block-start: 1em;
+/* Hierarchy */
+/* h2 | ul || p || time | small */
+article ul.inline-items {
+  margin-block-start: 0.4rem;
 }
+
+article p {
+  margin-block-start: 1rem;
+}
+
+article time {
+  margin-block-start: 2rem;
+}
+
+article small {
+  margin-block-start: 0.5rem;
+}
+/* Hierarchy */
 
 @media screen and (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
   article:hover {
