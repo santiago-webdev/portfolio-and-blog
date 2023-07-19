@@ -137,9 +137,17 @@ time {
 
 small {
   --bg: var(--clr-15);
-  --brd: var(--clr-15);
+  --brd: var(--clr-inv-200);
+  border-width: 1px;
+  border-color: var(--brd);
   color: var(--clr-inv-700);
   padding: 0.4rem;
-  border-radius: 8px;
+  border-radius: 0.8rem;
+}
+
+@media screen and (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+  article:hover {
+    transform: scale(1.02);
+  }
 }
 </style>
