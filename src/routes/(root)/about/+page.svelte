@@ -6,17 +6,17 @@ import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
 export let greeting = 'Hello, my name is Santiago.';
 
 const databases = ['MySQL', 'MariaDB', 'SQLite', 'PostgreSQL'];
-const frameworks = ['React', 'NextJS', 'Svelte', 'SvelteKit', 'Astro'];
+const frameworks = ['React', 'Svelte', 'SvelteKit', 'Astro'];
 const tools = [
   'HTML5',
   'CSS3',
+  'CSS Modules',
   'JavaScript',
   'TypeScript',
-  'CSS Modules',
   'Git',
   'Figma',
-  'Podman',
   'Docker',
+  'Podman',
   'Java',
   'Python'
 ];

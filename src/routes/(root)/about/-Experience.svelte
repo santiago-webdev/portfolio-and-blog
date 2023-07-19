@@ -88,10 +88,14 @@ onMount(() => {
     <!-- TODO(santigo-zero): I have to redo styles for this -->
     <ol bind:this={tablist} role="tablist">
       <li>
-        <a role="tab" href="#section1">Add job <span>+</span></a>
+        <a class="tpl defaults" role="tab" href="#section1"
+          >Add job <span>+</span></a
+        >
       </li>
       <li>
-        <a aria-selected="true" role="tab" href="#section2">Unemployed</a>
+        <a class="tpl defaults" aria-selected="true" role="tab" href="#section2"
+          >Unemployed</a
+        >
       </li>
     </ol>
     <div class="wrapper-content">
@@ -137,6 +141,20 @@ ol {
   display: grid;
   align-content: start;
   gap: 0.4rem;
+}
+
+li a {
+  --bg: var(--clr-30);
+  --brd: var(--clr-35);
+}
+
+li [aria-selected='true'] {
+  --bg: var(--clr-50);
+  --brd: var(--clr-55);
+}
+
+li a:focus-within {
+  outline: 2px var(--clr-inv-300) solid;
 }
 
 li,
