@@ -75,6 +75,12 @@ li code {
   color: var(--clr-10);
 }
 
+li.tags.reverse {
+  --bg: var(--clr-inv-900);
+  --brd: white;
+  color: var(--clr-10);
+}
+
 @media (hover: hover) {
   .defaults:focus-visible,
   .defaults:hover {
@@ -82,6 +88,8 @@ li code {
     --brd: var(--clr-60);
   }
 
+  li.tags.reverse:hover,
+  li.tags.reverse:focus-visible,
   .reverse:focus-visible,
   .reverse:hover {
     --bg: var(--clr-inv-400);
