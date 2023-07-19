@@ -74,7 +74,7 @@ let fly_out = { y: -50, duration: 200 };
 
 <style>
 section > ul {
-  padding: 2rem 0;
+  padding-bottom: 1rem;
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(auto-fill, minmax(min(23rem, 100%), 1fr));

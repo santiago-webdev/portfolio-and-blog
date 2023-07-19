@@ -27,8 +27,8 @@ import LinkArrow from '$lib/components/navigation/LinkArrow.svelte';
 header {
   border-bottom-right-radius: 1.6rem;
   border-bottom-left-radius: 1.6rem;
-  padding-bottom: 1.4rem;
-  margin-bottom: 1.4rem;
+  padding-bottom: clamp(1rem, 2vw + 1rem, 6rem);
+  margin-bottom: clamp(1rem, 2vw + 1rem, 3rem);
   background: var(--clr-25);
 }
 
@@ -38,8 +38,8 @@ header {
   text-align: center;
 }
 
-.wrapper-index > * + * {
-  margin-block-start: 1em;
+.wrapper-index p {
+  margin-top: 1rem;
 }
 
 ul {
@@ -50,7 +50,7 @@ ul {
 .back-button {
   width: min(100% - 2.2rem, var(--base));
   margin-inline: auto;
-  padding-top: 0.8rem;
+  padding-top: 0.5rem;
   margin-bottom: 1rem;
 }
 </style>

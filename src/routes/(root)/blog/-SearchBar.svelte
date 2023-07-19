@@ -72,6 +72,8 @@ form {
   padding: 0.4rem 0.8rem;
   gap: 0.2rem;
   border-radius: 1rem;
+
+  margin-top: 2rem;
 }
 
 input:-moz-placeholder,

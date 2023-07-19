@@ -145,7 +145,7 @@ if (title) {
 main {
   width: min(100% - 2.2rem, var(--sm));
   margin-inline: auto;
-  padding-top: clamp(1rem, 2vw + 1rem, 6rem);
+  margin-top: clamp(1rem, 2vw + 1rem, 3rem);
 }
 
 :global(.blog-post p img),

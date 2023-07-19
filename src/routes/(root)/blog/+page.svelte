@@ -37,9 +37,9 @@ main {
   background-color: var(--clr-25);
   border-bottom-right-radius: 1.6rem;
   border-bottom-left-radius: 1.6rem;
-  padding-bottom: 1.4rem;
+  padding-bottom: clamp(1rem, 2vw + 1rem, 6rem);
+  margin-bottom: clamp(1rem, 2vw + 1rem, 3rem);
   display: grid;
-  gap: 2.4rem;
 }
 
 h1,
@@ -54,14 +54,18 @@ header {
 }
 
 hgroup {
+  margin-top: 1.5rem;
   display: grid;
   place-items: center;
-  gap: 1.6rem;
+  /* gap: 1.6rem; */
+}
+
+hgroup p {
+  margin-top: 1rem;
 }
 
 .back-button {
-  margin-top: 0.8rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
   display: grid;
   place-items: end;
 }
