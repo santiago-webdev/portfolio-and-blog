@@ -41,10 +41,8 @@ import config from '$lib/config.json';
 }
 
 main {
-  display: flex;
-  gap: 1.6rem;
+  display: grid;
   place-items: center;
-  flex-direction: column;
   width: min(100% - 2.2rem, var(--md));
   margin-inline: auto;
   position: relative;
@@ -77,6 +75,7 @@ section {
 
 .call-to-scroll {
   place-self: start;
+  margin-top: 2rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -100,7 +99,6 @@ section {
 
 @media screen and (min-width: 1280px) {
   main {
-    flex-flow: row;
     padding: 6rem 0;
     text-align: left;
     min-height: 80vh;
