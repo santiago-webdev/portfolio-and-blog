@@ -49,8 +49,8 @@ const clickOutside = (modal: HTMLDialogElement) =>
   <span>&nbsp;&nbsp</span>
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
+    width="22"
+    height="22"
     viewBox="0 0 24 24"
   >
     <g
@@ -254,9 +254,19 @@ input {
   width: 100%;
 }
 
+input::placeholder,
+form button {
+  color: var(--clr-inv-600);
+}
+
+input:focus::placeholder {
+  color: transparent;
+}
+
 input,
-form {
-  color: var(--clr-inv-700);
+form:focus-within button {
+  color: var(--clr-inv-800);
+  background-color: inherit;
 }
 
 ul:empty {

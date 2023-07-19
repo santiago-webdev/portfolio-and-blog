@@ -111,7 +111,7 @@ input:focus::placeholder {
 
 input,
 form:focus-within button {
-  color: inherit;
+  color: var(--clr-inv-800);
   background-color: inherit;
 }
 

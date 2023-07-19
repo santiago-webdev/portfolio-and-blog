@@ -64,15 +64,15 @@ h1 {
 }
 
 p {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   max-width: 38ch;
 }
 
 section {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  margin-top: 2rem;
+  gap: 1rem;
+  margin-top: 2.5rem;
 }
 
 .call-to-scroll {
@@ -83,11 +83,10 @@ section {
   section {
     flex-direction: row;
     place-items: start;
-    gap: 1.2rem;
   }
 
   small {
-    padding-inline: 1.8rem;
+    padding-inline: 2rem;
     display: block;
     margin-top: 0.5rem;
   }
