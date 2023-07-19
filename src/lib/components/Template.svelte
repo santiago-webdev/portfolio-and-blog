@@ -159,7 +159,6 @@ header {
 }
 
 .wrapper-header {
-  /* gap: 1.2rem; */
   margin-top: 1.5rem;
   text-align: center;
   padding-bottom: clamp(1rem, 2vw + 1rem, 6rem);
@@ -169,10 +168,6 @@ header p {
   max-width: 44ch;
   margin-top: 1rem;
   margin-inline: auto;
-}
-
-.tags {
-  margin-top: 0.5rem;
 }
 
 .wip {
@@ -187,6 +182,8 @@ small {
 ul {
   max-width: var(--sm);
   margin-inline: auto;
+  justify-content: center;
+  margin-top: 0.75rem;
 }
 
 time {
@@ -205,6 +202,7 @@ details {
   max-width: var(--sm);
   margin-inline: auto;
   padding: 0.4rem 0.8rem;
+  margin-top: 1rem;
   text-align: left;
 }
 
