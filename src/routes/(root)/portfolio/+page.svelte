@@ -14,15 +14,15 @@ import { retrieve_icon } from '$lib/utils/utils';
   <div class="wrapper-header">
     <header>
       <hgroup>
-        <span class="font-20">Portfolio Showcase &mdash;</span>
-        <h1 class="font-60">
+        <small>PORTFOLIO SHOWCASE &mdash;</small>
+        <h1 class="font-fluid-2">
           {getCategoryInfo($currentGroupOfProjects).label} Projects
         </h1>
-        <p class="font-50">
+        <p class="font-h3">
           {getCategoryInfo($currentGroupOfProjects).description}
         </p>
       </hgroup>
-      <form class="font-50">
+      <form class="font-h3">
         <label for="projects">
           Filter by type of project
           <noscript>
@@ -64,11 +64,7 @@ import { retrieve_icon } from '$lib/utils/utils';
               {/each}
             </div>
             <div class="artifact-link">
-              <a
-                class="font-30"
-                href={link.toString()}
-                target="_blank"
-                rel="external">{link}</a
+              <a href={link.toString()} target="_blank" rel="external">{link}</a
               >
             </div>
           </figcaption>
@@ -82,12 +78,12 @@ import { retrieve_icon } from '$lib/utils/utils';
         <div id="describe-{name}">
           <header>
             <div style:gap="2ch" class="inline-items">
-              <a href={link.toString()} target="_blank" class="font-40">
+              <a class="font-h3" href={link.toString()} target="_blank">
                 {link.hostname.replace(/^www\./i, '')}
               </a>
               <ul class="inline-items">
                 {#each category as tags}
-                  <li class="tpl">
+                  <li class="tpl tags">
                     {getCategoryInfo(tags).label}
                   </li>
                 {/each}
@@ -96,13 +92,13 @@ import { retrieve_icon } from '$lib/utils/utils';
           </header>
           <p>{description}</p>
 
-          <h3 class="font-30">Tech Stack:</h3>
+          <h3 class="font-sub">Tech Stack:</h3>
           {#if stack.frontend}
             <div class="list-project-frontend">
-              <h4 class="font-30">Frontend:</h4>
+              <h4 class="font-sub">Frontend:</h4>
               <ul class="inline-items">
                 {#each stack.frontend as tags}
-                  <li class="tpl font-20">
+                  <li class="tpl tags font-sub">
                     <iconify-icon width="22" icon={retrieve_icon(tags)} />
                     {tags}
                   </li>
@@ -112,10 +108,10 @@ import { retrieve_icon } from '$lib/utils/utils';
           {/if}
           {#if stack.api}
             <div class="list-project-api">
-              <h4 class="font-30">API:</h4>
+              <h4 class="font-sub">API:</h4>
               <ul class="inline-items">
                 {#each stack.api as tags}
-                  <li class="tpl font-20">
+                  <li class="tpl tags font-sub">
                     <iconify-icon width="22" icon={retrieve_icon(tags)} />
                     {tags}
                   </li>
@@ -125,10 +121,10 @@ import { retrieve_icon } from '$lib/utils/utils';
           {/if}
           {#if stack.backend}
             <div class="list-project-backend">
-              <h4 class="font-30">Backend:</h4>
+              <h4 class="font-sub">Backend:</h4>
               <ul class="inline-items">
                 {#each stack.backend as tags}
-                  <li class="tpl font-20">
+                  <li class="tpl tags font-sub">
                     <iconify-icon width="22" icon={retrieve_icon(tags)} />
                     {tags}
                   </li>
@@ -154,16 +150,16 @@ import { retrieve_icon } from '$lib/utils/utils';
       </button>
       <div id="describe-new-project">
         <header>
-          <a href="#todo" target="_blank" class="font-40">
+          <a href="#todo" target="_blank">
             <span style:color="var(--clr-inv-700)">newdomain.com</span>
           </a>
-          <h2 class="font-30">Takeaway Interview?</h2>
+          <h2 class="font-sub">Takeaway Interview?</h2>
           <p>
             Try Me! As a junior developer with a passion for turning ideas into
             reality, I'm excited to work with you on your new project.
           </p>
           <ul>
-            <li class="tpl">New</li>
+            <li class="tpl font-sub">New</li>
           </ul>
         </header>
       </div>
@@ -195,12 +191,6 @@ hgroup {
   flex: 6;
   display: grid;
   gap: 1rem;
-}
-
-hgroup span {
-  font-weight: 800;
-  font-variation-settings: 'wght' 800;
-  color: var(--clr-inv-700);
 }
 
 hgroup p {
@@ -316,18 +306,6 @@ h4 {
     flex-direction: row;
     place-items: center;
   }
-}
-
-li {
-  --bg: var(--clr-40);
-  --brd: var(--clr-45);
-  border-radius: 0.6rem;
-  padding: 0.4rem 0.8rem;
-  font-family: var(--ff-dflt);
-  font-variation-settings: 'wght' 600;
-  display: flex;
-  gap: 0.5ch;
-  place-items: center;
 }
 
 figure {

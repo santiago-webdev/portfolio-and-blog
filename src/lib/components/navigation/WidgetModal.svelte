@@ -46,7 +46,7 @@ const clickOutside = (modal: HTMLDialogElement) =>
   on:click={toggleModal}
   class="tpl"
 >
-  <span class="font-40">&nbsp;&nbsp</span>
+  <span>&nbsp;&nbsp</span>
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="24"
@@ -64,7 +64,7 @@ const clickOutside = (modal: HTMLDialogElement) =>
       <path d="m21 21l-4.35-4.35" />
     </g>
   </svg>
-  <kbd class="font-20">Ctrl K</kbd>
+  <kbd class="font-sub">CTRL K</kbd>
 </button>
 <dialog
   class="tpl"
@@ -85,7 +85,7 @@ const clickOutside = (modal: HTMLDialogElement) =>
         <iconify-icon width="24" icon="lucide:search" />
       </button>
       <input
-        class="font-50"
+        class="font-h3"
         placeholder="Search for articles"
         bind:value
         bind:this={input}
@@ -110,7 +110,7 @@ const clickOutside = (modal: HTMLDialogElement) =>
         on:click={toggleModal}
         type="button"
       >
-        <kbd class="font-40">Esc</kbd></button
+        <kbd class="font-sub">ESC</kbd></button
       >
     </div>
   </form>
@@ -120,9 +120,7 @@ const clickOutside = (modal: HTMLDialogElement) =>
       <li>
         <a class="selection" on:click={() => toggleModal()} href={post.href}>
           <article>
-            <h3 class="font-50" style="font-weight: 499;">
-              {post.title}
-            </h3>
+            <h3>{post.title}</h3>
             <p>{post.description}</p>
             {#if post.datetime}
               <small>

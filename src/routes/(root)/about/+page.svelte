@@ -25,12 +25,8 @@ const tools = [
 <main>
   <header>
     <hgroup>
-      <h1>Get to know me</h1>
-      <p>
-        <strong>
-          {greeting}
-        </strong>
-      </p>
+      <h1 class="font-fluid-3">Get to know me</h1>
+      <p><strong>{greeting}</strong></p>
       <p>
         I enjoy crafting simple interfaces, focusing in <em>maintainability</em
         >,
@@ -49,7 +45,7 @@ const tools = [
         >
         <ShapeButton
           href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/"
-          icon="github"
+          icon="linkedin"
         >
           LinkedIn</ShapeButton
         >

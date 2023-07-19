@@ -5,7 +5,7 @@ import ShapeAnchor from '$lib/components/navigation/ShapeAnchor.svelte';
 </script>
 
 <section id="contact">
-  <h2 class="font-70">Contact</h2>
+  <h2 class="font-fluid-3">Contact</h2>
   <p>
     Feel free to reach out to me via email at
     <ShapeAnchor href="mailto:santiagogonzalezbogado@gmail.com">

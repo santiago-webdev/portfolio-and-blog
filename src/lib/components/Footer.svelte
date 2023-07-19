@@ -37,15 +37,15 @@ const donateItems = [
 <footer>
   <header>
     <div class="aboutme tpl">
-      <h3 class="font-50">Santiago Gonzalez</h3>
-      <p class="font-40">
+      <h3>Santiago Gonzalez</h3>
+      <p>
         Crafting accessible web experiences without leaving the aesthetics
         aside.
       </p>
     </div>
 
     <nav aria-label="footer-navigation">
-      <h3 class="font-40">Sitemap</h3>
+      <h3 class="font-p">Sitemap</h3>
       <ul>
         {#each $navigationItems as item}
           {#if item.label !== 'Separator'}
@@ -67,7 +67,7 @@ const donateItems = [
     </nav>
 
     <div class="projects">
-      <h3 class="font-40">Projects</h3>
+      <h3 class="font-p">Projects</h3>
       <ul>
         <li>
           <a class="selection" target="_blank" href="https://zapzsh.org"
@@ -88,7 +88,7 @@ const donateItems = [
     </div>
 
     <div class="donate">
-      <h3 class="font-40">Donate</h3>
+      <h3 class="font-p">Donate</h3>
       <ul>
         {#each donateItems as item}
           <li>
@@ -114,7 +114,7 @@ const donateItems = [
     </div>
 
     <div class="contact">
-      <h3 class="font-40">Contact</h3>
+      <h3 class="font-p">Contact</h3>
       <address>
         <a
           class="selection"
@@ -148,7 +148,7 @@ const donateItems = [
     </div>
   </header>
   <section>
-    <div class="font-30 container-bottom">
+    <div class="font-p container-bottom">
       <a
         target="_blank"
         href="https://github.com/santigo-zero"
@@ -214,9 +214,8 @@ header {
   justify-content: space-between;
   padding: clamp(1rem, 3vw, 2rem) 0;
   gap: 2rem 1rem;
-  width: min(92%, var(--md));
+  width: min(100% - 2.2rem, var(--md));
   margin-inline: auto;
-  font-family: var(--ff-text);
 }
 
 header > * {
@@ -225,14 +224,13 @@ header > * {
 }
 
 .aboutme h3 {
-  font-variation-settings: 'wght' 600;
-  font-weight: 600;
+  font-variation-settings: 'wght' 700;
+  font-weight: 700;
 }
 
 header h3:not(.aboutme h3) {
   font-weight: 500;
   margin: 0 0.6rem 0.4rem;
-  font-family: var(--ff-text);
 }
 
 .aboutme {
@@ -250,8 +248,13 @@ header h3:not(.aboutme h3) {
   border-radius: 1.2rem;
 }
 
+p,
+a {
+  color: var(--clr-inv-800);
+}
+
 .aboutme p {
-  color: var(--clr-inv-500);
+  color: var(--clr-inv-700);
 }
 
 .aboutme:after {
@@ -336,16 +339,17 @@ section {
 }
 
 section :is(small, a) {
-  color: var(--clr-inv-800);
-  font-variation-settings: 'wght' 530;
-  font-family: var(--ff-dflt);
+  font-family: var(--ff-ui);
   font-size: inherit;
+  font-variation-settings: 'wght' 500;
+  font-weight: 500;
+  color: var(--clr-inv-800);
 }
 
 @media (hover: hover) {
   .container-bottom a:hover,
   .container-bottom a:hover > * {
-    color: var(--clr-red-40);
+    color: var(--clr-red-old);
   }
 }
 
@@ -355,7 +359,7 @@ section :is(small, a) {
   place-items: center;
   gap: 1.2rem;
   padding: 2rem 0;
-  width: min(92%, var(--md));
+  width: min(100% - 2.2rem, var(--md));
   margin-inline: auto;
 }
 

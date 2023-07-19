@@ -5,7 +5,7 @@ export let href = '/';
 export let icon = '';
 </script>
 
-<a {href} {...$$restProps} class={`tpl defaults font-20 ${$$props.class}`}>
+<a {href} {...$$restProps} class={`tpl defaults font-sub ${$$props.class}`}>
   <span>
     <slot />
     {#if icon}
@@ -38,9 +38,6 @@ a {
   place-content: center;
   place-items: center;
   text-transform: uppercase;
-
-  font-weight: 800;
-  font-variation-settings: 'wght' 800;
   border-radius: 999rem;
 
   --pad-height: 16px;

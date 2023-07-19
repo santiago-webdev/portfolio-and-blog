@@ -13,12 +13,12 @@ function getPic(id: number) {
 <div id="mention-blog">
   <div class="wrapper">
     <div class="intro">
-      <h2>Blog articles</h2>
+      <h2 class="font-fluid-2">Blog articles</h2>
       <div class="goto-blog">
         <p>
-          Press <kbd aria-keyshortcuts="Control+K">Ctrl K</kbd> or
+          Press <kbd aria-keyshortcuts="Control+K">CTRL K</kbd> or
         </p>
-        <LinkArrow class="font-40" orientation="right" href="{base}/blog"
+        <LinkArrow orientation="right" href="{base}/blog"
           >See the full blog</LinkArrow
         >
       </div>
@@ -44,7 +44,7 @@ function getPic(id: number) {
                 No date provided
               </small>
             {/if}
-            <h3>{title}</h3>
+            <h3 class="font-fluid-1">{title}</h3>
           </article>
         </a>
       {/each}
@@ -72,7 +72,7 @@ function getPic(id: number) {
 
 .intro {
   display: flex;
-  flex-flow: row wrap-reverse;
+  flex-flow: row wrap;
   gap: 1.4rem;
   justify-content: space-between;
   place-items: flex-start;
@@ -85,6 +85,7 @@ function getPic(id: number) {
 
 kbd {
   font-size: inherit;
+  line-height: inherit;
   font-weight: normal;
 }
 

@@ -23,9 +23,9 @@ boldWords.forEach((word: string) => {
       <LinkArrow orientation="right" href="{base}/blog/index">Index</LinkArrow>
     </div>
     <hgroup>
-      <h1 class="font-90">Blog</h1>
+      <h1 class="font-fluid-5">Blog</h1>
       <!-- eslint-disable -->
-      <p class="font-50">{@html description}</p>
+      <p class="font-h3">{@html description}</p>
     </hgroup>
   </header>
   <SearchBar />
@@ -61,7 +61,7 @@ hgroup {
 
 .back-button {
   margin-top: 0.8rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 1rem;
   display: grid;
   place-items: end;
 }

@@ -10,7 +10,7 @@ import LinkArrow from '$lib/components/navigation/LinkArrow.svelte';
       <LinkArrow orientation="left" href="{base}/blog">Back to Blog</LinkArrow>
     </div>
     <div class="wrapper-index">
-      <h1 class="font-90">Index</h1>
+      <h1 class="font-fluid-5">Index</h1>
       <p>This is the full list of all the blog posts I've written.</p>
     </div>
   </header>
@@ -34,8 +34,8 @@ header {
 
 .wrapper-index {
   width: min(100% - 2.2rem, var(--base));
-  text-align: center;
   margin-inline: auto;
+  text-align: center;
 }
 
 .wrapper-index > * + * {
@@ -48,9 +48,9 @@ ul {
 }
 
 .back-button {
-  margin-inline: auto;
   width: min(100% - 2.2rem, var(--base));
+  margin-inline: auto;
   padding-top: 0.8rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 1rem;
 }
 </style>

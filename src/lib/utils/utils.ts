@@ -103,7 +103,7 @@ export function retrieve_icon(symbol: string): string | undefined {
     case 'postgresql':
       return 'devicon-plain:postgresql';
     case 'linkedin':
-      return 'devicon-plain:linkedin';
+      return 'mdi:linkedin';
     case 'github':
     case 'github rest api':
       return 'mdi:github';

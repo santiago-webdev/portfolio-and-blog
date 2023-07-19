@@ -7,8 +7,8 @@ import { FilteredProjects } from '$lib/components/projects/store';
 <div class="wrapper-portfolio">
   <div id="portfolio" class="portfolio">
     <section>
-      <h2>My work</h2>
-      <p class="font-50">
+      <h2 class="font-fluid-2">My work</h2>
+      <p class="font-h3">
         I've contributed to FOSS as well as created some projects of my own. You
         can find all of my projects
         <ShapeAnchor href="{base}/portfolio">tracked here</ShapeAnchor>.
@@ -25,7 +25,7 @@ import { FilteredProjects } from '$lib/components/projects/store';
             {$FilteredProjects[0].name}
             <iconify-icon icon="lucide:external-link" />
           </h3>
-          <p class="font-40">
+          <p>
             {$FilteredProjects[0].short_description}
           </p>
         </a>
@@ -40,7 +40,7 @@ import { FilteredProjects } from '$lib/components/projects/store';
             {$FilteredProjects[1].name}
             <iconify-icon icon="lucide:external-link" />
           </h3>
-          <p class="font-40">
+          <p>
             {$FilteredProjects[1].short_description}
           </p>
         </a>
@@ -51,9 +51,7 @@ import { FilteredProjects } from '$lib/components/projects/store';
             Project
             <iconify-icon icon="lucide:external-link" />
           </h3>
-          <p class="font-40">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          </p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
         </a>
       </li>
     </ol>

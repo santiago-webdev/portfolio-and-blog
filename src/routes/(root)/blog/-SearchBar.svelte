@@ -25,7 +25,7 @@ $: if ($FilteredPosts.length === 1)
   preloadData(`${base}/blog${$FilteredPosts[0].href}`);
 </script>
 
-<form class="font-50 tpl" on:submit|preventDefault={handleSubmit}>
+<form class="font-h3 tpl" on:submit|preventDefault={handleSubmit}>
   <button aria-label="Go to selected blog" type="submit">
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,6 @@ $: if ($FilteredPosts.length === 1)
     type="search"
     autocomplete="off"
   />
-  <kbd class="font-30">Ctrl K</kbd>
 </form>
 
 <style>
@@ -66,18 +65,13 @@ form {
   place-items: center;
   margin-inline: auto;
   position: relative;
-  width: min(100% - 2.2rem, var(--sm));
+  width: min(100% - 2.2rem, 640px);
 
   transition: background-color 50ms, border 80ms, box-shadow 300ms;
 
   padding: 0.4rem 0.8rem;
   gap: 0.2rem;
   border-radius: 1rem;
-}
-
-form > *:not(kbd) {
-  font-size: inherit;
-  line-height: inherit;
 }
 
 input:-moz-placeholder,
@@ -125,10 +119,5 @@ button {
   display: grid;
   place-items: center;
   padding-inline: 0.8rem;
-}
-
-kbd {
-  position: absolute;
-  right: 1.3rem;
 }
 </style>

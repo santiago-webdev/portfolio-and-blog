@@ -8,10 +8,10 @@ import config from '$lib/config.json';
 <div class="wrapper">
   <main>
     <div class="introduction">
-      <h1 class="font-90">
+      <h1 class="font-fluid-5">
         Building the web<br /> with clean interfaces
       </h1>
-      <p class="font-50">
+      <p class="font-h3">
         I'm a frontend developer and here we'll discuss about
         <strong>web deve&shylopment</strong>
         and show you my projects while at it.

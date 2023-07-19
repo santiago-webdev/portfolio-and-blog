@@ -9,7 +9,7 @@ export let defaults = false;
 
 <a
   style:gap={orientation === 'left' ? '0.6ch' : '0.2ch'}
-  class="font-40"
+  class="font-p"
   class:defaults
   {href}
   {...$$restProps}

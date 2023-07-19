@@ -5,31 +5,31 @@ import { base } from '$app/paths';
 </script>
 
 <div class="wrapper-about">
-  <h2 class="font-70">About</h2>
+  <h2 class="font-fluid-2">About</h2>
   <div class="aboutme">
     <section>
-      <p>
+      <p class="font-h3">
         <strong> Hello, my name is Santiago. </strong>
       </p>
-      <p>
+      <p class="font-h3">
         I'm a web developer based in <em>Argentina</em> with a passion for
         <em>Free And Open Source</em>,
         <em>UI/UX</em> and <em>Linux</em>. I'm fluent in English and Spanish.
       </p>
-      <p>
+      <p class="font-h3">
         I enjoy crafting simple interfaces, focusing in
         <em>maintainability</em>, <em>accessibility</em> and
         <em>progressive enhancement</em>.
       </p>
     </section>
     <div class="familiar-stack">
-      <p>And this is the stack I'm most comfortable with</p>
+      <p class="font-h3">And this is the stack I'm most comfortable with</p>
       <ul class="generic">
-        <li>JavaScript(ES6+)</li>
-        <li>React</li>
-        <li>Node.js</li>
-        <li>SQL</li>
-        <li>Python</li>
+        <li class="font-h3">JavaScript(ES6+)</li>
+        <li class="font-h3">React</li>
+        <li class="font-h3">Node.js</li>
+        <li class="font-h3">SQL</li>
+        <li class="font-h3">Python</li>
       </ul>
     </div>
   </div>

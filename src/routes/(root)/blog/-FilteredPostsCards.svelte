@@ -15,31 +15,28 @@ let fly_out = { y: -50, duration: 200 };
       <li in:fly={fly_in} out:fly={fly_out}>
         <a href={post.href}>
           <article class="tpl">
-            <h2 class="font-50">
+            <h2>
               {post.title}
             </h2>
-            {#if post.description}
-              <p>{post.description}</p>
-            {/if}
 
             {#if post.tags}
-              <ul class="tags">
+              <ul class="inline-items">
                 {#each post.tags as tag}
                   <li
                     style:display={!isLocal && tag === 'Publish' ? 'none' : ''}
-                    class="tpl font-30 {tag === 'Publish'
+                    class="tpl tags font-sub {tag === 'Publish'
                       ? 'reverse'
                       : 'default'}"
                   >
-                    <iconify-icon
-                      width="20"
-                      height="20"
-                      icon={retrieve_icon(tag)}
-                    />
+                    <iconify-icon width="22" icon={retrieve_icon(tag)} />
                     {tag}
                   </li>
                 {/each}
               </ul>
+            {/if}
+
+            {#if post.description}
+              <p>{post.description}</p>
             {/if}
 
             {#if post.datetime}
@@ -80,7 +77,7 @@ let fly_out = { y: -50, duration: 200 };
 </section>
 
 <style>
-ul {
+section > ul {
   padding: 2rem 0;
   display: grid;
   gap: 1rem;
@@ -93,16 +90,16 @@ li {
   transition: opacity 0.3s;
 }
 
-ul:hover > li {
+section > ul:hover > li {
   opacity: 0.8;
 }
 
-ul:hover > li:hover {
+section > ul:hover > li:hover {
   opacity: 1;
 }
 
 @supports (grid-template-rows: masonry) {
-  ul {
+  section > ul {
     grid-template-rows: masonry;
   }
 }
@@ -130,10 +127,6 @@ article > * + * {
   }
 }
 
-h2 {
-  font-variation-settings: 'wght' 600;
-}
-
 p {
   color: var(--clr-inv-700);
 }
@@ -148,31 +141,5 @@ small {
   color: var(--clr-inv-700);
   padding: 0.4rem;
   border-radius: 8px;
-}
-
-.tags {
-  --bg: var(--clr-35);
-  --brd: var(--clr-40);
-  padding: 0;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 2rem;
-}
-
-.tags li {
-  display: flex;
-  place-items: center;
-  padding: 0.3rem 0.8rem;
-  /* margin-top: 0.6rem; */
-  gap: 0.5ch;
-  /* padding: 0.4rem 0.8rem; */
-  border-radius: 0.75rem;
-}
-
-.tags li.default {
-  --bg: var(--clr-40);
-  --brd: var(--clr-45);
 }
 </style>

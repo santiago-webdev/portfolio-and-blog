@@ -49,23 +49,23 @@ if (title) {
     <div class="wrapper-header">
       <hgroup>
         {#if isHollow}
-          <h1 class="font-90">
+          <h1 class="font-fluid-5">
             <Hollow color={'var(--clr-inv-800)'}>{hollowPrefix}</Hollow>
             {fillSuffix}
           </h1>
         {:else}
-          <h1 class="font-90">{title}</h1>
+          <h1 class="font-fluid-5">{title}</h1>
         {/if}
         {#if description}
-          <p class="font-50">{description}</p>
+          <p class="font-h3">{description}</p>
         {/if}
       </hgroup>
       {#if tags}
-        <ul class="tags inline-items">
+        <ul class="inline-items">
           {#each tags as tag}
             <li
               style:display={!isLocal && tag === 'Publish' ? 'none' : ''}
-              class="tpl default font-20"
+              class="tpl tags font-sub"
             >
               <iconify-icon width="22" height="22" icon={retrieve_icon(tag)} />
               {tag}
@@ -107,7 +107,7 @@ if (title) {
       {/if}
 
       {#if summary}
-        <details class="tpl font-40">
+        <details class="tpl font-p">
           <summary>Summary</summary>
           {summary}
         </details>
@@ -134,7 +134,7 @@ if (title) {
   margin-inline: auto;
   width: min(100% - 2.2rem, var(--base));
   margin-top: 0.8rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 1rem;
 }
 
 .wrapper-header,
@@ -184,24 +184,13 @@ small {
   font-weight: 500;
 }
 
-.tags {
-  /* width: min(100%, var(--sm)); */
+ul {
   max-width: var(--sm);
   margin-inline: auto;
-  place-content: center;
 }
 
-.tags li {
-  --bg: var(--clr-40);
-  --brd: var(--clr-45);
+li.tags {
   margin-top: 1rem;
-  display: flex;
-  place-items: center;
-  gap: 0.5ch;
-  font-variation-settings: 'wght' 550;
-  font-family: var(--ff-dflt);
-  padding: 0.4rem 0.8rem;
-  border-radius: 0.75rem;
 }
 
 time {

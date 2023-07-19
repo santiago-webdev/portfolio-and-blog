@@ -1,3 +1,3 @@
-<ul class="generic font-20">
+<ul class="generic">
   <slot />
 </ul>

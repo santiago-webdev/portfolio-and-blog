@@ -83,7 +83,7 @@ onMount(() => {
 </script>
 
 <div class="wrapper-experience tpl">
-  <h2 class="font-60">What I'm up to today</h2>
+  <h2 class="font-fluid-2">What I'm up to today</h2>
   <div bind:this={tabbed} class="tabbed">
     <!-- TODO(santigo-zero): I have to redo styles for this -->
     <ol bind:this={tablist} role="tablist">
@@ -103,7 +103,7 @@ onMount(() => {
         <div style="display: flex; gap: 0.5ch" class="position">
           <h3>And still learning</h3>
         </div>
-        <div style="display: flex; gap: 0.5ch" class="timeframe font-50">
+        <div style="display: flex; gap: 0.5ch" class="timeframe font-fluid-1">
           <time datetime="2022">2022 &mdash; present</time>
         </div>
         <p>
