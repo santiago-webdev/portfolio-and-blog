@@ -2,6 +2,7 @@
 import { base } from '$app/paths';
 import { Posts } from '$lib/components/blog/store';
 import LinkArrow from '$lib/components/navigation/LinkArrow.svelte';
+import ShapeAnchor from '$lib/components/navigation/ShapeAnchor.svelte';
 </script>
 
 <main>
@@ -17,7 +18,7 @@ import LinkArrow from '$lib/components/navigation/LinkArrow.svelte';
   <ul class="generic">
     {#each $Posts as post}
       <li class="generic">
-        <a class="link" href={post.href}>{post.title}</a>
+        <ShapeAnchor href={post.href}>{post.title}</ShapeAnchor>
       </li>
     {/each}
   </ul>

@@ -39,7 +39,7 @@ a {
   line-height: inherit;
 
   color: var(--clr-blue-40);
-  text-decoration: underline var(--clr-45) 2px;
+  text-decoration: underline var(--clr-45) 1px;
   text-underline-offset: 3px;
 
   gap: 0.2ch;
