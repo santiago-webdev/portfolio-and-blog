@@ -47,7 +47,7 @@ if (title) {
       <LinkArrow orientation="left" href="{base}/blog">Back to Blog</LinkArrow>
     </div>
     <div class="wrapper-header">
-      <hgroup>
+      <header>
         {#if isHollow}
           <h1 class="font-fluid-5">
             <Hollow color={'var(--clr-inv-800)'}>{hollowPrefix}</Hollow>
@@ -59,7 +59,7 @@ if (title) {
         {#if description}
           <p class="font-h3">{description}</p>
         {/if}
-      </hgroup>
+      </header>
       {#if tags}
         <ul class="inline-items">
           {#each tags as tag}
@@ -98,7 +98,6 @@ if (title) {
           {dateReadable}
         </time>
       {/if}
-
       {#if !finished}
         <div class="wip">
           <small>🏗 Construction site, keep out 🏗</small>
@@ -133,8 +132,7 @@ if (title) {
 .back-button {
   margin-inline: auto;
   width: min(100% - 2.2rem, var(--base));
-  margin-top: 0.8rem;
-  margin-bottom: 1rem;
+  margin-top: 0.5rem;
 }
 
 .wrapper-header,
@@ -155,29 +153,31 @@ main {
   margin-block-start: 1em;
 }
 
-hgroup {
+header {
   display: flex;
   flex-direction: column;
 }
 
-hgroup > * + * {
-  margin-block-start: 1em;
-}
-
 .wrapper-header {
-  gap: 1.2rem;
+  /* gap: 1.2rem; */
+  margin-top: 1.5rem;
   text-align: center;
   padding-bottom: clamp(1rem, 2vw + 1rem, 6rem);
 }
 
-.wrapper-header p {
+header p {
   max-width: 44ch;
+  margin-top: 1rem;
   margin-inline: auto;
+}
+
+.tags {
+  margin-top: 0.5rem;
 }
 
 .wip {
   place-items: center;
-  margin-top: 0.6rem;
+  margin-top: 0.5rem;
 }
 
 small {
@@ -189,15 +189,12 @@ ul {
   margin-inline: auto;
 }
 
-li.tags {
-  margin-top: 1rem;
-}
-
 time {
   display: flex;
   place-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin-top: 2rem;
 }
 
 details {
