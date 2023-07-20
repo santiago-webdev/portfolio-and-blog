@@ -88,12 +88,12 @@ onMount(() => {
     <!-- TODO(santigo-zero): I have to redo styles for this -->
     <ol bind:this={tablist} role="tablist">
       <li>
-        <a class="tpl defaults" role="tab" href="#section1"
+        <a class="tpl" role="tab" href="#section1"
           >Add job <span>+</span></a
         >
       </li>
       <li>
-        <a class="tpl defaults" aria-selected="true" role="tab" href="#section2"
+        <a class="tpl" aria-selected="true" role="tab" href="#section2"
           >Unemployed</a
         >
       </li>

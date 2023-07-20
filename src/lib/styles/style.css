@@ -67,6 +67,7 @@ li code {
 .defaults {
   --bg: var(--clr-700);
   --brd: var(--clr-800);
+  color: var(--clr-inv-800);
 }
 
 .reverse {
@@ -86,7 +87,7 @@ li.tags.reverse {
   .defaults:hover {
     --bg: var(--clr-purple-50);
     --brd: var(--clr-purple-40);
-    color: var(--clr-100)
+    color: var(--clr-inv-900);
   }
 
   li.tags.reverse:hover,
