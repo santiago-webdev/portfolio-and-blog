@@ -34,7 +34,7 @@ boldWords.forEach((word: string) => {
 
 <style>
 main {
-  background-color: var(--clr-25);
+  background-color: var(--clr-400);
   border-bottom-right-radius: 1.6rem;
   border-bottom-left-radius: 1.6rem;
   padding-bottom: clamp(1rem, 2vw + 1rem, 6rem);

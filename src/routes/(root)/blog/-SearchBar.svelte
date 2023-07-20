@@ -59,7 +59,7 @@ $: if ($FilteredPosts.length === 1)
 
 <style>
 form {
-  --bg: var(--clr-40);
+  --bg: var(--clr-600);
   --brd: var(--bg);
   display: flex;
   place-items: center;

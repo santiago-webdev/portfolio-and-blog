@@ -112,7 +112,7 @@ const tools = [
 
 <style>
 main {
-  background-color: var(--clr-25);
+  background-color: var(--clr-400);
 }
 
 header {
@@ -141,7 +141,7 @@ hgroup > * + * {
 }
 
 img {
-  border: 8px solid var(--clr-45);
+  border: 8px solid var(--clr-700);
   object-fit: cover;
   max-width: 20rem;
   max-height: 20rem;
@@ -151,7 +151,7 @@ img {
 }
 
 #experience {
-  background-color: var(--clr-05);
+  background-color: var(--clr-100);
   padding: 3rem 0;
 }
 
@@ -174,7 +174,7 @@ ul {
 }
 
 li {
-  --bg: var(--clr-20);
+  --bg: var(--clr-300);
   --brd: var(--bg);
 
   display: flex;

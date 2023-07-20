@@ -36,7 +36,7 @@ import config from '$lib/config.json';
 
 <style>
 .wrapper {
-  background: var(--clr-25);
+  background: var(--clr-400);
   padding: 2rem 0;
 }
 

@@ -30,7 +30,7 @@ header {
   border-bottom-left-radius: 1.6rem;
   padding-bottom: clamp(1rem, 2vw + 1rem, 6rem);
   margin-bottom: clamp(1rem, 2vw + 1rem, 3rem);
-  background: var(--clr-25);
+  background: var(--clr-400);
 }
 
 .wrapper-index {

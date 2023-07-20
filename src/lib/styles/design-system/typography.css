@@ -54,7 +54,7 @@ pre {
   font-size: var(--fs-sub);
   line-height: calc(var(--fs-sub) * 1.5);
 
-  background: var(--clr-25);
+  background: var(--clr-400);
   border-radius: 0.6rem;
   padding: 1rem;
 

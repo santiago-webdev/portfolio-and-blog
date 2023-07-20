@@ -121,7 +121,7 @@ if (title) {
 
 <style>
 [role='banner'] {
-  background-color: var(--clr-25);
+  background-color: var(--clr-400);
   border-bottom-right-radius: 1.6rem;
   border-bottom-left-radius: 1.6rem;
   display: flex;
@@ -195,7 +195,7 @@ time {
 }
 
 details {
-  --bg: var(--clr-40);
+  --bg: var(--clr-600);
   --brd: var(--bg);
   font-family: var(--ff-text);
   display: flex;

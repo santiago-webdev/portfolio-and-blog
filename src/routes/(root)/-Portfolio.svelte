@@ -60,7 +60,7 @@ import { FilteredProjects } from '$lib/components/projects/store';
 
 <style>
 .wrapper-portfolio {
-  background: var(--clr-05);
+  background: var(--clr-100);
 }
 
 .portfolio {
@@ -132,7 +132,7 @@ h3 {
 }
 
 li:first-child {
-  --bg: var(--clr-30);
+  --bg: var(--clr-700);
   --brd: var(--bg);
 }
 
@@ -145,7 +145,7 @@ li:first-child p {
 }
 
 li:nth-child(2) {
-  --bg: var(--clr-25);
+  --bg: var(--clr-500);
   --brd: var(--bg);
 }
 
@@ -158,7 +158,7 @@ li:nth-child(2) p {
 }
 
 li:last-child {
-  --bg: blue;
+  --bg: var(--clr-300);
   --brd: var(--bg);
 }
 
@@ -172,17 +172,17 @@ li:last-child p {
 
 @media (hover: hover) {
   li:first-child:hover {
-    --bg: var(--clr-45);
+    --bg: var(--clr-700);
     --brd: var(--bg);
   }
 
   li:nth-child(2):hover {
-    --bg: var(--clr-40);
+    --bg: var(--clr-600);
     --brd: var(--bg);
   }
 
   li:last-child:hover {
-    --bg: var(--clr-30);
+    --bg: var(--clr-500);
     --brd: var(--bg);
   }
 }

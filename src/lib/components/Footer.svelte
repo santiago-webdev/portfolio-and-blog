@@ -195,14 +195,14 @@ footer {
   display: flex;
   place-content: center;
   flex-direction: column;
-  background-color: var(--clr-25);
+  background-color: var(--clr-400);
   margin-top: 1rem;
   border-top-right-radius: 1.6rem;
   border-top-left-radius: 1.6rem;
 }
 
 footer :is(a, small) {
-  /* color: var(--clr-200); */
+  /* color: var(--clr-3000); */
   display: flex;
   gap: 0.4ch;
   place-items: center;
@@ -234,7 +234,7 @@ header h3:not(.aboutme h3) {
 }
 
 .aboutme {
-  --bg: var(--clr-30);
+  --bg: var(--clr-500);
   --brd: var(--bg);
 
   display: flex;
@@ -335,7 +335,7 @@ nav {
 section {
   display: flex;
   place-content: center;
-  background: var(--clr-40);
+  background: var(--clr-600);
 }
 
 section :is(small, a) {

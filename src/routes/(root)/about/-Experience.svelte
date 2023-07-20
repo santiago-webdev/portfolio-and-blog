@@ -121,7 +121,7 @@ onMount(() => {
 
 <style>
 .wrapper-experience {
-  --bg: var(--clr-20);
+  --bg: var(--clr-300);
   --brd: var(--bg);
 
   width: min(96%, var(--base));
@@ -144,12 +144,12 @@ ol {
 }
 
 li a {
-  --bg: var(--clr-30);
+  --bg: var(--clr-500);
   --brd: var(--bg);
 }
 
 li [aria-selected='true'] {
-  --bg: var(--clr-50);
+  --bg: var(--clr-800);
   --brd: var(--bg);
 }
 

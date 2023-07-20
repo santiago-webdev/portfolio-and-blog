@@ -57,7 +57,7 @@ import { retrieve_icon } from '$lib/utils/utils';
                   viewBox="0 0 24 24"
                 >
                   <path
-                    fill="var(--clr-30)"
+                    fill="var(--clr-500)"
                     d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"
                   />
                 </svg>
@@ -173,7 +173,7 @@ import { retrieve_icon } from '$lib/utils/utils';
   border-bottom-left-radius: 1.6rem;
   padding-bottom: 1.4rem;
   padding-top: 1.8rem;
-  background-color: var(--clr-25);
+  background-color: var(--clr-400);
   display: flex;
   place-items: center;
 }
@@ -212,7 +212,7 @@ label {
 }
 
 .wrapper-select {
-  --bg: var(--clr-40);
+  --bg: var(--clr-600);
   --brd: var(--bg);
   padding: 0.6rem 1.6rem;
   border-radius: 1rem;
@@ -234,7 +234,7 @@ section {
 }
 
 article {
-  --bg: var(--clr-25);
+  --bg: var(--clr-400);
   --brd: var(--bg);
   border-radius: 1.2rem;
   display: flex;
@@ -313,7 +313,7 @@ figure {
   aspect-ratio: 16/10;
   flex: 5;
   overflow-y: scroll;
-  border: 3px solid var(--clr-50);
+  border: 3px solid var(--clr-800);
   border-radius: 0.8rem;
 }
 
@@ -334,7 +334,7 @@ figcaption {
   overflow-x: auto;
   padding: 0.2rem 1rem;
   width: 100%;
-  background: var(--clr-50);
+  background: var(--clr-800);
   border-radius: 6px;
   display: grid;
 }
@@ -354,7 +354,7 @@ button {
   cursor: pointer;
   flex: 5;
   aspect-ratio: 16/10;
-  border: 3px dashed var(--clr-50);
+  border: 3px dashed var(--clr-800);
   display: flex;
   place-items: center;
   place-content: center;
@@ -362,7 +362,7 @@ button {
 
 button:hover {
   border: 3px dashed var(--clr-orange-50);
-  background-color: var(--clr-40);
+  background-color: var(--clr-600);
 }
 
 [icon='lucide:plus'] {

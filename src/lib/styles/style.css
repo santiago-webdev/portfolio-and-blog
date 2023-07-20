@@ -9,7 +9,7 @@ html {
   scroll-behavior: smooth;
   color-scheme: light dark;
   font-family: var(--ff-text);
-  background-color: var(--clr-10);
+  background-color: var(--clr-200);
   color: var(--clr-inv-800);
 }
 
@@ -32,8 +32,8 @@ li code {
   overflow-wrap: break-word;
   word-break: break-word; /*word-wrap: break-word;*/
 
-  background: var(--clr-30);
-  border: 1px var(--clr-50) solid;
+  background: var(--clr-500);
+  border: 1px var(--clr-800) solid;
   color: var(--clr-inv-800);
   padding: 0.05rem 0.1rem;
   border-radius: 6px;
@@ -65,20 +65,20 @@ li code {
 }
 
 .defaults {
-  --bg: var(--clr-45);
+  --bg: var(--clr-700);
   --brd: var(--bg);
 }
 
 .reverse {
   --bg: var(--clr-inv-900);
   --brd: var(--bg);
-  color: var(--clr-10);
+  color: var(--clr-200);
 }
 
 li.tags.reverse {
   --bg: var(--clr-inv-900);
   --brd: var(--bg);
-  color: var(--clr-10);
+  color: var(--clr-200);
 }
 
 @media (hover: hover) {
@@ -86,7 +86,7 @@ li.tags.reverse {
   .defaults:hover {
     --bg: var(--clr-purple-50);
     --brd: var(--clr-purple-40);
-    color: var(--clr-05)
+    color: var(--clr-100)
   }
 
   li.tags.reverse:hover,
@@ -137,7 +137,7 @@ kbd {
   pointer-events: none;
   padding-inline: 0.4rem;
   border-radius: 0.5rem;
-  background-color: var(--clr-50);
+  background-color: var(--clr-800);
   /* font-size: 60%; */
   /* font-weight: bold; */
 }
@@ -150,7 +150,7 @@ kbd {
 }
 
 li.tags {
-  --bg: var(--clr-40);
+  --bg: var(--clr-600);
   --brd: var(--bg);
   border-top-width: 1px;
   border-radius: 0.8rem;
@@ -161,7 +161,7 @@ li.tags {
 }
 
 thead {
-  background: var(--clr-40);
+  background: var(--clr-600);
 }
 
 thead {
@@ -169,7 +169,7 @@ thead {
 }
 
 tr:nth-of-type(2n) {
-  background-color: var(--clr-25);
+  background-color: var(--clr-400);
 }
 
 /* th { */
@@ -191,11 +191,11 @@ th {
   }
 
   tr > *:not(:last-child) {
-    border-bottom: 2px var(--clr-25) solid;
+    border-bottom: 2px var(--clr-400) solid;
   }
 
   tr:nth-of-type(2n) > *:not(:last-child) {
-    border-bottom: 2px var(--clr-40) solid;
+    border-bottom: 2px var(--clr-600) solid;
   }
 
   td {

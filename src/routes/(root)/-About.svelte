@@ -46,7 +46,7 @@ import { base } from '$app/paths';
 
 <style>
 .wrapper-about {
-  background-color: var(--clr-20);
+  background-color: var(--clr-300);
   padding: 1rem 0;
 }
 

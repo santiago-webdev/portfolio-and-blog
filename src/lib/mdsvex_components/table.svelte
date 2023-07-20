@@ -7,13 +7,13 @@
 <style>
 .wrapper-table {
   border-radius: 12px;
-  border: 1px var(--clr-45) solid;
+  border: 1px var(--clr-700) solid;
   overflow: hidden;
 }
 
 table {
   width: 100%;
-  background-color: var(--clr-20);
+  background-color: var(--clr-300);
   display: grid;
 }
 

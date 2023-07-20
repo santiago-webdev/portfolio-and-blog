@@ -154,7 +154,7 @@ header {
   transition: background, transform 200ms cubic-bezier(0.5, 0.95, 0, 1);
   z-index: 999;
   padding: 0.2rem 0;
-  background: var(--clr-25);
+  background: var(--clr-400);
   border-bottom: 1px solid transparent;
 }
 
@@ -164,11 +164,11 @@ a {
 
 header.expanded {
   border-bottom: 2px solid var(--clr-inv-400);
-  background: var(--clr-30);
+  background: var(--clr-500);
 }
 
 header.scrollY {
-  background: var(--clr-30-trp);
+  background: var(--clr-500-trp);
   border-bottom-color: var(--clr-inv-200);
 }
 
@@ -200,7 +200,7 @@ button {
 }
 
 button[aria-expanded='true'] {
-  --bg: var(--clr-50);
+  --bg: var(--clr-800);
   --brd: var(--bg);
   box-shadow: var(--shadow);
 }
