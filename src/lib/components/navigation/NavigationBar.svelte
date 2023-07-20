@@ -3,7 +3,7 @@ import { base } from '$app/paths';
 import { page } from '$app/stores';
 import { afterNavigate } from '$app/navigation';
 
-import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
+// import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
 import WidgetModal from '$lib/components/navigation/WidgetModal.svelte';
 import { navigationItems } from '$lib/components/navigation/store';
 
@@ -87,7 +87,7 @@ $: {
       </button>
 
       <div class="list-items">
-        <ThemeSwitch />
+        <!-- <ThemeSwitch /> -->
         <div role="separator" aria-orientation="vertical" />
         {#each $navigationItems as { label, href }}
           {#if label === 'Separator'}
@@ -142,7 +142,7 @@ $: {
           <hr />
         {/if}
       {/each}
-      <ThemeSwitch />
+      <!-- <ThemeSwitch /> -->
     </section>
   </nav>
 </header>

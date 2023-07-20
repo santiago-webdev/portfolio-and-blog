@@ -21,34 +21,34 @@
       type="font/woff2"
       crossorigin
     />
-    <script>
-      const doc = document.documentElement;
-      const storedTheme = localStorage.getItem('theme');
-
-      if (storedTheme) {
-        doc.setAttribute('data-theme', storedTheme);
-        if (storedTheme === 'light' || storedTheme === 'system-light') {
-          doc.classList.add('light'); // Add the class based on the stored theme
-        } else {
-          doc.classList.remove('light'); // Add the class based on the stored theme
-        }
-      } else {
-        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
-          .matches
-          ? 'system'
-          : 'system-light';
-        doc.setAttribute('data-theme', systemTheme);
-        doc.classList.add(systemTheme); // Add the class based on the system theme
-      }
-
-      window.addEventListener('load', () => {
-        const storedData = localStorage.getItem('myData');
-        if (storedData) {
-          doc.setAttribute('data-theme', storedTheme);
-          doc.classList.add(storedTheme); // Add the class based on the stored theme
-        }
-      });
-    </script>
+    <!-- <script> -->
+    <!--   const doc = document.documentElement; -->
+    <!--   const storedTheme = localStorage.getItem('theme'); -->
+    <!---->
+    <!--   if (storedTheme) { -->
+    <!--     doc.setAttribute('data-theme', storedTheme); -->
+    <!--     if (storedTheme === 'light' || storedTheme === 'system-light') { -->
+    <!--       doc.classList.add('light'); // Add the class based on the stored theme -->
+    <!--     } else { -->
+    <!--       doc.classList.remove('light'); // Add the class based on the stored theme -->
+    <!--     } -->
+    <!--   } else { -->
+    <!--     const systemTheme = window.matchMedia('(prefers-color-scheme: dark)') -->
+    <!--       .matches -->
+    <!--       ? 'system' -->
+    <!--       : 'system-light'; -->
+    <!--     doc.setAttribute('data-theme', systemTheme); -->
+    <!--     doc.classList.add(systemTheme); // Add the class based on the system theme -->
+    <!--   } -->
+    <!---->
+    <!--   window.addEventListener('load', () => { -->
+    <!--     const storedData = localStorage.getItem('myData'); -->
+    <!--     if (storedData) { -->
+    <!--       doc.setAttribute('data-theme', storedTheme); -->
+    <!--       doc.classList.add(storedTheme); // Add the class based on the stored theme -->
+    <!--     } -->
+    <!--   }); -->
+    <!-- </script> -->
     %sveltekit.head%
   </head>
   <body id="body" data-sveltekit-preload-data="hover">
