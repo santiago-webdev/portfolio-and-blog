@@ -151,7 +151,7 @@ import { retrieve_icon } from '$lib/utils/utils';
       <div id="describe-new-project">
         <header>
           <a href="#todo" target="_blank">
-            <span style:color="var(--clr-inv-700)">newdomain.com</span>
+            <span style:color="var(--text-1)">newdomain.com</span>
           </a>
           <h2 class="font-sub">Takeaway Interview?</h2>
           <p>
@@ -194,7 +194,7 @@ hgroup {
 }
 
 hgroup p {
-  color: var(--clr-inv-600);
+  color: var(--text-0);
 }
 
 form {
@@ -220,7 +220,7 @@ label {
 
 select {
   width: 100%;
-  color: var(--clr-inv-700);
+  color: var(--text-1);
   background-color: inherit;
   border: none;
 }
@@ -273,7 +273,7 @@ article header {
 }
 
 h4 {
-  color: var(--clr-inv-700);
+  color: var(--text-1);
   font-variation-settings: 'wght' 700;
   font-weight: 500;
   min-width: 8ch;
@@ -322,7 +322,7 @@ figcaption {
   place-items: center;
   padding: 0.2rem;
   padding-right: 0.8rem;
-  background: red;
+  background: var(--clr-900);
 }
 
 .artifact-buttons {
@@ -366,10 +366,10 @@ button:hover {
 }
 
 [icon='lucide:plus'] {
-  color: var(--clr-inv-600);
+  color: var(--text-0);
 }
 
 button:hover [icon='lucide:plus'] {
-  color: var(--clr-inv-900);
+  color: var(--text-3);
 }
 </style>

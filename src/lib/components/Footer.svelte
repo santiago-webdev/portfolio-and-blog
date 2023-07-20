@@ -250,11 +250,11 @@ header h3:not(.aboutme h3) {
 
 p,
 a {
-  color: var(--clr-inv-800);
+  color: var(--text-2);
 }
 
 .aboutme p {
-  color: var(--clr-inv-700);
+  color: var(--text-1);
 }
 
 .aboutme:after {
@@ -343,7 +343,7 @@ section :is(small, a) {
   font-size: inherit;
   font-variation-settings: 'wght' 500;
   font-weight: 500;
-  color: var(--clr-inv-800);
+  color: var(--text-2);
 }
 
 @media (hover: hover) {

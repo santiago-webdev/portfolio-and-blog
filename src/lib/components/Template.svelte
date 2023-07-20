@@ -50,7 +50,7 @@ if (title) {
       <header>
         {#if isHollow}
           <h1 class="font-fluid-5">
-            <Hollow color={'var(--clr-inv-800)'}>{hollowPrefix}</Hollow>
+            <Hollow color={'var(--text-2)'}>{hollowPrefix}</Hollow>
             {fillSuffix}
           </h1>
         {:else}

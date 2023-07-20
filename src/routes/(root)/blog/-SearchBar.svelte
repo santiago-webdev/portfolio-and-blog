@@ -104,7 +104,7 @@ input {
 
 input::placeholder,
 form button {
-  color: var(--clr-inv-600);
+  color: var(--text-0);
 }
 
 input:focus::placeholder {
@@ -113,7 +113,7 @@ input:focus::placeholder {
 
 input,
 form:focus-within button {
-  color: var(--clr-inv-800);
+  color: var(--text-2);
   background-color: inherit;
 }
 

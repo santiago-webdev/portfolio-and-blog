@@ -141,7 +141,7 @@ li:first-child h3 {
 }
 
 li:first-child p {
-  color: var(--clr-inv-800);
+  color: var(--text-2);
 }
 
 li:nth-child(2) {
@@ -150,11 +150,11 @@ li:nth-child(2) {
 }
 
 li:nth-child(2) h3 {
-  color: var(--clr-inv-900);
+  color: var(--text-3);
 }
 
 li:nth-child(2) p {
-  color: var(--clr-inv-700);
+  color: var(--text-1);
 }
 
 li:last-child {
@@ -163,11 +163,11 @@ li:last-child {
 }
 
 li:last-child h3 {
-  color: var(--clr-inv-800);
+  color: var(--text-2);
 }
 
 li:last-child p {
-  color: var(--clr-inv-600);
+  color: var(--text-0);
 }
 
 @media (hover: hover) {

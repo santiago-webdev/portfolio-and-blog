@@ -159,7 +159,7 @@ header {
 }
 
 a {
-  color: var(--clr-inv-800);
+  color: var(--text-2);
 }
 
 header.expanded {
@@ -186,7 +186,7 @@ a.bordered {
 }
 
 a:hover {
-  color: var(--clr-inv-600);
+  color: var(--text-0);
 }
 
 a.bordered:hover {

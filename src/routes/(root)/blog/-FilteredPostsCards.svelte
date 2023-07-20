@@ -139,7 +139,7 @@ article small {
 }
 
 p {
-  color: var(--clr-inv-700);
+  color: var(--text-1);
 }
 
 time {
@@ -148,7 +148,7 @@ time {
 
 small {
   border: 1px solid var(--clr-inv-300);
-  color: var(--clr-inv-700);
+  color: var(--text-1);
   padding: 0.4rem 0.6rem;
   border-radius: 0.8rem;
 }

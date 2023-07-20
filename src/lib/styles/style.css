@@ -10,7 +10,7 @@ html {
   color-scheme: light dark;
   font-family: var(--ff-text);
   background-color: var(--clr-200);
-  color: var(--clr-inv-800);
+  color: var(--text-2);
 }
 
 address {
@@ -34,7 +34,7 @@ li code {
 
   background: var(--clr-500);
   border: 1px var(--clr-800) solid;
-  color: var(--clr-inv-800);
+  color: var(--text-2);
   padding: 0.05rem 0.1rem;
   border-radius: 6px;
 
@@ -67,33 +67,27 @@ li code {
 .defaults {
   --bg: var(--clr-700);
   --brd: var(--clr-800);
-  color: var(--clr-inv-800);
+  color: var(--text-2);
 }
 
 .reverse {
-  --bg: var(--clr-inv-900);
+  --bg: var(--text-3);
   --brd: white;
   color: var(--clr-200);
 }
 
 li.tags.reverse {
-  --bg: var(--clr-inv-900);
+  --bg: var(--text-3);
   --brd: white;
   color: var(--clr-200);
 }
 
 @media (hover: hover) {
-  .light .defaults:focus-visible,
-  .light .defaults:hover {
-    --bg: blue;
-    --brd: red;
-  }
-
   .defaults:focus-visible,
   .defaults:hover {
     --bg: var(--clr-purple-50);
     --brd: var(--clr-purple-40);
-    color: var(--clr-inv-900);
+    color: var(--text-3);
   }
 
   li.tags.reverse:hover,
@@ -102,7 +96,7 @@ li.tags.reverse {
   .reverse:hover {
     --bg: var(--clr-red-old);
     --brd: var(--clr-red-old-border);
-    color: var(--clr-inv-900);
+    color: var(--text-3);
   }
 }
 
@@ -122,7 +116,7 @@ li.tags.reverse {
 }
 
 small {
-  color: var(--clr-inv-600);
+  color: var(--text-0);
 }
 
 time {
