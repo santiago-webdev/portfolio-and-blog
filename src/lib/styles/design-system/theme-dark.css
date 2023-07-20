@@ -15,15 +15,15 @@
   --clr-400-trp: hsl(236 8% 20% / 88%);
   --clr-500-trp: hsl(236 8% 22% / 94%);
 
-  --clr-inv-100: #323942;
-  --clr-inv-200: #434d5a;
-  --clr-inv-300: #536172;
-  --clr-inv-400: #617387;
-  --clr-inv-500: #7d8c9f;
-  --clr-inv-600: #9ba6b5;
-  --clr-inv-700: #b5bec9;
-  --clr-inv-800: #d0d5dc;
-  --clr-inv-900: #eceef1;
+  --clr-inv-100: hsl(214 14% 23%);
+  --clr-inv-200: hsl(214 15% 31%);
+  --clr-inv-300: hsl(213 16% 39%);
+  --clr-inv-400: hsl(212 16% 45%);
+  --clr-inv-500: hsl(214 15% 56%);
+  --clr-inv-600: hsl(215 15% 66%);
+  --clr-inv-700: hsl(213 16% 75%);
+  --clr-inv-800: hsl(215 15% 84%);
+  --clr-inv-900: hsl(216 15% 94%);
 
   --clr-red-40: hsl(346 77% 62%);
   --clr-red-50: hsl(343, 77%, 75%);

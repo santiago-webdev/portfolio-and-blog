@@ -28,9 +28,9 @@
       if (storedTheme) {
         doc.setAttribute('data-theme', storedTheme);
         if (storedTheme === 'light' || storedTheme === 'system-light') {
-          doc.classList.add(storedTheme); // Add the class based on the stored theme
+          doc.classList.add('light'); // Add the class based on the stored theme
         } else {
-          doc.classList.remove(storedTheme); // Add the class based on the stored theme
+          doc.classList.remove('light'); // Add the class based on the stored theme
         }
       } else {
         const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')

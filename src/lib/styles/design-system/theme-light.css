@@ -2,11 +2,43 @@
 [data-theme='light'] {
   color-scheme: light;
 
-  --clr-blue-20: hsl(245 82% 78%);
-  --clr-purple-20: hsl(267 27% 63%);
-  --clr-purple-50: hsl(271 55% 50%);
+  --clr-100: hsl(0 0% 7%);
+  --clr-200: hsl(0 0% 21%);
+  --clr-300: hsl(0 0% 25%);
+  --clr-400: hsl(0 0% 37%);
+  --clr-500: hsl(0 0% 46%);
+  --clr-600: hsl(0 0% 59%);
+  --clr-700: hsl(0 0% 70%);
+  --clr-800: hsl(0 0% 80%);
+  --clr-900: hsl(0 0% 91%);
+
+  --clr-400-trp: hsl(0 0% 37% / 88%);
+  --clr-500-trp: hsl(0 0% 46% / 94%);
+
+  --clr-inv-100: hsl(240 10% 4%);
+  --clr-inv-200: hsl(240 6% 10%);
+  --clr-inv-300: hsl(240 4% 16%);
+  --clr-inv-400: hsl(240 5% 26%);
+  --clr-inv-500: hsl(240 5% 34%);
+  --clr-inv-600: hsl(240 4% 46%);
+  --clr-inv-700: hsl(240 5% 65%);
+  --clr-inv-800: hsl(240 5% 84%);
+  --clr-inv-900: hsl(240 6% 90%);
+
   --clr-red-40: hsl(346 77% 62%);
-  --clr-red-50: hsl(346 88% 62%);
-  --clr-orange-50: hsl(39 100% 70%);
+  --clr-red-50: hsl(343, 77%, 75%);
+  --clr-red-old: hsl(358, 61%, 64%);
+  --clr-red-old-border: hsl(358, 61%, 68%);
+  --clr-purple-40: #b79bc3;
+  --clr-purple-50: #a17fad;
+  --clr-purple-mauve: #a9798b;
+  --clr-orange-50: #ff9e64;
+  --clr-orange-70: #fab387;
+  --clr-yellow-50: #f6c177;
   --clr-green-50: #9ece6a;
+  --clr-goaway-green: #8bc4c4;
+  --clr-teal: #63b1b1;
+  --clr-azure: #3e8fb0;
+  --clr-blue-30: #a6bfec;
+  --clr-blue-40: #82a6e4;
 }
