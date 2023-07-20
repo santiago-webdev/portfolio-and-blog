@@ -29,6 +29,14 @@ function setThemeCookie() {
   document.cookie = `theme=${theme}; expires=${expireDate.toUTCString()}; path=/; SameSite=None; secure=true;`;
 }
 
+function setThemeClass() {
+  if (theme === 'light' || theme === 'system-light') {
+    document.documentElement.classList.add('light'); // Add the class based on the stored theme
+  } else {
+    document.documentElement.classList.remove('light'); // Add the class based on the stored theme
+  }
+}
+
 function setThemeLocalStorage() {
   localStorage.setItem('theme', theme);
 }
@@ -37,6 +45,7 @@ function click() {
   toggleTheme();
   document.documentElement.dataset.theme = theme;
   setThemeCookie();
+  setThemeClass();
   setThemeLocalStorage();
 }
 

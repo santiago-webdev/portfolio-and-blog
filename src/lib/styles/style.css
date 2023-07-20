@@ -83,6 +83,12 @@ li.tags.reverse {
 }
 
 @media (hover: hover) {
+  .light .defaults:focus-visible,
+  .light .defaults:hover {
+    --bg: blue;
+    --brd: red;
+  }
+
   .defaults:focus-visible,
   .defaults:hover {
     --bg: var(--clr-purple-50);

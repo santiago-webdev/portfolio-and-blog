@@ -25,21 +25,28 @@
       const doc = document.documentElement;
       const storedTheme = localStorage.getItem('theme');
 
-      if (storedTheme) doc.setAttribute('data-theme', storedTheme);
-      else
-        doc.setAttribute(
-          'data-theme',
-          window.matchMedia('(prefers-color-scheme: dark)').matches
-            ? 'system' // Same as [data-theme='dark'] in +layout.svelte
-            : 'system-light' // Same as [data-theme='light'] in +layout.svelte
-        );
+      if (storedTheme) {
+        doc.setAttribute('data-theme', storedTheme);
+        if (storedTheme === 'light' || storedTheme === 'system-light') {
+          doc.classList.add(storedTheme); // Add the class based on the stored theme
+        } else {
+          doc.classList.remove(storedTheme); // Add the class based on the stored theme
+        }
+      } else {
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)')
+          .matches
+          ? 'system'
+          : 'system-light';
+        doc.setAttribute('data-theme', systemTheme);
+        doc.classList.add(systemTheme); // Add the class based on the system theme
+      }
 
       window.addEventListener('load', () => {
         const storedData = localStorage.getItem('myData');
         if (storedData) {
           doc.setAttribute('data-theme', storedTheme);
+          doc.classList.add(storedTheme); // Add the class based on the stored theme
         }
-        // Code to set the theme based on localStorage data goes here
       });
     </script>
     %sveltekit.head%
