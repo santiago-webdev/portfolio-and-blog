@@ -63,7 +63,7 @@ let fly_out = { y: -50, duration: 200 };
               </time>
             {/if}
             {#if !post.finished}
-              <small class="tpl">🚧 In the works 🚧</small>
+              <small>🚧 In the works 🚧</small>
             {/if}
           </article>
         </a>
@@ -102,7 +102,7 @@ section > ul:hover > li:hover {
 
 article {
   --bg: var(--clr-25);
-  --brd: var(--clr-30);
+  --brd: var(--bg);
   display: grid;
   place-items: start;
   grid-template-rows: auto 1fr auto auto;
@@ -147,12 +147,9 @@ time {
 }
 
 small {
-  --bg: var(--clr-15);
-  --brd: var(--clr-inv-200);
-  border-width: 1px;
-  border-color: var(--brd);
+  border: 1px solid var(--clr-inv-300);
   color: var(--clr-inv-700);
-  padding: 0.4rem;
+  padding: 0.4rem 0.6rem;
   border-radius: 0.8rem;
 }
 

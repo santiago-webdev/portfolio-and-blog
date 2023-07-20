@@ -175,7 +175,7 @@ ul {
 
 li {
   --bg: var(--clr-20);
-  --brd: var(--clr-25);
+  --brd: var(--bg);
 
   display: flex;
   gap: 0.5ch;

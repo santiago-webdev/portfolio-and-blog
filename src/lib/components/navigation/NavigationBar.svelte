@@ -163,12 +163,12 @@ a {
 }
 
 header.expanded {
-  border-bottom: 2px solid var(--clr-55);
+  border-bottom: 2px solid var(--clr-inv-400);
   background: var(--clr-30);
 }
 
 header.scrollY {
-  background: var(--clr-35-trp);
+  background: var(--clr-30-trp);
   border-bottom-color: var(--clr-inv-200);
 }
 
@@ -185,6 +185,10 @@ a.bordered {
   border-radius: 1rem;
 }
 
+a:hover {
+  color: var(--clr-inv-600);
+}
+
 a.bordered:hover {
   border-color: var(--clr-inv-300);
 }
@@ -197,7 +201,7 @@ button {
 
 button[aria-expanded='true'] {
   --bg: var(--clr-50);
-  --brd: var(--clr-55);
+  --brd: var(--bg);
   box-shadow: var(--shadow);
 }
 

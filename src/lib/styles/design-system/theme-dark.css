@@ -4,19 +4,15 @@
 
   --clr-05: hsl(236 8% 10%);
   --clr-10: hsl(236 8% 14%);
-  --clr-15: hsl(236 8% 16%);
   --clr-20: hsl(236 8% 18%);
   --clr-25: hsl(236 8% 20%);
   --clr-30: hsl(236 8% 22%);
-  --clr-35: hsl(236 8% 23%);
   --clr-40: hsl(236 8% 24%);
   --clr-45: hsl(236 8% 26%);
   --clr-50: hsl(236 8% 28%);
-  --clr-55: hsl(236 8% 30%);
-  --clr-60: hsl(236 8% 35%);
 
   --clr-25-trp: hsl(236 8% 19% / 88%);
-  --clr-35-trp: hsl(236 8% 23% / 94%);
+  --clr-30-trp: hsl(236 8% 23% / 94%);
 
   --clr-inv-100: #323942;
   --clr-inv-200: #434d5a;
@@ -31,6 +27,7 @@
   --clr-red-40: hsl(346 77% 62%);
   --clr-red-50: hsl(343, 77%, 75%);
   --clr-red-old: hsl(358, 61%, 64%);
+  --clr-red-old-border: hsl(358, 61%, 68%);
   --clr-purple-40: #b79bc3;
   --clr-purple-50: #a17fad;
   --clr-purple-mauve: #a9798b;

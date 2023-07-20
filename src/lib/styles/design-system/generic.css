@@ -2,7 +2,7 @@
 ol.generic {
   display: grid;
   gap: 0.2rem;
-  background-color: var(--clr-35);
+  background-color: var(--clr-30);
   border: 1px var(--clr-inv-200) solid;
   border-radius: 16px;
   padding: 1rem;
@@ -56,7 +56,7 @@ a.selection {
   a.selection:focus-visible,
   a.selection:hover {
     --bg: var(--clr-50);
-    --brd: var(--clr-55);
+    --brd: var(--bg);
     box-shadow: 3px 6px 12px 3px hsl(0 0% 0% / 0.1);
   }
 }

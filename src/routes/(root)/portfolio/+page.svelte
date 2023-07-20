@@ -213,7 +213,7 @@ label {
 
 .wrapper-select {
   --bg: var(--clr-40);
-  --brd: var(--clr-45);
+  --brd: var(--bg);
   padding: 0.6rem 1.6rem;
   border-radius: 1rem;
 }
@@ -235,7 +235,7 @@ section {
 
 article {
   --bg: var(--clr-25);
-  --brd: var(--clr-30);
+  --brd: var(--bg);
   border-radius: 1.2rem;
   display: flex;
   flex-flow: column wrap;
@@ -322,7 +322,7 @@ figcaption {
   place-items: center;
   padding: 0.2rem;
   padding-right: 0.8rem;
-  background: var(--clr-60);
+  background: red;
 }
 
 .artifact-buttons {
@@ -361,8 +361,8 @@ button {
 }
 
 button:hover {
-  border: 3px dashed var(--clr-55);
-  background-color: var(--clr-30);
+  border: 3px dashed var(--clr-orange-50);
+  background-color: var(--clr-40);
 }
 
 [icon='lucide:plus'] {
@@ -370,6 +370,6 @@ button:hover {
 }
 
 button:hover [icon='lucide:plus'] {
-  color: var(--clr-inv-200);
+  color: var(--clr-inv-900);
 }
 </style>

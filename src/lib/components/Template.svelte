@@ -196,7 +196,7 @@ time {
 
 details {
   --bg: var(--clr-40);
-  --brd: var(--clr-45);
+  --brd: var(--bg);
   font-family: var(--ff-text);
   display: flex;
   max-width: var(--sm);

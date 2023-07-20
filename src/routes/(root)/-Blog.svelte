@@ -58,7 +58,6 @@ function getPic(id: number) {
   display: flex;
   place-content: center;
   place-items: center;
-  border-top: 1px solid var(--clr-15);
   margin-bottom: 3rem;
 }
 

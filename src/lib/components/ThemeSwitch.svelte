@@ -120,7 +120,7 @@ onMount(() => {
 <style>
 button {
   --bg: var(--clr-40);
-  --brd: var(--clr-45);
+  --brd: var(--bg);
   overflow: hidden;
   display: flex;
   flex-flow: row;

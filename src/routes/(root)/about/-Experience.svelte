@@ -122,7 +122,7 @@ onMount(() => {
 <style>
 .wrapper-experience {
   --bg: var(--clr-20);
-  --brd: var(--clr-25);
+  --brd: var(--bg);
 
   width: min(96%, var(--base));
   margin-inline: auto;
@@ -145,12 +145,12 @@ ol {
 
 li a {
   --bg: var(--clr-30);
-  --brd: var(--clr-35);
+  --brd: var(--bg);
 }
 
 li [aria-selected='true'] {
   --bg: var(--clr-50);
-  --brd: var(--clr-55);
+  --brd: var(--bg);
 }
 
 li a:focus-within {

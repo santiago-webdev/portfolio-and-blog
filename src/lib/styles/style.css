@@ -32,7 +32,7 @@ li code {
   overflow-wrap: break-word;
   word-break: break-word; /*word-wrap: break-word;*/
 
-  background: var(--clr-35);
+  background: var(--clr-30);
   border: 1px var(--clr-50) solid;
   color: var(--clr-inv-800);
   padding: 0.05rem 0.1rem;
@@ -66,34 +66,35 @@ li code {
 
 .defaults {
   --bg: var(--clr-45);
-  --brd: var(--clr-50);
+  --brd: var(--bg);
 }
 
 .reverse {
   --bg: var(--clr-inv-900);
-  --brd: white;
+  --brd: var(--bg);
   color: var(--clr-10);
 }
 
 li.tags.reverse {
   --bg: var(--clr-inv-900);
-  --brd: white;
+  --brd: var(--bg);
   color: var(--clr-10);
 }
 
 @media (hover: hover) {
   .defaults:focus-visible,
   .defaults:hover {
-    --bg: var(--clr-55);
-    --brd: var(--clr-60);
+    --bg: var(--clr-purple-50);
+    --brd: var(--clr-purple-40);
+    color: var(--clr-05)
   }
 
   li.tags.reverse:hover,
   li.tags.reverse:focus-visible,
   .reverse:focus-visible,
   .reverse:hover {
-    --bg: var(--clr-inv-400);
-    --brd: var(--clr-inv-500);
+    --bg: var(--clr-red-old);
+    --brd: var(--clr-red-old-border);
     color: var(--clr-inv-900);
   }
 }
@@ -136,7 +137,7 @@ kbd {
   pointer-events: none;
   padding-inline: 0.4rem;
   border-radius: 0.5rem;
-  background-color: var(--clr-55);
+  background-color: var(--clr-50);
   /* font-size: 60%; */
   /* font-weight: bold; */
 }
@@ -150,7 +151,7 @@ kbd {
 
 li.tags {
   --bg: var(--clr-40);
-  --brd: var(--clr-45);
+  --brd: var(--bg);
   border-top-width: 1px;
   border-radius: 0.8rem;
   padding: 0.3rem 0.6rem;
