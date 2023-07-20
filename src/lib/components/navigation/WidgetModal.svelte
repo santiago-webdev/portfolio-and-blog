@@ -188,8 +188,8 @@ kbd {
 }
 
 :modal {
-  --bg: var(--clr-500);
-  --brd: var(--clr-600);
+  --bg: var(--clr-600);
+  --brd: var(--clr-700);
 
   padding: 0;
   margin: 0;
