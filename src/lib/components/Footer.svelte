@@ -235,7 +235,7 @@ header h3:not(.aboutme h3) {
 
 .aboutme {
   --bg: var(--clr-500);
-  --brd: var(--bg);
+  --brd: var(--clr-600);
 
   display: flex;
   position: relative;

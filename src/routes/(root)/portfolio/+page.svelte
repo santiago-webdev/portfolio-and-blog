@@ -213,7 +213,7 @@ label {
 
 .wrapper-select {
   --bg: var(--clr-600);
-  --brd: var(--bg);
+  --brd: var(--clr-700);
   padding: 0.6rem 1.6rem;
   border-radius: 1rem;
 }
@@ -235,7 +235,7 @@ section {
 
 article {
   --bg: var(--clr-400);
-  --brd: var(--bg);
+  --brd: var(--clr-500);
   border-radius: 1.2rem;
   display: flex;
   flex-flow: column wrap;

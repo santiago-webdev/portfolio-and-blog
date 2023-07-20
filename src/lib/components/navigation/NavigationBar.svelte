@@ -201,7 +201,7 @@ button {
 
 button[aria-expanded='true'] {
   --bg: var(--clr-800);
-  --brd: var(--bg);
+  --brd: var(--clr-900);
   box-shadow: var(--shadow);
 }
 

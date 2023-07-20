@@ -175,7 +175,7 @@ ul {
 
 li {
   --bg: var(--clr-300);
-  --brd: var(--bg);
+  --brd: var(--clr-400);
 
   display: flex;
   gap: 0.5ch;

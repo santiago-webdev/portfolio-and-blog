@@ -133,7 +133,7 @@ h3 {
 
 li:first-child {
   --bg: var(--clr-700);
-  --brd: var(--bg);
+  --brd: var(--clr-800);
 }
 
 li:first-child h3 {
@@ -146,7 +146,7 @@ li:first-child p {
 
 li:nth-child(2) {
   --bg: var(--clr-500);
-  --brd: var(--bg);
+  --brd: var(--clr-600);
 }
 
 li:nth-child(2) h3 {
@@ -159,7 +159,7 @@ li:nth-child(2) p {
 
 li:last-child {
   --bg: var(--clr-300);
-  --brd: var(--bg);
+  --brd: var(--clr-400);
 }
 
 li:last-child h3 {
@@ -173,17 +173,17 @@ li:last-child p {
 @media (hover: hover) {
   li:first-child:hover {
     --bg: var(--clr-700);
-    --brd: var(--bg);
+    --brd: var(--clr-800);
   }
 
   li:nth-child(2):hover {
     --bg: var(--clr-600);
-    --brd: var(--bg);
+    --brd: var(--clr-700);
   }
 
   li:last-child:hover {
     --bg: var(--clr-500);
-    --brd: var(--bg);
+    --brd: var(--clr-600);
   }
 }
 </style>

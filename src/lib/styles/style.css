@@ -66,18 +66,18 @@ li code {
 
 .defaults {
   --bg: var(--clr-700);
-  --brd: var(--bg);
+  --brd: var(--clr-800);
 }
 
 .reverse {
   --bg: var(--clr-inv-900);
-  --brd: var(--bg);
+  --brd: white;
   color: var(--clr-200);
 }
 
 li.tags.reverse {
   --bg: var(--clr-inv-900);
-  --brd: var(--bg);
+  --brd: white;
   color: var(--clr-200);
 }
 
@@ -151,7 +151,7 @@ kbd {
 
 li.tags {
   --bg: var(--clr-600);
-  --brd: var(--bg);
+  --brd: var(--clr-700);
   border-top-width: 1px;
   border-radius: 0.8rem;
   padding: 0.3rem 0.6rem;

@@ -102,7 +102,7 @@ section > ul:hover > li:hover {
 
 article {
   --bg: var(--clr-400);
-  --brd: var(--bg);
+  --brd: var(--clr-500);
   display: grid;
   place-items: start;
   grid-template-rows: auto 1fr auto auto;

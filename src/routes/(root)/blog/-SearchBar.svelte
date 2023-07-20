@@ -60,7 +60,7 @@ $: if ($FilteredPosts.length === 1)
 <style>
 form {
   --bg: var(--clr-600);
-  --brd: var(--bg);
+  --brd: var(--clr-700);
   display: flex;
   place-items: center;
   margin-inline: auto;

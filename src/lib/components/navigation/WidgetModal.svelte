@@ -160,7 +160,7 @@ button kbd {
 @media (hover: hover) {
   button:not(dialog button) {
     --bg: var(--clr-600);
-    --brd: var(--bg);
+    --brd: var(--clr-700);
     box-shadow: var(--shadow);
 
     display: flex;
@@ -189,7 +189,7 @@ kbd {
 
 :modal {
   --bg: var(--clr-500);
-  --brd: var(--bg);
+  --brd: var(--clr-600);
 
   padding: 0;
   margin: 0;

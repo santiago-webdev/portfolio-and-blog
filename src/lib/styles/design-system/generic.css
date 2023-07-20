@@ -56,7 +56,7 @@ a.selection {
   a.selection:focus-visible,
   a.selection:hover {
     --bg: var(--clr-800);
-    --brd: var(--bg);
+    --brd: var(--clr-900);
     box-shadow: 3px 6px 12px 3px hsl(0 0% 0% / 0.1);
   }
 }
