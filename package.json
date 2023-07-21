@@ -19,6 +19,7 @@
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
     "@unocss/extractor-svelte": "^0.53.5",
+    "@unocss/transformer-directives": "^0.53.5",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-svelte": "^2.30.0",

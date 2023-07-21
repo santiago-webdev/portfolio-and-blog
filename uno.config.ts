@@ -1,10 +1,12 @@
 import { defineConfig } from 'unocss';
+import transformerDirectives from '@unocss/transformer-directives';
 
 export default defineConfig({
+  transformers: [transformerDirectives()],
   theme: {
     fontFamily: {
-      'ui': ['Manrope'],
-      'body': ['Basier Circle'],
+      ui: ['Manrope'],
+      body: ['Basier Circle']
     },
     colors: {
       palette: {

@@ -138,7 +138,6 @@ kbd {
   pointer-events: none;
   padding-inline: 0.4rem;
   border-radius: 0.5rem;
-  background-color: var(--clr-800);
   /* font-size: 60%; */
   /* font-weight: bold; */
 }

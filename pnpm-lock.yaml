@@ -23,6 +23,9 @@ devDependencies:
   '@unocss/extractor-svelte':
     specifier: ^0.53.5
     version: 0.53.5
+  '@unocss/transformer-directives':
+    specifier: ^0.53.5
+    version: 0.53.5
   eslint:
     specifier: ^8.28.0
     version: 8.40.0

@@ -18,8 +18,10 @@ function getPic(id: number) {
     <div class="flex flex-wrap gap-6 justify-between items-start">
       <h2 class="font-fluid-2">Blog articles</h2>
       <div class="flex flex-col">
-        <p class='font-body' >
-          Press <kbd aria-keyshortcuts="Control+K">CTRL K</kbd> or
+        <p class="font-body">
+          Press <kbd class="dark:bg-dark-800" aria-keyshortcuts="Control+K"
+            >CTRL K</kbd
+          > or
         </p>
         <LinkArrow orientation="right" href="{base}/blog"
           >See the full blog</LinkArrow
@@ -31,7 +33,12 @@ function getPic(id: number) {
         <a {href}>
           <article class="relative grid gap-4">
             <div class="max-h-[36rem] overflow-hidden rounded-lg">
-              <img class="w-full h-auto object-scale-down object-center rounded-xl" loading="lazy" src={getPic(id)} alt="" />
+              <img
+                class="w-full h-auto object-scale-down object-center rounded-xl"
+                loading="lazy"
+                src={getPic(id)}
+                alt=""
+              />
             </div>
             {#if datetime}
               <time {datetime} class="flex flex-wrap place-items-center">

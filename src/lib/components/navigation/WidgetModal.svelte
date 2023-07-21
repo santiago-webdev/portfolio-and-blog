@@ -44,13 +44,16 @@ const clickOutside = (modal: HTMLDialogElement) =>
   aria-keyshortcuts="Control+K"
   aria-label="Click to open and search"
   on:click={toggleModal}
-  class="tpl"
+  class="px-1 py-2"
 >
-  <span>&nbsp;&nbsp</span>
+  <kbd
+    class="flex place-content-center place-items-center font-small dark:text-dark-inv-600"
+    >CTRL K</kbd
+  >
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width="22"
-    height="22"
+    width="21"
+    height="21"
     viewBox="0 0 24 24"
   >
     <g
@@ -64,10 +67,10 @@ const clickOutside = (modal: HTMLDialogElement) =>
       <path d="m21 21l-4.35-4.35" />
     </g>
   </svg>
-  <kbd class="font-sub">CTRL K</kbd>
 </button>
 <dialog
-  class="tpl"
+  class="border-t border-l border-b-0 border-r-0 border-t-solid border-l-solid
+rounded-2xl drop-shadow dark:bg-dark-700 dark:border-dark-900"
   aria-modal
   use:clickOutside
   on:close={() => ((value = ''), (document.body.style.overflow = ''))}
@@ -118,9 +121,13 @@ const clickOutside = (modal: HTMLDialogElement) =>
     {#each $FilteredPosts.slice(0, 4) as post}
       <hr aria-orientation="horizontal" />
       <li>
-        <a class="selection" on:click={() => toggleModal()} href={post.href}>
-          <article>
-            <h3>{post.title}</h3>
+        <a
+          class="selection grid place-items-start"
+          on:click={() => toggleModal()}
+          href={post.href}
+        >
+          <article class="grid gap-1">
+            <h3 class="font-semibold">{post.title}</h3>
             <p>{post.description}</p>
             {#if post.datetime}
               <small>
@@ -148,38 +155,32 @@ button {
   display: flex;
   gap: 0.4rem;
   place-items: center;
-  border-radius: 999rem;
-  box-shadow: none;
+  place-content: center;
 }
 
-button span,
 button kbd {
   display: none;
 }
 
 @media (hover: hover) {
   button:not(dialog button) {
-    --bg: var(--clr-600);
-    --brd: var(--clr-700);
-    box-shadow: var(--shadow);
-
-    display: flex;
-    padding: 0.3rem 0.8rem;
+    --at-apply: 'px-5';
+    --at-apply: 'border-t';
+    --at-apply: 'border-l';
+    --at-apply: 'border-t-solid';
+    --at-apply: 'border-l-solid';
+    --at-apply: 'rounded-full';
+    --at-apply: 'drop-shadow';
+    --at-apply: 'dark:bg-dark-700';
+    --at-apply: 'dark:border-dark-800';
+    --at-apply: 'dark:text-dark-inv-800';
+    --at-apply: 'hover:dark:bg-dark-800';
+    --at-apply: 'hover:dark:border-dark-900';
   }
 
-  button span,
   button kbd {
     display: block;
   }
-}
-
-span {
-  text-decoration: underline solid currentColor 0.15em;
-  text-underline-offset: 0em;
-}
-
-kbd {
-  border-radius: 0.4rem;
 }
 
 :modal > * {
@@ -198,9 +199,6 @@ kbd {
 
   transition: background-color 50ms, border 80ms, box-shadow 300ms;
   font-variation-settings: 'wght' 500;
-
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
 }
 
 :modal::backdrop {
@@ -214,7 +212,6 @@ kbd {
     min-height: 0;
     width: min(100% - 1rem, var(--sm));
     margin-inline: auto;
-    border-radius: 1.2rem;
   }
 
   :modal::backdrop {
@@ -275,20 +272,6 @@ ul:empty {
 
 li {
   display: grid;
-}
-
-article {
-  display: grid;
-  gap: 0.4rem;
-}
-
-h3 {
-  font-variation-settings: 'wght' 600;
-}
-
-a {
-  display: grid;
-  place-items: start;
 }
 
 hr {
