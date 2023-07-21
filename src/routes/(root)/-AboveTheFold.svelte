@@ -15,14 +15,26 @@ import config from '$lib/config.json';
         Building the web<br /> with clean interfaces
       </h1>
       <p class="font-h3 mt-2 max-w-[38ch]">
-        I'm a frontend developer and here we'll discuss about <strong>web deve&shylopment</strong> and show you my projects
-        while at it.
+        I'm a frontend developer and here we'll discuss about <strong
+          >web deve&shylopment</strong
+        > and show you my projects while at it.
       </p>
-      <section class="flex gap-4 mt-10 flex-col md:flex-row md:place-items-start">
-        <ShapeButton class="reverse" href="{base}/portfolio">What I've built</ShapeButton>
+      <section
+        class="flex gap-4 mt-10 flex-col md:flex-row md:place-items-start"
+      >
+        <ShapeButton class="reverse" href="{base}/portfolio"
+          >What I've built</ShapeButton
+        >
         <div>
-          <ShapeButton class="default" href={config.about.resume} target="_blank" rel="external">Resume</ShapeButton>
-          <small class="hidden md:px-8 md:block md:mt-2">Hit Ctrl+P to print</small>
+          <ShapeButton
+            class="default"
+            href={config.about.resume}
+            target="_blank"
+            rel="external">Resume</ShapeButton
+          >
+          <small class="hidden md:px-8 md:block md:mt-2"
+            >Hit Ctrl+P to print</small
+          >
         </div>
       </section>
     </div>

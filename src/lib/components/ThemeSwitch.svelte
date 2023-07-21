@@ -56,14 +56,16 @@ onMount(() => {
   theme = doc.theme as Theme;
 
   prefers_light = !window.matchMedia('(prefers-color-scheme: dark)').matches;
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (event: MediaQueryListEvent) => {
-    prefers_light = !event.matches;
+  window
+    .matchMedia('(prefers-color-scheme: dark)')
+    .addEventListener('change', (event: MediaQueryListEvent) => {
+      prefers_light = !event.matches;
 
-    if (theme.startsWith('system')) {
-      event.matches ? (theme = 'system') : (theme = 'system-light');
-      doc.theme = theme;
-    }
-  });
+      if (theme.startsWith('system')) {
+        event.matches ? (theme = 'system') : (theme = 'system-light');
+        doc.theme = theme;
+      }
+    });
 });
 </script>
 
@@ -74,15 +76,33 @@ onMount(() => {
   title="Theme switcher: Switch between a dark or light theme, or leave it to the system to decide"
 >
   <div class="theme-wrapper" aria-hidden="true">
-    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <svg
+      class="sun"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+    >
+      <g
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+      >
         <circle cx="12" cy="12" r="4" />
         <path
           d="M12 3v1m0 16v1m-9-9h1m16 0h1m-2.636-6.364l-.707.707M6.343 17.657l-.707.707m0-12.728l.707.707m11.314 11.314l.707.707"
         />
       </g>
     </svg>
-    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <svg
+      class="moon"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+    >
       <path
         fill="none"
         stroke="currentColor"
@@ -92,7 +112,13 @@ onMount(() => {
         d="M12 3a6 6 0 0 0 9 9a9 9 0 1 1-9-9Z"
       />
     </svg>
-    <svg class="system" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+    <svg
+      class="system"
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+    >
       <path
         fill="currentColor"
         d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 2a8 8 0 0 1 8 8a8 8 0 0 1-8 8V4Z"

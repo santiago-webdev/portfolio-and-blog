@@ -33,10 +33,17 @@ import { base } from '$app/paths';
       </ul>
     </div>
   </div>
-  <div class="flex gap-4 mt-10 flex-col md:flex-row md:place-items-start place-content-center max-w-screen-xl mx-auto">
+  <div
+    class="flex gap-4 mt-10 flex-col md:flex-row md:place-items-start place-content-center max-w-screen-xl mx-auto"
+  >
     <ShapeButton class="reverse" href="{base}/about">More about me</ShapeButton>
     <div>
-      <ShapeButton class="default" href={config.about.resume} target="_blank" rel="external">Resume</ShapeButton>
+      <ShapeButton
+        class="default"
+        href={config.about.resume}
+        target="_blank"
+        rel="external">Resume</ShapeButton
+      >
       <small class="hidden md:px-8 md:block md:mt-2">Hit Ctrl+P to print</small>
     </div>
   </div>

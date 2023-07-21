@@ -18,7 +18,9 @@ export let finished = false;
 export let tags = [];
 export let summary = '';
 
-const dateRelative = !datetime ? datetime : relativeTime(new Date(), new Date(datetime));
+const dateRelative = !datetime
+  ? datetime
+  : relativeTime(new Date(), new Date(datetime));
 const dateReadable = !datetime ? datetime : readableDate(datetime);
 
 let isHollow = false;
@@ -61,7 +63,12 @@ if (title) {
       {#if tags}
         <ul class="inline-items">
           {#each tags as tag}
-            <li style:display={!isLocal && tag === 'Publish' ? 'none' : ''} class="tpl tags font-sub">
+            <li
+              style:display={!isLocal && tag === 'Publish' ? 'none' : ''}
+              class="font-sub font-sub drop-shadow inline-flex place-items-center
+gap-1 px-2 py-1.5 rounded-xl dark:bg-dark-600 dark:border-dark-800 dark:border-t-solid
+dark:border-l-solid border-1"
+            >
               <iconify-icon width="22" height="22" icon={retrieve_icon(tag)} />
               {tag}
             </li>
@@ -71,8 +78,19 @@ if (title) {
 
       {#if datetime}
         <time {datetime}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-            <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <g
+              fill="none"
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+            >
               <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
               <path d="M16 2v4M8 2v4m-5 4h18" />
             </g>

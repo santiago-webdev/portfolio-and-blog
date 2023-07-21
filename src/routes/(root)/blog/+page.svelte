@@ -10,14 +10,14 @@ let description = `${$Posts.length} ${config.blog.description}`;
 const boldWords = ['Linux', 'web development', 'tooling'];
 
 boldWords.forEach((word: string) => {
-  description = description.replace(new RegExp(word, 'g'), `<strong>${word}</strong>`);
+  description = description.replace(
+    new RegExp(word, 'g'),
+    `<strong>${word}</strong>`
+  );
 });
 </script>
 
-<main
-  class="grid dark:bg-dark-400 rounded-b-3xl
-    pb-[clamp(1rem,2vw+1rem,6rem)] mb-[clamp(1rem,2vw+1rem,3rem)]"
->
+<main class="grid dark:bg-dark-400 rounded-b-3xl">
   <header class="px-6 max-w-screen-lg mx-auto max-w-screen-lg px-3">
     <div class="grid place-items-end mt-2">
       <LinkArrow orientation="right" href="{base}/blog/index">Index</LinkArrow>
@@ -31,3 +31,10 @@ boldWords.forEach((word: string) => {
   <SearchBar />
 </main>
 <FilteredPostsCards />
+
+<style>
+main {
+  padding-bottom: clamp(1rem, 2vw + 1rem, 6rem);
+  margin-bottom: clamp(1rem, 2vw + 1rem, 3rem);
+}
+</style>

@@ -9,7 +9,9 @@ let ghStars = 0;
 const getGithubStars = async () => {
   if (dev) return 0;
   try {
-    const response = await fetch('https://api.github.com/repos/santigo-zero/portfolio-and-blog');
+    const response = await fetch(
+      'https://api.github.com/repos/santigo-zero/portfolio-and-blog'
+    );
     if (!response.ok) {
       throw new Error('Network response was not ok.');
     }
@@ -32,13 +34,18 @@ const donateItems = [
 ];
 </script>
 
-<footer class="flex place-content-center flex-col mt-4 rounded-t-3xl dark:bg-dark-400">
+<footer
+  class="flex place-content-center flex-col mt-4 rounded-t-3xl dark:bg-dark-400"
+>
   <header>
     <div
       class="aboutme tpl flex relative place-content-center flex-wrap flex-col flex-2 drop-shadow-md rounded-2xl p-8 gap-4 defaults dark:bg-dark-500 dark:border-dark-600"
     >
       <h3 class="font-bold">Santiago Gonzalez</h3>
-      <p class="dark:text-dark-inv-700">Crafting accessible web experiences without leaving the aesthetics aside.</p>
+      <p class="dark:text-dark-inv-700">
+        Crafting accessible web experiences without leaving the aesthetics
+        aside.
+      </p>
     </div>
 
     <nav aria-label="footer-navigation">
@@ -50,7 +57,8 @@ const donateItems = [
               <a
                 class="selection"
                 aria-current={item.href === $page.url.pathname ||
-                ($page.url.pathname.startsWith(item.href || '') && `/` !== item.href)
+                ($page.url.pathname.startsWith(item.href || '') &&
+                  `/` !== item.href)
                   ? 'page'
                   : undefined}
                 aria-label="Link to {item.label}"
@@ -66,13 +74,19 @@ const donateItems = [
       <h3 class="font-p">Projects</h3>
       <ul>
         <li>
-          <a class="selection" target="_blank" href="https://zapzsh.org">Zap website</a>
+          <a class="selection" target="_blank" href="https://zapzsh.org"
+            >Zap website</a
+          >
         </li>
         <li>
-          <a class="selection" target="_blank" href="https://zapzsh.org">Lorem website</a>
+          <a class="selection" target="_blank" href="https://zapzsh.org"
+            >Lorem website</a
+          >
         </li>
         <li>
-          <a class="selection" target="_blank" href="https://zapzsh.org">Another website</a>
+          <a class="selection" target="_blank" href="https://zapzsh.org"
+            >Another website</a
+          >
         </li>
       </ul>
     </div>
@@ -96,19 +110,31 @@ const donateItems = [
     <div class="contact">
       <h3 class="font-p">Contact</h3>
       <address>
-        <a class="selection" target="_blank" href="mailto:santiagogonzalezbogado@gmail.com">
+        <a
+          class="selection"
+          target="_blank"
+          href="mailto:santiagogonzalezbogado@gmail.com"
+        >
           <iconify-icon icon="lucide:mail" />
           Email me</a
         >
       </address>
       <address>
-        <a class="selection" target="_blank" href="https://github.com/santigo-zero/">
+        <a
+          class="selection"
+          target="_blank"
+          href="https://github.com/santigo-zero/"
+        >
           <iconify-icon icon="simple-icons:github" />
           GitHub</a
         >
       </address>
       <address>
-        <a class="selection" target="_blank" href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/">
+        <a
+          class="selection"
+          target="_blank"
+          href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/"
+        >
           <iconify-icon icon="simple-icons:linkedin" />
           LinkedIn
         </a>
@@ -140,7 +166,10 @@ const donateItems = [
         <iconify-icon width="24" height="24" icon="mdi:github" />
         <div aria-orientation="vertical" role="separator">-</div>
         <iconify-icon icon="lucide:star" />
-        <var aria-label="Amount of stars in the GitHub repository" title="Amount of stars in the GitHub repository">
+        <var
+          aria-label="Amount of stars in the GitHub repository"
+          title="Amount of stars in the GitHub repository"
+        >
           {ghStars}
         </var>
       </a>

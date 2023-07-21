@@ -5,8 +5,12 @@ let tablist: HTMLUListElement;
 let tabbed: HTMLElement;
 
 onMount(() => {
-  const tabs = Array.from(tablist?.querySelectorAll('a') || []) as HTMLElement[];
-  const panels = Array.from(tabbed.querySelectorAll('[id^="section"]')) as HTMLElement[];
+  const tabs = Array.from(
+    tablist?.querySelectorAll('a') || []
+  ) as HTMLElement[];
+  const panels = Array.from(
+    tabbed.querySelectorAll('[id^="section"]')
+  ) as HTMLElement[];
 
   // The tab switching function
   const switchTab = (oldTab: HTMLElement, newTab: HTMLElement) => {
@@ -42,7 +46,13 @@ onMount(() => {
       // Work out which key the user is pressing and
       // Calculate the new tab's index where appropriate
       let dir =
-        e.key === 'ArrowUp' ? index - 1 : e.key === 'ArrowDown' ? index + 1 : e.key === 'ArrowRight' ? 'right' : null;
+        e.key === 'ArrowUp'
+          ? index - 1
+          : e.key === 'ArrowDown'
+          ? index + 1
+          : e.key === 'ArrowRight'
+          ? 'right'
+          : null;
 
       if (dir === null) return;
 
@@ -81,7 +91,9 @@ onMount(() => {
         <a class="tpl" role="tab" href="#section1">Add job <span>+</span></a>
       </li>
       <li>
-        <a class="tpl" aria-selected="true" role="tab" href="#section2">Unemployed</a>
+        <a class="tpl" aria-selected="true" role="tab" href="#section2"
+          >Unemployed</a
+        >
       </li>
     </ol>
     <div class="wrapper-content">
@@ -96,7 +108,10 @@ onMount(() => {
         <div style="display: flex; gap: 0.5ch" class="timeframe font-fluid-1">
           <time datetime="2022">2022 &mdash; present</time>
         </div>
-        <p>Since 2022 I've been learning on my own. I'm currently doing web development, testing new technologies.</p>
+        <p>
+          Since 2022 I've been learning on my own. I'm currently doing web
+          development, testing new technologies.
+        </p>
       </section>
     </div>
   </div>

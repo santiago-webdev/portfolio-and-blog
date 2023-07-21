@@ -21,17 +21,32 @@ function handleSubmit() {
   }, 1000);
 }
 
-$: if ($FilteredPosts.length === 1) preloadData(`${base}/blog${$FilteredPosts[0].href}`);
+$: if ($FilteredPosts.length === 1)
+  preloadData(`${base}/blog${$FilteredPosts[0].href}`);
 </script>
 
 <form
-  class="font-h3 flex place-items-center gap-1 relative mx-auto my-8 px-3 default dark:bg-dark-600
-  dark:border-dark-800 max-w-screen-sm"
+  class="font-h3 flex place-items-center gap-1 relative mx-auto px-3 dark:bg-dark-600
+  dark:border-dark-800 max-w-screen-sm
+ border-t border-l border-t-solid border-l-solid rounded-xl drop-shadow
+        dark:text-dark-inv-800
+  "
   on:submit|preventDefault={handleSubmit}
 >
   <button aria-label="Go to selected blog" type="submit">
-    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+    >
+      <g
+        fill="none"
+        stroke="currentColor"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="2"
+      >
         <circle cx="11" cy="11" r="8" />
         <path d="m21 21l-4.3-4.3" />
       </g>

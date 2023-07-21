@@ -11,12 +11,19 @@ export let icon = '';
   class={`flex place-content-center place-items-center rounded-full px-8 py-4 uppercase
   font-sub ${$$props.class}`}
 >
-  <span class="flex place-content-center place-items-center justify-between gap-2 min-w-[min(100%,14ch)]">
+  <span
+    class="flex place-content-center place-items-center justify-between gap-2 min-w-[min(100%,14ch)]"
+  >
     <slot />
     {#if icon}
       <iconify-icon width="22" height="22" icon={retrieve_icon(icon)} />
     {:else if $$props.rel}
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+      >
         <path
           fill="none"
           stroke="currentColor"

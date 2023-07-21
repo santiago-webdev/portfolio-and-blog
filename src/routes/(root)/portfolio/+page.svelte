@@ -1,7 +1,12 @@
 <script lang="ts">
 import { base } from '$app/paths';
 import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
-import { currentGroupOfProjects, jobSelector, getCategoryInfo, FilteredProjects } from '$lib/components/projects/store';
+import {
+  currentGroupOfProjects,
+  jobSelector,
+  getCategoryInfo,
+  FilteredProjects
+} from '$lib/components/projects/store';
 import { retrieve_icon } from '$lib/utils/utils';
 </script>
 
@@ -25,7 +30,11 @@ import { retrieve_icon } from '$lib/utils/utils';
           </noscript>
         </label>
         <div class="wrapper-select tpl">
-          <select bind:value={$currentGroupOfProjects} name="projects" id="projects">
+          <select
+            bind:value={$currentGroupOfProjects}
+            name="projects"
+            id="projects"
+          >
             {#each Object.entries(jobSelector) as [value, [label]]}
               <option {value} {label} />
             {/each}
@@ -41,7 +50,12 @@ import { retrieve_icon } from '$lib/utils/utils';
           <figcaption>
             <div class="artifact-buttons">
               {#each [1, 2, 3] as _}
-                <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="19"
+                  height="19"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     fill="var(--clr-500)"
                     d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2Z"
@@ -50,10 +64,16 @@ import { retrieve_icon } from '$lib/utils/utils';
               {/each}
             </div>
             <div class="artifact-link">
-              <a href={link.toString()} target="_blank" rel="external">{link}</a>
+              <a href={link.toString()} target="_blank" rel="external">{link}</a
+              >
             </div>
           </figcaption>
-          <img loading="lazy" src={img} alt="Screenshot of {name}" title="Screenshot of {name}" />
+          <img
+            loading="lazy"
+            src={img}
+            alt="Screenshot of {name}"
+            title="Screenshot of {name}"
+          />
         </figure>
         <div id="describe-{name}">
           <header>
@@ -114,8 +134,12 @@ import { retrieve_icon } from '$lib/utils/utils';
           {/if}
 
           <div class="container-project-links">
-            <ShapeButton target="_blank" icon="github" href={repo.toString()}>Source Code</ShapeButton>
-            <ShapeButton class="reverse" href="{base}/blog/{case_study}">Case Study</ShapeButton>
+            <ShapeButton target="_blank" icon="github" href={repo.toString()}
+              >Source Code</ShapeButton
+            >
+            <ShapeButton class="reverse" href="{base}/blog/{case_study}"
+              >Case Study</ShapeButton
+            >
           </div>
         </div>
       </article>
@@ -131,8 +155,8 @@ import { retrieve_icon } from '$lib/utils/utils';
           </a>
           <h2 class="font-sub">Takeaway Interview?</h2>
           <p>
-            Try Me! As a junior developer with a passion for turning ideas into reality, I'm excited to work with you on
-            your new project.
+            Try Me! As a junior developer with a passion for turning ideas into
+            reality, I'm excited to work with you on your new project.
           </p>
           <ul>
             <li class="tpl font-sub">New</li>

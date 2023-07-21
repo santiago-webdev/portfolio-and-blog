@@ -10,7 +10,10 @@ function getPic(id: number) {
 }
 </script>
 
-<div id="mention-blog" class="flex place-content-center place-items-center py-12 mb-12">
+<div
+  id="mention-blog"
+  class="flex place-content-center place-items-center py-12 mb-12"
+>
   <div class="grid gap-16 px-8 max-w-screen-2xl">
     <div class="flex flex-wrap gap-6 justify-between items-start">
       <h2 class="font-fluid-2">Blog articles</h2>
@@ -18,7 +21,9 @@ function getPic(id: number) {
         <p>
           Press <kbd aria-keyshortcuts="Control+K">CTRL K</kbd> or
         </p>
-        <LinkArrow orientation="right" href="{base}/blog">See the full blog</LinkArrow>
+        <LinkArrow orientation="right" href="{base}/blog"
+          >See the full blog</LinkArrow
+        >
       </div>
     </div>
     <section class="grid gap-y-16 gap-x-6">
@@ -32,11 +37,15 @@ function getPic(id: number) {
               <time {datetime} class="flex flex-wrap place-items-center">
                 <iconify-icon width="21" heigh="21" icon="lucide:calendar" />
                 &nbsp;{relativeTime(new Date(), new Date(datetime))}
-                <div aria-orientation="vertical" role="separator">&nbsp;&mdash;&nbsp;</div>
+                <div aria-orientation="vertical" role="separator">
+                  &nbsp;&mdash;&nbsp;
+                </div>
                 {readableDate(datetime)}
               </time>
             {:else}
-              <small aria-hidden="true" style:visibility="hidden"> No date provided </small>
+              <small aria-hidden="true" style:visibility="hidden">
+                No date provided
+              </small>
             {/if}
             <h3 class="font-fluid-1">{title}</h3>
           </article>
