@@ -5,18 +5,18 @@ export let href = '/';
 export let icon = '';
 </script>
 
-<a {href} {...$$restProps} class={`tpl defaults font-sub ${$$props.class}`}>
-  <span>
+<a
+  {href}
+  {...$$restProps}
+  class={`flex place-content-center place-items-center rounded-full px-8 py-4 uppercase
+  font-sub ${$$props.class}`}
+>
+  <span class="flex place-content-center place-items-center justify-between gap-2 min-w-[min(100%,14ch)]">
     <slot />
     {#if icon}
       <iconify-icon width="22" height="22" icon={retrieve_icon(icon)} />
     {:else if $$props.rel}
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="20"
-        height="20"
-        viewBox="0 0 24 24"
-      >
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
         <path
           fill="none"
           stroke="currentColor"
@@ -31,26 +31,3 @@ export let icon = '';
     {/if}
   </span>
 </a>
-
-<style>
-a {
-  display: flex;
-  place-content: center;
-  place-items: center;
-  text-transform: uppercase;
-  border-radius: 999rem;
-
-  --pad-height: 16px;
-  --pad-width: 32px;
-  padding: var(--pad-height) var(--pad-width);
-}
-
-span {
-  display: flex;
-  place-content: center;
-  place-items: center;
-  justify-content: space-between;
-  gap: 0.5ch;
-  min-width: min(14ch, 100%);
-}
-</style>

@@ -23,8 +23,7 @@ export const AllProjects = readable<Array<Project>>([
     name: 'Zap zsh',
     description:
       "I helped creating the landing page for Zap, an open-source plugin manager for zsh. It's one of my first steps into the web dev world.",
-    short_description:
-      'One of my first steps into the web dev world, I helped creating the landing page',
+    short_description: 'One of my first steps into the web dev world, I helped creating the landing page',
     category: ['featured', 'frontend', 'opensource'],
     stack: {
       frontend: ['JavaScript', 'HTML', 'CSS'],
@@ -38,8 +37,7 @@ export const AllProjects = readable<Array<Project>>([
   },
   {
     name: 'Personal site',
-    description:
-      'This is my personal blog and portfolio, check the case study below',
+    description: 'This is my personal blog and portfolio, check the case study below',
     short_description: 'This same site, here you can find more about me',
     category: ['featured', 'frontend', 'opensource'],
     stack: {
@@ -84,29 +82,18 @@ export const AllProjects = readable<Array<Project>>([
 
 export const FilteredProjects = writable(get(AllProjects));
 
-export type Category =
-  | 'featured'
-  | 'frontend'
-  | 'fullstack'
-  | 'opensource'
-  | 'redesign_rewrite';
+export type Category = 'featured' | 'frontend' | 'fullstack' | 'opensource' | 'redesign_rewrite';
 
 type Categories = Record<Category, [label: string, description: string]>;
 
 export const jobSelector: Categories = {
-  featured: [
-    'Featured',
-    `Here's a selection of the most relevant projects I have for you to explore`
-  ],
+  featured: ['Featured', `Here's a selection of the most relevant projects I have for you to explore`],
   frontend: [
     'Front End',
     `In here you'll find rewrites with a focus on making the UI/UX of this
 pages accesible to everyone`
   ],
-  fullstack: [
-    'Full Stack',
-    `This are some of the most 'complete' projects I have to date`
-  ],
+  fullstack: ['Full Stack', `This are some of the most 'complete' projects I have to date`],
   opensource: [
     'Open Source',
     `As a Linux enthusiast, I'm a firm believer in FOSS, check
@@ -128,8 +115,6 @@ export const currentGroupOfProjects = writable<Category>('featured');
 
 currentGroupOfProjects.subscribe((selectionChange) => {
   FilteredProjects.update(() =>
-    get(AllProjects).filter((currentProject) =>
-      currentProject.category.includes(selectionChange)
-    )
+    get(AllProjects).filter((currentProject) => currentProject.category.includes(selectionChange))
   );
 });

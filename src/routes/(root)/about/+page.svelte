@@ -11,6 +11,8 @@ const tools = [
   'HTML5',
   'CSS3',
   'CSS Modules',
+  'UnoCSS',
+  'TailwindCSS',
   'JavaScript',
   'TypeScript',
   'Git',
@@ -22,31 +24,21 @@ const tools = [
 ];
 </script>
 
-<main>
-  <header>
-    <hgroup>
+<main class="dark:bg-dark-400">
+  <header class="grid gap-y-8 max-w-screen-lg mx-auto py-12 px-3">
+    <hgroup class="grid col-span-4">
       <h1 class="font-fluid-3">Get to know me</h1>
       <p><strong>{greeting}</strong></p>
       <p>
-        I enjoy crafting simple interfaces, focusing in <em>maintainability</em
-        >,
+        I enjoy crafting simple interfaces, focusing in <em>maintainability</em>,
         <em>accessibility</em> and
-        <em>progressive enhancement</em>. My set of skills is mostly dedicated
-        to the web, but I'm also interested in Linux and CS in general.
+        <em>progressive enhancement</em>. My set of skills is mostly dedicated to the web, but I'm also interested in
+        Linux and CS in general.
       </p>
       <p>You can find me in this platforms:</p>
-      <section>
-        <ShapeButton
-          href="https://github.com/santigo-zero/"
-          class="reverse"
-          icon="github"
-        >
-          GitHub</ShapeButton
-        >
-        <ShapeButton
-          href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/"
-          icon="linkedin"
-        >
+      <section class="flex flex-col md:flex-row place-items-start gap-2 md:gap-6 mt-10">
+        <ShapeButton class="reverse" href="https://github.com/santigo-zero/" icon="github">GitHub</ShapeButton>
+        <ShapeButton class="default" href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/" icon="linkedin">
           LinkedIn</ShapeButton
         >
       </section>
@@ -56,24 +48,18 @@ const tools = [
     </div>
   </header>
 </main>
-<div id="experience">
+<div id="experience" class='dark:bg-dark-100 py-12'>
   <Experience />
 </div>
-<div id="technologies">
+<div id="technologies" class='mx-auto py-12 max-w-screen-lg'>
   <h2>Technology I use</h2>
-  <p>
-    These are some of the tools I had used in the past (but am not limited to):
-  </p>
+  <p>These are some of the tools I had used in the past (but am not limited to):</p>
   <div class="wrapper-frameworks">
     <h3>Frameworks and metaframeworks:</h3>
     <ul class="inline-items">
       {#each frameworks as framework}
-        <li class="tpl">
-          <iconify-icon
-            width="26"
-            height="26"
-            icon={retrieve_icon(framework)}
-          />{framework}
+        <li class="flex place-items-center gap-1 px-4 py-2 rounded-2xl dark:bg-dark-400 border-t border-l border-t-solid border-l-solid dark:border-dark-600">
+          <iconify-icon width="26" height="26" icon={retrieve_icon(framework)} />{framework}
         </li>
       {/each}
     </ul>
@@ -83,12 +69,8 @@ const tools = [
     <h3>Databases:</h3>
     <ul class="inline-items">
       {#each databases as database}
-        <li class="tpl">
-          <iconify-icon
-            width="26"
-            height="26"
-            icon={retrieve_icon(database)}
-          />{database}
+        <li class="flex place-items-center gap-1 px-4 py-2 rounded-2xl dark:bg-dark-400 border-t border-l border-t-solid border-l-solid dark:border-dark-600">
+          <iconify-icon width="26" height="26" icon={retrieve_icon(database)} />{database}
         </li>
       {/each}
     </ul>
@@ -98,12 +80,8 @@ const tools = [
     <h3>Other tools:</h3>
     <ul class="inline-items">
       {#each tools as tool}
-        <li class="tpl">
-          <iconify-icon
-            width="26"
-            height="26"
-            icon={retrieve_icon(tool)}
-          />{tool}
+        <li class="flex place-items-center gap-1 px-4 py-2 rounded-2xl dark:bg-dark-400 border-t border-l border-t-solid border-l-solid dark:border-dark-600">
+          <iconify-icon width="26" height="26" icon={retrieve_icon(tool)} />{tool}
         </li>
       {/each}
     </ul>
@@ -111,23 +89,8 @@ const tools = [
 </div>
 
 <style>
-main {
-  background-color: var(--clr-400);
-}
-
 header {
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
-  gap: 2rem 0;
-  width: min(92%, var(--md));
-  margin-inline: auto;
-  padding: 3rem 0;
-}
-
-hgroup {
-  display: grid;
-  /* gap: 1rem; */
-  grid-column: span 4;
 }
 
 hgroup > * + * {
@@ -150,17 +113,6 @@ img {
   border-radius: 50%;
 }
 
-#experience {
-  background-color: var(--clr-100);
-  padding: 3rem 0;
-}
-
-#technologies {
-  width: min(92%, var(--base));
-  margin-inline: auto;
-  padding: 3rem 0;
-}
-
 #technologies > * + * {
   margin-block-start: 1.2em;
 }
@@ -171,32 +123,5 @@ img {
 
 ul {
   margin-block-start: 0.4em;
-}
-
-li {
-  --bg: var(--clr-300);
-  --brd: var(--clr-400);
-
-  display: flex;
-  gap: 0.5ch;
-  padding: 0.6rem 1.2rem;
-  place-content: center;
-  place-items: center;
-  bottom: 2px;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  gap: 0.8rem;
-  margin-top: 2rem;
-}
-
-@media screen and (min-width: 768px) {
-  section {
-    flex-direction: row;
-    place-items: start;
-    gap: 1.2rem;
-  }
 }
 </style>

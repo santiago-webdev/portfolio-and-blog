@@ -4,10 +4,10 @@ import config from '$lib/config.json';
 import { base } from '$app/paths';
 </script>
 
-<div class="wrapper-about">
-  <h2 class="font-fluid-2">About</h2>
-  <div class="aboutme">
-    <section>
+<div class="dark:bg-dark-300 px-3 py-6">
+  <h2 class="font-fluid-2 text-center mb-8">About</h2>
+  <div class="grid grid-cols-8 gap-12 mx-auto max-w-screen-xl">
+    <section class="grid col-span-8 md:col-span-4 gap-4">
       <p class="font-h3">
         <strong> Hello, my name is Santiago. </strong>
       </p>
@@ -22,107 +22,28 @@ import { base } from '$app/paths';
         <em>progressive enhancement</em>.
       </p>
     </section>
-    <div class="familiar-stack">
+    <div class="grid place-content-start gap-4 col-span-8 md:col-span-4">
       <p class="font-h3">And this is the stack I'm most comfortable with</p>
-      <ul class="generic">
-        <li class="font-h3">JavaScript(ES6+)</li>
-        <li class="font-h3">React</li>
-        <li class="font-h3">Node.js</li>
+      <ul class="list-disc list-inside grid gap-2">
+        <li class="font-h3">JS/TS (ES6+)</li>
+        <!-- <li class="font-h3">React</li> -->
+        <!-- <li class="font-h3">Node.js</li> -->
         <li class="font-h3">SQL</li>
         <li class="font-h3">Python</li>
       </ul>
     </div>
   </div>
-  <div class="links-about">
-    <ShapeButton href="{base}/about" class="reverse">More About me</ShapeButton>
-    <div class="container">
-      <ShapeButton href={config.about.url} target="_blank" rel="external"
-        >Resume</ShapeButton
-      >
-      <small>Hit Ctrl+P to print</small>
+  <div class="flex gap-4 mt-10 flex-col md:flex-row md:place-items-start place-content-center max-w-screen-xl mx-auto">
+    <ShapeButton class="reverse" href="{base}/about">More about me</ShapeButton>
+    <div>
+      <ShapeButton class="default" href={config.about.resume} target="_blank" rel="external">Resume</ShapeButton>
+      <small class="hidden md:px-8 md:block md:mt-2">Hit Ctrl+P to print</small>
     </div>
   </div>
 </div>
 
 <style>
-.wrapper-about {
-  background-color: var(--clr-300);
-  padding: 1rem 0;
-}
-
-.aboutme {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 3rem;
-  width: min(100% - 2.2rem, var(--md));
-  margin-inline: auto;
-}
-
-h2 {
-  text-align: center;
-  margin-bottom: clamp(2rem, 2vw + 1rem, 6rem);
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  min-width: min(100%, var(--xs));
-  grid-column: span 8;
-  gap: 1.4rem;
-}
-
-.familiar-stack {
-  grid-column: span 8;
-  display: grid;
-  place-content: start;
-  gap: 1rem;
-}
-
-.links-about {
-  display: flex;
-  flex-direction: column;
-
-  margin-top: clamp(2rem, 2vw + 1rem, 6rem);
-  width: min(100% - 2.2rem, var(--md));
-  margin-inline: auto;
-  place-content: center;
-  gap: 1rem;
-}
-
 ul {
-  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
-  gap: 1rem;
-}
-
-li {
-  margin-right: 2ch;
-}
-
-small {
-  visibility: hidden;
-  display: block;
-  margin-top: 1ch;
-  padding-inline: 2rem;
-}
-
-@media screen and (min-width: 768px) {
-  small {
-    visibility: visible;
-  }
-
-  section {
-    grid-column: span 4;
-  }
-
-  .familiar-stack {
-    grid-column: span 4;
-  }
-
-  .links-about {
-    flex-direction: revert;
-    place-items: self-start;
-    grid-column: span 8;
-  }
 }
 </style>

@@ -3,8 +3,7 @@ title: How this blog was built with SvelteKit
 datetime: 2023-06-18 14:20
 description: Learn the basis of dynamic routing in SvelteKit and MDsveX.
 tags: [Publish, SvelteKit, TypeScript, CSS]
-summary:
-  We'll be using sveltekit to manage the frontend and mdsvex (or not) to write
+summary: We'll be using sveltekit to manage the frontend and mdsvex (or not) to write
   the blogs in markdown (plain text), we'll learn how to make use of dynamic
   routes, and other small extra things.
 finished: true

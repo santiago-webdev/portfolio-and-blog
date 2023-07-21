@@ -21,25 +21,17 @@ function handleSubmit() {
   }, 1000);
 }
 
-$: if ($FilteredPosts.length === 1)
-  preloadData(`${base}/blog${$FilteredPosts[0].href}`);
+$: if ($FilteredPosts.length === 1) preloadData(`${base}/blog${$FilteredPosts[0].href}`);
 </script>
 
-<form class="font-h3 tpl" on:submit|preventDefault={handleSubmit}>
+<form
+  class="font-h3 flex place-items-center gap-1 relative mx-auto my-8 px-3 default dark:bg-dark-600
+  dark:border-dark-800 max-w-screen-sm"
+  on:submit|preventDefault={handleSubmit}
+>
   <button aria-label="Go to selected blog" type="submit">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-    >
-      <g
-        fill="none"
-        stroke="currentColor"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-        stroke-width="2"
-      >
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+      <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
         <circle cx="11" cy="11" r="8" />
         <path d="m21 21l-4.3-4.3" />
       </g>
@@ -59,18 +51,11 @@ $: if ($FilteredPosts.length === 1)
 
 <style>
 form {
-  --bg: var(--clr-600);
-  --brd: var(--clr-700);
-  display: flex;
-  place-items: center;
-  margin-inline: auto;
-  position: relative;
   width: min(100% - 2.2rem, 640px);
 
   transition: background-color 50ms, border 80ms, box-shadow 300ms;
 
   padding: 0.4rem 0.8rem;
-  gap: 0.2rem;
   border-radius: 1rem;
 
   margin-top: 2rem;

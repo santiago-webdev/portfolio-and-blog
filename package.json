@@ -15,8 +15,10 @@
   "devDependencies": {
     "@sveltejs/adapter-vercel": "^3.0.1",
     "@sveltejs/kit": "^1.20.4",
+    "@sveltejs/vite-plugin-svelte": "^2.4.2",
     "@typescript-eslint/eslint-plugin": "^5.45.0",
     "@typescript-eslint/parser": "^5.45.0",
+    "@unocss/extractor-svelte": "^0.53.5",
     "eslint": "^8.28.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-svelte": "^2.30.0",
@@ -30,6 +32,7 @@
     "svelte-preprocess": "^5.0.4",
     "tslib": "^2.4.1",
     "typescript": "^5.0.0",
+    "unocss": "^0.53.5",
     "vite": "^4.3.6"
   },
   "type": "module"

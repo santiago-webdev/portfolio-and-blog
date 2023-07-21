@@ -3,7 +3,7 @@ import { base } from '$app/paths';
 import { page } from '$app/stores';
 import { afterNavigate } from '$app/navigation';
 
-// import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
+import ThemeSwitch from '$lib/components/ThemeSwitch.svelte';
 import WidgetModal from '$lib/components/navigation/WidgetModal.svelte';
 import { navigationItems } from '$lib/components/navigation/store';
 
@@ -19,8 +19,7 @@ afterNavigate(() => (expanded = false));
 $: if (outerWidth > 768) expanded = false;
 
 $: {
-  transform =
-    !expanded && scrollY > 300 && scrollY > savedY ? 'translateY(-200%)' : '';
+  transform = !expanded && scrollY > 300 && scrollY > savedY ? 'translateY(-200%)' : '';
   savedY = scrollY;
 }
 </script>
@@ -35,11 +34,7 @@ $: {
       data-sveltekit-preload-code="eager"
       aria-current={`${base}/` === $page.url.pathname ? 'page' : undefined}
     >
-      <img
-        aria-labelledby="authors-name"
-        class="logo-santigo-zero"
-        alt="My personal logo"
-      />
+      <img aria-labelledby="authors-name" class="logo-santigo-zero" alt="My personal logo" />
       <span id="authors-name">Santiago Gonzalez</span>
     </a>
     <div class="navigation-items">
@@ -52,12 +47,7 @@ $: {
         on:click={() => (expanded = !expanded)}
       >
         {#if expanded}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path
               fill="none"
               stroke="currentColor"
@@ -68,12 +58,7 @@ $: {
             />
           </svg>
         {:else}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path
               fill="none"
               stroke="currentColor"
@@ -87,7 +72,7 @@ $: {
       </button>
 
       <div class="list-items">
-        <!-- <ThemeSwitch /> -->
+        <ThemeSwitch />
         <div role="separator" aria-orientation="vertical" />
         {#each $navigationItems as { label, href }}
           {#if label === 'Separator'}
@@ -97,17 +82,13 @@ $: {
               data-sveltekit-preload-code="eager"
               aria-label="Contact me here"
               class="bordered"
-              aria-current={$page.url.pathname.startsWith(href) && `/` !== href
-                ? 'page'
-                : undefined}
+              aria-current={$page.url.pathname.startsWith(href) && `/` !== href ? 'page' : undefined}
               {href}>{label}</a
             >
           {:else if label !== 'Home'}
             <a
               data-sveltekit-preload-code="eager"
-              aria-current={$page.url.pathname.startsWith(href) && `/` !== href
-                ? 'page'
-                : undefined}
+              aria-current={$page.url.pathname.startsWith(href) && `/` !== href ? 'page' : undefined}
               aria-label="Link to {label}"
               {href}>{label}</a
             >
@@ -123,18 +104,14 @@ $: {
               data-sveltekit-preload-code="eager"
               aria-label="Contact me here"
               class="bordered"
-              aria-current={$page.url.pathname.startsWith(href) && `/` !== href
-                ? 'page'
-                : undefined}
+              aria-current={$page.url.pathname.startsWith(href) && `/` !== href ? 'page' : undefined}
               {href}>{label}</a
             >
           {:else}
             <a
               data-sveltekit-preload-code="eager"
               class="selection"
-              aria-current={$page.url.pathname.startsWith(href) && `/` !== href
-                ? 'page'
-                : undefined}
+              aria-current={$page.url.pathname.startsWith(href) && `/` !== href ? 'page' : undefined}
               aria-label="Link to {label}"
               {href}>{label}</a
             >
@@ -142,7 +119,7 @@ $: {
           <hr />
         {/if}
       {/each}
-      <!-- <ThemeSwitch /> -->
+      <ThemeSwitch />
     </section>
   </nav>
 </header>

@@ -21,9 +21,7 @@ let fly_out = { y: -50, duration: 200 };
                 {#each post.tags as tag}
                   <li
                     style:display={!isLocal && tag === 'Publish' ? 'none' : ''}
-                    class="tpl tags font-sub {tag === 'Publish'
-                      ? 'reverse'
-                      : 'default'}"
+                    class="tpl tags font-sub {tag === 'Publish' ? 'reverse' : 'default'}"
                   >
                     <iconify-icon width="22" icon={retrieve_icon(tag)} />
                     {tag}
@@ -38,27 +36,14 @@ let fly_out = { y: -50, duration: 200 };
 
             {#if post.datetime}
               <time datetime={post.datetime}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                >
-                  <g
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                  >
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+                  <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
                     <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
                     <path d="M16 2v4M8 2v4m-5 4h18" />
                   </g>
                 </svg>
                 &nbsp;{relativeTime(new Date(), new Date(post.datetime))}
-                <div aria-orientation="vertical" role="separator">
-                  &nbsp;&mdash;&nbsp;
-                </div>
+                <div aria-orientation="vertical" role="separator">&nbsp;&mdash;&nbsp;</div>
                 {readableDate(post.datetime)}
               </time>
             {/if}

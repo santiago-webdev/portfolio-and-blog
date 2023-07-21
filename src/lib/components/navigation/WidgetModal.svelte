@@ -23,9 +23,7 @@ function keydown(event: KeyboardEvent) {
 const toggleModal = () =>
   modal.open
     ? (modal.close(), (document.body.style.overflow = ''), (value = ''))
-    : (modal.showModal(),
-      (document.body.style.overflow = 'hidden'),
-      input.focus());
+    : (modal.showModal(), (document.body.style.overflow = 'hidden'), input.focus());
 
 async function handleSubmit() {
   await goto(`${$FilteredPosts[0].href}`);
@@ -40,26 +38,10 @@ const clickOutside = (modal: HTMLDialogElement) =>
 
 <svelte:window on:keydown={keydown} />
 
-<button
-  aria-keyshortcuts="Control+K"
-  aria-label="Click to open and search"
-  on:click={toggleModal}
-  class="tpl"
->
+<button aria-keyshortcuts="Control+K" aria-label="Click to open and search" on:click={toggleModal} class="tpl">
   <span>&nbsp;&nbsp</span>
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="22"
-    height="22"
-    viewBox="0 0 24 24"
-  >
-    <g
-      fill="none"
-      stroke="currentColor"
-      stroke-linecap="round"
-      stroke-linejoin="round"
-      stroke-width="2"
-    >
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
+    <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
       <circle cx="11" cy="11" r="8" />
       <path d="m21 21l-4.35-4.35" />
     </g>
@@ -75,11 +57,7 @@ const clickOutside = (modal: HTMLDialogElement) =>
   bind:this={modal}
 >
   <form on:submit|preventDefault={handleSubmit}>
-    <label
-      aria-label="Search and find a blog post using a search bar"
-      style:display="none"
-      for="modal-search"
-    />
+    <label aria-label="Search and find a blog post using a search bar" style:display="none" for="modal-search" />
     <div class="searchbar">
       <button aria-label="Navigate to best match">
         <iconify-icon width="24" icon="lucide:search" />
@@ -125,13 +103,8 @@ const clickOutside = (modal: HTMLDialogElement) =>
             {#if post.datetime}
               <small>
                 <time datetime={post.datetime}>
-                  <iconify-icon icon="lucide:calendar" />&nbsp;{relativeTime(
-                    new Date(),
-                    new Date(post.datetime)
-                  )}
-                  <div aria-orientation="vertical" role="separator">
-                    &mdash;
-                  </div>
+                  <iconify-icon icon="lucide:calendar" />&nbsp;{relativeTime(new Date(), new Date(post.datetime))}
+                  <div aria-orientation="vertical" role="separator">&mdash;</div>
                   {readableDate(post.datetime)}
                 </time>
               </small>

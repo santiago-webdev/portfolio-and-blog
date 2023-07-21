@@ -12,20 +12,14 @@ export let data;
 <div id="layout">
   <NavigationBar />
   {#key data.pathname}
-    <div
-      in:fly={{ y: -60, duration: 300, delay: 300 }}
-      out:fly={{ y: -60, duration: 300 }}
-    >
+    <div in:fly={{ y: -60, duration: 300, delay: 300 }} out:fly={{ y: -60, duration: 300 }}>
       <slot />
     </div>
   {/key}
   <ButtonToTheTop />
   <Footer />
 </div>
-<Seo
-  url={$page.data.pathname}
-  data={{ title: $page.data.title, description: $page.data.description }}
-/>
+<Seo url={$page.data.pathname} data={{ title: $page.data.title, description: $page.data.description }} />
 
 <style>
 #layout {

@@ -1,9 +1,4 @@
-export const relativeTime = (
-  now: Date,
-  postDate: Date,
-  includeMonths = true,
-  includeYears = true
-): string => {
+export const relativeTime = (now: Date, postDate: Date, includeMonths = true, includeYears = true): string => {
   const difference = now.getTime() - postDate.getTime();
   const formatter = new Intl.RelativeTimeFormat('en', {
     style: 'long'
@@ -76,6 +71,8 @@ export function retrieve_icon(symbol: string): string | undefined {
       return 'devicon-plain:css3';
     case 'css modules':
       return 'simple-icons:cssmodules';
+    case 'unocss':
+      return 'simple-icons:unocss';
     case 'git':
       return 'mdi:git';
     case 'figma':
@@ -166,10 +163,7 @@ export function retrieve_icon(symbol: string): string | undefined {
 }
 
 /* eslint-disable  @typescript-eslint/no-explicit-any */
-export function debounce<T extends (...args: any[]) => void>(
-  func: T,
-  delay: number
-): T {
+export function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T {
   let timeoutId: number;
   return function (this: any, ...args: Parameters<T>) {
     clearTimeout(timeoutId);

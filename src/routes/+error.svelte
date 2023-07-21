@@ -10,9 +10,7 @@ import config from '$lib/config.json';
   <h1>{$page.status}: {$page.error?.message}</h1>
   <p>
     Something has gone wrong, if you'd like to report it, please
-    <ShapeAnchor href="{config.landingpage.repo}/issues"
-      >open an issue</ShapeAnchor
-    >.
+    <ShapeAnchor href="{config.landingpage.repo}/issues">open an issue</ShapeAnchor>.
   </p>
   <section>
     <ShapeButton href="{base}/">Back to Home</ShapeButton>

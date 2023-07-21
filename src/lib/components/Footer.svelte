@@ -9,9 +9,7 @@ let ghStars = 0;
 const getGithubStars = async () => {
   if (dev) return 0;
   try {
-    const response = await fetch(
-      'https://api.github.com/repos/santigo-zero/portfolio-and-blog'
-    );
+    const response = await fetch('https://api.github.com/repos/santigo-zero/portfolio-and-blog');
     if (!response.ok) {
       throw new Error('Network response was not ok.');
     }
@@ -34,14 +32,13 @@ const donateItems = [
 ];
 </script>
 
-<footer>
+<footer class="flex place-content-center flex-col mt-4 rounded-t-3xl dark:bg-dark-400">
   <header>
-    <div class="aboutme tpl">
-      <h3>Santiago Gonzalez</h3>
-      <p>
-        Crafting accessible web experiences without leaving the aesthetics
-        aside.
-      </p>
+    <div
+      class="aboutme tpl flex relative place-content-center flex-wrap flex-col flex-2 drop-shadow-md rounded-2xl p-8 gap-4 defaults dark:bg-dark-500 dark:border-dark-600"
+    >
+      <h3 class="font-bold">Santiago Gonzalez</h3>
+      <p class="dark:text-dark-inv-700">Crafting accessible web experiences without leaving the aesthetics aside.</p>
     </div>
 
     <nav aria-label="footer-navigation">
@@ -53,8 +50,7 @@ const donateItems = [
               <a
                 class="selection"
                 aria-current={item.href === $page.url.pathname ||
-                ($page.url.pathname.startsWith(item.href || '') &&
-                  `/` !== item.href)
+                ($page.url.pathname.startsWith(item.href || '') && `/` !== item.href)
                   ? 'page'
                   : undefined}
                 aria-label="Link to {item.label}"
@@ -70,19 +66,13 @@ const donateItems = [
       <h3 class="font-p">Projects</h3>
       <ul>
         <li>
-          <a class="selection" target="_blank" href="https://zapzsh.org"
-            >Zap website</a
-          >
+          <a class="selection" target="_blank" href="https://zapzsh.org">Zap website</a>
         </li>
         <li>
-          <a class="selection" target="_blank" href="https://zapzsh.org"
-            >Lorem website</a
-          >
+          <a class="selection" target="_blank" href="https://zapzsh.org">Lorem website</a>
         </li>
         <li>
-          <a class="selection" target="_blank" href="https://zapzsh.org"
-            >Another website</a
-          >
+          <a class="selection" target="_blank" href="https://zapzsh.org">Another website</a>
         </li>
       </ul>
     </div>
@@ -98,16 +88,6 @@ const donateItems = [
                 {item.name}
               </a>
             </address>
-            <!-- <button -->
-            <!-- 	aria-label="Copy the direction of the wallet" -->
-            <!-- 	title="Copy the direction of the wallet" -->
-            <!-- 	on:click={() => -->
-            <!-- 		navigator.clipboard -->
-            <!-- 			.writeText(item.direction) -->
-            <!-- 			.then(() => console.log('Text copied to clipboard')) -->
-            <!-- 			.catch((error) => console.error('Could not copy text: ', error))} -->
-            <!-- 	><iconify-icon height="22" weight="22" icon="lucide:clipboard-copy" /></button -->
-            <!-- > -->
           </li>
         {/each}
       </ul>
@@ -116,31 +96,19 @@ const donateItems = [
     <div class="contact">
       <h3 class="font-p">Contact</h3>
       <address>
-        <a
-          class="selection"
-          target="_blank"
-          href="mailto:santiagogonzalezbogado@gmail.com"
-        >
+        <a class="selection" target="_blank" href="mailto:santiagogonzalezbogado@gmail.com">
           <iconify-icon icon="lucide:mail" />
           Email me</a
         >
       </address>
       <address>
-        <a
-          class="selection"
-          target="_blank"
-          href="https://github.com/santigo-zero/"
-        >
+        <a class="selection" target="_blank" href="https://github.com/santigo-zero/">
           <iconify-icon icon="simple-icons:github" />
           GitHub</a
         >
       </address>
       <address>
-        <a
-          class="selection"
-          target="_blank"
-          href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/"
-        >
+        <a class="selection" target="_blank" href="https://www.linkedin.com/in/santiago-gonzalez-62557221b/">
           <iconify-icon icon="simple-icons:linkedin" />
           LinkedIn
         </a>
@@ -172,15 +140,11 @@ const donateItems = [
         <iconify-icon width="24" height="24" icon="mdi:github" />
         <div aria-orientation="vertical" role="separator">-</div>
         <iconify-icon icon="lucide:star" />
-        <var
-          aria-label="Amount of stars in the GitHub repository"
-          title="Amount of stars in the GitHub repository"
-        >
+        <var aria-label="Amount of stars in the GitHub repository" title="Amount of stars in the GitHub repository">
           {ghStars}
         </var>
       </a>
-
-      <small class="copyright">
+      <small class="flex flex-wrap place-content-center">
         All rights reserved <iconify-icon icon="lucide:copyright" />
         {new Date().getFullYear()}
         <div aria-orientation="vertical" role="separator">&mdash;</div>
@@ -191,20 +155,9 @@ const donateItems = [
 </footer>
 
 <style>
-footer {
-  display: flex;
-  place-content: center;
-  flex-direction: column;
-  background-color: var(--clr-400);
-  margin-top: 1rem;
-  border-top-right-radius: 1.6rem;
-  border-top-left-radius: 1.6rem;
-}
-
 footer :is(a, small) {
-  /* color: var(--clr-3000); */
   display: flex;
-  gap: 0.4ch;
+  gap: 0.25rem;
   place-items: center;
 }
 
@@ -216,6 +169,7 @@ header {
   gap: 2rem 1rem;
   width: min(100% - 2.2rem, var(--md));
   margin-inline: auto;
+  grid-template-columns: repeat(8, 1fr);
 }
 
 header > * {
@@ -223,38 +177,9 @@ header > * {
   flex-direction: column;
 }
 
-.aboutme h3 {
-  font-variation-settings: 'wght' 700;
-  font-weight: 700;
-}
-
 header h3:not(.aboutme h3) {
   font-weight: 500;
   margin: 0 0.6rem 0.4rem;
-}
-
-.aboutme {
-  --bg: var(--clr-500);
-  --brd: var(--clr-600);
-
-  display: flex;
-  position: relative;
-  place-content: center;
-  flex-flow: column wrap;
-  flex: 1 23rem;
-  min-height: 15rem;
-  gap: 1rem;
-  padding: 2rem;
-  border-radius: 1.2rem;
-}
-
-p,
-a {
-  color: var(--text-2);
-}
-
-.aboutme p {
-  color: var(--text-1);
 }
 
 .aboutme:after {
@@ -279,10 +204,6 @@ a {
 :global([data-theme='system-light'] .aboutme:after) {
   opacity: 0.1;
   background-image: url('/logo-light.svg');
-}
-
-header {
-  grid-template-columns: repeat(8, 1fr);
 }
 
 .aboutme {
@@ -361,12 +282,6 @@ section :is(small, a) {
   padding: 2rem 0;
   width: min(100% - 2.2rem, var(--md));
   margin-inline: auto;
-}
-
-.copyright {
-  display: flex;
-  flex-wrap: wrap;
-  place-content: center;
 }
 
 @media screen and (min-width: 1200px) {

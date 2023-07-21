@@ -1,11 +1,5 @@
 <div class="wrapper-arrow" aria-hidden="true" {...$$restProps}>
-  <svg
-    class="tail"
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-  >
+  <svg class="tail" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
     <path
       fill="none"
       stroke="currentColor"
@@ -15,13 +9,7 @@
       d="M5 12h14"
     />
   </svg>
-  <svg
-    class="chevron"
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-  >
+  <svg class="chevron" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
     <path
       fill="none"
       stroke="currentColor"
@@ -35,8 +23,7 @@
 
 <style>
 * {
-  transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1),
-    opacity 150ms cubic-bezier(0.4, 0.4, 0, 1);
+  transition: transform 150ms cubic-bezier(0.215, 0.61, 0.355, 1), opacity 150ms cubic-bezier(0.4, 0.4, 0, 1);
 }
 
 .wrapper-arrow {

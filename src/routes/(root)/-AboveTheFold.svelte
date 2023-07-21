@@ -5,110 +5,32 @@ import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
 import config from '$lib/config.json';
 </script>
 
-<div class="wrapper">
-  <main>
-    <div class="introduction">
-      <h1 class="font-fluid-5">
+<div class="px-3 bg-light-800 dark:bg-dark-400">
+  <main
+    class="grid place-items-center py-6 relative mx-auto max-w-screen-xl
+    xl:py-24 xl:min-h-[80vh] xl:min-h-[80dvh]"
+  >
+    <div class="flex flex-col flex-wrap">
+      <h1 class="font-fluid-5 max-w-[15ch]">
         Building the web<br /> with clean interfaces
       </h1>
-      <p class="font-h3">
-        I'm a frontend developer and here we'll discuss about
-        <strong>web deve&shylopment</strong>
-        and show you my projects while at it.
+      <p class="font-h3 mt-2 max-w-[38ch]">
+        I'm a frontend developer and here we'll discuss about <strong>web deve&shylopment</strong> and show you my projects
+        while at it.
       </p>
-      <section>
-        <ShapeButton class="reverse" href="{base}/portfolio"
-          >What I've built</ShapeButton
-        >
-        <div class="container">
-          <ShapeButton href={config.about.resume} target="_blank" rel="external"
-            >Resume</ShapeButton
-          >
-          <small>Hit Ctrl+P to print</small>
+      <section class="flex gap-4 mt-10 flex-col md:flex-row md:place-items-start">
+        <ShapeButton class="reverse" href="{base}/portfolio">What I've built</ShapeButton>
+        <div>
+          <ShapeButton class="default" href={config.about.resume} target="_blank" rel="external">Resume</ShapeButton>
+          <small class="hidden md:px-8 md:block md:mt-2">Hit Ctrl+P to print</small>
         </div>
       </section>
     </div>
-    <div class="call-to-scroll">
+    <div
+      class="place-self-start mt-8 hover:dark-red-50
+      xl:absolute xl:rotate-90 xl:top-[70%] xl:right-0"
+    >
       <LinkArrow href="#portfolio">Learn more</LinkArrow>
     </div>
   </main>
 </div>
-
-<style>
-.wrapper {
-  background: var(--clr-400);
-  padding: 2rem 0;
-}
-
-main {
-  display: grid;
-  place-items: center;
-  width: min(100% - 2.2rem, var(--md));
-  margin-inline: auto;
-  position: relative;
-}
-
-.introduction {
-  display: flex;
-  flex-flow: column wrap;
-}
-
-small {
-  display: none;
-}
-
-h1 {
-  max-width: 15ch;
-}
-
-p {
-  margin-top: 0.5rem;
-  max-width: 38ch;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  margin-top: 2.5rem;
-}
-
-.call-to-scroll {
-  place-self: start;
-  margin-top: 2rem;
-}
-
-@media screen and (min-width: 768px) {
-  section {
-    flex-direction: row;
-    place-items: start;
-  }
-
-  small {
-    padding-inline: 2rem;
-    display: block;
-    margin-top: 0.5rem;
-  }
-}
-
-@media screen and (min-height: 1280px) {
-  main {
-    padding: 3rem 0;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  main {
-    padding: 6rem 0;
-    text-align: left;
-    min-height: 80vh;
-    min-height: 80dvh;
-  }
-
-  .call-to-scroll {
-    position: absolute;
-    inset: 70% 0 auto auto;
-    transform: rotate(90deg);
-  }
-}
-</style>
