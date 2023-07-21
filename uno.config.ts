@@ -2,6 +2,10 @@ import { defineConfig } from 'unocss';
 
 export default defineConfig({
   theme: {
+    fontFamily: {
+      'ui': ['Manrope'],
+      'body': ['Basier Circle'],
+    },
     colors: {
       palette: {
         'red-40': 'hsl(346 77% 62%)',

@@ -39,8 +39,8 @@ import config from '$lib/config.json';
       </section>
     </div>
     <div
-      class="place-self-start mt-8 hover:dark-red-50
-      xl:absolute xl:rotate-90 xl:top-[70%] xl:right-0"
+      class="place-self-start mt-8 hover:dark-red-50 xl:absolute xl:rotate-90
+      xl:top-[70%] xl:right-0"
     >
       <LinkArrow href="#portfolio">Learn more</LinkArrow>
     </div>

@@ -18,7 +18,7 @@ function getPic(id: number) {
     <div class="flex flex-wrap gap-6 justify-between items-start">
       <h2 class="font-fluid-2">Blog articles</h2>
       <div class="flex flex-col">
-        <p>
+        <p class='font-body' >
           Press <kbd aria-keyshortcuts="Control+K">CTRL K</kbd> or
         </p>
         <LinkArrow orientation="right" href="{base}/blog"
@@ -31,7 +31,7 @@ function getPic(id: number) {
         <a {href}>
           <article class="relative grid gap-4">
             <div class="max-h-[36rem] overflow-hidden rounded-lg">
-              <img class="rounded-xl" loading="lazy" src={getPic(id)} alt="" />
+              <img class="w-full h-auto object-scale-down object-center rounded-xl" loading="lazy" src={getPic(id)} alt="" />
             </div>
             {#if datetime}
               <time {datetime} class="flex flex-wrap place-items-center">
@@ -64,13 +64,6 @@ kbd {
 
 section {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
-}
-
-img {
-  max-inline-size: 100%;
-  block-size: auto;
-  object-fit: scale-down;
-  object-position: center center;
 }
 
 section a:nth-child(3) {
