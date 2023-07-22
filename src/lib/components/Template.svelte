@@ -131,7 +131,7 @@ if (title) {
 
 .back-button {
   margin-inline: auto;
-  width: min(100% - 2.2rem, var(--base));
+  width: min(100% - 2.2rem, var(--sm));
   margin-top: 0.5rem;
 }
 

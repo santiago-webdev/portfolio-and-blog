@@ -49,7 +49,7 @@ ul {
 }
 
 .back-button {
-  width: min(100% - 2.2rem, var(--base));
+  width: min(100% - 2.2rem, var(--sm));
   margin-inline: auto;
   padding-top: 0.5rem;
   margin-bottom: 1rem;

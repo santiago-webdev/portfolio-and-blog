@@ -4,13 +4,11 @@ import Forward from '$lib/components/Forward.svelte';
 
 export let orientation = 'right';
 export let href = '/';
-export let defaults = false;
 </script>
 
 <a
   style:gap={orientation === 'left' ? '0.6ch' : '0.2ch'}
   class="font-p"
-  class:defaults
   {href}
   {...$$restProps}
 >
@@ -30,14 +28,9 @@ a {
   display: inline-flex;
   color: var(--text-0);
   transition: all 150ms ease-in-out;
-  max-width: max-content;
-  letter-spacing: -0.03em;
-  font-weight: 400;
-}
-
-.defaults {
-  font-size: inherit;
-  line-height: inherit;
+  /* max-width: max-content; */
+  /* letter-spacing: -0.03em; */
+  /* font-weight: 400; */
 }
 
 @media (hover: hover) {

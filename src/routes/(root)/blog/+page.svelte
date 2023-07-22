@@ -18,11 +18,11 @@ boldWords.forEach((word: string) => {
 </script>
 
 <main class="grid dark:bg-dark-400 rounded-b-3xl">
-  <header class="px-6 max-w-screen-lg mx-auto max-w-screen-lg px-3">
-    <div class="grid place-items-end mt-2">
+  <header>
+    <div class="grid mt-2 max-w-screen-md mx-auto place-items-end">
       <LinkArrow orientation="right" href="{base}/blog/index">Index</LinkArrow>
     </div>
-    <div class="grid place-items-center mt-6">
+    <div class="grid max-w-screen-md mx-auto place-items-center mt-6">
       <h1 class="font-fluid-5 text-center max-w-[33ch]">Blog</h1>
       <!-- eslint-disable -->
       <p class="font-h3 mt-4 text-center max-w-[33ch]">{@html description}</p>
