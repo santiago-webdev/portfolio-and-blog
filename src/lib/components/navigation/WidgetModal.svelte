@@ -47,7 +47,7 @@ const clickOutside = (modal: HTMLDialogElement) =>
   class="px-1 py-2"
 >
   <kbd
-    class="flex place-content-center place-items-center font-small dark:text-dark-inv-600"
+    class="flex place-content-center place-items-center font-small dark:text-dark-inv-700"
     >CTRL K</kbd
   >
   <svg
