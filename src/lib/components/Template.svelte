@@ -65,9 +65,7 @@ if (title) {
           {#each tags as tag}
             <li
               style:display={!isLocal && tag === 'Publish' ? 'none' : ''}
-              class="font-sub font-sub drop-shadow inline-flex place-items-center
-gap-1 px-2 py-1.5 rounded-xl dark:bg-dark-600 dark:border-dark-800 dark:border-t-solid
-dark:border-l-solid border-1"
+              class="tags"
             >
               <iconify-icon width="22" height="22" icon={retrieve_icon(tag)} />
               {tag}

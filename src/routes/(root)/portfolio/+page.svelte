@@ -11,9 +11,13 @@ import { retrieve_icon } from '$lib/utils/utils';
 </script>
 
 <main>
-  <div class="wrapper-header">
-    <header>
-      <hgroup>
+  <div
+    class="wrapper-header py-6 flex place-items-center dark:bg-dark-400 rounded-b-3xl"
+  >
+    <header
+      class="flex flex-col place-content-center mx-auto px-3 max-w-screen-lg gap-10 lg:flex-row md:py-24"
+    >
+      <section class="grid gap-4">
         <small>PORTFOLIO SHOWCASE &mdash;</small>
         <h1 class="font-fluid-2">
           {getCategoryInfo($currentGroupOfProjects).label} Projects
@@ -21,9 +25,9 @@ import { retrieve_icon } from '$lib/utils/utils';
         <p class="font-h3">
           {getCategoryInfo($currentGroupOfProjects).description}
         </p>
-      </hgroup>
+      </section>
       <form class="font-h3">
-        <label for="projects">
+        <label for="projects flex flex-wrap mx-6">
           Filter by type of project
           <noscript>
             <small>Sorry Folks! This requires JavaScript to work!</small>
@@ -45,10 +49,15 @@ import { retrieve_icon } from '$lib/utils/utils';
   </div>
   <section>
     {#each $FilteredProjects as { name, description, category, stack, img, repo, link, case_study }}
-      <article class="tpl">
+      <article
+        class="flex flex-col flex-wrap md:flex-row p-6 gap-8 rounded-3xl
+ border-t border-l border-t-solid border-l-solid
+        dark:bg-dark-400 dark:border-dark-600
+        "
+      >
         <figure>
-          <figcaption>
-            <div class="artifact-buttons">
+          <figcaption class="flex place-items-center p-1 pr-2 dark:bg-dark-900">
+            <div class="artifact-buttons flex p-1">
               {#each [1, 2, 3] as _}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -64,7 +73,11 @@ import { retrieve_icon } from '$lib/utils/utils';
               {/each}
             </div>
             <div class="artifact-link">
-              <a href={link.toString()} target="_blank" rel="external">{link}</a
+              <a
+                class="max-w-max"
+                href={link.toString()}
+                target="_blank"
+                rel="external">{link}</a
               >
             </div>
           </figcaption>
@@ -78,7 +91,11 @@ import { retrieve_icon } from '$lib/utils/utils';
         <div id="describe-{name}">
           <header>
             <div style:gap="2ch" class="inline-items">
-              <a class="font-h3" href={link.toString()} target="_blank">
+              <a
+                class="font-h3 max-w-max"
+                href={link.toString()}
+                target="_blank"
+              >
                 {link.hostname.replace(/^www\./i, '')}
               </a>
               <ul class="inline-items">
@@ -92,7 +109,9 @@ import { retrieve_icon } from '$lib/utils/utils';
           </header>
           <p>{description}</p>
 
-          <h3 class="font-sub">Tech Stack:</h3>
+          <h3 class="font-sub mt-4 dark:text-dark-inv-800 font-bold">
+            Tech Stack:
+          </h3>
           {#if stack.frontend}
             <div class="list-project-frontend">
               <h4 class="font-sub">Frontend:</h4>
@@ -134,8 +153,11 @@ import { retrieve_icon } from '$lib/utils/utils';
           {/if}
 
           <div class="container-project-links">
-            <ShapeButton target="_blank" icon="github" href={repo.toString()}
-              >Source Code</ShapeButton
+            <ShapeButton
+              class="default"
+              target="_blank"
+              icon="github"
+              href={repo.toString()}>Source Code</ShapeButton
             >
             <ShapeButton class="reverse" href="{base}/blog/{case_study}"
               >Case Study</ShapeButton
@@ -144,14 +166,22 @@ import { retrieve_icon } from '$lib/utils/utils';
         </div>
       </article>
     {/each}
-    <article class="tpl">
-      <button>
+    <article
+      class="flex flex-col flex-wrap md:flex-row p-6 gap-8 rounded-3xl
+ border-t border-l border-t-solid border-l-solid
+        dark:bg-dark-400 dark:border-dark-600"
+    >
+      <button
+        class="flex place-items-center place-content-center rounded-xl
+        hover:dark:bg-dark-600 border-2 border-solid
+        hover:dark:border-palette-orange-50"
+      >
         <iconify-icon width="30" height="30" icon="lucide:plus" />
       </button>
       <div id="describe-new-project">
         <header>
-          <a href="#todo" target="_blank">
-            <span style:color="var(--text-1)">newdomain.com</span>
+          <a class="max-w-max" href="#todo" target="_blank">
+            <span class="font-semibold">newdomain.com</span>
           </a>
           <h2 class="font-sub">Takeaway Interview?</h2>
           <p>
@@ -168,32 +198,11 @@ import { retrieve_icon } from '$lib/utils/utils';
 </main>
 
 <style>
-.wrapper-header {
-  border-bottom-right-radius: 1.6rem;
-  border-bottom-left-radius: 1.6rem;
-  padding-bottom: 1.4rem;
-  padding-top: 1.8rem;
-  background-color: var(--clr-400);
-  display: flex;
-  place-items: center;
-}
-
-.wrapper-header header {
-  display: flex;
-  flex-direction: column;
-  width: min(92%, var(--base));
-  margin-inline: auto;
-  place-content: center;
-  gap: 2.6rem;
-}
-
-hgroup {
+section {
   flex: 6;
-  display: grid;
-  gap: 1rem;
 }
 
-hgroup p {
+section p {
   color: var(--text-0);
 }
 
@@ -203,12 +212,6 @@ form {
   flex-flow: column wrap;
   place-content: center;
   gap: 1rem;
-}
-
-label {
-  margin-inline: 1.6rem;
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .wrapper-select {
@@ -233,31 +236,11 @@ section {
   gap: 1.6rem;
 }
 
-article {
-  --bg: var(--clr-400);
-  --brd: var(--clr-500);
-  border-radius: 1.2rem;
-  display: flex;
-  flex-flow: column wrap;
-  gap: 2rem;
-  padding: 1.6rem;
-}
-
-a {
-  max-width: max-content;
-}
-
 [id^='describe-'] {
   flex: 6;
   gap: 1rem;
   display: flex;
   flex-direction: column;
-}
-
-h3 {
-  margin-top: 0.8rem;
-  color: var(--clr-inv-150);
-  font-weight: 500;
 }
 
 article header {
@@ -286,17 +269,6 @@ h4 {
   gap: 1rem;
 }
 
-@media screen and (min-width: 896px) {
-  .wrapper-header header {
-    flex-direction: row;
-    padding: 6rem 0;
-  }
-
-  article {
-    flex-direction: row;
-  }
-}
-
 @media screen and (min-width: 1200px) {
   .container-project-links {
     flex-flow: row wrap;
@@ -317,19 +289,6 @@ figure {
   border-radius: 0.8rem;
 }
 
-figcaption {
-  display: flex;
-  place-items: center;
-  padding: 0.2rem;
-  padding-right: 0.8rem;
-  background: var(--clr-900);
-}
-
-.artifact-buttons {
-  display: flex;
-  padding: 0.4rem;
-}
-
 .artifact-link {
   overflow-x: auto;
   padding: 0.2rem 1rem;
@@ -344,10 +303,6 @@ img {
   block-size: auto;
 }
 
-span {
-  font-variation-settings: 'wght' 500;
-}
-
 button {
   min-width: min(100%, var(--xs));
   height: auto;
@@ -355,21 +310,5 @@ button {
   flex: 5;
   aspect-ratio: 16/10;
   border: 3px dashed var(--clr-800);
-  display: flex;
-  place-items: center;
-  place-content: center;
-}
-
-button:hover {
-  border: 3px dashed var(--clr-orange-50);
-  background-color: var(--clr-600);
-}
-
-[icon='lucide:plus'] {
-  color: var(--text-0);
-}
-
-button:hover [icon='lucide:plus'] {
-  color: var(--text-3);
 }
 </style>

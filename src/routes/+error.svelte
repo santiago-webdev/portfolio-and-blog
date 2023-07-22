@@ -6,38 +6,15 @@ import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
 import config from '$lib/config.json';
 </script>
 
-<main>
-  <h1>{$page.status}: {$page.error?.message}</h1>
-  <p>
+<main
+  class="min-h-screen flex flex-col max-w-screen-lg px-8 mx-auto justify-center items-center text-center"
+>
+  <h1 class="font-fluid-4">{$page.status}: {$page.error?.message}</h1>
+  <p class="mt-4 mb-8">
     Something has gone wrong, if you'd like to report it, please
     <ShapeAnchor href="{config.landingpage.repo}/issues"
       >open an issue</ShapeAnchor
     >.
   </p>
-  <section>
-    <ShapeButton href="{base}/">Back to Home</ShapeButton>
-  </section>
+  <ShapeButton class="default" href="{base}/">Back to Home</ShapeButton>
 </main>
-
-<style>
-main {
-  min-height: 100dvh;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  width: min(100% - 2.2rem, var(--sm));
-  margin-inline: auto;
-  place-content: center;
-  place-items: center;
-  text-align: center;
-}
-
-main > * + * {
-  margin-block-start: 1em;
-}
-
-section {
-  display: flex;
-  flex-direction: column;
-}
-</style>

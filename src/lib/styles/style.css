@@ -52,54 +52,6 @@ li code {
   content: url('/logo-light.svg');
 }
 
-/* .tpl { */
-/*   --bg: transparent; */
-/*   --brd: transparent; */
-/*   --shadow: 3px 6px 12px 3px hsl(0 0% 0% / 0.1); */
-/*   background: var(--bg); */
-/*   border-color: var(--brd) var(--bg) var(--bg) var(--brd); */
-/*   border-width: 2px 1px; */
-/*   border-style: solid; */
-/*   border-radius: 16px; */
-/*   box-shadow: var(--shadow); */
-/* } */
-
-/* .defaults { */
-/*   --bg: var(--clr-700); */
-/*   --brd: var(--clr-800); */
-/*   color: var(--text-2); */
-/* } */
-
-/* .reverse { */
-/*   --bg: var(--text-3); */
-/*   --brd: white; */
-/*   color: var(--clr-200); */
-/* } */
-
-/* li.tags.reverse { */
-/*   --bg: var(--text-3); */
-/*   --brd: white; */
-/*   color: var(--clr-200); */
-/* } */
-
-/* @media (hover: hover) { */
-/*   .defaults:focus-visible, */
-/*   .defaults:hover { */
-/*     --bg: var(--clr-purple-50); */
-/*     --brd: var(--clr-purple-40); */
-/*     color: var(--text-3); */
-/*   } */
-/**/
-/*   li.tags.reverse:hover, */
-/*   li.tags.reverse:focus-visible, */
-/*   .reverse:focus-visible, */
-/*   .reverse:hover { */
-/*     --bg: var(--clr-red-old); */
-/*     --brd: var(--clr-red-old-border); */
-/*     color: var(--text-3); */
-/*   } */
-/* } */
-
 [aria-current='page'] {
   text-decoration: underline var(--clr-purple-mauve) 2px;
   text-underline-offset: 3px;
@@ -146,17 +98,6 @@ kbd {
   display: inline-flex;
   place-items: center;
   flex-wrap: wrap;
-  gap: 0.3rem;
-}
-
-li.tags {
-  --bg: var(--clr-600);
-  --brd: var(--clr-700);
-  border-top-width: 1px;
-  border-radius: 0.8rem;
-  padding: 0.3rem 0.6rem;
-  display: flex;
-  place-items: center;
   gap: 0.3rem;
 }
 
