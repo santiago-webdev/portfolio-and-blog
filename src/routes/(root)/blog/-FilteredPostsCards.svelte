@@ -9,14 +9,15 @@ let fly_in = { y: 50, duration: 200 };
 let fly_out = { y: -50, duration: 200 };
 </script>
 
-<section role="complementary">
-  <ul class="grid gap-4 pb-4 mx-auto">
+<section role="complementary" class="mx-auto max-w-screen-2xl">
+  <ul
+    class="grid grid-cols-[repeat(auto-fill,minmax(min(23rem,100%),1fr))] gap-4 px-2 pb-4 mx-auto"
+  >
     {#each $FilteredPosts as post}
       <li in:fly={fly_in} out:fly={fly_out}>
         <a href={post.href}>
           <article
-            class="rounded-2xl dark:bg-dark-400 border-t border-l border-t-solid
-            border-l-solid dark:border-dark-600"
+            class="grid place-items-start p-3 md:p-5 h-full rounded-2xl dark:bg-dark-400 border-t border-l border-t-solid border-l-solid dark:border-dark-600"
           >
             <h2>{post.title}</h2>
             {#if post.tags}
@@ -37,7 +38,7 @@ let fly_out = { y: -50, duration: 200 };
             {/if}
 
             {#if post.description}
-              <p class="mt-2">{post.description}</p>
+              <p class="mt-3 dark:text-dark-inv-700">{post.description}</p>
             {/if}
 
             {#if post.datetime}
@@ -80,9 +81,10 @@ let fly_out = { y: -50, duration: 200 };
 </section>
 
 <style>
-section > ul {
-  grid-template-columns: repeat(auto-fill, minmax(min(23rem, 100%), 1fr));
-  width: min(92%, var(--md));
+@supports (grid-template-rows: masonry) {
+  section > ul {
+    grid-template-rows: masonry;
+  }
 }
 
 li {
@@ -97,37 +99,9 @@ section > ul:hover > li:hover {
   opacity: 1;
 }
 
-@supports (grid-template-rows: masonry) {
-  section > ul {
-    grid-template-rows: masonry;
-  }
-}
-
 article {
-  --bg: var(--clr-400);
-  --brd: var(--clr-500);
-  display: grid;
-  place-items: start;
   grid-template-rows: auto 1fr auto auto;
-
-  padding: 1rem;
-  border-radius: 1.1rem;
-  height: 100%;
   transition: transform 100ms, color 100ms, background-color 500ms, border 100ms;
-}
-
-@media screen and (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
-  article:hover {
-    transform: scale(1.02);
-  }
-}
-
-p {
-  color: var(--text-1);
-}
-
-time {
-  place-content: center;
 }
 
 @media screen and (min-width: 1024px) and (prefers-reduced-motion: no-preference) {

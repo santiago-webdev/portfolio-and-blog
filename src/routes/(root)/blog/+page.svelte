@@ -17,9 +17,11 @@ boldWords.forEach((word: string) => {
 });
 </script>
 
-<main class="grid dark:bg-dark-400 rounded-b-3xl">
+<main
+  class="grid dark:bg-dark-400 rounded-b-3xl pb-[clamp(1rem,2vw+1rem,6rem)] mb-[clamp(1rem,2vw+1rem,3rem)]"
+>
   <header>
-    <div class="grid mt-2 max-w-screen-md mx-auto place-items-end">
+    <div class="grid px-4 mt-2 max-w-screen-md mx-auto place-items-end">
       <LinkArrow orientation="right" href="{base}/blog/index">Index</LinkArrow>
     </div>
     <div class="grid max-w-screen-md mx-auto place-items-center mt-6">
@@ -31,10 +33,3 @@ boldWords.forEach((word: string) => {
   <SearchBar />
 </main>
 <FilteredPostsCards />
-
-<style>
-main {
-  padding-bottom: clamp(1rem, 2vw + 1rem, 6rem);
-  margin-bottom: clamp(1rem, 2vw + 1rem, 3rem);
-}
-</style>

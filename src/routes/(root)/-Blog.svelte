@@ -28,7 +28,9 @@ function getPic(id: number) {
         >
       </div>
     </div>
-    <section class="grid gap-y-16 gap-x-6">
+    <section
+      class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,15rem),1fr))] gap-y-16 gap-x-6"
+    >
       {#each $Posts.slice(0, 3) as { href, title, datetime }, id}
         <a {href}>
           <article class="relative grid gap-4">
@@ -67,10 +69,6 @@ kbd {
   font-size: inherit;
   line-height: inherit;
   font-weight: normal;
-}
-
-section {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
 }
 
 section a:nth-child(3) {

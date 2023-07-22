@@ -7,7 +7,8 @@ import { FilteredProjects } from '$lib/components/projects/store';
 <div class="dark:bg-dark-100">
   <div
     id="portfolio"
-    class="flex flex-wrap flex-col md:flex-row px-4 place-items-center max-w-screen-xl mx-auto min-h-0 xl:min-h-[100vh] xl:min-h-[100svh] py-12 px-3 gap-12 justify-between"
+    class="flex flex-wrap flex-col md:flex-row px-4 place-items-center max-w-screen-xl
+    mx-auto lg:min-h-0 min-h-screen px-3 py-24 gap-12 justify-between"
   >
     <section
       class="flex flex-col flex-1 w-full px-4 max-w-[min(100%-2rem)] dark:text-dark-inv-500"

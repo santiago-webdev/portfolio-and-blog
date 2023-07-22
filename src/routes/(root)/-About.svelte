@@ -24,7 +24,10 @@ import { base } from '$app/paths';
     </section>
     <div class="grid place-content-start gap-4 col-span-8 md:col-span-4">
       <p class="font-h3">And this is the stack I'm most comfortable with</p>
-      <ul class="list-disc list-inside grid gap-2">
+      <ul
+        class="list-disc list-inside grid
+        grid-cols-[repeat(auto-fit,minmax(min(100%,10rem),1fr))] gap-2"
+      >
         <li class="font-h3">JS/TS (ES6+)</li>
         <!-- <li class="font-h3">React</li> -->
         <!-- <li class="font-h3">Node.js</li> -->
@@ -48,9 +51,3 @@ import { base } from '$app/paths';
     </div>
   </div>
 </div>
-
-<style>
-ul {
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
-}
-</style>

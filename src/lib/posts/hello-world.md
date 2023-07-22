@@ -5,11 +5,13 @@ tags: [Publish, Case Study, Project]
 datetime: 2023-01-14 06:02
 ---
 
-## Project Overview
+# My personal website
 
-It's my personal website, and I have both my portfolio and blog, I wanted to put
+This is my personal website, I host both my portfolio and blog, I wanted to put
 myself on the internet to share my knowledge and get employed. This is also the
-first page I've dedicated so much time to it
+first page I've dedicated so much time to it.
+
+## Project Overview
 
 The design system could be improved a lot, but everything was chosen by me, from the
 UI, font pair, layout, and the [color-palette], which was also been done by me.
@@ -53,6 +55,23 @@ I first tried to create some designs based on Brutalism while keeping it minimal
 or app-like but I thought that would deviate from the more professional and unique
 look I was looking for, so after a lot of trial and error I think I found
 a balance between design and readability.
+
+### Visual weight
+
+#### Shape
+
+I implemented fully rounded buttons and almost rounded UI for search bars, tags
+and everything else to look more friendly.
+
+#### Implementation of the dark theme
+
+For the dark theme, since I'm using [color-scheme JetJBP](https://github.com/santigo-zero/jetjbp)
+the easiest way to create contrast was to use red and purple colors, to create a
+nice pair of complementary colors
+
+In most components you find two buttons, to give them hierarchy I implemented a
+basic slightly brighter color to still be registered as a button and gave the most
+important button/link of the two the same color as for the text.
 
 ### Font pairs
 

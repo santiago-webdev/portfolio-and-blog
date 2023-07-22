@@ -17,24 +17,40 @@ import { retrieve_icon } from '$lib/utils/utils';
     <header
       class="flex flex-col place-content-center mx-auto px-3 max-w-screen-lg gap-10 lg:flex-row md:py-24"
     >
-      <section class="grid gap-4">
+      <!-- section { -->
+      <!--   padding-top: 2.8rem; -->
+      <!--   margin-inline: auto; -->
+      <!--   width: min(96%, var(--lg)); -->
+      <!--   display: grid; -->
+      <!--   gap: 1.6rem; -->
+      <!-- } -->
+      <!---->
+      <section class="flex-[6] pt-12 mx-auto max-w-screen-xl px-3 grid gap-6">
         <small>PORTFOLIO SHOWCASE &mdash;</small>
         <h1 class="font-fluid-2">
           {getCategoryInfo($currentGroupOfProjects).label} Projects
         </h1>
-        <p class="font-h3">
+        <p class="font-h3 dark:text-dark-inv-600">
           {getCategoryInfo($currentGroupOfProjects).description}
         </p>
       </section>
-      <form class="font-h3">
+      <form
+        class="font-h3 flex-[4] flex flex-col flex-wrap place-items-center place-content-center gap-4"
+      >
         <label for="projects flex flex-wrap mx-6">
           Filter by type of project
           <noscript>
             <small>Sorry Folks! This requires JavaScript to work!</small>
           </noscript>
         </label>
-        <div class="wrapper-select tpl">
+        <div
+          class="border-t border-l border-t-solid border-l-solid rounded-xl drop-shadow
+      dark:bg-dark-600 dark:border-dark-800 rounded-xl
+      "
+        >
           <select
+            class="w-full dark:text-dark--inv-700 border-0 dark:bg-dark-600
+            dark:text-dark-inv-700 py-2 px-6 rounded-xl"
             bind:value={$currentGroupOfProjects}
             name="projects"
             id="projects"
@@ -47,7 +63,7 @@ import { retrieve_icon } from '$lib/utils/utils';
       </form>
     </header>
   </div>
-  <section>
+  <section class="flex-[6] pt-12 mx-auto max-w-screen-xl px-3 grid gap-6">
     {#each $FilteredProjects as { name, description, category, stack, img, repo, link, case_study }}
       <article
         class="flex flex-col flex-wrap md:flex-row p-6 gap-8 rounded-3xl
@@ -55,7 +71,10 @@ import { retrieve_icon } from '$lib/utils/utils';
         dark:bg-dark-400 dark:border-dark-600
         "
       >
-        <figure>
+        <figure
+          class="flex-[5] aspect-video h-auto overflow-y-scroll border-solid border
+          dark:border-dark-800 rounded-xl"
+        >
           <figcaption class="flex place-items-center p-1 pr-2 dark:bg-dark-900">
             <div class="artifact-buttons flex p-1">
               {#each [1, 2, 3] as _}
@@ -72,7 +91,9 @@ import { retrieve_icon } from '$lib/utils/utils';
                 </svg>
               {/each}
             </div>
-            <div class="artifact-link">
+            <div
+              class="mx-auto overflow-x-auto py-1 px-4 dark:bg-dark-800 rounded-md"
+            >
               <a
                 class="max-w-max"
                 href={link.toString()}
@@ -82,14 +103,15 @@ import { retrieve_icon } from '$lib/utils/utils';
             </div>
           </figcaption>
           <img
+            style="max-inline-size: 100%; block-size: auto"
             loading="lazy"
             src={img}
             alt="Screenshot of {name}"
             title="Screenshot of {name}"
           />
         </figure>
-        <div id="describe-{name}">
-          <header>
+        <div id="describe-{name}" class="flex-[6] gap-4 flex flex-col">
+          <header class="flex flex-wrap gap-2">
             <div style:gap="2ch" class="inline-items">
               <a
                 class="font-h3 max-w-max"
@@ -113,8 +135,12 @@ import { retrieve_icon } from '$lib/utils/utils';
             Tech Stack:
           </h3>
           {#if stack.frontend}
-            <div class="list-project-frontend">
-              <h4 class="font-sub">Frontend:</h4>
+            <div
+              class="list-project-frontend flex flex-col gap-[1ch] xl:flex-row xl:place-items-center"
+            >
+              <h4 class="font-sub dark:text-dark-inv-700 font-bold min-w-[8ch]">
+                Frontend:
+              </h4>
               <ul class="inline-items">
                 {#each stack.frontend as tags}
                   <li class="tpl tags font-sub">
@@ -126,8 +152,12 @@ import { retrieve_icon } from '$lib/utils/utils';
             </div>
           {/if}
           {#if stack.api}
-            <div class="list-project-api">
-              <h4 class="font-sub">API:</h4>
+            <div
+              class="list-project-api flex flex-col gap-[1ch] xl:flex-row xl:place-items-center"
+            >
+              <h4 class="font-sub dark:text-dark-inv-700 font-bold min-w-[8ch]">
+                API:
+              </h4>
               <ul class="inline-items">
                 {#each stack.api as tags}
                   <li class="tpl tags font-sub">
@@ -139,8 +169,12 @@ import { retrieve_icon } from '$lib/utils/utils';
             </div>
           {/if}
           {#if stack.backend}
-            <div class="list-project-backend">
-              <h4 class="font-sub">Backend:</h4>
+            <div
+              class="list-project-backend flex flex-col gap-[1ch] xl:flex-row xl:place-items-center"
+            >
+              <h4 class="font-sub dark:text-dark-inv-700 font-bold min-w-[8ch]">
+                Backend:
+              </h4>
               <ul class="inline-items">
                 {#each stack.backend as tags}
                   <li class="tpl tags font-sub">
@@ -151,8 +185,9 @@ import { retrieve_icon } from '$lib/utils/utils';
               </ul>
             </div>
           {/if}
-
-          <div class="container-project-links">
+          <div
+            class="mt-6 flex flex-col flex-nowrap gap-4 xl:flex-row xl:flex-wrap"
+          >
             <ShapeButton
               class="default"
               target="_blank"
@@ -172,14 +207,14 @@ import { retrieve_icon } from '$lib/utils/utils';
         dark:bg-dark-400 dark:border-dark-600"
     >
       <button
-        class="flex place-items-center place-content-center rounded-xl
-        hover:dark:bg-dark-600 border-2 border-solid
-        hover:dark:border-palette-orange-50"
+        class="cursor-pointer flex-[5] w-full aspect-video place-items-center
+rounded-xl hover:dark:bg-dark-600 border-2 border-dashed
+hover:dark:border-palette-orange-50"
       >
         <iconify-icon width="30" height="30" icon="lucide:plus" />
       </button>
-      <div id="describe-new-project">
-        <header>
+      <div id="describe-new-project" class="flex-[6] gap-4 flex flex-col">
+        <header class="flex flex-wrap gap-2">
           <a class="max-w-max" href="#todo" target="_blank">
             <span class="font-semibold">newdomain.com</span>
           </a>
@@ -196,119 +231,3 @@ import { retrieve_icon } from '$lib/utils/utils';
     </article>
   </section>
 </main>
-
-<style>
-section {
-  flex: 6;
-}
-
-section p {
-  color: var(--text-0);
-}
-
-form {
-  flex: 4;
-  display: flex;
-  flex-flow: column wrap;
-  place-content: center;
-  gap: 1rem;
-}
-
-.wrapper-select {
-  --bg: var(--clr-600);
-  --brd: var(--clr-700);
-  padding: 0.6rem 1.6rem;
-  border-radius: 1rem;
-}
-
-select {
-  width: 100%;
-  color: var(--text-1);
-  background-color: inherit;
-  border: none;
-}
-
-section {
-  padding-top: 2.8rem;
-  margin-inline: auto;
-  width: min(96%, var(--lg));
-  display: grid;
-  gap: 1.6rem;
-}
-
-[id^='describe-'] {
-  flex: 6;
-  gap: 1rem;
-  display: flex;
-  flex-direction: column;
-}
-
-article header {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-}
-
-[class^='list-project'] {
-  display: flex;
-  flex-direction: column;
-  gap: 1ch;
-}
-
-h4 {
-  color: var(--text-1);
-  font-variation-settings: 'wght' 700;
-  font-weight: 500;
-  min-width: 8ch;
-}
-
-.container-project-links {
-  margin-top: 1.6rem;
-  display: flex;
-  flex-flow: column nowrap;
-  gap: 1rem;
-}
-
-@media screen and (min-width: 1200px) {
-  .container-project-links {
-    flex-flow: row wrap;
-  }
-
-  [class^='list-project'] {
-    flex-direction: row;
-    place-items: center;
-  }
-}
-
-figure {
-  height: auto;
-  aspect-ratio: 16/10;
-  flex: 5;
-  overflow-y: scroll;
-  border: 3px solid var(--clr-800);
-  border-radius: 0.8rem;
-}
-
-.artifact-link {
-  overflow-x: auto;
-  padding: 0.2rem 1rem;
-  width: 100%;
-  background: var(--clr-800);
-  border-radius: 6px;
-  display: grid;
-}
-
-img {
-  max-inline-size: 100%;
-  block-size: auto;
-}
-
-button {
-  min-width: min(100%, var(--xs));
-  height: auto;
-  cursor: pointer;
-  flex: 5;
-  aspect-ratio: 16/10;
-  border: 3px dashed var(--clr-800);
-}
-</style>

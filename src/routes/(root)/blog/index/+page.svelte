@@ -6,16 +6,20 @@ import ShapeAnchor from '$lib/components/navigation/ShapeAnchor.svelte';
 </script>
 
 <main>
-  <header>
-    <div class="back-button">
+  <header
+    class="dark:bg-dark-400 rounded-b-3xl pb-[clamp(1rem,2vw+1rem,6rem)] mb-[clamp(1rem,2vw+1rem,3rem)]"
+  >
+    <div class="back-button px-3 mx-auto pt-2 mb-4 max-w-screen-md">
       <LinkArrow orientation="left" href="{base}/blog">Back to Blog</LinkArrow>
     </div>
-    <div class="wrapper-index">
+    <div class="mx-auto px-3 text-center max-w-screen-lg">
       <h1 class="font-fluid-5">Index</h1>
-      <p>This is the full list of all the blog posts I've written.</p>
+      <p class="mt-4">
+        This is the full list of all the blog posts I've written.
+      </p>
     </div>
   </header>
-  <ul class="generic">
+  <ul class="generic mx-auto max-w-screen-md">
     {#each $Posts as post}
       <li class="generic">
         <ShapeAnchor href={post.href}>{post.title}</ShapeAnchor>
@@ -23,35 +27,3 @@ import ShapeAnchor from '$lib/components/navigation/ShapeAnchor.svelte';
     {/each}
   </ul>
 </main>
-
-<style>
-header {
-  border-bottom-right-radius: 1.6rem;
-  border-bottom-left-radius: 1.6rem;
-  padding-bottom: clamp(1rem, 2vw + 1rem, 6rem);
-  margin-bottom: clamp(1rem, 2vw + 1rem, 3rem);
-  background: var(--clr-400);
-}
-
-.wrapper-index {
-  width: min(100% - 2.2rem, var(--base));
-  margin-inline: auto;
-  text-align: center;
-}
-
-.wrapper-index p {
-  margin-top: 1rem;
-}
-
-ul {
-  width: min(100% - 2.2rem, var(--base));
-  margin-inline: auto;
-}
-
-.back-button {
-  width: min(100% - 2.2rem, var(--sm));
-  margin-inline: auto;
-  padding-top: 0.5rem;
-  margin-bottom: 1rem;
-}
-</style>

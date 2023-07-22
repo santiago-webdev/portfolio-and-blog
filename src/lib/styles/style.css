@@ -94,13 +94,6 @@ kbd {
   /* font-weight: bold; */
 }
 
-.inline-items {
-  display: inline-flex;
-  place-items: center;
-  flex-wrap: wrap;
-  gap: 0.3rem;
-}
-
 thead {
   background: var(--clr-600);
 }

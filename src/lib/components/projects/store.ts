@@ -28,7 +28,6 @@ export const AllProjects = readable<Array<Project>>([
     category: ['featured', 'frontend', 'opensource'],
     stack: {
       frontend: ['JavaScript', 'HTML', 'CSS'],
-      backend: ['JavaScript', 'HTML', 'CSS'],
       api: ['GitHub REST API']
     },
     img: '/portfolio/zap-website.webp',
@@ -43,7 +42,7 @@ export const AllProjects = readable<Array<Project>>([
     short_description: 'This same site, here you can find more about me',
     category: ['featured', 'frontend', 'opensource'],
     stack: {
-      frontend: ['SvelteKit', 'TypeScript']
+      frontend: ['SvelteKit', 'TypeScript', 'UnoCSS']
     },
     img: '/portfolio/portfolio-and-blog-website.webp',
     repo: new URL('https://github.com/santigo-zero/portfolio-and-blog'),
