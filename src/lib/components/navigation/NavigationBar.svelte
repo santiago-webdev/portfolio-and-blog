@@ -95,7 +95,6 @@ $: if (outerWidth > 768) expanded = false;
             <div role="separator" aria-orientation="vertical" />
           {:else if label === 'Contact'}
             <a
-              data-sveltekit-preload-code="eager"
               aria-label="Contact me here"
               class="bordered"
               aria-current={$page.url.pathname.startsWith(href) && `/` !== href
@@ -105,7 +104,6 @@ $: if (outerWidth > 768) expanded = false;
             >
           {:else if label !== 'Home'}
             <a
-              data-sveltekit-preload-code="eager"
               aria-current={$page.url.pathname.startsWith(href) && `/` !== href
                 ? 'page'
                 : undefined}
@@ -121,7 +119,6 @@ $: if (outerWidth > 768) expanded = false;
         {#if label !== 'Separator'}
           {#if label === 'Contact'}
             <a
-              data-sveltekit-preload-code="eager"
               aria-label="Contact me here"
               class="bordered"
               aria-current={$page.url.pathname.startsWith(href) && `/` !== href
@@ -131,7 +128,6 @@ $: if (outerWidth > 768) expanded = false;
             >
           {:else}
             <a
-              data-sveltekit-preload-code="eager"
               class="selection"
               aria-current={$page.url.pathname.startsWith(href) && `/` !== href
                 ? 'page'
