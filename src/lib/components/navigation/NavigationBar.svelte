@@ -13,7 +13,7 @@ let expanded = false,
   // scrollY = 0,
   // savedY = 0,
   outerWidth = 0;
-  // transform: Transform = '';
+// transform: Transform = '';
 
 afterNavigate(() => (expanded = false));
 $: if (outerWidth > 768) expanded = false;
