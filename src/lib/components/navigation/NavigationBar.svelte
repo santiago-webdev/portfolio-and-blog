@@ -33,7 +33,6 @@ $: if (outerWidth > 768) expanded = false;
     <a
       href="{base}/"
       aria-label="Home"
-      data-sveltekit-preload-code="eager"
       aria-current={`${base}/` === $page.url.pathname ? 'page' : undefined}
     >
       <img
