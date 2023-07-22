@@ -7,27 +7,28 @@ import { afterNavigate } from '$app/navigation';
 import WidgetModal from '$lib/components/navigation/WidgetModal.svelte';
 import { navigationItems } from '$lib/components/navigation/store';
 
-type Transform = '' | 'translateY(-200%)';
+// type Transform = '' | 'translateY(-200%)';
 
 let expanded = false,
-  scrollY = 0,
-  savedY = 0,
-  outerWidth = 0,
-  transform: Transform = '';
+  // scrollY = 0,
+  // savedY = 0,
+  outerWidth = 0;
+  // transform: Transform = '';
 
 afterNavigate(() => (expanded = false));
 $: if (outerWidth > 768) expanded = false;
 
-$: {
-  transform =
-    !expanded && scrollY > 300 && scrollY > savedY ? 'translateY(-200%)' : '';
-  savedY = scrollY;
-}
+// $: {
+//   transform =
+//     !expanded && scrollY > 300 && scrollY > savedY ? 'translateY(-200%)' : '';
+//   savedY = scrollY;
+// }
 </script>
 
-<svelte:window bind:scrollY bind:outerWidth />
-
-<header style:transform class:expanded class:scrollY>
+<!-- <svelte:window bind:scrollY bind:outerWidth /> -->
+<!---->
+<!-- <header style:transform class:expanded class:scrollY> -->
+<header class:expanded>
   <nav aria-label="primary-navigation">
     <a
       href="{base}/"
@@ -149,7 +150,7 @@ $: {
 
 <style>
 header {
-  position: sticky;
+  /* position: sticky; */
   top: 0;
   transition: background, transform 200ms cubic-bezier(0.5, 0.95, 0, 1);
   z-index: 999;
@@ -167,10 +168,10 @@ header.expanded {
   background: var(--clr-500);
 }
 
-header.scrollY {
-  background: var(--clr-500-trp);
-  border-bottom-color: var(--clr-inv-200);
-}
+/* header.scrollY { */
+/*   background: var(--clr-500-trp); */
+/*   border-bottom-color: var(--clr-inv-200); */
+/* } */
 
 a,
 button {
@@ -232,7 +233,7 @@ img {
   height: 1.8rem;
 }
 
-header.scrollY span,
+/* header.scrollY span, */
 header span {
   display: none;
 }
@@ -261,9 +262,9 @@ section {
     display: flex;
   }
 
-  header.scrollY {
-    backdrop-filter: blur(10px);
-  }
+  /* header.scrollY { */
+  /*   backdrop-filter: blur(10px); */
+  /* } */
 
   button {
     display: none;
