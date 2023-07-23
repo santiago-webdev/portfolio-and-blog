@@ -9,7 +9,7 @@ import ShapeAnchor from '$lib/components/navigation/ShapeAnchor.svelte';
   <header
     class="dark:bg-dark-400 rounded-b-3xl pb-[clamp(1rem,2vw+1rem,6rem)] mb-[clamp(1rem,2vw+1rem,3rem)]"
   >
-    <div class="back-button px-3 mx-auto pt-2 mb-4 max-w-screen-md">
+    <div class="px-3 mx-auto pt-2 mb-4 max-w-screen-md">
       <LinkArrow orientation="left" href="{base}/blog">Back to Blog</LinkArrow>
     </div>
     <div class="mx-auto px-3 text-center max-w-screen-lg">

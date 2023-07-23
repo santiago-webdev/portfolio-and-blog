@@ -47,7 +47,7 @@ if (title) {
       <LinkArrow orientation="left" href="{base}/blog">Back to Blog</LinkArrow>
     </div>
     <div class="wrapper-header">
-      <header>
+      <header class='flex flex-col'>
         {#if isHollow}
           <h1 class="font-fluid-5">
             <Hollow color={'var(--text-2)'}>{hollowPrefix}</Hollow>
@@ -75,7 +75,10 @@ if (title) {
       {/if}
 
       {#if datetime}
-        <time {datetime}>
+        <time
+          class="flex place-items-center justify-center mt-8 flex-wrap"
+          {datetime}
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -106,7 +109,11 @@ if (title) {
       {/if}
 
       {#if summary}
-        <details class="tpl font-p">
+        <details
+          class="font-p flex rounded-2xl max-w-screen-sm mt-4 text-left
+          mx-auto py-2 px-4 dark:bg-dark-600 dark:border-dark-700 border-t
+          border-t-solid border-l-solid border"
+        >
           <summary>Summary</summary>
           {summary}
         </details>
@@ -114,7 +121,7 @@ if (title) {
     </div>
   </div>
 
-  <main class="blog-post">
+  <main class="blog-post px-3 mx-auto max-w-screen-md mt-[clamp(1rem,2vw+1rem,3rem)]">
     <slot />
   </main>
 </section>
@@ -142,20 +149,9 @@ if (title) {
   margin-inline: auto;
 }
 
-main {
-  width: min(100% - 2.2rem, var(--sm));
-  margin-inline: auto;
-  margin-top: clamp(1rem, 2vw + 1rem, 3rem);
-}
-
 :global(.blog-post p img),
 :global(.blog-post > * + *) {
   margin-block-start: 1em;
-}
-
-header {
-  display: flex;
-  flex-direction: column;
 }
 
 .wrapper-header {
@@ -175,35 +171,11 @@ header p {
   margin-top: 0.5rem;
 }
 
-small {
-  font-weight: 500;
-}
-
 ul {
   max-width: var(--sm);
   margin-inline: auto;
   justify-content: center;
   margin-top: 0.75rem;
-}
-
-time {
-  display: flex;
-  place-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 2rem;
-}
-
-details {
-  --bg: var(--clr-600);
-  --brd: var(--clr-700);
-  font-family: var(--ff-text);
-  display: flex;
-  max-width: var(--sm);
-  margin-inline: auto;
-  padding: 0.4rem 0.8rem;
-  margin-top: 1rem;
-  text-align: left;
 }
 
 summary {
