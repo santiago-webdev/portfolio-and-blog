@@ -1,6 +1,6 @@
 <script context="module">
-import { img, ol, ul, li, table, a, p } from '$lib/mdsvex_components/index';
-export { img, ol, ul, li, table, a, p };
+import { img, ol, ul, li, table, a, p, hr } from '$lib/mdsvex_components/index';
+export { img, ol, ul, li, table, a, p, hr };
 </script>
 
 <script>
@@ -47,7 +47,7 @@ if (title) {
       <LinkArrow orientation="left" href="{base}/blog">Back to Blog</LinkArrow>
     </div>
     <div class="wrapper-header">
-      <header class='flex flex-col'>
+      <header class="flex flex-col">
         {#if isHollow}
           <h1 class="font-fluid-5">
             <Hollow color={'var(--text-2)'}>{hollowPrefix}</Hollow>
@@ -121,7 +121,9 @@ if (title) {
     </div>
   </div>
 
-  <main class="blog-post px-3 mx-auto max-w-screen-md mt-[clamp(1rem,2vw+1rem,3rem)]">
+  <main
+    class="blog-post px-3 mx-auto max-w-screen-md mt-[clamp(1rem,2vw+1rem,3rem)]"
+  >
     <slot />
   </main>
 </section>

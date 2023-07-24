@@ -162,6 +162,8 @@ export function retrieve_icon(symbol: string): string | undefined {
       return 'lucide:presentation';
     case 'template':
       return 'lucide:book-template';
+    case 'quote':
+      return 'lucide:quote';
     default:
       return '';
   }

@@ -5,5 +5,6 @@ import li from './li.svelte';
 import table from './table.svelte';
 import a from './a.svelte';
 import p from './p.svelte';
+import hr from './hr.svelte';
 
-export { img, ol, ul, li, table, a, p };
+export { img, ol, ul, li, table, a, p, hr };
