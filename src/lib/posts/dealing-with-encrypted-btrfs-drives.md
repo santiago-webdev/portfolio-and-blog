@@ -19,7 +19,7 @@ For this tutorial I'll briefly explain the steps you need to take in order
 to setup your drives and how to consequently make use of this drives, either
 externally or internally to your pc.
 
-_**Note**: I should also mention that I'll be using the drive `/dev/sda` and
+_**NOTE**: I should also mention that I'll be using the drive `/dev/sda` and
 the partition `/dev/sda1` but you should check your setup with `lsblk`._
 
 I divided this in three sections.
