@@ -57,7 +57,7 @@ if (title) {
           <h1 class="font-fluid-5">{title}</h1>
         {/if}
         {#if description}
-          <p class="font-h3">{description}</p>
+          <p class="font-h3 dark:text-dark-inv-700">{description}</p>
         {/if}
       </header>
       {#if tags}
