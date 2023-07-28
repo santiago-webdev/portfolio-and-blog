@@ -128,7 +128,9 @@ rounded-2xl drop-shadow dark:bg-dark-700 dark:border-dark-900"
         >
           <article class="grid gap-1">
             <h3 class="font-semibold">{post.title}</h3>
-            <p>{post.description}</p>
+            {#if post.description}
+              <p>{post.description}</p>
+            {/if}
             {#if post.datetime}
               <small>
                 <time datetime={post.datetime}>
