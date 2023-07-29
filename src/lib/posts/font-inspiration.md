@@ -56,6 +56,7 @@ fonts that I just liked.
 - Sofia Pro, [cdnfonts](https://www.cdnfonts.com/sofia-pro.font)
 - [Suisse](https://www.swisstypefaces.com/fonts/suisse/)
 - Recursive, [google fonts](https://fonts.google.com/specimen/Recursive)
+- [Gilroy](https://www.tinkov.info/gilroy.html), [you can try it here from cdnfonts](examples)
 
 ### Display
 
