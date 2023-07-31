@@ -19,3 +19,10 @@ HTML, CSS or JS/TS.
 
 You'll need inspiration sooner or later for you designs, so head to
 [[design-inspiration]](./design-inspiration).
+
+## Learning about Above The Fold
+
+You have an average of 3 seconds to catch the attention of new users, and you do
+that in the Above The Fold, the ATF for short is that first impression of your
+website when you open it without scrolling, where you have your slogan, icons
+and CTAs buttons. I did my best to summarize [[how-to-above-the-fold]](./how-to-above-the-fold).
