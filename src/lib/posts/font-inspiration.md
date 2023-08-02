@@ -57,6 +57,10 @@ fonts that I just liked.
 - [Suisse](https://www.swisstypefaces.com/fonts/suisse/)
 - Recursive, [google fonts](https://fonts.google.com/specimen/Recursive)
 - [Gilroy](https://www.tinkov.info/gilroy.html), [you can try it here from cdnfonts](examples)
+- [Sunset Gothic](https://www.colophon-foundry.org/typefaces/sunset-gothic)
+- [Moderat](https://tightype.com/typefaces/moderat)
+- JAF Facit, [adobe fonts](https://fonts.adobe.com/fonts/jaf-facit)
+- Google sans, or Open Sans, [google fonts](https://fonts.google.com/specimen/Open+Sans)
 
 ### Display
 
