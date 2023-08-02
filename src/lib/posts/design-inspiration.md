@@ -14,6 +14,8 @@ Web specific designs.
 For landing page examples there's [lapa](https://www.lapa.ninja/) and [Page Collective](https://pagecollective.com/), which is really cool
 because it has section for [user flows](https://pageflows.com/?ref=pagecollective).
 
+For [bento grids](https://bentogrids.com/).
+
 ---
 
 [[how-to-create-a-website#Where to get inspiration]](./how-to-create-a-website#where-to-get-inspiration)
