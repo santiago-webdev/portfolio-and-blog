@@ -8,8 +8,7 @@ datetime: 2023-07-28 19:12
 
 # Font inspiration
 
-This is a simple list, differentiated between programming fonts, and web design
-fonts that I just liked.
+This is a simple list, differentiated between programming fonts, and web design fonts that I just liked.
 
 ## Programming
 

@@ -7,24 +7,21 @@ finished: true
 ---
 
 <script>
-  import { base } from '$app/paths';
+import { base } from '$app/paths';
 </script>
 
-To pass data to either +layout.svelte or +page.svelte you do it through the
-load() function. Read the [docs](https://kit.svelte.dev/docs/load#page-data) for
-more information.
+To pass data to either +layout.svelte or +page.svelte you do it through the load() function. Read the [docs](https://kit.svelte.dev/docs/load#page-data) for more information.
 
-Note that this is not in order of execution, it's just a general view, if you
-want to see the order you can check
-[the order in this other post]({base}/blog/execution-order-of-files-in-sveltekit).
+Note that this is not in order of execution, it's just a general view, if you want to see the order you can check [the order in this other post]({base}/blog/execution-order-of-files-in-sveltekit).
 
-| Dedicated files | What does it do?                                                                            |
-| --------------- | ------------------------------------------------------------------------------------------- |
-| app.html        | Base HTML template for any page of your application, it's used before any client-side code. |
-| hooks.server.js | Runs logic on the server each time they receive a request                                   |
-| hooks.client.js | Runs when the application starts in the client                                              |
-| +server.js      | Standalone API endpoint                                                                     |
-| +error.js       | Used to display errors when your application crashes 😝                                     |
+| Dedicated files              | What does it do?                                               |
+| ---------------------------- | -------------------------------------------------------------- |
+| app.html                     | Base HTML template for any page of your application, it's used |
+| before any client-side code. |
+| hooks.server.js              | Runs logic on the server each time they receive a request      |
+| hooks.client.js              | Runs when the application starts in the client                 |
+| +server.js                   | Standalone API endpoint                                        |
+| +error.js                    | Used to display errors when your application crashes 😝        |
 
 | Layout files      | What does it do?                                             |
 | ----------------- | ------------------------------------------------------------ |
