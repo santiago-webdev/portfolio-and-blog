@@ -11,7 +11,7 @@ import config from '$lib/config.json';
     xl:py-24 xl:min-h-[80vh] xl:min-h-[80dvh]"
   >
     <div class="flex flex-col flex-wrap">
-      <h1 class="font-fluid-5 max-w-[15ch]">
+      <h1 class="font-fluid-4 max-w-[15ch]">
         Building the web<br /> with clean interfaces
       </h1>
       <p class="font-h3 mt-2 max-w-[38ch]">

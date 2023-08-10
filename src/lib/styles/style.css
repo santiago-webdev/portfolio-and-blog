@@ -1,4 +1,5 @@
 @import url('./design-system/typography.css');
+@import url('./design-system/fluid-typography.css');
 @import url('./design-system/breakpoints.css');
 @import url('./design-system/generic.css');
 @import url('./design-system/theme-dark.css');

@@ -1,0 +1,51 @@
+:root {
+  /* Fluid font sizes using the golden ration, */
+  /* this are used mostly for Big Typography */
+  --fluid-1: clamp(1.875rem, 6vw + 1rem, 3.236rem); /* 51.776px */
+  --fluid-2: clamp(1.618rem, 7vw + 1rem, 4.854rem); /* 77.664px */
+  --fluid-3: clamp(2.157333rem, 8vw + 1rem, 6.472rem); /* 103.552px */
+  --fluid-4: clamp(2.696667rem, 9vw + 1rem, 8.09rem); /* 129.44px */
+  --fluid-5: clamp(3.236rem, 9vw + 1rem, 9.708rem); /* 129.44px */
+}
+
+/* Fluid typography */
+:is(.font-fluid-1, .font-fluid-2, .font-fluid-3, .font-fluid-4, .font-fluid-5) {
+  font-family: var(--ff-ui);
+  color: var(--text-3);
+  font-variation-settings: 'wght' 800;
+  font-weight: 800;
+  text-wrap: balance;
+}
+
+.font-fluid-1 {
+  font-size: var(--fluid-1);
+  line-height: calc(var(--fluid-1) * 1.2);
+  letter-spacing: -0.025em;
+  font-variation-settings: 'wght' 700;
+  font-weight: 700;
+}
+
+.font-fluid-2 {
+  font-size: var(--fluid-2);
+  line-height: calc(var(--fluid-2) * 1.125);
+  letter-spacing: -0.03em;
+}
+
+.font-fluid-3 {
+  font-size: var(--fluid-3);
+  line-height: calc(var(--fluid-3) * 1.125);
+  letter-spacing: -0.04em;
+}
+
+.font-fluid-4 {
+  font-size: var(--fluid-4);
+  line-height: calc(var(--fluid-4) * 1.2);
+  letter-spacing: -0.05em;
+}
+
+.font-fluid-5 {
+  font-size: var(--fluid-5);
+  line-height: calc(var(--fluid-5) * 1.1);
+  letter-spacing: -0.05em;
+}
+/* EOL Fluid typography */
