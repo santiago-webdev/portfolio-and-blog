@@ -5,8 +5,6 @@ tags: [Publish, Case Study, Project]
 datetime: 2023-01-14 06:02
 ---
 
-# Hello, World!
-
 This is my personal website, I host both my portfolio and blog, I wanted to put myself on the internet to share my knowledge and get employed. This is also the first page I've dedicated so much time to it.
 
 ## Project Overview

@@ -6,8 +6,6 @@ finished: false
 datetime: 2023-07-12 23:14
 ---
 
-# Above The Fold (ATF)
-
 After The Fold (ATF) is a term that comes from newspapers, which you can guess is the place that you first see when you try to read a newspaper, with a screaming sensationalist headline most probably.
 
 This first screen(without scrolling) in your website is premium space, it will determine the stay of new visitors, so it has to answer this questions quickly:

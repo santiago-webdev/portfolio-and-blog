@@ -6,8 +6,6 @@ finished: true
 datetime: 2023-07-26 17:24
 ---
 
-# Basics of UI/UX design
-
 I'm still learning, so don't expect this to be the best advice. It's just a summary of what I'm learning along the way.
 
 ## Why start designing something?
