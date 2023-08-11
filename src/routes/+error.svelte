@@ -12,9 +12,7 @@ import config from '$lib/config.json';
   <h1 class="font-fluid-4">{$page.status}: {$page.error?.message}</h1>
   <p class="mt-4 mb-8">
     Something has gone wrong, if you'd like to report it, please
-    <ShapeAnchor href="{config.landingpage.repo}/issues"
-      >open an issue</ShapeAnchor
-    >.
+    <ShapeAnchor href="{config.landingpage.repo}/issues">open an issue</ShapeAnchor>.
   </p>
   <ShapeButton class="default" href="{base}/">Back to Home</ShapeButton>
 </main>

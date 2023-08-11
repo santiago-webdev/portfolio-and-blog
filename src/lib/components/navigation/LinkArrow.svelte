@@ -6,12 +6,7 @@ export let orientation = 'right';
 export let href = '/';
 </script>
 
-<a
-  style:gap={orientation === 'left' ? '0.6ch' : '0.2ch'}
-  class="font-p"
-  {href}
-  {...$$restProps}
->
+<a style:gap={orientation === 'left' ? '0.6ch' : '0.2ch'} class="font-p" {href} {...$$restProps}>
   {#if orientation === 'left'}
     <Backward />
     <slot />

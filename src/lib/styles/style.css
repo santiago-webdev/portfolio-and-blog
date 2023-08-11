@@ -4,13 +4,14 @@
 @import url('./design-system/generic.css');
 @import url('./design-system/theme-dark.css');
 @import url('./design-system/theme-light.css');
+@import url('./design-system/theme.css');
 
 html {
   /* TODO(santigo-zero): Find a fix for bug in navigation */
   scroll-behavior: smooth;
   color-scheme: light dark;
   font-family: var(--ff-text);
-  background-color: var(--clr-200);
+  background-color: var(--200);
   color: var(--text-2);
 }
 

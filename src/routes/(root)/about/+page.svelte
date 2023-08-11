@@ -34,20 +34,15 @@ const tools = [
       <h1 class="font-fluid-3">Get to know me</h1>
       <p class="mt-4"><strong>{greeting}</strong></p>
       <p class="mt-2">
-        I enjoy crafting simple interfaces, focusing in <em>maintainability</em
-        >,
+        I enjoy crafting simple interfaces, focusing in <em>maintainability</em>,
         <em>accessibility</em> and
-        <em>progressive enhancement</em>. My set of skills is mostly dedicated
-        to the web, but I'm also interested in Linux and CS in general.
+        <em>progressive enhancement</em>. My set of skills is mostly dedicated to the web, but I'm
+        also interested in Linux and CS in general.
       </p>
       <p class="mt-2">You can find me in this platforms:</p>
-      <section
-        class="flex gap-4 mt-10 flex-col md:flex-row md:place-items-start"
-      >
-        <ShapeButton
-          class="reverse"
-          href="https://github.com/santigo-zero/"
-          icon="github">GitHub</ShapeButton
+      <section class="flex gap-4 mt-10 flex-col md:flex-row md:place-items-start">
+        <ShapeButton class="reverse" href="https://github.com/santigo-zero/" icon="github"
+          >GitHub</ShapeButton
         >
         <ShapeButton
           class="default"
@@ -68,9 +63,7 @@ const tools = [
 </div>
 <div id="technologies" class="mx-auto py-12 max-w-screen-lg">
   <h2>Technology I use</h2>
-  <p class="mt-4">
-    These are some of the tools I had used in the past (but am not limited to):
-  </p>
+  <p class="mt-4">These are some of the tools I had used in the past (but am not limited to):</p>
   <div class="wrapper-frameworks mt-12">
     <h3>Frameworks and metaframeworks:</h3>
     <ul class="inline-items mt-2">
@@ -78,11 +71,7 @@ const tools = [
         <li
           class="flex place-items-center gap-1 px-4 py-2 rounded-2xl dark:bg-dark-400 border-t border-l border-t-solid border-l-solid dark:border-dark-600"
         >
-          <iconify-icon
-            width="26"
-            height="26"
-            icon={retrieve_icon(framework)}
-          />{framework}
+          <iconify-icon width="26" height="26" icon={retrieve_icon(framework)} />{framework}
         </li>
       {/each}
     </ul>
@@ -95,11 +84,7 @@ const tools = [
         <li
           class="flex place-items-center gap-1 px-4 py-2 rounded-2xl dark:bg-dark-400 border-t border-l border-t-solid border-l-solid dark:border-dark-600"
         >
-          <iconify-icon
-            width="26"
-            height="26"
-            icon={retrieve_icon(database)}
-          />{database}
+          <iconify-icon width="26" height="26" icon={retrieve_icon(database)} />{database}
         </li>
       {/each}
     </ul>
@@ -112,11 +97,7 @@ const tools = [
         <li
           class="flex place-items-center gap-1 px-4 py-2 rounded-2xl dark:bg-dark-400 border-t border-l border-t-solid border-l-solid dark:border-dark-600"
         >
-          <iconify-icon
-            width="26"
-            height="26"
-            icon={retrieve_icon(tool)}
-          />{tool}
+          <iconify-icon width="26" height="26" icon={retrieve_icon(tool)} />{tool}
         </li>
       {/each}
     </ul>

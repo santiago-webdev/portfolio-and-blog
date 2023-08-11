@@ -1,29 +1,30 @@
 @import url(/fonts.css);
 
 :root {
-  --ff-ui: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol';
-  --ff-text: 'Basier Circle', system-ui, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol';
+  --ff-ui: 'Manrope', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --ff-text: 'Basier Circle', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
-  --fs-small: 0.875rem; /* --fs-small: clamp(0.75rem, 4vw + 1rem, 0.875rem); /* 12px to 14px */
-  --fs-sub: 1rem; /* --fs-sub: clamp(1rem, 4vw + 1rem, 1.125rem); /* 16px to 18px */
-  /* For future me:
-   * Basier Circle and Manrope look odd at 16px, so if you end up changing the
-   * font add a new --fs-h4 and keep p at 16px, also move pre to .font-p because
-   * of size differences it's now sitting at .font-sub
-   * */
-  --fs-p: 1.25rem; /* 18px to 20px */
+  --fs-small: 0.875rem;
+  --fs-sub: 0.9rem;
+  --fs-p: 1.125rem; /* 18px */
   --fs-h3: 1.5rem; /* 24px */
   --fs-h2: 1.875rem; /* 30px */
-  --fs-h1: clamp(2.25rem, 8vw + 1rem, 3rem); /* 36px to 48px */
+  --fs-h1: 2.25rem; /* 36px */
 
   --text-0: var(--clr-inv-600);
   --text-1: var(--clr-inv-700);
   --text-2: var(--clr-inv-800);
   --text-3: var(--clr-inv-900);
+}
+
+@media screen and (min-width: 48rem) {
+  :root {
+    --fs-p: 1.25rem; /* 20px */
+    --fs-sub: 1rem;
+    --fs-h1: 3rem; /* 48px */
+  }
 }
 
 var {
@@ -43,15 +44,15 @@ kbd {
 }
 
 pre {
-  font-family: monospace;
+  background: var(--300);
+  border: var(--400) solid;
+  border-width: 1px 0 0 2px;
 
+  font-family: monospace;
   font-size: var(--fs-sub);
   line-height: calc(var(--fs-sub) * 1.5);
-
-  background: var(--clr-400);
   border-radius: 0.6rem;
   padding: 1rem;
-
   overflow-x: auto;
   white-space: pre-wrap;
   word-wrap: break-all;
@@ -62,11 +63,11 @@ pre {
 small,
 h6,
 .font-small {
-  font-family: var(--ff-text);
+  font-family: var(--ff-ui);
   font-size: var(--fs-small);
   line-height: calc(var(--fs-small) * 1.4);
-  font-variation-settings: 'wght' 600;
-  font-weight: 600;
+  font-variation-settings: 'wght' 800;
+  font-weight: 800;
 }
 
 .font-sub,
@@ -76,7 +77,8 @@ h5 {
   font-size: var(--fs-sub);
   line-height: calc(var(--fs-sub) * 1.4);
   color: var(--text-2);
-  font-variation-settings: 'wght' 700;
+  font-variation-settings: 'wght' 800;
+  font-weight: 800;
 }
 
 time {
@@ -97,7 +99,7 @@ li,
 
 p,
 li {
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
 }
 
 strong {

@@ -9,7 +9,7 @@ import ShapeAnchor from '$lib/components/navigation/ShapeAnchor.svelte';
     <ShapeAnchor href="mailto:santiagogonzalezbogado@gmail.com"
       >santiagogonzalezbogado@gmail.com</ShapeAnchor
     >
-    or connect with me on LinkedIn. I'm constantly available to engage in conversations
-    regarding potential prospects. The relevant links can be found above!
+    or connect with me on LinkedIn. I'm constantly available to engage in conversations regarding potential
+    prospects. The relevant links can be found above!
   </p>
 </section>

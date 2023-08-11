@@ -35,11 +35,7 @@ $: if (outerWidth > 768) expanded = false;
       aria-label="Home"
       aria-current={`${base}/` === $page.url.pathname ? 'page' : undefined}
     >
-      <img
-        aria-labelledby="authors-name"
-        class="logo-santigo-zero"
-        alt="My personal logo"
-      />
+      <img aria-labelledby="authors-name" class="logo-santigo-zero" alt="My personal logo" />
       <span id="authors-name">Santiago Gonzalez</span>
     </a>
     <div class="navigation-items">
@@ -52,12 +48,7 @@ $: if (outerWidth > 768) expanded = false;
         on:click={() => (expanded = !expanded)}
       >
         {#if expanded}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path
               fill="none"
               stroke="currentColor"
@@ -68,12 +59,7 @@ $: if (outerWidth > 768) expanded = false;
             />
           </svg>
         {:else}
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <path
               fill="none"
               stroke="currentColor"
@@ -150,7 +136,7 @@ header {
   transition: background, transform 200ms cubic-bezier(0.5, 0.95, 0, 1);
   z-index: 999;
   padding: 0.2rem 0;
-  background: var(--clr-400);
+  background: var(--400);
   border-bottom: 1px solid transparent;
 }
 
@@ -160,7 +146,7 @@ a {
 
 header.expanded {
   border-bottom: 2px solid var(--clr-inv-400);
-  background: var(--clr-500);
+  background: var(--500);
 }
 
 /* header.scrollY { */

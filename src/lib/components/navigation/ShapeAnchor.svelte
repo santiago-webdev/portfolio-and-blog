@@ -1,7 +1,6 @@
 <script lang="ts">
 export let href = '/';
-const isInternal = () =>
-  href.startsWith('/') || href.startsWith('#') || href.startsWith('./');
+const isInternal = () => href.startsWith('/') || href.startsWith('#') || href.startsWith('./');
 </script>
 
 <a
@@ -12,12 +11,7 @@ const isInternal = () =>
 >
   <slot />
   {#if !isInternal()}
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
       <path
         fill="none"
         stroke="currentColor"

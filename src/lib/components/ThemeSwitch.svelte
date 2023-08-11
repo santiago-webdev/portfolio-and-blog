@@ -76,13 +76,7 @@ onMount(() => {
   title="Theme switcher: Switch between a dark or light theme, or leave it to the system to decide"
 >
   <div class="theme-wrapper" aria-hidden="true">
-    <svg
-      class="sun"
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-    >
+    <svg class="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
       <g
         fill="none"
         stroke="currentColor"
@@ -96,13 +90,7 @@ onMount(() => {
         />
       </g>
     </svg>
-    <svg
-      class="moon"
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-    >
+    <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
       <path
         fill="none"
         stroke="currentColor"

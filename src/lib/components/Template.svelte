@@ -18,9 +18,7 @@ export let finished = false;
 export let tags = [];
 export let summary = '';
 
-const dateRelative = !datetime
-  ? datetime
-  : relativeTime(new Date(), new Date(datetime));
+const dateRelative = !datetime ? datetime : relativeTime(new Date(), new Date(datetime));
 const dateReadable = !datetime ? datetime : readableDate(datetime);
 
 let isHollow = false;
@@ -65,7 +63,7 @@ if (title) {
           {#each tags as tag}
             <li
               style:display={!isLocal && tag === 'Publish' ? 'none' : ''}
-              class="tags mt-2"
+              class="font-sub tags mt-2"
             >
               <iconify-icon width="22" height="22" icon={retrieve_icon(tag)} />
               {tag}
@@ -75,16 +73,8 @@ if (title) {
       {/if}
 
       {#if datetime}
-        <time
-          class="flex place-items-center justify-center mt-8 flex-wrap"
-          {datetime}
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
+        <time class="flex place-items-center justify-center mt-8 flex-wrap" {datetime}>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <g
               fill="none"
               stroke="currentColor"
@@ -121,16 +111,14 @@ if (title) {
     </div>
   </div>
 
-  <main
-    class="blog-post px-3 mx-auto max-w-screen-md mt-[clamp(1rem,2vw+1rem,3rem)]"
-  >
+  <main class="blog-post px-3 mx-auto max-w-screen-md mt-[clamp(1rem,2vw+1rem,3rem)]">
     <slot />
   </main>
 </section>
 
 <style>
 [role='banner'] {
-  background-color: var(--clr-400);
+  background-color: var(--400);
   border-bottom-right-radius: 1.6rem;
   border-bottom-left-radius: 1.6rem;
   display: flex;

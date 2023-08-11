@@ -23,9 +23,7 @@ function keydown(event: KeyboardEvent) {
 const toggleModal = () =>
   modal.open
     ? (modal.close(), (document.body.style.overflow = ''), (value = ''))
-    : (modal.showModal(),
-      (document.body.style.overflow = 'hidden'),
-      input.focus());
+    : (modal.showModal(), (document.body.style.overflow = 'hidden'), input.focus());
 
 async function handleSubmit() {
   await goto(`${$FilteredPosts[0].href}`);
@@ -46,16 +44,10 @@ const clickOutside = (modal: HTMLDialogElement) =>
   on:click={toggleModal}
   class="px-1 py-2"
 >
-  <kbd
-    class="flex place-content-center place-items-center font-small dark:text-dark-inv-700"
+  <kbd class="flex place-content-center place-items-center font-small dark:text-dark-inv-700"
     >CTRL K</kbd
   >
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="21"
-    height="21"
-    viewBox="0 0 24 24"
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24">
     <g
       fill="none"
       stroke="currentColor"
@@ -121,11 +113,7 @@ rounded-2xl drop-shadow dark:bg-dark-700 dark:border-dark-900"
     {#each $FilteredPosts.slice(0, 4) as post}
       <hr aria-orientation="horizontal" />
       <li>
-        <a
-          class="selection grid place-items-start"
-          on:click={() => toggleModal()}
-          href={post.href}
-        >
+        <a class="selection grid place-items-start" on:click={() => toggleModal()} href={post.href}>
           <article class="grid gap-1">
             <h3 class="font-semibold">{post.title}</h3>
             {#if post.description}
@@ -138,9 +126,7 @@ rounded-2xl drop-shadow dark:bg-dark-700 dark:border-dark-900"
                     new Date(),
                     new Date(post.datetime)
                   )}
-                  <div aria-orientation="vertical" role="separator">
-                    &mdash;
-                  </div>
+                  <div aria-orientation="vertical" role="separator">&mdash;</div>
                   {readableDate(post.datetime)}
                 </time>
               </small>

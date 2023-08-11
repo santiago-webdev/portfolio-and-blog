@@ -43,12 +43,7 @@ let fly_out = { y: -50, duration: 200 };
 
             {#if post.datetime}
               <time class="mt-8" datetime={post.datetime}>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="22"
-                  viewBox="0 0 24 24"
-                >
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
                   <g
                     fill="none"
                     stroke="currentColor"
@@ -61,9 +56,7 @@ let fly_out = { y: -50, duration: 200 };
                   </g>
                 </svg>
                 &nbsp;{relativeTime(new Date(), new Date(post.datetime))}
-                <div aria-orientation="vertical" role="separator">
-                  &nbsp;&mdash;&nbsp;
-                </div>
+                <div aria-orientation="vertical" role="separator">&nbsp;&mdash;&nbsp;</div>
                 {readableDate(post.datetime)}
               </time>
             {/if}

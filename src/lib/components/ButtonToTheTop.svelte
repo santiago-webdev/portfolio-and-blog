@@ -20,19 +20,13 @@ onMount(() =>
 
 <section>
   <a
-    on:click|preventDefault={() =>
-      window.scrollTo({ top: 0, behavior: 'smooth' })}
+    on:click|preventDefault={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     style:visibility
     aria-label="Go to the top of the page"
     class="tpl reverse"
     href="#body"
   >
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="20"
-      height="20"
-      viewBox="0 0 24 24"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
       <path
         fill="none"
         stroke="currentColor"

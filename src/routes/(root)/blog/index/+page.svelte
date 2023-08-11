@@ -14,9 +14,7 @@ import ShapeAnchor from '$lib/components/navigation/ShapeAnchor.svelte';
     </div>
     <div class="mx-auto px-3 text-center max-w-screen-lg">
       <h1 class="font-fluid-5">Index</h1>
-      <p class="mt-4">
-        This is the full list of all the blog posts I've written.
-      </p>
+      <p class="mt-4">This is the full list of all the blog posts I've written.</p>
     </div>
   </header>
   <ul class="generic mx-auto max-w-screen-md">

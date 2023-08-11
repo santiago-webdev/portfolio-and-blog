@@ -10,10 +10,7 @@ let description = `${$Posts.length} ${config.blog.description}`;
 const boldWords = ['Linux', 'web development', 'tooling'];
 
 boldWords.forEach((word: string) => {
-  description = description.replace(
-    new RegExp(word, 'g'),
-    `<strong>${word}</strong>`
-  );
+  description = description.replace(new RegExp(word, 'g'), `<strong>${word}</strong>`);
 });
 </script>
 

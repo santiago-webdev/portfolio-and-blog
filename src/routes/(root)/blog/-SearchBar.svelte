@@ -21,8 +21,7 @@ function handleSubmit() {
   }, 1000);
 }
 
-$: if ($FilteredPosts.length === 1)
-  preloadData(`${base}/blog${$FilteredPosts[0].href}`);
+$: if ($FilteredPosts.length === 1) preloadData(`${base}/blog${$FilteredPosts[0].href}`);
 </script>
 
 <form
@@ -34,12 +33,7 @@ $: if ($FilteredPosts.length === 1)
   on:submit|preventDefault={handleSubmit}
 >
   <button aria-label="Go to selected blog" type="submit">
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-    >
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
       <g
         fill="none"
         stroke="currentColor"

@@ -5,44 +5,94 @@ import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
 import config from '$lib/config.json';
 </script>
 
-<div class="px-3 bg-light-800 dark:bg-dark-400">
-  <main
-    class="grid place-items-center py-6 relative mx-auto max-w-screen-xl
-    xl:py-24 xl:min-h-[80vh] xl:min-h-[80dvh]"
-  >
-    <div class="flex flex-col flex-wrap">
-      <h1 class="font-fluid-4 max-w-[15ch]">
-        Building the web<br /> with clean interfaces
-      </h1>
-      <p class="font-h3 mt-2 max-w-[38ch]">
-        I'm a frontend developer and here we'll discuss about <strong
-          >web deve&shylopment</strong
-        > and show you my projects while at it.
-      </p>
-      <section
-        class="flex gap-4 mt-10 flex-col md:flex-row md:place-items-start"
-      >
-        <ShapeButton class="reverse" href="{base}/portfolio"
-          >What I've built</ShapeButton
+<div class="wrapper-abf">
+  <main>
+    <h1 class="font-fluid-5">Building the web with clean UI/UX</h1>
+    <p class="font-h3">
+      I'm a frontend developer and here we'll discuss about
+      <strong>web development</strong> and show you my projects while at it.
+    </p>
+    <section>
+      <ShapeButton class="reverse" href="{base}/portfolio">What I've built</ShapeButton>
+      <div>
+        <ShapeButton class="default" href={config.about.resume} target="_blank" rel="external"
+          >Resume</ShapeButton
         >
-        <div>
-          <ShapeButton
-            class="default"
-            href={config.about.resume}
-            target="_blank"
-            rel="external">Resume</ShapeButton
-          >
-          <small class="hidden md:px-8 md:block md:mt-2"
-            >Hit Ctrl+P to print</small
-          >
-        </div>
-      </section>
-    </div>
-    <div
-      class="place-self-start mt-8 hover:dark-red-50 xl:absolute xl:rotate-90
-      xl:top-[70%] xl:right-0"
-    >
+        <small>Hit Ctrl+P to print</small>
+      </div>
+    </section>
+    <div id="learn-more-container">
       <LinkArrow href="#portfolio">Learn more</LinkArrow>
     </div>
   </main>
 </div>
+
+<style>
+.wrapper-abf {
+  background: var(--400);
+}
+
+main {
+  position: relative;
+  display: grid;
+  place-content: start;
+  padding: 1.5rem 0;
+  margin-inline: auto;
+  width: min(100% - 2rem, var(--md));
+}
+
+h1 {
+  width: min(100%, 15ch);
+}
+
+p {
+  margin-top: 1rem;
+  width: min(100%, 38ch);
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem 1rem;
+  margin-top: 2rem;
+}
+
+small {
+  display: none;
+}
+
+#learn-more-container {
+  place-self: start;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 64rem) {
+  main {
+    padding: 6rem 0;
+  }
+
+  section {
+    flex-direction: row;
+    place-items: start;
+  }
+
+  small {
+    display: block;
+    padding: 0 2rem;
+    margin-top: 0.5rem;
+  }
+
+  #learn-more-container {
+    position: absolute;
+    inset: 70% 0 auto auto;
+    transform: rotate(90deg);
+  }
+}
+
+@media screen and (min-width: 80rem) {
+  main {
+    min-height: 80dvh;
+    min-height: 80vh;
+  }
+}
+</style>

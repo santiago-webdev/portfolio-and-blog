@@ -37,8 +37,7 @@ export const AllProjects = readable<Array<Project>>([
   },
   {
     name: 'Personal site',
-    description:
-      'This is my personal blog and portfolio, check the case study below',
+    description: 'This is my personal blog and portfolio, check the case study below',
     short_description: 'This same site, here you can find more about me',
     category: ['featured', 'frontend', 'opensource'],
     stack: {
@@ -83,12 +82,7 @@ export const AllProjects = readable<Array<Project>>([
 
 export const FilteredProjects = writable(get(AllProjects));
 
-export type Category =
-  | 'featured'
-  | 'frontend'
-  | 'fullstack'
-  | 'opensource'
-  | 'redesign_rewrite';
+export type Category = 'featured' | 'frontend' | 'fullstack' | 'opensource' | 'redesign_rewrite';
 
 type Categories = Record<Category, [label: string, description: string]>;
 
@@ -102,10 +96,7 @@ export const jobSelector: Categories = {
     `In here you'll find rewrites with a focus on making the UI/UX of this
 pages accesible to everyone`
   ],
-  fullstack: [
-    'Full Stack',
-    `This are some of the most 'complete' projects I have to date`
-  ],
+  fullstack: ['Full Stack', `This are some of the most 'complete' projects I have to date`],
   opensource: [
     'Open Source',
     `As a Linux enthusiast, I'm a firm believer in FOSS, check
@@ -127,8 +118,6 @@ export const currentGroupOfProjects = writable<Category>('featured');
 
 currentGroupOfProjects.subscribe((selectionChange) => {
   FilteredProjects.update(() =>
-    get(AllProjects).filter((currentProject) =>
-      currentProject.category.includes(selectionChange)
-    )
+    get(AllProjects).filter((currentProject) => currentProject.category.includes(selectionChange))
   );
 });

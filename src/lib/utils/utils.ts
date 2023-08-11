@@ -170,10 +170,7 @@ export function retrieve_icon(symbol: string): string | undefined {
 }
 
 /* eslint-disable  @typescript-eslint/no-explicit-any */
-export function debounce<T extends (...args: any[]) => void>(
-  func: T,
-  delay: number
-): T {
+export function debounce<T extends (...args: any[]) => void>(func: T, delay: number): T {
   let timeoutId: number;
   return function (this: any, ...args: Parameters<T>) {
     clearTimeout(timeoutId);
