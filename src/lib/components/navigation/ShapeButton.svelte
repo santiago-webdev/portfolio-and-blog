@@ -54,24 +54,11 @@ span {
   border-width: 1px 0 0 1px;
 }
 
-.reverse {
-  background: var(--text-1);
-  border: 0px var(--text-1) solid;
-  border-width: 1px 0 0 1px;
-  color: var(--srf-1);
-}
-
 @media screen and (hover: hover) {
   .default:hover {
     background: var(--clr-orange-old);
     border-color: var(--clr-orange-old);
     color: var(--srf-1);
-  }
-
-  .reverse:hover {
-    background: var(--clr-purple-mauve);
-    border-color: var(--clr-purple-mauve);
-    color: var(--text-1);
   }
 }
 </style>

@@ -12,26 +12,19 @@ function getPic(id: number) {
 
 <div id="mention-blog">
   <div class="container-blog">
-    <div class="flex flex-wrap gap-6 justify-between items-center">
+    <div class="header-blog">
       <h2 class="font-fluid-2">Blog articles</h2>
-      <div class="flex flex-col">
-        <p class="font-body">
-          Press <kbd aria-keyshortcuts="Control+K">CTRL K</kbd> or
-        </p>
+      <div>
+        <p class="font-body">Press <kbd aria-keyshortcuts="Control+K">CTRL K</kbd> or</p>
         <LinkArrow orientation="right" href="{base}/blog">Check all articles</LinkArrow>
       </div>
     </div>
     <section>
       {#each $Posts.slice(0, 3) as { href, title, datetime }, id}
         <a {href}>
-          <article class="relative grid gap-4">
-            <div class="max-h-[36rem] overflow-hidden rounded-lg">
-              <img
-                class="w-full h-auto object-scale-down object-center rounded-xl"
-                loading="lazy"
-                src={getPic(id)}
-                alt=""
-              />
+          <article>
+            <div class="wrapper-img-placeholder">
+              <img loading="lazy" src={getPic(id)} alt="" />
             </div>
             {#if datetime}
               <time {datetime}>
@@ -40,8 +33,6 @@ function getPic(id: number) {
                 <div aria-orientation="vertical" role="separator">&nbsp;&mdash;&nbsp;</div>
                 {readableDate(datetime)}
               </time>
-            {:else}
-              <small aria-hidden="true" style:visibility="hidden"> No date provided </small>
             {/if}
             <h3 class="font-fluid-1">{title}</h3>
           </article>
@@ -66,11 +57,19 @@ function getPic(id: number) {
   width: min(100% - 2rem, var(--lg));
 }
 
+.header-blog {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem 6rem;
+}
+
 kbd {
   background: var(--srf-4);
   font-size: inherit;
   line-height: inherit;
-  font-weight: normal;
+  font-weight: 600;
 }
 
 section {
@@ -81,6 +80,25 @@ section {
 
 a:nth-child(3) {
   display: none;
+}
+
+article {
+  position: relative;
+  display: grid;
+  gap: 1rem;
+}
+
+.wrapper-img-placeholder {
+  max-height: 36rem;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: scale-down;
+  object-position: center;
 }
 
 time {

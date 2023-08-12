@@ -30,6 +30,14 @@ var {
   line-height: inherit;
 }
 
+label,
+label.font-p{
+  color: var(--text-3);
+  font-family: var(--ff-ui);
+  font-variation-settings: 'wght' 500;
+  font-weight: 500;
+}
+
 /* I have to use important here because normally you put kbd inside buttons so
  * they inherit their styles.
  * */
@@ -63,6 +71,7 @@ h6,
   line-height: calc(var(--fs-small) * 1.4);
   font-variation-settings: 'wght' 800;
   font-weight: 800;
+  color: var(--text-3);
 }
 
 .font-sub,

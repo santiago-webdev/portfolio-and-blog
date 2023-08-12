@@ -1,6 +1,6 @@
 <script lang="ts">
 import NavigationBar from '$lib/components/navigation/NavigationBar.svelte';
-import ButtonToTheTop from '$lib/components/ButtonToTheTop.svelte';
+// import ButtonToTheTop from '$lib/components/ButtonToTheTop.svelte';
 import Footer from '$lib/components/Footer.svelte';
 import { fly } from 'svelte/transition';
 import Seo from '$lib/seo.svelte';
@@ -16,7 +16,7 @@ export let data;
       <slot />
     </div>
   {/key}
-  <ButtonToTheTop />
+  <!-- <ButtonToTheTop /> -->
   <Footer />
 </div>
 <Seo

@@ -68,10 +68,6 @@ li code {
   height: 2rem;
 }
 
-small {
-  color: var(--text-0);
-}
-
 time {
   display: flex;
   flex-wrap: wrap;
@@ -135,5 +131,20 @@ th {
 
   td {
     display: block;
+  }
+}
+
+.reverse {
+  background: var(--text-1);
+  border: 0px var(--text-1) solid;
+  border-width: 1px 0 0 1px;
+  color: var(--srf-1);
+}
+
+@media (hover: hover) {
+  .reverse:hover {
+    background: var(--clr-purple-mauve);
+    border-color: var(--clr-purple-mauve);
+    color: var(--text-1);
   }
 }

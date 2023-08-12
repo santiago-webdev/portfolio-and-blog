@@ -59,7 +59,8 @@ form {
   width: min(100% - 2rem, 640px);
   transition: background-color 50ms, border 80ms, box-shadow 300ms;
   box-shadow: 4px 8px 8px 0 rgb(0 0 0 / 0.06);
-  padding: 0.5rem 1rem;
+  /* padding: 0.4rem 0.8rem; */
+  padding: 0.5rem 1.5rem;
   margin-top: 2rem;
   margin-inline: auto;
   background: var(--srf-4);

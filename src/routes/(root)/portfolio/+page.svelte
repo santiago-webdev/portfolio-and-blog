@@ -11,23 +11,20 @@ import { retrieve_icon } from '$lib/utils/utils';
 </script>
 
 <main>
-  <div class="wrapper-header py-6 flex place-items-center dark:bg-dark-400 rounded-b-3xl">
-    <header
-      class="flex flex-col place-content-center mx-auto px-3 max-w-screen-xl gap-10 lg:flex-row md:py-24"
-    >
-      <section class="flex-[6] pt-12 mx-auto max-w-screen-xl px-3 grid gap-6">
+  <div class="wrapper-header">
+    <header>
+      <!-- <section class="flex-[6] pt-12 mx-auto max-w-screen-xl px-3 grid gap-6"> -->
+      <section class="flex-[6] mx-auto max-w-screen-xl grid gap-6">
         <small>PORTFOLIO SHOWCASE &mdash;</small>
         <h1 class="font-fluid-2">
           {getCategoryInfo($currentGroupOfProjects).label} Projects
         </h1>
-        <p class="font-h3 dark:text-dark-inv-600">
+        <p class="font-h3">
           {getCategoryInfo($currentGroupOfProjects).description}
         </p>
       </section>
-      <form
-        class="font-h3 flex-[3] flex flex-col flex-wrap place-items-center place-content-center gap-4"
-      >
-        <label for="projects flex flex-wrap mx-6">
+      <form class="font-h3">
+        <label for="projects" class="font-p">
           Filter by type of project
           <noscript>
             <small>Sorry Folks! This requires JavaScript to work!</small>
@@ -39,8 +36,6 @@ import { retrieve_icon } from '$lib/utils/utils';
       "
         >
           <select
-            class="w-full dark:text-dark--inv-700 border-0 dark:bg-dark-600
-            dark:text-dark-inv-700 py-2 px-6 rounded-xl"
             bind:value={$currentGroupOfProjects}
             name="projects"
             id="projects"
@@ -105,12 +100,12 @@ import { retrieve_icon } from '$lib/utils/utils';
           </header>
           <p>{description}</p>
 
-          <h3 class="font-sub mt-4 dark:text-dark-inv-800 font-bold">Tech Stack:</h3>
+          <h3 class="font-sub">Tech Stack:</h3>
           {#if stack.frontend}
             <div
               class="list-project-frontend flex flex-col gap-[1ch] xl:flex-row xl:place-items-center"
             >
-              <h4 class="font-sub dark:text-dark-inv-700 font-bold min-w-[8ch]">Frontend:</h4>
+              <h4 class="font-sub">Frontend:</h4>
               <ul class="inline-items">
                 {#each stack.frontend as tags}
                   <li class="tpl tags font-sub">
@@ -123,7 +118,7 @@ import { retrieve_icon } from '$lib/utils/utils';
           {/if}
           {#if stack.api}
             <div class="list-project-api flex flex-col gap-[1ch] xl:flex-row xl:place-items-center">
-              <h4 class="font-sub dark:text-dark-inv-700 font-bold min-w-[8ch]">API:</h4>
+              <h4 class="font-sub">API:</h4>
               <ul class="inline-items">
                 {#each stack.api as tags}
                   <li class="tpl tags font-sub">
@@ -138,7 +133,7 @@ import { retrieve_icon } from '$lib/utils/utils';
             <div
               class="list-project-backend flex flex-col gap-[1ch] xl:flex-row xl:place-items-center"
             >
-              <h4 class="font-sub dark:text-dark-inv-700 font-bold min-w-[8ch]">Backend:</h4>
+              <h4 class="font-sub">Backend:</h4>
               <ul class="inline-items">
                 {#each stack.backend as tags}
                   <li class="tpl tags font-sub">
@@ -159,14 +154,10 @@ import { retrieve_icon } from '$lib/utils/utils';
       </article>
     {/each}
     <article
-      class="flex flex-col flex-wrap md:flex-row p-6 gap-8 rounded-3xl
- border-t border-l border-t-solid border-l-solid
-        dark:bg-dark-400 dark:border-dark-600"
+      class="flex flex-col flex-wrap md:flex-row p-6 gap-8 rounded-3xl border-t border-l border-t-solid border-l-solid dark:bg-dark-400 dark:border-dark-600"
     >
       <button
-        class="cursor-pointer flex-[5] w-full aspect-video place-items-center
-rounded-xl hover:dark:bg-dark-600 border-2 border-dashed
-hover:dark:border-palette-orange-50"
+        class="cursor-pointer flex-[5] w-full aspect-video place-items-center rounded-xl hover:dark:bg-dark-600 border-2 border-dashed hover:dark:border-palette-orange-50"
       >
         <iconify-icon width="30" height="30" icon="lucide:plus" />
       </button>
@@ -188,3 +179,68 @@ hover:dark:border-palette-orange-50"
     </article>
   </section>
 </main>
+
+<style>
+.wrapper-header {
+  display: grid;
+  place-items: center;
+  place-content: center;
+  padding: 1.5rem 0;
+  background: var(--srf-3);
+  /* py-6 flex place-items-center dark:bg-dark-400 rounded-b-3xl */
+  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+}
+
+.wrapper-header header {
+  width: min(100% - 2rem, var(--md));
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  gap: 3rem;
+}
+
+form {
+  flex: 3;
+  display: flex;
+  flex-flow: column wrap;
+  /* place-items: center; */
+  /* place-content: center; */
+  gap: 1rem;
+}
+
+label {
+  display: flex;
+  flex-wrap: wrap;
+  margin-inline: 1rem;
+  /* flex flex-wrap mx-6 */
+}
+
+select {
+  width: 100%;
+  border: 0;
+  border-radius: 1rem;
+  padding: 0.5rem 1.5rem;
+  background: inherit;
+}
+            /* dark:text-dark--inv-700 border-0 dark:bg-dark-600 */
+            /* dark:text-dark-inv-700 py-2 px-6 rounded-xl" */
+
+h3 {
+  margin-top: 4rem;
+  color: var(--text-2);
+}
+
+h4 {
+  color: var(--text-3);
+  min-width: 8ch;
+}
+
+@media screen and (min-width: 48rem) {
+  .wrapper-header header {
+    flex-direction: row;
+    padding: 6rem 0;
+    place-items: center;
+  }
+}
+</style>

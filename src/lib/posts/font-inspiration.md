@@ -58,6 +58,7 @@ This is a simple list, differentiated between programming fonts, and web design 
 - [Moderat](https://tightype.com/typefaces/moderat)
 - JAF Facit, [adobe fonts](https://fonts.adobe.com/fonts/jaf-facit)
 - Google sans, or Open Sans, [google fonts](https://fonts.google.com/specimen/Open+Sans)
+- [Agrandir](https://pangrampangram.com/products/agrandir)
 
 ### Display
 
