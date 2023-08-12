@@ -71,7 +71,7 @@ span {
   .reverse:hover {
     background: var(--clr-purple-mauve);
     border-color: var(--clr-purple-mauve);
-    color: var(--text-1)
+    color: var(--text-1);
   }
 }
 </style>
