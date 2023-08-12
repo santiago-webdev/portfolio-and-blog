@@ -29,13 +29,13 @@ import config from '$lib/config.json';
 
 <style>
 .wrapper-abf {
-  background: var(--400);
+  background: var(--srf-3);
 }
 
 main {
   position: relative;
   display: grid;
-  place-content: start;
+  place-content: center;
   padding: 1.5rem 0;
   margin-inline: auto;
   width: min(100% - 2rem, var(--md));
@@ -48,6 +48,7 @@ h1 {
 p {
   margin-top: 1rem;
   width: min(100%, 38ch);
+  color: var(--text-2);
 }
 
 section {
@@ -59,6 +60,7 @@ section {
 
 small {
   display: none;
+  color: var(--text-3);
 }
 
 #learn-more-container {
@@ -91,8 +93,8 @@ small {
 
 @media screen and (min-width: 80rem) {
   main {
-    min-height: 80dvh;
-    min-height: 80vh;
+    min-height: 85dvh;
+    min-height: 85vh;
   }
 }
 </style>

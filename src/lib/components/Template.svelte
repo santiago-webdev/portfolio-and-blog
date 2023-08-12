@@ -99,11 +99,7 @@ if (title) {
       {/if}
 
       {#if summary}
-        <details
-          class="font-p flex rounded-2xl max-w-screen-sm mt-4 text-left
-          mx-auto py-2 px-4 dark:bg-dark-600 dark:border-dark-700 border-t
-          border-t-solid border-l-solid border"
-        >
+        <details class="font-p">
           <summary>Summary</summary>
           {summary}
         </details>
@@ -119,8 +115,8 @@ if (title) {
 <style>
 [role='banner'] {
   background-color: var(--400);
-  border-bottom-right-radius: 1.6rem;
-  border-bottom-left-radius: 1.6rem;
+  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
   display: flex;
   flex-direction: column;
   place-items: start;
@@ -135,7 +131,7 @@ if (title) {
 .wrapper-header,
 .wip {
   display: grid;
-  width: min(100% - 2.2rem, var(--xl));
+  width: min(100% - 2.2rem, var(--2xl));
   margin-inline: auto;
 }
 
@@ -168,9 +164,24 @@ ul {
   margin-top: 0.75rem;
 }
 
+details {
+  display: flex;
+  border-radius: 0.75rem;
+  background: var(--srf-4);
+  border: 0px var(--srf-4-brd) solid;
+  border-width: 1px 0 0 1px;
+  margin-top: 1rem;
+  margin-inline: auto;
+  padding: 0.5rem 1rem;
+  max-width: var(--sm);
+  text-align: left;
+
+  box-shadow: 4px 4px 4px 0 rgb(0 0 0 / 0.06);
+}
+
 summary {
-  padding: 0 0.4rem;
-  color: var(--clr-red-40);
+  padding: 0 0.5rem;
   text-align: center;
+  color: var(--clr-red-40);
 }
 </style>

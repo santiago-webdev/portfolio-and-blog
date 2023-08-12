@@ -5,15 +5,8 @@ export let href = '/';
 export let icon = '';
 </script>
 
-<a
-  {href}
-  {...$$restProps}
-  class={`flex place-content-center place-items-center rounded-full px-8 py-4 uppercase
-  font-sub ${$$props.class}`}
->
-  <span
-    class="flex place-content-center place-items-center justify-between gap-2 min-w-[min(100%,14ch)]"
-  >
+<a {href} {...$$restProps} class={` font-sub ${$$props.class}`}>
+  <span>
     <slot />
     {#if icon}
       <iconify-icon width="22" height="22" icon={retrieve_icon(icon)} />
@@ -33,3 +26,52 @@ export let icon = '';
     {/if}
   </span>
 </a>
+
+<style>
+a {
+  display: flex;
+  place-content: center;
+  border-radius: 9999px;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  min-width: min(100%, 14ch);
+  font-variation-settings: 'wght' 800;
+  font-weight: 800;
+  box-shadow: 4px 8px 8px 0 rgb(0 0 0 / 0.06);
+}
+
+span {
+  display: flex;
+  place-content: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-width: min(100%, 14ch);
+}
+
+.default {
+  background: var(--srf-4);
+  border: 0px var(--srf-4-brd) solid;
+  border-width: 1px 0 0 1px;
+}
+
+.reverse {
+  background: var(--text-1);
+  border: 0px var(--text-1) solid;
+  border-width: 1px 0 0 1px;
+  color: var(--srf-1);
+}
+
+@media screen and (hover: hover) {
+  .default:hover {
+    background: var(--clr-orange-old);
+    border-color: var(--clr-orange-old);
+    color: var(--srf-1);
+  }
+
+  .reverse:hover {
+    background: var(--clr-purple-mauve);
+    border-color: var(--clr-purple-mauve);
+    color: var(--text-1)
+  }
+}
+</style>

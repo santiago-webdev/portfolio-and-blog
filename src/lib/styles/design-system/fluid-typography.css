@@ -13,7 +13,7 @@
   font-family: var(--ff-ui);
   color: var(--text-3);
   font-variation-settings: 'wght' 800;
-  font-weight: 800;
+  color: var(--clr-inv-950);
   text-wrap: balance;
 }
 
@@ -22,13 +22,13 @@
   line-height: calc(var(--fluid-1) * 1.2);
   letter-spacing: -0.025em;
   font-variation-settings: 'wght' 700;
-  font-weight: 700;
 }
 
 .font-fluid-2 {
   font-size: var(--fluid-2);
   line-height: calc(var(--fluid-2) * 1.125);
   letter-spacing: -0.03em;
+  font-variation-settings: 'wght' 700;
 }
 
 .font-fluid-3 {
@@ -46,6 +46,6 @@
 .font-fluid-5 {
   font-size: var(--fluid-5);
   line-height: calc(var(--fluid-5) * 1.1);
-  letter-spacing: -0.05em;
+  letter-spacing: -0.06em;
 }
 /* EOL Fluid typography */

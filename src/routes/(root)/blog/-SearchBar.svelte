@@ -24,14 +24,7 @@ function handleSubmit() {
 $: if ($FilteredPosts.length === 1) preloadData(`${base}/blog${$FilteredPosts[0].href}`);
 </script>
 
-<form
-  class="font-h3 flex place-items-center gap-1 relative mx-auto px-3 dark:bg-dark-600
-  dark:border-dark-800 max-w-screen-sm
- border-t border-l border-t-solid border-l-solid rounded-xl drop-shadow
-        dark:text-dark-inv-800
-  "
-  on:submit|preventDefault={handleSubmit}
->
+<form class="font-h3" on:submit|preventDefault={handleSubmit}>
   <button aria-label="Go to selected blog" type="submit">
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
       <g
@@ -60,14 +53,19 @@ $: if ($FilteredPosts.length === 1) preloadData(`${base}/blog${$FilteredPosts[0]
 
 <style>
 form {
-  width: min(100% - 2.2rem, 640px);
-
+  display: flex;
+  place-items: center;
+  position: relative;
+  width: min(100% - 2rem, 640px);
   transition: background-color 50ms, border 80ms, box-shadow 300ms;
-
-  padding: 0.4rem 0.8rem;
-  border-radius: 1rem;
-
+  box-shadow: 4px 8px 8px 0 rgb(0 0 0 / 0.06);
+  padding: 0.5rem 1rem;
   margin-top: 2rem;
+  margin-inline: auto;
+  background: var(--srf-4);
+  border: 0px var(--srf-4-brd) solid;
+  border-width: 1px 0 0 1px;
+  border-radius: 1rem;
 }
 
 input:-moz-placeholder,
@@ -98,7 +96,7 @@ input {
 
 input::placeholder,
 form button {
-  color: var(--text-0);
+  color: var(--text-3);
 }
 
 input:focus::placeholder {

@@ -103,13 +103,6 @@ export default defineConfig({
     }
   },
   shortcuts: {
-    reverse: `border-t border-l border-t-solid border-l-solid drop-shadow
-      dark:bg-dark-inv-900 dark:border-white dark:text-dark-100
-      hover:dark:text-dark-inv-900 hover:dark:bg-palette-purple-mauve hover:dark:border-palette-purple-mauve-border`,
-    default: `border-t border-l border-t-solid border-l-solid rounded-xl drop-shadow
-      dark:bg-dark-700 dark:border-dark-900 dark:text-dark-inv-800
-      hover:dark:bg-palette-red-old hover:dark:border-palette-red-old-border
-`,
     tags: `drop-shadow inline-flex place-items-center gap-1 px-3 py-1.5 rounded-xl
  dark:bg-dark-600 dark:border-dark-700 dark:border-t-solid dark:border-l-solid border-1
 `,

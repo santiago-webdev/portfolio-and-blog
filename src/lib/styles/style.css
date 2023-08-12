@@ -3,7 +3,6 @@
 @import url('./design-system/breakpoints.css');
 @import url('./design-system/generic.css');
 @import url('./design-system/theme-dark.css');
-@import url('./design-system/theme-light.css');
 @import url('./design-system/theme.css');
 
 html {
@@ -11,8 +10,8 @@ html {
   scroll-behavior: smooth;
   color-scheme: light dark;
   font-family: var(--ff-text);
-  background-color: var(--200);
-  color: var(--text-2);
+  background-color: var(--srf-1);
+  color: var(--text-1);
 }
 
 address {
@@ -25,8 +24,8 @@ button[disabled] {
 
 p code,
 li code {
-  display: inline-flex;
-  flex-wrap: wrap;
+    display: inline-flex;
+    flex-wrap: wrap;
 
   overflow-x: auto;
   white-space: pre-wrap;

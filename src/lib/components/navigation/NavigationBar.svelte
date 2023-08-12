@@ -198,7 +198,7 @@ nav {
   place-items: center;
   justify-content: space-between;
 
-  width: min(100% - 2.2rem, var(--xl));
+  width: min(100% - 2.2rem, var(--2xl));
   margin-inline: auto;
 }
 

@@ -264,7 +264,7 @@ nav {
 section {
   display: flex;
   place-content: center;
-  background: var(--clr-600);
+  background: var(--srf-4);
 }
 
 section :is(small, a) {

@@ -12,14 +12,10 @@ import { base } from '$app/paths';
         <strong> Hello, my name is Santiago. </strong>
       </p>
       <p>
-        I'm a web developer based in <em>Argentina</em> with a passion for
-        <em>Free And Open Source</em>,
-        <em>UI/UX</em> and <em>Linux</em>. I'm fluent in English and Spanish.
-      </p>
-      <p>
-        I enjoy crafting simple interfaces, focusing in
+        I'm a web developer based in Argentina with a passion for <em>FOSS</em>, <em>UI/UX</em> and
+        <em>Linux</em>. I enjoy crafting simple interfaces, focusing in
         <em>maintainability</em>, <em>accessibility</em> and
-        <em>progressive enhancement</em>.
+        <em>progressive enhancement</em>. I'm also fluent in English and Spanish.
       </p>
     </section>
     <div class="grid place-content-start gap-4 col-span-8 md:col-span-4">

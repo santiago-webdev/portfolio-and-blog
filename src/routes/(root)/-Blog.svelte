@@ -10,18 +10,18 @@ function getPic(id: number) {
 }
 </script>
 
-<div id="mention-blog" class="flex place-content-center place-items-center py-12 mb-12">
-  <div class="grid gap-16 px-8 max-w-screen-2xl">
-    <div class="flex flex-wrap gap-6 justify-between items-start">
+<div id="mention-blog">
+  <div class="container-blog">
+    <div class="flex flex-wrap gap-6 justify-between items-center">
       <h2 class="font-fluid-2">Blog articles</h2>
       <div class="flex flex-col">
         <p class="font-body">
-          Press <kbd class="dark:bg-dark-800" aria-keyshortcuts="Control+K">CTRL K</kbd> or
+          Press <kbd aria-keyshortcuts="Control+K">CTRL K</kbd> or
         </p>
-        <LinkArrow orientation="right" href="{base}/blog">See the full blog</LinkArrow>
+        <LinkArrow orientation="right" href="{base}/blog">Check all articles</LinkArrow>
       </div>
     </div>
-    <section class="grid grid-cols-[repeat(auto-fit,minmax(min(100%,15rem),1fr))] gap-y-16 gap-x-6">
+    <section>
       {#each $Posts.slice(0, 3) as { href, title, datetime }, id}
         <a {href}>
           <article class="relative grid gap-4">
@@ -34,7 +34,7 @@ function getPic(id: number) {
               />
             </div>
             {#if datetime}
-              <time {datetime} class="flex flex-wrap place-items-center">
+              <time {datetime}>
                 <iconify-icon width="21" heigh="21" icon="lucide:calendar" />
                 &nbsp;{relativeTime(new Date(), new Date(datetime))}
                 <div aria-orientation="vertical" role="separator">&nbsp;&mdash;&nbsp;</div>
@@ -52,14 +52,41 @@ function getPic(id: number) {
 </div>
 
 <style>
+#mention-blog {
+  display: flex;
+  place-content: center;
+  place-items: center;
+  padding: clamp(3rem, 10vw + 1rem, 6rem) 0;
+  background: var(--srf-2);
+}
+
+.container-blog {
+  display: grid;
+  gap: 3rem;
+  width: min(100% - 2rem, var(--lg));
+}
+
 kbd {
+  background: var(--srf-4);
   font-size: inherit;
   line-height: inherit;
   font-weight: normal;
 }
 
-section a:nth-child(3) {
+section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: 3rem 1.5rem;
+}
+
+a:nth-child(3) {
   display: none;
+}
+
+time {
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
 }
 
 @media screen and (min-width: 1280px) {

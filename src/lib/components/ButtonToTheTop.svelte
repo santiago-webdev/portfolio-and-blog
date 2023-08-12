@@ -44,7 +44,7 @@ section {
   position: sticky;
   bottom: 1rem;
   margin-top: 1rem;
-  width: min(92%, var(--xl));
+  width: min(92%, var(--2xl));
   justify-content: flex-end;
   display: flex;
 }

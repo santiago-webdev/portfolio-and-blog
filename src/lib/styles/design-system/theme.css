@@ -1,2 +1,16 @@
-/* :root { */
-/* } */
+:root {
+  --srf-1: var(--100); /* darkest of all, starting color */
+  --srf-2: var(--200); /* base color for most of the UI and components */
+  --srf-2-brd: var(--300);
+  --srf-3: var(--400); /* for titles, headers and important components */
+  --srf-3-brd: var(--500);
+  --srf-4: var(--600); /* for use to contrast with surfaces 2 and 3 */
+  --srf-4-brd: var(--700);
+  --srf-5: var(--800);
+  --srf-5-brd: var(--900);
+
+  --text-1: white; /* or #FAFAFA, contrast with --srf-1, for titles */
+  --text-2: var(--clr-inv-800); /* for body text */
+  --text-3: var(--clr-inv-600); /* secondary text, labels */
+  --text-4: var(--clr-inv-500); /* disabled buttons or UI */
+}

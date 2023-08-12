@@ -9,16 +9,12 @@ let fly_in = { y: 50, duration: 200 };
 let fly_out = { y: -50, duration: 200 };
 </script>
 
-<section role="complementary" class="mx-auto max-w-screen-2xl">
-  <ul
-    class="grid grid-cols-[repeat(auto-fill,minmax(min(23rem,100%),1fr))] gap-4 px-2 pb-4 mx-auto"
-  >
+<section role="complementary">
+  <ul class="blog-list">
     {#each $FilteredPosts as post}
       <li in:fly={fly_in} out:fly={fly_out}>
         <a href={post.href}>
-          <article
-            class="grid place-items-start p-3 md:p-5 h-full rounded-2xl dark:bg-dark-400 border-t border-l border-t-solid border-l-solid dark:border-dark-600"
-          >
+          <article>
             <h2>{post.title}</h2>
             {#if post.tags}
               <ul class="inline-items mt-1">
@@ -37,9 +33,7 @@ let fly_out = { y: -50, duration: 200 };
               </ul>
             {/if}
 
-            {#if post.description}
-              <p class="mt-3 dark:text-dark-inv-700">{post.description}</p>
-            {/if}
+            {#if post.description}<p>{post.description}</p>{/if}
 
             {#if post.datetime}
               <time class="mt-8" datetime={post.datetime}>
@@ -84,6 +78,19 @@ li {
   transition: opacity 0.3s;
 }
 
+.blog-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(23rem, 100%), 1fr));
+  gap: 1rem;
+  padding-bottom: 1rem;
+  margin-inline: auto;
+}
+
+section {
+  margin-inline: auto;
+  width: min(100% - 2rem, var(--xl));
+}
+
 section > ul:hover > li {
   opacity: 0.8;
 }
@@ -95,11 +102,24 @@ section > ul:hover > li:hover {
 article {
   grid-template-rows: auto 1fr auto auto;
   transition: transform 100ms, color 100ms, background-color 500ms, border 100ms;
+  display: grid;
+  place-items: start;
+  padding: 0.75rem;
+  height: 100%;
+  background: var(--srf-3);
+  border: 0px var(--srf-3-brd) solid;
+  border-width: 1px 0 0 1px;
+  border-radius: 12px;
 }
 
 @media screen and (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
   article:hover {
     transform: scale(1.02);
   }
+}
+
+p {
+  margin-top: 1.5rem;
+  color: var(--text-2);
 }
 </style>

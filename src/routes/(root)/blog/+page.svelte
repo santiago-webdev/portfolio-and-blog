@@ -14,19 +14,55 @@ boldWords.forEach((word: string) => {
 });
 </script>
 
-<main
-  class="grid dark:bg-dark-400 rounded-b-3xl pb-[clamp(1rem,2vw+1rem,6rem)] mb-[clamp(1rem,2vw+1rem,3rem)]"
->
+<main>
   <header>
-    <div class="grid px-4 mt-2 max-w-screen-md mx-auto place-items-end">
+    <div class="wrapper-index-buttom">
       <LinkArrow orientation="right" href="{base}/blog/index">Index</LinkArrow>
     </div>
-    <div class="grid max-w-screen-md mx-auto place-items-center mt-6">
-      <h1 class="font-fluid-5 text-center max-w-[33ch]">Blog</h1>
+    <div class="container-blog">
+      <h1 class="font-fluid-5">Blog</h1>
       <!-- eslint-disable -->
-      <p class="font-h3 mt-4 text-center max-w-[33ch]">{@html description}</p>
+      <p class="font-h3">{@html description}</p>
     </div>
   </header>
   <SearchBar />
 </main>
 <FilteredPostsCards />
+
+<style>
+main {
+  display: grid;
+  padding-bottom: clamp(1rem, 2vw + 1rem, 6rem);
+  margin-bottom: clamp(1rem, 2vw + 1rem, 3rem);
+  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  background: var(--srf-3);
+}
+
+.wrapper-index-buttom {
+  display: grid;
+  padding: 0 1rem;
+  margin-top: 0.5rem;
+  margin-inline: auto;
+  width: min(100% - 2rem, var(--sm));
+  place-items: end;
+}
+
+.container-blog {
+  display: grid;
+  width: min(100% - 2rem, var(--sm));
+  margin-inline: auto;
+  margin-top: 1.5rem;
+  place-items: center;
+}
+
+p,
+h1 {
+  text-align: center;
+  width: min(100%, 33ch);
+}
+
+p {
+  margin-top: 1rem;
+}
+</style>

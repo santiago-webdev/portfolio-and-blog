@@ -4,7 +4,7 @@ import ShapeAnchor from '$lib/components/navigation/ShapeAnchor.svelte';
 import { FilteredProjects } from '$lib/components/projects/store';
 </script>
 
-<div class="dark:bg-dark-100">
+<div class='wrapper-portfolio'>
   <div
     id="portfolio"
     class="flex flex-wrap flex-col md:flex-row px-4 place-items-center max-w-screen-xl
@@ -56,3 +56,9 @@ import { FilteredProjects } from '$lib/components/projects/store';
     </ol>
   </div>
 </div>
+
+  <style>
+    .wrapper-portfolio {
+      background: var(--100)
+    }
+  </style>

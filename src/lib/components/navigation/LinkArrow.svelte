@@ -21,7 +21,7 @@ export let href = '/';
 <style>
 a {
   display: inline-flex;
-  color: var(--text-0);
+  color: var(--text-3);
   transition: all 150ms ease-in-out;
   /* max-width: max-content; */
   /* letter-spacing: -0.03em; */
