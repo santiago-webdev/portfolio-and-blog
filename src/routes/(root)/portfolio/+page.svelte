@@ -35,11 +35,7 @@ import { retrieve_icon } from '$lib/utils/utils';
       dark:bg-dark-600 dark:border-dark-800 rounded-xl
       "
         >
-          <select
-            bind:value={$currentGroupOfProjects}
-            name="projects"
-            id="projects"
-          >
+          <select bind:value={$currentGroupOfProjects} name="projects" id="projects">
             {#each Object.entries(jobSelector) as [value, [label]]}
               <option {value} {label} />
             {/each}
@@ -204,8 +200,6 @@ form {
   flex: 3;
   display: flex;
   flex-flow: column wrap;
-  /* place-items: center; */
-  /* place-content: center; */
   gap: 1rem;
 }
 
@@ -223,8 +217,6 @@ select {
   padding: 0.5rem 1.5rem;
   background: inherit;
 }
-            /* dark:text-dark--inv-700 border-0 dark:bg-dark-600 */
-            /* dark:text-dark-inv-700 py-2 px-6 rounded-xl" */
 
 h3 {
   margin-top: 4rem;

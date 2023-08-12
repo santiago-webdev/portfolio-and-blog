@@ -31,7 +31,7 @@ var {
 }
 
 label,
-label.font-p{
+label.font-p {
   color: var(--text-3);
   font-family: var(--ff-ui);
   font-variation-settings: 'wght' 500;

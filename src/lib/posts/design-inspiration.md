@@ -15,7 +15,7 @@ You can find good designs in the usual websites like:
 - [One Page Love](https://onepagelove.com/)
 - [Godly](https://godly.website/)
 
-## Landing pages 
+## Landing pages
 
 For landing page examples:
 
