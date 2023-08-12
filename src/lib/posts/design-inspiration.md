@@ -5,11 +5,27 @@ finished: true
 datetime: 2023-07-29 11:42
 ---
 
-You can find good designs in the usual websites like [Dribbble](https://dribbble.com/), [Pinterest](https://ar.pinterest.com/), [Behance](https://www.behance.net/), or [calltoinspiration](https://calltoinspiration.com/). There's also [Mobbin](https://mobbin.com/browse/ios/apps?sort=publishedAt) which has iOS, Android and Web specific designs.
+You can find good designs in the usual websites like:
 
-For landing page examples there's [lapa](https://www.lapa.ninja/) and [Page Collective](https://pagecollective.com/), which is really cool because it has section for [user flows](https://pageflows.com/?ref=pagecollective).
+- [Dribbble](https://dribbble.com/)
+- [Pinterest](https://ar.pinterest.com/)
+- [Behance](https://www.behance.net/)
+- [calltoinspiration](https://calltoinspiration.com/)
+- [Mobbin](https://mobbin.com/browse/ios/apps?sort=publishedAt) for iOS, Android and Web specific designs.
+- [One Page Love](https://onepagelove.com/)
+- [Godly](https://godly.website/)
 
-For [bento grids](https://bentogrids.com/).
+## Landing pages 
+
+For landing page examples:
+
+- [lapa](https://www.lapa.ninja/)
+- [Page Collective](https://pagecollective.com/), it has section for [user flows](https://pageflows.com/?ref=pagecollective) too.
+
+## Bento grids
+
+- [BentoGrids](https://bentogrids.com/).
+- [One Page Love bento section](https://onepagelove.com/tag/bento)
 
 ---
 
