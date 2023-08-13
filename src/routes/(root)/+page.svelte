@@ -2,12 +2,10 @@
 import AboveTheFold from './-AboveTheFold.svelte';
 import Portfolio from './-Portfolio.svelte';
 import Blog from './-Blog.svelte';
-import About from './-About.svelte';
-import Contact from './-Contact.svelte';
+import Cta from './-CTA.svelte';
 </script>
 
 <AboveTheFold />
 <Portfolio />
 <Blog />
-<About />
-<Contact />
+<Cta />

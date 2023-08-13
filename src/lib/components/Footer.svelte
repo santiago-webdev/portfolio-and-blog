@@ -31,7 +31,7 @@ const donateItems = [
 ];
 </script>
 
-<footer class="flex place-content-center flex-col mt-4 rounded-t-3xl dark:bg-dark-400">
+<footer class="flex place-content-center flex-col rounded-t-3xl dark:bg-dark-400">
   <header>
     <div
       class="aboutme tpl flex relative place-content-center flex-wrap flex-col flex-2 drop-shadow-md rounded-2xl p-8 gap-4 defaults dark:bg-dark-500 dark:border-dark-600"

@@ -1,0 +1,121 @@
+<script>
+import { base } from '$app/paths';
+import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
+</script>
+
+<div class="container-cta">
+  <div class="about">
+    <h2 class="font-fluid-1">About</h2>
+    <p><strong>Hello, my name is Santiago.</strong></p>
+    <p>
+      I'm a web developer based in Argentina with a passion for <em>FOSS</em>, <em>UI/UX</em> and
+      <em>Linux</em>. I enjoy crafting effective interfaces, focusing in
+      <em>maintainability</em>, <em>accessibility</em> and
+      <em>progressive enhancement</em>
+    </p>
+    <p>I'm comfortable with this technologies:</p>
+    <ul>
+      <li>JS/TS (ES6+)</li>
+      <li>SvelteKit</li>
+      <li>SQL</li>
+      <li>Python</li>
+      <li>React(learning)</li>
+      <li>Node.js(learning)</li>
+    </ul>
+    <ShapeButton class="reverse" href="{base}/about">More about me</ShapeButton>
+  </div>
+  <div id="contact" class="contact">
+    <h2 class="font-fluid-1">Contact</h2>
+    <p>The form does nothing at the moment :D</p>
+    <!-- <p>Feel free to reach out to me at any time</p> -->
+    <form action="process_form.php" method="POST">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required />
+    </form>
+  </div>
+</div>
+
+<style>
+.container-cta {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  width: min(100% - 1rem, var(--lg));
+  margin: 4rem 0;
+  border-radius: 0.75rem;
+  margin-inline: auto;
+}
+
+.about,
+.contact {
+  flex: 1;
+  padding: 2rem;
+}
+
+.about {
+  display: grid;
+  place-items: start;
+  grid-template-rows: auto auto auto auto 1fr;
+}
+
+.about * + * {
+  margin-block-start: 1rem;
+}
+
+ul {
+  columns: 2;
+  list-style: disc;
+  list-style-position: inside;
+}
+
+.contact {
+  background: var(--srf-3);
+  border: 0px var(--srf-3-brd) solid;
+  border-width: 1px 0 0 1px;
+  border-radius: 1rem;
+}
+
+.contact p {
+  margin-top: 0.5rem;
+}
+
+form {
+  display: grid;
+
+  margin-top: 1rem;
+}
+
+textarea,
+input {
+  background: var(--srf-4);
+  border: 0px var(--srf-4-brd) solid;
+  border-width: 1px 0 0 1px;
+  padding: 0.75rem 1rem;
+  margin-top: 0.25rem;
+  border-radius: 0.75rem;
+  display: flex;
+}
+
+textarea {
+  resize: none;
+}
+
+label {
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .container-cta {
+    background: var(--srf-2);
+    border: 0px var(--srf-2-brd) solid;
+    border-width: 1px 0 0 1px;
+    padding: 2rem;
+  }
+}
+</style>
