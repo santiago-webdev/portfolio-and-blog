@@ -26,7 +26,7 @@ getGithubStars().then((stars) => (ghStars = stars));
 <footer>
   <header>
     <div class="whosthis">
-      <h3 class="font-bold">Santiago Gonzalez</h3>
+      <h3>Santiago Gonzalez</h3>
       <p>Crafting accessible web experiences without leaving the aesthetics aside.</p>
     </div>
 
