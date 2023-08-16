@@ -178,12 +178,15 @@ button {
   box-shadow: none;
   border-radius: 999rem;
   min-width: 3.5ch;
+  background: var(--srf-4);
+  border: 0px var(--srf-4-brd) solid;
+  border-width: 1px 0 0 1px;
 }
 
 button[aria-expanded='true'] {
-  --bg: var(--clr-800);
-  --brd: var(--clr-900);
-  box-shadow: var(--shadow);
+  background: var(--srf-5);
+  border: 0px var(--srf-5-brd) solid;
+  /* border-radius: 1rem; */
 }
 
 .list-items {

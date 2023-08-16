@@ -66,7 +66,7 @@ h3 {
 
 ol {
   display: grid;
-  padding: 6rem 0;
+  padding: 2rem 0;
   margin-inline: auto;
   width: min(100% - 2rem, var(--lg));
   gap: 1.5rem;
@@ -134,6 +134,12 @@ li:last-child {
       'one two three'
       'one two three'
       'five four three';
+  }
+
+  .wrapper-portfolio {
+    display: flex;
+    place-items: center;
+    min-height: 75vh;
   }
 }
 </style>
