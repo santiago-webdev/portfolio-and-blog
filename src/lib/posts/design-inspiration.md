@@ -20,7 +20,7 @@ You can find good designs in the usual websites like:
 For landing page examples:
 
 - [lapa](https://www.lapa.ninja/)
-- [Page Collective](https://pagecollective.com/), it has section for [user flows](https://pageflows.com/?ref=pagecollective) too.
+- [Page Collective](https://pagecollective.com/)
 
 ## Bento grids
 
@@ -30,3 +30,11 @@ For landing page examples:
 ---
 
 [[how-to-create-a-website#Where to get inspiration]](./how-to-create-a-website#where-to-get-inspiration)
+
+## Accessibility and UX
+
+Sometimes you don't know if your design is using proper UX or if it has good accessibility
+
+- [Nielsen Norman Group](https://www.nngroup.com/), you might hate it, but they have very in deep articles about UX and accessibility
+- [Smashing Magazine](https://www.smashingmagazine.com/), as you guess it, they are blog post about a lot of things but you can find a lot info here
+- [Page Flows(from Page Collective)](https://pageflows.com/?ref=pagecollective), Page Collective has a user flow section

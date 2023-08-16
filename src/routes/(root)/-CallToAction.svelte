@@ -6,14 +6,18 @@ import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
 <div class="container-cta">
   <div class="about">
     <h2 class="font-fluid-1">About</h2>
-    <p><strong>Hello, my name is Santiago.</strong></p>
+    <p>Hello, my name is Santiago.</p>
     <p>
-      I'm a web developer based in Argentina with a passion for <em>FOSS</em>, <em>UI/UX</em> and
-      <em>Linux</em>. I enjoy crafting effective interfaces, focusing in
-      <em>maintainability</em>, <em>accessibility</em> and
-      <em>progressive enhancement</em>
+      I'm a web developer based in Argentina interested in
+      <em>FOSS</em>,
+      <em>UI/UX</em> and
+      <em>Linux</em>. I enjoy crafting effective and user-friendly interfaces, focusing in
+      <em>maintainability</em>,
+      <em>accessibility</em> and
+      <em>progressive enhancement</em>.
     </p>
-    <p>I'm comfortable with this technologies:</p>
+    <p>I'm comfortable with the next technologies, but you can find the complete list
+      below:</p>
     <ul>
       <li>JS/TS (ES6+)</li>
       <li>SvelteKit</li>
@@ -72,6 +76,7 @@ ul {
   columns: 2;
   list-style: disc;
   list-style-position: inside;
+  margin-bottom: 3rem;
 }
 
 .contact {

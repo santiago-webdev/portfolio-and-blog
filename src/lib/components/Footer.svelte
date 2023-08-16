@@ -31,15 +31,11 @@ const donateItems = [
 ];
 </script>
 
-<footer class="flex place-content-center flex-col rounded-t-3xl dark:bg-dark-400">
+<footer>
   <header>
-    <div
-      class="aboutme tpl flex relative place-content-center flex-wrap flex-col flex-2 drop-shadow-md rounded-2xl p-8 gap-4 defaults dark:bg-dark-500 dark:border-dark-600"
-    >
+    <div class="whosthis">
       <h3 class="font-bold">Santiago Gonzalez</h3>
-      <p class="dark:text-dark-inv-700">
-        Crafting accessible web experiences without leaving the aesthetics aside.
-      </p>
+      <p>Crafting accessible web experiences without leaving the aesthetics aside.</p>
     </div>
 
     <nav aria-label="footer-navigation">
@@ -120,8 +116,8 @@ const donateItems = [
       </address>
     </div>
   </header>
-  <section>
-    <div class="font-p container-bottom">
+  <div class="wrapper-bottom-footer">
+    <section class="font-p">
       <a
         target="_blank"
         href="https://github.com/santigo-zero"
@@ -152,17 +148,28 @@ const donateItems = [
           {ghStars}
         </var>
       </a>
-      <small class="flex flex-wrap place-content-center">
+      <small class="copyright">
         All rights reserved <iconify-icon icon="lucide:copyright" />
         {new Date().getFullYear()}
         <div aria-orientation="vertical" role="separator">&mdash;</div>
         GPL-3.0
       </small>
-    </div>
-  </section>
+    </section>
+  </div>
 </footer>
 
 <style>
+footer {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
+  background: var(--srf-3);
+  border: 0px var(--srf-3-brd) solid;
+  border-width: 1px 0 0 1px;
+}
+
 footer :is(a, small) {
   display: flex;
   gap: 0.25rem;
@@ -185,12 +192,31 @@ header > * {
   flex-direction: column;
 }
 
-header h3:not(.aboutme h3) {
+.whosthis {
+  position: relative;
+  flex: 2;
+  display: flex;
+  flex-flow: column wrap;
+  place-content: center;
+  padding: 1.5rem;
+  gap: 1rem;
+  box-shadow: 4px 8px 8px 0 rgb(0 0 0 / 0.06);
+  border-radius: 1rem;
+  background: var(--srf-4);
+  border: 0px var(--srf-4-brd) solid;
+  border-width: 1px 0 0 1px;
+}
+
+.whosthis p {
+  color: var(--text-3);
+}
+
+header h3:not(.whosthis h3) {
   font-weight: 500;
   margin: 0 0.6rem 0.4rem;
 }
 
-.aboutme:after {
+.whosthis:after {
   content: '';
   pointer-events: none;
 
@@ -202,19 +228,19 @@ header h3:not(.aboutme h3) {
   background-size: 100% 123%;
 }
 
-:global([data-theme='dark'] .aboutme:after),
-:global([data-theme='system'] .aboutme:after) {
+:global([data-theme='dark'] .whosthis:after),
+:global([data-theme='system'] .whosthis:after) {
   opacity: 0.03;
   background-image: url('/logo.svg');
 }
 
-:global([data-theme='light'] .aboutme:after),
-:global([data-theme='system-light'] .aboutme:after) {
+:global([data-theme='light'] .whosthis:after),
+:global([data-theme='system-light'] .whosthis:after) {
   opacity: 0.1;
   background-image: url('/logo-light.svg');
 }
 
-.aboutme {
+.whosthis {
   grid-column: span 8;
 }
 
@@ -246,7 +272,7 @@ nav {
     order: 1;
   }
 
-  .aboutme {
+  .whosthis {
     order: 0;
   }
 
@@ -261,7 +287,7 @@ nav {
   }
 }
 
-section {
+.wrapper-bottom-footer {
   display: flex;
   place-content: center;
   background: var(--srf-4);
@@ -270,19 +296,19 @@ section {
 section :is(small, a) {
   font-family: var(--ff-ui);
   font-size: inherit;
+  /* font-weight: inherit; */
   font-variation-settings: 'wght' 500;
-  font-weight: 500;
   color: var(--text-2);
 }
 
 @media (hover: hover) {
-  .container-bottom a:hover,
-  .container-bottom a:hover > * {
+  section a:hover,
+  section a:hover > * {
     color: var(--clr-red-old);
   }
 }
 
-.container-bottom {
+section {
   display: flex;
   flex-direction: column;
   place-items: center;
@@ -292,8 +318,14 @@ section :is(small, a) {
   margin-inline: auto;
 }
 
-@media screen and (min-width: 1200px) {
-  .container-bottom {
+small.copyright {
+  display: flex;
+  flex-wrap: wrap;
+  place-content: center;
+}
+
+@media screen and (min-width: 80rem) {
+  section {
     flex-flow: row wrap;
     justify-content: space-between;
     padding: 0.6rem 0;
