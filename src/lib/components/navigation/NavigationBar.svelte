@@ -44,7 +44,6 @@ $: if (outerWidth > 768) expanded = false;
       <button
         aria-label="Click or tap to {expanded ? 'close' : 'open'} the menu"
         aria-expanded={expanded}
-        class="tpl"
         on:click={() => (expanded = !expanded)}
       >
         {#if expanded}

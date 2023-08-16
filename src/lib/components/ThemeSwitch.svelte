@@ -71,7 +71,6 @@ onMount(() => {
 
 <button
   on:click={click}
-  class="tpl"
   aria-label="Theme switcher, current theme is {theme}"
   title="Theme switcher: Switch between a dark or light theme, or leave it to the system to decide"
 >

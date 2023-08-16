@@ -1,7 +1,6 @@
 @import url('./design-system/typography.css');
 @import url('./design-system/fluid-typography.css');
 @import url('./design-system/breakpoints.css');
-@import url('./design-system/generic.css');
 @import url('./design-system/theme-dark.css');
 @import url('./design-system/theme.css');
 
@@ -147,4 +146,81 @@ th {
     border-color: var(--clr-purple-mauve);
     color: var(--text-1);
   }
+}
+
+/* Ordered lists */
+ol.generic {
+  display: grid;
+  gap: 0.2rem;
+  background-color: var(--clr-500);
+  border: 1px var(--clr-inv-200) solid;
+  border-radius: 16px;
+  padding: 1rem;
+  counter-reset: ol-counter;
+
+  list-style-position: inside;
+}
+
+ol.generic li.generic::before {
+  content: counter(ol-counter) '.';
+  counter-increment: ol-counter;
+  padding-right: 10px;
+}
+/* Ordered lists */
+
+/* Unordered lists */
+ul.generic:not(:has(li input[type='checkbox'])) {
+  list-style: disc inside;
+}
+/* Unordered lists */
+
+/* List items */
+:is(ol, ul) li.generic {
+  padding: 0.4rem;
+  border-radius: 8px;
+}
+
+ul > li.generic li.generic {
+  padding-left: 2rem;
+}
+
+:is(ol) li.generic:nth-child(odd) {
+  background-color: var(--clr-400);
+}
+/* List items */
+
+a.selection {
+  --bg: transparent;
+  --brd: transparent;
+  background: var(--bg);
+  border-color: var(--brd) var(--bg) var(--bg) var(--brd);
+  border-width: 2px 1px;
+  border-style: solid;
+  border-radius: 16px;
+
+  padding: 0.2rem 0.6rem;
+  border-radius: 0.6rem;
+}
+
+@media (hover: hover) {
+  a.selection:focus-visible,
+  a.selection:hover {
+    --bg: var(--clr-800);
+    --brd: var(--clr-900);
+    box-shadow: 3px 6px 12px 3px hsl(0 0% 0% / 0.1);
+  }
+}
+
+.generic-underline {
+  text-decoration: underline dotted var(--clr-blue-40) 2px;
+  text-underline-offset: 3px;
+}
+
+blockquote {
+  background: var(--clr-300);
+  border-left: 0.4rem var(--clr-600) solid;
+  padding: 1.2rem;
+  padding-left: 2ch;
+  border-radius: 0.3rem;
+  position: relative;
 }

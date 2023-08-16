@@ -78,16 +78,16 @@ onMount(() => {
 });
 </script>
 
-<div class="wrapper-experience tpl">
+<div class="wrapper-experience">
   <h2 class="font-fluid-2">What I'm up to today</h2>
   <div bind:this={tabbed} class="tabbed">
     <!-- TODO(santigo-zero): I have to redo styles for this -->
     <ol bind:this={tablist} role="tablist">
       <li>
-        <a class="tpl" role="tab" href="#section1">Add job <span>+</span></a>
+        <a role="tab" href="#section1">Add job <span>+</span></a>
       </li>
       <li>
-        <a class="tpl" aria-selected="true" role="tab" href="#section2">Unemployed</a>
+        <a aria-selected="true" role="tab" href="#section2">Unemployed</a>
       </li>
     </ol>
     <div class="wrapper-content">

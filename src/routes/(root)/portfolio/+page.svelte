@@ -87,7 +87,7 @@ import { retrieve_icon } from '$lib/utils/utils';
               </a>
               <ul class="inline-items">
                 {#each category as tags}
-                  <li class="tpl tags">
+                  <li class="tags">
                     {getCategoryInfo(tags).label}
                   </li>
                 {/each}
@@ -104,7 +104,7 @@ import { retrieve_icon } from '$lib/utils/utils';
               <h4 class="font-sub">Frontend:</h4>
               <ul class="inline-items">
                 {#each stack.frontend as tags}
-                  <li class="tpl tags font-sub">
+                  <li class="tags font-sub">
                     <iconify-icon width="22" icon={retrieve_icon(tags)} />
                     {tags}
                   </li>
@@ -117,7 +117,7 @@ import { retrieve_icon } from '$lib/utils/utils';
               <h4 class="font-sub">API:</h4>
               <ul class="inline-items">
                 {#each stack.api as tags}
-                  <li class="tpl tags font-sub">
+                  <li class="tags font-sub">
                     <iconify-icon width="22" icon={retrieve_icon(tags)} />
                     {tags}
                   </li>
@@ -132,7 +132,7 @@ import { retrieve_icon } from '$lib/utils/utils';
               <h4 class="font-sub">Backend:</h4>
               <ul class="inline-items">
                 {#each stack.backend as tags}
-                  <li class="tpl tags font-sub">
+                  <li class="tags font-sub">
                     <iconify-icon width="22" icon={retrieve_icon(tags)} />
                     {tags}
                   </li>
@@ -168,7 +168,7 @@ import { retrieve_icon } from '$lib/utils/utils';
             to work with you on your new project.
           </p>
           <ul>
-            <li class="tpl font-sub">New</li>
+            <li class="font-sub">New</li>
           </ul>
         </header>
       </div>
