@@ -16,8 +16,7 @@ import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
       <em>accessibility</em> and
       <em>progressive enhancement</em>.
     </p>
-    <p>I'm comfortable with the next technologies, but you can find the complete list
-      below:</p>
+    <p>I'm comfortable with the next technologies, but you can find the complete list below:</p>
     <ul>
       <li>JS/TS (ES6+)</li>
       <li>SvelteKit</li>
