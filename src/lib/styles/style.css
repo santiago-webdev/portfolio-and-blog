@@ -190,23 +190,20 @@ ul > li.generic li.generic {
 /* List items */
 
 a.selection {
-  --bg: transparent;
-  --brd: transparent;
-  background: var(--bg);
-  border-color: var(--brd) var(--bg) var(--bg) var(--brd);
-  border-width: 2px 1px;
-  border-style: solid;
+  background: transparent;
+  border: 0px transparent solid;
+  border-width: 1px 0 0 1px;
   border-radius: 16px;
 
-  padding: 0.2rem 0.6rem;
+  padding: 0.25rem 0.5rem;
   border-radius: 0.6rem;
 }
 
 @media (hover: hover) {
   a.selection:focus-visible,
   a.selection:hover {
-    --bg: var(--clr-800);
-    --brd: var(--clr-900);
+    background: var(--srf-5);
+    border-color: var(--srf-5-brd);
     box-shadow: 3px 6px 12px 3px hsl(0 0% 0% / 0.1);
   }
 }
@@ -217,10 +214,9 @@ a.selection {
 }
 
 blockquote {
-  background: var(--clr-300);
-  border-left: 0.4rem var(--clr-600) solid;
-  padding: 1.2rem;
-  padding-left: 2ch;
-  border-radius: 0.3rem;
-  position: relative;
+  background: var(--srf-2);
+  border: 0px var(--srf-2-brd) solid;
+  border-width: 1px 0 0 1px;
+  border-radius: 1rem;
+  padding: 1rem;
 }

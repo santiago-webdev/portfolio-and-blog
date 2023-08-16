@@ -21,14 +21,6 @@ const getGithubStars = async () => {
 };
 
 getGithubStars().then((stars) => (ghStars = stars));
-
-const donateItems = [
-  {
-    name: 'Bitcoin',
-    logo: 'bitcoin',
-    direction: 'todo'
-  }
-];
 </script>
 
 <footer>
@@ -74,22 +66,6 @@ const donateItems = [
       </ul>
     </div>
 
-    <div class="donate">
-      <h3 class="font-p">Donate</h3>
-      <ul>
-        {#each donateItems as item}
-          <li>
-            <address id="todo">
-              <a href="#todo" class="selection">
-                <iconify-icon icon="simple-icons:{item.logo}" />
-                {item.name}
-              </a>
-            </address>
-          </li>
-        {/each}
-      </ul>
-    </div>
-
     <div class="contact">
       <h3 class="font-p">Contact</h3>
       <address>
@@ -119,16 +95,16 @@ const donateItems = [
   <div class="wrapper-bottom-footer">
     <section class="font-p">
       <a
+        class="designed-by"
         target="_blank"
         href="https://github.com/santigo-zero"
         aria-label="Link to my GitHub profile"
         title="Link to my GitHub profile"
       >
         <small>
-          Designed & Built with <iconify-icon icon="lucide:heart" />
-          by
+          Designed & Built with <iconify-icon icon="lucide:heart" /> by
+          <address>Santiago</address>
         </small>
-        <address>Santiago</address>
       </a>
 
       <a
@@ -163,11 +139,11 @@ footer {
   display: flex;
   flex-direction: column;
   place-content: center;
-  border-top-left-radius: 1.5rem;
-  border-top-right-radius: 1.5rem;
   background: var(--srf-3);
   border: 0px var(--srf-3-brd) solid;
   border-width: 1px 0 0 1px;
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
 }
 
 footer :is(a, small) {
@@ -194,26 +170,28 @@ header > * {
 
 .whosthis {
   position: relative;
-  flex: 2;
   display: flex;
   flex-flow: column wrap;
   place-content: center;
-  padding: 1.5rem;
-  gap: 1rem;
+  padding: 2.5rem;
+  gap: 0.5rem;
   box-shadow: 4px 8px 8px 0 rgb(0 0 0 / 0.06);
-  border-radius: 1rem;
   background: var(--srf-4);
   border: 0px var(--srf-4-brd) solid;
   border-width: 1px 0 0 1px;
+  border-radius: 1rem;
 }
 
 .whosthis p {
   color: var(--text-3);
+  width: min(100%, 30ch);
+  max-width: var(--xs);
 }
 
 header h3:not(.whosthis h3) {
   font-weight: 500;
-  margin: 0 0.6rem 0.4rem;
+  padding: 0.5rem;
+  padding-top: 0;
 }
 
 .whosthis:after {
@@ -246,7 +224,6 @@ header h3:not(.whosthis h3) {
 
 nav,
 .projects,
-.donate,
 .contact {
   grid-column: span 4;
 }
@@ -255,14 +232,13 @@ nav {
   grid-row: span 3;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   nav {
     grid-row: auto;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .donate,
+@media screen and (min-width: 64rem) {
   .projects,
   nav {
     order: 2;
@@ -281,9 +257,9 @@ nav {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 80rem) {
   header {
-    grid-template-columns: repeat(24, 1fr);
+    grid-template-columns: repeat(20, 1fr);
   }
 }
 
@@ -296,10 +272,15 @@ nav {
 section :is(small, a) {
   font-family: var(--ff-ui);
   font-size: inherit;
-  /* font-weight: inherit; */
   font-variation-settings: 'wght' 500;
   color: var(--text-2);
 }
+
+/* .designed-by { */
+/*   display: flex; */
+/*   flex-wrap: wrap; */
+/*   place-content: center; */
+/* } */
 
 @media (hover: hover) {
   section a:hover,
@@ -309,17 +290,16 @@ section :is(small, a) {
 }
 
 section {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   place-items: center;
-  gap: 1.2rem;
-  padding: 2rem 0;
-  width: min(100% - 2.2rem, var(--md));
+  gap: 1rem;
+  padding: 2.5rem 0;
+  width: min(100% - 2rem, var(--md));
   margin-inline: auto;
 }
 
-small.copyright {
-  display: flex;
+small {
+  display: inline-flex;
   flex-wrap: wrap;
   place-content: center;
 }
@@ -328,7 +308,7 @@ small.copyright {
   section {
     flex-flow: row wrap;
     justify-content: space-between;
-    padding: 0.6rem 0;
+    padding: 0.5rem 0;
   }
 }
 </style>
