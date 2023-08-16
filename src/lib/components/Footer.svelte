@@ -95,7 +95,6 @@ getGithubStars().then((stars) => (ghStars = stars));
   <div class="wrapper-bottom-footer">
     <section class="font-p">
       <a
-        class="designed-by"
         target="_blank"
         href="https://github.com/santigo-zero"
         aria-label="Link to my GitHub profile"
@@ -276,12 +275,6 @@ section :is(small, a) {
   color: var(--text-2);
 }
 
-/* .designed-by { */
-/*   display: flex; */
-/*   flex-wrap: wrap; */
-/*   place-content: center; */
-/* } */
-
 @media (hover: hover) {
   section a:hover,
   section a:hover > * {
@@ -290,7 +283,8 @@ section :is(small, a) {
 }
 
 section {
-  display: grid;
+  display: flex;
+  flex-flow: column wrap;
   place-items: center;
   gap: 1rem;
   padding: 2.5rem 0;
@@ -306,7 +300,7 @@ small {
 
 @media screen and (min-width: 80rem) {
   section {
-    flex-flow: row wrap;
+    flex-direction: row;
     justify-content: space-between;
     padding: 0.5rem 0;
   }
