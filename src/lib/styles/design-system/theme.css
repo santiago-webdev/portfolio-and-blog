@@ -12,5 +12,5 @@
   --text-1: white; /* or #FAFAFA, contrast with --srf-1, for titles */
   --text-2: var(--clr-inv-800); /* for body text */
   --text-3: var(--clr-inv-600); /* secondary text, labels */
-  --text-4: var(--clr-inv-500); /* disabled buttons or UI */
+  --text-4: var(--clr-inv-500); /* :disabled */
 }

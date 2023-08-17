@@ -39,15 +39,14 @@ const clickOutside = (modal: HTMLDialogElement) =>
 <svelte:window on:keydown={keydown} />
 
 <button
+  class="font-p"
   aria-keyshortcuts="Control+K"
   aria-label="Click to open and search"
   on:click={toggleModal}
-  class="px-1 py-2"
 >
-  <kbd class="flex place-content-center place-items-center font-small dark:text-dark-inv-700"
-    >CTRL K</kbd
-  >
-  <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24">
+  <span aria-hidden="true" style="visibility: hidden;">.</span>
+  <kbd class="font-small">CTRL K</kbd>
+  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
     <g
       fill="none"
       stroke="currentColor"
@@ -61,8 +60,6 @@ const clickOutside = (modal: HTMLDialogElement) =>
   </svg>
 </button>
 <dialog
-  class="border-t border-l border-b-0 border-r-0 border-t-solid border-l-solid
-rounded-2xl drop-shadow dark:bg-dark-700 dark:border-dark-900"
   aria-modal
   use:clickOutside
   on:close={() => ((value = ''), (document.body.style.overflow = ''))}
@@ -96,7 +93,7 @@ rounded-2xl drop-shadow dark:bg-dark-700 dark:border-dark-900"
           value = '';
           input.focus();
         }}
-        disabled={value.length >= 1 ? false : true}
+        disabled={value === '' ? true : false}
         type="button"><iconify-icon width="24" icon="lucide:x" /></button
       >
       <button
@@ -113,9 +110,9 @@ rounded-2xl drop-shadow dark:bg-dark-700 dark:border-dark-900"
     {#each $FilteredPosts.slice(0, 4) as post}
       <hr aria-orientation="horizontal" />
       <li>
-        <a class="selection grid place-items-start" on:click={() => toggleModal()} href={post.href}>
-          <article class="grid gap-1">
-            <h3 class="font-semibold">{post.title}</h3>
+        <a class="selection" on:click={() => toggleModal()} href={post.href}>
+          <article>
+            <h3>{post.title}</h3>
             {#if post.description}
               <p>{post.description}</p>
             {/if}
@@ -141,33 +138,40 @@ rounded-2xl drop-shadow dark:bg-dark-700 dark:border-dark-900"
 <style>
 button {
   display: flex;
-  gap: 0.4rem;
   place-items: center;
   place-content: center;
+}
+
+button:not(dialog button) {
+  padding: 0.5rem;
 }
 
 button kbd {
   display: none;
 }
 
-@media (hover: hover) {
+@media screen and (min-width: 48rem) {
   button:not(dialog button) {
-    --at-apply: 'px-5';
-    --at-apply: 'border-t';
-    --at-apply: 'border-l';
-    --at-apply: 'border-t-solid';
-    --at-apply: 'border-l-solid';
-    --at-apply: 'rounded-full';
-    --at-apply: 'drop-shadow';
-    --at-apply: 'dark:bg-dark-700';
-    --at-apply: 'dark:border-dark-800';
-    --at-apply: 'dark:text-dark-inv-800';
-    --at-apply: 'hover:dark:bg-dark-800';
-    --at-apply: 'hover:dark:border-dark-900';
+    padding: 0.375rem 1.125rem;
+    background: var(--srf-4);
+    border: 1px var(--srf-4) solid;
+    border-top-color: var(--srf-4-brd);
+    border-left-color: var(--srf-4-brd);
+    border-radius: 16px;
+    box-shadow: 4px 8px 8px 0 rgb(0 0 0 / 0.06);
   }
 
   button kbd {
-    display: block;
+    display: flex;
+    place-content: center;
+    place-items: center;
+  }
+}
+
+@media (hover: hover) {
+  button:not(dialog button):hover {
+    background: var(--srf-5);
+    border-color: var(--srf-5-brd);
   }
 }
 
@@ -177,9 +181,6 @@ button kbd {
 }
 
 :modal {
-  --bg: var(--clr-600);
-  --brd: var(--clr-700);
-
   padding: 0;
   margin: 0;
   min-width: 100%;
@@ -187,14 +188,23 @@ button kbd {
 
   transition: background-color 50ms, border 80ms, box-shadow 300ms;
   font-variation-settings: 'wght' 500;
+
+  background: var(--srf-3);
+  border: 1px var(--srf-3) solid;
+  border-top-color: var(--srf-3-brd);
+  border-left-color: var(--srf-3-brd);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  box-shadow: 4px 32px 48px 0 rgb(0 0 0 / 0.3);
 }
 
 :modal::backdrop {
-  background-color: unset;
+  background: var(--srf-1);
 }
 
 @media screen and (min-width: 48rem) {
   :modal {
+    border-radius: 1rem;
     top: 5vh;
     min-width: 0;
     min-height: 0;
@@ -203,7 +213,8 @@ button kbd {
   }
 
   :modal::backdrop {
-    backdrop-filter: blur(30px);
+    background: rgb(0 0 0 / 0.3);
+    backdrop-filter: blur(32px);
   }
 }
 
@@ -216,7 +227,7 @@ form {
 .searchbar {
   display: flex;
   gap: 1rem;
-  margin-inline: 0.6rem;
+  margin-inline: 2rem;
 }
 
 input:-moz-placeholder,
@@ -241,7 +252,7 @@ input {
 
 input::placeholder,
 form button {
-  color: var(--text-0);
+  color: var(--text-4);
 }
 
 input:focus::placeholder {
@@ -260,6 +271,16 @@ ul:empty {
 
 li {
   display: grid;
+}
+
+a {
+  display: grid;
+  place-items: start;
+}
+
+article {
+  display: grid;
+  gap: 0.25rem;
 }
 
 hr {

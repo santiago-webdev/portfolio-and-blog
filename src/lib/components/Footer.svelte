@@ -139,8 +139,9 @@ footer {
   flex-direction: column;
   place-content: center;
   background: var(--srf-3);
-  border: 0px var(--srf-3-brd) solid;
-  border-width: 1px 0 0 1px;
+  border: 1px var(--srf-3) solid;
+  border-top-color: var(--srf-3-brd);
+  border-left-color: var(--srf-3-brd);
   border-top-left-radius: 1.5rem;
   border-top-right-radius: 1.5rem;
 }
@@ -176,8 +177,9 @@ header > * {
   gap: 0.5rem;
   box-shadow: 4px 8px 8px 0 rgb(0 0 0 / 0.06);
   background: var(--srf-4);
-  border: 0px var(--srf-4-brd) solid;
-  border-width: 1px 0 0 1px;
+  border: 1px var(--srf-4) solid;
+  border-top-color: var(--srf-4-brd);
+  border-left-color: var(--srf-4-brd);
   border-radius: 1rem;
 }
 

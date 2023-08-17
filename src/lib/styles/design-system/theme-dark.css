@@ -26,13 +26,13 @@
   --clr-inv-900: hsl(216 15% 94%);
   --clr-inv-950: white;
 
-  --clr-red-40: hsl(346 77% 62%);
+  --clr-red-40: rgb(233, 83, 118);
   --clr-red-50: hsl(343, 77%, 75%);
   --clr-red-old: hsl(358, 61%, 64%);
   --clr-red-old-border: hsl(358, 61%, 68%);
   --clr-purple-40: #b79bc3;
   --clr-purple-50: #a17fad;
-  --clr-purple-mauve: #a9798b;
+  --clr-purple-mauve: rgb(169, 121, 139);
   --clr-orange-50: #ff9e64;
   --clr-orange-70: #fab387;
   --clr-orange-old: #db876a;

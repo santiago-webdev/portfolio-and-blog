@@ -81,14 +81,14 @@ li {
 .blog-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(23rem, 100%), 1fr));
-  gap: 1rem;
+  gap: 0.75rem;
   padding-bottom: 1rem;
   margin-inline: auto;
 }
 
 section {
   margin-inline: auto;
-  width: min(100% - 2rem, var(--xl));
+  width: min(100% - 1rem, var(--xl));
 }
 
 section > ul:hover > li {
@@ -112,14 +112,18 @@ article {
   border-radius: 12px;
 }
 
+p {
+  margin-top: 1.5rem;
+  color: var(--text-2);
+}
+
 @media screen and (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
   article:hover {
     transform: scale(1.02);
   }
-}
 
-p {
-  margin-top: 1.5rem;
-  color: var(--text-2);
+  .blog-list {
+    gap: 1rem;
+  }
 }
 </style>

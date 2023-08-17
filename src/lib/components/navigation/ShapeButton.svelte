@@ -50,8 +50,9 @@ span {
 
 .default {
   background: var(--srf-4);
-  border: 0px var(--srf-4-brd) solid;
-  border-width: 1px 0 0 1px;
+  border: 1px var(--srf-4) solid;
+  border-top-color: var(--srf-4-brd);
+  border-left-color: var(--srf-4-brd);
 }
 
 @media screen and (hover: hover) {

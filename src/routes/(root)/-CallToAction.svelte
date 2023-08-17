@@ -80,8 +80,9 @@ ul {
 
 .contact {
   background: var(--srf-3);
-  border: 0px var(--srf-3-brd) solid;
-  border-width: 1px 0 0 1px;
+  border: 1px var(--srf-3) solid;
+  border-top-color: var(--srf-3-brd);
+  border-left-color: var(--srf-3-brd);
   border-radius: 1rem;
 }
 
@@ -98,8 +99,9 @@ form {
 textarea,
 input {
   background: var(--srf-4);
-  border: 0px var(--srf-4-brd) solid;
-  border-width: 1px 0 0 1px;
+  border: 1px var(--srf-4) solid;
+  border-top-color: var(--srf-4-brd);
+  border-left-color: var(--srf-4-brd);
   padding: 0.75rem 1rem;
   margin-top: 0.25rem;
   border-radius: 0.75rem;
@@ -117,8 +119,9 @@ label {
 @media screen and (min-width: 48rem) {
   .container-cta {
     background: var(--srf-2);
-    border: 0px var(--srf-2-brd) solid;
-    border-width: 1px 0 0 1px;
+    border: 1px var(--srf-2) solid;
+    border-top-color: var(--srf-2-brd);
+    border-left-color: var(--srf-2-brd);
     padding: 2rem;
   }
 }

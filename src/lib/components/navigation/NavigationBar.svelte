@@ -135,7 +135,7 @@ header {
   transition: background, transform 200ms cubic-bezier(0.5, 0.95, 0, 1);
   z-index: 999;
   padding: 0.2rem 0;
-  background: var(--400);
+  background: var(--srf-3);
   border-bottom: 1px solid transparent;
 }
 
@@ -145,7 +145,7 @@ a {
 
 header.expanded {
   border-bottom: 2px solid var(--clr-inv-400);
-  background: var(--500);
+  background: var(--srf-4);
 }
 
 /* header.scrollY { */
@@ -155,38 +155,47 @@ header.expanded {
 
 a,
 button {
-  padding: 0.4rem 0.8rem;
   display: flex;
   place-items: center;
   place-content: center;
 }
 
+a {
+  padding: 0.375rem 1.125rem;
+}
+
 a.bordered {
-  border: 2px var(--clr-inv-200) solid;
-  border-radius: 1rem;
+  border: 1px var(--clr-inv-200) solid;
+  border-width: 1px;
+  border-radius: 16px;
 }
 
-a:hover {
-  color: var(--text-0);
-}
+@media (hover: hover) {
+  a:hover {
+    color: var(--text-1);
+  }
 
-a.bordered:hover {
-  border-color: var(--clr-inv-300);
+  a.bordered:hover {
+    border-color: var(--text-2);
+  }
 }
 
 button {
   box-shadow: none;
-  border-radius: 999rem;
+  border-radius: 16px;
   min-width: 3.5ch;
   background: var(--srf-4);
-  border: 0px var(--srf-4-brd) solid;
-  border-width: 1px 0 0 1px;
+  border: 1px var(--srf-4) solid;
+  border-top-color: var(--srf-4-brd);
+  border-left-color: var(--srf-4-brd);
+  box-shadow: 4px 4px 16px 0 rgb(0 0 0 / 0.1);
+  padding: 0.375rem 0.75rem;
 }
 
 button[aria-expanded='true'] {
-  background: var(--srf-5);
-  border: 0px var(--srf-5-brd) solid;
-  /* border-radius: 1rem; */
+  background: var(--srf-3);
+  border-color: var(--srf-3);
+  box-shadow: none;
 }
 
 .list-items {
@@ -200,7 +209,7 @@ nav {
   place-items: center;
   justify-content: space-between;
 
-  width: min(100% - 2.2rem, var(--2xl));
+  width: min(100% - 2rem, var(--2xl));
   margin-inline: auto;
 }
 
@@ -216,7 +225,6 @@ img {
   height: 1.8rem;
 }
 
-/* header.scrollY span, */
 header span {
   display: none;
 }
@@ -232,22 +240,18 @@ section {
   gap: 0.5rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  width: min(100% - 2.2rem, var(--sm));
+  width: min(100% - 2rem, var(--sm));
   margin-inline: auto;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   header {
-    padding: 0.6rem 0;
+    padding: 1rem 0;
   }
 
   header span {
     display: flex;
   }
-
-  /* header.scrollY { */
-  /*   backdrop-filter: blur(10px); */
-  /* } */
 
   button {
     display: none;

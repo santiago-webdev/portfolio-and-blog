@@ -18,7 +18,7 @@ address {
 }
 
 button[disabled] {
-  color: var(--clr-inv-300);
+  color: var(--text-4);
 }
 
 p code,
@@ -32,9 +32,13 @@ li code {
   overflow-wrap: break-word;
   word-break: break-word; /*word-wrap: break-word;*/
 
-  background: var(--clr-500);
-  border: 1px var(--clr-800) solid;
   color: var(--text-2);
+
+  background: var(--srf-3);
+  border: 1px var(--srf-3) solid;
+  border-top-color: var(--srf-3-brd);
+  border-left-color: var(--srf-3-brd);
+  border-radius: 1rem;
   padding: 0.05rem 0.1rem;
   border-radius: 6px;
 
@@ -84,10 +88,9 @@ hr {
 
 kbd {
   pointer-events: none;
-  padding-inline: 0.4rem;
+  padding-inline: 0.25rem;
   border-radius: 0.5rem;
-  /* font-size: 60%; */
-  /* font-weight: bold; */
+  color: var(--text-3);
 }
 
 thead {
@@ -135,7 +138,7 @@ th {
 
 .reverse {
   background: var(--text-1);
-  border: 0px var(--text-1) solid;
+  border: 1px var(--text-1) solid;
   border-width: 1px 0 0 1px;
   color: var(--srf-1);
 }
@@ -215,8 +218,10 @@ a.selection {
 
 blockquote {
   background: var(--srf-2);
-  border: 0px var(--srf-2-brd) solid;
-  border-width: 1px 0 0 1px;
+  border: 1px var(--srf-2) solid;
+  border-top-color: var(--srf-2-brd);
+  border-left-color: var(--srf-2-brd);
+
   border-radius: 1rem;
   padding: 1rem;
 }
