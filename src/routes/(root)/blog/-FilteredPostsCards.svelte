@@ -3,8 +3,6 @@ import { readableDate, relativeTime, retrieve_icon } from '$lib/utils/utils';
 import { FilteredPosts } from '$lib/components/blog/store';
 import { fly } from 'svelte/transition';
 
-const isLocal = import.meta.env.DEV;
-
 let fly_in = { y: 50, duration: 200 };
 let fly_out = { y: -50, duration: 200 };
 </script>
@@ -17,15 +15,9 @@ let fly_out = { y: -50, duration: 200 };
           <article>
             <h2>{post.title}</h2>
             {#if post.tags}
-              <ul class="inline-items mt-1">
+              <ul class="inline-items tags">
                 {#each post.tags as tag}
-                  <li
-                    style:display={!isLocal && tag === 'Publish' ? 'none' : ''}
-                    class="font-sub drop-shadow inline-flex place-items-center gap-1 px-2 py-1.5 rounded-xl {tag ===
-                    'Publish'
-                      ? 'reverse'
-                      : 'dark:bg-dark-700 dark:border-dark-800 dark:border-t-solid dark:border-l-solid border-1'}"
-                  >
+                  <li class="font-sub">
                     <iconify-icon width="22" icon={retrieve_icon(tag)} />
                     {tag}
                   </li>
@@ -36,7 +28,7 @@ let fly_out = { y: -50, duration: 200 };
             {#if post.description}<p>{post.description}</p>{/if}
 
             {#if post.datetime}
-              <time class="mt-8" datetime={post.datetime}>
+              <time datetime={post.datetime}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
                   <g
                     fill="none"
@@ -55,10 +47,7 @@ let fly_out = { y: -50, duration: 200 };
               </time>
             {/if}
             {#if !post.finished}
-              <small
-                class="mt-1 p-2 border-solid border-2 dark:border-dark-inv-200 rounded-xl dark:text-dark-inv-600"
-                >🚧 In the works 🚧</small
-              >
+              <small>🚧 In the works 🚧</small>
             {/if}
           </article>
         </a>
@@ -82,7 +71,7 @@ li {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(23rem, 100%), 1fr));
   gap: 0.75rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   margin-inline: auto;
 }
 
@@ -107,9 +96,10 @@ article {
   padding: 0.75rem;
   height: 100%;
   background: var(--srf-3);
-  border: 0px var(--srf-3-brd) solid;
-  border-width: 1px 0 0 1px;
-  border-radius: 12px;
+  border: 1px var(--srf-3) solid;
+  border-top-color: var(--srf-3-brd);
+  border-left-color: var(--srf-3-brd);
+  border-radius: 1rem;
 }
 
 p {
@@ -117,13 +107,33 @@ p {
   color: var(--text-2);
 }
 
-@media screen and (min-width: 1024px) and (prefers-reduced-motion: no-preference) {
+ul {
+  margin-top: 0.25rem;
+}
+
+time {
+  margin-top: 1.5rem;
+}
+
+small {
+  margin-top: 0.5rem;
+  padding: 0.5rem;
+
+  border: 2px var(--srf-4-brd) solid;
+  border-radius: 0.75rem;
+}
+
+@media screen and (min-width: 64rem) and (prefers-reduced-motion: no-preference) {
   article:hover {
     transform: scale(1.02);
   }
 
   .blog-list {
     gap: 1rem;
+  }
+
+  article {
+    padding: 1.25rem;
   }
 }
 </style>
