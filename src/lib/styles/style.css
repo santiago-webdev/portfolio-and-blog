@@ -86,13 +86,6 @@ hr {
   border-right: 0;
 }
 
-kbd {
-  pointer-events: none;
-  padding-inline: 0.25rem;
-  border-radius: 0.5rem;
-  color: var(--text-3);
-}
-
 thead {
   background: var(--clr-600);
 }
@@ -134,6 +127,30 @@ th {
   td {
     display: block;
   }
+}
+
+kbd {
+  font-weight: bold;
+  font-family: monospace !important;
+  pointer-events: none;
+  padding: 0.0625rem 0.125rem;
+  border-radius: 0.375rem;
+  color: var(--text-2);
+  background: var(--srf-4);
+  border-top: thin solid var(--srf-5);
+  outline: thin solid var(--srf-1);
+}
+
+kbd kbd {
+  border: none;
+  outline: none;
+}
+
+kbd.none {
+  border: none;
+  outline: none;
+  padding: 0;
+  background: inherit;
 }
 
 .reverse {
