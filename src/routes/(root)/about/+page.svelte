@@ -70,11 +70,9 @@ const tools = [
     </p>
     <div class="wrapper-frameworks">
       <h3>Frameworks and metaframeworks:</h3>
-      <ul class="inline-items">
+      <ul class="inline-items tags">
         {#each frameworks as framework}
-          <li
-            class="flex place-items-center gap-1 px-4 py-2 rounded-2xl dark:bg-dark-400 border-t border-l border-t-solid border-l-solid dark:border-dark-600"
-          >
+          <li>
             <iconify-icon width="26" height="26" icon={retrieve_icon(framework)} />{framework}
           </li>
         {/each}
@@ -83,11 +81,9 @@ const tools = [
 
     <div class="wrapper-databases mt-4">
       <h3>Databases:</h3>
-      <ul class="inline-items">
+      <ul class="inline-items tags">
         {#each databases as database}
-          <li
-            class="flex place-items-center gap-1 px-4 py-2 rounded-2xl dark:bg-dark-400 border-t border-l border-t-solid border-l-solid dark:border-dark-600"
-          >
+          <li>
             <iconify-icon width="26" height="26" icon={retrieve_icon(database)} />{database}
           </li>
         {/each}

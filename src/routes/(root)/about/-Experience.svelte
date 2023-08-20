@@ -86,7 +86,7 @@ onMount(() => {
     <div bind:this={tabbed} class="tabbed">
       <ol bind:this={tablist} role="tablist">
         <li>
-          <a aria-selected="true" role="tab" href="#section1">Currently unemployed</a>
+          <a aria-selected="true" role="tab" href="#section1">Currently available</a>
         </li>
         <li>
           <a role="tab" href="#section2">Add job <span>+</span></a>
@@ -98,11 +98,12 @@ onMount(() => {
           <p>You can add a new job by contacting me!</p>
         </section>
         <section role="tabpanel" id="section2">
-          <h3>And still learning</h3>
+          <h3 class="font-p">And still learning</h3>
           <time datetime="2022">2022 &mdash; present</time>
           <p>
             Since September 2022 I've been learning on my own. I'm currently doing web development,
-            testing new technologies, and frameworks.
+            testing new technologies, and frameworks. I've used SvelteKit and Astro, and now I'm
+            learning React.
             <br />
             You can check my progress here:
           </p>
