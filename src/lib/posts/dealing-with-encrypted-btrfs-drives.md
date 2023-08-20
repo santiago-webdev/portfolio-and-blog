@@ -2,7 +2,7 @@
 title: How I use encrypted drives
 description: Learn basic Unix tools to encrypt with luks2 a Btrfs file system
 datetime: 2023-06-23 16:10
-tags: [Publish, Linux, Tooling]
+tags: [Linux, Tooling]
 finished: true
 summary: Use cryptsetup to create a luks2 container in your drive, open with a mapper, format to Btrfs, mount to /mnt, and create the needed subvolumes
 ---

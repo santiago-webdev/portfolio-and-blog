@@ -1,7 +1,7 @@
 ---
 title: How to Above The Fold
 description: Everything related to the creation and design of the Above The Fold and how to make it effective
-tags: [Publish, Web]
+tags: [Web]
 finished: false
 datetime: 2023-07-12 23:14
 ---

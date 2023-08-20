@@ -1,7 +1,7 @@
 ---
 title: Basics of UI/UX design
 description: A short introduction to UI/UX design
-tags: [Publish, Web]
+tags: [Web]
 finished: true
 datetime: 2023-07-26 17:24
 ---

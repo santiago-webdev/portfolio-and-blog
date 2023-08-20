@@ -1,7 +1,7 @@
 ---
 title: Hello, World!
 description: Small case study about me and this website
-tags: [Publish, Case Study, Project]
+tags: [Case Study, Project]
 datetime: 2023-01-14 06:02
 ---
 

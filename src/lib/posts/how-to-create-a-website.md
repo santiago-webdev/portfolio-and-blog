@@ -1,7 +1,7 @@
 ---
 title: How to create a website
 description: Index for aiding in the creation of your next website.
-tags: [Publish, Hub, Web, Case Study]
+tags: [Hub, Web, Case Study]
 finished: false
 datetime: 2023-07-29 11:34
 ---

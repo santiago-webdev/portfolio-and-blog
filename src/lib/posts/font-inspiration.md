@@ -1,7 +1,7 @@
 ---
 title: Font inspiration
 description: Just a small compilation of fonts I like
-tags: [Publish, Web, Programming]
+tags: [Web, Programming]
 finished: true
 datetime: 2023-07-28 19:12
 ---

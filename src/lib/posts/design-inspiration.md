@@ -1,6 +1,6 @@
 ---
 title: Design inspiration
-tags: [Publish, Web]
+tags: [Web]
 finished: true
 datetime: 2023-07-29 11:42
 ---
