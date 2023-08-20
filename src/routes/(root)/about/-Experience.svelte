@@ -1,4 +1,5 @@
 <script lang="ts">
+import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
 import { onMount } from 'svelte';
 
 let tablist: HTMLUListElement;
@@ -13,20 +14,21 @@ onMount(() => {
     if (!oldTab || !newTab) return;
 
     newTab.focus();
+
     newTab.removeAttribute('tabindex'); // Make the active tab focusable by the user (Tab key)
     newTab.setAttribute('aria-selected', 'true'); // Set the selected state
+
     oldTab.removeAttribute('aria-selected');
     oldTab.setAttribute('tabindex', '-1');
     let index = tabs.indexOf(newTab); // Get the indices of the new and old tabs to find the correct tab panels to show and hide
     let oldIndex = tabs.indexOf(oldTab);
-    panels[oldIndex].hidden = true;
-    panels[index].hidden = false;
+    panels[oldIndex].hidden = false;
+    panels[index].hidden = true;
   };
 
-  // Add semantics and remove user focusability for each tab
   tabs.forEach((tab, i) => {
-    tab.setAttribute('id', 'tab' + (i + 1));
-    tab.setAttribute('tabindex', '-1');
+    tab.setAttribute('id', 'tab' + (i + 1)); // Add semantics
+    tab.setAttribute('tabindex', '-1'); // Remove focus
 
     tab.addEventListener('click', (e: MouseEvent) => {
       e.preventDefault();
@@ -78,49 +80,53 @@ onMount(() => {
 });
 </script>
 
-<div class="wrapper-experience">
-  <h2 class="font-fluid-2">What I'm up to today</h2>
-  <div bind:this={tabbed} class="tabbed">
-    <!-- TODO(santigo-zero): I have to redo styles for this -->
-    <ol bind:this={tablist} role="tablist">
-      <li>
-        <a role="tab" href="#section1">Add job <span>+</span></a>
-      </li>
-      <li>
-        <a aria-selected="true" role="tab" href="#section2">Unemployed</a>
-      </li>
-    </ol>
-    <div class="wrapper-content">
-      <section role="tabpanel" id="section1">
-        <h3>New job</h3>
-        <p>You can add a new job by contacting me!</p>
-      </section>
-      <section role="tabpanel" id="section2">
-        <div style="display: flex; gap: 0.5ch" class="position">
+<div id="experience">
+  <div class="wrapper-experience">
+    <h2 class="font-fluid-1">Experience</h2>
+    <div bind:this={tabbed} class="tabbed">
+      <ol bind:this={tablist} role="tablist">
+        <li>
+          <a aria-selected="true" role="tab" href="#section1">Currently unemployed</a>
+        </li>
+        <li>
+          <a role="tab" href="#section2">Add job <span>+</span></a>
+        </li>
+      </ol>
+      <div class="wrapper-content">
+        <section role="tabpanel" id="section1">
+          <h3>New job</h3>
+          <p>You can add a new job by contacting me!</p>
+        </section>
+        <section role="tabpanel" id="section2">
           <h3>And still learning</h3>
-        </div>
-        <div style="display: flex; gap: 0.5ch" class="timeframe font-fluid-1">
           <time datetime="2022">2022 &mdash; present</time>
-        </div>
-        <p>
-          Since 2022 I've been learning on my own. I'm currently doing web development, testing new
-          technologies.
-        </p>
-      </section>
+          <p>
+            Since September 2022 I've been learning on my own. I'm currently doing web development,
+            testing new technologies, and frameworks.
+            <br />
+            You can check my progress here:
+          </p>
+
+          <ShapeButton
+            style="margin-top: 2rem"
+            class="default"
+            href="https://github.com/santigo-zero/"
+            icon="github"
+            title="Link to my GitHub profile">GitHub</ShapeButton
+          >
+        </section>
+      </div>
     </div>
   </div>
 </div>
 
 <style>
 .wrapper-experience {
-  --bg: var(--clr-300);
-  --brd: var(--clr-400);
-
-  width: min(96%, var(--base));
+  flex: 1;
   margin-inline: auto;
-  padding: 1.6rem;
+  gap: 1.5rem;
   display: grid;
-  gap: 2rem;
+  width: min(100% - 2rem, var(--sm));
 }
 
 .tabbed {
@@ -129,24 +135,30 @@ onMount(() => {
 }
 
 ol {
-  flex: 2;
   display: grid;
   align-content: start;
   gap: 0.4rem;
 }
 
 li a {
-  --bg: var(--clr-500);
-  --brd: var(--clr-600);
+  border: thin var(--srf-5) solid;
+  border-radius: 1rem;
+  touch-action: manipulation;
 }
 
 li [aria-selected='true'] {
-  --bg: var(--clr-800);
-  --brd: var(--clr-900);
+  background: var(--srf-5);
+  border: thin var(--srf-5) solid;
+  border-top-color: var(--srf-5-brd);
+  border-left-color: var(--srf-5-brd);
 }
 
-li a:focus-within {
-  outline: 2px var(--clr-inv-300) solid;
+li a:focus-visible {
+  outline: medium var(--srf-5) solid;
+}
+
+li a:active {
+  border-color: var(--text-3);
 }
 
 li,
@@ -156,16 +168,12 @@ a {
 
 a {
   display: flex;
-  padding: 0.6rem 1.8rem;
+  padding: 0.5rem 1rem;
   justify-content: space-between;
 }
 
 .wrapper-content {
   flex: 6;
-}
-
-section {
-  max-width: var(--base);
 }
 
 section > * + * {
