@@ -79,7 +79,7 @@ const tools = [
       </ul>
     </div>
 
-    <div class="wrapper-databases mt-4">
+    <div class="wrapper-databases">
       <h3>Databases:</h3>
       <ul class="inline-items tags">
         {#each databases as database}
@@ -90,7 +90,7 @@ const tools = [
       </ul>
     </div>
 
-    <div class="wrapper-others mt-4">
+    <div class="wrapper-others">
       <h3>Other tools:</h3>
       <ul class="inline-items tags">
         {#each tools as tool}
@@ -147,42 +147,23 @@ small {
   color: var(--text-3);
 }
 
-@media screen and (min-width: 48rem) {
-  .cta-links {
-    flex-direction: row;
-    place-items: start;
-  }
-
-  small {
-    display: block;
-    padding: 0 2rem;
-    margin-top: 0.5rem;
-  }
-}
-
-@media screen and (min-width: 48rem) {
-  .cta-links {
-    flex-direction: row;
-    place-items: start;
-  }
-}
-
 .about-content {
   background: var(--srf-3);
   border: 1px var(--srf-3) solid;
   border-top-color: var(--srf-3-brd);
   border-left-color: var(--srf-3-brd);
   border-radius: 0.75rem;
-  max-width: var(--md);
   margin-inline: auto;
   padding: clamp(1rem, 2vw + 1rem, 3rem) 0;
   margin-bottom: 3rem;
+  width: min(100% - 1rem, var(--md));
 }
 
 hr {
-  width: 90%;
   margin-inline: auto;
   padding-top: 3rem;
+  border-bottom: 1px var(--srf-5-brd) solid;
+  width: min(100%, var(--base));
 }
 
 #technologies {
@@ -212,6 +193,19 @@ ul li {
 
 .wrapper-databases,
 .wrapper-others {
-  margin-top: 1.5rem;
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 48rem) {
+  .cta-links {
+    flex-direction: row;
+    place-items: start;
+  }
+
+  small {
+    display: block;
+    padding: 0 2rem;
+    margin-top: 0.5rem;
+  }
 }
 </style>
