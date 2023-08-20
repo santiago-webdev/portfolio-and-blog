@@ -98,7 +98,7 @@ onMount(() => {
           <p>You can add a new job by contacting me!</p>
         </section>
         <section role="tabpanel" id="section2">
-          <h3 class="font-p">And still learning</h3>
+          <h3>And still learning</h3>
           <time datetime="2022">2022 &mdash; present</time>
           <p>
             Since September 2022 I've been learning on my own. I'm currently doing web development,
