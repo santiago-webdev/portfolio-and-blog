@@ -137,10 +137,22 @@ import { retrieve_icon } from '$lib/utils/utils';
             </div>
           {/if}
           <div class="mt-6 flex flex-col flex-nowrap gap-4 xl:flex-row xl:flex-wrap">
-            <ShapeButton class="default" target="_blank" icon="github" href={repo.toString()}
-              >Source Code</ShapeButton
+            <ShapeButton
+              class="reverse"
+              href="{base}/blog/{case_study}"
+              title="Read the case study for this project in my blog"
             >
-            <ShapeButton class="reverse" href="{base}/blog/{case_study}">Case Study</ShapeButton>
+              Case Study</ShapeButton
+            >
+            <ShapeButton
+              class="default"
+              target="_blank"
+              icon="github"
+              href={repo.toString()}
+              title="Find the source code of this project in GitHub"
+            >
+              Source Code</ShapeButton
+            >
           </div>
         </div>
       </article>
