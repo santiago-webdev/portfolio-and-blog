@@ -30,11 +30,7 @@ import { retrieve_icon } from '$lib/utils/utils';
             <small>Sorry Folks! This requires JavaScript to work!</small>
           </noscript>
         </label>
-        <div
-          class="border-t border-l border-t-solid border-l-solid rounded-xl drop-shadow
-      dark:bg-dark-600 dark:border-dark-800 rounded-xl
-      "
-        >
+        <div class="around-select">
           <select bind:value={$currentGroupOfProjects} name="projects" id="projects">
             {#each Object.entries(jobSelector) as [value, [label]]}
               <option {value} {label} />
@@ -210,12 +206,29 @@ label {
   /* flex flex-wrap mx-6 */
 }
 
+.around-select {
+  background: var(--srf-4);
+  border: 1px var(--srf-4) solid;
+  border-top-color: var(--srf-4-brd);
+  border-left-color: var(--srf-4-brd);
+  border-radius: 1rem;
+  box-shadow: 4px 8px 8px 0 rgb(0 0 0 / 0.06);
+  overflow: hidden;
+}
+
+@media (hover: hover) {
+  .around-select:hover {
+    background: var(--srf-5);
+    border-color: var(--srf-5-brd);
+  }
+}
+
 select {
   width: 100%;
   border: 0;
-  border-radius: 1rem;
   padding: 0.5rem 1.5rem;
   background: inherit;
+  color: var(--text-2);
 }
 
 h3 {

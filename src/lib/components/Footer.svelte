@@ -154,7 +154,6 @@ footer :is(a, small) {
 
 header {
   display: grid;
-  flex-flow: row wrap;
   justify-content: space-between;
   padding: clamp(1rem, 3vw, 2rem) 0;
   gap: 2rem 1rem;
