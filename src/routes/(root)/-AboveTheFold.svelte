@@ -13,10 +13,19 @@ import config from '$lib/config.json';
       <strong>web development</strong> and show you my projects while at it.
     </p>
     <section>
-      <ShapeButton class="reverse" href="{base}/portfolio">What I've built</ShapeButton>
+      <ShapeButton
+        class="reverse"
+        href="{base}/portfolio"
+        title="Take a look of all my projects in a sorted way"
+        >What I've built
+      </ShapeButton>
       <div>
-        <ShapeButton class="default" href={config.about.resume} target="_blank" rel="external"
-          >Resume</ShapeButton
+        <ShapeButton
+          class="default"
+          href={config.about.resume}
+          target="_blank"
+          rel="external"
+          title="Read my resume online">Resume</ShapeButton
         >
         <small>Hit Ctrl+P to print</small>
       </div>
@@ -30,6 +39,8 @@ import config from '$lib/config.json';
 <style>
 .wrapper-abf {
   background: var(--srf-3);
+  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
 }
 
 main {
@@ -66,9 +77,15 @@ small {
 #learn-more-container {
   place-self: start;
   margin-top: 1rem;
+  display: none;
 }
 
-@media screen and (min-width: 64rem) {
+@media screen and (min-width: 48rem) {
+  .wrapper-abf {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
   main {
     padding: 6rem 0;
   }
