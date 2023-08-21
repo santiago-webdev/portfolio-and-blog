@@ -49,7 +49,7 @@ header {
   display: grid;
   place-items: end;
   margin-inline: auto;
-  margin-top: 0.5rem;
+  margin-top: 0.5rem; /* spacing from navbar */
 }
 
 .container-blog {
@@ -57,7 +57,7 @@ header {
   display: grid;
   place-items: center;
   margin-inline: auto;
-  margin-top: 1.5rem;
+  margin-top: 1.5rem; /* spacing h1 from Index anchor */
 }
 
 p,
@@ -67,6 +67,6 @@ h1 {
 }
 
 p {
-  margin-top: 1.5rem;
+  margin-top: 1.5rem; /* spacing p from h1 */
 }
 </style>

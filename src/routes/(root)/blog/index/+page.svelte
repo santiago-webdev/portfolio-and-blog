@@ -12,7 +12,7 @@ import ShapeAnchor from '$lib/components/navigation/ShapeAnchor.svelte';
     </div>
     <div class="container-index">
       <h1 class="font-fluid-5">Index</h1>
-      <p class='font-h3'>All of the blogs I've written</p>
+      <p class="font-h3">All of the blogs I've written</p>
     </div>
   </header>
   <ul class="generic">

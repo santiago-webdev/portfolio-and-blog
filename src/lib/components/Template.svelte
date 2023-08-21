@@ -40,7 +40,7 @@ if (title) {
 
 <section>
   <div role="banner">
-    <div class="back-button">
+    <div class="wrapper-backtoblog-anchor">
       <LinkArrow orientation="left" href="{base}/blog">Back to Blog</LinkArrow>
     </div>
     <div class="wrapper-header">
@@ -108,19 +108,25 @@ if (title) {
 </section>
 
 <style>
+section {
+  --contain: min(100% - 2rem, var(--sm));
+}
+
 [role='banner'] {
-  background-color: var(--400);
-  border-bottom-right-radius: 1.5rem;
-  border-bottom-left-radius: 1.5rem;
   display: flex;
   flex-direction: column;
   place-items: start;
+  background-color: var(--srf-3);
+  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
 }
 
-.back-button {
+.wrapper-backtoblog-anchor {
+  width: var(--contain);
+  display: grid;
+  place-items: start;
   margin-inline: auto;
-  width: min(100% - 2.2rem, var(--sm));
-  margin-top: 0.5rem;
+  margin-top: 0.5rem; /* spacing from navbar */
 }
 
 .wrapper-header,
@@ -131,12 +137,12 @@ if (title) {
 }
 
 time {
-  margin-top: 1.5rem;
+  margin-top: 3rem;
   place-content: center;
 }
 
 .wrapper-header {
-  margin-top: 1.5rem;
+  margin-top: 1.5rem; /* spacing h1 from Index anchor */
   text-align: center;
   padding-bottom: clamp(1rem, 2vw + 1rem, 6rem);
 }
@@ -148,7 +154,7 @@ header {
 
 header p {
   max-width: 44ch;
-  margin-top: 1rem;
+  margin-top: 1.5rem; /* spacing p from h1 */
   margin-inline: auto;
 }
 
@@ -166,10 +172,11 @@ ul {
 
 details {
   display: flex;
-  border-radius: 0.75rem;
   background: var(--srf-4);
-  border: 0px var(--srf-4-brd) solid;
-  border-width: 1px 0 0 1px;
+  border: thin var(--srf-4) solid;
+  border-top-color: var(--srf-4-brd);
+  border-left-color: var(--srf-4-brd);
+  border-radius: 0.75rem;
   margin-top: 1rem;
   margin-inline: auto;
   padding: 0.5rem 1rem;
@@ -186,8 +193,8 @@ summary {
 }
 
 main {
-  margin: clamp(1rem, 2vw + 1rem, 3rem) auto 1rem auto;
-  width: min(100% - 2rem, var(--sm));
+  margin: clamp(1rem, 2vw + 1rem, 3rem) auto 3rem auto;
+  width: var(--contain);
 }
 
 :global(.blog-post p img),
