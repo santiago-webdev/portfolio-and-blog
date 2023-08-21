@@ -16,7 +16,7 @@ boldWords.forEach((word: string) => {
 
 <main>
   <header>
-    <div class="wrapper-index-buttom">
+    <div class="wrapper-index-anchor">
       <LinkArrow orientation="right" href="{base}/blog/index">Index</LinkArrow>
     </div>
     <div class="container-blog">
@@ -31,6 +31,7 @@ boldWords.forEach((word: string) => {
 
 <style>
 main {
+  --contain: min(100% - 2rem, var(--sm));
   display: grid;
   padding-bottom: clamp(1rem, 2vw + 1rem, 6rem);
   margin-bottom: clamp(1rem, 2vw + 1rem, 3rem);
@@ -39,21 +40,24 @@ main {
   background: var(--srf-3);
 }
 
-.wrapper-index-buttom {
+header {
+  margin-bottom: 2rem;
+}
+
+.wrapper-index-anchor {
+  width: var(--contain);
   display: grid;
-  padding: 0 1rem;
-  margin-top: 0.5rem;
-  margin-inline: auto;
-  width: min(100% - 2rem, var(--sm));
   place-items: end;
+  margin-inline: auto;
+  margin-top: 0.5rem;
 }
 
 .container-blog {
+  width: var(--contain);
   display: grid;
-  width: min(100% - 2rem, var(--sm));
+  place-items: center;
   margin-inline: auto;
   margin-top: 1.5rem;
-  place-items: center;
 }
 
 p,
@@ -63,6 +67,6 @@ h1 {
 }
 
 p {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 </style>

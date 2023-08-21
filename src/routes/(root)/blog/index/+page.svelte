@@ -6,18 +6,16 @@ import ShapeAnchor from '$lib/components/navigation/ShapeAnchor.svelte';
 </script>
 
 <main>
-  <header
-    class="dark:bg-dark-400 rounded-b-3xl pb-[clamp(1rem,2vw+1rem,6rem)] mb-[clamp(1rem,2vw+1rem,3rem)]"
-  >
-    <div class="px-3 mx-auto pt-2 mb-4 max-w-screen-md">
+  <header>
+    <div class="wrapper-backtoblog-anchor">
       <LinkArrow orientation="left" href="{base}/blog">Back to Blog</LinkArrow>
     </div>
-    <div class="mx-auto px-3 text-center max-w-screen-lg">
+    <div class="container-index">
       <h1 class="font-fluid-5">Index</h1>
-      <p class="mt-4">This is the full list of all the blog posts I've written.</p>
+      <p class='font-h3'>All of the blogs I've written</p>
     </div>
   </header>
-  <ul class="generic mx-auto max-w-screen-md">
+  <ul class="generic">
     {#each $Posts as post}
       <li class="generic">
         <ShapeAnchor href={post.href}>{post.title}</ShapeAnchor>
@@ -25,3 +23,49 @@ import ShapeAnchor from '$lib/components/navigation/ShapeAnchor.svelte';
     {/each}
   </ul>
 </main>
+
+<style>
+main {
+  --contain: min(100% - 2rem, var(--sm));
+}
+
+header {
+  display: grid;
+  padding-bottom: clamp(1rem, 2vw + 1rem, 6rem);
+  margin-bottom: clamp(1rem, 2vw + 1rem, 3rem);
+  border-bottom-right-radius: 1.5rem;
+  border-bottom-left-radius: 1.5rem;
+  background: var(--srf-3);
+}
+
+.wrapper-backtoblog-anchor {
+  width: var(--contain);
+  display: grid;
+  place-items: start;
+  margin-inline: auto;
+  margin-top: 0.5rem;
+}
+
+.container-index {
+  width: var(--contain);
+  display: grid;
+  place-items: center;
+  margin-inline: auto;
+  margin-top: 1.5rem;
+}
+
+p,
+h1 {
+  text-align: center;
+  width: min(100%, 33ch);
+}
+
+p {
+  margin-top: 1.5rem;
+}
+
+ul {
+  margin-inline: auto;
+  width: var(--contain);
+}
+</style>
