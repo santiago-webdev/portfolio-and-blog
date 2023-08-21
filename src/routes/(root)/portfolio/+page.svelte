@@ -305,7 +305,7 @@ article {
 }
 
 a#new-project {
-  flex: 5;
+  flex: 6;
   aspect-ratio: 16/10;
   cursor: pointer;
   display: flex;
@@ -384,6 +384,7 @@ main > section {
     place-items: center;
   }
 
+  a#new-project,
   .wrapper-image {
     aspect-ratio: 4/3;
   }
