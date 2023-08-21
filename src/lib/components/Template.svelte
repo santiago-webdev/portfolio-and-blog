@@ -24,7 +24,6 @@ const dateReadable = !datetime ? datetime : readableDate(datetime);
 let isHollow = false;
 let hollowPrefix = '';
 let fillSuffix = '';
-const isLocal = import.meta.env.DEV;
 
 const keywords = ['How', 'How to', 'How to:', 'How To'];
 
@@ -45,7 +44,7 @@ if (title) {
       <LinkArrow orientation="left" href="{base}/blog">Back to Blog</LinkArrow>
     </div>
     <div class="wrapper-header">
-      <header class="flex flex-col">
+      <header>
         {#if isHollow}
           <h1 class="font-fluid-5">
             <Hollow color={'var(--text-2)'}>{hollowPrefix}</Hollow>
@@ -55,25 +54,21 @@ if (title) {
           <h1 class="font-fluid-5">{title}</h1>
         {/if}
         {#if description}
-          <p class="font-h3 dark:text-dark-inv-700">{description}</p>
+          <p class="font-h3">{description}</p>
         {/if}
       </header>
       {#if tags}
-        <ul class="inline-items">
+        <ul class="inline-items tags">
           {#each tags as tag}
-            <li
-              style:display={!isLocal && tag === 'Publish' ? 'none' : ''}
-              class="font-sub tags mt-2"
-            >
-              <iconify-icon width="22" height="22" icon={retrieve_icon(tag)} />
-              {tag}
+            <li class="font-sub">
+              <iconify-icon width="22" height="22" icon={retrieve_icon(tag)} />{tag}
             </li>
           {/each}
         </ul>
       {/if}
 
       {#if datetime}
-        <time class="flex place-items-center justify-center mt-8 flex-wrap" {datetime}>
+        <time {datetime}>
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <g
               fill="none"
@@ -107,7 +102,7 @@ if (title) {
     </div>
   </div>
 
-  <main class="blog-post px-3 mx-auto max-w-screen-md mt-[clamp(1rem,2vw+1rem,3rem)]">
+  <main class="blog-post">
     <slot />
   </main>
 </section>
@@ -135,15 +130,20 @@ if (title) {
   margin-inline: auto;
 }
 
-:global(.blog-post p img),
-:global(.blog-post > * + *) {
-  margin-block-start: 1em;
+time {
+  margin-top: 1.5rem;
+  place-content: center;
 }
 
 .wrapper-header {
   margin-top: 1.5rem;
   text-align: center;
   padding-bottom: clamp(1rem, 2vw + 1rem, 6rem);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
 }
 
 header p {
@@ -183,5 +183,15 @@ summary {
   padding: 0 0.5rem;
   text-align: center;
   color: var(--clr-red-40);
+}
+
+main {
+  margin: clamp(1rem, 2vw + 1rem, 3rem) auto 1rem auto;
+  width: min(100% - 2rem, var(--sm));
+}
+
+:global(.blog-post p img),
+:global(.blog-post > * + *) {
+  margin-block-start: 1em;
 }
 </style>
