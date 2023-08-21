@@ -15,7 +15,13 @@ function getPic(id: number) {
     <div class="header-blog">
       <h2 class="font-fluid-2">Blog articles</h2>
       <div>
-        <p class="font-body">Press <kbd aria-keyshortcuts="Control+K">CTRL K</kbd> or</p>
+        <p class="font-body">
+          Press
+          <kbd class="font-sub" aria-keyshortcuts="Control+K">
+            <kbd>Ctrl</kbd>+<kbd>K</kbd>
+          </kbd>
+          or
+        </p>
         <LinkArrow orientation="right" href="{base}/blog">Check all articles</LinkArrow>
       </div>
     </div>
@@ -65,13 +71,6 @@ function getPic(id: number) {
   gap: 1rem 6rem;
 }
 
-kbd {
-  background: var(--srf-4);
-  font-size: inherit;
-  line-height: inherit;
-  font-weight: 600;
-}
-
 section {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
@@ -99,12 +98,6 @@ img {
   height: auto;
   object-fit: scale-down;
   object-position: center;
-}
-
-time {
-  display: flex;
-  flex-wrap: wrap;
-  place-items: center;
 }
 
 @media screen and (min-width: 1280px) {
