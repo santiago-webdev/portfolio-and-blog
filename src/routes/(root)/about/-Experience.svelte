@@ -190,5 +190,9 @@ section > * + * {
   a {
     display: block;
   }
+
+  li a {
+    border-radius: 0.75rem;
+  }
 }
 </style>
