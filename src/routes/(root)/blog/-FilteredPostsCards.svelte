@@ -71,7 +71,7 @@ li {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(23rem, 100%), 1fr));
   gap: 0.75rem;
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
   margin-inline: auto;
 }
 
