@@ -33,7 +33,7 @@ a {
   line-height: inherit;
 
   color: var(--clr-blue-40);
-  text-decoration: underline var(--clr-700) 1px;
+  text-decoration: underline transparent 2px;
   text-underline-offset: 3px;
 
   gap: 0.2ch;

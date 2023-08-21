@@ -27,10 +27,6 @@ For landing page examples:
 - [BentoGrids](https://bentogrids.com/).
 - [One Page Love bento section](https://onepagelove.com/tag/bento)
 
----
-
-[[how-to-create-a-website#Where to get inspiration]](./how-to-create-a-website#where-to-get-inspiration)
-
 ## Accessibility and UX
 
 Sometimes you don't know if your design is using proper UX or if it has good accessibility

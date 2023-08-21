@@ -78,7 +78,7 @@ ul {
 
 .contact {
   background: var(--srf-3);
-  border: 1px var(--srf-3) solid;
+  border: thin var(--srf-3) solid;
   border-top-color: var(--srf-3-brd);
   border-left-color: var(--srf-3-brd);
   border-radius: 1rem;
@@ -97,7 +97,7 @@ form {
 textarea,
 input {
   background: var(--srf-4);
-  border: 1px var(--srf-4) solid;
+  border: thin var(--srf-4) solid;
   border-top-color: var(--srf-4-brd);
   border-left-color: var(--srf-4-brd);
   padding: 0.75rem 1rem;
@@ -117,7 +117,7 @@ label {
 @media screen and (min-width: 48rem) {
   .container-cta {
     background: var(--srf-2);
-    border: 1px var(--srf-2) solid;
+    border: thin var(--srf-2) solid;
     border-top-color: var(--srf-2-brd);
     border-left-color: var(--srf-2-brd);
     padding: 3rem;

@@ -50,16 +50,19 @@ span {
 
 .default {
   background: var(--srf-4);
-  border: 1px var(--srf-4) solid;
+  border: thin var(--srf-4) solid;
   border-top-color: var(--srf-4-brd);
   border-left-color: var(--srf-4-brd);
 }
 
-@media screen and (hover: hover) {
+@media (hover: hover) {
   .default:hover {
-    background: var(--clr-orange-old);
-    border-color: var(--clr-orange-old);
-    color: var(--srf-1);
+    background: var(--srf-5);
+    border-color: var(--srf-5-brd);
+  }
+
+  .default:active {
+    background: var(--srf-2);
   }
 }
 </style>

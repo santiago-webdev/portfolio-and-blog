@@ -136,7 +136,7 @@ header {
   z-index: 999;
   padding: 0.2rem 0;
   background: var(--srf-3);
-  border-bottom: 1px solid transparent;
+  border-bottom: thin solid transparent;
 }
 
 a {
@@ -165,9 +165,8 @@ a {
 }
 
 a.bordered {
-  border: 1px var(--clr-inv-200) solid;
-  border-width: 1px;
-  border-radius: 16px;
+  border: thin var(--srf-5) solid;
+  border-radius: 1rem;
 }
 
 @media (hover: hover) {
@@ -176,7 +175,7 @@ a.bordered {
   }
 
   a.bordered:hover {
-    border-color: var(--text-2);
+    border-color: var(--text-3);
   }
 }
 
@@ -185,7 +184,7 @@ button {
   border-radius: 16px;
   min-width: 3.5ch;
   background: var(--srf-4);
-  border: 1px var(--srf-4) solid;
+  border: thin var(--srf-4) solid;
   border-top-color: var(--srf-4-brd);
   border-left-color: var(--srf-4-brd);
   box-shadow: 4px 4px 16px 0 rgb(0 0 0 / 0.1);

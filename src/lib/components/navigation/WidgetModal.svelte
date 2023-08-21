@@ -45,7 +45,7 @@ const clickOutside = (modal: HTMLDialogElement) =>
   on:click={toggleModal}
 >
   <span aria-hidden="true" style="visibility: hidden;">.</span>
-  <kbd class="font-small">CTRL K</kbd>
+  <kbd class="font-small none">CTRL K</kbd>
   <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
     <g
       fill="none"
@@ -102,7 +102,7 @@ const clickOutside = (modal: HTMLDialogElement) =>
         on:click={toggleModal}
         type="button"
       >
-        <kbd class="font-sub">ESC</kbd></button
+        <kbd class="font-sub none">ESC</kbd></button
       >
     </div>
   </form>
@@ -154,7 +154,7 @@ button kbd {
   button:not(dialog button) {
     padding: 0.375rem 1.125rem;
     background: var(--srf-4);
-    border: 1px var(--srf-4) solid;
+    border: thin var(--srf-4) solid;
     border-top-color: var(--srf-4-brd);
     border-left-color: var(--srf-4-brd);
     border-radius: 16px;
@@ -165,6 +165,12 @@ button kbd {
     display: flex;
     place-content: center;
     place-items: center;
+    /* Use this margin for spacing */
+    margin-right: 0.5rem;
+  }
+
+  button:hover > kbd {
+    color: var(--text-2);
   }
 }
 
@@ -172,6 +178,10 @@ button kbd {
   button:not(dialog button):hover {
     background: var(--srf-5);
     border-color: var(--srf-5-brd);
+  }
+
+  button:not(dialog button):active {
+    background: var(--srf-2);
   }
 }
 
@@ -190,7 +200,7 @@ button kbd {
   font-variation-settings: 'wght' 500;
 
   background: var(--srf-3);
-  border: 1px var(--srf-3) solid;
+  border: thin var(--srf-3) solid;
   border-top-color: var(--srf-3-brd);
   border-left-color: var(--srf-3-brd);
   border-top-left-radius: 1rem;
@@ -285,10 +295,5 @@ article {
 
 hr {
   margin: 0.6rem 0;
-}
-
-time {
-  display: flex;
-  place-items: center;
 }
 </style>

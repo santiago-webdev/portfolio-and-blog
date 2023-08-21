@@ -1,1 +1,7 @@
-<hr class="border-3 rounded-full dark:border-dark-inv-100" />
+<hr />
+
+<style>
+hr {
+  border-bottom: thin var(--srf-5-brd) solid;
+}
+</style>

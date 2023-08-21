@@ -149,7 +149,7 @@ small {
 
 .about-content {
   background: var(--srf-3);
-  border: 1px var(--srf-3) solid;
+  border: thin var(--srf-3) solid;
   border-top-color: var(--srf-3-brd);
   border-left-color: var(--srf-3-brd);
   border-radius: 0.75rem;
@@ -162,7 +162,7 @@ small {
 hr {
   margin-inline: auto;
   padding-top: 3rem;
-  border-bottom: 1px var(--srf-5-brd) solid;
+  border-bottom: thin var(--srf-5-brd) solid;
   width: min(100%, var(--base));
 }
 

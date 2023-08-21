@@ -38,28 +38,21 @@ label.font-p {
   font-weight: 500;
 }
 
-/* I have to use important here because normally you put kbd inside buttons so
- * they inherit their styles.
- * */
-kbd {
-  font-weight: 600;
-  font-family: monospace !important;
-}
-
 pre {
-  background: var(--300);
-  border: var(--400) solid;
-  border-width: 1px 0 0 2px;
-
   font-family: monospace;
   font-size: var(--fs-sub);
   line-height: calc(var(--fs-sub) * 1.5);
-  border-radius: 0.6rem;
   padding: 1rem;
   overflow-x: auto;
   white-space: pre-wrap;
   word-wrap: break-all;
   word-break: break-word;
+
+  background: var(--srf-3);
+  border: thin var(--srf-3) solid;
+  border-top-color: var(--srf-3-brd);
+  border-left-color: var(--srf-3-brd);
+  border-radius: 0.75rem;
 }
 
 /* Default generic values */

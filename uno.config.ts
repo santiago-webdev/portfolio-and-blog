@@ -103,9 +103,9 @@ export default defineConfig({
     }
   },
   shortcuts: {
-    tags: `drop-shadow inline-flex place-items-center gap-1 px-3 py-1.5 rounded-xl
- dark:bg-dark-600 dark:border-dark-700 dark:border-t-solid dark:border-l-solid border-1
-`,
-    'inline-items': `inline-flex place-items-center flex-wrap gap-1`
+    //     tags: `drop-shadow inline-flex place-items-center gap-1 px-3 py-1.5 rounded-xl
+    //  dark:bg-dark-600 dark:border-dark-700 dark:border-t-solid dark:border-l-solid border-1
+    // `,
+    // 'inline-items': `inline-flex place-items-center flex-wrap gap-1`
   }
 });

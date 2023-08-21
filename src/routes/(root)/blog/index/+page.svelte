@@ -67,5 +67,6 @@ p {
 ul {
   margin-inline: auto;
   width: var(--contain);
+  margin-bottom: 3rem; /* spacing from the footer */
 }
 </style>

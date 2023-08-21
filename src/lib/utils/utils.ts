@@ -125,9 +125,6 @@ export function retrieve_icon(symbol: string): string | undefined {
       return 'lucide:train';
     case 'vault':
       return 'fluent:vault-24-regular';
-    case 'think':
-    case 'publish':
-      return 'lucide:newspaper';
     case 'web':
       return 'lucide:globe-2';
     case 'books':

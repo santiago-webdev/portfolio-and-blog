@@ -6,8 +6,8 @@
 
 <style>
 .wrapper-table {
-  border-radius: 12px;
-  border: 1px var(--clr-700) solid;
+  border-radius: 0.75rem;
+  border: thin var(--clr-700) solid;
   overflow: hidden;
 }
 

@@ -41,7 +41,7 @@ export const AllProjects = readable<Array<Project>>([
     short_description: 'This same site, here you can find more about me',
     category: ['featured', 'frontend', 'opensource'],
     stack: {
-      frontend: ['SvelteKit', 'TypeScript', 'UnoCSS']
+      frontend: ['SvelteKit', 'TypeScript', 'CSS']
     },
     img: '/portfolio/portfolio-and-blog-website.webp',
     repo: new URL('https://github.com/santigo-zero/portfolio-and-blog'),

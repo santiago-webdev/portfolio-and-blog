@@ -44,10 +44,12 @@ $: if ($FilteredPosts.length === 1) preloadData(`${base}/blog${$FilteredPosts[0]
     {placeholder}
     aria-keyshortcuts="Control+K"
     bind:value
+    title="Search for a blog post, works with the URL name too"
     on:input={() => searchHandler(value)}
     on:focus|once={() => (placeholder = placeholderDefault)}
     type="search"
     autocomplete="off"
+    class="font-h3"
   />
 </form>
 
@@ -59,14 +61,13 @@ form {
   width: min(100% - 2rem, 640px);
   transition: background-color 50ms, border 80ms, box-shadow 300ms;
   box-shadow: 4px 8px 8px 0 rgb(0 0 0 / 0.06);
-  padding: 0.5rem 1.5rem;
-  margin-top: 2rem;
   margin-inline: auto;
   background: var(--srf-4);
-  border: 1px var(--srf-4) solid;
+  border: thin var(--srf-4) solid;
   border-top-color: var(--srf-4-brd);
   border-left-color: var(--srf-4-brd);
   border-radius: 1rem;
+  overflow: hidden;
 }
 
 input:-moz-placeholder,
@@ -92,7 +93,9 @@ input {
   border: none;
   outline: none;
   width: 100%;
-  padding: 0.2rem 0;
+  padding: 0.5rem 0;
+  padding-left: 0.5rem;
+  padding-right: 1.5rem;
 }
 
 input::placeholder,
@@ -113,6 +116,8 @@ form:focus-within button {
 button {
   display: grid;
   place-items: center;
-  padding-right: 0.8rem;
+  padding: 0 1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 0.5rem;
 }
 </style>

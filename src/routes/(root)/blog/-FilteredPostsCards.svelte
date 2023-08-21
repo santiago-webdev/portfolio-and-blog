@@ -96,7 +96,7 @@ article {
   padding: 0.75rem;
   height: 100%;
   background: var(--srf-3);
-  border: 1px var(--srf-3) solid;
+  border: thin var(--srf-3) solid;
   border-top-color: var(--srf-3-brd);
   border-left-color: var(--srf-3-brd);
   border-radius: 1rem;
