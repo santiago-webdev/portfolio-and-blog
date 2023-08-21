@@ -1,29 +1,27 @@
 <script>
 import { base } from '$app/paths';
 import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
+
+const stack = ['JS/TS (ES6+)', 'SvelteKit', 'SQL', 'Python', 'React', 'Node.js'];
 </script>
 
 <div class="container-cta">
   <div class="about">
     <h2 class="font-fluid-1">About</h2>
-    <p>Hello, my name is Santiago.</p>
     <p>
-      I'm a web developer based in Argentina interested in
+      Hello, my name is Santiago, a web developer based in Argentina interested in
       <em>FOSS</em>,
       <em>UI/UX</em> and
-      <em>Linux</em>. I enjoy crafting effective and user-friendly interfaces, focusing in
+      <em>Linux</em>.
+    </p>
+    <p>
+      I enjoy crafting effective and user-friendly interfaces, focusing in
       <em>maintainability</em>,
       <em>accessibility</em> and
       <em>progressive enhancement</em>.
     </p>
-    <p>I'm comfortable with the next technologies, but you can find the complete list below:</p>
     <ul>
-      <li>JS/TS (ES6+)</li>
-      <li>SvelteKit</li>
-      <li>SQL</li>
-      <li>Python</li>
-      <li>React(learning)</li>
-      <li>Node.js(learning)</li>
+      {#each stack as individual}<li>{individual}</li>{/each}
     </ul>
     <ShapeButton class="reverse" href="{base}/about">More about me</ShapeButton>
   </div>
@@ -49,7 +47,7 @@ import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
   display: flex;
   gap: 3rem;
   flex-wrap: wrap;
-  width: min(100% - 1rem, var(--lg));
+  width: min(100% - 2rem, var(--lg));
   margin: 4rem 0;
   border-radius: 0.75rem;
   margin-inline: auto;
@@ -58,13 +56,13 @@ import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
 .about,
 .contact {
   flex: 1;
-  padding: 2rem;
+  padding: 1rem;
 }
 
 .about {
   display: grid;
   place-items: start;
-  grid-template-rows: auto auto auto auto 1fr;
+  grid-template-rows: auto auto auto 1fr;
 }
 
 .about * + * {
@@ -122,6 +120,11 @@ label {
     border: 1px var(--srf-2) solid;
     border-top-color: var(--srf-2-brd);
     border-left-color: var(--srf-2-brd);
+    padding: 3rem;
+  }
+
+  .about,
+  .contact {
     padding: 2rem;
   }
 }
