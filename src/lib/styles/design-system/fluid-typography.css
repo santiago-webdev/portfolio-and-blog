@@ -5,30 +5,27 @@
   --fluid-2: clamp(1.618rem, 7vw + 1rem, 4.854rem); /* 77.664px */
   --fluid-3: clamp(2.157333rem, 8vw + 1rem, 6.472rem); /* 103.552px */
   --fluid-4: clamp(2.696667rem, 9vw + 1rem, 8.09rem); /* 129.44px */
-  --fluid-5: clamp(3.236rem, 9vw + 1rem, 9.708rem); /* 129.44px */
+  --fluid-5: clamp(3.53rem, 9vw + 1rem, 9.708rem); /* 129.44px */
 }
 
 /* Fluid typography */
 :is(.font-fluid-1, .font-fluid-2, .font-fluid-3, .font-fluid-4, .font-fluid-5) {
   font-family: var(--ff-ui);
-  color: var(--text-3);
-  font-variation-settings: 'wght' 800;
-  color: var(--clr-inv-950);
+  color: var(--text-1);
   text-wrap: balance;
+  font-variation-settings: 'wght' 700;
 }
 
 .font-fluid-1 {
   font-size: var(--fluid-1);
   line-height: calc(var(--fluid-1) * 1.2);
   letter-spacing: -0.025em;
-  font-variation-settings: 'wght' 700;
 }
 
 .font-fluid-2 {
   font-size: var(--fluid-2);
   line-height: calc(var(--fluid-2) * 1.125);
   letter-spacing: -0.03em;
-  font-variation-settings: 'wght' 700;
 }
 
 .font-fluid-3 {
@@ -46,6 +43,7 @@
 .font-fluid-5 {
   font-size: var(--fluid-5);
   line-height: calc(var(--fluid-5) * 1.1);
-  letter-spacing: -0.06em;
+  letter-spacing: -0.035em;
+  font-variation-settings: 'wght' 750;
 }
 /* EOL Fluid typography */

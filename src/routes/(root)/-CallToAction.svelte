@@ -115,14 +115,6 @@ label {
 }
 
 @media screen and (min-width: 48rem) {
-  .container-cta {
-    background: var(--srf-2);
-    border: thin var(--srf-2) solid;
-    border-top-color: var(--srf-2-brd);
-    border-left-color: var(--srf-2-brd);
-    padding: 3rem;
-  }
-
   .about,
   .contact {
     padding: 2rem;

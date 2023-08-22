@@ -183,7 +183,6 @@ header > * {
 }
 
 .whosthis p {
-  color: var(--text-3);
   width: min(100%, 30ch);
   max-width: var(--xs);
 }

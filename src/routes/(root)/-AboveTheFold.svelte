@@ -59,7 +59,6 @@ h1 {
 p {
   margin-top: 1rem;
   width: min(100%, 38ch);
-  color: var(--text-2);
 }
 
 section {
@@ -71,7 +70,6 @@ section {
 
 small {
   display: none;
-  color: var(--text-3);
 }
 
 #learn-more-container {

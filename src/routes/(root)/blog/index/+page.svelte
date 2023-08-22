@@ -12,16 +12,16 @@ import ShapeAnchor from '$lib/components/navigation/ShapeAnchor.svelte';
     </div>
     <div class="container-index">
       <h1 class="font-fluid-5">Index</h1>
-      <p class="font-h3">All of the blogs I've written</p>
+      <p class="font-h3">All of the blogs I've written, sorted from latest to the first.</p>
     </div>
   </header>
-  <ul class="generic">
+  <ol class="generic">
     {#each $Posts as post}
       <li class="generic">
         <ShapeAnchor href={post.href}>{post.title}</ShapeAnchor>
       </li>
     {/each}
-  </ul>
+  </ol>
 </main>
 
 <style>
@@ -64,7 +64,7 @@ p {
   margin-top: 1.5rem;
 }
 
-ul {
+ol {
   margin-inline: auto;
   width: var(--contain);
   margin-bottom: 3rem; /* spacing from the footer */

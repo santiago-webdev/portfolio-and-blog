@@ -144,14 +144,9 @@ a {
 }
 
 header.expanded {
-  border-bottom: 2px solid var(--clr-inv-400);
+  border-bottom: 2px solid var(--text-4);
   background: var(--srf-4);
 }
-
-/* header.scrollY { */
-/*   background: var(--clr-500-trp); */
-/*   border-bottom-color: var(--clr-inv-200); */
-/* } */
 
 a,
 button {

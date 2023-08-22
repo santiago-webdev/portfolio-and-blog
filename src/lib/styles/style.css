@@ -9,7 +9,7 @@ html {
   scroll-behavior: smooth;
   color-scheme: light dark;
   font-family: var(--ff-text);
-  background-color: var(--srf-1);
+  background-color: var(--srf-2);
   color: var(--text-1);
 }
 
@@ -17,8 +17,8 @@ address {
   font-style: normal;
 }
 
-button[disabled] {
-  color: var(--text-4);
+button:disabled {
+  color: var(--text-4) !important;
 }
 
 p code,
@@ -67,7 +67,7 @@ li code {
 }
 
 [aria-orientation='vertical'][role='separator']:empty {
-  border-left: thin solid var(--clr-inv-100);
+  border-left: thin solid var(--srf-4);
   height: 2rem;
 }
 
@@ -80,7 +80,7 @@ time {
 hr {
   width: 100%;
   margin: 0;
-  border: thin solid var(--clr-inv-200);
+  border: thin solid var(--srf-5-brd);
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -171,8 +171,8 @@ kbd.none {
 ol.generic {
   display: grid;
   gap: 0.25rem;
-  background-color: var(--clr-500);
-  border: thin var(--clr-inv-200) solid;
+  background-color: var(--srf-3);
+  border: thin var(--srf-5) solid;
   border-radius: 1rem;
   padding: 1rem;
   counter-reset: ol-counter;
@@ -183,7 +183,7 @@ ol.generic {
 ol.generic li.generic::before {
   content: counter(ol-counter) '.';
   counter-increment: ol-counter;
-  padding-right: 10px;
+  padding-right: 1rem;
 }
 /* Ordered lists */
 
@@ -204,7 +204,7 @@ ul > li.generic li.generic {
 }
 
 :is(ol) li.generic:nth-child(odd) {
-  background-color: var(--clr-400);
+  background-color: color-mix(in oklch, var(--srf-2), var(--srf-3));
 }
 /* List items */
 

@@ -104,7 +104,6 @@ article {
 
 p {
   margin-top: 1.5rem;
-  color: var(--text-2);
 }
 
 ul {

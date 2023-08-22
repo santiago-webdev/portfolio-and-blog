@@ -102,7 +102,7 @@ const clickOutside = (modal: HTMLDialogElement) =>
         on:click={toggleModal}
         type="button"
       >
-        <kbd class="font-sub none">ESC</kbd></button
+        <kbd class="font-sub">ESC</kbd></button
       >
     </div>
   </form>
@@ -262,7 +262,7 @@ input {
 
 input::placeholder,
 form button {
-  color: var(--text-4);
+  color: var(--text-3);
 }
 
 input:focus::placeholder {

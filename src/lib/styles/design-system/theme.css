@@ -10,7 +10,7 @@
   --srf-5-brd: var(--900);
 
   --text-1: white; /* or #FAFAFA, contrast with --srf-1, for titles */
-  --text-2: var(--clr-inv-800); /* for body text */
-  --text-3: var(--clr-inv-600); /* secondary text, labels */
-  --text-4: var(--clr-inv-500); /* :disabled */
+  --text-2: var(--inv-800); /* for body text */
+  --text-3: var(--inv-600); /* secondary text, labels */
+  --text-4: color-mix(in oklab, var(--inv-600) 75%, black); /* :disabled */
 }

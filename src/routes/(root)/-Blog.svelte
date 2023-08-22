@@ -13,7 +13,7 @@ function getPic(id: number) {
 <div id="mention-blog">
   <div class="container-blog">
     <div class="header-blog">
-      <h2 class="font-fluid-2">Blog articles</h2>
+      <h2 class="font-fluid-1">Blog articles</h2>
       <div>
         <p class="font-body">
           Press
@@ -40,7 +40,7 @@ function getPic(id: number) {
                 {readableDate(datetime)}
               </time>
             {/if}
-            <h3 class="font-fluid-1">{title}</h3>
+            <h3 class="font-h1">{title}</h3>
           </article>
         </a>
       {/each}
@@ -54,7 +54,7 @@ function getPic(id: number) {
   place-content: center;
   place-items: center;
   padding: clamp(3rem, 10vw + 1rem, 6rem) 0;
-  background: var(--srf-2);
+  background: var(--srf-3);
 }
 
 .container-blog {

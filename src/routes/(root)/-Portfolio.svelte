@@ -1,18 +1,18 @@
 <script>
-import { base } from '$app/paths';
-import ShapeAnchor from '$lib/components/navigation/ShapeAnchor.svelte';
 import { FilteredProjects } from '$lib/components/projects/store';
 </script>
 
 <div class="wrapper-portfolio">
   <div id="portfolio">
-    <ol>
+    <ol style:color="var(--text-3)">
       <li>
         <header>
-          <h2 class="font-fluid-2">Projects</h2>
-          <p class="font-h3">
-            I've contributed to FOSS as well as created some projects of my own. You can find all of
-            my projects <ShapeAnchor href="{base}/portfolio">tracked here</ShapeAnchor>.
+          <h2 class="font-fluid-1">Projects</h2>
+          <p style:color="var(--text-3)" class="font-h3">
+            I've made some contributions to <abbr
+              title="Free and Open Source
+              Software">FOSS</abbr
+            >. Here's an overview.
           </p>
         </header>
       </li>
@@ -94,12 +94,6 @@ li:nth-child(3) {
   grid-area: three;
   background: var(--srf-3);
   border: 0px var(--srf-3-brd) solid;
-}
-
-li:nth-child(4) {
-  grid-area: four;
-  background: var(--srf-2);
-  border: 0px var(--srf-2-brd) solid;
 }
 
 li:last-child {

@@ -132,7 +132,7 @@ section {
 .wrapper-header,
 .wip {
   display: grid;
-  width: min(100% - 2.2rem, var(--2xl));
+  width: min(100% - 2rem, var(--2xl));
   margin-inline: auto;
 }
 
