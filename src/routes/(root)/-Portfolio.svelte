@@ -68,7 +68,7 @@ ol {
   display: grid;
   padding: 2rem 0;
   margin-inline: auto;
-  width: min(100% - 2rem, var(--lg));
+  width: min(100% - 1rem, var(--lg));
   gap: 1.5rem;
   grid-auto-columns: 1fr;
   grid-template-areas:

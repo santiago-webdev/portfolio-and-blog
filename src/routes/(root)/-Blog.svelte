@@ -40,7 +40,7 @@ function getPic(id: number) {
                 {readableDate(datetime)}
               </time>
             {/if}
-            <h3 class="font-h1">{title}</h3>
+            <h3 class="font-h2">{title}</h3>
           </article>
         </a>
       {/each}
@@ -60,7 +60,7 @@ function getPic(id: number) {
 .container-blog {
   display: grid;
   gap: 3rem;
-  width: min(100% - 2rem, var(--lg));
+  width: min(100% - 4rem, var(--lg));
 }
 
 .header-blog {
