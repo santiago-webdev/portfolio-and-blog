@@ -13,7 +13,7 @@ let fly_out = { y: -50, duration: 200 };
       <li in:fly={fly_in} out:fly={fly_out}>
         <a href={post.href}>
           <article>
-            <h2>{post.title}</h2>
+            <h2 class="font-h3">{post.title}</h2>
             {#if post.tags}
               <ul class="inline-items tags">
                 {#each post.tags as tag}
@@ -47,7 +47,7 @@ let fly_out = { y: -50, duration: 200 };
               </time>
             {/if}
             {#if !post.finished}
-              <small>🚧 In the works 🚧</small>
+              <small>🚧&nbsp;&nbsp;&nbsp;In the works&nbsp;&nbsp;&nbsp;🚧</small>
             {/if}
           </article>
         </a>
@@ -118,8 +118,8 @@ small {
   margin-top: 0.5rem;
   padding: 0.5rem;
 
-  border: 2px var(--srf-4-brd) solid;
-  border-radius: 14px;
+  /* border: 2px var(--srf-4-brd) solid; */
+  /* border-radius: 14px; */
 }
 
 @media screen and (min-width: 64rem) and (prefers-reduced-motion: no-preference) {

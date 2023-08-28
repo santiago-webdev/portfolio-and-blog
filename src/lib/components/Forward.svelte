@@ -1,5 +1,5 @@
 <div class="wrapper-arrow" aria-hidden="true" {...$$restProps}>
-  <svg class="tail" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+  <svg class="tail" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24">
     <path
       fill="none"
       stroke="currentColor"
@@ -12,8 +12,8 @@
   <svg
     class="chevron"
     xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
+    width="22"
+    height="22"
     viewBox="0 0 24 24"
   >
     <path

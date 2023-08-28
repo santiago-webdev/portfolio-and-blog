@@ -107,8 +107,6 @@ const tools = [
 main {
   display: flex;
   background: var(--srf-3);
-  border-bottom-right-radius: 1.5rem;
-  border-bottom-left-radius: 1.5rem;
   padding-bottom: clamp(1rem, 2vw + 1rem, 6rem);
   margin-bottom: clamp(1rem, 2vw + 1rem, 3rem);
 }

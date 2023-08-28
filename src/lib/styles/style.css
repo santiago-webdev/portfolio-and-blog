@@ -162,7 +162,7 @@ kbd.none {
 @media (hover: hover) {
   .reverse:hover {
     background: var(--clr-purple-mauve);
-    border-color: var(--clr-purple-mauve);
+    border-color: color-mix(in oklab, var(--clr-purple-mauve) 80%, white);
     color: var(--text-1);
   }
 }

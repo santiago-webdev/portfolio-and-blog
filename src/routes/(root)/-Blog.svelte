@@ -10,7 +10,7 @@ function getPic(id: number) {
 }
 </script>
 
-<div id="mention-blog">
+<div id="blog">
   <div class="container-blog">
     <div class="header-blog">
       <h2 class="font-fluid-1">Blog articles</h2>
@@ -49,7 +49,7 @@ function getPic(id: number) {
 </div>
 
 <style>
-#mention-blog {
+#blog {
   display: flex;
   place-content: center;
   place-items: center;
@@ -100,7 +100,7 @@ img {
   object-position: center;
 }
 
-@media screen and (min-width: 1280px) {
+@media screen and (min-width: 80rem) {
   section a:nth-child(3) {
     display: initial;
   }

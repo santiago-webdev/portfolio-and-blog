@@ -214,6 +214,11 @@ nav a:first-child {
   font-variation-settings: 'wght' 660;
 }
 
+a:hover:not(.bordered) {
+  text-decoration: underline var(--clr-orange-50) 2px;
+  text-underline-offset: 3px;
+}
+
 img {
   width: 1.8rem;
   height: 1.8rem;

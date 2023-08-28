@@ -1,4 +1,5 @@
 <script lang="ts">
+import { base } from '$app/paths';
 import ShapeButton from '$lib/components/navigation/ShapeButton.svelte';
 import { onMount } from 'svelte';
 
@@ -94,8 +95,14 @@ onMount(() => {
       </ol>
       <div class="wrapper-content">
         <section role="tabpanel" id="section1">
-          <h3>New job</h3>
-          <p>You can add a new job by contacting me!</p>
+          <h3>Want to add a new job?</h3>
+          <p>Try contacting me!</p>
+          <ShapeButton
+            style="margin-top: 2rem"
+            class="reverse"
+            href="{base}/#contact"
+            title="Link to the contact form">Email me</ShapeButton
+          >
         </section>
         <section role="tabpanel" id="section2">
           <h3>And still learning</h3>

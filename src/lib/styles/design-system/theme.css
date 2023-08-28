@@ -1,6 +1,6 @@
 :root {
-  --srf-1: var(--100); /* darkest of all, starting color */
-  --srf-2: var(--200); /* base color for most of the UI and components */
+  --srf-1: var(--100); /* darkest of all, not used that much */
+  --srf-2: var(--200); /* base color for the HTML and most of the UI and components */
   --srf-2-brd: var(--300);
   --srf-3: var(--400); /* for titles, headers and important components */
   --srf-3-brd: var(--500);

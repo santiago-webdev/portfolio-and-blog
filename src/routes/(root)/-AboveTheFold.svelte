@@ -39,15 +39,13 @@ import config from '$lib/config.json';
 <style>
 .wrapper-abf {
   background: var(--srf-3);
-  border-bottom-right-radius: 1.5rem;
-  border-bottom-left-radius: 1.5rem;
 }
 
 main {
   position: relative;
   display: grid;
   place-content: center;
-  padding: 1.5rem 0;
+  padding: 3rem 0;
   margin-inline: auto;
   width: min(100% - 2rem, var(--md));
 }
@@ -79,11 +77,6 @@ small {
 }
 
 @media screen and (min-width: 48rem) {
-  .wrapper-abf {
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
   main {
     padding: 6rem 0;
   }
@@ -100,6 +93,7 @@ small {
   }
 
   #learn-more-container {
+    display: flex;
     position: absolute;
     inset: 70% 0 auto auto;
     transform: rotate(90deg);

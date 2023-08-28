@@ -11,7 +11,7 @@ export let icon = '';
     {#if icon}
       <iconify-icon width="22" height="22" icon={retrieve_icon(icon)} />
     {:else if $$props.rel}
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+      <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 2 24 24">
         <path
           fill="none"
           stroke="currentColor"
@@ -32,7 +32,7 @@ a {
   display: flex;
   place-content: center;
   place-items: center;
-  border-radius: 9999px;
+  border-radius: 999rem;
   padding: 1rem 2rem;
   text-transform: uppercase;
   font-variation-settings: 'wght' 800;

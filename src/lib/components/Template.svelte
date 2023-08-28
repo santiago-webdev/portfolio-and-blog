@@ -117,8 +117,6 @@ section {
   flex-direction: column;
   place-items: start;
   background-color: var(--srf-3);
-  border-bottom-right-radius: 1.5rem;
-  border-bottom-left-radius: 1.5rem;
 }
 
 .wrapper-backtoblog-anchor {
