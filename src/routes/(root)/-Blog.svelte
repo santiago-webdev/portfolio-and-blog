@@ -5,7 +5,7 @@ import { Posts } from '$lib/components/blog/store';
 import { readableDate, relativeTime } from '$lib/utils/utils';
 
 function getPic(id: number) {
-  let pics = ['/alleged-photo-of-myself.webp', '/plant.webp', '/plant2.webp'];
+  let pics = ['/plant.webp', '/plant2.webp', '/plant3.webp'];
   return pics[id];
 }
 </script>

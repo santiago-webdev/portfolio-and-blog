@@ -99,7 +99,7 @@ article {
   border: thin var(--srf-3) solid;
   border-top-color: var(--srf-3-brd);
   border-left-color: var(--srf-3-brd);
-  border-radius: 1rem;
+  border-radius: 14px;
 }
 
 p {

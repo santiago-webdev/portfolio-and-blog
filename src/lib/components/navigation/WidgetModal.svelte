@@ -174,7 +174,7 @@ button kbd {
   }
 }
 
-@media (hover: hover) {
+@media screen and (min-width: 48rem) and (hover: hover) {
   button:not(dialog button):hover {
     background: var(--srf-5);
     border-color: var(--srf-5-brd);
