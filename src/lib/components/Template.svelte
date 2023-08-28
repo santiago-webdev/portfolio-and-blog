@@ -176,7 +176,7 @@ details {
   border: thin var(--srf-4) solid;
   border-top-color: var(--srf-4-brd);
   border-left-color: var(--srf-4-brd);
-  border-radius: 0.75rem;
+  border-radius: 14px;
   margin-top: 1rem;
   margin-inline: auto;
   padding: 0.5rem 1rem;

@@ -31,10 +31,10 @@ export let icon = '';
 a {
   display: flex;
   place-content: center;
+  place-items: center;
   border-radius: 9999px;
   padding: 1rem 2rem;
   text-transform: uppercase;
-  min-width: min(100%, 14ch);
   font-variation-settings: 'wght' 800;
   font-weight: 800;
   box-shadow: 4px 8px 8px 0 rgb(0 0 0 / 0.06);
@@ -43,9 +43,9 @@ a {
 span {
   display: flex;
   place-content: center;
+  place-items: center;
   justify-content: space-between;
   gap: 0.5rem;
-  min-width: min(100%, 14ch);
 }
 
 .default {

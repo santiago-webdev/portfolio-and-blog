@@ -119,7 +119,7 @@ small {
   padding: 0.5rem;
 
   border: 2px var(--srf-4-brd) solid;
-  border-radius: 0.75rem;
+  border-radius: 14px;
 }
 
 @media screen and (min-width: 64rem) and (prefers-reduced-motion: no-preference) {

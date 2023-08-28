@@ -192,7 +192,7 @@ section > * + * {
   }
 
   li a {
-    border-radius: 0.75rem;
+    border-radius: 14px;
   }
 }
 </style>

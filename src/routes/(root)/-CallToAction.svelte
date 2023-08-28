@@ -49,7 +49,7 @@ const stack = ['JS/TS (ES6+)', 'SvelteKit', 'SQL', 'Python', 'React', 'Node.js']
   flex-wrap: wrap;
   width: min(100% - 2rem, var(--lg));
   margin: 4rem 0;
-  border-radius: 0.75rem;
+  border-radius: 14px;
   margin-inline: auto;
 }
 
@@ -102,7 +102,7 @@ input {
   border-left-color: var(--srf-4-brd);
   padding: 0.75rem 1rem;
   margin-top: 0.25rem;
-  border-radius: 0.75rem;
+  border-radius: 14px;
   display: flex;
 }
 

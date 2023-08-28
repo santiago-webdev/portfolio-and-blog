@@ -90,7 +90,7 @@ article {
 .wrapper-img-placeholder {
   max-height: 36rem;
   overflow: hidden;
-  border-radius: 1rem;
+  border-radius: 14px;
 }
 
 img {

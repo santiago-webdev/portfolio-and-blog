@@ -28,7 +28,7 @@ const tools = [
   <div class="container-main">
     <header>
       <h1 class="font-fluid-2">Get to know me</h1>
-      <p>
+      <p class="font-h3">
         <strong>Hello, my name is Santiago!</strong>
       </p>
       <p class="font-h3">
@@ -152,7 +152,7 @@ small {
   border: thin var(--srf-3) solid;
   border-top-color: var(--srf-3-brd);
   border-left-color: var(--srf-3-brd);
-  border-radius: 0.75rem;
+  border-radius: 14px;
   margin-inline: auto;
   padding: clamp(1rem, 2vw + 1rem, 3rem) 0;
   margin-bottom: 3rem;

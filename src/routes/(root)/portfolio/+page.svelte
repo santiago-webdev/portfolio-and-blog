@@ -250,7 +250,7 @@ figure {
   border: thin var(--srf-4) solid;
   border-top-color: var(--srf-4-brd);
   border-left-color: var(--srf-4-brd);
-  border-radius: 0.75rem;
+  border-radius: 14px;
   height: min-content;
 }
 
@@ -316,7 +316,7 @@ a#new-project {
   border: thin var(--srf-4) solid;
   border-top-color: var(--srf-4-brd);
   border-left-color: var(--srf-4-brd);
-  border-radius: 0.75rem;
+  border-radius: 14px;
 }
 
 @media (hover: hover) {
