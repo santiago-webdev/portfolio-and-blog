@@ -57,10 +57,7 @@ export type Category = 'featured' | 'webprojects' | 'opensource' | 'redesign_rew
 type Categories = Record<Category, [label: string, description: string]>;
 
 export const jobSelector: Categories = {
-  featured: [
-    'Featured',
-    `Here's a selection of the most relevant projects I have for you to explore`
-  ],
+  featured: ['Featured', `A selection of the most relevant projects I have for you to explore`],
   webprojects: ['Web', `This are some of the most 'complete' projects I have to date`],
   opensource: [
     'Open Source',
@@ -68,9 +65,8 @@ export const jobSelector: Categories = {
       out the projects I'm being part of`
   ],
   redesign_rewrite: [
-    'Redesign or Rewrite',
-    `Rewriting a site to test my
-capabilities is fun, sometimes I do a complete revamp of the site`
+    'Redesign',
+    `Rewriting a site to test my capabilities is fun, I don't have any project at the time though :P`
   ]
 };
 

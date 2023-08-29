@@ -1,5 +1,12 @@
 <script>
-import { FilteredProjects } from '$lib/components/projects/store';
+import {
+  FilteredProjects,
+  currentGroupOfProjects,
+  getCategoryInfo
+} from '$lib/components/projects/store';
+
+import SmallShapeButton from '$lib/components/navigation/SmallShapeButton.svelte';
+import { base } from '$app/paths';
 </script>
 
 <div class="wrapper-portfolio">
@@ -9,12 +16,25 @@ import { FilteredProjects } from '$lib/components/projects/store';
         <header>
           <h2 class="font-fluid-1">Projects</h2>
           <p style:color="var(--text-3)" class="font-h3">
-            I've made some contributions to <abbr
+            Some of my contributions to <abbr
               title="Free and Open Source
               Software">FOSS</abbr
-            >. Here's an overview.
+            >.
           </p>
         </header>
+      </li>
+      <li>
+        <section>
+          <h3>
+            {getCategoryInfo($currentGroupOfProjects).label} Projects
+          </h3>
+          <p>
+            {getCategoryInfo($currentGroupOfProjects).description}
+          </p>
+        </section>
+        <section class="grid place-items-start gap-2 mt-4">
+          <SmallShapeButton href="{base}/portfolio" class="default">Complete list</SmallShapeButton>
+        </section>
       </li>
       <li>
         <a href={$FilteredProjects[0].link.toString()} target="_blank" rel="external">
@@ -23,21 +43,15 @@ import { FilteredProjects } from '$lib/components/projects/store';
         </a>
       </li>
       <li>
-        <a href={$FilteredProjects[1].link.toString()} target="_blank" rel="external">
-          <h3>{$FilteredProjects[1].name}<iconify-icon icon="lucide:external-link" /></h3>
-          <p>{$FilteredProjects[1].short_description}</p>
+        <a href={$FilteredProjects[0].link.toString()} target="_blank" rel="external">
+          <h3>{$FilteredProjects[0].name}<iconify-icon icon="lucide:external-link" /></h3>
+          <p>{$FilteredProjects[0].short_description}</p>
         </a>
       </li>
       <li>
-        <a href="/" target="_blank" rel="external">
-          <h3>Project<iconify-icon icon="lucide:external-link" /></h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-        </a>
-      </li>
-      <li>
-        <a href="/" target="_blank" rel="external">
-          <h3>Project<iconify-icon icon="lucide:external-link" /></h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+        <a href={$FilteredProjects[0].link.toString()} target="_blank" rel="external">
+          <h3>{$FilteredProjects[0].name}<iconify-icon icon="lucide:external-link" /></h3>
+          <p>{$FilteredProjects[0].short_description}</p>
         </a>
       </li>
     </ol>
@@ -59,7 +73,7 @@ p {
 }
 
 h3 {
-  display: flex;
+  display: inline-flex;
   place-items: center;
   gap: 0.5rem;
 }
@@ -68,27 +82,41 @@ ol {
   display: grid;
   padding: 2rem 0;
   margin-inline: auto;
-  width: min(100% - 1rem, var(--lg));
+  width: min(100% - 1rem, var(--base));
   gap: 1.5rem;
   grid-auto-columns: 1fr;
   grid-template-areas:
-    'one'
-    'two'
+    'presentation'
+    'projectselector'
     'three'
     'four'
     'five';
 }
 
+li {
+  display: grid;
+  padding: 1rem;
+  place-items: start;
+}
+
 li:first-child {
-  grid-area: one;
-  padding: clamp(1rem, 8vw + 1rem, 1.5rem);
+  grid-area: presentation;
+  padding: 1rem;
 }
 
 li:nth-child(2) {
-  grid-area: two;
-  background: var(--srf-4);
-  border: 0px var(--srf-4-brd) solid;
+  grid-area: projectselector;
+  background: var(--srf-3);
+  border: 0px var(--srf-3-brd) solid;
 }
+
+/* li:nth-child(2) h3 { */
+/*   padding-top: 1rem; */
+/* } */
+
+/* li:nth-child(2) p { */
+/*   padding-bottom: 1rem; */
+/* } */
 
 li:nth-child(3) {
   grid-area: three;
@@ -106,7 +134,7 @@ li:nth-child(2),
 li:nth-child(3),
 li:nth-child(4),
 li:last-child {
-  border-radius: 1rem;
+  border-radius: 14px;
   border-width: 1px 0 0 1px;
   transition: scale 100ms ease-in-out, border-color 200ms ease-in-out;
 }
@@ -116,7 +144,7 @@ li:last-child {
   li:nth-child(3):hover,
   li:nth-child(4):hover,
   li:last-child:hover {
-    scale: 1.016;
+    /* scale: 1.016; */
     border-color: none;
     outline: 2px var(--clr-purple-mauve) solid;
   }
@@ -125,8 +153,8 @@ li:last-child {
 @media screen and (min-width: 64rem) {
   ol {
     grid-template-areas:
-      'one two three'
-      'one two three'
+      'presentation projectselector three'
+      'presentation projectselector three'
       'five four three';
   }
 
