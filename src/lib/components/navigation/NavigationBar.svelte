@@ -219,7 +219,7 @@ nav a:first-child {
 }
 
 a:hover:not(.bordered) {
-  text-decoration: underline var(--clr-orange-50) 2px;
+  text-decoration: underline var(--clr-orange-mid) 2px;
   text-underline-offset: 3px;
 }
 

@@ -32,7 +32,7 @@ a {
   font-size: inherit;
   line-height: inherit;
 
-  color: var(--clr-blue-40);
+  color: var(--clr-blue-mid);
   text-decoration: underline transparent 2px;
   text-underline-offset: 3px;
 
@@ -41,7 +41,7 @@ a {
 
 @media (hover: hover) {
   a:hover {
-    text-decoration-color: var(--clr-blue-40);
+    text-decoration-color: var(--clr-blue-mid);
   }
 }
 </style>

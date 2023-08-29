@@ -187,7 +187,7 @@ details {
 summary {
   padding: 0 0.5rem;
   text-align: center;
-  color: var(--clr-red-40);
+  color: var(--clr-red-mid);
 }
 
 main {
