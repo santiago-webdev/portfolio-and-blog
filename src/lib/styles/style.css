@@ -87,7 +87,7 @@ hr {
 }
 
 thead {
-  background: var(--clr-600);
+  background: var(--srf-5);
 }
 
 thead {
@@ -95,7 +95,7 @@ thead {
 }
 
 tr:nth-of-type(2n) {
-  background-color: var(--clr-400);
+  background-color: var(--srf-4);
 }
 
 /* th { */
@@ -117,11 +117,11 @@ th {
   }
 
   tr > *:not(:last-child) {
-    border-bottom: 2px var(--clr-400) solid;
+    border-bottom: 2px var(--srf-4) solid;
   }
 
   tr:nth-of-type(2n) > *:not(:last-child) {
-    border-bottom: 2px var(--clr-600) solid;
+    border-bottom: 2px var(--srf-4) solid;
   }
 
   td {
