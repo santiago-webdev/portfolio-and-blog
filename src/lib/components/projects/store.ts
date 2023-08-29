@@ -25,7 +25,7 @@ export const AllProjects = readable<Array<Project>>([
       "I helped creating the landing page for Zap, an open-source plugin manager for zsh. It's one of my first steps into the web dev world.",
     short_description:
       'One of my first steps into the web dev world, I helped creating the landing page',
-    category: ['featured', 'frontend', 'opensource'],
+    category: ['featured', 'webprojects', 'opensource'],
     stack: {
       frontend: ['JavaScript', 'HTML', 'CSS'],
       api: ['GitHub REST API']
@@ -39,7 +39,7 @@ export const AllProjects = readable<Array<Project>>([
     name: 'Personal site',
     description: 'This is my personal blog and portfolio, check the case study below',
     short_description: 'This same site, here you can find more about me',
-    category: ['featured', 'frontend', 'opensource'],
+    category: ['featured', 'webprojects', 'opensource'],
     stack: {
       frontend: ['SvelteKit', 'TypeScript', 'CSS']
     },
@@ -48,41 +48,11 @@ export const AllProjects = readable<Array<Project>>([
     link: new URL('https://santiagogonzalez.dev'),
     case_study: 'hello-world'
   },
-  {
-    name: 'example of fullstack',
-    description:
-      'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
-    stack: {},
-    category: ['fullstack'],
-    repo: new URL('https://google.com'),
-    link: new URL('https://google.com'),
-    case_study: 'hello-world'
-  },
-  {
-    name: 'example of opensource',
-    description:
-      'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
-    stack: {},
-    category: ['opensource'],
-    repo: new URL('https://google.com'),
-    link: new URL('https://google.com'),
-    case_study: 'hello-world'
-  },
-  {
-    name: 'example of redesign/rewrite',
-    description:
-      'Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint cillum sint consectetur cupidatat.',
-    stack: {},
-    category: ['redesign_rewrite'],
-    repo: new URL('https://google.com'),
-    link: new URL('https://google.com'),
-    case_study: 'hello-world'
-  }
 ]);
 
 export const FilteredProjects = writable(get(AllProjects));
 
-export type Category = 'featured' | 'frontend' | 'fullstack' | 'opensource' | 'redesign_rewrite';
+export type Category = 'featured' | 'webprojects' | 'opensource' | 'redesign_rewrite';
 
 type Categories = Record<Category, [label: string, description: string]>;
 
@@ -91,12 +61,7 @@ export const jobSelector: Categories = {
     'Featured',
     `Here's a selection of the most relevant projects I have for you to explore`
   ],
-  frontend: [
-    'Front End',
-    `In here you'll find rewrites with a focus on making the UI/UX of this
-pages accesible to everyone`
-  ],
-  fullstack: ['Full Stack', `This are some of the most 'complete' projects I have to date`],
+  webprojects: ['Web', `This are some of the most 'complete' projects I have to date`],
   opensource: [
     'Open Source',
     `As a Linux enthusiast, I'm a firm believer in FOSS, check

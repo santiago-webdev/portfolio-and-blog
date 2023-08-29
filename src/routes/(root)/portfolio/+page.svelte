@@ -163,7 +163,7 @@ import { retrieve_icon } from '$lib/utils/utils';
         </svg>
       </a>
       <div id="describe-new-project">
-        <span class="font-p"> yourname.com </span>
+        <span class="font-p">yourproject.com</span>
         <p>
           Try Me! As a junior developer with a passion for turning ideas into reality, I'm excited
           to work with you on your new project.
