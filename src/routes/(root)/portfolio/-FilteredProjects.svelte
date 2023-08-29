@@ -140,7 +140,6 @@ import { retrieve_icon } from '$lib/utils/utils';
 
 <style>
 h3 {
-  /* margin-top: 4rem; */
   color: var(--text-2);
 }
 
@@ -251,7 +250,6 @@ section {
   flex: 6;
   margin-inline: auto;
   width: min(100%, var(--md));
-  margin-top: 2rem;
   gap: 1.5rem;
 }
 

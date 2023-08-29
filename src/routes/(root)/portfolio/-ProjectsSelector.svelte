@@ -40,10 +40,11 @@ import {
   display: grid;
   place-items: center;
   place-content: center;
-  padding: 1.5rem 0;
   background: var(--srf-3);
   border-bottom-right-radius: 1.5rem;
   border-bottom-left-radius: 1.5rem;
+  padding: clamp(1rem, 2vw + 1rem, 6rem) 0;
+  margin-bottom: clamp(1rem, 2vw + 1rem, 3rem);
 }
 
 header {
