@@ -5,7 +5,7 @@ import { base } from '$app/paths';
 import { goto, preloadData } from '$app/navigation';
 
 // export let placeholder = `TODO: Make this search better`;
-// TODO(santigo-zero): Explain first time users how to search tags
+// TODO(santiagogonzalez-dev): Explain first time users how to search tags
 export let placeholder = `Search`;
 
 const placeholderDefault = 'Search';

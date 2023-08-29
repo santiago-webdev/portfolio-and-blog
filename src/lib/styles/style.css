@@ -5,7 +5,7 @@
 @import url('./design-system/theme.css');
 
 html {
-  /* TODO(santigo-zero): Find a fix for bug in navigation */
+  /* TODO(santiagogonzalez-dev): Find a fix for bug in navigation */
   scroll-behavior: smooth;
   color-scheme: light dark;
   font-family: var(--ff-text);
@@ -46,13 +46,13 @@ li code {
   line-height: inherit;
 }
 
-[data-theme='dark'] img.logo-santigo-zero,
-[data-theme='system'] img.logo-santigo-zero {
+[data-theme='dark'] img.logo-santiagogonzalez-dev,
+[data-theme='system'] img.logo-santiagogonzalez-dev {
   content: url('/logo.svg');
 }
 
-[data-theme='light'] img.logo-santigo-zero,
-[data-theme='system-light'] img.logo-santigo-zero {
+[data-theme='light'] img.logo-santiagogonzalez-dev,
+[data-theme='system-light'] img.logo-santiagogonzalez-dev {
   content: url('/logo-light.svg');
 }
 

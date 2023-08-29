@@ -9,7 +9,7 @@ let ghStars = 0;
 const getGithubStars = async () => {
   if (dev) return 0;
   try {
-    const response = await fetch('https://api.github.com/repos/santigo-zero/portfolio-and-blog');
+    const response = await fetch('https://api.github.com/repos/santiagogonzalez-dev/portfolio-and-blog');
     if (!response.ok) throw new Error('Network response was not ok.');
 
     const data = await response.json();
@@ -69,7 +69,7 @@ getGithubStars().then((stars) => (ghStars = stars));
         >
       </address>
       <address>
-        <a class="selection" target="_blank" href="https://github.com/santigo-zero/">
+        <a class="selection" target="_blank" href="https://github.com/santiagogonzalez-dev/">
           <iconify-icon icon="simple-icons:github" />
           GitHub</a
         >
@@ -90,7 +90,7 @@ getGithubStars().then((stars) => (ghStars = stars));
     <section class="font-p">
       <a
         target="_blank"
-        href="https://github.com/santigo-zero"
+        href="https://github.com/santiagogonzalez-dev"
         aria-label="Link to my GitHub profile"
         title="Link to my GitHub profile"
       >

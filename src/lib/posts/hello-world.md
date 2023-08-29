@@ -35,7 +35,7 @@ Since this is my first "serious" page I decided to try a framework and use serve
 - CSS
 - Markdown
 
-I'm deploying this application to Vercel, and I have the repo under the GPL-3.0 in [GitHub](https://github.com/santigo-zero/portfolio-and-blog).
+I'm deploying this application to Vercel, and I have the repo under the GPL-3.0 in [GitHub](https://github.com/santiagogonzalez-dev/portfolio-and-blog).
 
 ## Design choices
 
@@ -49,7 +49,7 @@ I implemented fully rounded buttons and almost rounded UI for search bars, tags 
 
 #### Implementation of the dark theme
 
-For the dark theme, since I'm using [color-scheme JetJBP](https://github.com/santigo-zero/jetjbp) the easiest way to create contrast was to use red and purple colors, to create a nice pair of complementary colors
+For the dark theme, since I'm using [color-scheme JetJBP](https://github.com/santiagogonzalez-dev/jetjbp) the easiest way to create contrast was to use red and purple colors, to create a nice pair of complementary colors
 
 In most components you find two buttons, to give them hierarchy I implemented a basic slightly brighter color to still be registered as a button and gave the most important button/link of the two the same color as for the text.
 
@@ -61,4 +61,4 @@ To get a more <em>Big Typography</em> look I went for a variable font for titles
 
 This <em>Big Typography</em> is effective for the desktop version but for mobile I adapted the design to be more Neomorphic or app-like, and I think it's effective without making big changes to the code.
 
-[color-palette]: https://github.com/santigo-zero/JetJBP "Santiago's color-palette"
+[color-palette]: https://github.com/santiagogonzalez-dev/JetJBP "Santiago's color-palette"

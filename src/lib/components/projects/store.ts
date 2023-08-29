@@ -44,7 +44,7 @@ export const AllProjects = readable<Array<Project>>([
       frontend: ['SvelteKit', 'TypeScript', 'CSS']
     },
     img: '/portfolio/portfolio-and-blog-website.webp',
-    repo: new URL('https://github.com/santigo-zero/portfolio-and-blog'),
+    repo: new URL('https://github.com/santiagogonzalez-dev/portfolio-and-blog'),
     link: new URL('https://santiagogonzalez.dev'),
     case_study: 'hello-world'
   }

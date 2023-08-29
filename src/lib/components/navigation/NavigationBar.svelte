@@ -35,7 +35,7 @@ $: if (outerWidth > 768) expanded = false;
       aria-label="Home"
       aria-current={`${base}/` === $page.url.pathname ? 'page' : undefined}
     >
-      <img aria-labelledby="authors-name" class="logo-santigo-zero" alt="My personal logo" />
+      <img aria-labelledby="authors-name" class="logo-santiagogonzalez-dev" alt="My personal logo" />
       <span id="authors-name">Santiago Gonzalez</span>
     </a>
     <div class="navigation-items">

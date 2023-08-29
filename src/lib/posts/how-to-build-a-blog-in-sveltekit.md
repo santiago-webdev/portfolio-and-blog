@@ -37,7 +37,7 @@ I've considered the idea of writing in `.svelte` files or using [Astro](https://
 
 For this case we'll go with SvelteKit + MDsveX and make use of dynamic routing, but there'll be mentions of the key differences if you prefer not to use MDsveX, but just in general terms since most of the things are well documented and easy to find, I recommend reading the entire post specially if you are new to sveltekit like me, there's a lot of similarities when working with MDsveX or plain svelte files.
 
-I should also mention that I created a [minimal repo](https://github.com/santigo-zero/sveltekit-and-mdsvex-blog-example) which I'm sure will make you understand everything, from how MDsveX makes use of a template and to how the dynamic routing works.
+I should also mention that I created a [minimal repo](https://github.com/santiagogonzalez-dev/sveltekit-and-mdsvex-blog-example) which I'm sure will make you understand everything, from how MDsveX makes use of a template and to how the dynamic routing works.
 
 ### Why not _this other alternative_?
 
@@ -91,7 +91,7 @@ kit: { adapter: adapter() }
 export default config;
 ```
 
-The template could be as simple [as this](https://github.com/santigo-zero/sveltekit-and-mdsvex-blog-example/blob/main/src/lib/components/Template.svelte).
+The template could be as simple [as this](https://github.com/santiagogonzalez-dev/sveltekit-and-mdsvex-blog-example/blob/main/src/lib/components/Template.svelte).
 
 ## Routing
 

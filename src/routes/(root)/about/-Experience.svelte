@@ -118,7 +118,7 @@ onMount(() => {
           <ShapeButton
             style="margin-top: 2rem"
             class="default"
-            href="https://github.com/santigo-zero/"
+            href="https://github.com/santiagogonzalez-dev/"
             icon="github"
             title="Link to my GitHub profile">GitHub</ShapeButton
           >
