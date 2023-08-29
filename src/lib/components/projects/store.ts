@@ -47,7 +47,7 @@ export const AllProjects = readable<Array<Project>>([
     repo: new URL('https://github.com/santigo-zero/portfolio-and-blog'),
     link: new URL('https://santiagogonzalez.dev'),
     case_study: 'hello-world'
-  },
+  }
 ]);
 
 export const FilteredProjects = writable(get(AllProjects));

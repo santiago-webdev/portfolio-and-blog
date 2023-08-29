@@ -57,12 +57,6 @@ getGithubStars().then((stars) => (ghStars = stars));
         <li>
           <a class="selection" target="_blank" href="https://zapzsh.org">Zap website</a>
         </li>
-        <li>
-          <a class="selection" target="_blank" href="https://zapzsh.org">Lorem website</a>
-        </li>
-        <li>
-          <a class="selection" target="_blank" href="https://zapzsh.org">Another website</a>
-        </li>
       </ul>
     </div>
 
