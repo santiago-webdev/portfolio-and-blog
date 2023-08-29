@@ -112,8 +112,8 @@ h3,
   font-size: var(--fs-h3);
   line-height: calc(var(--fs-h3) * 1.4);
   color: var(--text-1);
-  font-variation-settings: 'wght' 600;
-  font-weight: 600;
+  font-variation-settings: 'wght' 500;
+  font-weight: 500;
 }
 
 form.font-h3,

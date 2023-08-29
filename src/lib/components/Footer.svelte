@@ -9,7 +9,9 @@ let ghStars = 0;
 const getGithubStars = async () => {
   if (dev) return 0;
   try {
-    const response = await fetch('https://api.github.com/repos/santiagogonzalez-dev/portfolio-and-blog');
+    const response = await fetch(
+      'https://api.github.com/repos/santiagogonzalez-dev/portfolio-and-blog'
+    );
     if (!response.ok) throw new Error('Network response was not ok.');
 
     const data = await response.json();

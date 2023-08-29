@@ -11,157 +11,133 @@ import { base } from '$app/paths';
 
 <div class="wrapper-portfolio">
   <div id="portfolio">
-    <ol style:color="var(--text-3)">
-      <li>
+    <ol>
+      <li id="presentation">
         <header>
-          <h2 class="font-fluid-1">Projects</h2>
-          <p style:color="var(--text-3)" class="font-h3">
-            Some of my contributions to <abbr
-              title="Free and Open Source
-              Software">FOSS</abbr
-            >.
+          <h2 class="font-fluid-1">
+            {getCategoryInfo($currentGroupOfProjects).label} Projects
+          </h2>
+          <p>
+            {getCategoryInfo($currentGroupOfProjects).description}.
           </p>
         </header>
+
+        <p>
+          Most of my project contributions are <abbr
+            title="Free and Open Source
+              Software">FOSS</abbr
+          >.
+        </p>
       </li>
-      <li>
-        <section>
-          <h3>
-            {getCategoryInfo($currentGroupOfProjects).label} Projects
-          </h3>
-          <p>
-            {getCategoryInfo($currentGroupOfProjects).description}
-          </p>
-        </section>
-        <section class="grid place-items-start gap-2 mt-4">
+      <li id="first-project">
+        <a href={$FilteredProjects[0].link.toString()} target="_blank" rel="external">
+          <h3>{$FilteredProjects[0].name}</h3>
+          <p>{$FilteredProjects[0].short_description}</p>
+        </a>
+      </li>
+      <li id="second-project">
+        <a href={$FilteredProjects[1].link.toString()} target="_blank" rel="external">
+          <h3>{$FilteredProjects[1].name}</h3>
+          <p>{$FilteredProjects[1].short_description}</p>
+        </a>
+      </li>
+      <li id="third-project">
+        <a href="{base}/#portfolio">
+          <h3>More projects coming soon</h3>
+          <p>I just need time :P</p>
+        </a>
+      </li>
+      <li id="completelist">
+        <div>
+          <h3>And there's more</h3>
+          <p>Most of them will have a case study, live preview and code available</p>
+        </div>
+        <div>
           <SmallShapeButton href="{base}/portfolio" class="default">Complete list</SmallShapeButton>
-        </section>
-      </li>
-      <li>
-        <a href={$FilteredProjects[0].link.toString()} target="_blank" rel="external">
-          <h3>{$FilteredProjects[0].name}<iconify-icon icon="lucide:external-link" /></h3>
-          <p>{$FilteredProjects[0].short_description}</p>
-        </a>
-      </li>
-      <li>
-        <a href={$FilteredProjects[0].link.toString()} target="_blank" rel="external">
-          <h3>{$FilteredProjects[0].name}<iconify-icon icon="lucide:external-link" /></h3>
-          <p>{$FilteredProjects[0].short_description}</p>
-        </a>
-      </li>
-      <li>
-        <a href={$FilteredProjects[0].link.toString()} target="_blank" rel="external">
-          <h3>{$FilteredProjects[0].name}<iconify-icon icon="lucide:external-link" /></h3>
-          <p>{$FilteredProjects[0].short_description}</p>
-        </a>
+        </div>
       </li>
     </ol>
   </div>
 </div>
 
 <style>
-a {
-  overflow: hidden;
-  min-width: 20ch;
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  padding: clamp(1rem, 8vw + 1rem, 1.5rem);
-}
-
-p {
-  margin-top: 0.5rem;
-}
-
-h3 {
-  display: inline-flex;
-  place-items: center;
-  gap: 0.5rem;
+.wrapper-portfolio {
+  /* background: orange; */
+  padding: 6rem 0;
 }
 
 ol {
   display: grid;
-  padding: 2rem 0;
   margin-inline: auto;
-  width: min(100% - 1rem, var(--base));
-  gap: 1.5rem;
-  grid-auto-columns: 1fr;
+  gap: 1rem;
+  width: min(100% - 2rem, var(--base));
+  grid-auto-rows: 1fr;
   grid-template-areas:
     'presentation'
-    'projectselector'
-    'three'
-    'four'
-    'five';
+    'first'
+    'second'
+    'third'
+    'completelist';
 }
 
 li {
   display: grid;
-  padding: 1rem;
   place-items: start;
 }
 
-li:first-child {
+li a {
+  padding: 1.5rem;
+  width: 100%;
+  height: 100%;
+}
+
+li#presentation {
   grid-area: presentation;
-  padding: 1rem;
+  padding: 1.5rem;
+  display: grid;
 }
 
-li:nth-child(2) {
-  grid-area: projectselector;
+li#first-project,
+li#second-project,
+li#third-project,
+li#completelist {
   background: var(--srf-3);
-  border: 0px var(--srf-3-brd) solid;
-}
-
-/* li:nth-child(2) h3 { */
-/*   padding-top: 1rem; */
-/* } */
-
-/* li:nth-child(2) p { */
-/*   padding-bottom: 1rem; */
-/* } */
-
-li:nth-child(3) {
-  grid-area: three;
-  background: var(--srf-3);
-  border: 0px var(--srf-3-brd) solid;
-}
-
-li:last-child {
-  grid-area: five;
-  background: var(--srf-3);
-  border: 0px var(--srf-3-brd) solid;
-}
-
-li:nth-child(2),
-li:nth-child(3),
-li:nth-child(4),
-li:last-child {
+  border: thin var(--srf-3) solid;
+  border-top-color: var(--srf-3-brd);
+  border-left-color: var(--srf-3-brd);
   border-radius: 14px;
-  border-width: 1px 0 0 1px;
-  transition: scale 100ms ease-in-out, border-color 200ms ease-in-out;
 }
 
-@media (hover: hover) {
-  li:nth-child(2):hover,
-  li:nth-child(3):hover,
-  li:nth-child(4):hover,
-  li:last-child:hover {
-    /* scale: 1.016; */
-    border-color: none;
-    outline: 2px var(--clr-purple-mauve) solid;
-  }
+li#first-project {
+  grid-area: first;
+}
+
+li#second-project {
+  grid-area: second;
+}
+
+li#third-project {
+  grid-area: third;
+}
+
+li#completelist {
+  grid-area: completelist;
+  padding: 1.5rem;
+}
+
+li#completelist > * + * {
+  margin-top: 1.5rem;
+  display: grid;
+  place-items: start;
+  gap: 0.25rem;
 }
 
 @media screen and (min-width: 64rem) {
   ol {
     grid-template-areas:
-      'presentation projectselector three'
-      'presentation projectselector three'
-      'five four three';
-  }
-
-  .wrapper-portfolio {
-    display: flex;
-    place-items: center;
-    min-height: 75vh;
+      'presentation presentation first'
+      'third second first'
+      'third second completelist';
   }
 }
 </style>
